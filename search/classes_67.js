@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['gather_5ffunctor',['gather_functor',['../structnvbio_1_1gather__functor.html',1,'nvbio']]],
+  ['genomeloader',['GenomeLoader',['../structnvbio_1_1_genome_loader.html',1,'nvbio']]],
+  ['genomeloader_3c_20genome_5fiterator_2c_20lmem_5fcache_5ftype_20_3e',['GenomeLoader&lt; genome_iterator, lmem_cache_type &gt;',['../structnvbio_1_1_genome_loader.html',1,'nvbio']]],
+  ['get_5fchar_5ffunctor',['get_char_functor',['../structnvbio_1_1get__char__functor.html',1,'nvbio']]],
+  ['gotoh_5falignment_5fscore_5fdispatch',['gotoh_alignment_score_dispatch',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1gotoh__alignment__score__dispatch.html',1,'nvbio::aln::priv::banded']]],
+  ['gotoh_5falignment_5fscore_5fdispatch',['gotoh_alignment_score_dispatch',['../structnvbio_1_1aln_1_1priv_1_1gotoh__alignment__score__dispatch.html',1,'nvbio::aln::priv']]],
+  ['gotoh_5fbandlen_5fselector',['gotoh_bandlen_selector',['../structnvbio_1_1aln_1_1priv_1_1gotoh__bandlen__selector.html',1,'nvbio::aln::priv']]],
+  ['gotoh_5fbandlen_5fselector_3c_20type_2c_20dim_2c_20simd4u8_20_3e',['gotoh_bandlen_selector&lt; TYPE, DIM, simd4u8 &gt;',['../structnvbio_1_1aln_1_1priv_1_1gotoh__bandlen__selector_3_01_t_y_p_e_00_01_d_i_m_00_01simd4u8_01_4.html',1,'nvbio::aln::priv']]],
+  ['gotohaligner',['GotohAligner',['../structnvbio_1_1aln_1_1_gotoh_aligner.html',1,'nvbio::aln']]],
+  ['gotohcheckpointcontext',['GotohCheckpointContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_checkpoint_context.html',1,'nvbio::aln::priv::banded']]],
+  ['gotohcheckpointcontext',['GotohCheckpointContext',['../structnvbio_1_1aln_1_1priv_1_1_gotoh_checkpoint_context.html',1,'nvbio::aln::priv']]],
+  ['gotohcheckpointedscoringcontext',['GotohCheckpointedScoringContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_checkpointed_scoring_context.html',1,'nvbio::aln::priv::banded']]],
+  ['gotohcheckpointedscoringcontext',['GotohCheckpointedScoringContext',['../structnvbio_1_1aln_1_1priv_1_1_gotoh_checkpointed_scoring_context.html',1,'nvbio::aln::priv']]],
+  ['gotohscoringcontext',['GotohScoringContext',['../structnvbio_1_1aln_1_1priv_1_1_gotoh_scoring_context.html',1,'nvbio::aln::priv']]],
+  ['gotohscoringcontext',['GotohScoringContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_scoring_context.html',1,'nvbio::aln::priv::banded']]],
+  ['gotohsubmatrixcontext',['GotohSubmatrixContext',['../structnvbio_1_1aln_1_1priv_1_1_gotoh_submatrix_context.html',1,'nvbio::aln::priv']]],
+  ['gotohsubmatrixcontext',['GotohSubmatrixContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_submatrix_context.html',1,'nvbio::aln::priv::banded']]],
+  ['gotohtag',['GotohTag',['../structnvbio_1_1aln_1_1_gotoh_tag.html',1,'nvbio::aln']]],
+  ['gpuoutputbatch',['GPUOutputBatch',['../structnvbio_1_1io_1_1_g_p_u_output_batch.html',1,'nvbio::io']]],
+  ['gz_5fheader_5fs',['gz_header_s',['../structgz__header__s.html',1,'']]],
+  ['gz_5fstate',['gz_state',['../structgz__state.html',1,'']]],
+  ['gzfile_5fs',['gzFile_s',['../structgz_file__s.html',1,'']]],
+  ['gzipcompressor',['GzipCompressor',['../structnvbio_1_1io_1_1_gzip_compressor.html',1,'nvbio::io']]]
+];
