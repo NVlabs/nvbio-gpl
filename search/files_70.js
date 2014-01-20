@@ -14,7 +14,7 @@ var searchData=
   ['pod_2eh',['pod.h',['../pod_8h.html',1,'']]],
   ['popcount_2eh',['popcount.h',['../popcount_8h.html',1,'']]],
   ['popcount_5finl_2eh',['popcount_inl.h',['../popcount__inl_8h.html',1,'']]],
-  ['priority_5fdeque_20_2d_20copy_2eh',['priority_deque - Copy.h',['../priority__deque_01-_01_copy_8h.html',1,'']]],
+  ['priority_5fdeque_20_2d_20copy_2eh',['priority_deque - Copy.h',['../priority__deque_01-_01Copy_8h.html',1,'']]],
   ['priority_5fdeque_2eh',['priority_deque.h',['../priority__deque_8h.html',1,'']]],
   ['priority_5fdeque_2ehpp',['priority_deque.hpp',['../priority__deque_8hpp.html',1,'']]],
   ['priority_5fdeque_5fverify_2ehpp',['priority_deque_verify.hpp',['../priority__deque__verify_8hpp.html',1,'']]],

@@ -116,19 +116,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>nvbio {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>io {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a6a6a64b16116b16e1cd3577b24787d82">   29</a></span>&#160;<a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a6a6a64b16116b16e1cd3577b24787d82">ReadDataFile_SAM::ReadDataFile_SAM</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *read_file_name,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a6a6a64b16116b16e1cd3577b24787d82">   29</a></span>&#160;<a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a6a6a64b16116b16e1cd3577b24787d82">ReadDataFile_SAM::ReadDataFile_SAM</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *read_file_name,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> truncate_read_len)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  : <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html">ReadDataFile</a>(max_reads, truncate_read_len)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  : <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html">ReadDataFile</a>(max_reads, truncate_read_len)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    fp = <a class="code" href="gzlib_8c.html#a7f900a46dab5612a2840fdb3959f0afd">gzopen</a>(read_file_name, <span class="stringliteral">&quot;rt&quot;</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (fp == <a class="code" href="zlib_8h.html#ad15afa2776b41b2f4d8582dd152bd736">Z_NULL</a>)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// this will cause init() to fail below</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open SAM file %s\n&quot;</span>, read_file_name);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0ad36cafc64169cd7582bb51b7a062fcb5">FILE_OPEN_FAILED</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0ad36cafc64169cd7582bb51b7a062fcb5">FILE_OPEN_FAILED</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0acd9c53ec80a9d06780e2259ae83f0a16">FILE_OK</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0acd9c53ec80a9d06780e2259ae83f0a16">FILE_OK</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    linebuf = NULL;</div>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    numLines = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    version = NULL;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    sortOrder = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">bool</span> ReadDataFile_SAM::readLine(<span class="keywordtype">void</span>)</div>
@@ -153,13 +153,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (!linebuf)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// allocate initial buffer</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        linebuf_size = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a60acaad682c3df012fb8337b53bef965a42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        linebuf_size = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a60acaad682c3df012fb8337b53bef965a42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        linebuf = (<span class="keywordtype">char</span> *) malloc(linebuf_size);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (linebuf == NULL)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;out of memory reading SAM file\n&quot;</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0a1c85523e24d20ebbfea056bb222327c2">FILE_STREAM_ERROR</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0a1c85523e24d20ebbfea056bb222327c2">FILE_STREAM_ERROR</a>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
@@ -178,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> (ret == <a class="code" href="zlib_8h.html#ad15afa2776b41b2f4d8582dd152bd736">Z_NULL</a>)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// EOF</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0a972af71a46858a3a3d1bf3bfee3d9a33">FILE_EOF</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0a972af71a46858a3a3d1bf3bfee3d9a33">FILE_EOF</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
@@ -196,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (tmp == NULL)</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;out of memory reading SAM file\n&quot;</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0a1c85523e24d20ebbfea056bb222327c2">FILE_STREAM_ERROR</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0a1c85523e24d20ebbfea056bb222327c2">FILE_STREAM_ERROR</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
@@ -227,11 +227,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// initializes a SAM file</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">// will consume the SAM header and prepare for fetching reads from the file</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">// returns false on failure</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a2dc3169c97bdb4896a3a663eea69f974">  140</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a2dc3169c97bdb4896a3a663eea69f974">ReadDataFile_SAM::init</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a2dc3169c97bdb4896a3a663eea69f974">  140</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a2dc3169c97bdb4896a3a663eea69f974">ReadDataFile_SAM::init</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">bool</span> ret;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> != <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a2a89f7cc6637d06aba8960b61bb52ed0acd9c53ec80a9d06780e2259ae83f0a16">FILE_OK</a>)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a8a76858f1fba62a3392449f2f9cce9f4">m_file_state</a> != <a class="code" href="structnvbio_1_1io_1_1ReadDataFile.html#a2a89f7cc6637d06aba8960b61bb52ed0acd9c53ec80a9d06780e2259ae83f0a16">FILE_OK</a>)</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">// file failed to open</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -317,13 +317,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;SO:&quot;</span>, strlen(<span class="stringliteral">&quot;SO:&quot;</span>)) == 0) {</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span>(strcmp(&amp;start[3], <span class="stringliteral">&quot;unknown&quot;</span>) == 0)</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;unsorted&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964acf9fa1f3d65e9a8083f6f5284d063874">SortOrder_unsorted</a>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a993cc9f660aa5f78c40ee5cb2aab9964acf9fa1f3d65e9a8083f6f5284d063874">SortOrder_unsorted</a>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;queryname&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964ab02e46d88b11fe8fdf13159f68251438">SortOrder_queryname</a>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a993cc9f660aa5f78c40ee5cb2aab9964ab02e46d88b11fe8fdf13159f68251438">SortOrder_queryname</a>;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;coordinate&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">SortOrder_coordinate</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">SortOrder_coordinate</a>;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid sort order %s\n&quot;</span>, numLines, &amp;start[3]);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            }</div>
@@ -350,7 +350,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">// fetch the next chunk of reads (up to max_reads) from the file and push it into output</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ad4f08b18ec7e5ba33b8009d445d20dee">  263</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ad4f08b18ec7e5ba33b8009d445d20dee">ReadDataFile_SAM::nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a> *output, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads)</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#ad4f08b18ec7e5ba33b8009d445d20dee">  263</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1ReadDataFile__SAM.html#ad4f08b18ec7e5ba33b8009d445d20dee">ReadDataFile_SAM::nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1ReadDataRAM.html">ReadDataRAM</a> *output, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads)</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">char</span> *name;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">char</span> *flag;</div>
@@ -412,16 +412,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">if</span> (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>)</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        conversion_flags = <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#ab70663114ad17c7e6562c5b512e9a21eaed92e042bf3de3b1ef6ba517a7227fe8">ReadDataRAM::REVERSE</a> | <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#ab70663114ad17c7e6562c5b512e9a21eab25cb7edcbc39c582a7806b2fbc3ac67">ReadDataRAM::COMPLEMENT</a>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        conversion_flags = <a class="code" href="structnvbio_1_1io_1_1ReadDataRAM.html#ab70663114ad17c7e6562c5b512e9a21eaed92e042bf3de3b1ef6ba517a7227fe8">ReadDataRAM::REVERSE</a> | <a class="code" href="structnvbio_1_1io_1_1ReadDataRAM.html#ab70663114ad17c7e6562c5b512e9a21eab25cb7edcbc39c582a7806b2fbc3ac67">ReadDataRAM::COMPLEMENT</a>;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="comment">// add the read</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a22a880b428ca90585db7a0e373fafb03">push_back</a>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    output-&gt;<a class="code" href="structnvbio_1_1io_1_1ReadDataRAM.html#a22a880b428ca90585db7a0e373fafb03">push_back</a>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                      name,</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                      (<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                      (<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                      <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                      <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                      <a class="code" href="group__ReadsIO.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                      <a class="code" href="structnvbio_1_1io_1_1ReadDataStream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                      conversion_flags);</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="comment">// we always input 1 read at a time here</span></div>
@@ -433,7 +433,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:53 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

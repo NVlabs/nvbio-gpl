@@ -116,19 +116,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>nvbio {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>io {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_seq_finder.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1io_1_1_seq_finder.html">SeqFinder</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1SeqFinder.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1io_1_1SeqFinder.html">SeqFinder</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#a8550f3c338a512cee0649de45e488ffe">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann1, <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann2)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#a8550f3c338a512cee0649de45e488ffe">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1BNTAnn.html">io::BNTAnn</a>&amp; ann1, <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1BNTAnn.html">io::BNTAnn</a>&amp; ann2)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> ann1.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a> &lt; ann2.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> ann1.<a class="code" href="structnvbio_1_1io_1_1BNTAnn.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a> &lt; ann2.<a class="code" href="structnvbio_1_1io_1_1BNTAnn.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#a7c9784983517759931c1e16fddcec4b0">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> x)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#a7c9784983517759931c1e16fddcec4b0">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1BNTAnn.html">io::BNTAnn</a>&amp; ann, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> x)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a> &lt; x;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> ann.<a class="code" href="structnvbio_1_1io_1_1BNTAnn.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a> &lt; x;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#abc07d5273f90ccc923a407b59d070c2b">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_seq_finder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> x, <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#abc07d5273f90ccc923a407b59d070c2b">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1SeqFinder.html#a8550f3c338a512cee0649de45e488ffe">operator() </a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> x, <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1BNTAnn.html">io::BNTAnn</a>&amp; ann)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> x &lt; ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> x &lt; ann.<a class="code" href="structnvbio_1_1io_1_1BNTAnn.html#aade6f50c53aebc0957d339b4a1d2576c" title="offset in the global sequence ">offset</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> l  = cigar[ cigar_len - i - 1u ].m_len;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> op = cigar[ cigar_len - i - 1u ].m_type;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (op == <a class="code" href="structnvbio_1_1io_1_1_cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bdab05be4ba1c66e22db8baca025c0c012a">Cigar::SUBSTITUTION</a> || op == <a class="code" href="structnvbio_1_1io_1_1_cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bdabfd84d47f99e1fecc3c1fc62cca3e4d1">Cigar::DELETION</a>) r += l;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (op == <a class="code" href="structnvbio_1_1io_1_1Cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bdab05be4ba1c66e22db8baca025c0c012a">Cigar::SUBSTITUTION</a> || op == <a class="code" href="structnvbio_1_1io_1_1Cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bdabfd84d47f99e1fecc3c1fc62cca3e4d1">Cigar::DELETION</a>) r += l;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> r;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// count the symbols of a given type inside a CIGAR</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> vector_type&gt;</div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1io.html#a1fdfd7720d19ffb782c028d8215e27b1">   69</a></span>&#160;<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio_1_1io.html#a1fdfd7720d19ffb782c028d8215e27b1">count_symbols</a>(</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bd">Cigar::Operation</a>  type,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1Cigar.html#a0c549ffa01df8c620c7f13a3ac69b7bd">Cigar::Operation</a>  type,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1vector__type.html">vector_type</a>       cigar,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            cigar_len)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
@@ -184,21 +184,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 2; i &lt; mds_len; )</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> op = mds[i++];</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (op == <a class="code" href="group___i_o.html#gga9ea16b51c96975fd11318141fef85b30ace76ce0933b012b0410fc3f4dce70ef6">MDS_MATCH</a>)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (op == <a class="code" href="group__IO.html#gga9ea16b51c96975fd11318141fef85b30ace76ce0933b012b0410fc3f4dce70ef6">MDS_MATCH</a>)</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> l = mds[i++];</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// prolong the MDS match if it spans multiple tokens</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">while</span> (i &lt; mds_len &amp;&amp; mds[i] == <a class="code" href="group___i_o.html#gga9ea16b51c96975fd11318141fef85b30ace76ce0933b012b0410fc3f4dce70ef6">MDS_MATCH</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">while</span> (i &lt; mds_len &amp;&amp; mds[i] == <a class="code" href="group__IO.html#gga9ea16b51c96975fd11318141fef85b30ace76ce0933b012b0410fc3f4dce70ef6">MDS_MATCH</a>)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                l += mds[i++];</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group___i_o.html#gga9ea16b51c96975fd11318141fef85b30acbabe9c688e92c68637c32e0ed7b377f">MDS_MISMATCH</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group__IO.html#gga9ea16b51c96975fd11318141fef85b30acbabe9c688e92c68637c32e0ed7b377f">MDS_MISMATCH</a>)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            n_mm++;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            ++i;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group___i_o.html#gga9ea16b51c96975fd11318141fef85b30a9cc397e96bbba2e594548d4225fa3030">MDS_INSERTION</a>)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group__IO.html#gga9ea16b51c96975fd11318141fef85b30a9cc397e96bbba2e594548d4225fa3030">MDS_INSERTION</a>)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> l = mds[i++];</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
@@ -207,7 +207,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            i += l;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group___i_o.html#gga9ea16b51c96975fd11318141fef85b30a26f0b6d860022a2bbbf15cb81cf7bf22">MDS_DELETION</a>)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <a class="code" href="group__IO.html#gga9ea16b51c96975fd11318141fef85b30a26f0b6d860022a2bbbf15cb81cf7bf22">MDS_DELETION</a>)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> l = mds[i++];</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
@@ -224,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:52 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

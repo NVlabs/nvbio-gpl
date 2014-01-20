@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mapping',['Mapping',['../group___mapping.html',1,'']]],
-  ['mappingdetail',['MappingDetail',['../group___mapping_detail.html',1,'']]],
-  ['memory_20mapping',['Memory Mapping',['../group___memory_mapping_module.html',1,'']]]
+  ['mapping',['Mapping',['../group__Mapping.html',1,'']]],
+  ['mappingdetail',['MappingDetail',['../group__MappingDetail.html',1,'']]],
+  ['memory_20mapping',['Memory Mapping',['../group__MemoryMappingModule.html',1,'']]]
 ];

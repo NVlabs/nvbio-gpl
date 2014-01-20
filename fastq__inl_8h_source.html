@@ -113,11 +113,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// get the next character, or 255 if EOF</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__gzfile.html#ae8df2885e6d818592efc6cf861041c18">   26</a></span>&#160;<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> <a class="code" href="structnvbio_1_1_f_a_s_t_q__gzfile.html#ae8df2885e6d818592efc6cf861041c18">FASTQ_gzfile::get</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__gzfile.html#ae8df2885e6d818592efc6cf861041c18">   26</a></span>&#160;<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> <a class="code" href="structnvbio_1_1FASTQ__gzfile.html#ae8df2885e6d818592efc6cf861041c18">FASTQ_gzfile::get</a>()</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (m_buffer_pos &gt;= m_buffer_size)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        m_buffer_size = <a class="code" href="structnvbio_1_1_f_a_s_t_q__gzfile.html#a88c97a1213f06618590b38b5c0bc0c04">read</a>( &amp;m_buffer[0], (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)m_buffer.size() );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        m_buffer_size = <a class="code" href="structnvbio_1_1FASTQ__gzfile.html#a88c97a1213f06618590b38b5c0bc0c04">read</a>( &amp;m_buffer[0], (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)m_buffer.size() );</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        m_buffer_pos  = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> (m_buffer_pos &lt; m_buffer_size) ? m_buffer[ m_buffer_pos++ ] : <a class="code" href="fastq_8h.html#acca8e88c7c40d6a9d7401a4703a54727">FASTQ_EOF</a>;</div>
@@ -126,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// constructor</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a681f52b102e2ea2749c587ca60ea8fcd">   39</a></span>&#160;<a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a681f52b102e2ea2749c587ca60ea8fcd">FASTQ_file::FASTQ_file</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> buffer_size)</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__file.html#a681f52b102e2ea2749c587ca60ea8fcd">   39</a></span>&#160;<a class="code" href="structnvbio_1_1FASTQ__file.html#a681f52b102e2ea2749c587ca60ea8fcd">FASTQ_file::FASTQ_file</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> buffer_size)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  : m_file( NULL ),</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_buffer( buffer_size ),</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    m_buffer_size( 0 ),</div>
@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// constructor</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a8b9af6b17bd55e26c3a3d28df8338133">   49</a></span>&#160;<a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a681f52b102e2ea2749c587ca60ea8fcd">FASTQ_file::FASTQ_file</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> buffer_size)</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__file.html#a8b9af6b17bd55e26c3a3d28df8338133">   49</a></span>&#160;<a class="code" href="structnvbio_1_1FASTQ__file.html#a681f52b102e2ea2749c587ca60ea8fcd">FASTQ_file::FASTQ_file</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> buffer_size)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    : m_buffer( buffer_size ), m_buffer_size( 0 ), m_buffer_pos( 0 )</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    m_file = fopen( filename, <span class="stringliteral">&quot;r&quot;</span> );</div>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// open a new file</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a467cc3536ca0d5697350a56da4f9ab90">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a467cc3536ca0d5697350a56da4f9ab90">FASTQ_file::open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename)</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__file.html#a467cc3536ca0d5697350a56da4f9ab90">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1FASTQ__file.html#a467cc3536ca0d5697350a56da4f9ab90">FASTQ_file::open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (m_file)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        fclose( m_file );</div>
@@ -156,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// destructor</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a65b03123eadbbafd4f40258bd80139d7">   69</a></span>&#160;<a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#a65b03123eadbbafd4f40258bd80139d7">FASTQ_file::~FASTQ_file</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__file.html#a65b03123eadbbafd4f40258bd80139d7">   69</a></span>&#160;<a class="code" href="structnvbio_1_1FASTQ__file.html#a65b03123eadbbafd4f40258bd80139d7">FASTQ_file::~FASTQ_file</a>()</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (m_file)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        fclose( m_file );</div>
@@ -165,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// get the next character, or 255 if EOF</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#aad30d6ae13c7dfa039898abfde475ca6">   78</a></span>&#160;<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> <a class="code" href="structnvbio_1_1_f_a_s_t_q__file.html#aad30d6ae13c7dfa039898abfde475ca6">FASTQ_file::get</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__file.html#aad30d6ae13c7dfa039898abfde475ca6">   78</a></span>&#160;<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> <a class="code" href="structnvbio_1_1FASTQ__file.html#aad30d6ae13c7dfa039898abfde475ca6">FASTQ_file::get</a>()</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (m_buffer_pos &gt;= m_buffer_size)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
@@ -178,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// constructor</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> FASTQ_stream&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#adbf90e3710fbfd25fd293160e384477e">   91</a></span>&#160;<a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#adbf90e3710fbfd25fd293160e384477e">FASTQ_reader&lt;FASTQ_stream&gt;::FASTQ_reader</a>(FASTQ_stream&amp; <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>) :</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__reader.html#adbf90e3710fbfd25fd293160e384477e">   91</a></span>&#160;<a class="code" href="structnvbio_1_1FASTQ__reader.html#adbf90e3710fbfd25fd293160e384477e">FASTQ_reader&lt;FASTQ_stream&gt;::FASTQ_reader</a>(FASTQ_stream&amp; <a class="code" href="group__WorkQueueDetail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>) :</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    m_stream( &amp;stream ),</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    m_line(0),</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    m_error(0)</div>
@@ -188,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> FASTQ_stream&gt;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Writer&gt;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#a6d5a111bc8e734b673d38a69dafea38c">  101</a></span>&#160;<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#a6d5a111bc8e734b673d38a69dafea38c">FASTQ_reader&lt;FASTQ_stream&gt;::read</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_reads, Writer&amp; writer)</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__reader.html#a6d5a111bc8e734b673d38a69dafea38c">  101</a></span>&#160;<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1FASTQ__reader.html#a6d5a111bc8e734b673d38a69dafea38c">FASTQ_reader&lt;FASTQ_stream&gt;::read</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_reads, Writer&amp; writer)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n = 0;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> marker;</div>
@@ -312,7 +312,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">// error string</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> FASTQ_stream&gt;</div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#ade6df5320bd1ee990a08d3d2deb2e970">  225</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1_f_a_s_t_q__reader.html#ade6df5320bd1ee990a08d3d2deb2e970">FASTQ_reader&lt;FASTQ_stream&gt;::error_string</a>(<span class="keywordtype">char</span>* error)</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="structnvbio_1_1FASTQ__reader.html#ade6df5320bd1ee990a08d3d2deb2e970">  225</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1FASTQ__reader.html#ade6df5320bd1ee990a08d3d2deb2e970">FASTQ_reader&lt;FASTQ_stream&gt;::error_string</a>(<span class="keywordtype">char</span>* error)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (m_error == 1)</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        sprintf(error, <span class="stringliteral">&quot;line %u, expected &#39;@&#39;, got &#39;%c&#39;&quot;</span>, m_line, m_error_char);</div>
@@ -324,7 +324,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

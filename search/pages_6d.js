@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memory_20mapping',['Memory Mapping',['../_memory_mapping_page.html',1,'BasicPage']]]
+  ['memory_20mapping',['Memory Mapping',['../MemoryMappingPage.html',1,'BasicPage']]]
 ];

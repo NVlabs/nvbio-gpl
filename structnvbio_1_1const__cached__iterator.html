@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-attribs">Public Members</a> &#124;
 <a href="structnvbio_1_1const__cached__iterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::const_cached_iterator&lt; InputStream &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___iterators.html">Iterators</a></div></div>  </div>
+<div class="title">nvbio::const_cached_iterator&lt; InputStream &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__Iterators.html">Iterators</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
@@ -98,13 +98,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     typename InputStream&gt;<br/>
 struct nvbio::const_cached_iterator&lt; InputStream &gt;</h3>
 
-<p>A simple class to cache accesses to a stream into a register. For example, this iterator can be useful to wrap the underlying (uint32 or uint4) storage of <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>'s, so as to avoid repeated accesses to long latency memories.</p>
+<p>A simple class to cache accesses to a stream into a register. For example, this iterator can be useful to wrap the underlying (uint32 or uint4) storage of <a class="el" href="structnvbio_1_1PackedStream.html">PackedStream</a>'s, so as to avoid repeated accesses to long latency memories.</p>
 <h1><a class="anchor" id="ConstCachedIteratorExample"></a>
 Example</h1>
 <div class="fragment"><div class="line"><a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> read_stream(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* gmem_storage)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1const__cached__iterator.html">nvbio::const_cached_iterator&lt;const uint32*&gt;</a> cached_storage_type;</div>
-<div class="line">    <a class="code" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream&lt;cached_storage_type, uint8, 2, false&gt;</a> packed_stream( gmem_storage );</div>
+<div class="line">    <a class="code" href="structnvbio_1_1PackedStream.html">nvbio::PackedStream&lt;cached_storage_type, uint8, 2, false&gt;</a> packed_stream( gmem_storage );</div>
 <div class="line">    <span class="keywordflow">return</span> packed_stream[0]  |</div>
 <div class="line">           packed_stream[5]  |</div>
 <div class="line">           packed_stream[10] |</div>
@@ -143,10 +143,10 @@ Public Methods</h2></td></tr>
 <tr class="memitem:a9437d3a5de50b72d271c80aed0342437"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html#a9437d3a5de50b72d271c80aed0342437">const_cached_iterator</a> (InputStream <a class="el" href="structnvbio_1_1const__cached__iterator.html#a3718d7db8e4ddbe50dbfe959c484ac73">stream</a>)</td></tr>
 <tr class="separator:a9437d3a5de50b72d271c80aed0342437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f5182dc2f845f345425150fdc269fcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1const__cached__iterator.html#aa1bc979ed1ce3d9318a9c9716965cfa8">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html#a5f5182dc2f845f345425150fdc269fcf">operator[]</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1const__cached__iterator.html#aa1bc979ed1ce3d9318a9c9716965cfa8">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html#a5f5182dc2f845f345425150fdc269fcf">operator[]</a> (<a class="el" href="vs2008_2RelWithDebInfo-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="vs2008_2RelWithDebInfo-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a5f5182dc2f845f345425150fdc269fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3718d7db8e4ddbe50dbfe959c484ac73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> InputStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html#a3718d7db8e4ddbe50dbfe959c484ac73">stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> InputStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html#a3718d7db8e4ddbe50dbfe959c484ac73">stream</a> () <a class="el" href="vs2008_2RelWithDebInfo-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a3718d7db8e4ddbe50dbfe959c484ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -310,7 +310,7 @@ template&lt;typename InputStream&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1const__cached__iterator.html#aa1bc979ed1ce3d9318a9c9716965cfa8">value_type</a> <a class="el" href="structnvbio_1_1const__cached__iterator.html">nvbio::const_cached_iterator</a>&lt; InputStream &gt;::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vs2008_2RelWithDebInfo-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -432,7 +432,7 @@ template&lt;typename InputStream&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:04:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

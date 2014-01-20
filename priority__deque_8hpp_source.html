@@ -239,14 +239,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">//-------------------------------Constructors----------------------------------|</span></div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">//----------------------------Default Constructor------------------------------|</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> S, <span class="keyword">typename</span> C&gt;</div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58">  243</a></span>&#160;<a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58" title="Constructs a new priority deque. ">priority_deque&lt;T, S, C&gt;::priority_deque</a> (<span class="keyword">const</span> C&amp; <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>, <span class="keyword">const</span> S&amp; seq)</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58">  243</a></span>&#160;<a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58" title="Constructs a new priority deque. ">priority_deque&lt;T, S, C&gt;::priority_deque</a> (<span class="keyword">const</span> C&amp; <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>, <span class="keyword">const</span> S&amp; seq)</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  : sequence_(seq), compare_(comp)</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <a class="code" href="namespaceboost_1_1heap.html#ac2f1a8dc6c7add6d06557cce98840ca6" title="Moves elements in [first,last) to form an interval heap. ">heap::make_interval_heap</a>(sequence_.begin(), sequence_.end(), compare_);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#if (__cplusplus &gt;= 201103L)</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> S, <span class="keyword">typename</span> C&gt;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58" title="Constructs a new priority deque. ">priority_deque&lt;T, S, C&gt;::priority_deque</a> (<span class="keyword">const</span> C&amp; <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>, S&amp;&amp; seq)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<a class="code" href="classboost_1_1container_1_1priority__deque.html#a1dda23c4b0a1622c7beb0b033774eb58" title="Constructs a new priority deque. ">priority_deque&lt;T, S, C&gt;::priority_deque</a> (<span class="keyword">const</span> C&amp; <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>, S&amp;&amp; seq)</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  : sequence_(std::move(seq)), compare_(comp)</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <a class="code" href="namespaceboost_1_1heap.html#ac2f1a8dc6c7add6d06557cce98840ca6" title="Moves elements in [first,last) to form an interval heap. ">heap::make_interval_heap</a>(sequence_.begin(), sequence_.end(), compare_);</div>
@@ -443,7 +443,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

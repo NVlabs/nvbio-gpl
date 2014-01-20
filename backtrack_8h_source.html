@@ -152,13 +152,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> c = 0; c &lt; 4; ++c)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">// check if the child node for character &#39;c&#39; exists</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) &lt; <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ))</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) &lt; <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ))</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> cost = (c == c_pattern) ? 0u : 1u;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keyword">const</span> uint2 range_c = make_uint2(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    fmi.L2(c) + <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) + 1,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    fmi.L2(c) + <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ) );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    fmi.L2(c) + <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) + 1,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    fmi.L2(c) + <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ) );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                stack[sp] = make_uint4( range_c.x, range_c.y, cost, len - seed - 1u );</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
@@ -194,11 +194,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> c = 0; c &lt; 4; ++c)</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="comment">// check if the child node for character &#39;c&#39; exists</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) &lt; <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) &lt; <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ))</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        <span class="keyword">const</span> uint2 range_c = make_uint2(</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                            fmi.L2(c) + <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) + 1,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                            fmi.L2(c) + <a class="code" href="group___basic_utils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ) );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                            fmi.L2(c) + <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_k, c ) + 1,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                            fmi.L2(c) + <a class="code" href="group__BasicUtils.html#ga8519bdd77d886de611738b55dcfb5aa7">comp</a>( cnt_l, c ) );</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        <span class="comment">// compute the extension cost</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> new_cost = cost + (c == c_pattern ? 0u : 1u);</div>
@@ -227,7 +227,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

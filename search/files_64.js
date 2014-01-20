@@ -8,5 +8,5 @@ var searchData=
   ['divsufsort_2eh',['divsufsort.h',['../divsufsort_8h.html',1,'']]],
   ['divsufsortxx_2eh',['divsufsortxx.h',['../divsufsortxx_8h.html',1,'']]],
   ['dna_2eh',['dna.h',['../dna_8h.html',1,'']]],
-  ['dummycxxfile_2ecxx',['DummyCXXFile.cxx',['../_dummy_c_x_x_file_8cxx.html',1,'']]]
+  ['dummycxxfile_2ecxx',['DummyCXXFile.cxx',['../DummyCXXFile_8cxx.html',1,'']]]
 ];

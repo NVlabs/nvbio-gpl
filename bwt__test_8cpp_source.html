@@ -138,8 +138,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>*  bwt_temp    = &amp;buffer[0];</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* base_stream = (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)&amp;buffer[0] + LEN+1;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;uint32*,uint8,2,true&gt;</a> stream_type;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    stream_type <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>( base_stream );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1PackedStream.html">PackedStream&lt;uint32*,uint8,2,true&gt;</a> stream_type;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    stream_type <a class="code" href="group__WorkQueueDetail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>( base_stream );</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    srand(0);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> i = 0; i &lt; <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaaff15d001decc8890fb72cc6065a1abba">LEN</a>; ++i)</div>
@@ -150,13 +150,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;  construction... started\n&quot;</span>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">Timer</a> timer;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    timer.<a class="code" href="structnvbio_1_1_timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="structnvbio_1_1Timer.html">Timer</a> timer;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    timer.<a class="code" href="structnvbio_1_1Timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">gen_bwt</a>( LEN, stream.begin(), &amp;bwt_temp[0], stream.begin() );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    timer.<a class="code" href="structnvbio_1_1_timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;  construction... done: %um:%us\n&quot;</span>, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(timer.<a class="code" href="structnvbio_1_1_timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>()/60), <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(timer.<a class="code" href="structnvbio_1_1_timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>())%60);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    timer.<a class="code" href="structnvbio_1_1Timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;  construction... done: %um:%us\n&quot;</span>, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(timer.<a class="code" href="structnvbio_1_1Timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>()/60), <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(timer.<a class="code" href="structnvbio_1_1Timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>())%60);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;bwt test... done\n&quot;</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> 0;</div>
@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -117,45 +117,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>bowtie2 {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>cuda {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html">   33</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt; <span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html">BaseScoringPipelineState</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_best_approx_scoring_pipeline_state.html">   34</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt; <span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_best_approx_scoring_pipeline_state.html">BestApproxScoringPipelineState</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BaseScoringPipelineState.html">   33</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt; <span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BaseScoringPipelineState.html">BaseScoringPipelineState</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BestApproxScoringPipelineState.html">   34</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt; <span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BestApproxScoringPipelineState.html">BestApproxScoringPipelineState</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> BatchType, <span class="keyword">typename</span> FMType, <span class="keyword">typename</span> rFMType&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___locate.html#ga1e29dc96f82f667597cef9423d0c3c31">locate</a>(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__Locate.html#ga1e29dc96f82f667597cef9423d0c3c31">locate</a>(</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> BatchType             read_batch, <span class="keyword">const</span> FMType fmi, <span class="keyword">const</span> rFMType rfmi,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                in_count,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*               idx_queue,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues_device_view.html">HitQueuesDeviceView</a>   hits,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html">ParamsPOD</a>             params);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1HitQueuesDeviceView.html">HitQueuesDeviceView</a>   hits,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1ParamsPOD.html">ParamsPOD</a>             params);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> BatchType, <span class="keyword">typename</span> FMType, <span class="keyword">typename</span> rFMType&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___locate.html#ga9e44282523883afd21fcaa23b05bf45b">locate_init</a>(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__Locate.html#ga9e44282523883afd21fcaa23b05bf45b">locate_init</a>(</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">const</span> BatchType             read_batch, <span class="keyword">const</span> FMType fmi, <span class="keyword">const</span> rFMType rfmi,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                in_count,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*               idx_queue,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues_device_view.html">HitQueuesDeviceView</a>   hits,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html">ParamsPOD</a>             params);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1HitQueuesDeviceView.html">HitQueuesDeviceView</a>   hits,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1ParamsPOD.html">ParamsPOD</a>             params);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> BatchType, <span class="keyword">typename</span> FMType, <span class="keyword">typename</span> rFMType&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___locate.html#ga73ec220ab4b8005c5efa38ea9cdb8803">locate_lookup</a>(</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__Locate.html#ga73ec220ab4b8005c5efa38ea9cdb8803">locate_lookup</a>(</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> BatchType             read_batch, <span class="keyword">const</span> FMType fmi, <span class="keyword">const</span> rFMType rfmi,</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                in_count,</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*               idx_queue,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues_device_view.html">HitQueuesDeviceView</a>   hits,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html">ParamsPOD</a>             params);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;          <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1HitQueuesDeviceView.html">HitQueuesDeviceView</a>   hits,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1ParamsPOD.html">ParamsPOD</a>             params);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___locate.html#ga9e44282523883afd21fcaa23b05bf45b">locate_init</a>(</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html">BaseScoringPipelineState&lt;ScoringScheme&gt;</a>&amp;  pipeline,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html">ParamsPOD</a>                                 params);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__Locate.html#ga9e44282523883afd21fcaa23b05bf45b">locate_init</a>(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BaseScoringPipelineState.html">BaseScoringPipelineState&lt;ScoringScheme&gt;</a>&amp;  pipeline,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1ParamsPOD.html">ParamsPOD</a>                                 params);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ScoringScheme&gt;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___locate.html#ga73ec220ab4b8005c5efa38ea9cdb8803">locate_lookup</a>(</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html">BaseScoringPipelineState&lt;ScoringScheme&gt;</a>&amp;  pipeline,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html">ParamsPOD</a>                                 params);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__Locate.html#ga73ec220ab4b8005c5efa38ea9cdb8803">locate_lookup</a>(</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1BaseScoringPipelineState.html">BaseScoringPipelineState&lt;ScoringScheme&gt;</a>&amp;  pipeline,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1ParamsPOD.html">ParamsPOD</a>                                 params);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;} <span class="comment">// namespace cuda</span></div>
@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:53 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

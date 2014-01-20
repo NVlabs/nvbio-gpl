@@ -157,16 +157,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (range.x == range.y)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">const</span> index_type r = <a class="code" href="namespacenvbio.html#af17edf0fa9c5891cc1a6117a7fa9fe5b">rank</a>( fmi, range.x, c );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( r, r );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( r, r );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (range.x == index_type(-1))</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">const</span> index_type r = <a class="code" href="namespacenvbio.html#af17edf0fa9c5891cc1a6117a7fa9fe5b">rank</a>( fmi, range.y, c );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), r );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), r );</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (range.y == fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>())</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="namespacenvbio.html#af17edf0fa9c5891cc1a6117a7fa9fe5b">rank</a>( fmi, range.x, c ),</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            fmi.<a class="code" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">count</a>( c ) );</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
@@ -196,10 +196,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> index_type zero = index_type(0);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (k == index_type(-1))</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( zero, zero, zero, zero );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( zero, zero, zero, zero );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k == fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>())</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            fmi.<a class="code" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">count</a>(0),</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            fmi.<a class="code" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">count</a>(1),</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            fmi.<a class="code" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">count</a>(2),</div>
@@ -241,7 +241,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (range.x == index_type(-1))</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        *outl = <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( zero, zero, zero, zero );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        *outl = <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( zero, zero, zero, zero );</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        *outh = <a class="code" href="namespacenvbio.html#a5543e3fdd7f430ca369f8be1eb9e384e">rank4</a>( fmi, range.y );</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
@@ -282,7 +282,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1fm__index.html#a41b326748d7c153f970de06a851c64c0">fm_index&lt;TRankDictionary,TSuffixArray&gt;::range_type</a> range_type;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// backward search</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> range_type range = <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>() );</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> range_type range = <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>() );</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacenvbio.html#aa0a7fece4db974208c05cee885b7da00">match</a>( fmi, pattern, pattern_len, range );</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
@@ -315,11 +315,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> c = pattern[i];</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (c &gt; 3) <span class="comment">// there is an N here. no match </span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(index_type(1),index_type(0));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(index_type(1),index_type(0));</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">const</span> range_type c_rank = <a class="code" href="namespacenvbio.html#af17edf0fa9c5891cc1a6117a7fa9fe5b">rank</a>(</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            fmi,</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( range.x-1, range.y ),</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( range.x-1, range.y ),</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            c );</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        range.x = fmi.<a class="code" href="structnvbio_1_1fm__index.html#a27d0858304e1df46a4ec28f5c7a7ccf9">L2</a>(c) + c_rank.x + 1;</div>
@@ -348,17 +348,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1fm__index.html#a41b326748d7c153f970de06a851c64c0">fm_index&lt;TRankDictionary,TSuffixArray&gt;::range_type</a> range_type;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// forward search</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    range_type range = <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>() );</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    range_type range = <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( index_type(0), fmi.<a class="code" href="structnvbio_1_1fm__index.html#a3ed407dfbc57739b712f72cfebae01cd">length</a>() );</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; pattern_len &amp;&amp; range.x &lt;= range.y; ++i)</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> c = pattern[i];</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">if</span> (c &gt; 3) <span class="comment">// there is an N here. no match </span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(index_type(1),index_type(0));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>(index_type(1),index_type(0));</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keyword">const</span> range_type c_rank = <a class="code" href="namespacenvbio.html#af17edf0fa9c5891cc1a6117a7fa9fe5b">rank</a>(</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            fmi,</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( range.x-1, range.y ),</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( range.x-1, range.y ),</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            c );</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        range.x = fmi.<a class="code" href="structnvbio_1_1fm__index.html#a27d0858304e1df46a4ec28f5c7a7ccf9">L2</a>(c) + c_rank.x + 1;</div>
@@ -377,7 +377,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">typename</span> TRankDictionary,</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">typename</span> TSuffixArray&gt;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
-<div class="line"><a name="l00290"></a><span class="lineno"><a class="code" href="namespacenvbio.html#a2de4df70500fdd080fd5217124a0afa2">  290</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="structnvbio_1_1fm__index.html#a6787f1a9ce8e4abd5fed2216a7276c87">fm_index&lt;TRankDictionary,TSuffixArray&gt;::index_type</a> <a class="code" href="group___f_m_index.html#ga7083bf5f77ae1a87ac18572432b79ef7">basic_inv_psi</a>(</div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="code" href="namespacenvbio.html#a2de4df70500fdd080fd5217124a0afa2">  290</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="structnvbio_1_1fm__index.html#a6787f1a9ce8e4abd5fed2216a7276c87">fm_index&lt;TRankDictionary,TSuffixArray&gt;::index_type</a> <a class="code" href="group__FMIndex.html#ga7083bf5f77ae1a87ac18572432b79ef7">basic_inv_psi</a>(</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1fm__index.html">fm_index&lt;TRankDictionary,TSuffixArray&gt;</a>&amp;                       fmi,</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1fm__index.html#a6787f1a9ce8e4abd5fed2216a7276c87">fm_index&lt;TRankDictionary,TSuffixArray&gt;::index_type</a>   i)</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
@@ -437,7 +437,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        ++t;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( j, t );</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( j, t );</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;}</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">// given a suffix array index i, return its linear coordinate (or equivalently, return the</span></div>
@@ -523,7 +523,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        ++t;</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___vector_types.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( j, t );</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__VectorTypes.html#ga1a0210be5322d9bf37f09f9afdb0cddd">make_vector</a>( j, t );</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">// given a sampled suffix array index i and an offset j, return the corresponding linear coordinate SSA[i]+j</span></div>
@@ -591,7 +591,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:52 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

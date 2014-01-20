@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['aligners',['Aligners',['../group___aligner.html',1,'']]],
-  ['aligner_20tags',['Aligner Tags',['../group___aligner_tag.html',1,'']]],
-  ['alignment_20module',['Alignment Module',['../group___alignment.html',1,'']]],
-  ['alignmentdetail',['AlignmentDetail',['../group___alignment_detail.html',1,'']]],
-  ['alignment_20sinks',['Alignment Sinks',['../group___alignment_sink.html',1,'']]],
-  ['atomics',['Atomics',['../group___atomics.html',1,'']]]
+  ['aligners',['Aligners',['../group__Aligner.html',1,'']]],
+  ['aligner_20tags',['Aligner Tags',['../group__AlignerTag.html',1,'']]],
+  ['alignment_20module',['Alignment Module',['../group__Alignment.html',1,'']]],
+  ['alignmentdetail',['AlignmentDetail',['../group__AlignmentDetail.html',1,'']]],
+  ['alignment_20sinks',['Alignment Sinks',['../group__AlignmentSink.html',1,'']]],
+  ['atomics',['Atomics',['../group__Atomics.html',1,'']]]
 ];

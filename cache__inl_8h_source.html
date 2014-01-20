@@ -111,10 +111,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>nvbio {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CacheManager&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="structnvbio_1_1_l_r_u.html#a0ba056b48cab199a4f2d5b741eb57536">   24</a></span>&#160;<a class="code" href="structnvbio_1_1_l_r_u.html#a0ba056b48cab199a4f2d5b741eb57536">LRU&lt;CacheManager&gt;::LRU</a>(<a class="code" href="struct_cache_manager.html">CacheManager</a>&amp; manager) : m_first(0xFFFFFFFFu), m_last(0xFFFFFFFFu), m_manager(&amp;manager) {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="structnvbio_1_1LRU.html#a0ba056b48cab199a4f2d5b741eb57536">   24</a></span>&#160;<a class="code" href="structnvbio_1_1LRU.html#a0ba056b48cab199a4f2d5b741eb57536">LRU&lt;CacheManager&gt;::LRU</a>(<a class="code" href="structCacheManager.html">CacheManager</a>&amp; manager) : m_first(0xFFFFFFFFu), m_last(0xFFFFFFFFu), m_manager(&amp;manager) {}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CacheManager&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="structnvbio_1_1_l_r_u.html#ac9c4abc6142037b7de4c8f10476c4631">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1_l_r_u.html#ac9c4abc6142037b7de4c8f10476c4631">LRU&lt;CacheManager&gt;::pin</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> item)</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="structnvbio_1_1LRU.html#ac9c4abc6142037b7de4c8f10476c4631">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1LRU.html#ac9c4abc6142037b7de4c8f10476c4631">LRU&lt;CacheManager&gt;::pin</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> item)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">typename</span> std::map&lt;uint32,uint32&gt;::iterator it = m_cache_map.find( item );</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (it == m_cache_map.end())</div>
@@ -165,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CacheManager&gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structnvbio_1_1_l_r_u.html#a8d6a8624b30702a76d29db2c51a8e2ab">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1_l_r_u.html#a8d6a8624b30702a76d29db2c51a8e2ab">LRU&lt;CacheManager&gt;::unpin</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> item)</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structnvbio_1_1LRU.html#a8d6a8624b30702a76d29db2c51a8e2ab">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1LRU.html#a8d6a8624b30702a76d29db2c51a8e2ab">LRU&lt;CacheManager&gt;::unpin</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> item)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typename</span> std::map&lt;uint32,uint32&gt;::iterator it = m_cache_map.find( item );</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> list_idx = it-&gt;second;</div>
@@ -178,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CacheManager&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1_l_r_u.html">LRU&lt;CacheManager&gt;::touch</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> list_idx, List&amp; list)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1LRU.html">LRU&lt;CacheManager&gt;::touch</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> list_idx, List&amp; list)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// check whether this element is already at the beginning of the LRU list</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (m_first == list_idx)</div>
@@ -267,7 +267,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:49 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

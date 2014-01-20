@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">unsigned</span> len;               <span class="comment">/* a code&#39;s length in bits */</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">unsigned</span> sym;               <span class="comment">/* index of code symbols */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>, <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>;          <span class="comment">/* minimum and maximum code lengths */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="group__BasicUtils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>, <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>;          <span class="comment">/* minimum and maximum code lengths */</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">unsigned</span> root;              <span class="comment">/* number of index bits for root table */</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">unsigned</span> curr;              <span class="comment">/* number of index bits for current table */</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">unsigned</span> drop;              <span class="comment">/* code bits to drop for sub-table */</span></div>
@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    root = *bits;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">for</span> (max = <a class="code" href="inftrees_8c.html#a6fcad31e688110d9d61bdcc99b2a59d7">MAXBITS</a>; max &gt;= 1; max--)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (count[max] != 0) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (root &gt; max) root = <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (root &gt; max) root = <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (max == 0) {                     <span class="comment">/* no symbols to code at all */</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        here.<a class="code" href="structcode.html#a4f075d73a9177d05cc7d332105295b83">op</a> = (<span class="keywordtype">unsigned</span> char)64;    <span class="comment">/* invalid code marker */</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        here.<a class="code" href="structcode.html#a5defcebb356dca1a5a8d39995f28d66b">bits</a> = (<span class="keywordtype">unsigned</span> char)1;</div>
@@ -213,9 +213,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        *bits = 1;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> 0;     <span class="comment">/* no symbols, but wait for decoding to report error */</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span> (min = 1; min &lt; <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>; min++)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span> (min = 1; min &lt; <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>; min++)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (count[min] != 0) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (root &lt; min) root = <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (root &lt; min) root = <a class="code" href="group__BasicUtils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">/* check for an over-subscribed or incomplete set of lengths */</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    left = 1;</div>
@@ -289,7 +289,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">/* initialize state for loop */</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    huff = 0;                   <span class="comment">/* starting code */</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    sym = 0;                    <span class="comment">/* starting code symbol */</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    len = <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;                  <span class="comment">/* starting code length */</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    len = <a class="code" href="group__BasicUtils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;                  <span class="comment">/* starting code length */</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    next = *table;              <span class="comment">/* current table to fill in */</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    curr = root;                <span class="comment">/* current table index bits */</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    drop = 0;                   <span class="comment">/* current bits to drop from code for index */</span></div>
@@ -353,7 +353,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                drop = root;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="comment">/* increment past last table */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            next += <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;            <span class="comment">/* here min is 1 &lt;&lt; curr */</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            next += <a class="code" href="group__BasicUtils.html#gaeeb2406339f4edfcee3f007aaccd478e">min</a>;            <span class="comment">/* here min is 1 &lt;&lt; curr */</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">/* determine length of next table */</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            curr = len - drop;</div>
@@ -397,7 +397,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 19 2014 21:14:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 09:03:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
