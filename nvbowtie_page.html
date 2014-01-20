@@ -82,20 +82,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">nvBowtie </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>nvBowtie is a GPU-accelerated re-engineering of Bowtie2, a very widely used short-read aligner. While being completely rewritten from scratch, nvBowtie reproduces many (though not all) of the features of Bowtie2.</p>
+<div class="textblock"> 
+   <img src="nvidia_cubes.png" style="position:relative; bottom:-10px; border:0px;"/>
+  <dl class="section user"><dt></dt><dd><br/>
+ nvBowtie is a GPU-accelerated re-engineering of Bowtie2, a very widely used short-read aligner. While being completely rewritten from scratch, nvBowtie reproduces many (though not all) of the features of Bowtie2.</dd></dl>
 <h1><a class="anchor" id="nvBowtieArch"></a>
 Architecture</h1>
-<p>In order to take advantage of the massive parallelism available in modern processor architectures, nvBowtie re-implements the same underlying algorithms as Bowtie2 taking a fundamentally different approach. In fact, while Bowtie2 is essentially designed to operate on a single read at a time (possibly having multiple CPU threads working on a different read), carrying the entire alignment process in what is basically a very complex chain of nested function calls, nvBowtie works at all times with large batches of reads, and treats their alignment as a complex pipeline composed by many relatively simple but deeply parallel stages. In many of these stages parallelism is spread at a much finer granularity than at the reads-level, for example by processing many candidate hits from each read at the same time.</p>
-<p>There are effectively a few different pipelines, one for each kind of alignment:</p>
-<ul>
+<dl class="section user"><dt></dt><dd>In order to take advantage of the massive parallelism available in modern processor architectures, nvBowtie re-implements the same underlying algorithms as Bowtie2 taking a fundamentally different approach. In fact, while Bowtie2 is essentially designed to operate on a single read at a time (possibly having multiple CPU threads working on a different read), carrying the entire alignment process in what is basically a very complex chain of nested function calls, nvBowtie works at all times with large batches of reads, and treats their alignment as a complex pipeline composed by many relatively simple but deeply parallel stages. In many of these stages parallelism is spread at a much finer granularity than at the reads-level, for example by processing many candidate hits from each read at the same time.</dd></dl>
+<dl class="section user"><dt></dt><dd>There are effectively a few different pipelines, one for each kind of alignment:<ul>
 <li>best mapping of single-end reads</li>
 <li>best mapping of paired-end reads</li>
 <li>all mapping of single-end reads</li>
 <li>all mapping of paired-end reads (not implemented yet)</li>
 </ul>
+</dd></dl>
 <h2><a class="anchor" id="BestMapping-SingleEnd"></a>
 best-mapping, single-end reads</h2>
-<p>This pipeline can be described by the following pseudo-code:</p>
+<dl class="section user"><dt></dt><dd>This pipeline can be described by the following pseudo-code:</dd></dl>
 <div class="fragment"><div class="line">best-alignments = {}</div>
 <div class="line"></div>
 <div class="line">seed-mapping-queue[in] := <a class="code" href="namespacenvbio_1_1cuda.html#a5702be3dee6b758f4895f831e75a9c72">all</a> reads</div>
@@ -108,7 +111,7 @@ best-mapping, single-end reads</h2>
 <div class="line">    seed-mapping-queue[in] = seed-mapping-queue[out];</div>
 <div class="line">}</div>
 <div class="line"><a class="code" href="group___traceback_detail.html#ga2def93f93f54896e327da2c4adb35a72">traceback_best</a>( best-alignments );                                          <span class="comment">// traceback the best alignments</span></div>
-</div><!-- fragment --><p>where score() is a sub-pipeline:</p>
+</div><!-- fragment --><dl class="section user"><dt></dt><dd>where score() is a sub-pipeline:</dd></dl>
 <div class="fragment"><div class="line">score([in] input-reads, [in] seed-deques, [in/out] best-alignments)</div>
 <div class="line">{</div>
 <div class="line">   <a class="code" href="group___work_queue_detail.html#ga7c6f0457212ffc4b696a01d5858485b6">active</a>-reads := input-reads</div>
@@ -120,8 +123,7 @@ best-mapping, single-end reads</h2>
 <div class="line">        <a class="code" href="group___reduce.html#ga01103d0dd86260c207369ef1f0d5b067">score_reduce</a>( hits-queue, best-alignments );                        <span class="comment">// keep track of the best alignments found so far for each read</span></div>
 <div class="line">   }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>The various functions involved correspond to different pipeline stages:</p>
-<ul>
+</div><!-- fragment --><dl class="section user"><dt></dt><dd>The various functions involved correspond to different pipeline stages:<ul>
 <li><a class="el" href="group___mapping.html">Mapping</a></li>
 <li><a class="el" href="group___locate.html">Locate</a></li>
 <li><a class="el" href="group___select.html">Select</a></li>
@@ -129,10 +131,11 @@ best-mapping, single-end reads</h2>
 <li><a class="el" href="group___reduce.html">Reduce</a></li>
 <li><a class="el" href="group___traceback.html">Traceback</a></li>
 </ul>
-<p>The data flowing through the pipeline goes mostly through a single-data structure of type ScoringQueues (<a class="el" href="group___scoring_queues_module.html">Scoring Queues</a>), which itself contains the active-reads (ScoringQueues::active_reads), the hits-queue (ScoringQueues::hits) and an index allowing to walk all the hits belonging to each read (ScoringQueues::hits_index).</p>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>The data flowing through the pipeline goes mostly through a single-data structure of type ScoringQueues (<a class="el" href="group___scoring_queues_module.html">Scoring Queues</a>), which itself contains the active-reads (ScoringQueues::active_reads), the hits-queue (ScoringQueues::hits) and an index allowing to walk all the hits belonging to each read (ScoringQueues::hits_index).</dd></dl>
 <h2><a class="anchor" id="BestMapping-PairedEnd"></a>
 best-mapping, paired-end reads</h2>
-<p>This pipeline can be described by the following pseudo-code:</p>
+<dl class="section user"><dt></dt><dd>This pipeline can be described by the following pseudo-code:</dd></dl>
 <div class="fragment"><div class="line">best-anchor-alignments   = {}</div>
 <div class="line">best-opposite-alignments = {}</div>
 <div class="line"></div>
@@ -150,7 +153,7 @@ best-mapping, paired-end reads</h2>
 <div class="line">}</div>
 <div class="line"><a class="code" href="group___traceback_detail.html#ga2def93f93f54896e327da2c4adb35a72">traceback_best</a>( best-anchor-alignments );</div>
 <div class="line"><a class="code" href="group___traceback.html#ga38c7416da4253853eae783371d0b797e">opposite_traceback_best</a>( best-opposite-alignments );</div>
-</div><!-- fragment --><p>where score() is a sub-pipeline:</p>
+</div><!-- fragment --><dl class="section user"><dt></dt><dd>where again score() is a sub-pipeline:</dd></dl>
 <div class="fragment"><div class="line">score([in] input-reads, [in] seed-deques, [in/out] best-anchor-alignments, [in/out] best-opposite-alignments)</div>
 <div class="line">{</div>
 <div class="line">   <a class="code" href="group___work_queue_detail.html#ga7c6f0457212ffc4b696a01d5858485b6">active</a>-reads := input-reads</div>
@@ -165,7 +168,7 @@ best-mapping, paired-end reads</h2>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="nvBowtieUsage"></a>
 Usage</h1>
-<p>At the moment, the command line options of nvBowtie differ from those of bowtie2. A comprehensive list can be obtained running: </p>
+<dl class="section user"><dt></dt><dd>At the moment, the command line options of nvBowtie differ from those of bowtie2. A comprehensive list can be obtained running:</dd></dl>
 <pre class="fragment">*  ./nvBowtie --help
 * 
 *  nvBowtie [options] reference-genome read-file output
@@ -203,24 +206,24 @@ Usage</h1>
 *       --no-mixed                       only report paired alignments
 *     Reporting:
 *       --mapQ-filter      int [0]       minimum mapQ threshold
-* </pre><p>While most parameters should be easy to understand, a major difference is that nvBowtie relies on external programs to build the reference indices:</p>
-<ul>
+* </pre><dl class="section user"><dt></dt><dd>While most parameters should be easy to understand, a major difference is that nvBowtie relies on external programs to build the reference indices:<ul>
 <li><a class="el" href="nvbwt_page.html">nvBWT</a> : builds the BWT indices of the reference FASTA files</li>
 <li><a class="el" href="nvssa_page.html">nvSSA</a> : builds the Sampled Suffix Arrays corresponding to a given BWT</li>
 </ul>
-<p>e.g. suppose you have the human genome in a single FASTA file, <em>hg19.fa</em>; the following commands will create all indices needed by nvBowtie:</p>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>e.g. suppose you have the human genome in a single FASTA file, <em>hg19.fa</em>; the following commands will create all indices needed by nvBowtie:</dd></dl>
 <pre class="fragment">*  ./nvBWT hg19.fa hg19-index
 *  ./nvSSA hg19-index
-* </pre><p>At this point, one can run nvBowtie:</p>
+* </pre><dl class="section user"><dt></dt><dd>At this point, one can run nvBowtie:</dd></dl>
 <pre class="fragment">*  ./nvBowtie --file-ref hg19 my_reads.fastq my_reads.bam
-* </pre><p>Note the presence of the option <em>&ndash;file-ref</em>, specifying that the reference indices come from disk. Another noteworthy option is to let nvBowtie fetch them from a <em>shared memory</em> server which can be run in the background: the <a class="el" href="nvfm_server_page.html">nvFM-server</a>. It be launched with:</p>
+* </pre><dl class="section user"><dt></dt><dd>Note the presence of the option <em>&ndash;file-ref</em>, specifying that the reference indices come from disk. Another noteworthy option is to let nvBowtie fetch them from a <em>shared memory</em> server which can be run in the background: the <a class="el" href="nvfm_server_page.html">nvFM-server</a>. It be launched with:</dd></dl>
 <pre class="fragment">*  ./nvFM-server hg19-index hg19 &amp;
-* </pre><p>At this point, nvBowtie can pickup the reference from the server:</p>
+* </pre><dl class="section user"><dt></dt><dd>nvBowtie can then pickup the reference from the server:</dd></dl>
 <pre class="fragment">*  ./nvBowtie hg19 my_reads.fastq my_reads.bam
 * </pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 10:44:42 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 12:18:41 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
