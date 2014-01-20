@@ -123,8 +123,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// warp-parallel version of classic smith-waterman</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// aligns str (horizontal) to ref (vertical) using a warp</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group__Defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="group__Alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typename</span>        scoring_type,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typename</span>        string_type,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typename</span>        qual_type,</div>
@@ -143,8 +143,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>                        score_type;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1alignment__result.html">alignment_result&lt;score_type&gt;</a> alignment;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> WARP_SIZE = 1u &lt;&lt; <a class="code" href="structnvbio_1_1cuda_1_1Arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group__WorkQueueDetail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a> = <a class="code" href="group__Defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> &gt;&gt; <a class="code" href="structnvbio_1_1cuda_1_1Arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> WARP_SIZE = 1u &lt;&lt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a> = <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> &gt;&gt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> M = str.length();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N = ref.length();</div>
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// initialize the leftmost matrix column</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = warp_tid(); i &lt;= N; i += WARP_SIZE)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        temp[i] = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a86ac8a6732111a83d906fde8a8f06190">GLOBAL</a> ? SCORE_GAP * (i + 1) : 0);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        temp[i] = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a86ac8a6732111a83d906fde8a8f06190">GLOBAL</a> ? SCORE_GAP * (i + 1) : 0);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> warp_block = 0; warp_block &lt; M; warp_block += WARP_SIZE)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
@@ -184,9 +184,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = wi + warp_block;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// set top boundary values</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        h_top = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> != <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ? SCORE_GAP * i : 0);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        h_top = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> != <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ? SCORE_GAP * i : 0);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// initialize diagonal</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        h_diag = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> != <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ? SCORE_GAP * (i - 1) : 0);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        h_diag = (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> != <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ? SCORE_GAP * (i - 1) : 0);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// load the query string character for the current thread</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> s_i = (i &lt;= M ? str[i - 1] : 0);</div>
@@ -202,7 +202,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">for</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> diag = block_diag; diag &lt; block_diag + WARP_SIZE; diag++)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="comment">// compute the length of this anti-diagonal (excluding border row/column)</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> diag_len = <a class="code" href="group__BasicUtils.html#ga7ca5a9cc7ef9ba5654720aa33704c588">nvbio::min3</a>(diag - 1, WARP_SIZE, warp_block_width);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> diag_len = <a class="code" href="group___basic_utils.html#ga7ca5a9cc7ef9ba5654720aa33704c588">nvbio::min3</a>(diag - 1, WARP_SIZE, warp_block_width);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="comment">// compute vertical coordinate of the current cell in the DP matrix (including border column)</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j = diag - wi;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
@@ -221,14 +221,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    <span class="keyword">const</span> score_type S_ij = (r_j == s_i) ? scoring.match(q_i) : scoring.mismatch(q_i);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    <span class="comment">// determine the current cell score</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    hi = <a class="code" href="group__BasicUtils.html#ga6508bf9b7643fae55618252eb4216a06">nvbio::max3</a>(h_diag + S_ij,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    hi = <a class="code" href="group___basic_utils.html#ga6508bf9b7643fae55618252eb4216a06">nvbio::max3</a>(h_diag + S_ij,</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                     h_top + SCORE_GAP,</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                     h_left + SCORE_INSERTION);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a>)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a>)</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    {</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        <span class="comment">// clamp score to zero</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        hi = <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">nvbio::max</a>(hi, score_type(0));</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        hi = <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">nvbio::max</a>(hi, score_type(0));</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    <span class="comment">// save off the last column</span></div>
@@ -239,8 +239,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    <span class="comment">// save the best score across the entire matrix for local scoring</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    <span class="comment">// save the best score across the last column for semi-global scoring</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ||</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">SEMI_GLOBAL</a> &amp;&amp; i == M))</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> ||</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">SEMI_GLOBAL</a> &amp;&amp; i == M))</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        <span class="keywordflow">if</span> (hi &gt; best_alignment.score)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                            best_alignment = alignment(hi, make_uint2(j, i));</div>
@@ -264,7 +264,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> || <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">SEMI_GLOBAL</a>)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a83c90630a3fb75f8bcce0132ce7776fa">LOCAL</a> || <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">SEMI_GLOBAL</a>)</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// do a warp-wide max-scan to find the largest score (TODO: use a reduction instead)</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        __shared__ <span class="keyword">volatile</span> alignment sm_red [WARP_SIZE * NUM_WARPS * 2];</div>
@@ -273,7 +273,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        best_alignment = cuda::scan_total&lt;32&gt;(sm_warp_red);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group__Alignment.html#ggab731872890371bb772663612b5b9c717a86ac8a6732111a83d906fde8a8f06190">GLOBAL</a>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a> == <a class="code" href="group___alignment.html#ggab731872890371bb772663612b5b9c717a86ac8a6732111a83d906fde8a8f06190">GLOBAL</a>)</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        best_alignment.score = __shfl(hi, warp_block_width - 1);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        best_alignment.sink = make_uint2(N, M);</div>
@@ -285,8 +285,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">// private dispatcher for the warp-parallel version of classic smith-waterman</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group__Defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="group__Alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keyword">typename</span>        scoring_type,</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">typename</span>        pattern_string,</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">typename</span>        qual_string,</div>
@@ -294,7 +294,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">typename</span>        column_type&gt;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
 <div class="line"><a name="l00206"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1aln_1_1priv.html#a1a1a214dd9a963c9b11023a1633c1b53">  206</a></span>&#160;<a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="namespacenvbio_1_1aln_1_1priv.html#abdc6f479fe97b023ce168e76a21bdfe4">alignment_score</a>(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1aln_1_1SmithWatermanAligner.html">SmithWatermanAligner&lt;TYPE,scoring_type&gt;</a>   aligner,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">SmithWatermanAligner&lt;TYPE,scoring_type&gt;</a>   aligner,</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">const</span> pattern_string                            pattern,</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">const</span> qual_string                               quals,</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">const</span> text_string                               <a class="code" href="namespacenvbio.html#a2db934dbdaabc7811bd9fb1fb4b730af">text</a>,</div>
@@ -304,7 +304,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#if defined(NVBIO_DEVICE_COMPILATION)</span></div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> sw_alignment_score&lt;BLOCKDIM,TYPE&gt;(</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        aligner.<a class="code" href="structnvbio_1_1aln_1_1SmithWatermanAligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>,</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        pattern,</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        quals,</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="namespacenvbio.html#a2db934dbdaabc7811bd9fb1fb4b730af">text</a>,</div>
@@ -312,7 +312,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        sink,</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        column );</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1Field__traits.html#a1d186dd9f5410a7c8b20295a72928cf5">Field_traits&lt;int32&gt;::min</a>();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1_field__traits.html#a1d186dd9f5410a7c8b20295a72928cf5">Field_traits&lt;int32&gt;::min</a>();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor"></span>}</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
@@ -322,7 +322,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 09:03:48 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 10:44:30 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -124,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">struct </span>kswq_t {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> qlen, slen;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        uint8_t shift, mdiff, <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>, size;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        uint8_t shift, mdiff, <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>, size;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    __m128i *qp, *H0, *H1, *E, *Hmax;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
@@ -234,7 +234,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// the core loop</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    for (i = 0; i &lt; tlen; ++i) {</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">int</span> j, k, cmp, imax;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        __m128i e, h, f = zero, <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a> = zero;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        __m128i e, h, f = zero, <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a> = zero;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">//__m128i* S = q-&gt;qp + target[i] * slen; // s is the 1st score vector</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        __m128i* S = lmem_qp + target[i] * slen; <span class="comment">// s is the 1st score vector</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        h = _mm_load_si128(H0 + slen - 1); <span class="comment">// h={2,5,8,11,14,17,-1,-1} in the above example</span></div>
@@ -303,7 +303,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">int</span> max = -1, tmp, low, high, qlen = slen * 16;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        uint8_t *t = (uint8_t*)Hmax;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; qlen; ++i, ++t)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)*t &gt; <a class="code" href="group__BasicUtils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>) max = *t, r.qe = i / 16 + i % 16 * slen;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)*t &gt; <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">max</a>) max = *t, r.qe = i / 16 + i % 16 * slen;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">else</span> if ((<span class="keywordtype">int</span>)*t == max &amp;&amp; (tmp = i / 16 + i % 16 * slen) &lt; r.qe) r.qe = tmp; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">//printf(&quot;%d,%d\n&quot;, max, gmax);</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (b) {</div>
@@ -372,8 +372,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">// Now set the number of threads</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    omp_set_num_threads(iCPU);</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="structnvbio_1_1Timer.html">nvbio::Timer</a> timer;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    timer.<a class="code" href="structnvbio_1_1Timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">nvbio::Timer</a> timer;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    timer.<a class="code" href="structnvbio_1_1_timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">        #pragma omp parallel for</span></div>
@@ -388,14 +388,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    timer.<a class="code" href="structnvbio_1_1Timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    timer.<a class="code" href="structnvbio_1_1_timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;cpu ksw rate: %.2f M/s (%.2f GCUPS)\n&quot;</span>, 1.0e-6f * <span class="keywordtype">float</span>(10 * N)/timer.<a class="code" href="structnvbio_1_1Timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>(), 1.0e-9f * float(qlen * tlen) * (float(10 * N)/timer.<a class="code" href="structnvbio_1_1Timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>()));</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;cpu ksw rate: %.2f M/s (%.2f GCUPS)\n&quot;</span>, 1.0e-6f * <span class="keywordtype">float</span>(10 * N)/timer.<a class="code" href="structnvbio_1_1_timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>(), 1.0e-9f * float(qlen * tlen) * (float(10 * N)/timer.<a class="code" href="structnvbio_1_1_timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>()));</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">#if defined(TEST)</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2CMakeFiles_22_88_811_2CompilerIdC_2CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2_c_make_files_22_88_811_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="cpu_8cpp.html#af136671b011df6e4c3b2e9984330a389">cpu_ksw_test</a>();</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
@@ -407,7 +407,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 09:03:54 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 20 2014 10:44:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

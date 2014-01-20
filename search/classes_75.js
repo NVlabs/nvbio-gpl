@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['uberscoringscheme',['UberScoringScheme',['../structnvbio_1_1bowtie2_1_1cuda_1_1UberScoringScheme.html',1,'nvbio::bowtie2::cuda']]],
+  ['uberscoringscheme',['UberScoringScheme',['../structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html',1,'nvbio::bowtie2::cuda']]],
   ['uint4_5fas_5fuint32_5fiterator',['uint4_as_uint32_iterator',['../structnvbio_1_1uint4__as__uint32__iterator.html',1,'nvbio']]],
   ['uint64_5f2',['uint64_2',['../structnvbio_1_1uint64__2.html',1,'nvbio']]],
   ['uint64_5f3',['uint64_3',['../structnvbio_1_1uint64__3.html',1,'nvbio']]],

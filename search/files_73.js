@@ -34,7 +34,7 @@ var searchData=
   ['sse_5fcuda_2eh',['sse_cuda.h',['../sse__cuda_8h.html',1,'']]],
   ['stats_2ecpp',['stats.cpp',['../stats_8cpp.html',1,'']]],
   ['stats_2eh',['stats.h',['../nvbio-aln-diff_2stats_8h.html',1,'']]],
-  ['stats_2eh',['stats.h',['../nvBowtie_2bowtie2_2cuda_2stats_8h.html',1,'']]],
+  ['stats_2eh',['stats.h',['../nv_bowtie_2bowtie2_2cuda_2stats_8h.html',1,'']]],
   ['strided_5fiterator_2eh',['strided_iterator.h',['../strided__iterator_8h.html',1,'']]],
   ['string_5fset_2eh',['string_set.h',['../string__set_8h.html',1,'']]],
   ['string_5fset_5finl_2eh',['string_set_inl.h',['../string__set__inl_8h.html',1,'']]],

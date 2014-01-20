@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sorting',['Sorting',['../SortingPage.html',1,'BasicPage']]],
-  ['string_20sets',['String Sets',['../StringSetsPage.html',1,'BasicPage']]],
-  ['sum_20trees',['Sum Trees',['../SumTreesPage.html',1,'BasicPage']]]
+  ['sorting',['Sorting',['../sorting_page.html',1,'basic_page']]],
+  ['string_20sets',['String Sets',['../string_sets_page.html',1,'basic_page']]],
+  ['sum_20trees',['Sum Trees',['../sum_trees_page.html',1,'basic_page']]]
 ];

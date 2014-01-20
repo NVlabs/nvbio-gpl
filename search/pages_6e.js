@@ -1,9 +1,9 @@
 var searchData=
 [
   ['nvbio',['NVBIO',['../index.html',1,'']]],
-  ['nvbio',['NVBIO',['../NVBIOPage.html',1,'index']]],
-  ['nvbowtie',['nvBowtie',['../nvBowtiePage.html',1,'index']]],
-  ['nvbwt',['nvBWT',['../nvBWTPage.html',1,'index']]],
-  ['nvfm_2dserver',['nvFM-server',['../nvFM-serverPage.html',1,'index']]],
-  ['nvssa',['nvSSA',['../nvSSAPage.html',1,'index']]]
+  ['nvbio',['NVBIO',['../nvbio_page.html',1,'index']]],
+  ['nvbowtie',['nvBowtie',['../nvbowtie_page.html',1,'index']]],
+  ['nvbwt',['nvBWT',['../nvbwt_page.html',1,'nvbowtie_page']]],
+  ['nvfm_2dserver',['nvFM-server',['../nvfm_server_page.html',1,'nvbowtie_page']]],
+  ['nvssa',['nvSSA',['../nvssa_page.html',1,'nvbowtie_page']]]
 ];

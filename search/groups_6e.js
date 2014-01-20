@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nvbowtie',['nvBowtie',['../group__nvBowtie.html',1,'']]]
+  ['nvbowtie',['nvBowtie',['../group__nv_bowtie.html',1,'']]]
 ];

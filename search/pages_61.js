@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['algorithms',['Algorithms',['../AlgorithmsPage.html',1,'BasicPage']]],
-  ['alignment_20module',['Alignment Module',['../AlignmentPage.html',1,'NVBIOPage']]],
-  ['atomics',['Atomics',['../AtomicsPage.html',1,'BasicPage']]]
+  ['algorithms',['Algorithms',['../algorithms_page.html',1,'basic_page']]],
+  ['alignment_20module',['Alignment Module',['../alignment_page.html',1,'nvbio_page']]],
+  ['atomics',['Atomics',['../atomics_page.html',1,'basic_page']]]
 ];
