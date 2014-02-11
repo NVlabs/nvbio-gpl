@@ -1,0 +1,48 @@
+/*
+ * nvbio
+ * Copyright (C) 2012-2014, NVIDIA Corporation
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+///\page basic_page Basic Module
+///\htmlonly
+/// <img src="nvidia_cubes.png" style="position:relative; bottom:-10px; border:0px;"/>
+///\endhtmlonly
+///
+/// The <b>basic</b> module includes general purpose data-structures and functionality which are not directly related
+/// to bioinformatics but can be useful for implementing all kinds of host and device algorithms.
+/// It includes the following submodules:
+///
+/// \section ThreadingAndTiming Threading & Timing
+/// - \subpage atomics_page
+/// - \subpage memory_mapping_page
+/// - \subpage threads_page
+/// - \subpage timing_page
+/// - \subpage work_queue_page
+/// \section DataStructures Data Structures
+/// - \subpage bloom_filter_page
+/// - \subpage packed_streams_page
+/// - \subpage priority_queues_page
+/// - \subpage priority_deques_page
+/// - \subpage ping_pong_queues_page
+/// - \subpage string_sets_page
+/// - \subpage sum_trees_page
+/// - \subpage vector_wrappers_page
+/// - \subpage vector_arrays_page
+/// \section Miscellaneous
+/// - \subpage algorithms_page
+/// - \subpage iterators_page
+/// - \subpage sorting_page
+/// - \subpage utilities_page

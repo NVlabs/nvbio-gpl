@@ -1,0 +1,45 @@
+/*
+ * nvbio
+ * Copyright (C) 2012-2014, NVIDIA Corporation
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+///\page nvbwt_page nvBWT
+///\htmlonly
+/// <img src="nvidia_cubes.png" style="position:relative; bottom:-10px; border:0px;"/>
+///\endhtmlonly
+///\par
+///\n
+/// <b>nvBWT</b> is an application built on top of \ref nvbio_page to perform BWT-based
+/// reference indexing for nvBowtie and potentially other FM-index based applications.
+///\par
+/// Given one or multiple fasta files, it will create both the forward and reverse
+/// BWT as well as 2-bit packed representation of the files and a few other auxiliary indices:
+///
+///\verbatim
+/// ./nvBWT my-reference.fasta my-index
+///\endverbatim
+///\par
+/// will generate the following files:
+///
+///\verbatim
+/// my-index.pac
+/// my-index.rpac
+/// my-index.bwt
+/// my-index.rbwt
+/// my-index.ann
+/// my-index.amb
+///\endverbatim
+///
