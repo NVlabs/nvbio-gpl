@@ -1,6 +1,6 @@
 /*
  * nvbio
- * Copyright (C) 2012-2014, NVIDIA Corporation
+ * Copyright (C) 2011-2013, NVIDIA Corporation
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -80,6 +80,7 @@ struct SortEnactor
     void sort(const uint32 count, SortBuffers<uint8*, uint32*>& buffers);
     void sort(const uint32 count, SortBuffers<uint16*,uint32*>& buffers);
     void sort(const uint32 count, SortBuffers<uint32*,uint32*>& buffers);
+    void sort(const uint32 count, SortBuffers<uint32*,uint64*>& buffers);
     void sort(const uint32 count, SortBuffers<uint64*,uint32*>& buffers);
     void sort(const uint32 count, SortBuffers<uint8*>&          buffers);
     void sort(const uint32 count, SortBuffers<uint16*>&         buffers);
