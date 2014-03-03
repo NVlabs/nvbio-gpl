@@ -620,7 +620,7 @@ struct sw_alignment_score_dispatch
             }
 
             // we are now (M - block - BAND_LEN) columns from the last one: check whether
-            // we could theoretically reach the minimums core
+            // we could theoretically reach the minimum score
             const score_type missing_cols = score_type(M - block - BAND_LEN);
             if (max_score + missing_cols * scoring.match(255) < score_type( min_score ))
                 return false;
@@ -1130,8 +1130,8 @@ bool alignment_traceback(
     int32 current_col = sink.y - checkpoint_id*CHECKPOINTS - 1u;
 
     NVBIO_CUDA_DEBUG_ASSERT( current_row >  0 &&
-                             current_row <= submatrix_height,    "sw::alignment_backtrack(): sink (%u,%u) -> local x coordinate %d not in [0,%d[\n", sink.x, sink.y, current_row, submatrix_height );
-    NVBIO_CUDA_DEBUG_ASSERT( current_col >= 0,                 "sw::alignment_backtrack(): sink (%u,%u) -> local y coordinate %d not in [0,%u[ (checkpt %u)\n", sink.x, sink.y, current_col, submatrix_width, checkpoint_id );
+                             current_row <= submatrix_height, "sw::alignment_backtrack(): sink (%u,%u) -> local x coordinate %d not in [0,%d[\n", sink.x, sink.y, current_row, submatrix_height );
+    NVBIO_CUDA_DEBUG_ASSERT( current_col >= 0,                "sw::alignment_backtrack(): sink (%u,%u) -> local y coordinate %d not in [0,%u[ (checkpt %u)\n", sink.x, sink.y, current_col, submatrix_width, checkpoint_id );
     NVBIO_CUDA_DEBUG_ASSERT( current_col <  submatrix_width,  "sw::alignment_backtrack(): sink (%u,%u) -> local y coordinate %d not in [0,%u[ (checkpt %u)\n", sink.x, sink.y, current_col, submatrix_width, checkpoint_id );
 
     while (current_row >  0 &&
