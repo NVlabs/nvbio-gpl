@@ -45,18 +45,19 @@ namespace priv
 ///
 template <
     AlignmentType   TYPE,
+    typename        algorithm_tag,
     typename        pattern_string,
     typename        qual_string,
     typename        text_string,
     typename        column_type>
 struct alignment_score_dispatch<
-    EditDistanceAligner<TYPE>,
+    EditDistanceAligner<TYPE,algorithm_tag>,
     pattern_string,
     qual_string,
     text_string,
     column_type>
 {
-    typedef EditDistanceAligner<TYPE> aligner_type;
+    typedef EditDistanceAligner<TYPE,algorithm_tag> aligner_type;
 
     /// dispatch scoring across the whole pattern
     ///
@@ -84,9 +85,11 @@ struct alignment_score_dispatch<
 
         NVBIO_VAR_UNUSED const uint32 BAND_LEN = sw_bandlen_selector<TYPE,1u,symbol_type>::BAND_LEN;
 
-        priv::SWScoringContext<BAND_LEN,TYPE> context;
+        priv::SWScoringContext<BAND_LEN,TYPE,algorithm_tag> context;
 
-        return sw_alignment_score_dispatch<BAND_LEN,TYPE,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, 0, pattern.length(), column );
+        const uint32 length = equal<algorithm_tag,PatternBlockingTag>() ? pattern.length() : text.length();
+
+        return sw_alignment_score_dispatch<BAND_LEN,TYPE,algorithm_tag,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, 0, length, column );
     }
 
     /// dispatch scoring in a window of the pattern
@@ -124,9 +127,9 @@ struct alignment_score_dispatch<
 
         NVBIO_VAR_UNUSED const uint32 BAND_LEN = sw_bandlen_selector<TYPE,1u,symbol_type>::BAND_LEN;
 
-        priv::SWCheckpointedScoringContext<BAND_LEN,TYPE,checkpoint_type> context( checkpoint );
+        priv::SWCheckpointedScoringContext<BAND_LEN,TYPE,algorithm_tag,checkpoint_type> context( checkpoint );
 
-        return sw_alignment_score_dispatch<BAND_LEN,TYPE,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, window_begin, window_end, column );
+        return sw_alignment_score_dispatch<BAND_LEN,TYPE,algorithm_tag,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, window_begin, window_end, column );
     }
 
     /// dispatch scoring in a window of the pattern, retaining the intermediate results in the column
@@ -158,9 +161,9 @@ struct alignment_score_dispatch<
 
         NVBIO_VAR_UNUSED const uint32 BAND_LEN = sw_bandlen_selector<TYPE,1u,symbol_type>::BAND_LEN;
 
-        priv::SWScoringContext<BAND_LEN,TYPE> context;
+        priv::SWScoringContext<BAND_LEN,TYPE,algorithm_tag> context;
 
-        return sw_alignment_score_dispatch<BAND_LEN,TYPE,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, window_begin, window_end, column );
+        return sw_alignment_score_dispatch<BAND_LEN,TYPE,algorithm_tag,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, window_begin, window_end, column );
     }
 };
 
@@ -230,7 +233,7 @@ struct alignment_checkpointed_dispatch<
 
         priv::SWCheckpointContext<BAND_LEN,TYPE,CHECKPOINTS,checkpoint_type> context( checkpoints );
 
-        sw_alignment_score_dispatch<BAND_LEN,TYPE,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, 0, pattern.length(), column );
+        sw_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, sink, 0, pattern.length(), column );
     }
 
     ///
@@ -284,7 +287,7 @@ struct alignment_checkpointed_dispatch<
         const uint32 window_end   = nvbio::min( window_begin + CHECKPOINTS, uint32(pattern.length()) );
 
         NullSink null_sink;
-        sw_alignment_score_dispatch<BAND_LEN,TYPE,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, null_sink, window_begin, window_end, column );
+        sw_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_type>::run( EditDistanceSWScheme(), context, pattern, quals, text, min_score, null_sink, window_begin, window_end, column );
 
         return window_end - window_begin;
     }
