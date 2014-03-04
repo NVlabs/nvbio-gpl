@@ -38,6 +38,7 @@
 #include <vector>
 #include <algorithm>
 
+//#define SSWLIB
 #if defined(SSWLIB)
 #include "ssw.h"
 #include <omp.h>
@@ -90,12 +91,14 @@ struct AlignmentStream
         const uint32*       _offsets,
         const uint32*       _patterns,
         const uint32        _max_pattern_len,
+        const uint32        _total_pattern_len,
         const uint32*       _text,
         const uint32        _text_len,
                int16*       _scores) :
         m_aligner           ( _aligner ),
         m_count             (_count),
         m_max_pattern_len   (_max_pattern_len),
+        m_total_pattern_len (_total_pattern_len),
         m_text_len          (_text_len),
         m_offsets           (_offsets),
         m_patterns          (_patterns),
@@ -127,7 +130,7 @@ struct AlignmentStream
     uint32 text_length(const uint32 i, context_type* context) const { return m_text_len; }
 
     // return the total number of cells
-    uint64 cells() const { return size() * uint64( max_pattern_length() ) * uint64( m_text_len ); }
+    uint64 cells() const { return uint64( m_total_pattern_len ) * uint64( m_text_len ); }
 
     // initialize the i-th context
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
@@ -176,6 +179,7 @@ struct AlignmentStream
     aligner_type    m_aligner;
     uint32          m_count;
     uint32          m_max_pattern_len;
+    uint32          m_total_pattern_len;
     uint32          m_text_len;
     const uint32*   m_offsets;
     base_iterator   m_patterns;
@@ -349,6 +353,7 @@ void batch_score_profile_all(
     const uint32*                           offsets_dvec,
     const uint32*                           pattern_dvec,
     const uint32                            max_pattern_len,
+    const uint32                            total_pattern_len,
     const uint32*                           text_dvec,
     const uint32                            text_len,
     int16*                                  score_dvec)
@@ -363,6 +368,7 @@ void batch_score_profile_all(
             offsets_dvec,
             pattern_dvec,
             max_pattern_len,
+            total_pattern_len,
             text_dvec,
             text_len,
             score_dvec );
@@ -396,7 +402,7 @@ void batch_score_profile_all(
 
         const float time = timer.seconds();
 
-        fprintf(stderr,"  %5.1f", 1.0e-9f * float(n_tasks*uint64(max_pattern_len)*uint64(text_len))/time );
+        fprintf(stderr,"  %5.1f", 1.0e-9f * float(uint64(total_pattern_len)*uint64(text_len))/time );
     }
     fprintf(stderr, " GCUPS\n");
 }
@@ -518,7 +524,7 @@ int main(int argc, char* argv[])
     thrust::device_vector<int16> score_dvec( batch_size, 0 );
 
   #if defined(SSWLIB)
-    std::vector<int8> unpacked_ref( ref_length );
+    std::vector<int8_t> unpacked_ref( ref_length );
     {
         ref_stream_type h_ref_stream( nvbio::plain_view( h_ref_storage ) );
         for (uint32 i = 0; i < ref_length; ++i)
@@ -527,6 +533,11 @@ int main(int argc, char* argv[])
 
     // Now set the number of threads
     omp_set_num_threads( omp_get_num_procs() );
+
+    #pragma omp parallel
+    {
+        fprintf(stderr, "  running on multiple threads\n");
+    }
   #endif
 
     while (1)
@@ -537,6 +548,13 @@ int main(int argc, char* argv[])
 
         // build the device side representation
         const io::ReadDataCUDA d_read_data( *h_read_data );
+
+        const uint32 n_read_symbols = h_read_data->read_index()[ h_read_data->size() ];
+
+        fprintf(stderr,"  %u reads, avg: %u bps, max: %u bps\n",
+            h_read_data->size(),
+            h_read_data->avg_read_len(),
+            h_read_data->max_read_len());
 
         if (TEST_MASK & GOTOH)
         {
@@ -555,6 +573,7 @@ int main(int argc, char* argv[])
                     d_read_data.read_index(),
                     d_read_data.read_stream(),
                     d_read_data.max_read_len(),
+                    n_read_symbols,
                     nvbio::plain_view( d_ref_storage ),
                     ref_length,
                     nvbio::plain_view( score_dvec ) );
@@ -567,6 +586,7 @@ int main(int argc, char* argv[])
                     d_read_data.read_index(),
                     d_read_data.read_stream(),
                     d_read_data.max_read_len(),
+                    n_read_symbols,
                     nvbio::plain_view( d_ref_storage ),
                     ref_length,
                     nvbio::plain_view( score_dvec ) );
@@ -579,24 +599,23 @@ int main(int argc, char* argv[])
             fprintf(stderr,"  testing SSW scoring speed...\n");
             fprintf(stderr,"    %15s : ", "local");
 
-            const int8 mat[4*4] = {2, -1, -1, -1, -1, 2, -1, -1, -1, -1, 2, -1, -1, -1, -1, 2};
+            const int8_t mat[4*4] = {2, -1, -1, -1, -1, 2, -1, -1, -1, -1, 2, -1, -1, -1, -1, 2};
 
-            const uint32 n_read_symbols = h_read_data->read_index()[ h_read_data->size() ];
-            std::vector<int8> unpacked_reads( n_read_symbols );
+            std::vector<int8_t> unpacked_reads( n_read_symbols );
 
             typedef io::ReadData::const_read_stream_type read_stream_type;
 
             const read_stream_type packed_reads( h_read_data->read_stream() );
 
             #pragma omp parallel for
-            for (int i = 0; i < n_read_symbols; ++i)
+            for (int i = 0; i < int( n_read_symbols ); ++i)
                 unpacked_reads[i] = packed_reads[i];
 
             Timer timer;
             timer.start();
 
             #pragma omp parallel for
-            for (int i = 0; i < h_read_data->size(); ++i)
+            for (int i = 0; i < int( h_read_data->size() ); ++i)
             {
                 const uint32 read_off = h_read_data->read_index()[i];
                 const uint32 read_len = h_read_data->read_index()[i+1] - read_off;
@@ -622,7 +641,7 @@ int main(int argc, char* argv[])
             timer.stop();
             const float time = timer.seconds();
 
-            fprintf(stderr,"  %5.1f", 1.0e-9f * float(h_read_data->size()*uint64(h_read_data->max_read_len())*uint64(ref_length))/time );
+            fprintf(stderr,"  %5.1f", 1.0e-9f * float(uint64(n_read_symbols)*uint64(ref_length))/time );
             fprintf(stderr, " GCUPS\n");
         }
         #endif
