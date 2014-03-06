@@ -382,9 +382,9 @@ struct SWSubmatrixContext
         const uint32 offset = m_checkpoint_id * CHECKPOINTS;
 
         if (TYPE == LOCAL)
-            m_submatrix[ (j - offset)*N + i ] = score ? dir : SINK;
+            m_submatrix[ i * CHECKPOINTS + (j - offset) ] = score ? dir : SINK;
         else
-            m_submatrix[ (j - offset)*N + i ] = dir;
+            m_submatrix[ i * CHECKPOINTS + (j - offset) ] = dir;
     }
 
     checkpoint_type  m_checkpoints;
@@ -1655,7 +1655,8 @@ bool alignment_traceback(
     while (current_row >  0 &&
            current_col >= 0)
     {
-        const uint8 op = submatrix[ current_col * submatrix_height + (current_row-1u) ];
+        const uint32 submatrix_cell = (current_row-1u) * CHECKPOINTS + current_col;
+        const uint8  op = submatrix[ submatrix_cell ];
 
         if (TYPE == LOCAL)
         {
