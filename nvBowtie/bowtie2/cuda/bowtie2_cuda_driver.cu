@@ -292,7 +292,9 @@ int driver(
 
     UberScoringScheme scoring_scheme;
     scoring_scheme.ed = EditDistanceScoringScheme( params );
-    scoring_scheme.sw = SmithWatermanScoringScheme<>( AlignmentType( params.alignment_type ) );
+    scoring_scheme.sw = SmithWatermanScoringScheme<>();
+    if (AlignmentType( params.alignment_type ) == LocalAlignment)
+        scoring_scheme.sw = SmithWatermanScoringScheme<>::local();
 
     // load scoring scheme from file
     if (params.scoring_file != "")
@@ -659,7 +661,9 @@ int driver(
 
     UberScoringScheme scoring_scheme;
     scoring_scheme.ed = EditDistanceScoringScheme( params );
-    scoring_scheme.sw = SmithWatermanScoringScheme<>( AlignmentType( params.alignment_type ) );
+    scoring_scheme.sw = SmithWatermanScoringScheme<>();
+    if (AlignmentType( params.alignment_type ) == LocalAlignment)
+        scoring_scheme.sw = SmithWatermanScoringScheme<>::local();
 
     // load scoring scheme from file
     if (params.scoring_file != "")
