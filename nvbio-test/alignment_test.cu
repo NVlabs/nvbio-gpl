@@ -381,10 +381,7 @@ float enact_batch(
           batch_type&               batch,
     const stream_type&              stream,
     const uint32                    n_tests,
-    const uint32                    n_tasks,
-    thrust::device_vector<uint32>&  pattern_dvec,
-    thrust::device_vector<uint32>&  text_dvec,
-    thrust::device_vector<int16>&   score_dvec)
+    const uint32                    n_tasks)
 {
     // alloc all the needed temporary storage
     const uint64 temp_size = batch_type::max_temp_storage(
@@ -416,10 +413,7 @@ template <typename scheduler_type, uint32 N, uint32 M, typename stream_type>
 void batch_score_profile(
     const stream_type               stream,
     const uint32                    n_tests,
-    const uint32                    n_tasks,
-    thrust::device_vector<uint32>&  pattern_dvec,
-    thrust::device_vector<uint32>&  text_dvec,
-    thrust::device_vector<int16>&   score_dvec)
+    const uint32                    n_tasks)
 {
     typedef aln::BatchedAlignmentScore<stream_type, scheduler_type> batch_type;  // our batch type
 
@@ -430,10 +424,7 @@ void batch_score_profile(
         batch,
         stream,
         n_tests,
-        n_tasks,
-        pattern_dvec,
-        text_dvec,
-        score_dvec );
+        n_tasks );
 
     fprintf(stderr,"  %5.1f", 1.0e-9f * float(n_tasks*uint64(N*M))/time );
 }
@@ -464,19 +455,13 @@ void batch_score_profile_all(
         batch_score_profile<ThreadParallelScheduler,N,M>(
             stream,
             n_tests,
-            n_tasks,
-            pattern_dvec,
-            text_dvec,
-            score_dvec );
+            n_tasks );
 
         // test the StagedThreadParallelScheduler
         batch_score_profile<StagedThreadParallelScheduler,N,M>(
             stream,
             n_tests,
-            n_tasks,
-            pattern_dvec,
-            text_dvec,
-            score_dvec );
+            n_tasks );
     }
     {
         typedef AlignmentStream<aligner_type,M,N,uncached_tag_type> stream_type;
@@ -493,10 +478,7 @@ void batch_score_profile_all(
         batch_score_profile<WarpParallelScheduler,N,M>(
             stream,
             n_tests,
-            n_tasks,
-            pattern_dvec,
-            text_dvec,
-            score_dvec );
+            n_tasks );
     }
     {
         const uint32 BLOCKDIM = 128;
@@ -535,10 +517,7 @@ template <uint32 BAND_LEN, typename scheduler_type, uint32 N, uint32 M, typename
 void batch_banded_score_profile(
     const stream_type               stream,
     const uint32                    n_tests,
-    const uint32                    n_tasks,
-    thrust::device_vector<uint32>&  pattern_dvec,
-    thrust::device_vector<uint32>&  text_dvec,
-    thrust::device_vector<int16>&   score_dvec)
+    const uint32                    n_tasks)
 {
     typedef aln::BatchedBandedAlignmentScore<BAND_LEN,stream_type, scheduler_type> batch_type;  // our batch type
 
@@ -549,10 +528,7 @@ void batch_banded_score_profile(
         batch,
         stream,
         n_tests,
-        n_tasks,
-        pattern_dvec,
-        text_dvec,
-        score_dvec );
+        n_tasks );
 
     fprintf(stderr,"  %5.1f", 1.0e-9f * float(n_tasks*uint64(BAND_LEN*M))*(float(n_tests)/time) );
 }
@@ -581,19 +557,13 @@ void batch_banded_score_profile_all(
     batch_banded_score_profile<BAND_LEN,ThreadParallelScheduler,N,M>(
         stream,
         n_tests,
-        n_tasks,
-        pattern_dvec,
-        text_dvec,
-        score_dvec );
+        n_tasks );
 
     // test the StagedThreadParallelScheduler
     batch_banded_score_profile<BAND_LEN,StagedThreadParallelScheduler,N,M>(
         stream,
         n_tests,
-        n_tasks,
-        pattern_dvec,
-        text_dvec,
-        score_dvec );
+        n_tasks );
 
     // TODO: test WarpParallelScheduler
     fprintf(stderr, " GCUPS\n");
@@ -1077,7 +1047,7 @@ void test(int argc, char* argv[])
 
         if (TEST_MASK & ED_BANDED)
         {
-            fprintf(stderr,"  testing Edit Distance scoring speed...\n");
+            fprintf(stderr,"  testing banded Edit Distance scoring speed...\n");
             fprintf(stderr,"    %15s : ", "global");
             {
                 batch_banded_score_profile_all<BAND_LEN,N,M>(
@@ -1111,7 +1081,7 @@ void test(int argc, char* argv[])
         }
         if (TEST_MASK & SW_BANDED)
         {
-            fprintf(stderr,"  testing Smith-Waterman scoring speed...\n");
+            fprintf(stderr,"  testing banded Smith-Waterman scoring speed...\n");
             fprintf(stderr,"    %15s : ", "global");
             {
                 batch_banded_score_profile_all<BAND_LEN,N,M>(
@@ -1145,7 +1115,7 @@ void test(int argc, char* argv[])
         }
         if (TEST_MASK & GOTOH_BANDED)
         {
-            fprintf(stderr,"  testing Gotoh scoring speed...\n");
+            fprintf(stderr,"  testing banded Gotoh scoring speed...\n");
             fprintf(stderr,"    %15s : ", "global");
             {
                 batch_banded_score_profile_all<BAND_LEN,N,M>(
