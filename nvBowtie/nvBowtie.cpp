@@ -291,7 +291,7 @@ int main(int argc, char* argv[])
                                           qencoding,
                                           max_reads,
                                           max_read_len,
-                                          REVERSE)
+                                          io::REVERSE)
             );
 
             if (read_data_file1 == NULL || read_data_file1->is_ok() == false)
@@ -306,7 +306,7 @@ int main(int argc, char* argv[])
                                           qencoding,
                                           max_reads,
                                           max_read_len,
-                                          REVERSE)
+                                          io::REVERSE)
             );
 
             if (read_data_file2 == NULL || read_data_file2->is_ok() == false)
@@ -325,7 +325,7 @@ int main(int argc, char* argv[])
                                           qencoding,
                                           max_reads,
                                           max_read_len,
-                                          REVERSE)
+                                          io::REVERSE)
             );
 
             if (read_data_file == NULL || read_data_file->is_ok() == false)
