@@ -39,8 +39,9 @@ namespace io {
 
 ReadDataFile_BAM::ReadDataFile_BAM(const char *read_file_name,
                                    const uint32 max_reads,
-                                   const uint32 truncate_read_len)
-  : ReadDataFile(max_reads, truncate_read_len)
+                                   const uint32 truncate_read_len,
+                                   const ReadEncoding flags)
+  : ReadDataFile(max_reads, truncate_read_len, flags)
 {
     fp = gzopen(read_file_name, "rb");
     if (fp == NULL)
@@ -291,7 +292,17 @@ int ReadDataFile_BAM::nextChunk(ReadDataRAM *output, uint32 max_reads)
     uint32 conversion_flags = 0;
     if (read_flags & SAMFlag_ReverseComplemented)
     {
-        conversion_flags = ReadDataRAM::REVERSE | ReadDataRAM::COMPLEMENT;
+        if ((m_flags & REVERSE) == 0)
+            conversion_flags |= REVERSE;
+        if ((m_flags & COMPLEMENT) == 0)
+            conversion_flags |= COMPLEMENT;
+    }
+    else
+    {
+        if (m_flags & REVERSE)
+            conversion_flags |= REVERSE;
+        if (m_flags & COMPLEMENT)
+            conversion_flags |= COMPLEMENT;
     }
 
     // add the read into the batch
@@ -301,7 +312,7 @@ int ReadDataFile_BAM::nextChunk(ReadDataRAM *output, uint32 max_reads)
                       data.quality,
                       Phred,
                       m_truncate_read_len,
-                      conversion_flags);
+                      ReadEncoding( conversion_flags ));
 
     // we always return 1 read at a time
     return 1;
