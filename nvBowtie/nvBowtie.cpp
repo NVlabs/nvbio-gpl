@@ -1,6 +1,6 @@
 /*
  * nvbio
- * Copyright (C) 2012-2014, NVIDIA Corporation
+ * Copyright (C) 2011-2013, NVIDIA Corporation
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -290,7 +290,8 @@ int main(int argc, char* argv[])
                 nvbio::io::open_read_file(argv[arg_offset+1],
                                           qencoding,
                                           max_reads,
-                                          max_read_len)
+                                          max_read_len,
+                                          REVERSE)
             );
 
             if (read_data_file1 == NULL || read_data_file1->is_ok() == false)
@@ -304,7 +305,8 @@ int main(int argc, char* argv[])
                 nvbio::io::open_read_file(argv[arg_offset+2],
                                           qencoding,
                                           max_reads,
-                                          max_read_len)
+                                          max_read_len,
+                                          REVERSE)
             );
 
             if (read_data_file2 == NULL || read_data_file2->is_ok() == false)
@@ -322,7 +324,8 @@ int main(int argc, char* argv[])
                 nvbio::io::open_read_file(argv[arg_offset+1],
                                           qencoding,
                                           max_reads,
-                                          max_read_len)
+                                          max_read_len,
+                                          REVERSE)
             );
 
             if (read_data_file == NULL || read_data_file->is_ok() == false)
