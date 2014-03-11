@@ -101,6 +101,10 @@ struct IOStats
     void track_alignment_statistics(AlignmentStats*      mate,
                                     const AlignmentData& alignment,
                                     const uint8          mapq);
+
+    // single-end alignment
+    void track_alignment_statistics(const AlignmentData& alignment,
+                                    const uint8          mapq);
 };
 
 } // namespace io
