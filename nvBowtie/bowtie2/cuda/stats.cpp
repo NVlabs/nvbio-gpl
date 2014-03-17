@@ -1,6 +1,6 @@
 /*
  * nvbio
- * Copyright (C) 2012-2014, NVIDIA Corporation
+ * Copyright (C) 2011-2013, NVIDIA Corporation
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -199,7 +199,9 @@ void generate_report(Stats& stats, const char* report)
                     add_param( html_output, "N",           stats.params.allow_sub,                 false );
                     add_param( html_output, "seed-len",    stats.params.seed_len,                  true );
                     add_param( html_output, "subseed-len", stats.params.subseed_len,               false );
-                    add_param( html_output, "seed-freq",   stats.params.seed_freq,                 true );
+                    add_param( html_output, "seed-freq",   stats.params.seed_freq.type_symbol(),   true );
+                    add_param( html_output, "seed-freq",   stats.params.seed_freq.k,               true );
+                    add_param( html_output, "seed-freq",   stats.params.seed_freq.m,               true );
                     add_param( html_output, "max-reseed",  stats.params.max_reseed,                false );
                     add_param( html_output, "rep-seeds",   stats.params.rep_seeds,                 true );
                     add_param( html_output, "max-hits",    stats.params.max_hits,                  false );
