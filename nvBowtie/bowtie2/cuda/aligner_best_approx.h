@@ -217,12 +217,13 @@ void Aligner::best_approx(
     //
     // perform backtracking and compute cigars for the best alignments
     //
-    timer.start();
-    device_timer.start();
     {
         // initialize cigars & MDS pools
         cigar.clear();
         mds.clear();
+
+        timer.start();
+        device_timer.start();
 
         NVBIO_CUDA_DEBUG_STATEMENT( log_debug(stderr, "    backtrack\n") );
         banded_traceback_best<0>(
@@ -236,6 +237,13 @@ void Aligner::best_approx(
         optional_device_synchronize();
         nvbio::cuda::check_error("backtracking kernel");
 
+        device_timer.stop();
+        timer.stop();
+        stats.backtrack.add( count, timer.seconds(), device_timer.seconds() );
+
+        timer.start();
+        device_timer.start();
+
         NVBIO_CUDA_DEBUG_STATEMENT( log_debug(stderr, "    alignment\n") );
         finish_alignment_best<0>(
             count,
@@ -248,10 +256,11 @@ void Aligner::best_approx(
 
         optional_device_synchronize();
         nvbio::cuda::check_error("alignment kernel");
+
+        device_timer.stop();
+        timer.stop();
+        stats.finalize.add( count, timer.seconds(), device_timer.seconds() );
     }
-    device_timer.stop();
-    timer.stop();
-    stats.backtrack.add( count, timer.seconds(), device_timer.seconds() );
 
     // wrap the results in a GPUOutputBatch and process
     {
@@ -303,6 +312,13 @@ void Aligner::best_approx(
         optional_device_synchronize();
         nvbio::cuda::check_error("second-best backtracking kernel");
 
+        device_timer.stop();
+        timer.stop();
+        stats.backtrack.add( n_second, timer.seconds(), device_timer.seconds() );
+
+        timer.start();
+        device_timer.start();
+
         NVBIO_CUDA_DEBUG_STATEMENT( log_debug(stderr, "    second-best alignment (%u)\n", n_second) );
         finish_alignment_best<1>(
             n_second,
@@ -318,7 +334,7 @@ void Aligner::best_approx(
 
         device_timer.stop();
         timer.stop();
-        stats.backtrack.add( n_second, timer.seconds(), device_timer.seconds() );
+        stats.finalize.add( n_second, timer.seconds(), device_timer.seconds() );
     }
 
 
