@@ -34,7 +34,7 @@ namespace io {
 ///@addtogroup ReadsIODetail
 ///@{
 
-int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
+int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max_reads, uint32 max_bps)
 {
     const char* name = "";
 
@@ -45,7 +45,14 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
 
     State state = SPACES;
 
-    uint32 n = 0;
+    uint32 n_reads = 0;
+    uint32 n_bps   = 0;
+
+    const uint32 bps_mult =
+        ((m_flags & FORWARD) ? 1u : 0u) +
+        ((m_flags & REVERSE) ? 1u : 0u) +
+        ((m_flags & FORWARD_COMPLEMENT) ? 1u : 0u) +
+        ((m_flags & REVERSE_COMPLEMENT) ? 1u : 0u);
 
     while (1)
     {
@@ -64,9 +71,9 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
                 if (m_read_q.size() < m_read_bp.size())
                 {
                     // extend the quality score vector if needed
-                    m_read_q.reserve( m_read_bp.size() );
+                    m_read_q.resize( m_read_bp.size() );
                     for (size_t i = m_read_q.size(); i < m_read_bp.size(); ++i)
-                        m_read_q.push_back( char(255) );
+                        m_read_q[i] = char(255);
                 }
 
                 if (m_flags & FORWARD)
@@ -78,6 +85,8 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
                                       m_quality_encoding,
                                       m_truncate_read_len,
                                       FORWARD );
+
+                    n_bps += (uint32)m_read_bp.size();
                 }
                 if (m_flags & REVERSE)
                 {
@@ -88,6 +97,8 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
                                       m_quality_encoding,
                                       m_truncate_read_len,
                                       REVERSE );
+
+                    n_bps += (uint32)m_read_bp.size();
                 }
                 if (m_flags & FORWARD_COMPLEMENT)
                 {
@@ -98,6 +109,8 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
                                       m_quality_encoding,
                                       m_truncate_read_len,
                                       ReadEncoding( FORWARD | COMPLEMENT ) );
+
+                    n_bps += (uint32)m_read_bp.size();
                 }
                 if (m_flags & REVERSE_COMPLEMENT)
                 {
@@ -108,15 +121,18 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
                                       m_quality_encoding,
                                       m_truncate_read_len,
                                       ReadEncoding( REVERSE | COMPLEMENT ) );
+
+                    n_bps += (uint32)m_read_bp.size();
                 }
 
                 // reset the read
                 m_read_bp.erase( m_read_bp.begin(), m_read_bp.end() );
 
-                ++n;
+                ++n_reads;
 
                 // bail-out if we reached our reads quota
-                if (n == max)
+                if (n_reads == max_reads ||
+                    n_bps + ReadDataFile::LONG_READ*bps_mult > max_bps)
                     break;
             }
 
@@ -138,7 +154,7 @@ int ReadDataFile_TXT::nextChunk(ReadDataRAM *output, uint32 max)
             state = IN_READ;
         }
     }
-    return n;
+    return n_reads;
 }
 
 ReadDataFile_TXT_gz::ReadDataFile_TXT_gz(const char *read_file_name,
