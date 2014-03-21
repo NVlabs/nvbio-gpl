@@ -162,7 +162,7 @@ int ReadDataFile_FASTQ_parser::nextChunk(ReadDataRAM *output, uint32 max_reads, 
                               &m_read_q[0],
                               m_quality_encoding,
                               m_truncate_read_len,
-                              FORWARD );
+                              ReadDataRAM::NO_OP );
         }
         if (m_flags & REVERSE)
         {
@@ -172,7 +172,7 @@ int ReadDataFile_FASTQ_parser::nextChunk(ReadDataRAM *output, uint32 max_reads, 
                               &m_read_q[0],
                               m_quality_encoding,
                               m_truncate_read_len,
-                              REVERSE );
+                              ReadDataRAM::REVERSE_OP );
         }
         if (m_flags & FORWARD_COMPLEMENT)
         {
@@ -182,7 +182,7 @@ int ReadDataFile_FASTQ_parser::nextChunk(ReadDataRAM *output, uint32 max_reads, 
                               &m_read_q[0],
                               m_quality_encoding,
                               m_truncate_read_len,
-                              ReadEncoding( FORWARD | COMPLEMENT ) );
+                              ReadDataRAM::COMPLEMENT_OP );
         }
         if (m_flags & REVERSE_COMPLEMENT)
         {
@@ -192,7 +192,7 @@ int ReadDataFile_FASTQ_parser::nextChunk(ReadDataRAM *output, uint32 max_reads, 
                               &m_read_q[0],
                               m_quality_encoding,
                               m_truncate_read_len,
-                              ReadEncoding( REVERSE | COMPLEMENT ) );
+                              ReadDataRAM::REVERSE_COMPLEMENT_OP );
         }
 
         n_bps   += read_mult * len;
