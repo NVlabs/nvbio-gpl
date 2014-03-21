@@ -394,6 +394,7 @@ int build(
 
         timer.stop();
         log_info(stderr, "building forward BWT... done: %um:%us\n", uint32(timer.seconds()/60), uint32(timer.seconds())%60);
+        log_info(stderr, "  primary: %u\n", primary);
 
         // save it to disk
         {
@@ -447,6 +448,7 @@ int build(
 
         timer.stop();
         log_info(stderr, "building reverse BWT... done: %um:%us\n", uint32(timer.seconds()/60), uint32(timer.seconds())%60);
+        log_info(stderr, "  primary: %u\n", primary);
 
         // save it to disk
         {
