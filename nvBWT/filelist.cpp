@@ -1,6 +1,6 @@
 /*
  * nvbio
- * Copyright (C) 2012-2014, NVIDIA Corporation
+ * Copyright (C) 2011-2013, NVIDIA Corporation
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -27,14 +27,8 @@
 #include <glob.h>
 #endif
 #include <string.h>
-#include <nvbio/basic/bnt.h>
-#include <nvbio/basic/numbers.h>
-#include <nvbio/basic/timer.h>
-#include <nvbio/fmindex/dna.h>
-#include <nvbio/basic/packedstream.h>
-#include <nvbio/fmindex/bwt.h>
-#include <nvbio/fasta/fasta.h>
-#include "fake_vector.h"
+#include <nvbio/basic/types.h>
+
 
 /* Appends sorted list of files matching pattern to out_list.
  * Should work on linux or windows */
