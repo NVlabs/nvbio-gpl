@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-// nvSetBWT.cu
+// nvBWT.cu
 //
 
 #define NVBIO_CUDA_DEBUG
@@ -39,10 +39,6 @@
 #include <nvbio/fasta/fasta.h>
 #include <nvbio/sufsort/sufsort.h>
 #include "filelist.h"
-
-#if defined(MTRAND)
-#include "mtrand.h"
-#endif
 
 using namespace nvbio;
 
@@ -84,20 +80,23 @@ unsigned char nst_nt4_table[256] = {
 	4, 4, 4, 4,  4, 4, 4, 4,  4, 4, 4, 4,  4, 4, 4, 4
 };
 
-#if defined(MTRAND)
-MTRand_open mt_rand;
 
-inline void  srand_bp(const unsigned int s) { mt_rand.seed(s); }
-inline uint8 rand_bp() { return uint8( mt_rand() * 4 ); }
-#else
-  #ifdef WIN32
-    inline void  srand_bp(const unsigned int s) { srand(s); }
-    inline float frand() { return float(rand()) / float(RAND_MAX); }
-    inline uint8 rand_bp() { return uint8( frand() * 4 ); }
-  #else
-    inline void  srand_bp(const unsigned int s) { srand48(s); }
-    inline uint8 rand_bp() { return uint8( drand48() * 4 ); }
-  #endif
+#define RAND    0
+#define RAND48  1
+
+#if (GENERATOR == RAND) || ((GENERATOR == RAND48) && defined(WIN32))
+
+// generate random base pairs using rand()
+inline void  srand_bp(const unsigned int s) { srand(s); }
+inline float frand() { return float(rand()) / float(RAND_MAX); }
+inline uint8 rand_bp() { return uint8( frand() * 4 ); }
+
+#elif (GENERATOR == RAND48)
+
+// generate random base pairs using rand48()
+inline void  srand_bp(const unsigned int s) { srand48(s); }
+inline uint8 rand_bp() { return uint8( drand48() * 4 ); }
+
 #endif
 
 struct Counter
