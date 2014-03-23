@@ -123,7 +123,7 @@ struct DollarRankMap
                 priv::alloc_storage( d_dollar_indices, n_suffixes );
 
                 // find the dollar signs
-                n_found_dollars = priv::copy_if(
+                n_found_dollars = priv::copy_flagged(
                     n_suffixes,
                     thrust::make_zip_iterator(
                         thrust::make_tuple(
@@ -146,7 +146,7 @@ struct DollarRankMap
             else
             {
                 // find the dollar signs
-                n_found_dollars = priv::copy_if(
+                n_found_dollars = priv::copy_flagged(
                     n_suffixes,
                     thrust::make_zip_iterator(
                         thrust::make_tuple(
