@@ -26,6 +26,11 @@
 
 namespace nvbio {
 
+///@addtogroup Sufsort
+///@{
+
+/// base virtual interface used by all string-set BWT handlers
+///
 struct BaseBWTHandler
 {
     /// virtual destructor
@@ -200,5 +205,7 @@ struct DiscardBWTHandler : public BaseBWTHandler
         const uint2*  d_suffixes,
         const uint32* d_indices) {}
 };
+
+///@}
 
 } // namespace nvbio

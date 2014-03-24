@@ -41,8 +41,8 @@ namespace nvbio {
 
 namespace cuda {
 
-/// return the position of the primary suffix of a string
-///
+// return the position of the primary suffix of a string
+//
 template <typename string_type>
 typename string_type::index_type find_primary(
     const typename string_type::index_type  string_len,
@@ -62,8 +62,8 @@ typename string_type::index_type find_primary(
         thrust::plus<uint32>() ) + 1u;
 }
 
-/// Sort the suffixes of all the strings in the given string_set
-///
+// Sort the suffixes of all the strings in the given string_set
+//
 template <typename string_set_type, typename output_handler>
 void suffix_sort(
     const string_set_type&   string_set,
@@ -133,8 +133,8 @@ void suffix_sort(
         nvbio::device_view( suffixes.cum_lengths ));
 }
 
-/// Sort all the suffixes of a given string
-///
+// Sort all the suffixes of a given string
+//
 template <typename string_type, typename output_iterator>
 void suffix_sort(
     const typename stream_traits<string_type>::index_type   string_len,
@@ -261,10 +261,10 @@ struct StringBWTHandler
     thrust::device_vector<uint32>   d_block_bwt;
 };
 
-/// Compute the bwt of a device-side string
-///
-/// \return         position of the primary suffix / $ symbol
-///
+// Compute the bwt of a device-side string
+//
+// \return         position of the primary suffix / $ symbol
+//
 template <typename string_type, typename output_iterator>
 typename string_type::index_type bwt(
     const typename string_type::index_type  string_len,
@@ -1026,8 +1026,8 @@ struct LargeBWTSkeleton
     }
 };
 
-/// Compute the bwt of a device-side string set
-///
+// Compute the bwt of a device-side string set
+//
 template <uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type, typename output_handler>
 void bwt(
     const ConcatenatedStringSet<
@@ -1069,8 +1069,8 @@ void bwt(
 
 } // namespace cuda
 
-/// Compute the bwt of a host-side string set
-///
+// Compute the bwt of a host-side string set
+//
 template <uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type, typename output_handler>
 void large_bwt(
     const ConcatenatedStringSet<
