@@ -16,11 +16,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#pragma once
-
-#include <sufsort/file_bwt.h>
-#include <sufsort/file_bwt_bgz.h>
-#include <sufsort/sufsort_priv.h>
+#include <nvbio/sufsort/file_bwt.h>
+#include <nvbio/sufsort/file_bwt_bgz.h>
+#include <nvbio/sufsort/sufsort_priv.h>
 #include <zlib/zlib.h>
 #include <omp.h>
 

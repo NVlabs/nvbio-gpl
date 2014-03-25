@@ -16,9 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#pragma once
-
-#include <sufsort/file_bwt_bgz.h>
+#include <nvbio/sufsort/file_bwt_bgz.h>
 #include <nvbio/basic/exceptions.h>
 #include <zlib/zlib.h>
 #include <omp.h>
@@ -174,15 +172,15 @@ void BGZFileWriter::encode_block(uint32 n_bytes, const uint8* src)
     uint32 block_sizes[NUM_BLOCKS];
 
     #pragma omp parallel for
-    for (int block = 0; block < n_bytes; block += BLOCK_SIZE)
+    for (int block = 0; block < int( n_bytes ); block += BLOCK_SIZE)
     {
-        const uint32 block_size = nvbio::min( BLOCK_SIZE, n_bytes - block );
+        const uint32 block_size = nvbio::min( BLOCK_SIZE, uint32( n_bytes - block ) );
         block_sizes[ block/BLOCK_SIZE ] = compress( src + block, &m_comp_buffer[0] + block, block_size );
     }
 
-    for (int block = 0; block < n_bytes; block += BLOCK_SIZE)
+    for (int block = 0; block < int( n_bytes ); block += BLOCK_SIZE)
     {
-        const uint32 block_size = nvbio::min( BLOCK_SIZE, n_bytes - block );
+        const uint32 block_size = nvbio::min( BLOCK_SIZE, uint32( n_bytes - block ) );
         const uint32 n_compressed = block_sizes[ block/BLOCK_SIZE ];
         if (n_compressed)
         {

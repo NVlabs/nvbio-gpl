@@ -16,9 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#pragma once
-
-#include <sufsort/file_bwt_lz4.h>
+#include <nvbio/sufsort/file_bwt_lz4.h>
 #include <lz4/lz4.h>
 #include <lz4/lz4hc.h>
 

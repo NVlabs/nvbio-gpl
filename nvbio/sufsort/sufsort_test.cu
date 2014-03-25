@@ -1,13 +1,32 @@
+/*
+ * nvbio
+ * Copyright (C) 2011-2014, NVIDIA Corporation
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
 #define NVBIO_CUDA_DEBUG
 
 #include <cub/cub.cuh>
-
-#include <sufsort/sufsort.h>
-#include <sufsort/sufsort_utils.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
 #include <algorithm>
+#include <omp.h>
+
+#include <nvbio/sufsort/sufsort.h>
+#include <nvbio/sufsort/sufsort_utils.h>
 #include <nvbio/basic/timer.h>
 #include <nvbio/basic/cuda/arch.h>
 #include <nvbio/basic/string_set.h>
@@ -16,7 +35,6 @@
 #include <nvbio/fmindex/dna.h>
 #include <nvbio/fmindex/bwt.h>
 #include <thrust/device_vector.h>
-#include <omp.h>
 
 // crc init
 void crcInit();

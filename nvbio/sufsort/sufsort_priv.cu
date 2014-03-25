@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <sufsort/sufsort_priv.h>
+#include <nvbio/sufsort/sufsort_priv.h>
 #include <omp.h>
 
 namespace nvbio {

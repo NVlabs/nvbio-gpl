@@ -18,7 +18,7 @@
 
 #pragma once
 
-#include <sufsort/file_bwt.h>
+#include <nvbio/sufsort/file_bwt.h>
 
 namespace nvbio {
 

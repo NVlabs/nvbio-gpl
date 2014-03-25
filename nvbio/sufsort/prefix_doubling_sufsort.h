@@ -14,11 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
  */
 
 #pragma once
 
-#include <sufsort/sufsort_priv.h>
+#include <nvbio/sufsort/sufsort_priv.h>
 #include <nvbio/basic/string_set.h>
 #include <nvbio/basic/thrust_view.h>
 #include <nvbio/basic/cuda/sort.h>
