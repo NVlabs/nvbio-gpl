@@ -428,7 +428,7 @@ void CompressionSort::sort(
             thrust::device_vector<uint32>& d_temp_indices = d_keys;
 
             // now keep only the indices we are interested in
-            if (uint32 n_active = priv::copy_if(
+            if (uint32 n_active = priv::copy_flagged(
                 n_active_suffixes,
                 d_indices.begin(),
                 d_copy_flags.begin() + 1u,
@@ -439,7 +439,7 @@ void CompressionSort::sort(
             d_indices.swap( d_temp_indices );
 
             // as well as their slots
-            if (uint32 n_active = priv::copy_if(
+            if (uint32 n_active = priv::copy_flagged(
                 n_active_suffixes,
                 d_active_slots.begin(),
                 d_copy_flags.begin() + 1u,
@@ -450,7 +450,7 @@ void CompressionSort::sort(
             d_active_slots.swap( d_temp_indices );
 
             // and the segment flags
-            if (uint32 n_active = priv::copy_if(
+            if (uint32 n_active = priv::copy_flagged(
                 n_active_suffixes,
                 d_segment_flags.begin(),
                 d_copy_flags.begin() + 1u,
@@ -768,7 +768,7 @@ void CompressionSort::sort(
                     thrust::device_vector<uint32>& d_temp_indices = d_keys;
 
                     // now keep only the indices we are interested in
-                    priv::copy_if(
+                    priv::copy_flagged(
                         n_active_strings,
                         d_indices.begin(),
                         d_copy_flags.begin() + 1u,
@@ -778,7 +778,7 @@ void CompressionSort::sort(
                     d_indices.swap( d_temp_indices );
 
                     // as well as their slots
-                    priv::copy_if(
+                    priv::copy_flagged(
                         n_active_strings,
                         d_active_slots.begin(),
                         d_copy_flags.begin() + 1u,
@@ -788,7 +788,7 @@ void CompressionSort::sort(
                     d_active_slots.swap( d_temp_indices );
 
                     // and the segment flags
-                    priv::copy_if(
+                    priv::copy_flagged(
                         n_active_strings,
                         d_segment_flags.begin(),
                         d_copy_flags.begin() + 1u,
