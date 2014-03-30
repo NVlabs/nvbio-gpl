@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/scoring_inl.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/scoring_inl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="scoring__inl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -126,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cuda {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="group___alignment.html#gaf4b521ae98299fcd8b9f08f7f63f3f77">   28</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;&gt;</a> <a class="code" href="group___alignment.html#gaf4b521ae98299fcd8b9f08f7f63f3f77">load_scoring_scheme</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name)</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="group___alignment.html#ga3ff3e244d804bfec49cb21578e12c74f">   28</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;&gt;</a> <a class="code" href="group___alignment.html#ga3ff3e244d804bfec49cb21578e12c74f">load_scoring_scheme</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a> type)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    FILE* file = fopen( name, <span class="stringliteral">&quot;r&quot;</span> );</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (file == NULL)</div>
@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    fclose( file );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;&gt;</a>( options );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;&gt;</a>( options, type );</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span> &lt;</div>
@@ -188,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    options[<span class="stringliteral">&quot;ref-gap-const&quot;</span>]    = std::string(<span class="stringliteral">&quot;5&quot;</span>);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    options[<span class="stringliteral">&quot;ref-gap-coeff&quot;</span>]    = std::string(<span class="stringliteral">&quot;3&quot;</span>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    options[<span class="stringliteral">&quot;gap-free&quot;</span>]         = std::string(<span class="stringliteral">&quot;5&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;</a>( options );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;</a>( options, <a class="code" href="group__nv_bowtie.html#gga774096281a1bc92f00e0e78548b22b6fa2fa00b5322dc2404e6308fbb4c325194">LocalAlignment</a> );</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// default constructor</span></div>
@@ -197,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">typename</span> MMCost,</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">typename</span> NCost&gt;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#ad15e139f5151112f681a0f8acf0724d3">   99</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#ad15e139f5151112f681a0f8acf0724d3">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;::SmithWatermanScoringScheme</a>(<span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a> type) :</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a2637dc55b92fac45275114ba08a2227f">   99</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a2637dc55b92fac45275114ba08a2227f">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;::SmithWatermanScoringScheme</a>() :</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    m_score_min( <a class="code" href="group___alignment.html#ggaafd3d8be887acc2c35ffdf3c7c7df494ac274f53c6b573a52da8a37ba77aaeb62">LinearFunc</a>, -0.6f, -0.6f ),</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    m_n_ceil_const( 0.0f ),</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    m_n_ceil_coeff( 0.15f ),</div>
@@ -210,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    m_mmp( 2, 6 ),</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    m_np( 1, 1 ),</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    m_monotone( true ),</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    m_local( type == <a class="code" href="group__nv_bowtie.html#gga774096281a1bc92f00e0e78548b22b6fa2fa00b5322dc2404e6308fbb4c325194">LocalAlignment</a> ? true : false )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    m_local( false )</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{}</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">// constructor</span></div>
@@ -219,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">template</span> &lt;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">typename</span> MMCost,</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">typename</span> NCost&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a6c2aeb0c0e076293a04e6bb60d82d481">  121</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#ad15e139f5151112f681a0f8acf0724d3">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;::SmithWatermanScoringScheme</a>(</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a6c2aeb0c0e076293a04e6bb60d82d481">  121</a></span>&#160;<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a2637dc55b92fac45275114ba08a2227f">SmithWatermanScoringScheme&lt;MMCost,NCost&gt;::SmithWatermanScoringScheme</a>(</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options,</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a>                      type) :</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    m_score_min( min_score_function(options) ),</div>
@@ -292,7 +292,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

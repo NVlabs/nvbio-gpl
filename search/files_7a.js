@@ -2,9 +2,6 @@ var searchData=
 [
   ['zconf_2eh',['zconf.h',['../build_2contrib_2zlib-1_82_87_2zconf_8h.html',1,'']]],
   ['zconf_2eh',['zconf.h',['../contrib_2zlib_2zconf_8h.html',1,'']]],
-  ['zconf_2eh',['zconf.h',['../vs2008_2_release-x64_2zlib-1_82_87_2zconf_8h.html',1,'']]],
-  ['zconf_2eh',['zconf.h',['../vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html',1,'']]],
-  ['zconf_2eh',['zconf.h',['../vs2008_2_debug-x64_2contrib_2zlib-1_82_87_2zconf_8h.html',1,'']]],
   ['zlib_2eh',['zlib.h',['../zlib_8h.html',1,'']]],
   ['zlib_2eh',['zlib.h',['../1_82_87_2zlib_8h.html',1,'']]],
   ['zutil_2ec',['zutil.c',['../zutil_8c.html',1,'']]],

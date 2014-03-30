@@ -1,7 +1,7 @@
 var searchData=
 [
   ['tagdata',['TagData',['../struct_bam_tools_1_1_bam_alignment.html#a093d87c7044d84d2dde15222798e8dec',1,'BamTools::BamAlignment']]],
-  ['target',['target',['../structcm_c_a_p_i.html#a13acc8776d5d67d9efe2684511ffaec6',1,'cmCAPI::target()'],['../structcm_c_a_p_i.html#a16f99dff7d857b8918d5cc7c3659b7aa',1,'cmCAPI::target()']]],
+  ['temp_5fstorage',['temp_storage',['../structnvbio_1_1priv_1_1_set_suffix_flattener.html#a3b116c56e0f994f63b9f107327f2103f',1,'nvbio::priv::SetSuffixFlattener']]],
   ['text',['text',['../structgz__header__s.html#af94c3fadfed835a501bc1babc4b894f9',1,'gz_header_s::text()'],['../structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#a4313dfc57a7a54fb7977e36449d966c8',1,'nvbio::aln::priv::AlignmentStream::strings_type::text()'],['../structnvbio_1_1rank__dictionary.html#a152ee0e38dcb5cddc38e652399defa5e',1,'nvbio::rank_dictionary::text()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base_1_1strings__type.html#ab9bd166fa9e19cf2cecc139d0dbf5bd9',1,'nvbio::bowtie2::cuda::detail::AlignmentStreamBase::strings_type::text()']]],
   ['text_5fblue',['TEXT_BLUE',['../console_8cpp.html#a1fcdf239b8d359d00b022d8d05f1df93',1,'console.cpp']]],
   ['text_5fbright',['TEXT_BRIGHT',['../console_8cpp.html#a1872d12a460b82dd833f0102dc610019',1,'console.cpp']]],
@@ -12,7 +12,6 @@ var searchData=
   ['text_5floader',['text_loader',['../structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base_1_1strings__type.html#a7b1cc6dd9b788811ab97590ee18cc560',1,'nvbio::bowtie2::cuda::detail::AlignmentStreamBase::strings_type']]],
   ['text_5fnormal',['TEXT_NORMAL',['../console_8cpp.html#ae8bbfc90d6c290d6ba8d354e38bcede1',1,'console.cpp']]],
   ['text_5fred',['TEXT_RED',['../console_8cpp.html#aa898bea1e83d462d75a7e037ba9cb677',1,'console.cpp']]],
-  ['tgt',['tgt',['../structcm_c_a_p_i.html#ab7e6ac8bbf058692f4585842b3c58611',1,'cmCAPI']]],
   ['thread_5fid',['thread_id',['../group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b',1,'nvbio::cuda::wq']]],
   ['threadcount',['ThreadCount',['../struct_bam_tools_1_1_bgzf_data.html#ad3040e3b6a5e9bb06da37a7f8a1827ca',1,'BamTools::BgzfData']]],
   ['threadpool',['ThreadPool',['../struct_bam_tools_1_1_bgzf_data.html#a868b2cf293ea5704c25c41755f1314dd',1,'BamTools::BgzfData']]],
@@ -28,5 +27,5 @@ var searchData=
   ['trys',['trys',['../structnvbio_1_1bowtie2_1_1cuda_1_1_best_approx_scoring_pipeline_state.html#a29dbf281f6e388edd9d6fac1f9aeb3eb',1,'nvbio::bowtie2::cuda::BestApproxScoringPipelineState']]],
   ['trys_5fdptr',['trys_dptr',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a150c62a0658c24277c822ae996321b1c',1,'nvbio::bowtie2::cuda::Aligner']]],
   ['trys_5fdvec',['trys_dvec',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#acfb72aa7d279fe452d8d9d8e704dabe2',1,'nvbio::bowtie2::cuda::Aligner']]],
-  ['type',['Type',['../struct_bam_tools_1_1_cigar_op.html#afd1ea1fa2eb044569c301157137dcb82',1,'BamTools::CigarOp::Type()'],['../struct_bam_tools_1_1_ref_edit.html#ac464a24b4e09025ef498f24f75079cd5',1,'BamTools::RefEdit::Type()'],['../structnvbio_1_1aln_1_1_edit_distance_aligner.html#a5711963e1562d174d5dd11421fe289fe',1,'nvbio::aln::EditDistanceAligner::TYPE()'],['../structnvbio_1_1aln_1_1_gotoh_aligner.html#a2d3a4f4f33eff927c65a877792fe41e5',1,'nvbio::aln::GotohAligner::TYPE()'],['../structnvbio_1_1aln_1_1_smith_waterman_aligner.html#afefbf9f67e31d1e3ccfa73efd5e5f9dc',1,'nvbio::aln::SmithWatermanAligner::TYPE()'],['../structnvbio_1_1alndiff_1_1_stats.html#acb862e3ad1ae357273530f38da3c4b98',1,'nvbio::alndiff::Stats::TYPE()']]]
+  ['type',['TYPE',['../structnvbio_1_1aln_1_1_edit_distance_aligner.html#a56af16429f92a2a7f66b9d42f4581bd1',1,'nvbio::aln::EditDistanceAligner::TYPE()'],['../structnvbio_1_1aln_1_1_gotoh_aligner.html#aa14d8c8bc62c737e44865346ace46faa',1,'nvbio::aln::GotohAligner::TYPE()'],['../structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a63ddef2797d4dd337053ecfd10c88c56',1,'nvbio::aln::SmithWatermanAligner::TYPE()'],['../structnvbio_1_1alndiff_1_1_stats.html#acb862e3ad1ae357273530f38da3c4b98',1,'nvbio::alndiff::Stats::TYPE()'],['../struct_bam_tools_1_1_cigar_op.html#afd1ea1fa2eb044569c301157137dcb82',1,'BamTools::CigarOp::Type()'],['../struct_bam_tools_1_1_ref_edit.html#ac464a24b4e09025ef498f24f75079cd5',1,'BamTools::RefEdit::Type()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_simple_func.html#a0ae68a606c1953db000bfed7bc5f5ead',1,'nvbio::bowtie2::cuda::SimpleFunc::type()']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/alignment/sw/sw_banded_inl.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/alignment/sw/sw_banded_inl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="sw__banded__inl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -555,7 +555,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;{</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1_smith_waterman_scoring_context.html">priv::banded::SmithWatermanScoringContext&lt;BAND_LEN,TYPE&gt;</a> context;</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>, pattern, quals, text, 0u, pattern.length(), 0u, min_score, context, sink );</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>, pattern, quals, text, 0u, pattern.length(), 0u, min_score, context, sink );</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="keyword">template</span> &lt;</div>
@@ -581,7 +581,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;{</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1_smith_waterman_checkpointed_scoring_context.html">priv::banded::SmithWatermanCheckpointedScoringContext&lt;BAND_LEN,TYPE,checkpoint_type&gt;</a> context( checkpoint );</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>, pattern, quals, text, window_begin, window_end, 0u, min_score, context, sink );</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>, pattern, quals, text, window_begin, window_end, 0u, min_score, context, sink );</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;}</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="keyword">template</span> &lt;</div>
@@ -606,7 +606,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;{</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1_smith_waterman_checkpoint_context.html">priv::banded::SmithWatermanCheckpointContext&lt;BAND_LEN,TYPE,CHECKPOINTS,checkpoint_type&gt;</a> context( checkpoints );</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>, pattern, quals, text, 0u, pattern.length(), 0u, min_score, context, sink );</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>, pattern, quals, text, 0u, pattern.length(), 0u, min_score, context, sink );</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;}</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="keyword">template</span> &lt;</div>
@@ -635,7 +635,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> window_end   = <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>( window_begin + CHECKPOINTS, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(pattern.length()) );</div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1_null_sink.html">NullSink</a> sink;</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a>, pattern, quals, text, window_begin, window_end, 0u, min_score, context, sink );</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <a class="code" href="structnvbio_1_1aln_1_1priv_1_1banded_1_1sw__alignment__score__dispatch.html#a40ad31ab5af1ac0f43c46574a43e3007">priv::banded::sw_alignment_score_dispatch&lt;BAND_LEN,TYPE&gt;::run</a>( aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>, pattern, quals, text, window_begin, window_end, 0u, min_score, context, sink );</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">return</span> window_end - window_begin;</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;}</div>
@@ -716,7 +716,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:08:59 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

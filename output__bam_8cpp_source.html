@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/io/output/output_bam.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/output/output_bam.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="output__bam_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -664,116 +664,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                mapq = process_one_alignment(data_buffer, alignment, mate);</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="group___output.html#gga1e89e8523b7e71ab8202a0821d7aa209a25afee64f4c964e17936da74ed2a74fc">PAIRED_END</a>:</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                alignment = cpu_output.<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#aa12e6b8e2364bb86294332d766bbd1b3">get_anchor</a>(c);</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                mate = cpu_output.<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a42cbe706c6d9a597a82ad5db32261768">get_opposite_mate</a>(c);</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                mapq = process_one_alignment(data_buffer, alignment, mate);</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                process_one_alignment(data_buffer, mate, alignment);</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        }</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        <span class="comment">// track per-alignment statistics</span></div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_output_file.html#a0cf222c04199d6951ff00445237d2f4e" title="I/O statistics. ">iostats</a>.<a class="code" href="structnvbio_1_1io_1_1_i_o_stats.html#a67bf2214261c1d3dcc7c556b3a074324">track_alignment_statistics</a>(alignment, mate, mapq);</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="keywordflow">if</span> (data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>())</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    {</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        write_block(data_buffer);</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    }</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_output_file.html#a0c7f1c3ab1ae5f1b975baab07806f395" title="Mark a batch of alignment results as complete. ">OutputFile::end_batch</a>();</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;}</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="keywordtype">void</span> BamOutput::write_block(<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html">DataBuffer</a>&amp; block)</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;{</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_data_buffer.html">DataBuffer</a> compressed;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_gzip_compressor.html#ab3de0bf8debcc2f1c2c77ebc0dbe4de2">start_block</a>(compressed);</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_gzip_compressor.html#a12ca425ce8d36219210dc3ad67aac797">compress</a>(compressed, block);</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_b_g_z_f_compressor.html#ae4bbc8eccc6a7a20fc75ef15fce645a6">end_block</a>(compressed);</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    fwrite(compressed.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8103650a4b65b7a66f63e18bf326d43">get_base_ptr</a>(), compressed.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afae33fe8ffc19ccd949829c0dc873c41">pos</a>, 1, fp);</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    block.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a1498514c3f52d1ee86e4fa8bbc94f0ca">rewind</a>();</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;}</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="keywordtype">void</span> BamOutput::output_header(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;{</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="keywordtype">int</span> pos_l_text, pos_start_header, header_len;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="comment">// names in parenthesis refer to the field names in the BAM spec</span></div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    <span class="comment">// write magic string (magic)</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;BAM\1&quot;</span>);</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="comment">// skip ahead header length field (l_text), will fill later</span></div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    pos_l_text = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>();</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5dd1c665a8d4e8dbb890920d80619835">skip_ahead</a>(<span class="keyword">sizeof</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>));</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    pos_start_header = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>();</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="comment">// fill out SAM header (text)</span></div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;@HD\t&quot;</span>);</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;VN:1.3\n&quot;</span>);</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;@PG\t&quot;</span>);</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="comment">// xxxnsubtil: this will have to be specified somewhere else later (maybe in Params?)</span></div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;ID:nvBowtie\t&quot;</span>);</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;PN:nvBowtie\t&quot;</span>);</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="comment">// VN was bumped to 0.5.1 to distinguish between the new and old output code</span></div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;VN:0.5.1\n&quot;</span>);</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="comment">// samtools does not cope with a null terminator here, so don&#39;t write one out</span></div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="comment">//    data_buffer.append_int8(0);</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <span class="comment">// compute and write out the size of the SAM header (l_text)</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    header_len = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>() - pos_start_header;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a40207dd2d8830675681903a3a1626c56">poke_int32</a>(pos_l_text, header_len);</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="comment">// output the number of reference sequences (n_ref)...</span></div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(<a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a598805fd5e8c4322835892428c86d3c1">info</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_info.html#aedf4040e51ed1634ceb6387bf1e5b0eb" title="number of sequences ">n_seqs</a>);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="comment">// ... and the information for each</span></div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a598805fd5e8c4322835892428c86d3c1">info</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_info.html#aedf4040e51ed1634ceb6387bf1e5b0eb" title="number of sequences ">n_seqs</a>; i++)</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    {</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann = <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a9cb3d83413196d1d47aeeff1b2cc9bc5">data</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html#ae79ba681c7eab48fc534c99a31dda701" title="annotations vector, n_seqs elements ">anns</a>[i];</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *name = <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a9cb3d83413196d1d47aeeff1b2cc9bc5">data</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html#af6b601eab468b6a6b4306a28bed60e97" title="names strings vector ">names</a> + ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#ae8b2b755b18046d218756101ade5a9a5" title="offset in the names vector ">name_offset</a>;</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        <span class="comment">// sequence name length including null terminator (l_name)</span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(strlen(name) + 1);</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="comment">// write out sequence name string and null-terminator (name)</span></div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(name);</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a3595a5f38aea5c3fe1769591c0780a2c">append_int8</a>(0);</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="comment">// sequence length (l_ref)</span></div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#a2d4da700e937cccd893aff570173c297" title="length of the sequence ">len</a>);</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    }</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="comment">// compress and write out the header block separately</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="comment">// (this yields a slightly smaller file)</span></div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    write_block(data_buffer);</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;}</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div>
-<div class="line"><a name="l00655"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_bam_output.html#a98f5668632a34986126465caa0123d09">  655</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1io_1_1_bam_output.html#a98f5668632a34986126465caa0123d09" title="Flush and close the output file. ">BamOutput::close</a>()</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;{</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <a class="code" href="types_8h.html#a2a688019c59cc405f9d91acc28a86850">NVBIO_CUDA_ASSERT</a>(fp);</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="comment">// write out the BAM EOF marker</span></div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> magic[28] =  { 0037, 0213, 0010, 0004, 0000, 0000, 0000, 0000, 0000,</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                                              0377, 0006, 0000, 0102, 0103, 0002, 0000, 0033, 0000,</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                                              0003, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000 };</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    fwrite(magic, <span class="keyword">sizeof</span>(magic), 1, fp);</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    fclose(fp);</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    fp = NULL;</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;}</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;} <span class="comment">// namespace io</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                <span class="comment">// track per-alignment statistics</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                <a class="code" href="structnvbio_1_1io_1_1_output_file.html#a0cf222c04199d6951ff00445237d2f4e" title="I/O statistics. ">iostats</a>.<a class="code" href="structnvbio_1_1io_1_1_i_o_stats.html#a67bf2214261c1d3dcc7c556b3a074324">track_alignment_statistics</a>(alignment, mapq);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="group___output.html#gga1e89e8523b7e71ab8202a0821d7aa209a25afee64f4c964e17936da74ed2a74fc">PAIRED_END</a>:</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                alignment = cpu_output.<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#aa12e6b8e2364bb86294332d766bbd1b3">get_anchor</a>(c);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                mate = cpu_output.<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a42cbe706c6d9a597a82ad5db32261768">get_opposite_mate</a>(c);</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                mapq = process_one_alignment(data_buffer, alignment, mate);</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                process_one_alignment(data_buffer, mate, alignment);</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                <span class="comment">// track per-alignment statistics</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                <a class="code" href="structnvbio_1_1io_1_1_output_file.html#a0cf222c04199d6951ff00445237d2f4e" title="I/O statistics. ">iostats</a>.<a class="code" href="structnvbio_1_1io_1_1_i_o_stats.html#a67bf2214261c1d3dcc7c556b3a074324">track_alignment_statistics</a>(alignment, mate, mapq);</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="keywordflow">if</span> (data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>())</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        write_block(data_buffer);</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    }</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_output_file.html#a0c7f1c3ab1ae5f1b975baab07806f395" title="Mark a batch of alignment results as complete. ">OutputFile::end_batch</a>();</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;}</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="keywordtype">void</span> BamOutput::write_block(<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html">DataBuffer</a>&amp; block)</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;{</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_data_buffer.html">DataBuffer</a> compressed;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_gzip_compressor.html#ab3de0bf8debcc2f1c2c77ebc0dbe4de2">start_block</a>(compressed);</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_gzip_compressor.html#a12ca425ce8d36219210dc3ad67aac797">compress</a>(compressed, block);</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    bgzf.<a class="code" href="structnvbio_1_1io_1_1_b_g_z_f_compressor.html#ae4bbc8eccc6a7a20fc75ef15fce645a6">end_block</a>(compressed);</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    fwrite(compressed.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8103650a4b65b7a66f63e18bf326d43">get_base_ptr</a>(), compressed.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afae33fe8ffc19ccd949829c0dc873c41">pos</a>, 1, fp);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    block.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a1498514c3f52d1ee86e4fa8bbc94f0ca">rewind</a>();</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;}</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;<span class="keywordtype">void</span> BamOutput::output_header(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;{</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordtype">int</span> pos_l_text, pos_start_header, header_len;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="comment">// names in parenthesis refer to the field names in the BAM spec</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="comment">// write magic string (magic)</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;BAM\1&quot;</span>);</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    <span class="comment">// skip ahead header length field (l_text), will fill later</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    pos_l_text = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>();</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5dd1c665a8d4e8dbb890920d80619835">skip_ahead</a>(<span class="keyword">sizeof</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>));</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    pos_start_header = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>();</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="comment">// fill out SAM header (text)</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;@HD\t&quot;</span>);</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;VN:1.3\n&quot;</span>);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;@PG\t&quot;</span>);</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="comment">// xxxnsubtil: this will have to be specified somewhere else later (maybe in Params?)</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;ID:nvBowtie\t&quot;</span>);</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;PN:nvBowtie\t&quot;</span>);</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="comment">// VN was bumped to 0.5.1 to distinguish between the new and old output code</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(<span class="stringliteral">&quot;VN:0.5.1\n&quot;</span>);</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="comment">// samtools does not cope with a null terminator here, so don&#39;t write one out</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="comment">//    data_buffer.append_int8(0);</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <span class="comment">// compute and write out the size of the SAM header (l_text)</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    header_len = data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#ae8e64539af96c32c68539cd65f0dc2fc">get_pos</a>() - pos_start_header;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a40207dd2d8830675681903a3a1626c56">poke_int32</a>(pos_l_text, header_len);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="comment">// output the number of reference sequences (n_ref)...</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(<a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a598805fd5e8c4322835892428c86d3c1">info</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_info.html#aedf4040e51ed1634ceb6387bf1e5b0eb" title="number of sequences ">n_seqs</a>);</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="comment">// ... and the information for each</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a598805fd5e8c4322835892428c86d3c1">info</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_info.html#aedf4040e51ed1634ceb6387bf1e5b0eb" title="number of sequences ">n_seqs</a>; i++)</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    {</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html">io::BNTAnn</a>&amp; ann = <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a9cb3d83413196d1d47aeeff1b2cc9bc5">data</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html#ae79ba681c7eab48fc534c99a31dda701" title="annotations vector, n_seqs elements ">anns</a>[i];</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *name = <a class="code" href="structnvbio_1_1io_1_1_output_file.html#ae60d819329f6e0c7bb8b680a9f167e24" title="Reference genome data handle. ">bnt</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t.html#a9cb3d83413196d1d47aeeff1b2cc9bc5">data</a>.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html#af6b601eab468b6a6b4306a28bed60e97" title="names strings vector ">names</a> + ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#ae8b2b755b18046d218756101ade5a9a5" title="offset in the names vector ">name_offset</a>;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="comment">// sequence name length including null terminator (l_name)</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(strlen(name) + 1);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        <span class="comment">// write out sequence name string and null-terminator (name)</span></div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a5b8345da41eae76c38af642d53fc21c8">append_string</a>(name);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#a3595a5f38aea5c3fe1769591c0780a2c">append_int8</a>(0);</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="comment">// sequence length (l_ref)</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        data_buffer.<a class="code" href="structnvbio_1_1io_1_1_data_buffer.html#afbf6d13cf47327febf9a3f1bfeb03e18">append_int32</a>(ann.<a class="code" href="structnvbio_1_1io_1_1_b_n_t_ann.html#a2d4da700e937cccd893aff570173c297" title="length of the sequence ">len</a>);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    }</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="comment">// compress and write out the header block separately</span></div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="comment">// (this yields a slightly smaller file)</span></div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    write_block(data_buffer);</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;}</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;</div>
+<div class="line"><a name="l00656"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_bam_output.html#a98f5668632a34986126465caa0123d09">  656</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1io_1_1_bam_output.html#a98f5668632a34986126465caa0123d09" title="Flush and close the output file. ">BamOutput::close</a>()</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;{</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <a class="code" href="types_8h.html#a2a688019c59cc405f9d91acc28a86850">NVBIO_CUDA_ASSERT</a>(fp);</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="comment">// write out the BAM EOF marker</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> magic[28] =  { 0037, 0213, 0010, 0004, 0000, 0000, 0000, 0000, 0000,</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                                              0377, 0006, 0000, 0102, 0103, 0002, 0000, 0033, 0000,</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                                              0003, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000 };</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    fwrite(magic, <span class="keyword">sizeof</span>(magic), 1, fp);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    fclose(fp);</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    fp = NULL;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;}</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;} <span class="comment">// namespace io</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:02 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

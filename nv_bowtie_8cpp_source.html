@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/nvBowtie.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/nvBowtie.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="nv_bowtie_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2_c_make_files_22_88_811_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="nv_bowtie_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="suftest_8c.html#ac0f2228420376f4db7e1274f2b41667c">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    cudaSetDeviceFlags( cudaDeviceMapHost | cudaDeviceLmemResizeToMax );</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
@@ -388,103 +388,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        {</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <a class="code" href="console_8cpp.html#a2c4c0d7ab0fcc45c6e6c643dddaa2d6c">log_visible</a>(stderr, <span class="stringliteral">&quot;opening read file [1] \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <a class="code" href="classnvbio_1_1_shared_pointer.html">SharedPointer&lt;nvbio::io::ReadDataStream&gt;</a> read_data_file1(</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <a class="code" href="group___reads_i_o.html#ga3022ab0f80995ec0abf6eb2bb7251756">nvbio::io::open_read_file</a>(argv[arg_offset+1],</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <a class="code" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">nvbio::io::open_read_file</a>(argv[arg_offset+1],</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                                          qencoding,</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                          max_reads,</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                          max_read_len)</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            );</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">if</span> (read_data_file1 == NULL || read_data_file1-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <a class="code" href="console_8cpp.html#a2c4c0d7ab0fcc45c6e6c643dddaa2d6c">log_visible</a>(stderr, <span class="stringliteral">&quot;opening read file [2] \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+2]);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <a class="code" href="classnvbio_1_1_shared_pointer.html">SharedPointer&lt;nvbio::io::ReadDataStream&gt;</a> read_data_file2(</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <a class="code" href="group___reads_i_o.html#ga3022ab0f80995ec0abf6eb2bb7251756">nvbio::io::open_read_file</a>(argv[arg_offset+2],</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                                          qencoding,</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                          max_reads,</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                          max_read_len)</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            );</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">if</span> (read_data_file2 == NULL || read_data_file2-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+2]);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">nvbio::bowtie2::cuda::driver</a>( argv[argc-1], *driver_data, pe_policy, *read_data_file1, *read_data_file2, string_options );</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <a class="code" href="console_8cpp.html#a2c4c0d7ab0fcc45c6e6c643dddaa2d6c">log_visible</a>(stderr, <span class="stringliteral">&quot;opening read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="classnvbio_1_1_shared_pointer.html">SharedPointer&lt;nvbio::io::ReadDataStream&gt;</a> read_data_file(</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <a class="code" href="group___reads_i_o.html#ga3022ab0f80995ec0abf6eb2bb7251756">nvbio::io::open_read_file</a>(argv[arg_offset+1],</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                          qencoding,</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                                          max_reads,</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                          max_read_len)</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            );</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="keywordflow">if</span> (read_data_file == NULL || read_data_file-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">nvbio::bowtie2::cuda::driver</a>( argv[argc-1], *driver_data, *read_data_file, string_options );</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keyword">delete</span> driver_data;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <a class="code" href="console_8cpp.html#a3f1311cb7f0df2f027275d682ccf0918">log_info</a>( stderr, <span class="stringliteral">&quot;nvBowtie... done\n&quot;</span> );</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1cuda__error.html">nvbio::cuda_error</a> e)</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::cuda_error exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1cuda__error.html#ac0e8399c371e73a48c9f8132c9600041">what</a>());</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1bad__alloc.html">nvbio::bad_alloc</a> e)</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::bad_alloc exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1bad__alloc.html#aa5f21736129bd16bb8977c04d18f401a">what</a>());</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1logic__error.html">nvbio::logic_error</a> e)</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::logic_error exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1logic__error.html#acdcfedf540ffcd08f0f667afd722499b">what</a>());</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1runtime__error.html">nvbio::runtime_error</a> e)</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::runtime_error exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1runtime__error.html#aa5bd8ac7cd317f680dbb1a8169a75f7c">what</a>());</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">catch</span> (std::bad_alloc e)</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::bad_alloc exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">catch</span> (std::logic_error e)</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::logic_error exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">catch</span> (std::runtime_error e)</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::runtime_error exception:\n&quot;</span>);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">catch</span> (...)</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught an unknown exception!\n&quot;</span>);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                          max_read_len,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                          <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">io::REVERSE</a>)</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            );</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> (read_data_file1 == NULL || read_data_file1-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <a class="code" href="console_8cpp.html#a2c4c0d7ab0fcc45c6e6c643dddaa2d6c">log_visible</a>(stderr, <span class="stringliteral">&quot;opening read file [2] \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+2]);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <a class="code" href="classnvbio_1_1_shared_pointer.html">SharedPointer&lt;nvbio::io::ReadDataStream&gt;</a> read_data_file2(</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <a class="code" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">nvbio::io::open_read_file</a>(argv[arg_offset+2],</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                          qencoding,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                          max_reads,</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                          max_read_len,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                                          <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">io::REVERSE</a>)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">if</span> (read_data_file2 == NULL || read_data_file2-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+2]);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">nvbio::bowtie2::cuda::driver</a>( argv[argc-1], *driver_data, pe_policy, *read_data_file1, *read_data_file2, string_options );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <a class="code" href="console_8cpp.html#a2c4c0d7ab0fcc45c6e6c643dddaa2d6c">log_visible</a>(stderr, <span class="stringliteral">&quot;opening read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <a class="code" href="classnvbio_1_1_shared_pointer.html">SharedPointer&lt;nvbio::io::ReadDataStream&gt;</a> read_data_file(</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <a class="code" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">nvbio::io::open_read_file</a>(argv[arg_offset+1],</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                          qencoding,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                          max_reads,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                          max_read_len,</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                          <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">io::REVERSE</a>)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span> (read_data_file == NULL || read_data_file-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a86d7c1ac72b4a552c93660a275efaeaf">is_ok</a>() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;unable to open read file \&quot;%s\&quot;\n&quot;</span>, argv[arg_offset+1]);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">nvbio::bowtie2::cuda::driver</a>( argv[argc-1], *driver_data, *read_data_file, string_options );</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keyword">delete</span> driver_data;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="console_8cpp.html#a3f1311cb7f0df2f027275d682ccf0918">log_info</a>( stderr, <span class="stringliteral">&quot;nvBowtie... done\n&quot;</span> );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1cuda__error.html">nvbio::cuda_error</a> e)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::cuda_error exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1cuda__error.html#ac0e8399c371e73a48c9f8132c9600041">what</a>());</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1bad__alloc.html">nvbio::bad_alloc</a> e)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::bad_alloc exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1bad__alloc.html#aa5f21736129bd16bb8977c04d18f401a">what</a>());</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1logic__error.html">nvbio::logic_error</a> e)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::logic_error exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1logic__error.html#acdcfedf540ffcd08f0f667afd722499b">what</a>());</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">catch</span> (<a class="code" href="structnvbio_1_1runtime__error.html">nvbio::runtime_error</a> e)</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a nvbio::runtime_error exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.<a class="code" href="structnvbio_1_1runtime__error.html#aa5bd8ac7cd317f680dbb1a8169a75f7c">what</a>());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">catch</span> (std::bad_alloc e)</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::bad_alloc exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">catch</span> (std::logic_error e)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::logic_error exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">catch</span> (std::runtime_error e)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught a std::runtime_error exception:\n&quot;</span>);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;  %s\n&quot;</span>, e.what());</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;caught an unknown exception!\n&quot;</span>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

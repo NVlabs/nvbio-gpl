@@ -115,7 +115,7 @@ struct nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, Na
 
 <p>Encodes a read batch this has no storage, it's meant to be a plain data view </p>
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00094">94</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00104">104</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="reads_8h_source.html">reads.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -133,58 +133,66 @@ Public Types</h2></td></tr>
 &lt; <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ada82ed778d0b9ee0910ea726ee85ff18">read_iterator</a>, <a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <br class="typebreak"/>
 <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a2dc6a894c80677a6a81526036b393128">READ_BITS</a>, <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa11304175a7e35faa84a4a3e724f1a1b">HI_BITS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a10316720713b5014fcfe75913773f428">read_stream_type</a></td></tr>
 <tr class="separator:a10316720713b5014fcfe75913773f428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece71b9deab8ae2ada0d3319d60c21a8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">read_stream_type::iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aece71b9deab8ae2ada0d3319d60c21a8">read_stream_iterator</a></td></tr>
+<tr class="separator:aece71b9deab8ae2ada0d3319d60c21a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a695fba3c4eea5a49d8d6de7e115c2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__wrapper.html">vector_wrapper</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aece71b9deab8ae2ada0d3319d60c21a8">read_stream_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a16a695fba3c4eea5a49d8d6de7e115c2">read_string</a></td></tr>
+<tr class="separator:a16a695fba3c4eea5a49d8d6de7e115c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
 <tr class="memitem:ae3f11a2585ac1680e434bd89bb1871d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ae3f11a2585ac1680e434bd89bb1871d7">ReadDataView</a> ()</td></tr>
 <tr class="separator:ae3f11a2585ac1680e434bd89bb1871d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a992f8be601bd96a1dd8095b9d858fb9b"><td class="memTemplParams" colspan="2">template&lt;typename InIndexIterator , typename InReadIterator , typename InQualIterator , typename InNameIterator &gt; </td></tr>
-<tr class="memitem:a992f8be601bd96a1dd8095b9d858fb9b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a992f8be601bd96a1dd8095b9d858fb9b">ReadDataView</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a>&lt; InIndexIterator, InReadIterator, InQualIterator, InNameIterator &gt; &amp;in)</td></tr>
+<tr class="memitem:a992f8be601bd96a1dd8095b9d858fb9b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a992f8be601bd96a1dd8095b9d858fb9b">ReadDataView</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a>&lt; InIndexIterator, InReadIterator, InQualIterator, InNameIterator &gt; &amp;in)</td></tr>
 <tr class="separator:a992f8be601bd96a1dd8095b9d858fb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5079c8779999785c216cf4984e239fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad732600085226a60378eaf04f0c49f6b">name_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa5079c8779999785c216cf4984e239fb">name_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad732600085226a60378eaf04f0c49f6b">name_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa5079c8779999785c216cf4984e239fb">name_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:aa5079c8779999785c216cf4984e239fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8f9979e30dbd12c2a0ff0f451b2009c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ae41160b55390c2a4b9bc755c203a78f2">index_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa8f9979e30dbd12c2a0ff0f451b2009c">name_index</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ae41160b55390c2a4b9bc755c203a78f2">index_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa8f9979e30dbd12c2a0ff0f451b2009c">name_index</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:aa8f9979e30dbd12c2a0ff0f451b2009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade9f59cce95813204e10c41827a90d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ada82ed778d0b9ee0910ea726ee85ff18">read_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aade9f59cce95813204e10c41827a90d4">read_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ada82ed778d0b9ee0910ea726ee85ff18">read_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aade9f59cce95813204e10c41827a90d4">read_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:aade9f59cce95813204e10c41827a90d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac0babc41e78af90a96849af03482ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ae41160b55390c2a4b9bc755c203a78f2">index_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a1ac0babc41e78af90a96849af03482ef">read_index</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ae41160b55390c2a4b9bc755c203a78f2">index_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a1ac0babc41e78af90a96849af03482ef">read_index</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a1ac0babc41e78af90a96849af03482ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac78c591349af48870d00bcc24810fab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a8346b9406d5cebef9edb26b09b7a205a">qual_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ac78c591349af48870d00bcc24810fab6">qual_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a8346b9406d5cebef9edb26b09b7a205a">qual_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ac78c591349af48870d00bcc24810fab6">qual_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ac78c591349af48870d00bcc24810fab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69016e927c8080781248fd579b8ae99c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a69016e927c8080781248fd579b8ae99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad7185a969399559202ef7bfd0c3a6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a3ad7185a969399559202ef7bfd0c3a6c">bps</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a3ad7185a969399559202ef7bfd0c3a6c">bps</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a3ad7185a969399559202ef7bfd0c3a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad05eec987f110fa6add1df36ffc7b5de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad05eec987f110fa6add1df36ffc7b5de">words</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad05eec987f110fa6add1df36ffc7b5de">words</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ad05eec987f110fa6add1df36ffc7b5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad210e420ae14bcff6596463d3b177e46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad210e420ae14bcff6596463d3b177e46">name_stream_len</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad210e420ae14bcff6596463d3b177e46">name_stream_len</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ad210e420ae14bcff6596463d3b177e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaccc5565ba1e1da4516333cb1f8f6dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aeaccc5565ba1e1da4516333cb1f8f6dd">max_read_len</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aeaccc5565ba1e1da4516333cb1f8f6dd">max_read_len</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:aeaccc5565ba1e1da4516333cb1f8f6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdb684a5d54b0df6290c60109fa3c4b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#afdb684a5d54b0df6290c60109fa3c4b2">min_read_len</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#afdb684a5d54b0df6290c60109fa3c4b2">min_read_len</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:afdb684a5d54b0df6290c60109fa3c4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a763db8660ddbd34510eceefe30448119"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a763db8660ddbd34510eceefe30448119">avg_read_len</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a763db8660ddbd34510eceefe30448119">avg_read_len</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a763db8660ddbd34510eceefe30448119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8585efe415244c0968fdd4381b16fb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> uint2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#af8585efe415244c0968fdd4381b16fb4">get_range</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> uint2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#af8585efe415244c0968fdd4381b16fb4">get_range</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:af8585efe415244c0968fdd4381b16fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a53017f17fee65f63b2a486562bb5a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a16a695fba3c4eea5a49d8d6de7e115c2">read_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a3a53017f17fee65f63b2a486562bb5a7">get_read</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a3a53017f17fee65f63b2a486562bb5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
@@ -215,9 +223,9 @@ Public Members</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Members</h2></td></tr>
-<tr class="memitem:a2dc6a894c80677a6a81526036b393128"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a2dc6a894c80677a6a81526036b393128">READ_BITS</a> = 4</td></tr>
+<tr class="memitem:a2dc6a894c80677a6a81526036b393128"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a2dc6a894c80677a6a81526036b393128">READ_BITS</a> = 4</td></tr>
 <tr class="separator:a2dc6a894c80677a6a81526036b393128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa11304175a7e35faa84a4a3e724f1a1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa11304175a7e35faa84a4a3e724f1a1b">HI_BITS</a> = false</td></tr>
+<tr class="memitem:aa11304175a7e35faa84a4a3e724f1a1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aa11304175a7e35faa84a4a3e724f1a1b">HI_BITS</a> = false</td></tr>
 <tr class="separator:aa11304175a7e35faa84a4a3e724f1a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -233,7 +241,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00096">96</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00106">106</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +257,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00099">99</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00109">109</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +273,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00098">98</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00108">108</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -281,7 +289,23 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00097">97</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00107">107</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aece71b9deab8ae2ada0d3319d60c21a8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator, typename NameIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">read_stream_type::iterator</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aece71b9deab8ae2ada0d3319d60c21a8">read_stream_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00153">153</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +321,23 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00142">142</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00152">152</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16a695fba3c4eea5a49d8d6de7e115c2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator, typename NameIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__wrapper.html">vector_wrapper</a>&lt;<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#aece71b9deab8ae2ada0d3319d60c21a8">read_stream_iterator</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a16a695fba3c4eea5a49d8d6de7e115c2">read_string</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00154">154</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +366,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </div><div class="memdoc">
 <p>empty constructor </p>
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00104">104</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00114">114</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +384,7 @@ template&lt;typename InIndexIterator , typename InReadIterator , typename InQual
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a>&lt; InIndexIterator, InReadIterator, InQualIterator, InNameIterator &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a>&lt; InIndexIterator, InReadIterator, InQualIterator, InNameIterator &gt; &amp;&#160;</td>
           <td class="paramname"><em>in</em>)</td><td></td>
           <td></td>
         </tr>
@@ -357,7 +397,7 @@ template&lt;typename InIndexIterator , typename InReadIterator , typename InQual
 </div><div class="memdoc">
 <p>copy constructor </p>
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00122">122</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00132">132</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +425,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00156">156</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00168">168</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +452,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00151">151</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00163">163</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +468,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> uint2 <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::get_range </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -440,7 +480,36 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00157">157</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00169">169</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a53017f17fee65f63b2a486562bb5a7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator, typename NameIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a16a695fba3c4eea5a49d8d6de7e115c2">read_string</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::get_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramname"><em>i</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return the i-th read as a string </p>
+
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00173">173</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +536,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00154">154</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00166">166</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -494,7 +563,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00155">155</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00167">167</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -521,7 +590,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00145">145</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00157">157</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -548,7 +617,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00144">144</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00156">156</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -575,7 +644,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00153">153</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00165">165</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -602,7 +671,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00148">148</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00160">160</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -629,7 +698,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00147">147</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00159">159</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -656,7 +725,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00146">146</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00158">158</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -684,7 +753,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00150">150</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00162">162</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -711,7 +780,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00152">152</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00164">164</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +795,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::HI_BITS = false</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::HI_BITS = false</td>
         </tr>
       </table>
   </td>
@@ -736,7 +805,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00140">140</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00150">150</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -752,7 +821,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00187">187</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00208">208</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -768,7 +837,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00186">186</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00207">207</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -784,7 +853,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00185">185</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00206">206</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -800,7 +869,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00161">161</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00182">182</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +885,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00168">168</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00189">189</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -832,7 +901,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00164">164</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00185">185</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -848,7 +917,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00166">166</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00187">187</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +933,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00182">182</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00203">203</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +949,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00178">178</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00199">199</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +965,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00172">172</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00193">193</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -912,7 +981,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00174">174</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00195">195</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -928,7 +997,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00176">176</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00197">197</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -942,7 +1011,7 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::READ_BITS = 4</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView</a>&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;::READ_BITS = 4</td>
         </tr>
       </table>
   </td>
@@ -952,17 +1021,17 @@ template&lt;typename IndexIterator, typename ReadIterator, typename QualIterator
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00138">138</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00148">148</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/io/reads/<a class="el" href="reads_8h_source.html">reads.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/reads/<a class="el" href="reads_8h_source.html">reads.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

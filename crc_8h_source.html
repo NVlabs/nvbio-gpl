@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/contrib/crc/crc.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/contrib/crc/crc.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -218,12 +218,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="crc_8h.html#ade449deef700bc9a133f3d169f10e806">crc</a>            remainder = <a class="code" href="crc_8h.html#acce5b79e1a8ad8ffe40fb9f7d63b2fdc">INITIAL_REMAINDER</a>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>  data;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>   byte;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>   <a class="code" href="namespacemgpu.html#ac99c40ce366b7691580b1962169679b5">byte</a>;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">     * Divide the message by the polynomial, a byte at a time.</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">for</span> (byte = 0; byte &lt; nBytes; ++byte)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">for</span> (byte = 0; byte &lt; nBytes; ++<a class="code" href="namespacemgpu.html#ac99c40ce366b7691580b1962169679b5">byte</a>)</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        data = <a class="code" href="crc_8cpp.html#ac5944d40ab44731450a57acd7f027f6a">REFLECT_DATA</a>(message[byte]) ^ (remainder &gt;&gt; (<a class="code" href="crc_8h.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a> - 8));</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                remainder = <a class="code" href="crc_8cpp.html#aa0b98c402a809d26602bb9a693083720">crcTable</a>[data] ^ (remainder &lt;&lt; 8);</div>
@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:08:55 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

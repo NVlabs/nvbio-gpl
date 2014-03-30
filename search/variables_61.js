@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['a',['../structnvbio_1_1priv_1_1add__divide__functor.html#a298090b8d6d8e3242334828c20c9f537',1,'nvbio::priv::add_divide_functor']]],
   ['active',['active',['../group___work_queue_detail.html#ga7c6f0457212ffc4b696a01d5858485b6',1,'nvbio::cuda::wq']]],
   ['active_5flanes',['active_lanes',['../structnvbio_1_1cuda_1_1_work_queue_stats_view.html#a67facb3098cc1bb664ff5c46a66d972c',1,'nvbio::cuda::WorkQueueStatsView']]],
   ['active_5freads',['active_reads',['../structnvbio_1_1bowtie2_1_1cuda_1_1_scoring_queues.html#aef7ae9872c5073312f2270b71d751ea6',1,'nvbio::bowtie2::cuda::ScoringQueues::active_reads()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_scoring_queues_device_view.html#afc99995e13c1796681f270483e837f74',1,'nvbio::bowtie2::cuda::ScoringQueuesDeviceView::active_reads()']]],
@@ -15,7 +16,6 @@ var searchData=
   ['alignments_5fdtoh_5fcount',['alignments_DtoH_count',['../structnvbio_1_1io_1_1_i_o_stats.html#a53ae95257cf50933b00ee96f4785b393',1,'nvbio::io::IOStats']]],
   ['alignments_5fdtoh_5ftime',['alignments_DtoH_time',['../structnvbio_1_1io_1_1_i_o_stats.html#a01c7e2252490c1b70b5ec86fff3a5261',1,'nvbio::io::IOStats']]],
   ['alignmentsbeginoffset',['AlignmentsBeginOffset',['../struct_bam_reader_1_1_bam_reader_private.html#ae2d1d74b7fe9af60915b1d24f507ae9b',1,'BamReader::BamReaderPrivate']]],
-  ['all',['all',['../structcm_c_a_p_i.html#a73c23f717c8901a0af45fc722b78f042',1,'cmCAPI']]],
   ['allow_5fsub',['allow_sub',['../structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html#ab576b470a2a0d5761731fc2d48c8d669',1,'nvbio::bowtie2::cuda::ParamsPOD']]],
   ['aln',['aln',['../structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469',1,'nvbio::aln::TestBacktracker']]],
   ['alphabet_5fsize',['ALPHABET_SIZE',['../structnvbio_1_1_packed_stream.html#aff2b369a7050cd3d62d46a0e8f7ded90',1,'nvbio::PackedStream::ALPHABET_SIZE()'],['../structnvbio_1_1_sorted_dictionary_suffix_trie.html#aa8747b12a2c2218464857e7ffc227e14',1,'nvbio::SortedDictionarySuffixTrie::ALPHABET_SIZE()'],['../structnvbio_1_1_suffix_trie.html#a8f0653343e18cd8b2a30ed8f0a021dbb',1,'nvbio::SuffixTrie::ALPHABET_SIZE()']]],
@@ -32,10 +32,6 @@ var searchData=
   ['anns',['anns',['../structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html#ae79ba681c7eab48fc534c99a31dda701',1,'nvbio::io::BNTSeqPOD::anns()'],['../structnvbio_1_1io_1_1_b_n_t_seq_vec.html#a07bfcce69c0ec00b7e33e16472e9102b',1,'nvbio::io::BNTSeqVec::anns()']]],
   ['anns_5fdata',['anns_data',['../structnvbio_1_1_b_n_t_seq.html#a8532e364e28f0640f417a8debcd30077',1,'nvbio::BNTSeq']]],
   ['anns_5finfo',['anns_info',['../structnvbio_1_1_b_n_t_seq.html#a67d8349fb84216d0f16d316531da9a1b',1,'nvbio::BNTSeq']]],
-  ['argc',['argc',['../structcm_c_a_p_i.html#a968204bf6f43f5fd1c0717d8955b0df8',1,'cmCAPI']]],
-  ['args',['args',['../structcm_c_a_p_i.html#ae321493ddc2ea9cdd19ccbc9ba6df278',1,'cmCAPI::args()'],['../structcm_c_a_p_i.html#ab4f81ad2f6e722973dc5884241217c77',1,'cmCAPI::args()']]],
-  ['arguments',['arguments',['../structcm_c_a_p_i.html#a7edb82d99a56e67fd204fbdc5c50c600',1,'cmCAPI']]],
-  ['argv',['argv',['../structcm_c_a_p_i.html#a30eaeb4a3669ab5f8af4ad055208a4a3',1,'cmCAPI::argv()'],['../structcm_c_a_p_i.html#a2f7f59467aa51dfece90cb739d5bfc00',1,'cmCAPI::argv()']]],
   ['array',['array',['../structnvbio_1_1io_1_1_device_cigar_array.html#ac8a2ad37e3a49d1abcc1188df86b69d2',1,'nvbio::io::DeviceCigarArray::array()'],['../structnvbio_1_1io_1_1_host_cigar_array.html#ad5d711c14c612ec41b616f7214b67399',1,'nvbio::io::HostCigarArray::array()']]],
   ['asserts',['asserts',['../structnvbio_1_1bowtie2_1_1cuda_1_1_debug_state.html#af3cb1d92242a38add382959e2cfc6a20',1,'nvbio::bowtie2::cuda::DebugState']]],
   ['avail_5fin',['avail_in',['../structz__stream__s.html#a0cf177f50dbb49692f27480cbcfde794',1,'z_stream_s']]],

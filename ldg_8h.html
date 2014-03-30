@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/basic/cuda/ldg.h File Reference</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/basic/cuda/ldg.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ldg.h File Reference</div>  </div>
@@ -112,26 +113,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1load__pointer.html">nvbio::cuda::load_pointer&lt; T, MOD &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacenvbio_1_1cuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html">nvbio::cuda</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a9ac038e00e61f30782ed8fa5a2c14e2e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2e">nvbio::cuda::CacheLoadModifier</a> { <br/>
+&#160;&#160;<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2ea594ec838a69618b750285e92bd572873">nvbio::cuda::LOAD_DEFAULT</a>, 
+<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2ea83a4acb12405a2433134ab3c37188771">nvbio::cuda::LOAD_CA</a>, 
+<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2eafb6aae358a01a95690118f79394c1d49">nvbio::cuda::LOAD_CG</a>, 
+<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2ea3e670f2aee83cf1d9d8d6d03cbbba2b4">nvbio::cuda::LOAD_CS</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2eaac1b1476ccc7f67fe27af51acbf96f0c">nvbio::cuda::LOAD_CV</a>, 
+<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2eaa04d37ac55de06129f79817e8c973818">nvbio::cuda::LOAD_LDG</a>, 
+<a class="el" href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2eab35b8ab5bdf1a59a5a4cb503a6c65726">nvbio::cuda::LOAD_VOLATILE</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a9ac038e00e61f30782ed8fa5a2c14e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of cache modifiers for memory load operations.  <a href="namespacenvbio_1_1cuda.html#a9ac038e00e61f30782ed8fa5a2c14e2e">More...</a><br/></td></tr>
+<tr class="separator:a9ac038e00e61f30782ed8fa5a2c14e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae9e41ef9baa3b2604595f00ef37b852d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae9e41ef9baa3b2604595f00ef37b852d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> ldg_pointer<br class="typebreak"/>
-&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#ae9e41ef9baa3b2604595f00ef37b852d">nvbio::cuda::make_ldg_pointer</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *it)</td></tr>
+&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#ae9e41ef9baa3b2604595f00ef37b852d">nvbio::cuda::make_ldg_pointer</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *it)</td></tr>
 <tr class="separator:ae9e41ef9baa3b2604595f00ef37b852d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141ccec56be7e1ce45bec51151e8f8ae"><td class="memTemplParams" colspan="2">template&lt;CacheLoadModifier MOD, typename T &gt; </td></tr>
+<tr class="memitem:a141ccec56be7e1ce45bec51151e8f8ae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> load_pointer<br class="typebreak"/>
+&lt; T, <a class="el" href="adler32_8c.html#aa1e26f19f1e6cf348e41511e7db90881">MOD</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a141ccec56be7e1ce45bec51151e8f8ae">nvbio::cuda::make_load_pointer</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *it)</td></tr>
+<tr class="separator:a141ccec56be7e1ce45bec51151e8f8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:19 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

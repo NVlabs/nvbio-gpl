@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p>Basic FM-index interface.</p>
 <p>This class holds pointers to data that is typically going to be allocated/loaded/deallocated by inheriting classes. The idea is that accessing this basic information is fast and requires no virtual function calls. </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00113">113</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00111">111</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="fmi_8h_source.html">fmi.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -127,7 +127,7 @@ Inheritance diagram for nvbio::io::FMIndexData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7bd9ce74ef42f0c36e9d20ef9bc95e3e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
+<tr class="memitem:a7bd9ce74ef42f0c36e9d20ef9bc95e3e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
 <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *, <a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, 2, true &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a7bd9ce74ef42f0c36e9d20ef9bc95e3e">stream_type</a></td></tr>
 <tr class="separator:a7bd9ce74ef42f0c36e9d20ef9bc95e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e07953b2ca11483a271f091584c815"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <br class="typebreak"/>
@@ -138,12 +138,22 @@ Public Types</h2></td></tr>
 <tr class="separator:a00aa5c7dc14a490e8de22d596259a3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134990b4e97903ddd82d7d43ddbe0fa3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html#a1f816a4e0573c119a0473c8d903a3e2b">SSA_type::context_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a134990b4e97903ddd82d7d43ddbe0fa3">SSA_context</a></td></tr>
 <tr class="separator:a134990b4e97903ddd82d7d43ddbe0fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8209b2dbb5bf5483225b9a4eff52427"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1rank__dictionary.html">rank_dictionary</a>&lt; 2u, OCC_INT, stream_type, const uint32 *, const uint32 * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae8209b2dbb5bf5483225b9a4eff52427">rank_dict_type</a></td></tr>
-<tr class="separator:ae8209b2dbb5bf5483225b9a4eff52427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3910756a869385b285cf7846e012356"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae8209b2dbb5bf5483225b9a4eff52427">rank_dict_type</a>, <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html#a1f816a4e0573c119a0473c8d903a3e2b">SSA_type::context_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae3910756a869385b285cf7846e012356">fm_index_type</a></td></tr>
-<tr class="separator:ae3910756a869385b285cf7846e012356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6887224ade29e53003c17ad17c6a39e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">occ_type</a></td></tr>
+<tr class="separator:ac6887224ade29e53003c17ad17c6a39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a606cb65ec965c4e7e0c7215c75c97"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">bwt_type</a></td></tr>
+<tr class="separator:af9a606cb65ec965c4e7e0c7215c75c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b275fd68d4fe07af2a64cb142373f3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">count_table_type</a></td></tr>
+<tr class="separator:a79b275fd68d4fe07af2a64cb142373f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcb072dafa4458025d110a78c64659d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a134990b4e97903ddd82d7d43ddbe0fa3">SSA_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a></td></tr>
+<tr class="separator:adfcb072dafa4458025d110a78c64659d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8991c7db8d93122c1d8eaccd92c054"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1rank__dictionary.html">rank_dictionary</a>&lt; 2u, OCC_INT, stream_type, occ_type, count_table_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a></td></tr>
+<tr class="separator:afe8991c7db8d93122c1d8eaccd92c054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48c041bd6bedf2ee927ae7e9d477f46"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">fm_index_type</a></td></tr>
+<tr class="separator:af48c041bd6bedf2ee927ae7e9d477f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d175145f571ca8647b5ed3cabde36f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>, <a class="el" href="structnvbio_1_1null__type.html">null_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">partial_fm_index_type</a></td></tr>
+<tr class="separator:a02d175145f571ca8647b5ed3cabde36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
@@ -153,36 +163,62 @@ Public Methods</h2></td></tr>
 <tr class="memitem:ac6eafac18e605f4394e5921e068cf7a4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6eafac18e605f4394e5921e068cf7a4">~FMIndexData</a> ()</td></tr>
 <tr class="memdesc:ac6eafac18e605f4394e5921e068cf7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual destructor  <a href="#ac6eafac18e605f4394e5921e068cf7a4">More...</a><br/></td></tr>
 <tr class="separator:ac6eafac18e605f4394e5921e068cf7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a666ab3966981954b6563e38233077394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a666ab3966981954b6563e38233077394">flags</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a666ab3966981954b6563e38233077394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a666ab3966981954b6563e38233077394">flags</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:a666ab3966981954b6563e38233077394"><td class="mdescLeft">&#160;</td><td class="mdescRight">return loading flags  <a href="#a666ab3966981954b6563e38233077394">More...</a><br/></td></tr>
 <tr class="separator:a666ab3966981954b6563e38233077394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2845a857eda3d2b5160b6bbe8b16f7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac2845a857eda3d2b5160b6bbe8b16f7d">genome_length</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:ac2845a857eda3d2b5160b6bbe8b16f7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac2845a857eda3d2b5160b6bbe8b16f7d">genome_length</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:ac2845a857eda3d2b5160b6bbe8b16f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return genome length  <a href="#ac2845a857eda3d2b5160b6bbe8b16f7d">More...</a><br/></td></tr>
 <tr class="separator:ac2845a857eda3d2b5160b6bbe8b16f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a991967e13761dd3cd6fb1dc10c6f4fbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a991967e13761dd3cd6fb1dc10c6f4fbd">has_genome</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a991967e13761dd3cd6fb1dc10c6f4fbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a991967e13761dd3cd6fb1dc10c6f4fbd">has_genome</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:a991967e13761dd3cd6fb1dc10c6f4fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the genome is present  <a href="#a991967e13761dd3cd6fb1dc10c6f4fbd">More...</a><br/></td></tr>
 <tr class="separator:a991967e13761dd3cd6fb1dc10c6f4fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6998ac27d0134df6bc6222535182974"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ab6998ac27d0134df6bc6222535182974">has_ssa</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:ab6998ac27d0134df6bc6222535182974"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ab6998ac27d0134df6bc6222535182974">has_ssa</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:ab6998ac27d0134df6bc6222535182974"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the sampled suffix array is present  <a href="#ab6998ac27d0134df6bc6222535182974">More...</a><br/></td></tr>
 <tr class="separator:ab6998ac27d0134df6bc6222535182974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42bff528468a1cce3f4e165cd05f4ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae42bff528468a1cce3f4e165cd05f4ed">has_rssa</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:ae42bff528468a1cce3f4e165cd05f4ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae42bff528468a1cce3f4e165cd05f4ed">has_rssa</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:ae42bff528468a1cce3f4e165cd05f4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the reverse sampled suffix array is present  <a href="#ae42bff528468a1cce3f4e165cd05f4ed">More...</a><br/></td></tr>
 <tr class="separator:ae42bff528468a1cce3f4e165cd05f4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fda876edd01dc795e0cc6c0b489e302"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a8fda876edd01dc795e0cc6c0b489e302">genome_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a8fda876edd01dc795e0cc6c0b489e302"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a8fda876edd01dc795e0cc6c0b489e302">genome_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:a8fda876edd01dc795e0cc6c0b489e302"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the genome stream  <a href="#a8fda876edd01dc795e0cc6c0b489e302">More...</a><br/></td></tr>
 <tr class="separator:a8fda876edd01dc795e0cc6c0b489e302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb95fe7017b7bd2082cd77dfc4cd5e87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aeb95fe7017b7bd2082cd77dfc4cd5e87">bwt_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:aeb95fe7017b7bd2082cd77dfc4cd5e87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aeb95fe7017b7bd2082cd77dfc4cd5e87">bwt_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:aeb95fe7017b7bd2082cd77dfc4cd5e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the BWT stream  <a href="#aeb95fe7017b7bd2082cd77dfc4cd5e87">More...</a><br/></td></tr>
 <tr class="separator:aeb95fe7017b7bd2082cd77dfc4cd5e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac74118de77762289e16872cde6c8bce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac74118de77762289e16872cde6c8bce1">rbwt_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:ac74118de77762289e16872cde6c8bce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac74118de77762289e16872cde6c8bce1">rbwt_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:ac74118de77762289e16872cde6c8bce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the reverse BWT stream  <a href="#ac74118de77762289e16872cde6c8bce1">More...</a><br/></td></tr>
 <tr class="separator:ac74118de77762289e16872cde6c8bce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba799090816555292d068fb712a4b0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aba799090816555292d068fb712a4b0c1">occ_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:aba799090816555292d068fb712a4b0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aba799090816555292d068fb712a4b0c1">occ_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:aba799090816555292d068fb712a4b0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the occurrence table  <a href="#aba799090816555292d068fb712a4b0c1">More...</a><br/></td></tr>
 <tr class="separator:aba799090816555292d068fb712a4b0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0e172fb3d0be0cf67d46c8ba85312c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a0d0e172fb3d0be0cf67d46c8ba85312c">rocc_stream</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a0d0e172fb3d0be0cf67d46c8ba85312c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a0d0e172fb3d0be0cf67d46c8ba85312c">rocc_stream</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="memdesc:a0d0e172fb3d0be0cf67d46c8ba85312c"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the reverse occurrence table  <a href="#a0d0e172fb3d0be0cf67d46c8ba85312c">More...</a><br/></td></tr>
 <tr class="separator:a0d0e172fb3d0be0cf67d46c8ba85312c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ad949f24a3525c2871b52f01a5c885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">occ_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ab1ad949f24a3525c2871b52f01a5c885">occ_iterator</a> ()</td></tr>
+<tr class="separator:ab1ad949f24a3525c2871b52f01a5c885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec19cba094c751052f56c5bb492c66e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">occ_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aec19cba094c751052f56c5bb492c66e1">rocc_iterator</a> ()</td></tr>
+<tr class="separator:aec19cba094c751052f56c5bb492c66e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9edc84524e7913ba0a1822d1031c11bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">bwt_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a9edc84524e7913ba0a1822d1031c11bd">bwt_iterator</a> ()</td></tr>
+<tr class="separator:a9edc84524e7913ba0a1822d1031c11bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af644c47a77152507bbf72cafd079a914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">bwt_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af644c47a77152507bbf72cafd079a914">rbwt_iterator</a> ()</td></tr>
+<tr class="separator:af644c47a77152507bbf72cafd079a914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83bc887b242e1d2d9f4ff99948364c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae83bc887b242e1d2d9f4ff99948364c1">ssa_iterator</a> ()</td></tr>
+<tr class="separator:ae83bc887b242e1d2d9f4ff99948364c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c2477794ef2732139f7e837f7b7b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac5c2477794ef2732139f7e837f7b7b95">rssa_iterator</a> ()</td></tr>
+<tr class="separator:ac5c2477794ef2732139f7e837f7b7b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030f256dde8287c1c6fb4a0989f334fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">count_table_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a030f256dde8287c1c6fb4a0989f334fa">count_table_iterator</a> ()</td></tr>
+<tr class="separator:a030f256dde8287c1c6fb4a0989f334fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bd7c1eba373701835c1b9323a292eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a95bd7c1eba373701835c1b9323a292eb">rank_dict</a> ()</td></tr>
+<tr class="separator:a95bd7c1eba373701835c1b9323a292eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6264d7d5edaf538496a05dcef8de039c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a6264d7d5edaf538496a05dcef8de039c">rrank_dict</a> ()</td></tr>
+<tr class="separator:a6264d7d5edaf538496a05dcef8de039c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4641b6ffec18743ac285e4c06de9aef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">fm_index_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af4641b6ffec18743ac285e4c06de9aef">index</a> ()</td></tr>
+<tr class="separator:af4641b6ffec18743ac285e4c06de9aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abee0a7fe34a841e5ab466ac506e49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">fm_index_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a3abee0a7fe34a841e5ab466ac506e49d">rindex</a> ()</td></tr>
+<tr class="separator:a3abee0a7fe34a841e5ab466ac506e49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126338e5d58cccb029a1b6aaedeb3899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">partial_fm_index_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a126338e5d58cccb029a1b6aaedeb3899">partial_index</a> ()</td></tr>
+<tr class="separator:a126338e5d58cccb029a1b6aaedeb3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ffe78746cf01fd6911cfe281ea1aec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">partial_fm_index_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a1ffe78746cf01fd6911cfe281ea1aec1">rpartial_index</a> ()</td></tr>
+<tr class="separator:a1ffe78746cf01fd6911cfe281ea1aec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
@@ -227,33 +263,61 @@ Public Members</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Members</h2></td></tr>
-<tr class="memitem:a9c2eb39cb96801944e24d66f7607f4f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a9c2eb39cb96801944e24d66f7607f4f9">GENOME</a> = 0x01</td></tr>
+<tr class="memitem:a9c2eb39cb96801944e24d66f7607f4f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a9c2eb39cb96801944e24d66f7607f4f9">GENOME</a> = 0x01</td></tr>
 <tr class="separator:a9c2eb39cb96801944e24d66f7607f4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5d833d3142569e7acc27aec066223fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ad5d833d3142569e7acc27aec066223fd">FORWARD</a> = 0x02</td></tr>
+<tr class="memitem:ad5d833d3142569e7acc27aec066223fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ad5d833d3142569e7acc27aec066223fd">FORWARD</a> = 0x02</td></tr>
 <tr class="separator:ad5d833d3142569e7acc27aec066223fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d7cb09437254168c2f8cfc0cbdeeeff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a8d7cb09437254168c2f8cfc0cbdeeeff">REVERSE</a> = 0x04</td></tr>
+<tr class="memitem:a8d7cb09437254168c2f8cfc0cbdeeeff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a8d7cb09437254168c2f8cfc0cbdeeeff">REVERSE</a> = 0x04</td></tr>
 <tr class="separator:a8d7cb09437254168c2f8cfc0cbdeeeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eba1e54a5d09f7759995808e1204f0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a6eba1e54a5d09f7759995808e1204f0e">SA</a> = 0x10</td></tr>
+<tr class="memitem:a6eba1e54a5d09f7759995808e1204f0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a6eba1e54a5d09f7759995808e1204f0e">SA</a> = 0x10</td></tr>
 <tr class="separator:a6eba1e54a5d09f7759995808e1204f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba52b759eb64b9b8452d04f8224ca14f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aba52b759eb64b9b8452d04f8224ca14f">READ_BITS</a> = 4</td></tr>
+<tr class="memitem:aba52b759eb64b9b8452d04f8224ca14f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aba52b759eb64b9b8452d04f8224ca14f">READ_BITS</a> = 4</td></tr>
 <tr class="separator:aba52b759eb64b9b8452d04f8224ca14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75196ad06e3ebef88bc0955a2b48630"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ad75196ad06e3ebef88bc0955a2b48630">OCC_INT</a> = 64</td></tr>
+<tr class="memitem:ad75196ad06e3ebef88bc0955a2b48630"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ad75196ad06e3ebef88bc0955a2b48630">OCC_INT</a> = 64</td></tr>
 <tr class="separator:ad75196ad06e3ebef88bc0955a2b48630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbeccf96eba1400916e316b787e50357"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#abbeccf96eba1400916e316b787e50357">SA_INT</a> = 16</td></tr>
+<tr class="memitem:abbeccf96eba1400916e316b787e50357"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#abbeccf96eba1400916e316b787e50357">SA_INT</a> = 16</td></tr>
 <tr class="separator:abbeccf96eba1400916e316b787e50357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="ae3910756a869385b285cf7846e012356"></a>
+<a class="anchor" id="af9a606cb65ec965c4e7e0c7215c75c97"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a>&lt;<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae8209b2dbb5bf5483225b9a4eff52427">rank_dict_type</a>, <a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html#a1f816a4e0573c119a0473c8d903a3e2b">SSA_type::context_type</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ae3910756a869385b285cf7846e012356">nvbio::io::FMIndexData::fm_index_type</a></td>
+          <td class="memname">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">nvbio::io::FMIndexData::bwt_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00131">131</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00129">129</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79b275fd68d4fe07af2a64cb142373f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">nvbio::io::FMIndexData::count_table_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00130">130</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af48c041bd6bedf2ee927ae7e9d477f46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a>&lt;<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">nvbio::io::FMIndexData::fm_index_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00134">134</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -267,21 +331,49 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00125">125</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00123">123</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae8209b2dbb5bf5483225b9a4eff52427"></a>
+<a class="anchor" id="ac6887224ade29e53003c17ad17c6a39e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1rank__dictionary.html">rank_dictionary</a>&lt;2u,OCC_INT,stream_type,const uint32*,const uint32*&gt; nvbio::io::FMIndexData::rank_dict_type</td>
+          <td class="memname">typedef <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">nvbio::io::FMIndexData::occ_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00130">130</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00128">128</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02d175145f571ca8647b5ed3cabde36f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a>&lt;<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a>, <a class="el" href="structnvbio_1_1null__type.html">null_type</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">nvbio::io::FMIndexData::partial_fm_index_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00135">135</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe8991c7db8d93122c1d8eaccd92c054"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1rank__dictionary.html">rank_dictionary</a>&lt;2u,OCC_INT,stream_type,occ_type,count_table_type&gt; nvbio::io::FMIndexData::rank_dict_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00133">133</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +387,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00128">128</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00126">126</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -309,7 +401,21 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00127">127</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00125">125</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfcb072dafa4458025d110a78c64659d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a134990b4e97903ddd82d7d43ddbe0fa3">SSA_context</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">nvbio::io::FMIndexData::ssa_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00131">131</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -318,12 +424,12 @@ Static Public Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,2,true&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a7bd9ce74ef42f0c36e9d20ef9bc95e3e">nvbio::io::FMIndexData::stream_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,2,true&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a7bd9ce74ef42f0c36e9d20ef9bc95e3e">nvbio::io::FMIndexData::stream_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00124">124</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00122">122</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -368,11 +474,36 @@ Static Public Members</h2></td></tr>
 
 <p>virtual destructor </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00134">134</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00138">138</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9edc84524e7913ba0a1822d1031c11bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">bwt_type</a> nvbio::io::FMIndexData::bwt_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00156">156</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aeb95fe7017b7bd2082cd77dfc4cd5e87"></a>
 <div class="memitem">
 <div class="memproto">
@@ -381,7 +512,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::bwt_stream </td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::bwt_stream </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -396,7 +527,32 @@ Static Public Members</h2></td></tr>
 
 <p>return the BWT stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00142">142</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00146">146</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a030f256dde8287c1c6fb4a0989f334fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">count_table_type</a> nvbio::io::FMIndexData::count_table_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00162">162</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -423,7 +579,7 @@ Static Public Members</h2></td></tr>
 
 <p>return loading flags </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00136">136</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00140">140</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +606,7 @@ Static Public Members</h2></td></tr>
 
 <p>return genome length </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00137">137</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00141">141</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -462,7 +618,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::genome_stream </td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::genome_stream </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -477,7 +633,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the genome stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00141">141</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00145">145</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +660,7 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the genome is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00138">138</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00142">142</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -531,7 +687,7 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the reverse sampled suffix array is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00140">140</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00144">144</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +714,57 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the sampled suffix array is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00139">139</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00143">143</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af4641b6ffec18743ac285e4c06de9aef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">fm_index_type</a> nvbio::io::FMIndexData::index </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00167">167</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1ad949f24a3525c2871b52f01a5c885"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">occ_type</a> nvbio::io::FMIndexData::occ_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00153">153</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -570,7 +776,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::occ_stream </td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::occ_stream </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -585,7 +791,82 @@ Static Public Members</h2></td></tr>
 
 <p>return the occurrence table </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00144">144</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00148">148</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a126338e5d58cccb029a1b6aaedeb3899"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">partial_fm_index_type</a> nvbio::io::FMIndexData::partial_index </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00170">170</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95bd7c1eba373701835c1b9323a292eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a> nvbio::io::FMIndexData::rank_dict </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00164">164</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af644c47a77152507bbf72cafd079a914"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af9a606cb65ec965c4e7e0c7215c75c97">bwt_type</a> nvbio::io::FMIndexData::rbwt_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00157">157</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -597,7 +878,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rbwt_stream </td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rbwt_stream </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -612,7 +893,57 @@ Static Public Members</h2></td></tr>
 
 <p>return the reverse BWT stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00143">143</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00147">147</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3abee0a7fe34a841e5ab466ac506e49d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af48c041bd6bedf2ee927ae7e9d477f46">fm_index_type</a> nvbio::io::FMIndexData::rindex </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00168">168</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec19cba094c751052f56c5bb492c66e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e">occ_type</a> nvbio::io::FMIndexData::rocc_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00154">154</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -624,7 +955,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rocc_stream </td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rocc_stream </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -639,7 +970,107 @@ Static Public Members</h2></td></tr>
 
 <p>return the reverse occurrence table </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00145">145</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00149">149</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ffe78746cf01fd6911cfe281ea1aec1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a02d175145f571ca8647b5ed3cabde36f">partial_fm_index_type</a> nvbio::io::FMIndexData::rpartial_index </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00171">171</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6264d7d5edaf538496a05dcef8de039c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#afe8991c7db8d93122c1d8eaccd92c054">rank_dict_type</a> nvbio::io::FMIndexData::rrank_dict </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00165">165</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5c2477794ef2732139f7e837f7b7b95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a> nvbio::io::FMIndexData::rssa_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00160">160</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae83bc887b242e1d2d9f4ff99948364c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adfcb072dafa4458025d110a78c64659d">ssa_type</a> nvbio::io::FMIndexData::ssa_iterator </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00159">159</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -654,7 +1085,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00161">161</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00188">188</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -666,7 +1097,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::FORWARD = 0x02</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::FORWARD = 0x02</td>
         </tr>
       </table>
   </td>
@@ -676,7 +1107,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00116">116</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00114">114</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -688,7 +1119,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::GENOME = 0x01</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::GENOME = 0x01</td>
         </tr>
       </table>
   </td>
@@ -698,7 +1129,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00115">115</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00113">113</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -712,7 +1143,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00159">159</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00186">186</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +1157,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00166">166</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00193">193</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -740,7 +1171,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00165">165</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00192">192</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -754,7 +1185,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00155">155</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00182">182</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -768,7 +1199,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00147">147</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00174">174</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +1213,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00154">154</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00181">181</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +1227,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00157">157</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00184">184</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -810,7 +1241,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00156">156</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00183">183</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -824,7 +1255,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00158">158</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00185">185</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +1267,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::OCC_INT = 64</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::OCC_INT = 64</td>
         </tr>
       </table>
   </td>
@@ -846,7 +1277,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00121">121</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00119">119</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -860,7 +1291,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00150">150</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00177">177</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -874,7 +1305,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00152">152</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00179">179</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -886,93 +1317,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::READ_BITS = 4</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00120">120</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8d7cb09437254168c2f8cfc0cbdeeeff"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::REVERSE = 0x04</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00117">117</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3982c4da550d7c07d87d3fc2b345c61f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rL2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00160">160</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abadce99c7bd170de0898f8b32a5466d6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::rprimary</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00153">153</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae8d9ed0c07803114a7f1e0f67110c536"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a134990b4e97903ddd82d7d43ddbe0fa3">SSA_context</a> nvbio::io::FMIndexData::rssa</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00163">163</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6eba1e54a5d09f7759995808e1204f0e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::SA = 0x10</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::READ_BITS = 4</td>
         </tr>
       </table>
   </td>
@@ -986,7 +1331,7 @@ Static Public Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abbeccf96eba1400916e316b787e50357"></a>
+<a class="anchor" id="a8d7cb09437254168c2f8cfc0cbdeeeff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -994,7 +1339,7 @@ Static Public Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::SA_INT = 16</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::REVERSE = 0x04</td>
         </tr>
       </table>
   </td>
@@ -1004,7 +1349,93 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00122">122</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00115">115</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3982c4da550d7c07d87d3fc2b345c61f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* nvbio::io::FMIndexData::rL2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00187">187</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abadce99c7bd170de0898f8b32a5466d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::rprimary</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00180">180</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8d9ed0c07803114a7f1e0f67110c536"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a134990b4e97903ddd82d7d43ddbe0fa3">SSA_context</a> nvbio::io::FMIndexData::rssa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00190">190</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eba1e54a5d09f7759995808e1204f0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::SA = 0x10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00116">116</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbeccf96eba1400916e316b787e50357"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::SA_INT = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00120">120</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1018,7 +1449,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00151">151</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00178">178</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1463,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00148">148</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00175">175</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1477,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00149">149</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00176">176</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1060,17 +1491,17 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00162">162</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00189">189</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/io/<a class="el" href="fmi_8h_source.html">fmi.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/<a class="el" href="fmi_8h_source.html">fmi.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:54 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

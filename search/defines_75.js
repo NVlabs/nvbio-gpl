@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unlikely',['UNLIKELY',['../cpu_8cpp.html#ab10d0a221f4d7a706701b806c8135fd7',1,'cpu.cpp']]],
   ['update',['UPDATE',['../inflate_8c.html#a5eea7ffd1fff4fbea834bcb292d1bea2',1,'inflate.c']]],
   ['update_5fbudget',['UPDATE_BUDGET',['../divsufsortxx_8h.html#add75bad0a00bf44ca9b34e7e3637203b',1,'divsufsortxx.h']]],
   ['update_5fhash',['UPDATE_HASH',['../deflate_8c.html#a44b283365d6ca10b7028e639c4a10e67',1,'deflate.c']]],

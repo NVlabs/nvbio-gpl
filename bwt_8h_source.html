@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/fmindex/bwt.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/fmindex/bwt.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="bwt_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> StreamIterator&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="namespacenvbio.html#aed1bbc78d4f7f134a8b09c89bb1763aa">   43</a></span>&#160;<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio.html#aed1bbc78d4f7f134a8b09c89bb1763aa">gen_bwt_from_sa</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>* SA, StreamIterator bwt)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="namespacenvbio.html#aed1bbc78d4f7f134a8b09c89bb1763aa">   43</a></span>&#160;<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio.html#aed1bbc78d4f7f134a8b09c89bb1763aa">gen_bwt_from_sa</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>* SA, StreamIterator <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, primary = 0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
@@ -150,13 +150,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> StreamIterator&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">   59</a></span>&#160;<a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">gen_bwt</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>* buffer, StreamIterator bwt)</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">   59</a></span>&#160;<a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">gen_bwt</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>* buffer, StreamIterator <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> saisxx_bwt( T, bwt, buffer, <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a>(n), 4 );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> StreamIterator&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="namespacenvbio.html#af57f092274cc49fa4ba9d58c0c98c9fe">   67</a></span>&#160;<a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a> <a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">gen_bwt</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a>* buffer, StreamIterator bwt)</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="namespacenvbio.html#af57f092274cc49fa4ba9d58c0c98c9fe">   67</a></span>&#160;<a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a> <a class="code" href="namespacenvbio.html#a6548ae1e6cfedade45985d29b3c1f336">gen_bwt</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n, <span class="keyword">const</span> StreamIterator T, <a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a>* buffer, StreamIterator <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> saisxx_bwt( T, bwt, buffer, <a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a>(n), <a class="code" href="namespacenvbio.html#a5c3c265ba689b90891cf49a3aa2ac246">int64</a>(4) );</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:13 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:01 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

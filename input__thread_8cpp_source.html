@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/input_thread.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/input_thread.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="input__thread_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="structnvbio_1_1_timer.html">Timer</a> timer;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        timer.<a class="code" href="structnvbio_1_1_timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#aaa5bb645905522bd57598be9d39c1aba">m_read_data_stream</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a4a96ba0cc66d4442b6b1c86c4be24b9d">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#a4646cee68d96f1dc923c4c342ca40451">m_batch_size</a> );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#aaa5bb645905522bd57598be9d39c1aba">m_read_data_stream</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#af902b42959698e1bc57e340e7943affd">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#a4646cee68d96f1dc923c4c342ca40451">m_batch_size</a> );</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        timer.<a class="code" href="structnvbio_1_1_timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -181,8 +181,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="structnvbio_1_1_timer.html">Timer</a> timer;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        timer.<a class="code" href="structnvbio_1_1_timer.html#a81f4a384879cf65815000b582e465a65" title="start timing ">start</a>();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data1 = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#addcd9e9da15840303b1c718c71d30d96">m_read_data_stream1</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a4a96ba0cc66d4442b6b1c86c4be24b9d">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a39d4cb2c2e126c4a7aa46023af9c9494">m_batch_size</a> );</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data2 = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a4bef82f9f9aeb5fef8aae61f40e483e3">m_read_data_stream2</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a4a96ba0cc66d4442b6b1c86c4be24b9d">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a39d4cb2c2e126c4a7aa46023af9c9494">m_batch_size</a> );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data1 = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#addcd9e9da15840303b1c718c71d30d96">m_read_data_stream1</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#af902b42959698e1bc57e340e7943affd">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a39d4cb2c2e126c4a7aa46023af9c9494">m_batch_size</a> );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* data2 = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a4bef82f9f9aeb5fef8aae61f40e483e3">m_read_data_stream2</a>-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#af902b42959698e1bc57e340e7943affd">next</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#a39d4cb2c2e126c4a7aa46023af9c9494">m_batch_size</a> );</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        timer.<a class="code" href="structnvbio_1_1_timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
@@ -217,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:04 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

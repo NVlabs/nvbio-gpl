@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type &gt; Struct Template Reference</title>
+<title>NVBIO: nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,14 +102,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-attribs">Static Public Members</a> &#124;
 <a href="structnvbio_1_1aln_1_1_gotoh_aligner-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___aligner.html">Aligners</a></div></div>  </div>
+<div class="title">nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___aligner.html">Aligners</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
     AlignmentType T_TYPE, 
-    typename scoring_scheme_type&gt;<br/>
-struct nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type &gt;</h3>
+    typename scoring_scheme_type, 
+    typename AlgorithmType = PatternBlockingTag&gt;<br/>
+struct nvbio::aln::GotohAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;</h3>
 
 <p>A Gotoh alignment algorithm, see <a class="el" href="group___aligner.html">Aligners</a> <a class="anchor" id="GotohAligner"></a> </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -143,65 +144,86 @@ Gotoh Scoring Scheme</h1>
 <div class="line">    <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> text_gap_extension()          <span class="keyword">const</span>;</div>
 <div class="line">};</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00347">347</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00392">392</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a99e087ccf54dc647aa35aa5f939a0c86"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1aln_1_1_gotoh_tag.html">GotohTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a99e087ccf54dc647aa35aa5f939a0c86">aligner_tag</a></td></tr>
-<tr class="memdesc:a99e087ccf54dc647aa35aa5f939a0c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___aligner_tag.html">Aligner Tag</a>  <a href="#a99e087ccf54dc647aa35aa5f939a0c86">More...</a><br/></td></tr>
-<tr class="separator:a99e087ccf54dc647aa35aa5f939a0c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7e438dfdfaada1b9dc4dffe8133cda"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1aln_1_1_gotoh_tag.html">GotohTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a8d7e438dfdfaada1b9dc4dffe8133cda">aligner_tag</a></td></tr>
+<tr class="memdesc:a8d7e438dfdfaada1b9dc4dffe8133cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___aligner_tag.html">Aligner Tag</a>  <a href="#a8d7e438dfdfaada1b9dc4dffe8133cda">More...</a><br/></td></tr>
+<tr class="separator:a8d7e438dfdfaada1b9dc4dffe8133cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31caef62bc744b254c8689815e3eeabe"><td class="memItemLeft" align="right" valign="top">typedef AlgorithmType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a31caef62bc744b254c8689815e3eeabe">algorithm_tag</a></td></tr>
+<tr class="memdesc:a31caef62bc744b254c8689815e3eeabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___algorithm_tag.html">Algorithm Tag</a>  <a href="#a31caef62bc744b254c8689815e3eeabe">More...</a><br/></td></tr>
+<tr class="separator:a31caef62bc744b254c8689815e3eeabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a0a3ac0c613d73e3e35d82e7c23243c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a0a3ac0c613d73e3e35d82e7c23243c6a">GotohAligner</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type _scheme)</td></tr>
-<tr class="separator:a0a3ac0c613d73e3e35d82e7c23243c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324462c697dab9d2a8cb9a949b9ee250"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a324462c697dab9d2a8cb9a949b9ee250">GotohAligner</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type _scheme)</td></tr>
+<tr class="separator:a324462c697dab9d2a8cb9a949b9ee250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:a875c88fd848cf53bbb3f3b2f87f8c324"><td class="memItemLeft" align="right" valign="top">scoring_scheme_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a875c88fd848cf53bbb3f3b2f87f8c324">scheme</a></td></tr>
-<tr class="separator:a875c88fd848cf53bbb3f3b2f87f8c324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf91ac67f08ad473e6f0412adbdd90e6"><td class="memItemLeft" align="right" valign="top">scoring_scheme_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#aaf91ac67f08ad473e6f0412adbdd90e6">scheme</a></td></tr>
+<tr class="separator:aaf91ac67f08ad473e6f0412adbdd90e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Members</h2></td></tr>
-<tr class="memitem:a2d3a4f4f33eff927c65a877792fe41e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a2d3a4f4f33eff927c65a877792fe41e5">TYPE</a> = T_TYPE</td></tr>
-<tr class="memdesc:a2d3a4f4f33eff927c65a877792fe41e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the AlignmentType  <a href="#a2d3a4f4f33eff927c65a877792fe41e5">More...</a><br/></td></tr>
-<tr class="separator:a2d3a4f4f33eff927c65a877792fe41e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14d8c8bc62c737e44865346ace46faa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#aa14d8c8bc62c737e44865346ace46faa">TYPE</a> = T_TYPE</td></tr>
+<tr class="memdesc:aa14d8c8bc62c737e44865346ace46faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">the AlignmentType  <a href="#aa14d8c8bc62c737e44865346ace46faa">More...</a><br/></td></tr>
+<tr class="separator:aa14d8c8bc62c737e44865346ace46faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a99e087ccf54dc647aa35aa5f939a0c86"></a>
+<a class="anchor" id="a31caef62bc744b254c8689815e3eeabe"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1aln_1_1_gotoh_tag.html">GotohTag</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a99e087ccf54dc647aa35aa5f939a0c86">aligner_tag</a></td>
+          <td class="memname">typedef AlgorithmType <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a31caef62bc744b254c8689815e3eeabe">algorithm_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the <a class="el" href="group___algorithm_tag.html">Algorithm Tag</a> </p>
+
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00397">397</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d7e438dfdfaada1b9dc4dffe8133cda"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1aln_1_1_gotoh_tag.html">GotohTag</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#a8d7e438dfdfaada1b9dc4dffe8133cda">aligner_tag</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>the <a class="el" href="group___aligner_tag.html">Aligner Tag</a> </p>
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00351">351</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00396">396</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0a3ac0c613d73e3e35d82e7c23243c6a"></a>
+<a class="anchor" id="a324462c697dab9d2a8cb9a949b9ee250"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">GotohAligner</a> </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">GotohAligner</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type&#160;</td>
           <td class="paramname"><em>_scheme</em>)</td><td></td>
           <td></td>
         </tr>
@@ -213,38 +235,38 @@ template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00354">354</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00400">400</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a875c88fd848cf53bbb3f3b2f87f8c324"></a>
+<a class="anchor" id="aaf91ac67f08ad473e6f0412adbdd90e6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">scoring_scheme_type <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::scheme</td>
+          <td class="memname">scoring_scheme_type <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::scheme</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00356">356</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00402">402</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2d3a4f4f33eff927c65a877792fe41e5"></a>
+<a class="anchor" id="aa14d8c8bc62c737e44865346ace46faa"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::TYPE = T_TYPE</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a> <a class="el" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">nvbio::aln::GotohAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::TYPE = T_TYPE</td>
         </tr>
       </table>
   </td>
@@ -256,17 +278,17 @@ template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
 
 <p>the AlignmentType </p>
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00349">349</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00394">394</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/alignment/<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/alignment/<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:28 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

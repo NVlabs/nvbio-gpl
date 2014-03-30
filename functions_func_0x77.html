@@ -150,7 +150,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classnvbio_1_1_weak_pointer.html#a13a62ade95281aec144d5b9ba4f42dff">nvbio::WeakPointer&lt; T, CounterT &gt;</a>
 </li>
 <li>what()
-: <a class="el" href="structnvbio_1_1cuda__error.html#ac0e8399c371e73a48c9f8132c9600041">nvbio::cuda_error</a>
+: <a class="el" href="classmgpu_1_1_cuda_exception.html#a83d1705e302a1b7633d28e2186dd8818">mgpu::CudaException</a>
+, <a class="el" href="structnvbio_1_1cuda__error.html#ac0e8399c371e73a48c9f8132c9600041">nvbio::cuda_error</a>
 , <a class="el" href="structnvbio_1_1bad__alloc.html#aa5f21736129bd16bb8977c04d18f401a">nvbio::bad_alloc</a>
 , <a class="el" href="structnvbio_1_1runtime__error.html#aa5bd8ac7cd317f680dbb1a8169a75f7c">nvbio::runtime_error</a>
 , <a class="el" href="structnvbio_1_1logic__error.html#acdcfedf540ffcd08f0f667afd722499b">nvbio::logic_error</a>
@@ -159,12 +160,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#ad05eec987f110fa6add1df36ffc7b5de">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
 </li>
 <li>WorkQueue()
-: <a class="el" href="group___work_queue.html#ga18ed17bfc1f51dccc90ae9cb06dbad14">nvbio::cuda::WorkQueue&lt; PersistentWarpsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="structnvbio_1_1cuda_1_1_work_queue.html#a87c691cbf617c8683fd6b880ee09ed2c">nvbio::cuda::WorkQueue&lt; PolicyTag, WorkUnitT, BLOCKDIM &gt;</a>
+: <a class="el" href="structnvbio_1_1cuda_1_1_work_queue.html#a87c691cbf617c8683fd6b880ee09ed2c">nvbio::cuda::WorkQueue&lt; PolicyTag, WorkUnitT, BLOCKDIM &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_3_01_multi_pass_queue_tag_00_01_work_unit_t_00_01_b_l_o_c_k_d_i_m_01_4.html#a69b03a2d8934de8da982acb8aa186fa6">nvbio::cuda::WorkQueue&lt; MultiPassQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+, <a class="el" href="group___work_queue.html#ga18ed17bfc1f51dccc90ae9cb06dbad14">nvbio::cuda::WorkQueue&lt; PersistentWarpsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+, <a class="el" href="group___work_queue.html#ga7332fc00b86e910226a9adbea794b89c">nvbio::cuda::WorkQueue&lt; PersistentThreadsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
 , <a class="el" href="classnvbio_1_1_work_queue.html#a68217b7aa50af5527e0e1231cce6f357">nvbio::WorkQueue&lt; WorkItemT, ProgressCallbackT &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_3_01_ordered_queue_tag_00_01_work_unit_t_00_01_b_l_o_c_k_d_i_m_01_4.html#ad653f2ef575e3476bae2064bc36de69a">nvbio::cuda::WorkQueue&lt; OrderedQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="group___work_queue.html#ga7332fc00b86e910226a9adbea794b89c">nvbio::cuda::WorkQueue&lt; PersistentThreadsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
 </li>
 <li>WorkQueueStats()
 : <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_stats.html#adf78abbb646b932a2249563c2ffc30a3">nvbio::cuda::WorkQueueStats</a>
@@ -172,8 +173,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>WorkQueueStatsView()
 : <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_stats_view.html#a9a020a8d37a7f5d4dbd328398cf263b9">nvbio::cuda::WorkQueueStatsView</a>
 </li>
+<li>write()
+: <a class="el" href="structnvbio_1_1_l_z4_file_writer.html#ad8a649b39079768419995b05782bd021">nvbio::LZ4FileWriter</a>
+</li>
 <li>Write()
 : <a class="el" href="struct_bam_tools_1_1_bgzf_data.html#abf12c5fa62064f2dc767946ee2771673">BamTools::BgzfData</a>
+</li>
+<li>write()
+: <a class="el" href="structnvbio_1_1_b_g_z_file_writer.html#aa87e350a711e854408aff1a470bb02aa">nvbio::BGZFileWriter</a>
 </li>
 <li>write_tag()
 : <a class="el" href="structnvbio_1_1io_1_1_sam_output.html#a3941931a813cfa126fa658e7c11a560a">nvbio::io::SamOutput</a>
@@ -188,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:26:04 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

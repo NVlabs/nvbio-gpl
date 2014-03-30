@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/seed_hit_deque_array_inl.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/seed_hit_deque_array_inl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="seed__hit__deque__array__inl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// return the deque bound to a given read</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#a1cabbf940c615a553cf4fce46d8ffb01">  108</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="structnvbio_1_1priority__deque.html">SeedHitDequeArrayDeviceView::hit_deque_type</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#a1cabbf940c615a553cf4fce46d8ffb01">SeedHitDequeArrayDeviceView::get_deque</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_id, <span class="keywordtype">bool</span> build_heap)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#a1cabbf940c615a553cf4fce46d8ffb01">  108</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="classnvbio_1_1priority__deque.html">SeedHitDequeArrayDeviceView::hit_deque_type</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#a1cabbf940c615a553cf4fce46d8ffb01">SeedHitDequeArrayDeviceView::get_deque</a>(<span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_id, <span class="keywordtype">bool</span> build_heap)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="structnvbio_1_1vector__wrapper.html">hit_vector_type</a> hit_vector( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#a728184dd1c26bc1f8ef4558205d36a4b" title="per-read seed hit counters ">m_counts</a>[read_id], <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#af551c62c29ae355aaaaa59e1469a00de">get_data</a>( read_id ) );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array_device_view.html#ac381251914d2ab1d422183387bef6f2e">hit_deque_type</a>( hit_vector, build_heap );</div>
@@ -216,7 +216,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

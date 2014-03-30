@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/basic/mmap.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/basic/mmap.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="mmap_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -133,22 +133,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">struct </span>MappedFile::Impl</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">Impl</a>() : <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>( INVALID_HANDLE_VALUE ), <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>( NULL ) {} </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">Impl</a>() : <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>( INVALID_HANDLE_VALUE ), <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>( NULL ) {} </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    HANDLE <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">struct </span>ServerMappedFile::Impl</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">Impl</a>() : <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>( INVALID_HANDLE_VALUE ), <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>( NULL ) {} </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">Impl</a>() : <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>( INVALID_HANDLE_VALUE ), <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>( NULL ) {} </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    HANDLE <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="structnvbio_1_1_mapped_file.html#ac0ffc7cc346889b0013ff087b28d864e">MappedFile::MappedFile</a>() : impl( new Impl() ) {}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span>* MappedFile::init(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a> file_size)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span>* MappedFile::init(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="namespacemgpu.html#a6a8a9b2cd0011a49aca6a25517024818">uint64</a> file_size)</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string sname = std::string(<span class="stringliteral">&quot;Global\\&quot;</span>) + std::string( name );</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::wstring wname( sname.begin(), sname.end() );</div>
@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;ServerMappedFile::ServerMappedFile() : impl( new Impl() ) {}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span>* ServerMappedFile::init(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a> file_size, <span class="keyword">const</span> <span class="keywordtype">void</span>* src)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span>* ServerMappedFile::init(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="namespacemgpu.html#a6a8a9b2cd0011a49aca6a25517024818">uint64</a> file_size, <span class="keyword">const</span> <span class="keywordtype">void</span>* src)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string sname = std::string(<span class="stringliteral">&quot;Global\\&quot;</span>) + std::string( name );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::wstring wname( sname.begin(), sname.end() );</div>
@@ -253,19 +253,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html">  153</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html">MappedFile::Impl</a></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">  155</a></span>&#160;    <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">Impl</a>() : <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>( -1 ), <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>( NULL ) {} </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">  155</a></span>&#160;    <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea">Impl</a>() : <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>( -1 ), <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>( NULL ) {} </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">  157</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">  158</a></span>&#160;    <span class="keywordtype">void</span>*       <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">  158</a></span>&#160;    <span class="keywordtype">void</span>*       <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>;</div>
 <div class="line"><a name="l00159"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#aaafb360e24fe0bed3315944feedfb32c">  159</a></span>&#160;    std::string <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#aaafb360e24fe0bed3315944feedfb32c">file_name</a>;</div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af4c61ee0898919d120b7f543054d688b">  160</a></span>&#160;    <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>      <a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af4c61ee0898919d120b7f543054d688b">file_size</a>;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
 <div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html">  162</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html">ServerMappedFile::Impl</a></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">  164</a></span>&#160;    <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">Impl</a>() : <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>( -1 ), <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>( NULL ) {} </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">  164</a></span>&#160;    <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f">Impl</a>() : <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>( -1 ), <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>( NULL ) {} </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">  166</a></span>&#160;    <span class="keywordtype">int</span>    <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">  167</a></span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">  167</a></span>&#160;    <span class="keywordtype">void</span>*  <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>;</div>
 <div class="line"><a name="l00168"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a4211b9207d94dcd997e35f523db5b642">  168</a></span>&#160;    std::string <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a4211b9207d94dcd997e35f523db5b642">file_name</a>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a2ef05e1d4cb4b8f6fcfc932b2b9aa0f5">  169</a></span>&#160;    <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>      <a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a2ef05e1d4cb4b8f6fcfc932b2b9aa0f5">file_size</a>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
@@ -286,7 +286,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    ftruncate( impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>, file_size );</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a> = mmap(</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a> = mmap(</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        NULL,</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        file_size,</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        PROT_READ,</div>
@@ -294,15 +294,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4">h_file</a>,</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        0 );</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a> == NULL)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a> == NULL)</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="structnvbio_1_1_mapped_file_1_1view__error.html">view_error</a>( impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#aaafb360e24fe0bed3315944feedfb32c">file_name</a>.c_str(), errno );</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="console_8cpp.html#a957771a16cfd89651126ab2c2dfa3683">log_verbose</a>(stderr, <span class="stringliteral">&quot;created file mapping object \&quot;%s\&quot; (%.2f %s)\n&quot;</span>, name, (file_size &gt; 1024*1024 ? <span class="keywordtype">float</span>(file_size)/<span class="keywordtype">float</span>(1024*1024) : <span class="keywordtype">float</span>(file_size)), (file_size &gt; 1024*1024 ? <span class="stringliteral">&quot;MB&quot;</span> : <span class="stringliteral">&quot;B&quot;</span>));</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 <div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="structnvbio_1_1_mapped_file.html#acb283458b8fea2b4eb721782649a6b21">  202</a></span>&#160;<a class="code" href="structnvbio_1_1_mapped_file.html#acb283458b8fea2b4eb721782649a6b21">MappedFile::~MappedFile</a>()</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a> != NULL) munmap( impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ac8c4d8bf41dbf4e5151b5d28641c83b0">buffer</a>, impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af4c61ee0898919d120b7f543054d688b">file_size</a> );</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a> != NULL) munmap( impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#ad5fd656de75c856474698f2b1b698e0b">buffer</a>, impl-&gt;<a class="code" href="structnvbio_1_1_mapped_file_1_1_impl.html#af4c61ee0898919d120b7f543054d688b">file_size</a> );</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">//if (impl-&gt;h_file != -1)   shm_unlink( impl-&gt;file_name.c_str() );</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">delete</span> impl;</div>
@@ -324,7 +324,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    ftruncate( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>, file_size );</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a> = mmap(</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a> = mmap(</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        NULL,</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        file_size,</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        PROT_READ | PROT_WRITE,</div>
@@ -332,18 +332,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a>,</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        0 );</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a> == NULL)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a> == NULL)</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="structnvbio_1_1_server_mapped_file_1_1view__error.html">view_error</a>( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a4211b9207d94dcd997e35f523db5b642">file_name</a>.c_str(), errno );</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">if</span> (src != NULL)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        memcpy( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>, src, file_size );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        memcpy( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>, src, file_size );</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="console_8cpp.html#a957771a16cfd89651126ab2c2dfa3683">log_verbose</a>(stderr, <span class="stringliteral">&quot;created file mapping object \&quot;%s\&quot; (%.2f %s)\n&quot;</span>, name, (file_size &gt; 1024*1024 ? <span class="keywordtype">float</span>(file_size)/<span class="keywordtype">float</span>(1024*1024) : <span class="keywordtype">float</span>(file_size)), (file_size &gt; 1024*1024 ? <span class="stringliteral">&quot;MB&quot;</span> : <span class="stringliteral">&quot;B&quot;</span>));</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
 <div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="structnvbio_1_1_server_mapped_file.html#acff3f61e50d18b0bbac9ce537100ad96">  243</a></span>&#160;<a class="code" href="structnvbio_1_1_server_mapped_file.html#acff3f61e50d18b0bbac9ce537100ad96">ServerMappedFile::~ServerMappedFile</a>()</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a> != NULL) munmap( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#aa2c8c68e44f7cd9e7c54c305f3fcf3cc">buffer</a>, impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a2ef05e1d4cb4b8f6fcfc932b2b9aa0f5">file_size</a> );</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a> != NULL) munmap( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#abcc7eba179a0b15cd5367a5b5e1824e6">buffer</a>, impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a2ef05e1d4cb4b8f6fcfc932b2b9aa0f5">file_size</a> );</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e">h_file</a> != -1)   shm_unlink( impl-&gt;<a class="code" href="structnvbio_1_1_server_mapped_file_1_1_impl.html#a4211b9207d94dcd997e35f523db5b642">file_name</a>.c_str() );</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">delete</span> impl;</div>
@@ -355,7 +355,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:12 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

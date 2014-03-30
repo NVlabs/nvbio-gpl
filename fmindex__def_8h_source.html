@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/fmindex_def.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/fmindex_def.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="fmindex__def_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -128,23 +128,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html">FMIndexDef</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a63ac7fe26aa7d55cc5bdf819f5cc83d9">TEX_SELECTOR</a>( <a class="code" href="structnvbio_1_1io_1_1_f_m_index_iterators.html">io::FMIndexIterators</a>, <a class="code" href="structnvbio_1_1io_1_1_f_m_index_ldg_iterators.html">io::FMIndexLdgIterators</a> )   driver_data_iterators;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#ad748f0c4a296037f7bcc75ff55906624">   31</a></span>&#160;    <span class="keyword">typedef</span> driver_data_iterators::count_table_type                         <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#ad748f0c4a296037f7bcc75ff55906624">count_table_type</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#abd85d6de218405a77a9d96b7bb4d1b80">   32</a></span>&#160;    <span class="keyword">typedef</span> driver_data_iterators::occ_type                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#abd85d6de218405a77a9d96b7bb4d1b80">occ_type</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a0ae425f970dcef3262e15f400edc3230">   33</a></span>&#160;    <span class="keyword">typedef</span> driver_data_iterators::bwt_type                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a0ae425f970dcef3262e15f400edc3230">bwt_type</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a61fdf152a607c871773f251faa9162d0">   34</a></span>&#160;    <span class="keyword">typedef</span> driver_data_iterators::ssa_type                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a61fdf152a607c871773f251faa9162d0">ssa_type</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a56cda0d7c271e1b415e2fe0b31f5cac2">   35</a></span>&#160;    <span class="keyword">typedef</span> driver_data_iterators::rank_dict_type                           <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a56cda0d7c271e1b415e2fe0b31f5cac2">rank_dict_type</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a5402957c5940731a050003ede57fb485">   37</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1fm__index.html">fm_index&lt;rank_dict_type,ssa_type&gt;</a>                               <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a5402957c5940731a050003ede57fb485">type</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <span class="comment">// namespace cuda</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <span class="comment">// namespace bowtie2</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a7b2e28873522d4ac4a2ae3b6d3cc4bb7">   30</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1cuda_1_1ldg__pointer.html">io::FMIndexDataCUDA::count_table_type</a>                         <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a7b2e28873522d4ac4a2ae3b6d3cc4bb7">count_table_type</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a2725bf35c1f61a016356f9bcbf87702c">   31</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1deinterleaved__iterator.html">io::FMIndexDataCUDA::occ_type</a>                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a2725bf35c1f61a016356f9bcbf87702c">occ_type</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a2495f3de352bd5d0e56a124e7ee5f8ae">   32</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1deinterleaved__iterator.html">io::FMIndexDataCUDA::bwt_type</a>                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a2495f3de352bd5d0e56a124e7ee5f8ae">bwt_type</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a683eb33a22c21fabf8ca19844d9d78fd">   33</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_s_s_a__index__multiple__context.html">io::FMIndexDataCUDA::ssa_type</a>                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a683eb33a22c21fabf8ca19844d9d78fd">ssa_type</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a44a017f4e96697d02a3e2ab0c07e24f8">   34</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1rank__dictionary.html">io::FMIndexDataCUDA::rank_dict_type</a>                           <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a44a017f4e96697d02a3e2ab0c07e24f8">rank_dict_type</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#ad296df46edaab626f3f44dc607a07578">   35</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1fm__index.html">io::FMIndexDataCUDA::fm_index_type</a>                            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#ad296df46edaab626f3f44dc607a07578">type</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <span class="comment">// namespace cuda</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace bowtie2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:04 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

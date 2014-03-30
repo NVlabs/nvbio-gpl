@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/io/reads/reads.h File Reference</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/reads/reads.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,6 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="strided__iterator_8h_source.html">nvbio/basic/strided_iterator.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="packedstream_8h_source.html">nvbio/basic/packedstream.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector__wrapper_8h_source.html">nvbio/basic/vector_wrapper.h</a>&gt;</code><br/>
 <code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
@@ -128,6 +129,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacenvbio_1_1io"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html">nvbio::io</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +142,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16ae900789c01b14556f4ef109188496021">nvbio::io::Solexa</a> = 3
  }</td></tr>
 <tr class="separator:ga3415ac326089788da99884c50b8ccb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e48da290521a74aa4a0cd6585ace320"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">nvbio::io::ReadEncoding</a> { <a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">nvbio::io::FORWARD</a> = 0x0001, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">nvbio::io::REVERSE</a> = 0x0002, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c">nvbio::io::FORWARD_COMPLEMENT</a> = 0x0004, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68">nvbio::io::REVERSE_COMPLEMENT</a> = 0x0008
+ }</td></tr>
+<tr class="separator:ga6e48da290521a74aa4a0cd6585ace320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f8e92bcfb3339a373e5f4ff479239e5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga8f8e92bcfb3339a373e5f4ff479239e5">nvbio::io::PairedEndPolicy</a> { <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5a6f0c3ce9310d95f7b2d38181b6f00d6b">nvbio::io::PE_POLICY_FF</a> = 0, 
 <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5af2cb402f751b4c7e47933f386503cd36">nvbio::io::PE_POLICY_FR</a> = 1, 
 <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5aff28aed6362419d0640c6d3df68675b3">nvbio::io::PE_POLICY_RF</a> = 2, 
@@ -149,13 +157,13 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3022ab0f80995ec0abf6eb2bb7251756"><td class="memItemLeft" align="right" valign="top">ReadDataStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga3022ab0f80995ec0abf6eb2bb7251756">nvbio::io::open_read_file</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *read_file_name, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding qualities, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_reads, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 truncate_read_len)</td></tr>
-<tr class="separator:ga3022ab0f80995ec0abf6eb2bb7251756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memItemLeft" align="right" valign="top">ReadDataStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">nvbio::io::open_read_file</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *read_file_name, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding qualities, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_reads, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 truncate_read_len, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ReadEncoding flags)</td></tr>
+<tr class="separator:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:20 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

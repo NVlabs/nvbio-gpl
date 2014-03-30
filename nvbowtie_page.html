@@ -198,11 +198,12 @@ Usage</h1>
 *       --rf                             paired mates are reverse-forward
 *       --rr                             paired mates are reverse-reverse
 *       --verbosity                      verbosity level
+*       --local                          perform local alignment
 *     Seeding:
-*       --seed-len         int [22]      seed lengths
-*       --seed-freq        int [15]      interval between seeds
-*       --max-hits         int [100]     maximum amount of seed hits
-*       --max-reseed       int [2]       number of reseeding rounds
+*       --seed-len         int   [22]                  seed lengths
+*       --seed-freq        float [local ? 0.75 : 1.15] interval between seeds
+*       --max-hits         int   [100]                                  maximum amount of seed hits
+*       --max-reseed       int   [2]                                    number of reseeding rounds
 *     Extension:
 *       --rand                           randomized seed selection
 *       --max-dist         int [15]      maximum edit distance
@@ -231,10 +232,16 @@ Usage</h1>
 <pre class="fragment">*  ./nvFM-server hg19-index hg19 &amp;
 * </pre><dl class="section user"><dt></dt><dd>nvBowtie can then pickup the reference from the server:</dd></dl>
 <pre class="fragment">*  ./nvBowtie hg19 my_reads.fastq my_reads.bam
-* </pre> </div></div><!-- contents -->
+* </pre><h1><a class="anchor" id="PerformanceSection"></a>
+Performance</h1>
+<dl class="section user"><dt></dt><dd>Here's a graph showing nvBowtie's performance compared to bowtie2 on an Illumina HiSeq 2000 dataset (the first 10M reads of ERR161544) and an IonProton run, using both end-to-end and local alignment. The alignment results show 99.98% agreement at high MAPQ. All bowtie2 tests were run using 12 CPU threads, and default aligment options:</dd></dl>
+<div class="image">
+<img src="benchmark-nvbowtie-speedup.png"  style="position:relative; bottom:-10px; border:0px;" width="70%" height="80%"/>
+</div>
+ </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

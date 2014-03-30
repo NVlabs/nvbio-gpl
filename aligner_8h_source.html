@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/aligner.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/aligner.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="aligner_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html">   68</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html">Aligner</a></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a61ab0d7a9a8cc0dcaf5f26a86dcc6175">   70</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a61ab0d7a9a8cc0dcaf5f26a86dcc6175">MAX_READ_LEN</a> = <a class="code" href="group___defs.html#gga01b09db8ed467aee90e8a655495ea9a1a1366480922dd33874d5cdba78c577bbe">MAXIMUM_READ_LENGTH</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a61ab0d7a9a8cc0dcaf5f26a86dcc6175">   70</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a61ab0d7a9a8cc0dcaf5f26a86dcc6175">MAX_READ_LEN</a> = <a class="code" href="group___defs.html#gga08f75555e715f3724741be6c6d6ea8d7a1366480922dd33874d5cdba78c577bbe">MAXIMUM_READ_LENGTH</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">   72</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1fm__index.html">FMIndexDef::type</a>                                                                                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">   73</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1fm__index.html">FMIndexDef::type</a>                                                                                                 <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a>;</div>
@@ -377,7 +377,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_best_alignments.html">io::BestAlignments</a>*     best_data,</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            mate)</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a> = threadIdx.x + <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>*blockIdx.x;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a> = threadIdx.x + <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>*blockIdx.x;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> (thread_id &gt;= read_batch.size()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">// compute the read length</span></div>
@@ -401,7 +401,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_best_alignments.html">io::BestAlignments</a>*     best_data,</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            mate = 0)</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> blocks = (read_batch.size() + <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>-1) / <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> blocks = (read_batch.size() + <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>-1) / <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    init_alignments_kernel&lt;&lt;&lt;blocks, BLOCKDIM&gt;&gt;&gt;(</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        read_batch,</div>
@@ -418,7 +418,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:04 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

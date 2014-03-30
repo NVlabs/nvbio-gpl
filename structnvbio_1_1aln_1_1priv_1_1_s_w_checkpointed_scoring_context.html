@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, checkpoint_type &gt; Struct Template Reference</title>
+<title>NVBIO: nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, algorithm_tag, checkpoint_type &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,56 +100,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-attribs">Public Members</a> &#124;
 <a href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, checkpoint_type &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__private.html">Private</a></div></div>  </div>
+<div class="title">nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, algorithm_tag, checkpoint_type &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__private.html">Private</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
     uint32 BAND_LEN, 
     AlignmentType TYPE, 
-    typename checkpoint_type&gt;<br/>
-struct nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, checkpoint_type &gt;</h3>
+    typename algorithm_tag, 
+    typename checkpoint_type = PatternBlockingTag&gt;<br/>
+struct nvbio::aln::priv::SWCheckpointedScoringContext&lt; BAND_LEN, TYPE, algorithm_tag, checkpoint_type &gt;</h3>
 
 <p>A helper checkpointed-scoring context class for <a class="el" href="structnvbio_1_1aln_1_1priv_1_1sw__alignment__score__dispatch.html">sw_alignment_score_dispatch</a> which allows to perform scoring in multiple passes, saving &amp; restoring a checkpoint each time. </p>
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00108">108</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00123">123</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a556852b51c363c7832c4504372e0259a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a556852b51c363c7832c4504372e0259a">SWCheckpointedScoringContext</a> (checkpoint_type checkpoint)</td></tr>
-<tr class="separator:a556852b51c363c7832c4504372e0259a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab927f3884f58531304e2121b256104fd"><td class="memTemplParams" colspan="2">template&lt;typename column_type , typename scoring_type , typename score_type &gt; </td></tr>
-<tr class="memitem:ab927f3884f58531304e2121b256104fd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#ab927f3884f58531304e2121b256104fd">init</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, column_type &amp;column, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_type &amp;scoring, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type zero)</td></tr>
-<tr class="separator:ab927f3884f58531304e2121b256104fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebbf5307139686829b9b76b6453e1bf5"><td class="memTemplParams" colspan="2">template&lt;typename column_type &gt; </td></tr>
-<tr class="memitem:aebbf5307139686829b9b76b6453e1bf5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#aebbf5307139686829b9b76b6453e1bf5">previous_column</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type column)</td></tr>
-<tr class="separator:aebbf5307139686829b9b76b6453e1bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab303e7dfba2c75e42482426351038a49"><td class="memTemplParams" colspan="2">template&lt;typename score_type &gt; </td></tr>
-<tr class="memitem:ab303e7dfba2c75e42482426351038a49"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#ab303e7dfba2c75e42482426351038a49">new_cell</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> M, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type score, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#ga89d5658212e7771ce32cc2504c4edb10">DirectionVector</a> dir)</td></tr>
-<tr class="separator:ab303e7dfba2c75e42482426351038a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fc278a798709603630cdbb6a24d2e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a45fc278a798709603630cdbb6a24d2e9">SWCheckpointedScoringContext</a> (checkpoint_type checkpoint)</td></tr>
+<tr class="separator:a45fc278a798709603630cdbb6a24d2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f4bb804259b03aed8af0b0a996e40c"><td class="memTemplParams" colspan="2">template&lt;typename column_type , typename scoring_type , typename score_type &gt; </td></tr>
+<tr class="memitem:a33f4bb804259b03aed8af0b0a996e40c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a33f4bb804259b03aed8af0b0a996e40c">init</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, column_type &amp;column, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_type &amp;scoring, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type zero)</td></tr>
+<tr class="separator:a33f4bb804259b03aed8af0b0a996e40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4c4ba554ddd10053dcc5271abbc74b"><td class="memTemplParams" colspan="2">template&lt;typename column_type &gt; </td></tr>
+<tr class="memitem:a6e4c4ba554ddd10053dcc5271abbc74b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a6e4c4ba554ddd10053dcc5271abbc74b">previous_column</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type column)</td></tr>
+<tr class="separator:a6e4c4ba554ddd10053dcc5271abbc74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd2d5bfde662fc20a298066f5588e46"><td class="memTemplParams" colspan="2">template&lt;typename column_type &gt; </td></tr>
+<tr class="memitem:adcd2d5bfde662fc20a298066f5588e46"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#adcd2d5bfde662fc20a298066f5588e46">last_column</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> M, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type column)</td></tr>
+<tr class="separator:adcd2d5bfde662fc20a298066f5588e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c89669036870ec1959b0842ac045a0"><td class="memTemplParams" colspan="2">template&lt;typename score_type &gt; </td></tr>
+<tr class="memitem:a33c89669036870ec1959b0842ac045a0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a33c89669036870ec1959b0842ac045a0">new_cell</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> j, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> M, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type score, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#ga89d5658212e7771ce32cc2504c4edb10">DirectionVector</a> dir)</td></tr>
+<tr class="separator:a33c89669036870ec1959b0842ac045a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:a77d1ceb58b23121653c4e04ba3d59bcb"><td class="memItemLeft" align="right" valign="top">checkpoint_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#a77d1ceb58b23121653c4e04ba3d59bcb">m_checkpoint</a></td></tr>
-<tr class="separator:a77d1ceb58b23121653c4e04ba3d59bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3c914e35515569d3dc9ae23caad7d7"><td class="memItemLeft" align="right" valign="top">checkpoint_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html#abb3c914e35515569d3dc9ae23caad7d7">m_checkpoint</a></td></tr>
+<tr class="separator:abb3c914e35515569d3dc9ae23caad7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a556852b51c363c7832c4504372e0259a"></a>
+<a class="anchor" id="a45fc278a798709603630cdbb6a24d2e9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </div>
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, checkpoint_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">SWCheckpointedScoringContext</a> </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">SWCheckpointedScoringContext</a> </td>
           <td>(</td>
           <td class="paramtype">checkpoint_type&#160;</td>
           <td class="paramname"><em>checkpoint</em>)</td><td></td>
@@ -163,16 +168,16 @@ template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00114">114</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00129">129</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab927f3884f58531304e2121b256104fd"></a>
+<a class="anchor" id="a33f4bb804259b03aed8af0b0a996e40c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </div>
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
 <div class="memtemplate">
 template&lt;typename column_type , typename scoring_type , typename score_type &gt; </div>
 <table class="mlabels">
@@ -180,15 +185,15 @@ template&lt;typename column_type , typename scoring_type , typename score_type &
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, checkpoint_type &gt;::init </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>j</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>N</em>, </td>
         </tr>
         <tr>
@@ -200,13 +205,13 @@ template&lt;typename column_type , typename scoring_type , typename score_type &
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_type &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_type &amp;&#160;</td>
           <td class="paramname"><em>scoring</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type&#160;</td>
           <td class="paramname"><em>zero</em>&#160;</td>
         </tr>
         <tr>
@@ -233,15 +238,76 @@ template&lt;typename column_type , typename scoring_type , typename score_type &
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00126">126</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00141">141</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab303e7dfba2c75e42482426351038a49"></a>
+<a class="anchor" id="adcd2d5bfde662fc20a298066f5588e46"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </div>
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
+<div class="memtemplate">
+template&lt;typename column_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::last_column </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>do something with the last column</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+    <tr><td class="paramname">N</td><td>column size </td></tr>
+    <tr><td class="paramname">column</td><td>column values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00181">181</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33c89669036870ec1959b0842ac045a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
 <div class="memtemplate">
 template&lt;typename score_type &gt; </div>
 <table class="mlabels">
@@ -249,39 +315,39 @@ template&lt;typename score_type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, checkpoint_type &gt;::new_cell </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::new_cell </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>N</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>j</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>M</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> score_type&#160;</td>
           <td class="paramname"><em>score</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#ga89d5658212e7771ce32cc2504c4edb10">DirectionVector</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#ga89d5658212e7771ce32cc2504c4edb10">DirectionVector</a>&#160;</td>
           <td class="paramname"><em>dir</em>&#160;</td>
         </tr>
         <tr>
@@ -309,15 +375,15 @@ template&lt;typename score_type &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00167">167</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00204">204</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aebbf5307139686829b9b76b6453e1bf5"></a>
+<a class="anchor" id="a6e4c4ba554ddd10053dcc5271abbc74b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </div>
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
 <div class="memtemplate">
 template&lt;typename column_type &gt; </div>
 <table class="mlabels">
@@ -325,21 +391,21 @@ template&lt;typename column_type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, checkpoint_type &gt;::previous_column </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::previous_column </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>j</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>N</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> column_type&#160;</td>
           <td class="paramname"><em>column</em>&#160;</td>
         </tr>
         <tr>
@@ -364,34 +430,34 @@ template&lt;typename column_type &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00152">152</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00169">169</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a77d1ceb58b23121653c4e04ba3d59bcb"></a>
+<a class="anchor" id="abb3c914e35515569d3dc9ae23caad7d7"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename checkpoint_type&gt; </div>
+template&lt;uint32 BAND_LEN, AlignmentType TYPE, typename algorithm_tag, typename checkpoint_type = PatternBlockingTag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">checkpoint_type <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, checkpoint_type &gt;::m_checkpoint</td>
+          <td class="memname">checkpoint_type <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_s_w_checkpointed_scoring_context.html">nvbio::aln::priv::SWCheckpointedScoringContext</a>&lt; BAND_LEN, <a class="el" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>, algorithm_tag, checkpoint_type &gt;::m_checkpoint</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00175">175</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sw__inl_8h_source.html#l00212">212</a> of file <a class="el" href="sw__inl_8h_source.html">sw_inl.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/alignment/sw/<a class="el" href="sw__inl_8h_source.html">sw_inl.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/alignment/sw/<a class="el" href="sw__inl_8h_source.html">sw_inl.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:37 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

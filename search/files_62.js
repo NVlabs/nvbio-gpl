@@ -17,6 +17,7 @@ var searchData=
   ['batched_5fstream_2eh',['batched_stream.h',['../batched__stream_8h.html',1,'']]],
   ['bgzf_2ecpp',['BGZF.cpp',['../_b_g_z_f_8cpp.html',1,'']]],
   ['bgzf_2eh',['BGZF.h',['../_b_g_z_f_8h.html',1,'']]],
+  ['blockwise_5fsufsort_2eh',['blockwise_sufsort.h',['../blockwise__sufsort_8h.html',1,'']]],
   ['bloom_5ffilter_2eh',['bloom_filter.h',['../bloom__filter_8h.html',1,'']]],
   ['bloom_5ffilter_5finl_2eh',['bloom_filter_inl.h',['../bloom__filter__inl_8h.html',1,'']]],
   ['bnt_2ecpp',['bnt.cpp',['../bnt_8cpp.html',1,'']]],

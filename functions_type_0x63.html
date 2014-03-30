@@ -178,6 +178,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1aln_1_1_banded_score_unit.html#a521094fb9482ff9326ad3e517023a693">nvbio::aln::BandedScoreUnit&lt; BAND_LEN, stream_type &gt;</a>
 , <a class="el" href="structnvbio_1_1aln_1_1_score_stream.html#a815e2c9e51e85e734f429fca451d3f54">nvbio::aln::ScoreStream&lt; stream_type &gt;</a>
 </li>
+<li>chunk_loader
+: <a class="el" href="structnvbio_1_1cuda_1_1_host_b_w_t_config.html#a3e8c09dc3f1022ca3f148aff2056a879">nvbio::cuda::HostBWTConfig&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+, <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#a1fe5d9d4e79b55d4d9bc9e34b1ef1788">nvbio::cuda::DeviceBWTConfig&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+</li>
+<li>chunk_loader_type
+: <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#ab3146fd1a95b0841e068c3f3d954d689">nvbio::cuda::LargeBWTSkeleton&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+</li>
+<li>chunk_set_type
+: <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a36a6211eb2d6207d7660ca2a9cb8f41c">nvbio::cuda::LargeBWTSkeleton&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+, <a class="el" href="structnvbio_1_1priv_1_1_host_chunk_loader.html#a38ce65b077937454fd8e5ff469ac360a">nvbio::priv::HostChunkLoader&lt; SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+, <a class="el" href="structnvbio_1_1priv_1_1_device_chunk_loader.html#a8ecd511c482531588a3ec6eef8f8caf0">nvbio::priv::DeviceChunkLoader&lt; SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a>
+</li>
 <li>column_type
 : <a class="el" href="structnvbio_1_1aln_1_1_score_stream.html#a501e65190bd9e0da3fa4a96241eeab56">nvbio::aln::ScoreStream&lt; stream_type &gt;</a>
 , <a class="el" href="structnvbio_1_1aln_1_1_staged_score_unit.html#a370af30deff6ebae052b0dbe39add228">nvbio::aln::StagedScoreUnit&lt; stream_type &gt;</a>
@@ -185,66 +197,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>const_iterator
 : <a class="el" href="classboost_1_1container_1_1priority__deque.html#a5595c9da0b7c835462ecf638b28da8d1">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
-, <a class="el" href="structnvbio_1_1priority__deque.html#a58d2df6b00680af1ae3751dadd9528b4">nvbio::priority_deque&lt; T, Container, Compare &gt;</a>
+, <a class="el" href="classnvbio_1_1priority__deque.html#a4e3cc0939b2501f2fa6081a44add7c58">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 , <a class="el" href="structnvbio_1_1vector__wrapper.html#a66d2c9b7541806e765e827ec111546bc">nvbio::vector_wrapper&lt; Iterator &gt;</a>
 </li>
 <li>const_pointer
 : <a class="el" href="classboost_1_1container_1_1priority__deque.html#aa2d43ceceb9e83adb4e45605a972db3c">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
-, <a class="el" href="structnvbio_1_1priority__deque.html#a9d32aa81c86074b04321a670893da387">nvbio::priority_deque&lt; T, Container, Compare &gt;</a>
+, <a class="el" href="classnvbio_1_1priority__deque.html#ae9f298e1c2269a805b014708f9ccc7fa">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 </li>
 <li>const_read_stream_type
 : <a class="el" href="structnvbio_1_1io_1_1_read_data.html#a6bb14fc5e94a72e0154e66fd6673cf75">nvbio::io::ReadData</a>
 </li>
 <li>const_reference
-: <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a064b09169ee3ca9a247ae4afa52125c2">nvbio::cuda::ldg_pointer&lt; T &gt;</a>
-, <a class="el" href="classboost_1_1container_1_1priority__deque.html#ae07f762070f0fdb428abfffc49fdb689">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
-, <a class="el" href="structnvbio_1_1_packed_stream_iterator.html#af7f10b6848ca4ec967636ed09240ef87">nvbio::PackedStreamIterator&lt; Stream &gt;</a>
-, <a class="el" href="structnvbio_1_1priority__deque.html#a564ca20a45532d1f307057be49371565">nvbio::priority_deque&lt; T, Container, Compare &gt;</a>
+: <a class="el" href="structnvbio_1_1_packed_stream_iterator.html#af7f10b6848ca4ec967636ed09240ef87">nvbio::PackedStreamIterator&lt; Stream &gt;</a>
 , <a class="el" href="structnvbio_1_1fake__vector__iterator.html#aebf471fc3bda95f9b654fc0fd161f259">nvbio::fake_vector_iterator&lt; Stream &gt;</a>
-, <a class="el" href="structnvbio_1_1block__strided__iterator.html#a57c1e5b2f5b07178a9d815ba78b6b574">nvbio::block_strided_iterator&lt; BLOCKSIZE, T &gt;</a>
-, <a class="el" href="structnvbio_1_1transform__iterator.html#a3abda4b73e4ca0daf69147407b5d3668">nvbio::transform_iterator&lt; T, Transform &gt;</a>
-, <a class="el" href="structnvbio_1_1vector__wrapper.html#a2204f2ccd3d7ae75761a7b451a6bd2e9">nvbio::vector_wrapper&lt; Iterator &gt;</a>
+, <a class="el" href="classboost_1_1container_1_1priority__deque.html#ae07f762070f0fdb428abfffc49fdb689">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a064b09169ee3ca9a247ae4afa52125c2">nvbio::cuda::ldg_pointer&lt; T &gt;</a>
+, <a class="el" href="structnvbio_1_1cuda_1_1load__pointer.html#a6c99a16347e8704093fa929262a5027a">nvbio::cuda::load_pointer&lt; T, MOD &gt;</a>
+, <a class="el" href="classnvbio_1_1priority__deque.html#a9c709d72b519af99694ed665070b36f3">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 , <a class="el" href="structnvbio_1_1strided__iterator.html#ab968a44e553592440390fac639dbf1ba">nvbio::strided_iterator&lt; T &gt;</a>
+, <a class="el" href="structnvbio_1_1block__strided__iterator.html#a57c1e5b2f5b07178a9d815ba78b6b574">nvbio::block_strided_iterator&lt; BLOCKSIZE, T &gt;</a>
+, <a class="el" href="structnvbio_1_1vector__wrapper.html#a2204f2ccd3d7ae75761a7b451a6bd2e9">nvbio::vector_wrapper&lt; Iterator &gt;</a>
+, <a class="el" href="structnvbio_1_1transform__iterator.html#a3abda4b73e4ca0daf69147407b5d3668">nvbio::transform_iterator&lt; T, Transform &gt;</a>
 </li>
 <li>const_type
-: <a class="el" href="structnvbio_1_1bind__first__functor.html#a6e5636101bd5cc7324ea98a3324a3796">nvbio::bind_first_functor&lt; Functor &gt;</a>
-, <a class="el" href="structnvbio_1_1bind__second__functor.html#ad52ba8c8ec353efdc13b6b55aeee7b7a">nvbio::bind_second_functor&lt; Functor &gt;</a>
+: <a class="el" href="structnvbio_1_1bind__second__functor.html#ad52ba8c8ec353efdc13b6b55aeee7b7a">nvbio::bind_second_functor&lt; Functor &gt;</a>
+, <a class="el" href="structnvbio_1_1bind__first__functor.html#a6e5636101bd5cc7324ea98a3324a3796">nvbio::bind_first_functor&lt; Functor &gt;</a>
 </li>
 <li>container_type
-: <a class="el" href="classboost_1_1container_1_1priority__deque.html#ac16fd5f4c6ddacb4a52b504bd7d548e6">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
-, <a class="el" href="structnvbio_1_1priority__deque.html#a60a66f1c4e050949c5d29dc3487ff500">nvbio::priority_deque&lt; T, Container, Compare &gt;</a>
+: <a class="el" href="classnvbio_1_1priority__deque.html#a1cf857b7cf4e8efe420e1714f6271731">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="classboost_1_1container_1_1priority__deque.html#ac16fd5f4c6ddacb4a52b504bd7d548e6">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 </li>
 <li>context_type
-: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_anchor_score_stream.html#a2ec6e3291c928452400e25c593271b1f">nvbio::bowtie2::cuda::detail::BestAnchorScoreStream&lt; AlignerType, PipelineType &gt;</a>
+: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_traceback_stream.html#a2eacabde33a44ad828c489138cf8759b">nvbio::bowtie2::cuda::detail::BestTracebackStream&lt; ALN_IDX, AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html#a1f816a4e0573c119a0473c8d903a3e2b">nvbio::SSA_index_multiple&lt; K, index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_s_s_a__value__multiple.html#a6ad358d973976824e9e1e2709f9bce09">nvbio::SSA_value_multiple</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_traceback_stream.html#a132cb4949f13cc895ec66d52dbdcf9b4">nvbio::bowtie2::cuda::detail::AllTracebackStream&lt; AlignerType, PipelineType &gt;</a>
+, <a class="el" href="structnvbio_1_1_s_s_a__value__multiple__device.html#a31d0491b52c8cfdc4cd1fb8cabc87a32">nvbio::SSA_value_multiple_device</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_anchor_score_stream.html#a2ec6e3291c928452400e25c593271b1f">nvbio::bowtie2::cuda::detail::BestAnchorScoreStream&lt; AlignerType, PipelineType &gt;</a>
+, <a class="el" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a0d3127bc6ba2d3c6c432b2d94ee424a8">nvbio::aln::StagedAlignmentUnitBase&lt; stream_type, derived_type &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_score_stream.html#af0cfd8bc5f8c9c952a8674911011eb79">nvbio::bowtie2::cuda::detail::BestScoreStream&lt; AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_score_stream.html#aebf6af9141e4d13c1d6cf18e2dece53d">nvbio::bowtie2::cuda::detail::AllScoreStream&lt; AlignerType, PipelineType &gt;</a>
-, <a class="el" href="structnvbio_1_1_s_s_a__value__multiple.html#a6ad358d973976824e9e1e2709f9bce09">nvbio::SSA_value_multiple</a>
-, <a class="el" href="structnvbio_1_1_s_s_a__value__multiple__device.html#a31d0491b52c8cfdc4cd1fb8cabc87a32">nvbio::SSA_value_multiple_device</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__index__multiple__device.html#aa64910a7baedbb25679ab888948a2613">nvbio::SSA_index_multiple_device&lt; K, index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_traceback_stream.html#a2eacabde33a44ad828c489138cf8759b">nvbio::bowtie2::cuda::detail::BestTracebackStream&lt; ALN_IDX, AlignerType, PipelineType &gt;</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_traceback_stream.html#a132cb4949f13cc895ec66d52dbdcf9b4">nvbio::bowtie2::cuda::detail::AllTracebackStream&lt; AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_opposite_score_stream.html#ad8b5339aa842161e27af739ecbd437df">nvbio::bowtie2::cuda::detail::BestOppositeScoreStream&lt; AlignerType, PipelineType &gt;</a>
-, <a class="el" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a0d3127bc6ba2d3c6c432b2d94ee424a8">nvbio::aln::StagedAlignmentUnitBase&lt; stream_type, derived_type &gt;</a>
 </li>
 <li>count_table_type
-: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_ldg_iterators.html#a6825a2f3b100b61a27041133e6336b20">nvbio::io::FMIndexLdgIterators</a>
+: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a7b2e28873522d4ac4a2ae3b6d3cc4bb7">nvbio::bowtie2::cuda::FMIndexDef</a>
 , <a class="el" href="structnvbio_1_1rank__dictionary.html#a58289250b6cd8781237be1e8c306e50e">nvbio::rank_dictionary&lt; SYMBOL_SIZE_T, K, TextString, OccIterator, CountTable &gt;</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_iterators.html#ad4998d2537ca5cab159857e9c119d23d">nvbio::io::FMIndexIterators</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#ad748f0c4a296037f7bcc75ff55906624">nvbio::bowtie2::cuda::FMIndexDef</a>
+, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">nvbio::io::FMIndexData</a>
+, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_c_u_d_a.html#a67974af77ca46de6cc4ebdd5db2a6f65">nvbio::io::FMIndexDataCUDA</a>
 </li>
 <li>Counter_Type
 : <a class="el" href="classnvbio_1_1internals_1_1_shared_count.html#a7c4a7dca10982191c16fbd67022ddbdd">nvbio::internals::SharedCount&lt; CounterT &gt;</a>
-, <a class="el" href="classnvbio_1_1_weak_pointer.html#af23c16eaee43db04e8f26f36d8578894">nvbio::WeakPointer&lt; T, CounterT &gt;</a>
+, <a class="el" href="classnvbio_1_1internals_1_1_weak_count.html#a9b61d8291c5b295af25a8b3b21e61724">nvbio::internals::WeakCount&lt; CounterT &gt;</a>
 , <a class="el" href="classnvbio_1_1internals_1_1_counted_base.html#a8126ea1fd8bbb39d4f84277a2b3250ce">nvbio::internals::CountedBase&lt; CounterT &gt;</a>
 , <a class="el" href="classnvbio_1_1_shared_pointer.html#ae1e7bf42e8c156866bc10d563c12291c">nvbio::SharedPointer&lt; T, CounterT &gt;</a>
-, <a class="el" href="classnvbio_1_1internals_1_1_weak_count.html#a9b61d8291c5b295af25a8b3b21e61724">nvbio::internals::WeakCount&lt; CounterT &gt;</a>
+, <a class="el" href="classnvbio_1_1_weak_pointer.html#af23c16eaee43db04e8f26f36d8578894">nvbio::WeakPointer&lt; T, CounterT &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:26:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

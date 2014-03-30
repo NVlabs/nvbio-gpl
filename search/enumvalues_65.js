@@ -8,5 +8,5 @@ var searchData=
   ['estate',['ESTATE',['../group___alignment.html#ggaf75921f1fc0f4f15d79833bade9cee41ace1149ce910358da8e412fce2f9711ef',1,'nvbio::aln']]],
   ['exact_5fmapping',['EXACT_MAPPING',['../group___mapping_detail.html#gga0b8fce785fc51d3d816dac9a35893148afb9e6aafdeb6534580333e5da63c83ff',1,'nvbio::bowtie2::cuda::detail']]],
   ['exlen',['EXLEN',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaa566a2c5006b8c3f014f20fc659c25e5b',1,'inflate.h']]],
-  ['extra',['EXTRA',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaaffb2fb86309c5c698e319b5b6dd8ab3a',1,'inflate.h']]]
+  ['extra',['extra',['../structmgpu_1_1s_log_pow2.html#abb7375d08d8de84a4814677275c290d7adb6eb7b0f4acac2a64d194b35ea120e9',1,'mgpu::sLogPow2::extra()'],['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaaffb2fb86309c5c698e319b5b6dd8ab3a',1,'EXTRA():&#160;inflate.h']]]
 ];

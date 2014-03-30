@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/basic/cuda/work_queue_multipass_inl.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/basic/cuda/work_queue_multipass_inl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="work__queue__multipass__inl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -133,7 +133,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typename</span> WorkUnitT,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typename</span> WorkStreamT,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span>     DO_LOADS&gt;</div>
@@ -148,9 +148,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> WorkUnitT WorkUnit;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> queue_capacity = grid_threads * n_tile_grids;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    WorkUnit*  work_queue    = context.m_work_queue + queue_capacity*in_queue_id;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*    continuations = context.m_continuations;</div>
@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typename</span> WorkUnitT,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typename</span> WorkStreamT&gt;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;__global__</div>
@@ -217,9 +217,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">typedef</span> WorkUnitT WorkUnit;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> queue_capacity = grid_threads * n_tile_grids;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    WorkUnit* work_queue = context.m_work_queue + queue_capacity*in_queue_id;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
@@ -252,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">typename</span> WorkUnitT,</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">typename</span> WorkStream,</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">typename</span> WorkMover&gt;</div>
@@ -267,9 +267,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">typedef</span> WorkUnitT WorkUnit;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads   = gridDim.x * <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> queue_capacity = grid_threads * n_tile_grids;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>      = threadIdx.x + blockIdx.x*<a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    WorkUnit*     in_work_queue  = context.m_work_queue + queue_capacity*(in_queue_id ? 1 : 0);</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    WorkUnit*     out_work_queue = context.m_work_queue + queue_capacity*(in_queue_id ? 0 : 1);</div>
@@ -307,15 +307,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">template</span> &lt;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">typename</span> WorkUnitT,</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>&gt;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>   <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>&gt;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> WorkStream, <span class="keyword">typename</span> WorkMover&gt;</div>
 <div class="line"><a name="l00216"></a><span class="lineno"><a class="code" href="group___work_queue.html#ga514e4aa18829dae3a9e6279f6eb7b581">  216</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1cuda_1_1_work_queue.html#ab38e2faa750a84096e5c79802a589a9b">WorkQueue&lt;MultiPassQueueTag,WorkUnitT,BLOCKDIM&gt;::consume</a>(<span class="keyword">const</span> WorkStream <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>, <span class="keyword">const</span> WorkMover mover, <a class="code" href="structnvbio_1_1cuda_1_1_work_queue_stats.html">WorkQueueStats</a>* <a class="code" href="group___work_queue_detail.html#ga066726173aa1a4d079ac3f55085d4e21">stats</a>)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">// compute the number of blocks we are going to launch</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_blocks = m_separate_loads ? </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)<a class="code" href="namespacenvbio_1_1cuda.html#a15b9e30316921c79e9aef83ef483c266">cuda::max_active_blocks</a>( wq::mk_work_queue_kernel&lt;BLOCKDIM,WorkUnit,WorkStream,false&gt;, <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>, 0u ) :</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)<a class="code" href="namespacenvbio_1_1cuda.html#a15b9e30316921c79e9aef83ef483c266">cuda::max_active_blocks</a>( wq::mk_work_queue_kernel&lt;BLOCKDIM,WorkUnit,WorkStream,true&gt;, <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>, 0u );</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads = n_blocks * <a class="code" href="group___defs.html#gga5d184c5802847fafd69a97805cf3fb0ea55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)<a class="code" href="namespacenvbio_1_1cuda.html#a15b9e30316921c79e9aef83ef483c266">cuda::max_active_blocks</a>( wq::mk_work_queue_kernel&lt;BLOCKDIM,WorkUnit,WorkStream,false&gt;, <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>, 0u ) :</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)<a class="code" href="namespacenvbio_1_1cuda.html#a15b9e30316921c79e9aef83ef483c266">cuda::max_active_blocks</a>( wq::mk_work_queue_kernel&lt;BLOCKDIM,WorkUnit,WorkStream,true&gt;, <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>, 0u );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> grid_threads = n_blocks * <a class="code" href="group___defs.html#gga870a7608912daba4b8962c661612da16a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_tile_grids = m_capacity / grid_threads;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> queue_capacity = grid_threads * n_tile_grids;</div>
@@ -364,7 +364,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// compact the output</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        thrust::inclusive_scan(</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#af217c1be03058244dda81e5f5c48e794">thrust::inclusive_scan</a>(</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            m_continuations.begin(),</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            m_continuations.begin() + in_queue_size,</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            m_continuations.begin() );</div>
@@ -391,7 +391,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

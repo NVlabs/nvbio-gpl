@@ -123,6 +123,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16ae900789c01b14556f4ef109188496021">nvbio::io::Solexa</a> = 3
  }</td></tr>
 <tr class="separator:ga3415ac326089788da99884c50b8ccb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e48da290521a74aa4a0cd6585ace320"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">nvbio::io::ReadEncoding</a> { <a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">nvbio::io::FORWARD</a> = 0x0001, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">nvbio::io::REVERSE</a> = 0x0002, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c">nvbio::io::FORWARD_COMPLEMENT</a> = 0x0004, 
+<a class="el" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68">nvbio::io::REVERSE_COMPLEMENT</a> = 0x0008
+ }</td></tr>
+<tr class="separator:ga6e48da290521a74aa4a0cd6585ace320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f8e92bcfb3339a373e5f4ff479239e5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga8f8e92bcfb3339a373e5f4ff479239e5">nvbio::io::PairedEndPolicy</a> { <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5a6f0c3ce9310d95f7b2d38181b6f00d6b">nvbio::io::PE_POLICY_FF</a> = 0, 
 <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5af2cb402f751b4c7e47933f386503cd36">nvbio::io::PE_POLICY_FR</a> = 1, 
 <a class="el" href="group___reads_i_o.html#gga8f8e92bcfb3339a373e5f4ff479239e5aff28aed6362419d0640c6d3df68675b3">nvbio::io::PE_POLICY_RF</a> = 2, 
@@ -132,8 +138,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3022ab0f80995ec0abf6eb2bb7251756"><td class="memItemLeft" align="right" valign="top">ReadDataStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga3022ab0f80995ec0abf6eb2bb7251756">nvbio::io::open_read_file</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *read_file_name, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding qualities, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_reads, <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 truncate_read_len)</td></tr>
-<tr class="separator:ga3022ab0f80995ec0abf6eb2bb7251756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memItemLeft" align="right" valign="top">ReadDataStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">nvbio::io::open_read_file</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *read_file_name, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding qualities, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_reads, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 truncate_read_len, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ReadEncoding flags)</td></tr>
+<tr class="separator:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="ga8f8e92bcfb3339a373e5f4ff479239e5"></a>
@@ -156,7 +162,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00077">77</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00087">87</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -180,38 +186,68 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00064">64</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00065">65</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6e48da290521a74aa4a0cd6585ace320"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">nvbio::io::ReadEncoding</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d"></a>FORWARD</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae"></a>REVERSE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c"></a>FORWARD_COMPLEMENT</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68"></a>REVERSE_COMPLEMENT</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00077">77</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga3022ab0f80995ec0abf6eb2bb7251756"></a>
+<a class="anchor" id="gaefea201a77fedc78f3ed33b1f2cea447"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">ReadDataStream * nvbio::io::open_read_file </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
           <td class="paramname"><em>read_file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> QualityEncoding&#160;</td>
           <td class="paramname"><em>qualities</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
           <td class="paramname"><em>max_reads</em> = <code>uint32(-1)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
-          <td class="paramname"><em>max_read_len</em> = <code>uint32(-1)</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>max_read_len</em> = <code>uint32(-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ReadEncoding&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>REVERSE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,16 +256,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>factory method to open a read file </p>
+<p>factory method to open a read file</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_file_name</td><td>the file to open </td></tr>
+    <tr><td class="paramname">qualities</td><td>the encoding of the qualities </td></tr>
+    <tr><td class="paramname">max_reads</td><td>maximum number of reads to input </td></tr>
+    <tr><td class="paramname">max_read_len</td><td>maximum read length - reads will be truncated </td></tr>
+    <tr><td class="paramname">flags</td><td>a set of flags indicating which strands to encode in the batch for each read. For example, passing FORWARD | REVERSE_COMPLEMENT will result in a stream containing BOTH the forward and reverse-complemented strands. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="reads_8cpp_source.html#l00033">33</a> of file <a class="el" href="reads_8cpp_source.html">reads.cpp</a>.</p>
+<p>Definition at line <a class="el" href="reads_8cpp_source.html#l00036">36</a> of file <a class="el" href="reads_8cpp_source.html">reads.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

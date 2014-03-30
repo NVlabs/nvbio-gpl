@@ -109,9 +109,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     typename T&gt;<br/>
 struct nvbio::cuda::ldg_pointer&lt; T &gt;</h3>
 
-<p>Wrapper class to create a transform iterator out of another base iterator and a function </p>
+<p>Wrapper class to create an __ldg() iterator out of a raw pointer </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00032">32</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00035">35</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="ldg_8h_source.html">ldg.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -126,7 +126,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a5b9a55174e2298be00c9fd7ce074a764"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a5b9a55174e2298be00c9fd7ce074a764">pointer</a></td></tr>
 <tr class="separator:a5b9a55174e2298be00c9fd7ce074a764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6db7cd4ba1548b5b04a9c09e183551"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
-&lt; <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T * &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a></td></tr>
+&lt; <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T * &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a></td></tr>
 <tr class="separator:a0b6db7cd4ba1548b5b04a9c09e183551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf8402eec0d568e04331a50ef9c28a3c"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#abf8402eec0d568e04331a50ef9c28a3c">iterator_category</a></td></tr>
@@ -136,15 +136,15 @@ std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="botto
 Public Methods</h2></td></tr>
 <tr class="memitem:a6550c79342f864bd8bf6534b055c56ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a6550c79342f864bd8bf6534b055c56ec">ldg_pointer</a> ()</td></tr>
 <tr class="separator:a6550c79342f864bd8bf6534b055c56ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29b647a99972f3d541743ea388110ad2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a29b647a99972f3d541743ea388110ad2">ldg_pointer</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *base)</td></tr>
+<tr class="memitem:a29b647a99972f3d541743ea388110ad2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a29b647a99972f3d541743ea388110ad2">ldg_pointer</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *base)</td></tr>
 <tr class="separator:a29b647a99972f3d541743ea388110ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d44f87c326ddd1cd37677431a9b01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a01d44f87c326ddd1cd37677431a9b01b">ldg_pointer</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> &amp;it)</td></tr>
+<tr class="memitem:a01d44f87c326ddd1cd37677431a9b01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a01d44f87c326ddd1cd37677431a9b01b">ldg_pointer</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> &amp;it)</td></tr>
 <tr class="separator:a01d44f87c326ddd1cd37677431a9b01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d31b3f7438b0dede422ca401377cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#ab0d31b3f7438b0dede422ca401377cf9">operator[]</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#ab0d31b3f7438b0dede422ca401377cf9">operator[]</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ab0d31b3f7438b0dede422ca401377cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca80835deb288e2950be88ee270eca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a2ca80835deb288e2950be88ee270eca1">operator*</a> () <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a2ca80835deb288e2950be88ee270eca1">operator*</a> () <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a2ca80835deb288e2950be88ee270eca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c53a8387a0965d836da8ce5042c64a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a><br class="typebreak"/>
@@ -164,31 +164,31 @@ Public Methods</h2></td></tr>
 <tr class="separator:a61f0dceb0a890d38d2ed07140e4d0451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0774dc522123d261901bcc6facdd1ea9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a><br class="typebreak"/>
-&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0774dc522123d261901bcc6facdd1ea9">operator+</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0774dc522123d261901bcc6facdd1ea9">operator+</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a0774dc522123d261901bcc6facdd1ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac79452f62a09212b000e516cfb618ecd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a><br class="typebreak"/>
-&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#ac79452f62a09212b000e516cfb618ecd">operator-</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#ac79452f62a09212b000e516cfb618ecd">operator-</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ac79452f62a09212b000e516cfb618ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f29c3b20dc6dd0cc3f8f92569dfe91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a><br class="typebreak"/>
-&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a26f29c3b20dc6dd0cc3f8f92569dfe91">operator+=</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i)</td></tr>
+&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a26f29c3b20dc6dd0cc3f8f92569dfe91">operator+=</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i)</td></tr>
 <tr class="separator:a26f29c3b20dc6dd0cc3f8f92569dfe91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815b8d803fbf18af72d78e8f819626ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a><br class="typebreak"/>
-&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a815b8d803fbf18af72d78e8f819626ed">operator-=</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i)</td></tr>
+&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a815b8d803fbf18af72d78e8f819626ed">operator-=</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> i)</td></tr>
 <tr class="separator:a815b8d803fbf18af72d78e8f819626ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006a3dc292050a4291d4209507f87b5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a006a3dc292050a4291d4209507f87b5b">operator-</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; it) <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a006a3dc292050a4291d4209507f87b5b">operator-</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; it) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a006a3dc292050a4291d4209507f87b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af21a4dc5273ba5a50bf8c0fe345b278a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#af21a4dc5273ba5a50bf8c0fe345b278a">operator=</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;it)</td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#af21a4dc5273ba5a50bf8c0fe345b278a">operator=</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;it)</td></tr>
 <tr class="separator:af21a4dc5273ba5a50bf8c0fe345b278a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:a89759ff5ebeeb75aa51849e0a306f72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a89759ff5ebeeb75aa51849e0a306f72b">m_base</a></td></tr>
+<tr class="memitem:a89759ff5ebeeb75aa51849e0a306f72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a89759ff5ebeeb75aa51849e0a306f72b">m_base</a></td></tr>
 <tr class="separator:a89759ff5ebeeb75aa51849e0a306f72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -204,7 +204,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00036">36</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00039">39</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -215,12 +215,12 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::iterator_traits&lt;<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T*&gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a></td>
+          <td class="memname">typedef std::iterator_traits&lt;<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T*&gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00038">38</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00041">41</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00039">39</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00042">42</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00037">37</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00040">40</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00035">35</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00038">38</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00034">34</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00037">37</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +313,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00044">44</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00047">47</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +329,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *&#160;</td>
           <td class="paramname"><em>base</em>)</td><td></td>
           <td></td>
         </tr>
@@ -342,7 +342,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00049">49</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00052">52</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>it</em>)</td><td></td>
           <td></td>
         </tr>
@@ -371,7 +371,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>copy constructor </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00054">54</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00057">57</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>dereference operator </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00071">71</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00074">74</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt;T&gt; <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator+ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -429,7 +429,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>addition </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00121">121</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00124">124</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -457,7 +457,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>pre-increment </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00083">83</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00086">86</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -486,7 +486,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>post-increment </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00092">92</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00095">95</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -502,7 +502,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt;T&gt;&amp; <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator+= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td></td>
         </tr>
@@ -515,7 +515,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>addition </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00137">137</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00140">140</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt;T&gt; <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator- </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -544,7 +544,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>subtraction </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00129">129</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00132">132</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -560,7 +560,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator- </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>it</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -573,7 +573,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>iterator subtraction </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00155">155</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00158">158</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -601,7 +601,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>pre-decrement </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00102">102</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00105">105</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -630,7 +630,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>post-decrement </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00111">111</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00114">114</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -646,7 +646,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt;T&gt;&amp; <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator-= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a0b6db7cd4ba1548b5b04a9c09e183551">difference_type</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td></td>
         </tr>
@@ -659,7 +659,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>subtraction </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00146">146</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00149">149</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -675,7 +675,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&amp; <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">ldg_pointer</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>it</em>)</td><td></td>
           <td></td>
         </tr>
@@ -688,7 +688,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>assignment </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00163">163</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00166">166</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -704,7 +704,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a151cc2adab992a10a4a6bb4b4e3cc482">value_type</a> <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
           <td> const</td>
         </tr>
@@ -717,7 +717,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>const indexing operator </p>
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00059">59</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00062">62</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
@@ -729,22 +729,22 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T* <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::m_base</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T* <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt; T &gt;::m_base</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ldg_8h_source.html#l00169">169</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
+<p>Definition at line <a class="el" href="ldg_8h_source.html#l00172">172</a> of file <a class="el" href="ldg_8h_source.html">ldg.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/basic/cuda/<a class="el" href="ldg_8h_source.html">ldg.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/basic/cuda/<a class="el" href="ldg_8h_source.html">ldg.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:43 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

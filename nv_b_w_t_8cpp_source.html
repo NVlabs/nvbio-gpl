@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBWT/nvBWT.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBWT/nvBWT.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// nvBWT.cpp : Defines the entry point for the console application.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// cuBWT.cpp : Defines the entry point for the console application.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
@@ -405,7 +405,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;StreamType*,uint8,2,true,SA_facade_type&gt;</a> stream_type;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;uint32*,uint8,2,true,SA_facade_type&gt;</a> bwt_stream_type;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    stream_type     <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>( base_stream );</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    bwt_stream_type bwt( bwt_stream );</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    bwt_stream_type <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>( bwt_stream );</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;\nbuffering bps... started\n&quot;</span>);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// read all files</span></div>
@@ -726,18 +726,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;}</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;</div>
-<div class="line"><a name="l00628"></a><span class="lineno"><a class="code" href="nv_b_w_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">  628</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2_c_make_files_22_88_811_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00628"></a><span class="lineno"><a class="code" href="nv_b_w_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">  628</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="suftest_8c.html#ac0f2228420376f4db7e1274f2b41667c">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;{</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="crc_8cpp.html#a5a735798e6972adc694a5428dd7ccaf9">crcInit</a>();</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="keywordflow">if</span> (argc &lt; 2)</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    {</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;please specify input and output file names, e.g:\n&quot;</span>);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;  nvBWT [options] myinput.*.fa output-prefix\n&quot;</span>);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;  cuBWT [options] myinput.*.fa output-prefix\n&quot;</span>);</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;  options:\n&quot;</span>);</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -m     max_length\n&quot;</span>);</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -lib   divsufsort|sais|bwtsw\n&quot;</span>);</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -p     byte|word\n&quot;</span>);</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -m max_length\n&quot;</span>);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -lib divsufsort|sais|bwtsw\n&quot;</span>);</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;    -p   byte|word\n&quot;</span>);</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    }</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;arch       : %lu bit\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*)*8u);</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;SA storage : %lu bits\n&quot;</span>, <span class="keyword">sizeof</span>(<a class="code" href="nv_b_w_t_8cpp.html#a3755bf8d4899c32906f660a786eae873">SA_storage_type</a>)*8u);</div>
@@ -806,7 +806,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

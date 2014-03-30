@@ -1,10 +1,13 @@
 var searchData=
 [
   ['h',['H',['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_edit_distance_tag_01_4.html#a8fa0380a477d73bc401500921a2e442a',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::EditDistanceTag &gt;::H()'],['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_smith_waterman_tag_01_4.html#a07d0202aaebeaddda8ca21b13d2cd959',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::SmithWatermanTag &gt;::H()'],['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_gotoh_tag_01_4.html#af7489a89e7dd57a44f46f91b44a5097e',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::GotohTag &gt;::H()']]],
+  ['h_5factive_5fsuffixes',['h_active_suffixes',['../structnvbio_1_1priv_1_1_host_string_set_radices.html#ac052e79cb52e67e4d55c22d1915314d4',1,'nvbio::priv::HostStringSetRadices']]],
+  ['h_5fchunk_5foffsets',['h_chunk_offsets',['../structnvbio_1_1priv_1_1_host_chunk_loader.html#a780f1d8ed513fa5491a05a6876d1beec',1,'nvbio::priv::HostChunkLoader']]],
   ['h_5ffile',['h_file',['../structnvbio_1_1_mapped_file_1_1_impl.html#ad15be0ff15e6c8bde24945f58c93acb4',1,'nvbio::MappedFile::Impl::h_file()'],['../structnvbio_1_1_server_mapped_file_1_1_impl.html#ad734ba536f6136c6b060468885a8f75e',1,'nvbio::ServerMappedFile::Impl::h_file()']]],
   ['h_5fflow',['H_flow',['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_edit_distance_tag_01_4.html#a96e5e7e0b636043431a832d43f87bc24',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::EditDistanceTag &gt;::H_flow()'],['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_smith_waterman_tag_01_4.html#a08186dc2d72ab39549815806841e91b1',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::SmithWatermanTag &gt;::H_flow()'],['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_gotoh_tag_01_4.html#a54a7a918126ecc4c689669b754371579',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::GotohTag &gt;::H_flow()']]],
-  ['has_5fordered_5fiterators',['has_ordered_iterators',['../classboost_1_1container_1_1priority__deque.html#a0cf05b01694450435f57f1786f57f6b7',1,'boost::container::priority_deque::has_ordered_iterators()'],['../structnvbio_1_1priority__deque.html#aa162305dceadfc0a990e96162a98acc4',1,'nvbio::priority_deque::has_ordered_iterators()']]],
-  ['has_5freserve',['has_reserve',['../classboost_1_1container_1_1priority__deque.html#ad205fb2d494c1f73a4db0f94d9d13534',1,'boost::container::priority_deque::has_reserve()'],['../structnvbio_1_1priority__deque.html#a606e1e10d73c4a6f6448d07120beb881',1,'nvbio::priority_deque::has_reserve()']]],
+  ['h_5fsymbols',['h_symbols',['../structnvbio_1_1priv_1_1_host_string_set_radices.html#a5f8c4f78bd2df86242073303fe133457',1,'nvbio::priv::HostStringSetRadices']]],
+  ['has_5fordered_5fiterators',['has_ordered_iterators',['../classboost_1_1container_1_1priority__deque.html#a0cf05b01694450435f57f1786f57f6b7',1,'boost::container::priority_deque::has_ordered_iterators()'],['../classnvbio_1_1priority__deque.html#a731216975493287a5569523b05a0ec5a',1,'nvbio::priority_deque::has_ordered_iterators()']]],
+  ['has_5freserve',['has_reserve',['../classboost_1_1container_1_1priority__deque.html#ad205fb2d494c1f73a4db0f94d9d13534',1,'boost::container::priority_deque::has_reserve()'],['../classnvbio_1_1priority__deque.html#ad70448d4fbcbb355db690a76e92e76f4',1,'nvbio::priority_deque::has_reserve()']]],
   ['has_5fsecond',['has_second',['../structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#a33888489ce7e84086ae823c976ceba69',1,'nvbio::io::DebugOutput::DbgInfo::has_second()'],['../structnvbio_1_1alndiff_1_1_alignment.html#ad616659adbf439a9aecb43fde22cdd1e',1,'nvbio::alndiff::Alignment::has_second()'],['../structnvbio_1_1alndiff_1_1_debug_alignment_stream_1_1_info.html#acba39c4e16ac3b98933f870a80c7a21e',1,'nvbio::alndiff::DebugAlignmentStream::Info::has_second()']]],
   ['hash_5fbits',['hash_bits',['../structinternal__state.html#a5dbd3a26550651a746a8829210252715',1,'internal_state']]],
   ['hash_5fmask',['hash_mask',['../structinternal__state.html#a824166a384dcbf6d508c0f6b97a1cb89',1,'internal_state']]],
@@ -14,12 +17,11 @@ var searchData=
   ['havedict',['havedict',['../structinflate__state.html#a2eb1cd634ed6baade952ffa5938ebcdc',1,'inflate_state']]],
   ['hcrc',['hcrc',['../structgz__header__s.html#a29fa8de3acff8d8c7bad61dc924d8564',1,'gz_header_s']]],
   ['head',['head',['../structinternal__state.html#aafd9ba338599f15de29386ff7a0218f4',1,'internal_state::head()'],['../structinflate__state.html#aac35b33a559009eb4bc0e2bdd8e9b5c6',1,'inflate_state::head()']]],
-  ['headerextensions',['headerExtensions',['../structcm_c_a_p_i.html#aa8a2b0429d9eb43866ba10d0fd19769b',1,'cmCAPI']]],
-  ['headerfileonly',['headerFileOnly',['../structcm_c_a_p_i.html#a6aa5ec4091dd512b17b5e6431094ff89',1,'cmCAPI']]],
   ['headertext',['HeaderText',['../struct_bam_reader_1_1_bam_reader_private.html#ad35953be12184a2a1112ed9329a21153',1,'BamReader::BamReaderPrivate']]],
   ['heap',['heap',['../structinternal__state.html#ad7edb9b1d387e631bc6fde1cad0af758',1,'internal_state']]],
   ['heap_5flen',['heap_len',['../structinternal__state.html#a0659e23b0188ac16db58f98ae2b67b6b',1,'internal_state']]],
   ['heap_5fmax',['heap_max',['../structinternal__state.html#aa8c78bbfa5d71f3ccc55445a62897f47',1,'internal_state']]],
+  ['height',['height',['../structmgpu_1_1_sparse_matrix.html#aff325d59fcfb0a8eef16a10e23b6660c',1,'mgpu::SparseMatrix::height()'],['../structmgpu_1_1_matrix_stats.html#ad77a4de5efdf40186efc5e6c70c4feea',1,'mgpu::MatrixStats::height()']]],
   ['hi_5fbits',['HI_BITS',['../structnvbio_1_1io_1_1_read_data_view.html#aa11304175a7e35faa84a4a3e724f1a1b',1,'nvbio::io::ReadDataView']]],
   ['high_5fwater',['high_water',['../structinternal__state.html#a85439cd585435b2590039339139d25cb',1,'internal_state']]],
   ['higher_5fmapq',['higher_mapQ',['../structnvbio_1_1alndiff_1_1_alignment_stats.html#a217b961728863d45843e9aafb6871cee',1,'nvbio::alndiff::AlignmentStats']]],
@@ -50,5 +52,6 @@ var searchData=
   ['hits_5ftop_5ftotal',['hits_top_total',['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a490ec99397a7a655f96cb57f4b78bab5',1,'nvbio::bowtie2::cuda::Stats']]],
   ['hits_5ftotal',['hits_total',['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a46cc8dfaca8ba2c51dced0145f6ea2d8',1,'nvbio::bowtie2::cuda::Stats']]],
   ['hold',['hold',['../structinflate__state.html#a5a91b1c59e52f1aa7eda75b86b05b843',1,'inflate_state']]],
+  ['host_5fmemory',['host_memory',['../group___sufsort.html#gae06d8cf3a51883f227a9c92f90bf67d8',1,'nvbio::BWTParams']]],
   ['how',['how',['../structgz__state.html#ac6e4b7db699aacd089f6d55b01483d6f',1,'gz_state']]]
 ];

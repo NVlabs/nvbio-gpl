@@ -27,6 +27,7 @@ var searchData=
   ['fmindexdatammapserver',['FMIndexDataMMAPServer',['../structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_server.html',1,'nvbio::io']]],
   ['fmindexdataram',['FMIndexDataRAM',['../structnvbio_1_1io_1_1_f_m_index_data_r_a_m.html',1,'nvbio::io']]],
   ['fmindexdef',['FMIndexDef',['../structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html',1,'nvbio::bowtie2::cuda']]],
-  ['fmindexiterators',['FMIndexIterators',['../structnvbio_1_1io_1_1_f_m_index_iterators.html',1,'nvbio::io']]],
-  ['fmindexldgiterators',['FMIndexLdgIterators',['../structnvbio_1_1io_1_1_f_m_index_ldg_iterators.html',1,'nvbio::io']]]
+  ['formatopmarkarray',['FormatOpMarkArray',['../structmgpu_1_1_format_op_mark_array.html',1,'mgpu']]],
+  ['formatopmaskbit',['FormatOpMaskBit',['../structmgpu_1_1_format_op_mask_bit.html',1,'mgpu']]],
+  ['formatopprintf',['FormatOpPrintf',['../structmgpu_1_1_format_op_printf.html',1,'mgpu']]]
 ];

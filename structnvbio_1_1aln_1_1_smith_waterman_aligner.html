@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type &gt; Struct Template Reference</title>
+<title>NVBIO: nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,14 +102,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-attribs">Static Public Members</a> &#124;
 <a href="structnvbio_1_1aln_1_1_smith_waterman_aligner-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___aligner.html">Aligners</a></div></div>  </div>
+<div class="title">nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___aligner.html">Aligners</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
     AlignmentType T_TYPE, 
-    typename scoring_scheme_type&gt;<br/>
-struct nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type &gt;</h3>
+    typename scoring_scheme_type, 
+    typename AlgorithmType = PatternBlockingTag&gt;<br/>
+struct nvbio::aln::SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;</h3>
 
 <p>A Smith-Waterman alignment algorithm, see <a class="el" href="group___aligner.html">Aligners</a> <a class="anchor" id="SmithWatermanAligner"></a> </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -137,65 +138,86 @@ Smith-Waterman Scoring Scheme</h1>
 <div class="line">    <a class="code" href="namespacenvbio.html#a938b5b5bd985a42f95879b4616c3ea8a">int32</a> insertion()                   <span class="keyword">const</span>;</div>
 <div class="line">};</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00392">392</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00462">462</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a96f33536220090352e917d3618eed15e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_tag.html">SmithWatermanTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a96f33536220090352e917d3618eed15e">aligner_tag</a></td></tr>
-<tr class="memdesc:a96f33536220090352e917d3618eed15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___aligner_tag.html">Aligner Tag</a>  <a href="#a96f33536220090352e917d3618eed15e">More...</a><br/></td></tr>
-<tr class="separator:a96f33536220090352e917d3618eed15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62eb0b5f033dd68637e619218a523dd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_tag.html">SmithWatermanTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#aa62eb0b5f033dd68637e619218a523dd">aligner_tag</a></td></tr>
+<tr class="memdesc:aa62eb0b5f033dd68637e619218a523dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___aligner_tag.html">Aligner Tag</a>  <a href="#aa62eb0b5f033dd68637e619218a523dd">More...</a><br/></td></tr>
+<tr class="separator:aa62eb0b5f033dd68637e619218a523dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051925039ed759016436eeaea86fa29d"><td class="memItemLeft" align="right" valign="top">typedef AlgorithmType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a051925039ed759016436eeaea86fa29d">algorithm_tag</a></td></tr>
+<tr class="memdesc:a051925039ed759016436eeaea86fa29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="group___algorithm_tag.html">Algorithm Tag</a>  <a href="#a051925039ed759016436eeaea86fa29d">More...</a><br/></td></tr>
+<tr class="separator:a051925039ed759016436eeaea86fa29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:afc30b6eb9255ba4e2302d0d4fdee1111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#afc30b6eb9255ba4e2302d0d4fdee1111">SmithWatermanAligner</a> (<a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type _scheme)</td></tr>
-<tr class="separator:afc30b6eb9255ba4e2302d0d4fdee1111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68fcbd733eff7e8a0e8dc3f6a4046a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ad68fcbd733eff7e8a0e8dc3f6a4046a9">SmithWatermanAligner</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type _scheme)</td></tr>
+<tr class="separator:ad68fcbd733eff7e8a0e8dc3f6a4046a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:ab82ec9d9e88ed5c27caf2fa7255b8acf"><td class="memItemLeft" align="right" valign="top">scoring_scheme_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#ab82ec9d9e88ed5c27caf2fa7255b8acf">scheme</a></td></tr>
-<tr class="separator:ab82ec9d9e88ed5c27caf2fa7255b8acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7053c9b435c0e969cf536c7e7f13cfc8"><td class="memItemLeft" align="right" valign="top">scoring_scheme_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a></td></tr>
+<tr class="separator:a7053c9b435c0e969cf536c7e7f13cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Members</h2></td></tr>
-<tr class="memitem:afefbf9f67e31d1e3ccfa73efd5e5f9dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#afefbf9f67e31d1e3ccfa73efd5e5f9dc">TYPE</a> = T_TYPE</td></tr>
-<tr class="memdesc:afefbf9f67e31d1e3ccfa73efd5e5f9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">the AlignmentType  <a href="#afefbf9f67e31d1e3ccfa73efd5e5f9dc">More...</a><br/></td></tr>
-<tr class="separator:afefbf9f67e31d1e3ccfa73efd5e5f9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ddef2797d4dd337053ecfd10c88c56"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a63ddef2797d4dd337053ecfd10c88c56">TYPE</a> = T_TYPE</td></tr>
+<tr class="memdesc:a63ddef2797d4dd337053ecfd10c88c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">the AlignmentType  <a href="#a63ddef2797d4dd337053ecfd10c88c56">More...</a><br/></td></tr>
+<tr class="separator:a63ddef2797d4dd337053ecfd10c88c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a96f33536220090352e917d3618eed15e"></a>
+<a class="anchor" id="a051925039ed759016436eeaea86fa29d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_tag.html">SmithWatermanTag</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a96f33536220090352e917d3618eed15e">aligner_tag</a></td>
+          <td class="memname">typedef AlgorithmType <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a051925039ed759016436eeaea86fa29d">algorithm_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the <a class="el" href="group___algorithm_tag.html">Algorithm Tag</a> </p>
+
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00467">467</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa62eb0b5f033dd68637e619218a523dd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_tag.html">SmithWatermanTag</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#aa62eb0b5f033dd68637e619218a523dd">aligner_tag</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>the <a class="el" href="group___aligner_tag.html">Aligner Tag</a> </p>
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00396">396</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00466">466</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afc30b6eb9255ba4e2302d0d4fdee1111"></a>
+<a class="anchor" id="ad68fcbd733eff7e8a0e8dc3f6a4046a9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">SmithWatermanAligner</a> </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::<a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">SmithWatermanAligner</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type&#160;</td>
+          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type&#160;</td>
           <td class="paramname"><em>_scheme</em>)</td><td></td>
           <td></td>
         </tr>
@@ -207,38 +229,38 @@ template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00399">399</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00470">470</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ab82ec9d9e88ed5c27caf2fa7255b8acf"></a>
+<a class="anchor" id="a7053c9b435c0e969cf536c7e7f13cfc8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">scoring_scheme_type <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::scheme</td>
+          <td class="memname">scoring_scheme_type <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::scheme</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00401">401</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00472">472</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afefbf9f67e31d1e3ccfa73efd5e5f9dc"></a>
+<a class="anchor" id="a63ddef2797d4dd337053ecfd10c88c56"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
+template&lt;AlignmentType T_TYPE, typename scoring_scheme_type, typename AlgorithmType = PatternBlockingTag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vs2008_2_rel_with_deb_info-x64_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type &gt;::TYPE = T_TYPE</td>
+          <td class="memname"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___alignment.html#gab731872890371bb772663612b5b9c717">AlignmentType</a> <a class="el" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">nvbio::aln::SmithWatermanAligner</a>&lt; T_TYPE, scoring_scheme_type, AlgorithmType &gt;::TYPE = T_TYPE</td>
         </tr>
       </table>
   </td>
@@ -250,17 +272,17 @@ template&lt;AlignmentType T_TYPE, typename scoring_scheme_type&gt; </div>
 
 <p>the AlignmentType </p>
 
-<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00394">394</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="alignment_2alignment_8h_source.html#l00464">464</a> of file <a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/alignment/<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/alignment/<a class="el" href="alignment_2alignment_8h_source.html">alignment.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:28 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

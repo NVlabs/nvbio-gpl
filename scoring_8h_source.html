@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvBowtie/bowtie2/cuda/scoring.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvBowtie/bowtie2/cuda/scoring.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="scoring_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -287,9 +287,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">static</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html">SmithWatermanScoringScheme</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a9cb2e0a9f890ed1394d6db5185e2728d">local</a>();</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#ad15e139f5151112f681a0f8acf0724d3">SmithWatermanScoringScheme</a>(<span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a> type = <a class="code" href="group__nv_bowtie.html#gga774096281a1bc92f00e0e78548b22b6fa2fa00b5322dc2404e6308fbb4c325194">LocalAlignment</a>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a2637dc55b92fac45275114ba08a2227f">SmithWatermanScoringScheme</a>();</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#ad15e139f5151112f681a0f8acf0724d3">SmithWatermanScoringScheme</a>(</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a2637dc55b92fac45275114ba08a2227f">SmithWatermanScoringScheme</a>(</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options,</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a> type = <a class="code" href="group__nv_bowtie.html#gga774096281a1bc92f00e0e78548b22b6fa2fa00b5322dc2404e6308fbb4c325194">LocalAlignment</a>);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
@@ -380,7 +380,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keyword">typename</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1make__aligner__dispatch.html">make_aligner_dispatch&lt;TYPE,scheme_type&gt;::type</a></div>
 <div class="line"><a name="l00365"></a><span class="lineno"><a class="code" href="group___alignment.html#gaf99c1864feb3bd877bc443e1dd82c98d">  365</a></span>&#160;<a class="code" href="group___alignment.html#gaf99c1864feb3bd877bc443e1dd82c98d">make_aligner</a>(<span class="keyword">const</span> scheme_type&amp; scheme) { <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1make__aligner__dispatch.html">make_aligner_dispatch&lt;TYPE,scheme_type&gt;::make</a>(); }</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;SmithWatermanScoringScheme&lt;&gt; <a class="code" href="group___alignment.html#gaf4b521ae98299fcd8b9f08f7f63f3f77">load_scoring_scheme</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;SmithWatermanScoringScheme&lt;&gt; <a class="code" href="group___alignment.html#ga3ff3e244d804bfec49cb21578e12c74f">load_scoring_scheme</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <a class="code" href="group__nv_bowtie.html#ga774096281a1bc92f00e0e78548b22b6f">AlignmentType</a> type);</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
 <div class="line"><a name="l00375"></a><span class="lineno"><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">  375</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;{</div>
@@ -428,7 +428,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

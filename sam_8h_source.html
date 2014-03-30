@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/p4research/research/EmergingApplications/Investigations/genomics/nvbio/src/nvbio/io/reads/sam.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/reads/sam.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="sam_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * nvbio</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2011-2013, NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2012-2014, NVIDIA Corporation</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
@@ -163,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// ReadDataFile from a SAM file</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html">   63</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html">ReadDataFile_SAM</a> : <span class="keyword">public</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html">ReadDataFile</a></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a60acaad682c3df012fb8337b53bef965a42cfbf07322114a323b2b5e780ee2828">   65</a></span>&#160;    <span class="keyword">enum</span> { <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a60acaad682c3df012fb8337b53bef965a42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a> = 1024 };</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#abe7a1198ffcc5df00a49f7761a822f1ba42cfbf07322114a323b2b5e780ee2828">   65</a></span>&#160;    <span class="keyword">enum</span> { <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#abe7a1198ffcc5df00a49f7761a822f1ba42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a> = 1024 };</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964">   67</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964">SortOrder</a></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
@@ -173,42 +173,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">   72</a></span>&#160;        <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">SortOrder_coordinate</a>,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a6a6a64b16116b16e1cd3577b24787d82">ReadDataFile_SAM</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *read_file_name,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ae44dd752df3efafafc25f743af4365c8">ReadDataFile_SAM</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *read_file_name,</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                     <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                     <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_read_len);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ad4f08b18ec7e5ba33b8009d445d20dee">nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a> *output, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a2dc3169c97bdb4896a3a663eea69f974">init</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> readLine(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> rewindLine(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> parseHeaderLine(<span class="keywordtype">char</span> *start);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="zlib_8h.html#acd0143ddd532551631ecc7093fd7adfc">gzFile</a> fp;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// a buffer for a full line; this will grow as needed</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">char</span> *linebuf;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// current size of the buffer</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> linebuf_size;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// length of the current line in the buffer</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> line_length;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// how many lines we parsed so far</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> numLines;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// info from the header</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">char</span> *version;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964">SortOrder</a> sortOrder;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                     <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_read_len,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                     <span class="keyword">const</span> <a class="code" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">ReadEncoding</a> flags);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a5736c2aa5a6ff72986c507ddc363f27e">nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a> *output, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads, <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bps);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a2dc3169c97bdb4896a3a663eea69f974">init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> readLine(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> rewindLine(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> parseHeaderLine(<span class="keywordtype">char</span> *start);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="zlib_8h.html#acd0143ddd532551631ecc7093fd7adfc">gzFile</a> fp;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// a buffer for a full line; this will grow as needed</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">char</span> *linebuf;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// current size of the buffer</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> linebuf_size;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// length of the current line in the buffer</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> line_length;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// how many lines we parsed so far</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> numLines;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// info from the header</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">char</span> *version;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964">SortOrder</a> sortOrder;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 20 2014 19:25:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 30 2014 12:09:03 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -3,6 +3,7 @@ var searchData=
   ['table_5fobject',['table_object',['../structnvbio_1_1html_1_1table__object.html',1,'nvbio::html']]],
   ['td_5fobject',['td_object',['../structnvbio_1_1html_1_1td__object.html',1,'nvbio::html']]],
   ['testbacktracker',['TestBacktracker',['../structnvbio_1_1aln_1_1_test_backtracker.html',1,'nvbio::aln']]],
+  ['textblockingtag',['TextBlockingTag',['../structnvbio_1_1aln_1_1_text_blocking_tag.html',1,'nvbio::aln']]],
   ['th_5fobject',['th_object',['../structnvbio_1_1html_1_1th__object.html',1,'nvbio::html']]],
   ['thread',['Thread',['../classnvbio_1_1_thread.html',1,'nvbio']]],
   ['thread_3c_20bgzfthread_20_3e',['Thread&lt; BgzfThread &gt;',['../classnvbio_1_1_thread.html',1,'nvbio']]],
@@ -21,10 +22,18 @@ var searchData=
   ['tr_5fobject',['tr_object',['../structnvbio_1_1html_1_1tr__object.html',1,'nvbio::html']]],
   ['tracebackpipelinestate',['TracebackPipelineState',['../structnvbio_1_1bowtie2_1_1cuda_1_1_traceback_pipeline_state.html',1,'nvbio::bowtie2::cuda']]],
   ['transform_5fiterator',['transform_iterator',['../structnvbio_1_1transform__iterator.html',1,'nvbio']]],
+  ['transpose_5faligner',['transpose_aligner',['../structnvbio_1_1aln_1_1transpose__aligner.html',1,'nvbio::aln']]],
+  ['transpose_5faligner_3c_20editdistancealigner_3c_20t_5ftype_2c_20algorithmtag_20_3e_20_3e',['transpose_aligner&lt; EditDistanceAligner&lt; T_TYPE, AlgorithmTag &gt; &gt;',['../structnvbio_1_1aln_1_1transpose__aligner_3_01_edit_distance_aligner_3_01_t___t_y_p_e_00_01_algorithm_tag_01_4_01_4.html',1,'nvbio::aln']]],
+  ['transpose_5faligner_3c_20gotohaligner_3c_20t_5ftype_2c_20scoring_5fscheme_5ftype_2c_20algorithmtag_20_3e_20_3e',['transpose_aligner&lt; GotohAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmTag &gt; &gt;',['../structnvbio_1_1aln_1_1transpose__aligner_3_01_gotoh_aligner_3_01_t___t_y_p_e_00_01scoring__schem80532d7d535a1d0568668340891dfcd8.html',1,'nvbio::aln']]],
+  ['transpose_5faligner_3c_20smithwatermanaligner_3c_20t_5ftype_2c_20scoring_5fscheme_5ftype_2c_20algorithmtag_20_3e_20_3e',['transpose_aligner&lt; SmithWatermanAligner&lt; T_TYPE, scoring_scheme_type, AlgorithmTag &gt; &gt;',['../structnvbio_1_1aln_1_1transpose__aligner_3_01_smith_waterman_aligner_3_01_t___t_y_p_e_00_01scori7225b1c2370a8c2f16c5d96d34dfa802.html',1,'nvbio::aln']]],
+  ['transpose_5ftag',['transpose_tag',['../structnvbio_1_1aln_1_1transpose__tag.html',1,'nvbio::aln']]],
+  ['transpose_5ftag_3c_20patternblockingtag_20_3e',['transpose_tag&lt; PatternBlockingTag &gt;',['../structnvbio_1_1aln_1_1transpose__tag_3_01_pattern_blocking_tag_01_4.html',1,'nvbio::aln']]],
+  ['transpose_5ftag_3c_20textblockingtag_20_3e',['transpose_tag&lt; TextBlockingTag &gt;',['../structnvbio_1_1aln_1_1transpose__tag_3_01_text_blocking_tag_01_4.html',1,'nvbio::aln']]],
   ['tree_5fdesc_5fs',['tree_desc_s',['../structtree__desc__s.html',1,'']]],
   ['trie_5fcopy',['trie_copy',['../structnvbio_1_1trie__copy.html',1,'nvbio']]],
   ['trie_5fcopy_3c_20alphabet_5fsize_5ft_2c_20compressedtrie_20_3e',['trie_copy&lt; ALPHABET_SIZE_T, CompressedTrie &gt;',['../structnvbio_1_1trie__copy_3_01_a_l_p_h_a_b_e_t___s_i_z_e___t_00_01_compressed_trie_01_4.html',1,'nvbio']]],
   ['trienode',['TrieNode',['../structnvbio_1_1_trie_node.html',1,'nvbio']]],
   ['trivial_5fquality_5fstring',['trivial_quality_string',['../structnvbio_1_1aln_1_1trivial__quality__string.html',1,'nvbio::aln']]],
-  ['trivial_5fquality_5fstring_5fset',['trivial_quality_string_set',['../structnvbio_1_1aln_1_1trivial__quality__string__set.html',1,'nvbio::aln']]]
+  ['trivial_5fquality_5fstring_5fset',['trivial_quality_string_set',['../structnvbio_1_1aln_1_1trivial__quality__string__set.html',1,'nvbio::aln']]],
+  ['typeidmap',['TypeIdMap',['../classmgpu_1_1_type_id_map.html',1,'mgpu']]]
 ];

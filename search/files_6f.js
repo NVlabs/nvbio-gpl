@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['off64_5ft_2ec',['OFF64_T.c',['../build_2_c_make_files_2_check_type_size_2_o_f_f64___t_8c.html',1,'']]],
-  ['off64_5ft_2ec',['OFF64_T.c',['../_c_make_files_2_check_type_size_2_o_f_f64___t_8c.html',1,'']]],
-  ['off64_5ft_2ec',['OFF64_T.c',['../vs2008_2_release-x64_2_c_make_files_2_check_type_size_2_o_f_f64___t_8c.html',1,'']]],
-  ['off64_5ft_2ec',['OFF64_T.c',['../vs2008_2_rel_with_deb_info-x64_2_c_make_files_2_check_type_size_2_o_f_f64___t_8c.html',1,'']]],
-  ['off64_5ft_2ec',['OFF64_T.c',['../vs2008_2_debug-x64_2_c_make_files_2_check_type_size_2_o_f_f64___t_8c.html',1,'']]],
   ['options_2eh',['options.h',['../options_8h.html',1,'']]],
   ['output_5fbam_2ecpp',['output_bam.cpp',['../output__bam_8cpp.html',1,'']]],
   ['output_5fbam_2eh',['output_bam.h',['../output__bam_8h.html',1,'']]],

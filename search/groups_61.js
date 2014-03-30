@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['algorithm_20tags',['Algorithm Tags',['../group___algorithm_tag.html',1,'']]],
   ['aligners',['Aligners',['../group___aligner.html',1,'']]],
   ['aligner_20tags',['Aligner Tags',['../group___aligner_tag.html',1,'']]],
   ['alignment_20module',['Alignment Module',['../group___alignment.html',1,'']]],

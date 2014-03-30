@@ -10,6 +10,5 @@ var searchData=
   ['user',['user',['../structnvbio_1_1_time_series.html#a60ff050a0fac49cfe59dbcfc09b7a18b',1,'nvbio::TimeSeries']]],
   ['user_5favg',['user_avg',['../structnvbio_1_1_time_series.html#aff8b692a3e1fba0dfbf8c8449cf2c0f8',1,'nvbio::TimeSeries']]],
   ['user_5fnames',['user_names',['../structnvbio_1_1_time_series.html#af55bed7a88297541248a0220cedfcbff',1,'nvbio::TimeSeries']]],
-  ['user_5funits',['user_units',['../structnvbio_1_1_time_series.html#aeeb3467a330767d2839a9a76665484ec',1,'nvbio::TimeSeries']]],
-  ['utilityname',['utilityName',['../structcm_c_a_p_i.html#aa69d57930ac4f4e4c52b6f3b5a1d233d',1,'cmCAPI']]]
+  ['user_5funits',['user_units',['../structnvbio_1_1_time_series.html#aeeb3467a330767d2839a9a76665484ec',1,'nvbio::TimeSeries']]]
 ];
