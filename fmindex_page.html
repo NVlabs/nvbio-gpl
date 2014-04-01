@@ -176,13 +176,22 @@ FM-Indices</h1>
 <td style="white-space: nowrap; vertical-align:text-top;"><a class="el" href="namespacenvbio.html#a52450fbcc337fd8025dae2d88fb89584">locate()</a><br/>
  </td><td style="vertical-align:text-top;">fmi, i </td><td style="vertical-align:text-top;">given a suffix array coordinate i, return its linear coordinate SA[i]  </td></tr>
 </table>
+<h1><a class="anchor" id="PerformanceSection"></a>
+Performance</h1>
+<p>The graphs below show the performance of FM-index queries on the CPU and GPU using exact and approximate matching, searching for 32bp fragments inside the whole human genome. Approximate matching is obtained with the <a class="el" href="namespacenvbio.html#adcbec0e8b809f645e81b62a3f0481470">hamming_backtrack()</a> function, in this case allowing up to 1 mismatch:</p>
+<div class="image">
+<img src="benchmark-fm-index.png"  style="position:relative; bottom:-10px; border:0px;" width="50%" height="50%"/>
+</div>
+ <div class="image">
+<img src="benchmark-fm-index-speedup.png"  style="position:relative; bottom:-10px; border:0px;" width="50%" height="50%"/>
+</div>
 <h1><a class="anchor" id="TechnicalOverviewSection"></a>
 Technical Overview</h1>
 <p>A complete list of the classes and functions in this module is given in the <a class="el" href="group___f_m_index.html">FMIndex</a> documentation. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 1 2014 18:04:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
