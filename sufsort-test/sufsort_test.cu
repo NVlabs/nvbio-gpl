@@ -23,7 +23,9 @@
 #include <stdlib.h>
 #include <vector>
 #include <algorithm>
+#ifdef _OPENMP
 #include <omp.h>
+#endif
 
 #include <nvbio/sufsort/sufsort.h>
 #include <nvbio/sufsort/sufsort_utils.h>
@@ -97,7 +99,11 @@ int sufsort_test(int argc, char* argv[])
 
     uint32 gpu_bwt_size = 50u;
     uint32 cpu_bwt_size = 100u;
+#ifdef _OPENMP
     uint32 threads      = omp_get_num_procs();
+#else
+    uint32 threads      = 1;
+#endif
     bool   store_output = true;
 
     char*  index_name = "data/human.NCBI36/Homo_sapiens.NCBI36.53.dna.toplevel.fa";
@@ -173,8 +179,10 @@ int sufsort_test(int argc, char* argv[])
         }
     }
 
+#ifdef _OPENMP
     // Now set the number of threads
     omp_set_num_threads( threads );
+#endif
 
     log_info(stderr, "nvbio/sufsort test... started (%u threads)\n", threads);
     #pragma omp parallel

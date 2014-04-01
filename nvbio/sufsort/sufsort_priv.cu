@@ -17,7 +17,9 @@
  */
 
 #include <nvbio/sufsort/sufsort_priv.h>
+#ifdef _OPENMP
 #include <omp.h>
+#endif
 
 namespace nvbio {
 namespace priv {
