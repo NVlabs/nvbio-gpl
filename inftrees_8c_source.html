@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/contrib/zlib-1.2.7/inftrees.c Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/contrib/zlib-1.2.7/inftrees.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3847941dc22744d30c1d316a1f1a60e2.html">contrib</a></li><li class="navelem"><a class="el" href="dir_86bac4c237dfa3115a9cc3dc75bac5be.html">zlib-1.2.7</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd6bf00e2021346e10373611bad8b626.html">contrib</a></li><li class="navelem"><a class="el" href="dir_db805d94fb84fe10a0fdbf9e52b7d1c7.html">zlib-1.2.7</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -132,11 +132,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="inftrees_8c.html#a773e6164ab27c6f3ea71144dfc487c7f">   32</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="inftrees_8c.html#a773e6164ab27c6f3ea71144dfc487c7f">inflate_table</a>(type, lens, codes, table, bits, work)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="inftrees_8h.html#a0f33f5acf9079ff1f054fa235df2443b">codetype</a> type;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *lens;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *lens;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">unsigned</span> codes;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="structcode.html">code</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> * <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *table;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *bits;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *work;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="structcode.html">code</a> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> * <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *table;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *bits;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *work;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">unsigned</span> len;               <span class="comment">/* a code&#39;s length in bits */</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">unsigned</span> sym;               <span class="comment">/* index of code symbols */</span></div>
@@ -152,9 +152,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">unsigned</span> low;               <span class="comment">/* low bits for current root entry */</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">unsigned</span> mask;              <span class="comment">/* mask for low root bits */</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="structcode.html">code</a> here;                  <span class="comment">/* table entry for duplication */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="structcode.html">code</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *next;             <span class="comment">/* next available space in table */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *base;     <span class="comment">/* base value table to use */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *extra;    <span class="comment">/* extra bits table to use */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="structcode.html">code</a> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *next;             <span class="comment">/* next available space in table */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *base;     <span class="comment">/* base value table to use */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *extra;    <span class="comment">/* extra bits table to use */</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> end;                    <span class="comment">/* use base and extra for symbol &gt; end */</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> count[<a class="code" href="inftrees_8c.html#a6fcad31e688110d9d61bdcc99b2a59d7">MAXBITS</a>+1];    <span class="comment">/* number of codes of each length */</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> offs[<a class="code" href="inftrees_8c.html#a6fcad31e688110d9d61bdcc99b2a59d7">MAXBITS</a>+1];     <span class="comment">/* offsets in table for each length */</span></div>
@@ -408,7 +408,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:08:56 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:29 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -80,7 +80,6 @@ var searchData=
   ['count_5ftable_5fiterator',['count_table_iterator',['../structnvbio_1_1io_1_1_f_m_index_data.html#a030f256dde8287c1c6fb4a0989f334fa',1,'nvbio::io::FMIndexData::count_table_iterator()'],['../structnvbio_1_1io_1_1_f_m_index_data_c_u_d_a.html#a3148224054d9f35d5a78adb9508c56b9',1,'nvbio::io::FMIndexDataCUDA::count_table_iterator()']]],
   ['countedbase',['CountedBase',['../classnvbio_1_1internals_1_1_counted_base.html#ac31ad8a50219eb8a98dcdebfbe93c7a5',1,'nvbio::internals::CountedBase']]],
   ['countedbase_5fimpl',['CountedBase_impl',['../classnvbio_1_1internals_1_1_counted_base__impl.html#a8e46ac8155d92a1722113ef482f928fe',1,'nvbio::internals::CountedBase_impl']]],
-  ['counter',['Counter',['../struct_counter.html#a1e05f69b5240fbab3e7ab351672167f0',1,'Counter']]],
   ['counts',['counts',['../structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array.html#ac26861190976244ed64d16274adf218f',1,'nvbio::bowtie2::cuda::SeedHitDequeArray']]],
   ['cpuid',['cpuID',['../namespacenvbio.html#a9ed021ad2e90f0baaff0ab86e03277b3',1,'nvbio']]],
   ['cpuoutputbatch',['CPUOutputBatch',['../structnvbio_1_1io_1_1_c_p_u_output_batch.html#a072a26e2fe7d0134d18983e9db77992e',1,'nvbio::io::CPUOutputBatch']]],

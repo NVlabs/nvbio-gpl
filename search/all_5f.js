@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['_5f32_5f32',['_32_32',['../nv_b_w_t_8cpp.html#ab5074abbd7552a059a305c71b72b807c',1,'nvBWT.cpp']]],
-  ['_5f32_5f64',['_32_64',['../nv_b_w_t_8cpp.html#aef149b801cde4a2174161fa806cf1cd5',1,'nvBWT.cpp']]],
-  ['_5f64_5f64',['_64_64',['../nv_b_w_t_8cpp.html#a266a78a81e22fcb4b1e68190bd8f20ba',1,'nvBWT.cpp']]],
   ['_5f_5flaunch_5fbounds_5f_5f',['__launch_bounds__',['../group___work_queue_detail.html#gac91907463dbbf44d60d364f0526d4c37',1,'nvbio::cuda::wq']]],
   ['_5falloc',['_alloc',['../classmgpu_1_1_cuda_mem_support.html#a913fcaa6b5cb195c11326d710983f010',1,'mgpu::CudaMemSupport']]],
   ['_5fdevice',['_device',['../classmgpu_1_1_cuda_alloc.html#ae4d6a2489b9bac40d612f59af352b22c',1,'mgpu::CudaAlloc']]],

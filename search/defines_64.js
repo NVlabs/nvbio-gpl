@@ -14,7 +14,6 @@ var searchData=
   ['deflateinit',['deflateInit',['../zlib_8h.html#ae7440c1c5a8becba6dbf410275dc0a5c',1,'deflateInit():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#ae7440c1c5a8becba6dbf410275dc0a5c',1,'deflateInit():&#160;zlib.h']]],
   ['deflateinit2',['deflateInit2',['../zlib_8h.html#a59b575a521efe7ea0d3b9dd3c8d315c1',1,'deflateInit2():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a59b575a521efe7ea0d3b9dd3c8d315c1',1,'deflateInit2():&#160;zlib.h']]],
   ['dist_5fcode_5flen',['DIST_CODE_LEN',['../trees_8c.html#a368ebabef641e688c8f848e76b704500',1,'trees.c']]],
-  ['divsufsort',['DIVSUFSORT',['../nv_b_w_t_8cpp.html#a9c1ef001553c89d55e7c8313e9f367b2',1,'nvBWT.cpp']]],
   ['do1',['DO1',['../adler32_8c.html#a465ff70ce96dfc2e84b0e87548b4ecb4',1,'DO1():&#160;adler32.c'],['../crc32_8c.html#aff265ea9630e020c8ac850c18d5d972f',1,'DO1():&#160;crc32.c']]],
   ['do16',['DO16',['../adler32_8c.html#a6912c3e78e2b797f42f214d1b508aa0c',1,'adler32.c']]],
   ['do2',['DO2',['../adler32_8c.html#a3d7044f8ea7e75164fe5108048fd87eb',1,'adler32.c']]],

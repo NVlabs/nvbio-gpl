@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/contrib/bamtools/BGZF.cpp Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/contrib/bamtools/BGZF.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3847941dc22744d30c1d316a1f1a60e2.html">contrib</a></li><li class="navelem"><a class="el" href="dir_705b47712110bce1174895883a4269fa.html">bamtools</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd6bf00e2021346e10373611bad8b626.html">contrib</a></li><li class="navelem"><a class="el" href="dir_f7373228766e7200826c23e8dfadee2a.html">bamtools</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -292,9 +292,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="structz__stream__s.html">z_stream</a> zs;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a23a2299c384f808e76e9908f21216b0f">zalloc</a>    = NULL;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a89eb750ade7f4f0b56bfdadf13344982">zfree</a>     = NULL;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a21d2c026f0f2fcd67f33011231f8ed00">next_in</a>   = (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a> + <span class="keywordtype">id</span> * uncompressedBlockSize;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a21d2c026f0f2fcd67f33011231f8ed00">next_in</a>   = (<a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a> + <span class="keywordtype">id</span> * uncompressedBlockSize;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a0cf177f50dbb49692f27480cbcfde794">avail_in</a>  = inputLength;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a58f1e32c5e5e9860fc29267eab01c573">next_out</a>  = (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)&amp;buffer[<a class="code" href="namespace_bam_tools.html#a45d7fec3ac8957fe3c86c698362116a3">BLOCK_HEADER_LENGTH</a>];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a58f1e32c5e5e9860fc29267eab01c573">next_out</a>  = (<a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)&amp;buffer[<a class="code" href="namespace_bam_tools.html#a45d7fec3ac8957fe3c86c698362116a3">BLOCK_HEADER_LENGTH</a>];</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a45ad2364307af9d944fd39d4eca3ca3c">avail_out</a> = bufferSize - <a class="code" href="namespace_bam_tools.html#a45d7fec3ac8957fe3c86c698362116a3">BLOCK_HEADER_LENGTH</a> - <a class="code" href="namespace_bam_tools.html#a4d5bfbc96d88ce6aff72229a483a0a59">BLOCK_FOOTER_LENGTH</a>;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// initialize the zlib compression algorithm</span></div>
@@ -333,7 +333,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// store the CRC32 checksum</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="crc_8h.html#ade449deef700bc9a133f3d169f10e806">crc</a> = <a class="code" href="crc32_8c.html#af5a1c7b05170540ef3bb084e6cf903c4">crc32</a>(0, NULL, 0);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    crc = <a class="code" href="crc32_8c.html#af5a1c7b05170540ef3bb084e6cf903c4">crc32</a>(crc, (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a> + <span class="keywordtype">id</span> * uncompressedBlockSize, inputLength);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    crc = <a class="code" href="crc32_8c.html#af5a1c7b05170540ef3bb084e6cf903c4">crc32</a>(crc, (<a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a> + <span class="keywordtype">id</span> * uncompressedBlockSize, inputLength);</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a42f482227ef9afaa3f9d75d6aba98f78">BgzfData::PackUnsignedInt</a>(&amp;buffer[compressedLength - 8], crc);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a42f482227ef9afaa3f9d75d6aba98f78">BgzfData::PackUnsignedInt</a>(&amp;buffer[compressedLength - 4], inputLength);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
@@ -370,9 +370,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="structz__stream__s.html">z_stream</a> zs;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a23a2299c384f808e76e9908f21216b0f">zalloc</a>    = NULL;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a89eb750ade7f4f0b56bfdadf13344982">zfree</a>     = NULL;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a21d2c026f0f2fcd67f33011231f8ed00">next_in</a>   = (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#aeaf7c940732a72eff7c97c10dd157f46">CompressedBlock</a> + 18;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a21d2c026f0f2fcd67f33011231f8ed00">next_in</a>   = (<a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#aeaf7c940732a72eff7c97c10dd157f46">CompressedBlock</a> + 18;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a0cf177f50dbb49692f27480cbcfde794">avail_in</a>  = blockLength - 16;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a58f1e32c5e5e9860fc29267eab01c573">next_out</a>  = (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a58f1e32c5e5e9860fc29267eab01c573">next_out</a>  = (<a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>*)<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a3ad60baa21dfc04caede7bdd5eec548f">UncompressedBlock</a>;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    zs.<a class="code" href="structz__stream__s.html#a45ad2364307af9d944fd39d4eca3ca3c">avail_out</a> = <a class="code" href="struct_bam_tools_1_1_bgzf_data.html#ae8d177185fa7e689093dedab810e7a4c">UncompressedBlockSize</a>;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">int</span> status = <a class="code" href="zlib_8h.html#a611fc206e69f34e812ca8b590982fdd5">inflateInit2</a>(&amp;zs, <a class="code" href="namespace_bam_tools.html#af9db03c63a72e2268d43fdd2bfbf005a">GZIP_WINDOW_BITS</a>);</div>
@@ -498,7 +498,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">int</span>     blockOffset  = (position &amp; 0xFFFF);</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    int64_t blockAddress = (position &gt;&gt; 16) &amp; 0xFFFFFFFFFFFFLL;</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (fseek(<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a7ba6774acb9170d12d79c4b92c3e028d">Stream</a>, (<span class="keywordtype">long</span>)blockAddress, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a0d112bae8fd35be772185b6ec6bcbe64">SEEK_SET</a>) != 0) {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (fseek(<a class="code" href="struct_bam_tools_1_1_bgzf_data.html#a7ba6774acb9170d12d79c4b92c3e028d">Stream</a>, (<span class="keywordtype">long</span>)blockAddress, <a class="code" href="zconf_8h.html#a0d112bae8fd35be772185b6ec6bcbe64">SEEK_SET</a>) != 0) {</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        printf(<span class="stringliteral">&quot;ERROR: Unable to seek in BAM file\n&quot;</span>);</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        exit(1);</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
@@ -543,7 +543,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:08:55 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:28 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

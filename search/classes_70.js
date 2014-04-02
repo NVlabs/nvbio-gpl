@@ -6,7 +6,6 @@ var searchData=
   ['packedstream',['PackedStream',['../structnvbio_1_1_packed_stream.html',1,'nvbio']]],
   ['packedstream_3c_20storage_5ftype_2c_20symbol_5ftype_2c_20symbol_5fsize_2c_20true_2c_20index_5ftype_20_3e',['PackedStream&lt; storage_type, symbol_type, SYMBOL_SIZE, true, index_type &gt;',['../structnvbio_1_1_packed_stream.html',1,'nvbio']]],
   ['packedstream_3c_20storage_5ftype_2c_20uint8_2c_20symbol_5fsize_2c_20true_2c_20index_5ftype_20_3e',['PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, true, index_type &gt;',['../structnvbio_1_1_packed_stream.html',1,'nvbio']]],
-  ['packedstream_3c_20storagetype_20_2a_2c_20uint8_2c_202_2c_20true_2c_20sa_5ffacade_5ftype_20_3e',['PackedStream&lt; StorageType *, uint8, 2, true, SA_facade_type &gt;',['../structnvbio_1_1_packed_stream.html',1,'nvbio']]],
   ['packedstream_3c_20word_5ftype_20_2a_2c_20uint8_2c_20symbol_5fsize_2c_20big_5fendian_2c_20uint64_20_3e',['PackedStream&lt; word_type *, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt;',['../structnvbio_1_1_packed_stream.html',1,'nvbio']]],
   ['packedstreamiterator',['PackedStreamIterator',['../structnvbio_1_1_packed_stream_iterator.html',1,'nvbio']]],
   ['packedstreamiterator_3c_20packedstream_3c_20storage_5ftype_2c_20uint8_2c_20symbol_5fsize_2c_20true_2c_20index_5ftype_20_3e_20_3e',['PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, true, index_type &gt; &gt;',['../structnvbio_1_1_packed_stream_iterator.html',1,'nvbio']]],

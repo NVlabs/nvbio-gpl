@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/contrib/zlib-1.2.7/zutil.c Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/contrib/zlib-1.2.7/zutil.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3847941dc22744d30c1d316a1f1a60e2.html">contrib</a></li><li class="navelem"><a class="el" href="dir_86bac4c237dfa3115a9cc3dc75bac5be.html">zlib-1.2.7</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd6bf00e2021346e10373611bad8b626.html">contrib</a></li><li class="navelem"><a class="el" href="dir_db805d94fb84fe10a0fdbf9e52b7d1c7.html">zlib-1.2.7</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -128,35 +128,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral">&quot;&quot;</span>};</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="zutil_8c.html#a705cd706dfe534aa9161a253a1c9a81a">   30</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a705cd706dfe534aa9161a253a1c9a81a">zlibVersion</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="zutil_8c.html#a705cd706dfe534aa9161a253a1c9a81a">   30</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a705cd706dfe534aa9161a253a1c9a81a">zlibVersion</a>()</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="zlib_8h.html#a51dc9dc65e483b3222c1f0f6a87eb76e">ZLIB_VERSION</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="zutil_8c.html#a864d90914dbbc92e246503b147b553eb">   35</a></span>&#160;<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a864d90914dbbc92e246503b147b553eb">zlibCompileFlags</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="zutil_8c.html#a864d90914dbbc92e246503b147b553eb">   35</a></span>&#160;<a class="code" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a864d90914dbbc92e246503b147b553eb">zlibCompileFlags</a>()</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> flags;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> flags;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    flags = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>))) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>))) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">case</span> 2:     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> 4:     flags += 1;     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">case</span> 8:     flags += 2;     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">default</span>:    flags += 3;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a>))) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a>))) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">case</span> 2:     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> 4:     flags += 1 &lt;&lt; 2;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">case</span> 8:     flags += 2 &lt;&lt; 2;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">default</span>:    flags += 3 &lt;&lt; 2;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>))) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>))) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">case</span> 2:     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> 4:     flags += 1 &lt;&lt; 4;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">case</span> 8:     flags += 2 &lt;&lt; 4;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">default</span>:    flags += 3 &lt;&lt; 4;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a8cf4661a88ec12823d7cbdd3fa629eb0">z_off_t</a>))) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>)(<span class="keyword">sizeof</span>(<a class="code" href="zconf_8h.html#a8cf4661a88ec12823d7cbdd3fa629eb0">z_off_t</a>))) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">case</span> 2:     <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> 4:     flags += 1 &lt;&lt; 6;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">case</span> 8:     flags += 2 &lt;&lt; 6;        <span class="keywordflow">break</span>;</div>
@@ -234,7 +234,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">/* exported to allow conversion of error code to string for compress() and</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> * uncompress()</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="zutil_8c.html#a43d0ecf9c894ba2ed44845a6ffc36209">  136</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a43d0ecf9c894ba2ed44845a6ffc36209">zError</a>(err)</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="zutil_8c.html#a43d0ecf9c894ba2ed44845a6ffc36209">  136</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="zutil_8c.html#a43d0ecf9c894ba2ed44845a6ffc36209">zError</a>(err)</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    int err;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="zutil_8h.html#a66466516a4a71f3c78ccc40d203c92e5">ERR_MSG</a>(err);</div>
@@ -251,9 +251,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#ifndef HAVE_MEMCPY</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="zutil_8c.html#aac7aa2bbd8584b96c89e311b6c3409a5">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#aac7aa2bbd8584b96c89e311b6c3409a5">zmemcpy</a>(dest, source, len)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* dest;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* source;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* dest;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* source;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (len == 0) <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">do</span> {</div>
@@ -262,11 +262,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
 <div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="zutil_8c.html#afa24e136b162a10f0ad3b2ed3000b413">  163</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#afa24e136b162a10f0ad3b2ed3000b413">zmemcmp</a>(s1, s2, len)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* s1;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* s2;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* s1;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* s2;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> j;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> j;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; len; j++) {</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span> (s1[j] != s2[j]) <span class="keywordflow">return</span> 2*(s1[j] &gt; s2[j])-1;</div>
@@ -275,8 +275,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
 <div class="line"><a name="l00176"></a><span class="lineno"><a class="code" href="zutil_8c.html#a9d1ad31f82b89b791ce9c70c24d3947c">  176</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a9d1ad31f82b89b791ce9c70c24d3947c">zmemzero</a>(dest, len)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* dest;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a>* dest;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>  len;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> (len == 0) <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">do</span> {</div>
@@ -306,8 +306,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<a class="code" href="adler32_8c.html#a08023ea6765c99d60a6a3840cd07156e">local</a> <span class="keywordtype">int</span> next_ptr = 0;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>ptr_table_s {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> org_ptr;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> new_ptr;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> org_ptr;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> new_ptr;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;} ptr_table;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<a class="code" href="adler32_8c.html#a08023ea6765c99d60a6a3840cd07156e">local</a> ptr_table table[MAX_PTR];</div>
@@ -318,9 +318,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment"> * a protected system like OS/2. Use Microsoft C instead.</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <span class="keywordtype">unsigned</span> items, <span class="keywordtype">unsigned</span> size)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <span class="keywordtype">unsigned</span> items, <span class="keywordtype">unsigned</span> size)</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> buf = opaque; <span class="comment">/* just to make some compilers happy */</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> buf = opaque; <span class="comment">/* just to make some compilers happy */</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="zutil_8h.html#abd6f60bf9450af2ecb94097a32c19a64">ulg</a> bsize = (<a class="code" href="zutil_8h.html#abd6f60bf9450af2ecb94097a32c19a64">ulg</a>)items*size;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">/* If we allocate less than 65520 bytes, we assume that farmalloc</span></div>
@@ -342,7 +342,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> buf;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">zcfree</a> (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">zcfree</a> (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr)</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">int</span> n;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span> (*(<a class="code" href="zutil_8h.html#a3754180d606d4ed15468d15d9665aa2e">ush</a>*)&amp;ptr != 0) { <span class="comment">/* object &lt; 64K */</span></div>
@@ -377,13 +377,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#  define _hfree   hfree</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> items, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> items, <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size)</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">if</span> (opaque) opaque = 0; <span class="comment">/* to make compiler happy */</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> _halloc((<span class="keywordtype">long</span>)items, size);</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">zcfree</a> (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">zcfree</a> (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque, <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr)</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;{</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">if</span> (opaque) opaque = 0; <span class="comment">/* to make compiler happy */</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    _hfree(ptr);</div>
@@ -397,24 +397,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#ifndef MY_ZCALLOC </span><span class="comment">/* Any system without a special alloc function */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#ifndef STDC</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa3397ff439b5e076528b04bc9b8b086a">voidp</a>  malloc <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size));</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">extern</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa3397ff439b5e076528b04bc9b8b086a">voidp</a>  calloc <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> items, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size));</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span>   free   <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr));</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <a class="code" href="zconf_8h.html#aa3397ff439b5e076528b04bc9b8b086a">voidp</a>  malloc <a class="code" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size));</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">extern</span> <a class="code" href="zconf_8h.html#aa3397ff439b5e076528b04bc9b8b086a">voidp</a>  calloc <a class="code" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> items, <a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> size));</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span>   free   <a class="code" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr));</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00304"></a><span class="lineno"><a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">  304</a></span>&#160;<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (opaque, items, size)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">  304</a></span>&#160;<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a> (opaque, items, size)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">unsigned</span> items;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">unsigned</span> size;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">if</span> (opaque) items += size - size; <span class="comment">/* make compiler happy */</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>) &gt; 2 ? (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)malloc(items * size) :</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                              (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)calloc(items, size);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<a class="code" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>) &gt; 2 ? (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)malloc(items * size) :</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                              (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)calloc(items, size);</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno"><a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">  314</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="compress_8c.html#a59d4d7ef4d73655c759211ec33a5d44f">ZLIB_INTERNAL</a> <a class="code" href="zutil_8c.html#a03a8230ad4ec43e8916fa91aad05bfd3">zcfree</a> (opaque, ptr)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> opaque;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a> ptr;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    free(ptr);</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> (opaque) <span class="keywordflow">return</span>; <span class="comment">/* make compiler happy */</span></div>
@@ -426,7 +426,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:08:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:29 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

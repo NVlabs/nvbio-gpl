@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/sufsort/sufsort_inl.h File Reference</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/sufsort/sufsort_inl.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_911b30d44f50535725ac44375ce00105.html">sufsort</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_b30c79e05c85b52436a87e85517151d6.html">sufsort</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -104,6 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="sufsort__priv_8h_source.html">nvbio/sufsort/sufsort_priv.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="sufsort__utils_8h_source.html">nvbio/sufsort/sufsort_utils.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="compression__sort_8h_source.html">nvbio/sufsort/compression_sort.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="prefix__doubling__sufsort_8h_source.html">nvbio/sufsort/prefix_doubling_sufsort.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="blockwise__sufsort_8h_source.html">nvbio/sufsort/blockwise_sufsort.h</a>&gt;</code><br/>
@@ -125,8 +126,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_string_b_w_t_handler.html">nvbio::cuda::StringBWTHandler&lt; string_type, output_iterator &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_host_b_w_t_config.html">nvbio::cuda::HostBWTConfig&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html">nvbio::cuda::DeviceBWTConfig&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</a></td></tr>
@@ -147,28 +146,31 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga30866caf8c09cfa65be4a906cc5dfba4"><td class="memTemplParams" colspan="2">template&lt;typename string_type &gt; </td></tr>
-<tr class="memitem:ga30866caf8c09cfa65be4a906cc5dfba4"><td class="memTemplItemLeft" align="right" valign="top">string_type::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga30866caf8c09cfa65be4a906cc5dfba4">nvbio::cuda::find_primary</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename string_type::index_type string_len, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_type string)</td></tr>
+<tr class="memitem:ga30866caf8c09cfa65be4a906cc5dfba4"><td class="memTemplItemLeft" align="right" valign="top">string_type::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga30866caf8c09cfa65be4a906cc5dfba4">nvbio::cuda::find_primary</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename string_type::index_type string_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_type string)</td></tr>
 <tr class="separator:ga30866caf8c09cfa65be4a906cc5dfba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac87ef9bdcc77de2f5cbd9036b35a1cb6"><td class="memTemplParams" colspan="2">template&lt;typename string_set_type , typename output_handler &gt; </td></tr>
-<tr class="memitem:gac87ef9bdcc77de2f5cbd9036b35a1cb6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#gac87ef9bdcc77de2f5cbd9036b35a1cb6">nvbio::cuda::suffix_sort</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_set_type &amp;string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
+<tr class="memitem:gac87ef9bdcc77de2f5cbd9036b35a1cb6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#gac87ef9bdcc77de2f5cbd9036b35a1cb6">nvbio::cuda::suffix_sort</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_set_type &amp;string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
 <tr class="separator:gac87ef9bdcc77de2f5cbd9036b35a1cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga70195bfc5943cfc00f5b5c9af1190103"><td class="memTemplParams" colspan="2">template&lt;typename string_type , typename output_iterator &gt; </td></tr>
-<tr class="memitem:ga70195bfc5943cfc00f5b5c9af1190103"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga70195bfc5943cfc00f5b5c9af1190103">nvbio::cuda::suffix_sort</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename stream_traits&lt; string_type &gt;::index_type string_len, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_type string, output_iterator output, BWTParams *params)</td></tr>
+<tr class="memitem:ga70195bfc5943cfc00f5b5c9af1190103"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga70195bfc5943cfc00f5b5c9af1190103">nvbio::cuda::suffix_sort</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename stream_traits&lt; string_type &gt;::index_type string_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_type string, output_iterator output, BWTParams *params)</td></tr>
 <tr class="separator:ga70195bfc5943cfc00f5b5c9af1190103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab83f38cdfda6e1d1d846246ea6c95ad6"><td class="memTemplParams" colspan="2">template&lt;typename string_type , typename output_handler &gt; </td></tr>
+<tr class="memitem:gab83f38cdfda6e1d1d846246ea6c95ad6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#gab83f38cdfda6e1d1d846246ea6c95ad6">nvbio::cuda::blockwise_suffix_sort</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename string_type::index_type string_len, string_type string, output_handler &amp;output, BWTParams *params)</td></tr>
+<tr class="separator:gab83f38cdfda6e1d1d846246ea6c95ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab8dbd556689a937c97d8f61a43b216b1"><td class="memTemplParams" colspan="2">template&lt;typename string_type , typename output_iterator &gt; </td></tr>
-<tr class="memitem:gab8dbd556689a937c97d8f61a43b216b1"><td class="memTemplItemLeft" align="right" valign="top">string_type::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">nvbio::cuda::bwt</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename string_type::index_type string_len, string_type string, output_iterator output, BWTParams *params)</td></tr>
+<tr class="memitem:gab8dbd556689a937c97d8f61a43b216b1"><td class="memTemplItemLeft" align="right" valign="top">string_type::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">nvbio::cuda::bwt</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename string_type::index_type string_len, string_type string, output_iterator output, BWTParams *params)</td></tr>
 <tr class="separator:gab8dbd556689a937c97d8f61a43b216b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga620889b0e02fce2d0cb4910fa2347b89"><td class="memTemplParams" colspan="2">template&lt;uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type , typename output_handler &gt; </td></tr>
-<tr class="memitem:ga620889b0e02fce2d0cb4910fa2347b89"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga620889b0e02fce2d0cb4910fa2347b89">nvbio::cuda::bwt</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt;, uint64 * &gt; string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
+<tr class="memitem:ga620889b0e02fce2d0cb4910fa2347b89"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga620889b0e02fce2d0cb4910fa2347b89">nvbio::cuda::bwt</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt;, uint64 * &gt; string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
 <tr class="separator:ga620889b0e02fce2d0cb4910fa2347b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga471d8eb8040ac1b540bf3b064f94a2f0"><td class="memTemplParams" colspan="2">template&lt;uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type , typename output_handler &gt; </td></tr>
-<tr class="memitem:ga471d8eb8040ac1b540bf3b064f94a2f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga471d8eb8040ac1b540bf3b064f94a2f0">nvbio::large_bwt</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt;, uint64 * &gt; string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
+<tr class="memitem:ga471d8eb8040ac1b540bf3b064f94a2f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___sufsort.html#ga471d8eb8040ac1b540bf3b064f94a2f0">nvbio::large_bwt</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt;, uint64 * &gt; string_set, output_handler &amp;output, BWTParams *params=NULL)</td></tr>
 <tr class="separator:ga471d8eb8040ac1b540bf3b064f94a2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:41 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

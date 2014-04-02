@@ -1,9 +1,6 @@
 var searchData=
 [
   ['failure',['failure',['../structnvbio_1_1bowtie2_1_1cuda_1_1_reduce_best_approx_context.html#aa43481677112494f62922d5e3216406d',1,'nvbio::bowtie2::cuda::ReduceBestApproxContext::failure()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_reduce_best_exact_context.html#a83f60c553eab7e2f30819d9105c30b23',1,'nvbio::bowtie2::cuda::ReduceBestExactContext::failure()']]],
-  ['fake_5fvector',['fake_vector',['../structnvbio_1_1fake__vector.html#aeff6c698f5ebbb4deae747ebca98bd85',1,'nvbio::fake_vector::fake_vector()'],['../structnvbio_1_1fake__vector.html#a4d177345785ea0a575a2ee47c8c2d45d',1,'nvbio::fake_vector::fake_vector(StorageType *stream)']]],
-  ['fake_5fvector_5fiterator',['fake_vector_iterator',['../structnvbio_1_1fake__vector__iterator.html#a44567e34c8142fed098e14d471f7551e',1,'nvbio::fake_vector_iterator::fake_vector_iterator()'],['../structnvbio_1_1fake__vector__iterator.html#a685f3ddf6190a78ba617fc441dced44f',1,'nvbio::fake_vector_iterator::fake_vector_iterator(Stream stream, const index_type index)']]],
-  ['fake_5fvector_5fref',['fake_vector_ref',['../structnvbio_1_1fake__vector__ref.html#a183a8c13f271d4bf2ff829b2c103c7ab',1,'nvbio::fake_vector_ref::fake_vector_ref(Stream stream, index_type index)'],['../structnvbio_1_1fake__vector__ref.html#a950e5df4447171b22e48169f888a3ad7',1,'nvbio::fake_vector_ref::fake_vector_ref(const fake_vector_ref &amp;ref)']]],
   ['fast_5fcos',['fast_cos',['../group___basic_utils.html#gacd12259b6cb97967e8d82a76a4a6f9ae',1,'nvbio']]],
   ['fast_5fpow',['fast_pow',['../group___basic_utils.html#ga781975476143380e6f70ab211f178038',1,'nvbio']]],
   ['fast_5fsin',['fast_sin',['../group___basic_utils.html#ga0a49f814ed23065ed1d3661d35460028',1,'nvbio']]],

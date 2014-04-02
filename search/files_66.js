@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['fake_5fvector_2eh',['fake_vector.h',['../fake__vector_8h.html',1,'']]],
-  ['fake_5fvector_5finl_2eh',['fake_vector_inl.h',['../fake__vector__inl_8h.html',1,'']]],
   ['fasta_2eh',['fasta.h',['../fasta_8h.html',1,'']]],
   ['fasta_5finl_2eh',['fasta_inl.h',['../fasta__inl_8h.html',1,'']]],
   ['fasta_5ftest_2ecpp',['fasta_test.cpp',['../fasta__test_8cpp.html',1,'']]],

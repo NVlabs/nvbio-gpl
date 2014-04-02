@@ -2,7 +2,7 @@ var searchData=
 [
   ['d_5factive_5fsuffixes',['d_active_suffixes',['../structnvbio_1_1priv_1_1_host_string_set_radices.html#aa3ce32fdd4f8a016eca4298427e5cd3c',1,'nvbio::priv::HostStringSetRadices']]],
   ['d_5fbitmask',['d_bitmask',['../structnvbio_1_1_d_c_s.html#acb5ff4d87ba814baec2bdd591b214e3b',1,'nvbio::DCS']]],
-  ['d_5fblock_5fbwt',['d_block_bwt',['../structnvbio_1_1cuda_1_1_string_b_w_t_handler.html#aee6dcd3280f8c7632763d610b0bb86e7',1,'nvbio::cuda::StringBWTHandler']]],
+  ['d_5fblock_5fbwt',['d_block_bwt',['../structnvbio_1_1_string_b_w_t_handler.html#a1821435c01570589e563e5c0d863ca2f',1,'nvbio::StringBWTHandler']]],
   ['d_5fbuckets',['d_buckets',['../structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a7291630113e08c71a3dece8285f63c98',1,'nvbio::priv::SetSuffixBucketer::d_buckets()'],['../structnvbio_1_1priv_1_1_string_suffix_bucketer.html#ad0c0213c49212b5d70f36bd9bd4bb44f',1,'nvbio::priv::StringSuffixBucketer::d_buckets()']]],
   ['d_5fbuf',['d_buf',['../structinternal__state.html#ac636c34c1c08dc9d2f9c199ce2caa99d',1,'internal_state']]],
   ['d_5fchunk_5foffsets',['d_chunk_offsets',['../structnvbio_1_1priv_1_1_host_chunk_loader.html#aaa3f6a7647873872655003370aedbdac',1,'nvbio::priv::HostChunkLoader']]],

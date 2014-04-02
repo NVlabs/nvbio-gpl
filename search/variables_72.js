@@ -29,7 +29,7 @@ var searchData=
   ['ref_5fid',['ref_id',['../structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#ac41d134a930868520daa5e5277f32385',1,'nvbio::io::DebugOutput::DbgInfo::ref_id()'],['../structnvbio_1_1alndiff_1_1_alignment.html#a7df357f9f44a92407e7502ae14bdb0ca',1,'nvbio::alndiff::Alignment::ref_id()'],['../structnvbio_1_1alndiff_1_1_debug_alignment_stream_1_1_info.html#a5b3d29e8716b6aa25fd414dfdc8774b9',1,'nvbio::alndiff::DebugAlignmentStream::Info::ref_id()']]],
   ['references',['References',['../struct_bam_reader_1_1_bam_reader_private.html#a75d53888661d6bce7800d988a1bb4896',1,'BamReader::BamReaderPrivate']]],
   ['refhasalignments',['RefHasAlignments',['../struct_bam_tools_1_1_ref_data.html#a07b656704aadb4df0e1d8c04e78dc19c',1,'BamTools::RefData']]],
-  ['refid',['refID',['../structnvbio_1_1io_1_1_b_a_m__alignment.html#aaa9200dde443c9ac1119fcf1523cbd06',1,'nvbio::io::BAM_alignment::refID()'],['../struct_bam_tools_1_1_bam_alignment.html#a75e553ad2c2bdf155f12e4f6e432787c',1,'BamTools::BamAlignment::RefID()']]],
+  ['refid',['RefID',['../struct_bam_tools_1_1_bam_alignment.html#a75e553ad2c2bdf155f12e4f6e432787c',1,'BamTools::BamAlignment::RefID()'],['../structnvbio_1_1io_1_1_b_a_m__alignment.html#aaa9200dde443c9ac1119fcf1523cbd06',1,'nvbio::io::BAM_alignment::refID()']]],
   ['reflength',['RefLength',['../struct_bam_tools_1_1_ref_data.html#a1306a0e07253a45420faf823fabffbd2',1,'BamTools::RefData']]],
   ['refname',['RefName',['../struct_bam_tools_1_1_ref_data.html#a06dc4dd6f05bed1531234d49180a8402',1,'BamTools::RefData']]],
   ['remain',['remain',['../struct__trbudget__t.html#a8311d67aa5cde0cc339391cd7ed51d37',1,'_trbudget_t']]],

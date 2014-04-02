@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['fake_5fvector',['fake_vector',['../structnvbio_1_1fake__vector.html',1,'nvbio']]],
-  ['fake_5fvector_5fiterator',['fake_vector_iterator',['../structnvbio_1_1fake__vector__iterator.html',1,'nvbio']]],
-  ['fake_5fvector_5fout_5fof_5frange',['fake_vector_out_of_range',['../structnvbio_1_1fake__vector__out__of__range.html',1,'nvbio']]],
-  ['fake_5fvector_5fref',['fake_vector_ref',['../structnvbio_1_1fake__vector__ref.html',1,'nvbio']]],
   ['faketimer',['FakeTimer',['../structnvbio_1_1_fake_timer.html',1,'nvbio']]],
   ['fasta_5finc_5freader',['FASTA_inc_reader',['../structnvbio_1_1_f_a_s_t_a__inc__reader.html',1,'nvbio']]],
   ['fasta_5freader',['FASTA_reader',['../structnvbio_1_1_f_a_s_t_a__reader.html',1,'nvbio']]],

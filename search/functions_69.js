@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['id',['id',['../struct_counter.html#ac5cf47384b889c9e2f20a2fac0ca378b',1,'Counter::id()'],['../struct_writer.html#a64419df27e28ab7e34e9087e2a662a33',1,'Writer::id()']]],
   ['impl',['Impl',['../structnvbio_1_1_mapped_file_1_1_impl.html#af7f3e505ebd1c6a600d454b14468deea',1,'nvbio::MappedFile::Impl::Impl()'],['../structnvbio_1_1_server_mapped_file_1_1_impl.html#a47c0977e756e74183bce10cab442d03f',1,'nvbio::ServerMappedFile::Impl::Impl()'],['../structnvbio_1_1_mutex_1_1_impl.html#aac20bf13140895a92d542faee97f3a51',1,'nvbio::Mutex::Impl::Impl()'],['../structnvbio_1_1_f_a_s_t_q__gzfile_1_1_impl.html#afa7524551dc0eab4f3853ed7eb87b22e',1,'nvbio::FASTQ_gzfile::Impl::Impl()']]],
   ['in_5frange_5ffunctor',['in_range_functor',['../structnvbio_1_1priv_1_1in__range__functor.html#ad5436e64945866a8caacf2e3006e1faf',1,'nvbio::priv::in_range_functor']]],
   ['inclusive_5fscan',['inclusive_scan',['../namespacenvbio_1_1priv.html#af217c1be03058244dda81e5f5c48e794',1,'nvbio::priv']]],
@@ -85,5 +84,5 @@ var searchData=
   ['isproperpair',['IsProperPair',['../struct_bam_tools_1_1_bam_alignment.html#a9776ae12ccc3956c0cac058dcd3f9f34',1,'BamTools::BamAlignment']]],
   ['isreversestrand',['IsReverseStrand',['../struct_bam_tools_1_1_bam_alignment.html#afcfe88ae45819ea16559e0080f80855a',1,'BamTools::BamAlignment']]],
   ['issecondmate',['IsSecondMate',['../struct_bam_tools_1_1_bam_alignment.html#a6f40f5190fa066e544cd343c7c0c59fd',1,'BamTools::BamAlignment']]],
-  ['iter_5fswap',['iter_swap',['../namespacestd.html#af7101b9911aa876d394f4e582b1db14d',1,'std::iter_swap(nvbio::PackedStreamIterator&lt; Stream &gt; it1, nvbio::PackedStreamIterator&lt; Stream &gt; it2)'],['../namespacestd.html#af59dab6e404e9d168f1c00d72ecb1b3f',1,'std::iter_swap(nvbio::fake_vector_iterator&lt; Stream &gt; it1, nvbio::fake_vector_iterator&lt; Stream &gt; it2)'],['../namespacestd.html#a82bdb64924365559958262daf7776c7d',1,'std::iter_swap(nvbio::fake_vector_iterator&lt; Stream &gt; it1, OtherIterator it2)'],['../namespacestd.html#aa73cfbf49621cd08a26e53bf3cec0713',1,'std::iter_swap(OtherIterator it1, nvbio::fake_vector_iterator&lt; Stream &gt; it2)']]]
+  ['iter_5fswap',['iter_swap',['../namespacestd.html#af7101b9911aa876d394f4e582b1db14d',1,'std']]]
 ];

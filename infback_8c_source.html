@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/contrib/zlib-1.2.7/infback.c Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/contrib/zlib-1.2.7/infback.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3847941dc22744d30c1d316a1f1a60e2.html">contrib</a></li><li class="navelem"><a class="el" href="dir_86bac4c237dfa3115a9cc3dc75bac5be.html">zlib-1.2.7</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd6bf00e2021346e10373611bad8b626.html">contrib</a></li><li class="navelem"><a class="el" href="dir_db805d94fb84fe10a0fdbf9e52b7d1c7.html">zlib-1.2.7</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="inffast_8h.html">inffast.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* function prototypes */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="adler32_8c.html#a08023ea6765c99d60a6a3840cd07156e">local</a> <span class="keywordtype">void</span> <a class="code" href="infback_8c.html#a4493a4d633ce7f2dd463edc3a9bce72f">fixedtables</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<span class="keyword">struct</span> <a class="code" href="structinflate__state.html">inflate_state</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *state));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="adler32_8c.html#a08023ea6765c99d60a6a3840cd07156e">local</a> <span class="keywordtype">void</span> <a class="code" href="infback_8c.html#a4493a4d633ce7f2dd463edc3a9bce72f">fixedtables</a> <a class="code" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((<span class="keyword">struct</span> <a class="code" href="structinflate__state.html">inflate_state</a> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *state));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">   strm provides memory allocation functions in zalloc and zfree, or</span></div>
@@ -126,11 +126,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">   windowBits is in the range 8..15, and window is a user-supplied</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">   window and output buffer that is 2**windowBits bytes.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="infback_8c.html#a00558519755e3bab13ee6f8378973913">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a00558519755e3bab13ee6f8378973913">inflateBackInit_</a>(strm, windowBits, window, version, <a class="code" href="group___work_queue_detail.html#gaa7b7d7303292233b06604f0ee6153b7f">stream_size</a>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="infback_8c.html#a00558519755e3bab13ee6f8378973913">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a00558519755e3bab13ee6f8378973913">inflateBackInit_</a>(strm, windowBits, window, version, <a class="code" href="group___work_queue_detail.html#gaa7b7d7303292233b06604f0ee6153b7f">stream_size</a>)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> strm;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> windowBits;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *window;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <span class="keywordtype">char</span> *version;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *window;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <span class="keywordtype">char</span> *version;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___work_queue_detail.html#gaa7b7d7303292233b06604f0ee6153b7f">stream_size</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">struct </span><a class="code" href="structinflate__state.html">inflate_state</a> FAR *state;</div>
@@ -147,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">return</span> <a class="code" href="zlib_8h.html#aad97cde83a9a4bb77f5c3b03bb68e483">Z_STREAM_ERROR</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span>        strm-&gt;zalloc = <a class="code" href="zutil_8c.html#a41dc53193e9af4588e7bcbe459f4f834">zcalloc</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        strm-&gt;opaque = (<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        strm-&gt;opaque = (<a class="code" href="zconf_8h.html#a04c731495379021454c8e61439dc88ec">voidpf</a>)0;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span>    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (strm-&gt;zfree == (free_func)0)</div>
@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">   may not be thread-safe.</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="infback_8c.html#a4493a4d633ce7f2dd463edc3a9bce72f">   82</a></span>&#160;<a class="code" href="adler32_8c.html#a08023ea6765c99d60a6a3840cd07156e">local</a> <span class="keywordtype">void</span> <a class="code" href="infback_8c.html#a4493a4d633ce7f2dd463edc3a9bce72f">fixedtables</a>(state)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;struct <a class="code" href="structinflate__state.html">inflate_state</a> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *state;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;struct <a class="code" href="structinflate__state.html">inflate_state</a> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *state;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#ifdef BUILDFIXED</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor"></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> virgin = 1;</div>
@@ -348,12 +348,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">   inflateBack() can also return Z_STREAM_ERROR if the input parameters</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">   are not correct, i.e. strm is Z_NULL or the state was not initialized.</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="infback_8c.html#a6568b72b098ada9bd162fc0365943f5c">  250</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a6568b72b098ada9bd162fc0365943f5c">inflateBack</a>(<a class="code" href="structinternal__state.html#aaf558a49ab8c6caea3d131c6b913db42">strm</a>, in, in_desc, out, out_desc)</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="infback_8c.html#a6568b72b098ada9bd162fc0365943f5c">  250</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a6568b72b098ada9bd162fc0365943f5c">inflateBack</a>(<a class="code" href="structinternal__state.html#aaf558a49ab8c6caea3d131c6b913db42">strm</a>, in, in_desc, out, out_desc)</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<a class="code" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> <a class="code" href="structinternal__state.html#aaf558a49ab8c6caea3d131c6b913db42">strm</a>;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;in_func in;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keywordtype">void</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *in_desc;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keywordtype">void</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *in_desc;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;out_func out;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keywordtype">void</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *out_desc;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keywordtype">void</span> <a class="code" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> *out_desc;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">struct </span><a class="code" href="structinflate__state.html">inflate_state</a> FAR *state;</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> FAR *<a class="code" href="structinflate__state.html#a872bf267d91efb4143e9cfb812e670bb">next</a>;    <span class="comment">/* next input */</span></div>
@@ -729,7 +729,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;}</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;</div>
-<div class="line"><a name="l00631"></a><span class="lineno"><a class="code" href="infback_8c.html#a6fe1a0debff7933ce382bfd5348f2b2b">  631</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a6fe1a0debff7933ce382bfd5348f2b2b">inflateBackEnd</a>(strm)</div>
+<div class="line"><a name="l00631"></a><span class="lineno"><a class="code" href="infback_8c.html#a6fe1a0debff7933ce382bfd5348f2b2b">  631</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> <a class="code" href="infback_8c.html#a6fe1a0debff7933ce382bfd5348f2b2b">inflateBackEnd</a>(strm)</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<a class="code" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> strm;</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keywordflow">if</span> (strm == <a class="code" href="zlib_8h.html#ad15afa2776b41b2f4d8582dd152bd736">Z_NULL</a> || strm-&gt;state == <a class="code" href="zlib_8h.html#ad15afa2776b41b2f4d8582dd152bd736">Z_NULL</a> || strm-&gt;zfree == (free_func)0)</div>
@@ -742,7 +742,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:08:56 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:29 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

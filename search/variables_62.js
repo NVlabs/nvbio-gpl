@@ -76,5 +76,6 @@ var searchData=
   ['buffer_5fread_5finfo_5fdptr',['buffer_read_info_dptr',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a4984c582b958cf817f554e5c604d8078',1,'nvbio::bowtie2::cuda::Aligner']]],
   ['buffer_5fread_5finfo_5fdvec',['buffer_read_info_dvec',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa09ebe793884450b3ed48d7d5e2d2177',1,'nvbio::bowtie2::cuda::Aligner']]],
   ['buffer_5fsize',['BUFFER_SIZE',['../structnvbio_1_1io_1_1_data_buffer.html#aff5a7e0db1127747789a9132459cc279',1,'nvbio::io::DataBuffer']]],
-  ['buffers',['BUFFERS',['../structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#a6768aee1d2f5446146218bf7b0a140ee',1,'nvbio::bowtie2::cuda::InputThread::BUFFERS()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#af0e8e6bfc4c036451eb06c10404d954c',1,'nvbio::bowtie2::cuda::InputThreadPaired::BUFFERS()']]]
+  ['buffers',['BUFFERS',['../structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread.html#a6768aee1d2f5446146218bf7b0a140ee',1,'nvbio::bowtie2::cuda::InputThread::BUFFERS()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_input_thread_paired.html#af0e8e6bfc4c036451eb06c10404d954c',1,'nvbio::bowtie2::cuda::InputThreadPaired::BUFFERS()']]],
+  ['bwt_5fhandler',['bwt_handler',['../structnvbio_1_1_string_b_w_t_s_s_a_handler.html#ae5708e9a0bfd0c2b4927ee248c05b01e',1,'nvbio::StringBWTSSAHandler']]]
 ];

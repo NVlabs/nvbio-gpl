@@ -112,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 struct nvbio::cuda::LargeBWTSkeleton&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00403">403</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00296">296</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -142,12 +142,12 @@ SYMBOL_SIZE, BIG_ENDIAN, <br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Methods</h2></td></tr>
-<tr class="memitem:a8975a2b71ad1f9bc9ec48dac7c605563"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a8975a2b71ad1f9bc9ec48dac7c605563">max_subbucket_size</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_buckets, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_super_block_size, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> limit, <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_status.html">LargeBWTStatus</a> *status)</td></tr>
+<tr class="memitem:a8975a2b71ad1f9bc9ec48dac7c605563"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a8975a2b71ad1f9bc9ec48dac7c605563">max_subbucket_size</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_buckets, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_super_block_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> limit, <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_status.html">LargeBWTStatus</a> *status)</td></tr>
 <tr class="separator:a8975a2b71ad1f9bc9ec48dac7c605563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dcd2b946fc5ad96bdfec59e450780e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a1dcd2b946fc5ad96bdfec59e450780e5">build_subbuckets</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_buckets, thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_subbuckets, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_super_block_size, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_block_size)</td></tr>
+<tr class="memitem:a1dcd2b946fc5ad96bdfec59e450780e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a1dcd2b946fc5ad96bdfec59e450780e5">build_subbuckets</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_buckets, thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;h_subbuckets, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_super_block_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_block_size)</td></tr>
 <tr class="separator:a1dcd2b946fc5ad96bdfec59e450780e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99619cf799bc4511da4fbd1ce2fbd58"><td class="memTemplParams" colspan="2">template&lt;typename output_handler &gt; </td></tr>
-<tr class="memitem:aa99619cf799bc4511da4fbd1ce2fbd58"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_status.html">LargeBWTStatus</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#aa99619cf799bc4511da4fbd1ce2fbd58">enact</a> (<a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a4fa218f25c88ab3e00c88e7395812b4d">string_set_type</a> string_set, output_handler &amp;output, <a class="el" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a> *params)</td></tr>
+<tr class="memitem:aa99619cf799bc4511da4fbd1ce2fbd58"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_status.html">LargeBWTStatus</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#aa99619cf799bc4511da4fbd1ce2fbd58">enact</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a4fa218f25c88ab3e00c88e7395812b4d">string_set_type</a> string_set, output_handler &amp;output, <a class="el" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a> *params)</td></tr>
 <tr class="separator:aa99619cf799bc4511da4fbd1ce2fbd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -163,7 +163,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00409">409</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00302">302</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +179,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00407">407</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00300">300</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +195,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00408">408</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00301">301</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +211,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00406">406</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00299">299</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00414">414</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00307">307</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00410">410</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00303">303</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00405">405</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00298">298</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -276,7 +276,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
         <tr>
           <td class="memname">static void <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html">nvbio::cuda::LargeBWTSkeleton</a>&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::build_subbuckets </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>h_buckets</em>, </td>
         </tr>
         <tr>
@@ -288,13 +288,13 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>max_super_block_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>max_block_size</em>&#160;</td>
         </tr>
         <tr>
@@ -310,7 +310,7 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00471">471</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00364">364</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ template&lt;typename output_handler &gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_status.html">LargeBWTStatus</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html">nvbio::cuda::LargeBWTSkeleton</a>&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::enact </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a4fa218f25c88ab3e00c88e7395812b4d">string_set_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html#a4fa218f25c88ab3e00c88e7395812b4d">string_set_type</a>&#160;</td>
           <td class="paramname"><em>string_set</em>, </td>
         </tr>
         <tr>
@@ -356,7 +356,7 @@ template&lt;typename output_handler &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00522">522</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00415">415</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -372,19 +372,19 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
         <tr>
           <td class="memname">static <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="structnvbio_1_1cuda_1_1_large_b_w_t_skeleton.html">nvbio::cuda::LargeBWTSkeleton</a>&lt; ConfigType, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::max_subbucket_size </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> thrust::host_vector&lt; <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>h_buckets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>max_super_block_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>limit</em>, </td>
         </tr>
         <tr>
@@ -406,17 +406,17 @@ template&lt;typename ConfigType , uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename 
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00418">418</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00311">311</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/sufsort/<a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/sufsort/<a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:44 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 08:00:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -46,7 +46,6 @@ var searchData=
   ['countedbase',['CountedBase',['../classnvbio_1_1internals_1_1_counted_base.html',1,'nvbio::internals']]],
   ['countedbase_3c_20nvbio_3a_3aatomicint32_20_3e',['CountedBase&lt; nvbio::AtomicInt32 &gt;',['../classnvbio_1_1internals_1_1_counted_base.html',1,'nvbio::internals']]],
   ['countedbase_5fimpl',['CountedBase_impl',['../classnvbio_1_1internals_1_1_counted_base__impl.html',1,'nvbio::internals']]],
-  ['counter',['Counter',['../struct_counter.html',1,'']]],
   ['cpuoutputbatch',['CPUOutputBatch',['../structnvbio_1_1io_1_1_c_p_u_output_batch.html',1,'nvbio::io']]],
   ['ct_5fdata_5fs',['ct_data_s',['../structct__data__s.html',1,'']]],
   ['cuda_5ferror',['cuda_error',['../structnvbio_1_1cuda__error.html',1,'nvbio']]],

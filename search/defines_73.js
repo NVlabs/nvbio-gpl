@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['sa_5frep',['SA_REP',['../nv_b_w_t_8cpp.html#a0bca9ca897c0fc614ca99bda32a6af06',1,'nvBWT.cpp']]],
-  ['sais',['SAIS',['../nv_b_w_t_8cpp.html#a91241e1ce736c851011cd29632930362',1,'nvBWT.cpp']]],
-  ['seek_5fcur',['SEEK_CUR',['../build_2contrib_2zlib-1_82_87_2zconf_8h.html#a4c8d0b76b470ba65a43ca46a88320f39',1,'SEEK_CUR():&#160;zconf.h'],['../contrib_2zlib_2zconf_8h.html#a4c8d0b76b470ba65a43ca46a88320f39',1,'SEEK_CUR():&#160;zconf.h']]],
-  ['seek_5fend',['SEEK_END',['../build_2contrib_2zlib-1_82_87_2zconf_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8',1,'SEEK_END():&#160;zconf.h'],['../contrib_2zlib_2zconf_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8',1,'SEEK_END():&#160;zconf.h']]],
-  ['seek_5fset',['SEEK_SET',['../build_2contrib_2zlib-1_82_87_2zconf_8h.html#a0d112bae8fd35be772185b6ec6bcbe64',1,'SEEK_SET():&#160;zconf.h'],['../contrib_2zlib_2zconf_8h.html#a0d112bae8fd35be772185b6ec6bcbe64',1,'SEEK_SET():&#160;zconf.h']]],
+  ['seek_5fcur',['SEEK_CUR',['../zconf_8h.html#a4c8d0b76b470ba65a43ca46a88320f39',1,'zconf.h']]],
+  ['seek_5fend',['SEEK_END',['../zconf_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8',1,'zconf.h']]],
+  ['seek_5fset',['SEEK_SET',['../zconf_8h.html#a0d112bae8fd35be772185b6ec6bcbe64',1,'zconf.h']]],
   ['send_5fbits',['send_bits',['../trees_8c.html#aea5290b53438097651a8d1c7098aa5ef',1,'trees.c']]],
   ['send_5fcode',['send_code',['../trees_8c.html#a46e5de3915e644d07a6ff571e7db7bfa',1,'trees.c']]],
   ['single_5fcta_5fscan',['SINGLE_CTA_SCAN',['../work__queue__ordered__inl_8h.html#a219b002c5f6277296ab595fcf6910b3c',1,'work_queue_ordered_inl.h']]],

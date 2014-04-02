@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/sufsort/sufsort_priv.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/sufsort/sufsort_priv.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_911b30d44f50535725ac44375ce00105.html">sufsort</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_b30c79e05c85b52436a87e85517151d6.html">sufsort</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -2265,148 +2265,152 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">output_iterator</a>       output,</div>
 <div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;        <span class="keyword">const</span> index_type            offset)</div>
 <div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;    {</div>
-<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blockdim = 128;</div>
-<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_blocks = (n + blockdim-1) / blockdim;</div>
-<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;        packed_device_copy_kernel&lt;&lt;&lt;n_blocks,blockdim&gt;&gt;&gt;( n, input, output, offset );</div>
-<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160;    }</div>
-<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160;};</div>
-<div class="line"><a name="l02399"></a><span class="lineno"> 2399</span>&#160;</div>
-<div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> output_iterator, <span class="keyword">typename</span> index_type&gt;</div>
-<div class="line"><a name="l02403"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a6ee18a2eecb47667632e51cf57ad3b32"> 2403</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a6ee18a2eecb47667632e51cf57ad3b32">device_copy</a>(</div>
-<div class="line"><a name="l02404"></a><span class="lineno"> 2404</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            n,</div>
-<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;    <span class="keyword">const</span> input_iterator        input,</div>
-<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;    <span class="keyword">const</span> output_iterator       output,</div>
-<div class="line"><a name="l02407"></a><span class="lineno"> 2407</span>&#160;    <span class="keyword">const</span> index_type            offset)</div>
-<div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;{</div>
-<div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160;    <a class="code" href="structnvbio_1_1priv_1_1device__copy__dispatch.html#a7dd04d5b56e9b7ded5525e9e9a9ce67b">device_copy_dispatch&lt;input_iterator,output_iterator,index_type&gt;::copy</a>( n, input, output, offset );</div>
-<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;}</div>
-<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;</div>
-<div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> range_iterator, <span class="keyword">typename</span> storage_type, u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> index_type&gt;</div>
-<div class="line"><a name="l02417"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a70fd8d0bede8fc42a5f603e1751a4eab"> 2417</a></span>&#160;__global__ <span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a70fd8d0bede8fc42a5f603e1751a4eab">device_scatter_kernel</a>(</div>
-<div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                                                                                        n_ranges,</div>
-<div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160;    <span class="keyword">const</span> range_iterator                                                                                ranges,</div>
-<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;    <span class="keyword">const</span> input_iterator                                                                                input,</div>
-<div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160;    <span class="keyword">const</span> slot_iterator                                                                                 slots,</div>
-<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;          <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;</a> &gt;    output)</div>
-<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;{</div>
-<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a> = threadIdx.x + blockIdx.x*blockDim.x;</div>
-<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;</div>
-<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;    <span class="keywordflow">if</span> (thread_id &gt;= n_ranges)</div>
-<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;</div>
-<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;    <span class="comment">// care must be used to avoid write-conflicts, hence we assign all symbols belonging</span></div>
-<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;    <span class="comment">// to the same output word to a single thread</span></div>
-<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> elem_begin = thread_id ? ranges[ thread_id-1 ] : 0u;</div>
-<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> elem_end   =             ranges[ <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>   ];</div>
-<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;</div>
-<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = elem_begin; i &lt; elem_end; ++i)</div>
-<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;    {</div>
-<div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> slot = slots[i];</div>
-<div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;        output[ slot ] = input[i];</div>
-<div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;    }</div>
-<div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;}</div>
-<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;</div>
-<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;</div>
-<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> output_iterator&gt;</div>
-<div class="line"><a name="l02447"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html"> 2447</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html">device_scatter_dispatch</a></div>
-<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;{</div>
-<div class="line"><a name="l02449"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a"> 2449</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a">enact</a>(</div>
-<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>           n,</div>
-<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;        <span class="keyword">const</span> input_iterator   input,</div>
-<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;        <span class="keyword">const</span> slot_iterator    slots,</div>
-<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;            output_iterator    output)</div>
-<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;    {</div>
-<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;        thrust::scatter(</div>
-<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;            input,</div>
-<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;            input + n,</div>
-<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;            slots,</div>
-<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;            output );</div>
-<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;    }</div>
-<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;};</div>
-<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;</div>
-<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> storage_type, u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> index_type&gt;</div>
-<div class="line"><a name="l02466"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html"> 2466</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html">device_scatter_dispatch</a>&lt;</div>
-<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;    input_iterator,</div>
-<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;    slot_iterator,</div>
-<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;    <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;storage_type,<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt; &gt; &gt;</div>
-<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;{</div>
-<div class="line"><a name="l02471"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a6bf93ae9b2d2ec00469599ec3842a15c"> 2471</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator&lt; PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;</a> &gt; <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a6bf93ae9b2d2ec00469599ec3842a15c">output_iterator</a>;</div>
-<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;</div>
-<div class="line"><a name="l02473"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a47af3526ffdbdd12575506421a9d72c0"> 2473</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a47af3526ffdbdd12575506421a9d72c0">enact</a>(</div>
-<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>           n,</div>
-<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;        <span class="keyword">const</span> input_iterator   input,</div>
-<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;        <span class="keyword">const</span> slot_iterator    slots,</div>
-<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;            <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">output_iterator</a>    output)</div>
-<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;    {</div>
-<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;        <span class="comment">// find out a set of ranges of input symbols covering distinct words in the output: this is done</span></div>
-<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;        <span class="comment">// looking at the words covered by each of the symbols, and reducing together all symbols falling</span></div>
-<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;        <span class="comment">// in the same word.</span></div>
-<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;        thrust::device_vector&lt;uint32&gt; d_ranges( n );</div>
-<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;        thrust::device_vector&lt;uint32&gt; d_keys( n );</div>
-<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;</div>
-<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1_packed_stream.html#ad1c591036f006857633ad31729461f2f">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;::storage_type</a> word_type;</div>
-<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (8u*<span class="keyword">sizeof</span>(word_type))/SYMBOL_SIZE;</div>
-<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;</div>
-<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_ranges = <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( thrust::reduce_by_key(</div>
-<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots,     <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream_iterator.html#aa5cde2049d36a2caa545f17c9ee2e3d5">index</a>(), SYMBOLS_PER_WORD ) ),</div>
-<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots + n, <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream_iterator.html#aa5cde2049d36a2caa545f17c9ee2e3d5">index</a>(), SYMBOLS_PER_WORD ) ),</div>
-<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(1u),</div>
-<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;            d_keys.begin(),</div>
-<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;            d_ranges.begin(),</div>
-<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;            thrust::equal_to&lt;uint32&gt;(),</div>
-<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;            thrust::maximum&lt;uint32&gt;() ).first - d_keys.begin() );</div>
-<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;</div>
-<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;        <span class="comment">// at this point we can scatter the identified ranges</span></div>
-<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blockdim = 128;</div>
-<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_blocks = (n_ranges + blockdim-1) / blockdim;</div>
-<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;        device_scatter_kernel&lt;&lt;&lt;n_blocks,blockdim&gt;&gt;&gt;(</div>
-<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;            n_ranges,</div>
-<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;            d_ranges.begin(),</div>
-<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;            input,</div>
-<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;            slots,</div>
-<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;            output );</div>
-<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;    }</div>
-<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;};</div>
-<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;</div>
-<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> output_iterator&gt;</div>
-<div class="line"><a name="l02512"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a70c1e93fb4de83ea8f2f321511ff2fd9"> 2512</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a70c1e93fb4de83ea8f2f321511ff2fd9">device_scatter</a>(</div>
-<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            n,</div>
-<div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;    <span class="keyword">const</span> input_iterator    input,</div>
-<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;    <span class="keyword">const</span> slot_iterator     slots,</div>
-<div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;          output_iterator   output)</div>
-<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;{</div>
-<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;    <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a">device_scatter_dispatch&lt;input_iterator,slot_iterator,output_iterator&gt;::enact</a>(</div>
-<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;        n,</div>
-<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;        input,</div>
-<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;        slots,</div>
-<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;        output );</div>
-<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;}</div>
-<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;</div>
-<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;<span class="comment">// ------------------------------------------------------------------------------------------------------------- //</span></div>
-<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;</div>
-<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#afbb0c296d8cf4b80c657f7606430aca1">pack_flags</a>(</div>
-<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
-<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags,</div>
-<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;          <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*   comp_flags);</div>
-<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;</div>
-<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">build_head_flags</a>(</div>
-<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
-<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*   keys,</div>
-<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;          <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags);</div>
-<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;</div>
-<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">build_head_flags</a>(</div>
-<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
-<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*   keys,</div>
-<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;          <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags);</div>
-<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;</div>
-<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;} <span class="comment">// namespace priv</span></div>
-<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1_packed_stream.html#ad1c591036f006857633ad31729461f2f">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;::storage_type</a> word_type;</div>
+<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (8u*<span class="keyword">sizeof</span>(word_type))/SYMBOL_SIZE;</div>
+<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;</div>
+<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blockdim = 128;</div>
+<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_words  = <a class="code" href="group___basic_utils.html#gabf731ec687bc1c5397b265d41d76da50">util::divide_ri</a>( n, SYMBOLS_PER_WORD ) + 1u;</div>
+<div class="line"><a name="l02399"></a><span class="lineno"> 2399</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_blocks = (n_words + blockdim-1) / blockdim;</div>
+<div class="line"><a name="l02400"></a><span class="lineno"> 2400</span>&#160;        packed_device_copy_kernel&lt;&lt;&lt;n_blocks,blockdim&gt;&gt;&gt;( n, input, output, offset );</div>
+<div class="line"><a name="l02401"></a><span class="lineno"> 2401</span>&#160;    }</div>
+<div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;};</div>
+<div class="line"><a name="l02403"></a><span class="lineno"> 2403</span>&#160;</div>
+<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> output_iterator, <span class="keyword">typename</span> index_type&gt;</div>
+<div class="line"><a name="l02407"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a6ee18a2eecb47667632e51cf57ad3b32"> 2407</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a6ee18a2eecb47667632e51cf57ad3b32">device_copy</a>(</div>
+<div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            n,</div>
+<div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160;    <span class="keyword">const</span> input_iterator        input,</div>
+<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;    <span class="keyword">const</span> output_iterator       output,</div>
+<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;    <span class="keyword">const</span> index_type            offset)</div>
+<div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;{</div>
+<div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160;    <a class="code" href="structnvbio_1_1priv_1_1device__copy__dispatch.html#a7dd04d5b56e9b7ded5525e9e9a9ce67b">device_copy_dispatch&lt;input_iterator,output_iterator,index_type&gt;::copy</a>( n, input, output, offset );</div>
+<div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;}</div>
+<div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;</div>
+<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> range_iterator, <span class="keyword">typename</span> storage_type, u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> index_type&gt;</div>
+<div class="line"><a name="l02421"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a70fd8d0bede8fc42a5f603e1751a4eab"> 2421</a></span>&#160;__global__ <span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a70fd8d0bede8fc42a5f603e1751a4eab">device_scatter_kernel</a>(</div>
+<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                                                                                        n_ranges,</div>
+<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;    <span class="keyword">const</span> range_iterator                                                                                ranges,</div>
+<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;    <span class="keyword">const</span> input_iterator                                                                                input,</div>
+<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;    <span class="keyword">const</span> slot_iterator                                                                                 slots,</div>
+<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;          <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;</a> &gt;    output)</div>
+<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;{</div>
+<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a> = threadIdx.x + blockIdx.x*blockDim.x;</div>
+<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;</div>
+<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;    <span class="keywordflow">if</span> (thread_id &gt;= n_ranges)</div>
+<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;</div>
+<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    <span class="comment">// care must be used to avoid write-conflicts, hence we assign all symbols belonging</span></div>
+<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;    <span class="comment">// to the same output word to a single thread</span></div>
+<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> elem_begin = thread_id ? ranges[ thread_id-1 ] : 0u;</div>
+<div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> elem_end   =             ranges[ <a class="code" href="group___work_queue_detail.html#gaa01555552f806ae9dc8041e6c489082b">thread_id</a>   ];</div>
+<div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;</div>
+<div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = elem_begin; i &lt; elem_end; ++i)</div>
+<div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;    {</div>
+<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> slot = slots[i];</div>
+<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;        output[ slot ] = input[i];</div>
+<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;    }</div>
+<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160;}</div>
+<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;</div>
+<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;</div>
+<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> output_iterator&gt;</div>
+<div class="line"><a name="l02451"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html"> 2451</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html">device_scatter_dispatch</a></div>
+<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;{</div>
+<div class="line"><a name="l02453"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a"> 2453</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a">enact</a>(</div>
+<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>           n,</div>
+<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;        <span class="keyword">const</span> input_iterator   input,</div>
+<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;        <span class="keyword">const</span> slot_iterator    slots,</div>
+<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;            output_iterator    output)</div>
+<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;    {</div>
+<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;        thrust::scatter(</div>
+<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;            input,</div>
+<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;            input + n,</div>
+<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;            slots,</div>
+<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;            output );</div>
+<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;    }</div>
+<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;};</div>
+<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;</div>
+<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> storage_type, u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> index_type&gt;</div>
+<div class="line"><a name="l02470"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html"> 2470</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html">device_scatter_dispatch</a>&lt;</div>
+<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;    input_iterator,</div>
+<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;    slot_iterator,</div>
+<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;    <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;storage_type,<a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt; &gt; &gt;</div>
+<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;{</div>
+<div class="line"><a name="l02475"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a6bf93ae9b2d2ec00469599ec3842a15c"> 2475</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator&lt; PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;</a> &gt; <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a6bf93ae9b2d2ec00469599ec3842a15c">output_iterator</a>;</div>
+<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;</div>
+<div class="line"><a name="l02477"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a47af3526ffdbdd12575506421a9d72c0"> 2477</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch_3_01input__iterator_00_01slot__iterator_00_01_pc1d3693a4e8c14dfb9f3377d5b55f4d0.html#a47af3526ffdbdd12575506421a9d72c0">enact</a>(</div>
+<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>           n,</div>
+<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;        <span class="keyword">const</span> input_iterator   input,</div>
+<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;        <span class="keyword">const</span> slot_iterator    slots,</div>
+<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;            <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">output_iterator</a>    output)</div>
+<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;    {</div>
+<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;        <span class="comment">// find out a set of ranges of input symbols covering distinct words in the output: this is done</span></div>
+<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;        <span class="comment">// looking at the words covered by each of the symbols, and reducing together all symbols falling</span></div>
+<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;        <span class="comment">// in the same word.</span></div>
+<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;        thrust::device_vector&lt;uint32&gt; d_ranges( n );</div>
+<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;        thrust::device_vector&lt;uint32&gt; d_keys( n );</div>
+<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;</div>
+<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1_packed_stream.html#ad1c591036f006857633ad31729461f2f">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;::storage_type</a> word_type;</div>
+<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (8u*<span class="keyword">sizeof</span>(word_type))/SYMBOL_SIZE;</div>
+<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;</div>
+<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_ranges = <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( thrust::reduce_by_key(</div>
+<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots,     <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream_iterator.html#aa5cde2049d36a2caa545f17c9ee2e3d5">index</a>(), SYMBOLS_PER_WORD ) ),</div>
+<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots + n, <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream_iterator.html#aa5cde2049d36a2caa545f17c9ee2e3d5">index</a>(), SYMBOLS_PER_WORD ) ),</div>
+<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(1u),</div>
+<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;            d_keys.begin(),</div>
+<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;            d_ranges.begin(),</div>
+<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;            thrust::equal_to&lt;uint32&gt;(),</div>
+<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;            thrust::maximum&lt;uint32&gt;() ).first - d_keys.begin() );</div>
+<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;</div>
+<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;        <span class="comment">// at this point we can scatter the identified ranges</span></div>
+<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blockdim = 128;</div>
+<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_blocks = (n_ranges + blockdim-1) / blockdim;</div>
+<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;        device_scatter_kernel&lt;&lt;&lt;n_blocks,blockdim&gt;&gt;&gt;(</div>
+<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;            n_ranges,</div>
+<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;            d_ranges.begin(),</div>
+<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;            input,</div>
+<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;            slots,</div>
+<div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;            output );</div>
+<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;    }</div>
+<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;};</div>
+<div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;</div>
+<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> input_iterator, <span class="keyword">typename</span> slot_iterator, <span class="keyword">typename</span> output_iterator&gt;</div>
+<div class="line"><a name="l02516"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1priv.html#a70c1e93fb4de83ea8f2f321511ff2fd9"> 2516</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a70c1e93fb4de83ea8f2f321511ff2fd9">device_scatter</a>(</div>
+<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>            n,</div>
+<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;    <span class="keyword">const</span> input_iterator    input,</div>
+<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;    <span class="keyword">const</span> slot_iterator     slots,</div>
+<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;          output_iterator   output)</div>
+<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;{</div>
+<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;    <a class="code" href="structnvbio_1_1priv_1_1device__scatter__dispatch.html#a4967875b1a577c33bd1ba34d5c19877a">device_scatter_dispatch&lt;input_iterator,slot_iterator,output_iterator&gt;::enact</a>(</div>
+<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;        n,</div>
+<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;        input,</div>
+<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;        slots,</div>
+<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;        output );</div>
+<div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;}</div>
+<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;</div>
+<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;<span class="comment">// ------------------------------------------------------------------------------------------------------------- //</span></div>
+<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;</div>
+<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#afbb0c296d8cf4b80c657f7606430aca1">pack_flags</a>(</div>
+<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
+<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags,</div>
+<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;          <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*   comp_flags);</div>
+<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160;</div>
+<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">build_head_flags</a>(</div>
+<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
+<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*   keys,</div>
+<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;          <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags);</div>
+<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;</div>
+<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">build_head_flags</a>(</div>
+<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>    n,</div>
+<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*   keys,</div>
+<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;          <a class="code" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*    flags);</div>
+<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;</div>
+<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;} <span class="comment">// namespace priv</span></div>
+<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:03 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

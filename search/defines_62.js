@@ -12,7 +12,5 @@ var searchData=
   ['bucket_5fbstar',['BUCKET_BSTAR',['../divsufsort_8c.html#a43519a7093bc1c0d5a77870a7c23fba5',1,'BUCKET_BSTAR():&#160;divsufsort.c'],['../divsufsortxx_8h.html#a65f6d80024cf4974f8463f5674cc6d38',1,'BUCKET_BSTAR():&#160;divsufsortxx.h']]],
   ['buf_5fsize',['Buf_size',['../deflate_8h.html#a0c0213b942f7535235cf515e8fe23bf9',1,'deflate.h']]],
   ['busy_5fstate',['BUSY_STATE',['../deflate_8h.html#a4821f69a5605c2618cd4dc4d3f60979c',1,'deflate.h']]],
-  ['bwtsw',['BWTSW',['../nv_b_w_t_8cpp.html#ad134197aca320ccf496b351d9dff1fe8',1,'nvBWT.cpp']]],
-  ['byte_5fpacking',['BYTE_PACKING',['../nv_b_w_t_8cpp.html#a2ec5fab65f0062d8c9da5e9e0a29e3a8',1,'nvBWT.cpp']]],
   ['bytebits',['BYTEBITS',['../infback_8c.html#aa1e478b107abaccc428d6266ea5ca595',1,'BYTEBITS():&#160;infback.c'],['../inflate_8c.html#aa1e478b107abaccc428d6266ea5ca595',1,'BYTEBITS():&#160;inflate.c']]]
 ];

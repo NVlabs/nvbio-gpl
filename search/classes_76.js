@@ -68,6 +68,6 @@ var searchData=
   ['vector_5ftype_3c_20unsigned_20short_2c_203_20_3e',['vector_type&lt; unsigned short, 3 &gt;',['../structnvbio_1_1vector__type_3_01unsigned_01short_00_013_01_4.html',1,'nvbio']]],
   ['vector_5ftype_3c_20unsigned_20short_2c_204_20_3e',['vector_type&lt; unsigned short, 4 &gt;',['../structnvbio_1_1vector__type_3_01unsigned_01short_00_014_01_4.html',1,'nvbio']]],
   ['vector_5fwrapper',['vector_wrapper',['../structnvbio_1_1vector__wrapper.html',1,'nvbio']]],
-  ['view_5ferror',['view_error',['../structnvbio_1_1_server_mapped_file_1_1view__error.html',1,'nvbio::ServerMappedFile']]],
-  ['view_5ferror',['view_error',['../structnvbio_1_1_mapped_file_1_1view__error.html',1,'nvbio::MappedFile']]]
+  ['view_5ferror',['view_error',['../structnvbio_1_1_mapped_file_1_1view__error.html',1,'nvbio::MappedFile']]],
+  ['view_5ferror',['view_error',['../structnvbio_1_1_server_mapped_file_1_1view__error.html',1,'nvbio::ServerMappedFile']]]
 ];

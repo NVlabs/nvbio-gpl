@@ -113,11 +113,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Methods</h2></td></tr>
 <tr class="memitem:ab36ffb6a5df51cf76e896b286d0daa36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#ab36ffb6a5df51cf76e896b286d0daa36">GPUOutputBatch</a> (<a class="el" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> _count, thrust::device_vector&lt; <a class="el" href="structnvbio_1_1io_1_1_best_alignments.html">io::BestAlignments</a> &gt; &amp;_best_data_dvec, <a class="el" href="structnvbio_1_1io_1_1_device_cigar_array.html">DeviceCigarArray</a> _cigar, <a class="el" href="structnvbio_1_1cuda_1_1_device_vector_array.html">nvbio::cuda::DeviceVectorArray</a>&lt; <a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> &gt; &amp;_mds, <a class="el" href="structnvbio_1_1io_1_1_read_data_c_u_d_a.html">io::ReadDataCUDA</a> &amp;_read_data)</td></tr>
 <tr class="separator:ab36ffb6a5df51cf76e896b286d0daa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc9929cafdb7e46933d207957220e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a0bc9929cafdb7e46933d207957220e1e">readback_scores</a> (thrust::host_vector&lt; <a class="el" href="structnvbio_1_1io_1_1_alignment_result.html">io::AlignmentResult</a> &gt; &amp;output, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga33a303d7df8d2b996a60298573bf109c">AlignmentMate</a> mate, <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga14685a9d6ccdc4e08dd5454ded3821ae">AlignmentScore</a> score) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a0bc9929cafdb7e46933d207957220e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a0bc9929cafdb7e46933d207957220e1e">readback_scores</a> (thrust::host_vector&lt; <a class="el" href="structnvbio_1_1io_1_1_alignment_result.html">io::AlignmentResult</a> &gt; &amp;output, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga33a303d7df8d2b996a60298573bf109c">AlignmentMate</a> mate, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga14685a9d6ccdc4e08dd5454ded3821ae">AlignmentScore</a> score) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a0bc9929cafdb7e46933d207957220e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f12aadc3d75323fc77f7d5c5cea8cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a6f12aadc3d75323fc77f7d5c5cea8cd5">readback_cigars</a> (<a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html">HostCigarArray</a> &amp;host_cigars) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a6f12aadc3d75323fc77f7d5c5cea8cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a6f12aadc3d75323fc77f7d5c5cea8cd5">readback_cigars</a> (<a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html">HostCigarArray</a> &amp;host_cigars) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a6f12aadc3d75323fc77f7d5c5cea8cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55dbab3df464bd83a4d334890bd83a81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a55dbab3df464bd83a4d334890bd83a81">readback_mds</a> (<a class="el" href="structnvbio_1_1cuda_1_1_host_vector_array.html">nvbio::cuda::HostVectorArray</a>&lt; <a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> &gt; &amp;host_mds) <a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="memitem:a55dbab3df464bd83a4d334890bd83a81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#a55dbab3df464bd83a4d334890bd83a81">readback_mds</a> (<a class="el" href="structnvbio_1_1cuda_1_1_host_vector_array.html">nvbio::cuda::HostVectorArray</a>&lt; <a class="el" href="namespacenvbio.html#aec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> &gt; &amp;host_mds) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a55dbab3df464bd83a4d334890bd83a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -240,13 +240,13 @@ Public Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga33a303d7df8d2b996a60298573bf109c">AlignmentMate</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga33a303d7df8d2b996a60298573bf109c">AlignmentMate</a>&#160;</td>
           <td class="paramname"><em>mate</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga14685a9d6ccdc4e08dd5454ded3821ae">AlignmentScore</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#ga14685a9d6ccdc4e08dd5454ded3821ae">AlignmentScore</a>&#160;</td>
           <td class="paramname"><em>score</em>&#160;</td>
         </tr>
         <tr>
@@ -333,13 +333,13 @@ Public Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/output/<a class="el" href="output__batch_8h_source.html">output_batch.h</a></li>
-<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/io/output/<a class="el" href="output__batch_8cpp_source.html">output_batch.cpp</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/io/output/<a class="el" href="output__batch_8h_source.html">output_batch.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/io/output/<a class="el" href="output__batch_8cpp_source.html">output_batch.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:48 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 08:00:17 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

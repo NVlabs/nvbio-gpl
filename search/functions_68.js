@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hamming_5fbacktrack',['hamming_backtrack',['../namespacenvbio.html#adcbec0e8b809f645e81b62a3f0481470',1,'nvbio']]],
+  ['hamming_5fbacktrack',['hamming_backtrack',['../group___f_m_index.html#gadcbec0e8b809f645e81b62a3f0481470',1,'nvbio']]],
   ['has',['has',['../structnvbio_1_1bloom__filter.html#a63c2ee342fd95ed730c076879a76b6fb',1,'nvbio::bloom_filter::has()'],['../structnvbio_1_1_s_s_a__value__multiple__context.html#a2d09d6c2564146001dd3ad30bdc702f4',1,'nvbio::SSA_value_multiple_context::has()'],['../structnvbio_1_1_s_s_a__index__multiple__context.html#a3f8703a3cee299bc5db4ba7191c89bde',1,'nvbio::SSA_index_multiple_context::has()'],['../structnvbio_1_1bloom__filter.html#a46be0ca8d4f34ce901a53c6da33eb405',1,'nvbio::bloom_filter::has()']]],
   ['has_5fgenome',['has_genome',['../structnvbio_1_1io_1_1_f_m_index_data.html#a991967e13761dd3cd6fb1dc10c6f4fbd',1,'nvbio::io::FMIndexData']]],
   ['has_5frssa',['has_rssa',['../structnvbio_1_1io_1_1_f_m_index_data.html#ae42bff528468a1cce3f4e165cd05f4ed',1,'nvbio::io::FMIndexData']]],

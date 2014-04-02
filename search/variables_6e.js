@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../structnvbio_1_1alndiff_1_1_p_e_analyzer.html#a48ba9a3c5438635499554beb6710720e',1,'nvbio::alndiff::PEAnalyzer::n()'],['../structnvbio_1_1alndiff_1_1_s_e_analyzer.html#a6e03cf856d87f0da9b02ca599889c67e',1,'nvbio::alndiff::SEAnalyzer::n()'],['../structnvbio_1_1alndiff_1_1_boolean_stats.html#a8e98f5d8377cd3ad26021e9d4ebc3348',1,'nvbio::alndiff::BooleanStats::n()'],['../structnvbio_1_1_d_c_s.html#a7732fd15e8ccc4e0afef60ed56f7c1a2',1,'nvbio::DCS::N()']]],
+  ['n',['N',['../structnvbio_1_1_d_c_s.html#a7732fd15e8ccc4e0afef60ed56f7c1a2',1,'nvbio::DCS::N()'],['../structnvbio_1_1alndiff_1_1_p_e_analyzer.html#a48ba9a3c5438635499554beb6710720e',1,'nvbio::alndiff::PEAnalyzer::n()'],['../structnvbio_1_1alndiff_1_1_s_e_analyzer.html#a6e03cf856d87f0da9b02ca599889c67e',1,'nvbio::alndiff::SEAnalyzer::n()'],['../structnvbio_1_1alndiff_1_1_boolean_stats.html#a8e98f5d8377cd3ad26021e9d4ebc3348',1,'nvbio::alndiff::BooleanStats::n()']]],
   ['n_5fambiguous',['n_ambiguous',['../structnvbio_1_1io_1_1_alignment_stats.html#a05fd41a0f5a53e0c3be6d406f91ec609',1,'nvbio::io::AlignmentStats::n_ambiguous()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#ae9336cc56dbcb7493099c36b31930dfc',1,'nvbio::bowtie2::cuda::Stats::n_ambiguous()']]],
   ['n_5fambs',['n_ambs',['../structnvbio_1_1_b_n_t_ann_data.html#a56ec632c987d0ff31870b21b66e11041',1,'nvbio::BNTAnnData::n_ambs()'],['../structnvbio_1_1io_1_1_b_n_t_ann.html#a4e2c6c3b77151ba353668260f4d109d0',1,'nvbio::io::BNTAnn::n_ambs()']]],
   ['n_5fbits',['n_bits',['../structnvbio_1_1leading__bits.html#a9f1f230156b3f8a75968c804c4efdec7',1,'nvbio::leading_bits']]],
@@ -31,7 +31,7 @@ var searchData=
   ['n_5fmm',['n_mm',['../structnvbio_1_1alndiff_1_1_alignment.html#a3755f9a347de3ff98915db03035bb8dd',1,'nvbio::alndiff::Alignment']]],
   ['n_5fmultiple',['n_multiple',['../structnvbio_1_1io_1_1_alignment_stats.html#a5e951947386b2582d52d57d8198e6f52',1,'nvbio::io::AlignmentStats::n_multiple()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#ac36514141588871cb5dcbc8e777de002',1,'nvbio::bowtie2::cuda::Stats::n_multiple()']]],
   ['n_5fnonambiguous',['n_nonambiguous',['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a3426d6614f738251bbb236439363a606',1,'nvbio::bowtie2::cuda::Stats']]],
-  ['n_5foutput',['n_output',['../structnvbio_1_1_d_c_s_suffix_ranker.html#ae7f0b4658c0a70c4b2a415727afe0c68',1,'nvbio::DCSSuffixRanker::n_output()'],['../structnvbio_1_1cuda_1_1_string_b_w_t_handler.html#aea68dde7b7cc00659c80a4442d55a532',1,'nvbio::cuda::StringBWTHandler::n_output()']]],
+  ['n_5foutput',['n_output',['../structnvbio_1_1_d_c_s_suffix_ranker.html#ae7f0b4658c0a70c4b2a415727afe0c68',1,'nvbio::DCSSuffixRanker::n_output()'],['../structnvbio_1_1_string_b_w_t_handler.html#a6e7d7eded609d1a32b43bc0f407c017b',1,'nvbio::StringBWTHandler::n_output()'],['../structnvbio_1_1_string_s_s_a_handler.html#ac79b2d11130eb7195650298da6defe50',1,'nvbio::StringSSAHandler::n_output()']]],
   ['n_5freads',['n_reads',['../structnvbio_1_1io_1_1_i_o_stats.html#a2f0befb1ac2b94e893496ef76697c15b',1,'nvbio::io::IOStats::n_reads()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a84829cb53c926cf58151fb6b9826d20f',1,'nvbio::bowtie2::cuda::Stats::n_reads()']]],
   ['n_5fref',['n_ref',['../structnvbio_1_1io_1_1_b_a_m__header.html#a5f766ed6f745e7d3471c9acfe6f31c54',1,'nvbio::io::BAM_header']]],
   ['n_5fseqs',['n_seqs',['../structnvbio_1_1_b_n_t_seq.html#a3030add581766721835e48837e6173ba',1,'nvbio::BNTSeq::n_seqs()'],['../structnvbio_1_1_b_n_t_info.html#af41f11e94539f540cde3f83582886da1',1,'nvbio::BNTInfo::n_seqs()'],['../structnvbio_1_1io_1_1_b_n_t_info.html#aedf4040e51ed1634ceb6387bf1e5b0eb',1,'nvbio::io::BNTInfo::n_seqs()']]],
@@ -55,8 +55,7 @@ var searchData=
   ['nlen',['nlen',['../structinflate__state.html#a489b005f4fe214353cd80b77b4f23194',1,'inflate_state']]],
   ['nodes',['nodes',['../structnvbio_1_1_collector.html#a73bb8322107d4d2ffd6ed293e2351587',1,'nvbio::Collector']]],
   ['not_5fambiguous',['not_ambiguous',['../structnvbio_1_1alndiff_1_1_p_e_analyzer.html#ab4744d6fe47938f1dedb635712017ffb',1,'nvbio::alndiff::PEAnalyzer::not_ambiguous()'],['../structnvbio_1_1alndiff_1_1_s_e_analyzer.html#a1ab9829084e006e8a2dbbbe3c9f44617',1,'nvbio::alndiff::SEAnalyzer::not_ambiguous()']]],
-  ['nst_5fnt4_5ftable',['nst_nt4_table',['../nv_b_w_t_8cpp.html#a7f317b53717b84416ede7faf08d561c1',1,'nvBWT.cpp']]],
-  ['null_5fprimary',['NULL_PRIMARY',['../structnvbio_1_1cuda_1_1_string_b_w_t_handler.html#a8987115a376ef1b60537931410f4b9d5',1,'nvbio::cuda::StringBWTHandler']]],
+  ['null_5fprimary',['NULL_PRIMARY',['../structnvbio_1_1_string_b_w_t_handler.html#a9bbadaab4991fd7d5c70e6d3a75be5a6',1,'nvbio::StringBWTHandler']]],
   ['num',['num',['../structnvbio_1_1_time_series.html#a946d9cc2af185c56c0c76a7fa064352c',1,'nvbio::TimeSeries']]],
   ['num_5fwarps',['NUM_WARPS',['../group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca',1,'nvbio::cuda::wq']]],
   ['nummarks',['numMarks',['../structmgpu_1_1_format_op_mark_array.html#af221f20447dcb8741ccc6ce18df7400c',1,'mgpu::FormatOpMarkArray']]],

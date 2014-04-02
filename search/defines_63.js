@@ -6,7 +6,7 @@ var searchData=
   ['code',['Code',['../deflate_8h.html#a068e76e6034d06450385bc98b69ea53e',1,'deflate.h']]],
   ['comment_5fstate',['COMMENT_STATE',['../deflate_8h.html#a06c47936258e98a0c4ca38dd31a5f6c7',1,'deflate.h']]],
   ['compression_5fsorting',['COMPRESSION_SORTING',['../blockwise__sufsort_8h.html#a527ff9ba1a523f15fa6eb124ff7a8ad3',1,'blockwise_sufsort.h']]],
-  ['const',['const',['../build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e',1,'const():&#160;zconf.h'],['../contrib_2zlib_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e',1,'const():&#160;zconf.h']]],
+  ['const',['const',['../zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e',1,'zconf.h']]],
   ['copy',['COPY',['../gzguts_8h.html#a9e77d621548de2a80bc9c5909bfa2b8a',1,'gzguts.h']]],
   ['crc2',['CRC2',['../inflate_8c.html#a2bdde00539008d4c1be6f9d29f0e4bd0',1,'inflate.c']]],
   ['crc32',['CRC32',['../crc_8h.html#a491e419c18fbc5c7cb4a2cd901e31440',1,'crc.h']]],

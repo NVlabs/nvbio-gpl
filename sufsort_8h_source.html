@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/sufsort/sufsort.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/sufsort/sufsort.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_911b30d44f50535725ac44375ce00105.html">sufsort</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_b30c79e05c85b52436a87e85517151d6.html">sufsort</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -157,47 +157,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    output_iterator                                         output,</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                                              params);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_type, <span class="keyword">typename</span> output_iterator&gt;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">typename</span> string_type::index_type <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>(</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">const</span> <span class="keyword">typename</span> string_type::index_type  string_len,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    string_type                             <span class="keywordtype">string</span>,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    output_iterator                         output,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                              params);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_set_type, <span class="keyword">typename</span> output_handler&gt;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#ga70195bfc5943cfc00f5b5c9af1190103">suffix_sort</a>(</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> string_set_type&amp;   string_set,</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          output_handler&amp;    output,</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*               params = NULL);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>(</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt;</a> &gt;,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        output_handler&amp;             output,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                  params = NULL);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;} <span class="comment">// namespace cuda</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#ga471d8eb8040ac1b540bf3b064f94a2f0">large_bwt</a>(</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">const</span> ConcatenatedStringSet&lt;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        PackedStreamIterator&lt; PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt; &gt;,</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        output_handler&amp;             output,</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        BWTParams*                  params = NULL);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;} <span class="comment">// namespace nvbio</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sufsort__inl_8h.html">nvbio/sufsort/sufsort_inl.h</a>&gt;</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_type, <span class="keyword">typename</span> output_handler&gt;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1cuda.html#a2fdb926a0dc1fe9a444b3ab24d84d589">blockwise_suffix_sort</a>(</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">const</span> <span class="keyword">typename</span> string_type::index_type  string_len,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    string_type                             <span class="keywordtype">string</span>,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    output_handler&amp;                         output,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                              params);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_type, <span class="keyword">typename</span> output_iterator&gt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">typename</span> string_type::index_type <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>(</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">const</span> <span class="keyword">typename</span> string_type::index_type  string_len,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    string_type                             <span class="keywordtype">string</span>,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    output_iterator                         output,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                              params);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_set_type, <span class="keyword">typename</span> output_handler&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#ga70195bfc5943cfc00f5b5c9af1190103">suffix_sort</a>(</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">const</span> string_set_type&amp;   string_set,</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          output_handler&amp;    output,</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*               params = NULL);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>(</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt;</a> &gt;,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        output_handler&amp;             output,</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                  params = NULL);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;} <span class="comment">// namespace cuda</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#ga471d8eb8040ac1b540bf3b064f94a2f0">large_bwt</a>(</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">const</span> ConcatenatedStringSet&lt;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        PackedStreamIterator&lt; PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt; &gt;,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <a class="code" href="namespacenvbio.html#abceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        output_handler&amp;             output,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        BWTParams*                  params = NULL);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sufsort__inl_8h.html">nvbio/sufsort/sufsort_inl.h</a>&gt;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:03 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

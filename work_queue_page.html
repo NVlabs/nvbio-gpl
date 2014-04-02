@@ -103,8 +103,8 @@ Work-Streams</h1>
 <dl class="section user"><dt></dt><dd>The user of these classes have to specify a WorkStream class responsible for feeding work to the queue in the shape of a subclass WorkStream::WorkUnit. The latter is responsible for specifying the data and execution of each unit. WorkStream has to implement the following interface:</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">interface </span>WorkStream</div>
 <div class="line">{</div>
-<div class="line">   <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> size() <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a></div>
-<div class="line">   <span class="keywordtype">void</span>   <a class="code" href="namespacenvbio.html#a2f5d633b507416ef81a8875666c00f33">get</a>(<a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, WorkUnit* <a class="code" href="group___work_queue_detail.html#gac49c20b2dd9dabac8da8024266099edc">unit</a>, <a class="code" href="build_2contrib_2zlib-1_82_87_2zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 queue_slot)</div>
+<div class="line">   <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> size() <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a></div>
+<div class="line">   <span class="keywordtype">void</span>   <a class="code" href="namespacenvbio.html#a2f5d633b507416ef81a8875666c00f33">get</a>(<a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, WorkUnit* <a class="code" href="group___work_queue_detail.html#gac49c20b2dd9dabac8da8024266099edc">unit</a>, <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 queue_slot)</div>
 <div class="line">}</div>
 </div><!-- fragment --> <dl class="section user"><dt></dt><dd>queue_slot specifies a (queue position, queue id) pair, assuming there can be one input and one output continuation queue which are swapped among iterations. Knowing the queue slot can be useful to bind external data to a work-unit. </dd></dl>
 <dl class="section user"><dt></dt><dd>When the method WorkQueue::consume( stream ) is called, the queue will launch a kernel to consume all WorkUnit's in the stream. WorkUnit has to implement a single method:</dd></dl>
@@ -180,7 +180,7 @@ Work-Queue Schedulers</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:09:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:42 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

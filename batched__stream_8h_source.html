@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/alignment/batched_stream.h Source File</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/nvbio/nvbio/alignment/batched_stream.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_396c36acb97e29d722c77a130578e26d.html">alignment</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_0991ddf869469412c9cfd2738b7bc761.html">alignment</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -321,31 +321,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespacenvbio.html#ac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                    window_end,</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        sink_type&amp;                      sink)</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// score the current DP matrix window</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> banded_alignment_score&lt;BAND_LEN&gt;(</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            score_stream.<a class="code" href="structnvbio_1_1aln_1_1_score_stream.html#ad1804adfa816dedf58ec88f94dc14454" title="alignment stream ">stream</a>.aligner(),</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            pattern,</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            quals,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <a class="code" href="namespacenvbio.html#a2db934dbdaabc7811bd9fb1fb4b730af">text</a>,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            min_score,</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a9b6f18440974f0b79afc0ba6f0be0fc7" title="the beginning of the pattern window ">window_begin</a>,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            window_end,</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            sink,</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <a class="code" href="structnvbio_1_1aln_1_1_banded_score_unit.html#a1de7093e39ec09bd5b9dcbca7054c449">checkpoint</a> );</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_banded_score_unit.html#a1de7093e39ec09bd5b9dcbca7054c449">  283</a></span>&#160;    <a class="code" href="structnvbio_1_1null__type.html">cell_type</a> <a class="code" href="structnvbio_1_1aln_1_1_banded_score_unit.html#a1de7093e39ec09bd5b9dcbca7054c449">checkpoint</a>[BAND_LEN]; <span class="comment">// as the band is small, we can keep it in local memory</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;};</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;} <span class="comment">// namespace alignment</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// fetch this job&#39;s temporary storage</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="structnvbio_1_1strided__iterator.html">column_type</a> column = score_stream.<a class="code" href="structnvbio_1_1aln_1_1_score_stream.html#a10e6f0639df83f8b56825921ae8ab026">column</a>( queue_slot );</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="comment">// score the current DP matrix window</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> banded_alignment_score&lt;BAND_LEN&gt;(</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            score_stream.<a class="code" href="structnvbio_1_1aln_1_1_score_stream.html#ad1804adfa816dedf58ec88f94dc14454" title="alignment stream ">stream</a>.aligner(),</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            pattern,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            quals,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <a class="code" href="namespacenvbio.html#a2db934dbdaabc7811bd9fb1fb4b730af">text</a>,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            min_score,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <a class="code" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a9b6f18440974f0b79afc0ba6f0be0fc7" title="the beginning of the pattern window ">window_begin</a>,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            window_end,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            sink,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            column );</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;};</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;} <span class="comment">// namespace alignment</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 30 2014 12:08:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 07:59:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
