@@ -22,6 +22,7 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
+#include <zlib/zlib.h>
 
 namespace nvbio {
 
@@ -100,7 +101,7 @@ struct FASTA_inc_reader
     uint8 get();
 
 private:
-    FILE* m_file;
+    gzFile m_file;
 
     std::vector<uint8> m_buffer;
     uint32             m_buffer_size;
@@ -149,7 +150,7 @@ struct FASTA_reader
     uint8 get();
 
 private:
-    FILE* m_file;
+    gzFile m_file;
 
     std::vector<char>  m_id;
     std::vector<uint8> m_read;
