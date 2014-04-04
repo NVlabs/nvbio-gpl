@@ -28,38 +28,38 @@ namespace qgroup {
 template <uint32 SYMBOL_SIZE, typename string_type>
 struct qgroup_setup_I
 {
-    typedef QGroupIndexDevice::bitstream_type                    bitstream_type;
     typedef string_qgram_functor<SYMBOL_SIZE,string_type>   qgram_functor_type;
 
     // constructor
     //
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     qgroup_setup_I(
-        const uint32        _Q,
-        const uint32        _string_len,
-        const string_type   _string,
-        bitstream_type      _I) :
-        Q           ( _Q ),
-        string_len  ( _string_len ),
-        string      ( _string ),
-        I           ( _I )
-        {}
+        const QGroupIndexView   _qgroup,
+        const uint32            _string_len,
+        const string_type       _string)
+    : qgroup        ( _qgroup ),
+      string_len    ( _string_len ),
+      string        ( _string ) {}
 
     // operator functor
     //
-    NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
+    NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, string_len, string );
 
         // set the bit corresponding to the i-th qgram
-        I[ qgram(p) ] = 1u;
+        const uint64 g = qgram(p);
+
+        const uint32 word = g / 32u;
+        const uint32 bit  = g & 31u;
+
+        atomicOr( qgroup.I + word, 1u << bit );
     }
 
-    const uint32            Q;
+    const QGroupIndexView   qgroup;
     const uint32            string_len;
     const string_type       string;
-    mutable bitstream_type  I;
 };
 
 // a functor to set the q-group's SS vector
@@ -76,26 +76,19 @@ struct qgroup_setup_SS
     //
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     qgroup_setup_SS(
-        const uint32        _Q,
-        const uint32        _string_len,
-        const string_type   _string,
-        const uint32*       _I,
-        const uint32*       _S,
-              uint32*       _SS) :
-        Q           ( _Q ),
-        string_len  ( _string_len ),
-        string      ( _string ),
-        I           ( _I ),
-        S           ( _S ),
-        SS          ( _SS )
-        {}
+        const QGroupIndexView   _qgroup,
+        const uint32            _string_len,
+        const string_type       _string)
+    : qgroup        ( _qgroup ),
+      string_len    ( _string_len ),
+      string        ( _string ) {}
 
     // operator functor
     //
     NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, string_len, string );
 
         // compute the qgram g
         const uint64 g = qgram(p);
@@ -105,18 +98,15 @@ struct qgroup_setup_SS
         const uint32 j = uint32( g % WORD_SIZE );
 
         // compute j' such that bit j is the j'-th set bit in I[i]
-        const uint32 j_prime = popc( I[i] & ((2u << j) - 1u) );
+        const uint32 j_prime = popc( qgroup.I[i] & ((1u << j) - 1u) );
 
         // atomically increase the appropriate counter in SS
-        atomicAdd( SS + S[i] + j_prime, 1u );
+        atomicAdd( qgroup.SS + qgroup.S[i] + j_prime, 1u );
     }
 
-    const uint32        Q;
-    const uint32        string_len;
-    const string_type   string;
-    const uint32*       I;
-    const uint32*       S;
-          uint32*       SS;
+    const QGroupIndexView   qgroup;
+    const uint32            string_len;
+    const string_type       string;
 };
 
 // a functor to set the q-group's SS vector
@@ -133,28 +123,19 @@ struct qgroup_setup_P
     //
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     qgroup_setup_P(
-        const uint32        _Q,
-        const uint32        _string_len,
-        const string_type   _string,
-        const uint32*       _I,
-        const uint32*       _S,
-              uint32*       _SS,
-              uint32*       _P) :
-        Q           ( _Q ),
-        string_len  ( _string_len ),
-        string      ( _string ),
-        I           ( _I ),
-        S           ( _S ),
-        SS          ( _SS ),
-        P           ( _P )
-        {}
+        const QGroupIndexView   _qgroup,
+        const uint32            _string_len,
+        const string_type       _string)
+    : qgroup        ( _qgroup ),
+      string_len    ( _string_len ),
+      string        ( _string ) {}
 
     // operator functor
     //
     NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, string_len, string );
 
         // compute the qgram g
         const uint64 g = qgram(p);
@@ -164,22 +145,18 @@ struct qgroup_setup_P
         const uint32 j = uint32( g % WORD_SIZE );
 
         // compute j' such that bit j is the j'-th set bit in I[i]
-        const uint32 j_prime = popc( I[i] & ((2u << j) - 1u) );
+        const uint32 j_prime = popc( qgroup.I[i] & ((1u << j) - 1u) );
 
         // atomically increase the appropriate counter in SS to get the next free slot
-        const uint32 slot = atomicAdd( SS + S[i] + j_prime, 1u );
+        const uint32 slot = atomicAdd( qgroup.SS + qgroup.S[i] + j_prime, 1u );
 
         // and fill the corresponding slot of P
-        P[ slot ] = p;
+        qgroup.P[ slot ] = p;
     }
 
-    const uint32        Q;
-    const uint32        string_len;
-    const string_type   string;
-    const uint32*       I;
-    const uint32*       S;
-          uint32*       SS;
-          uint32*       P;
+    const QGroupIndexView   qgroup;
+    const uint32            string_len;
+    const string_type       string;
 };
 
 } // namespace qgroup
@@ -219,15 +196,13 @@ void QGroupIndexDevice::build(
     // setup I
     //
 
-    bitstream_type I_bits( nvbio::plain_view( I ) );
-
     // fill I with zeros
     thrust::fill(
         I.begin(),
         I.begin() + n_qblocks + 1u,
         uint32(0) );
 
-    const setup_I_type setup_I( Q, string_len, string, I_bits );
+    const setup_I_type setup_I( nvbio::plain_view( *this ), string_len, string );
 
     // set the bits in I corresponding to the used qgram slots
     thrust::for_each(
@@ -249,7 +224,7 @@ void QGroupIndexDevice::build(
         d_temp_storage );
 
     // fetch the number of used qgrams
-    n_unique_qgrams = S[n_qblocks];
+    n_unique_qgrams = S[ n_qblocks ];
 
     //
     // setup SS
@@ -261,11 +236,7 @@ void QGroupIndexDevice::build(
         SS.begin() + n_unique_qgrams + 1u,
         uint32(0) );
 
-    const setup_SS_type setup_SS(
-        Q, string_len, string,
-        nvbio::plain_view( I ),
-        nvbio::plain_view( S ),
-        nvbio::plain_view( SS ) );
+    const setup_SS_type setup_SS( nvbio::plain_view( *this ), string_len, string );
 
     thrust::for_each(
         thrust::make_counting_iterator<uint32>(0),
@@ -287,19 +258,21 @@ void QGroupIndexDevice::build(
     P.resize( string_len );
 
     // copy SS into a temporary vector for the purpose of slot allocation
-    thrust::device_vector<uint32> slots( SS );
+    thrust::device_vector<uint32> SS_copy( SS );
 
-    const setup_P_type setup_P(
-        Q, string_len, string,
-        nvbio::plain_view( I ),
-        nvbio::plain_view( S ),
-        nvbio::plain_view( slots ),
-        nvbio::plain_view( P ) );
+    const setup_P_type setup_P( nvbio::plain_view( *this ), string_len, string );
 
     thrust::for_each(
         thrust::make_counting_iterator<uint32>(0),
         thrust::make_counting_iterator<uint32>(0) + string_len,
         setup_P );
+
+    // and swap the slots with their previous copy
+    SS.swap( SS_copy );
+
+    const uint32 n_slots = SS[ n_unique_qgrams ];
+    if (n_slots != string_len)
+        throw runtime_error( "mismatching number of q-grams: inserted %u q-grams, got: %u\n" );
 }
 
 } // namespace nvbio
