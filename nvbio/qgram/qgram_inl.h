@@ -64,6 +64,7 @@ void QGramIndexDevice::build(
     // sort them
     thrust::sort_by_key(
         d_all_qgrams.begin(),
+        d_all_qgrams.begin() + string_len,
         index.begin() );
 
     // copy only the unique q-grams and count them
@@ -80,6 +81,7 @@ void QGramIndexDevice::build(
         slots.begin(),
         slots.begin(),
         thrust::plus<uint32>(),
+        uint32(0),
         d_temp_storage );
 }
 
