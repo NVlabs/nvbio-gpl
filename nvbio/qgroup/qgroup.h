@@ -44,13 +44,13 @@
 ///
 /// \section TechnicalOverviewSection Technical Overview
 ///\par
-/// A complete list of the classes and functions in this module is given in the \ref QGroup documentation.
+/// A complete list of the classes and functions in this module is given in the \ref QGroupIndex documentation.
 ///
 
 namespace nvbio {
 
 ///
-///@defgroup QGroup QGroup Module
+///@defgroup QGroupIndex QGroupIndex Module
 /// This module contains a series of functions to build a Q-Group Index, as described
 /// in: \n
 ///
@@ -62,7 +62,7 @@ namespace nvbio {
 
 /// A plain view of a q-group
 ///
-struct QGroupView
+struct QGroupIndexView
 {
     static const uint32 WORD_SIZE = 32;
 
@@ -73,7 +73,7 @@ struct QGroupView
     /// constructor
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    QGroupView(
+    QGroupIndexView(
         const uint32 _Q                 = 0,
         const uint32 _n_unique_qgrams   = 0,
         vector_type  _I                 = NULL,
@@ -113,14 +113,14 @@ struct QGroupView
 
 /// A host-side q-group
 ///
-struct QGroupHost
+struct QGroupIndexHost
 {
     static const uint32 WORD_SIZE = 32;
 
     typedef thrust::host_vector<uint32>                         vector_type;
     typedef PackedStream<const uint32*,uint8,1u,false,int64>    const_bitstream_type;
     typedef PackedStream<uint32*,uint8,1u,false,int64>          bitstream_type;
-    typedef QGroupView                                          view_type;
+    typedef QGroupIndexView                                     view_type;
 
     /// return the amount of device memory used
     ///
@@ -146,14 +146,14 @@ struct QGroupHost
 
 /// A device-side q-group
 ///
-struct QGroupDevice
+struct QGroupIndexDevice
 {
     static const uint32 WORD_SIZE = 32;
 
     typedef thrust::device_vector<uint32>                       vector_type;
     typedef PackedStream<const uint32*,uint8,1u,false,int64>    const_bitstream_type;
     typedef PackedStream<uint32*,uint8,1u,false,int64>          bitstream_type;
-    typedef QGroupView                                          view_type;
+    typedef QGroupIndexView                                     view_type;
 
     /// build a q-group index from a given string T; the amount of storage required
     /// is basically O( A^q + |T|*32 ) bits, where A is the alphabet size.
@@ -193,11 +193,11 @@ struct QGroupDevice
     vector_type   P;
 };
 
-/// return the plain view of a QGroup
+/// return the plain view of a QGroupIndex
 ///
-QGroupView plain_view(QGroupDevice& qgroup)
+QGroupIndexView plain_view(QGroupIndexDevice& qgroup)
 {
-    return QGroupView(
+    return QGroupIndexView(
         qgroup.Q,
         qgroup.n_unique_qgrams,
         nvbio::plain_view( qgroup.I ),
@@ -244,7 +244,7 @@ struct string_qgram_functor
     const string_type   string;     ///< string iterator
 };
 
-///@} // end of the QGroup group
+///@} // end of the QGroupIndex group
 
 } // namespace nvbio
 
