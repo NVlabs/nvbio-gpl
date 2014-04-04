@@ -30,7 +30,7 @@
 #include <thrust/for_each.h>
 #include <thrust/iterator/constant_iterator.h>
 
-///\page qgroup_page Q-Group Module
+///\page qgroup_page Q-Group Index Module
 ///\htmlonly
 /// <img src="nvidia_cubes.png" style="position:relative; bottom:-10px; border:0px;"/>
 ///\endhtmlonly
@@ -51,7 +51,7 @@
 namespace nvbio {
 
 ///
-///@defgroup QGroupIndex QGroupIndex Module
+///@defgroup QGroupIndex Q-Group Index Module
 /// This module contains a series of functions to build a Q-Group Index, as described
 /// in: \n
 ///
