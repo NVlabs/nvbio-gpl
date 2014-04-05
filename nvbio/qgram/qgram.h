@@ -158,7 +158,7 @@ struct QGramIndexCore
     typedef QGramVectorType                                                 qgram_vector_type;
     typedef IndexVectorType                                                 index_vector_type;
     typedef CoordVectorType                                                 coord_vector_type;
-    typedef coord_vector_type::value_type                                   coord_type;
+    typedef typename coord_vector_type::value_type                          coord_type;
 
     QGramIndexCore() {}
 
