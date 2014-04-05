@@ -25,10 +25,10 @@ namespace qgroup {
 
 // a functor to set the q-group's I vector
 //
-template <uint32 SYMBOL_SIZE, typename string_type>
+template <typename string_type>
 struct qgroup_setup_I
 {
-    typedef string_qgram_functor<SYMBOL_SIZE,string_type>   qgram_functor_type;
+    typedef string_qgram_functor<string_type>   qgram_functor_type;
 
     // constructor
     //
@@ -46,7 +46,7 @@ struct qgroup_setup_I
     NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( qgroup.Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, qgroup.symbol_size, string_len, string );
 
         // set the bit corresponding to the i-th qgram
         const uint64 g = qgram(p);
@@ -64,11 +64,10 @@ struct qgroup_setup_I
 
 // a functor to set the q-group's SS vector
 //
-template <uint32 SYMBOL_SIZE, typename string_type>
+template <typename string_type>
 struct qgroup_setup_SS
 {
-    typedef QGroupIndexDevice::bitstream_type               bitstream_type;
-    typedef string_qgram_functor<SYMBOL_SIZE,string_type>   qgram_functor_type;
+    typedef string_qgram_functor<string_type>   qgram_functor_type;
 
     static const uint32 WORD_SIZE = 32;
 
@@ -88,7 +87,7 @@ struct qgroup_setup_SS
     NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( qgroup.Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, qgroup.symbol_size, string_len, string );
 
         // compute the qgram g
         const uint64 g = qgram(p);
@@ -111,11 +110,10 @@ struct qgroup_setup_SS
 
 // a functor to set the q-group's SS vector
 //
-template <uint32 SYMBOL_SIZE, typename string_type>
+template <typename string_type>
 struct qgroup_setup_P
 {
-    typedef QGroupIndexDevice::bitstream_type               bitstream_type;
-    typedef string_qgram_functor<SYMBOL_SIZE,string_type>   qgram_functor_type;
+    typedef string_qgram_functor<string_type>   qgram_functor_type;
 
     static const uint32 WORD_SIZE = 32;
 
@@ -135,7 +133,7 @@ struct qgroup_setup_P
     NVBIO_FORCEINLINE NVBIO_DEVICE
     void operator() (const uint32 p) const
     {
-        const qgram_functor_type qgram( qgroup.Q, string_len, string );
+        const qgram_functor_type qgram( qgroup.Q, qgroup.symbol_size, string_len, string );
 
         // compute the qgram g
         const uint64 g = qgram(p);
@@ -167,21 +165,23 @@ struct qgroup_setup_P
 // \param string_len       the size of the string
 // \param string           the string iterator
 //
-template <uint32 SYMBOL_SIZE, typename string_type>
+template <typename string_type>
 void QGroupIndexDevice::build(
     const uint32        q,
+    const uint32        symbol_sz,
     const uint32        string_len,
     const string_type   string)
 {
-    typedef qgroup::qgroup_setup_I<SYMBOL_SIZE,string_type>     setup_I_type;
-    typedef qgroup::qgroup_setup_SS<SYMBOL_SIZE,string_type>    setup_SS_type;
-    typedef qgroup::qgroup_setup_P<SYMBOL_SIZE,string_type>     setup_P_type;
+    typedef qgroup::qgroup_setup_I<string_type>     setup_I_type;
+    typedef qgroup::qgroup_setup_SS<string_type>    setup_SS_type;
+    typedef qgroup::qgroup_setup_P<string_type>     setup_P_type;
 
     thrust::device_vector<uint8> d_temp_storage;
 
-    Q = q;
+    Q           = q;
+    symbol_size = symbol_sz;
 
-    const uint32 ALPHABET_SIZE = 1u << SYMBOL_SIZE;
+    const uint32 ALPHABET_SIZE = 1u << symbol_size;
 
     uint64 n_qgrams = 1;
     for (uint32 i = 0; i < q; ++i)
