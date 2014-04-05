@@ -354,6 +354,9 @@ QGramSetIndexView plain_view(QGramSetIndexDevice& qgram)
 template <typename string_type>
 struct string_qgram_functor
 {
+    typedef uint32  argument_type;
+    typedef uint64  result_type;
+
     /// constructor
     ///
     /// \param _Q                the q-gram length
@@ -397,6 +400,9 @@ struct string_qgram_functor
 template <typename string_set_type>
 struct string_set_qgram_functor
 {
+    typedef uint32  argument_type;
+    typedef uint64  result_type;
+
     typedef typename string_set_type::string_type string_type;
 
     /// constructor
