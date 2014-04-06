@@ -50,6 +50,9 @@
 
 namespace nvbio {
 
+///@addtogroup QGram
+///@{
+
 ///
 ///@defgroup QGroupIndex Q-Group Index Module
 /// This module contains a series of functions to build a Q-Group Index, as described
@@ -232,6 +235,7 @@ QGroupIndexView plain_view(QGroupIndexDevice& qgroup)
 }
 
 ///@} // end of the QGroupIndex group
+///@} // end of the QGram group
 
 } // namespace nvbio
 
