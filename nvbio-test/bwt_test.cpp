@@ -24,7 +24,7 @@
 #include <vector>
 #include <algorithm>
 #include <nvbio/basic/timer.h>
-#include <nvbio/fmindex/dna.h>
+#include <nvbio/basic/dna.h>
 #include <nvbio/basic/packedstream.h>
 #include <nvbio/fmindex/bwt.h>
 
