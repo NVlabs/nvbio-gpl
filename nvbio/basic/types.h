@@ -126,6 +126,14 @@ typedef int                 int32;
 typedef short               int16;
 typedef char                int8;
 
+/// a tag to define the host architecture
+///
+struct host_tag {};
+
+/// a tag to define the device architecture
+///
+struct device_tag {};
+
 /// a null type, useful to represent unbound template arguments
 ///
 struct null_type {};
