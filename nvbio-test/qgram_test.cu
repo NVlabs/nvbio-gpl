@@ -331,6 +331,7 @@ void test_qgram_index_query(
 
     timer.start();
 
+    // first step: rank the query q-grams
     const uint32 n_hits = qgram_filter.rank(
         qgram_index,
         n_queries,
@@ -355,7 +356,7 @@ void test_qgram_index_query(
 
     timer.start();
 
-    // loop through large batches of hits and locate them
+    // loop through large batches of hits and locate & merge them
     for (uint32 hits_begin = 0; hits_begin < n_hits; hits_begin += batch_size)
     {
         const uint32 hits_end = nvbio::min( hits_begin + batch_size, n_hits );
