@@ -452,7 +452,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
         typename query_cache,
         typename score_type,
         typename temp_iterator,
-        typename sink_type>
+        typename sink_type,
+        typename scoring_type>
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     static void update_row(
         context_type&        context,
@@ -470,7 +471,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
         score_type&          max_score,
         const score_type     G_o,
         const score_type     G_e,
-        const score_type     zero)
+        const score_type     zero,
+        const scoring_type   scoring)
     {
         typedef typename std::iterator_traits<temp_iterator>::value_type temp_cell_type;
         typedef typename vector_traits<temp_cell_type>::value_type       temp_scalar_type;
@@ -510,8 +512,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
             const int4   info_j       = q_cache[ j-1 ];
             const symbol_type q_j     = symbol_type(info_j.x);
             const score_type  m_j     = score_type(info_j.y);
-            const score_type  s_j     = score_type(info_j.z);
-            const score_type S_ij     = (r_i == q_j) ? m_j : s_j;
+            const score_type  qq_j    = score_type(info_j.z);
+            const score_type S_ij     = (r_i == q_j) ? m_j : scoring.mismatch( r_i, q_j, qq_j );
             const score_type diagonal = H_diag + S_ij;
             const score_type top      = F_band[j];
             const score_type left     = E;
@@ -663,7 +665,7 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
                 const symbol_type q  = query[ block + t ];
                 const uint8       qq = quals[ block + t ];
 
-                q_cache[ t ] = make_int4( q, scoring.match(qq), scoring.mismatch(qq), 0 );
+                q_cache[ t ] = make_int4( q, scoring.match(qq), qq, 0 );
             }
 
             // initialize the first band
@@ -697,7 +699,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
                     sink,
                     max_score,
                     G_o,G_e,
-                    zero );
+                    zero,
+                    scoring );
             }
 
             // we are now (M - block - BAND_LEN) columns from the last one: check whether
@@ -725,7 +728,7 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
                     const symbol_type q  = query[ block + t ];
                     const uint8       qq = quals[ block + t ];
 
-                    q_cache[ t ] = make_int4( q, scoring.match(qq), scoring.mismatch(qq), 0 );
+                    q_cache[ t ] = make_int4( q, scoring.match(qq), qq, 0 );
                 }
             }
 
@@ -760,7 +763,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,PatternBlockingTag,symbol_ty
                     sink,
                     max_score,
                     G_o,G_e,
-                    zero );
+                    zero,
+                    scoring );
             }
         }
 
@@ -851,7 +855,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
         typename ref_cache,
         typename score_type,
         typename temp_iterator,
-        typename sink_type>
+        typename sink_type,
+        typename scoring_type>
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     static void update_row(
         context_type&        context,
@@ -860,8 +865,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
         const uint32         i,
         const uint32         M,
         const symbol_type    q_i,
+        const uint8          qq_i,
         const score_type     m_i,
-        const score_type     s_i,
         const ref_cache      r_cache,
         temp_iterator        temp,
         score_type&          temp_i,
@@ -871,7 +876,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
         score_type&          max_score,
         const score_type     G_o,
         const score_type     G_e,
-        const score_type     zero)
+        const score_type     zero,
+        const scoring_type   scoring)
     {
         typedef typename std::iterator_traits<temp_iterator>::value_type temp_cell_type;
         typedef typename vector_traits<temp_cell_type>::value_type       temp_scalar_type;
@@ -909,7 +915,7 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
             const DirectionVector edir = eleft > hleft ? DELETION_EXT : SUBSTITUTION;
 
             const symbol_type r_j     = r_cache[ j-1 ];
-            const score_type S_ij     = (r_j == q_i) ? m_i : s_i;
+            const score_type S_ij     = (r_j == q_i) ? m_i : scoring.mismatch( r_j, q_i, qq_i );
             const score_type diagonal = H_diag + S_ij;
             const score_type top      = F_band[j];
             const score_type left     = E;
@@ -1071,15 +1077,14 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
                 const uint8 qq_i = quals[i];
 
                 const int32 m_i = scoring.match(qq_i);
-                const int32 s_i = scoring.mismatch(qq_i);
 
                 update_row<false>(
                     context,
                     block, N,
                     i, M,
                     q_i,
+                    qq_i,
                     m_i,
-                    s_i,
                     r_cache,
                     temp,
                     temp_i,
@@ -1088,7 +1093,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
                     sink,
                     max_score,
                     G_o,G_e,
-                    zero );
+                    zero,
+                    scoring );
             }
             if (TYPE == SEMI_GLOBAL)
             {
@@ -1141,15 +1147,14 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
                 const uint8 qq_i = quals[i];
 
                 const int32 m_i = scoring.match(qq_i);
-                const int32 s_i = scoring.mismatch(qq_i);
 
                 update_row<true>(
                     context,
                     block, N,
                     i, M,
                     q_i,
+                    qq_i,
                     m_i,
-                    s_i,
                     r_cache,
                     temp,
                     temp_i,
@@ -1158,7 +1163,8 @@ struct gotoh_alignment_score_dispatch<BAND_LEN,TYPE,TextBlockingTag,symbol_type>
                     sink,
                     max_score,
                     G_o,G_e,
-                    zero );
+                    zero,
+                    scoring );
             }
 
             if (TYPE == SEMI_GLOBAL)
