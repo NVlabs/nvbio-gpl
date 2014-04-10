@@ -91,6 +91,7 @@ struct QGroupIndexViewCore
     QGroupIndexViewCore(
         const uint32 _Q                 = 0,
         const uint32 _symbol_size       = 0,
+        const uint32 _n_qgrams          = 0,
         const uint32 _n_unique_qgrams   = 0,
         vector_type  _I                 = NULL,
         vector_type  _S                 = NULL,
@@ -98,6 +99,7 @@ struct QGroupIndexViewCore
         vector_type  _P                 = NULL) :
         Q               (_Q),
         symbol_size     (_symbol_size),
+        n_qgrams        (_n_qgrams),
         n_unique_qgrams (_n_unique_qgrams),
         I               (_I),
         S               (_S),
@@ -137,6 +139,7 @@ struct QGroupIndexViewCore
 
     uint32        Q;
     uint32        symbol_size;
+    uint32        n_qgrams;
     uint32        n_unique_qgrams;
     vector_type   I;
     vector_type   S;
@@ -175,6 +178,7 @@ struct QGroupIndexHost
     uint64 used_device_memory() const { return 0u; }
 
     uint32        Q;
+    uint32        n_qgrams;
     uint32        n_unique_qgrams;
     vector_type   I;
     vector_type   S;
@@ -227,6 +231,7 @@ struct QGroupIndexDevice
 
     uint32        Q;
     uint32        symbol_size;
+    uint32        n_qgrams;
     uint32        n_unique_qgrams;
     vector_type   I;
     vector_type   S;
@@ -252,6 +257,7 @@ QGroupIndexView plain_view(QGroupIndexDevice& qgroup)
     return QGroupIndexView(
         qgroup.Q,
         qgroup.symbol_size,
+        qgroup.n_qgrams,
         qgroup.n_unique_qgrams,
         nvbio::plain_view( qgroup.I ),
         nvbio::plain_view( qgroup.S ),
@@ -267,6 +273,7 @@ ConstQGroupIndexView plain_view(const QGroupIndexDevice& qgroup)
     return ConstQGroupIndexView(
         qgroup.Q,
         qgroup.symbol_size,
+        qgroup.n_qgrams,
         qgroup.n_unique_qgrams,
         nvbio::plain_view( qgroup.I ),
         nvbio::plain_view( qgroup.S ),

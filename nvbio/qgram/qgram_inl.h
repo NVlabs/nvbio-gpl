@@ -41,6 +41,8 @@ void QGramIndexDevice::build(
     QL          = qlut;
     QLS         = (Q - QL) * symbol_size;
 
+    n_qgrams = string_len;
+
     qgrams.resize( string_len );
     index.resize( string_len );
 
@@ -290,7 +292,7 @@ void QGramSetIndexDevice::build(
     const uint32 n_strings = string_set.size();
 
     // extract the list of q-gram coordinates
-    const uint32 n_qgrams = enumerate_string_set_seeds(
+    n_qgrams = enumerate_string_set_seeds(
         string_set,
         seeder,
         index );
@@ -428,6 +430,7 @@ QGramIndexHost& QGramIndexHost::operator= (const QGramIndexCore<SystemTag,uint64
 {
     Q               = src.Q;
     symbol_size     = src.symbol_size;
+    n_qgrams        = src.n_qgrams;
     n_unique_qgrams = src.n_unique_qgrams;
     qgrams          = src.qgrams;
     slots           = src.slots;
@@ -445,6 +448,7 @@ QGramIndexDevice& QGramIndexDevice::operator= (const QGramIndexCore<SystemTag,ui
 {
     Q               = src.Q;
     symbol_size     = src.symbol_size;
+    n_qgrams        = src.n_qgrams;
     n_unique_qgrams = src.n_unique_qgrams;
     qgrams          = src.qgrams;
     slots           = src.slots;
