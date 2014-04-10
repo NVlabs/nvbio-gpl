@@ -26,7 +26,7 @@
 
 namespace nvbio {
 
-///\page string_page Strings And String Sets
+///\page strings_page Strings And String Sets
 ///
 /// This module provides generic constructs to work with strings and string-sets.
 /// A string-set is a collection of strings. As there's many ways to encode a string,
@@ -49,6 +49,9 @@ namespace nvbio {
 /// - SparseStringSet
 /// - StridedPackedStringSet
 /// - StridedStringSet
+/// - InfixSet
+/// - PrefixSet
+/// - SuffixSet
 ///
 /// Furthermore, the module provides efficient generic copy() (resp. cuda::copy()) implementations to copy
 /// a given host (resp. device) string set from a given layout into another with a different layout.
