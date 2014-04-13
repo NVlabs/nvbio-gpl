@@ -73,7 +73,7 @@ struct Stats
     uint64  occurrences;
 };
 
-// transform a (index-pos,seed-id) hit into a diagonal
+// transform a (index-pos,seed-id) hit into a diagonal (text-pos = index-pos - seed-pos, read-id)
 struct hit_to_diagonal
 {
     typedef uint2  argument_type;
@@ -205,7 +205,7 @@ void map(
         timer.stop();
         stats.locate_time += timer.seconds();
 
-        // transform the hit coordinates into hit diagonals
+        // transform the (index-pos,seed-id) hit coordinates into diagonals, (text-pos = index-pos - seed-pos, read-id)
         thrust::transform(
             hits.begin(),
             hits.begin() + hits_end - hits_begin,
