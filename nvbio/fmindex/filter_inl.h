@@ -23,20 +23,23 @@ namespace nvbio {
 namespace fmindex {
 
 // return the size of a given range
+template <typename range_type>
 struct range_size
 {
-    typedef uint2  argument_type;
-    typedef uint64 result_type;
+    typedef range_type argument_type;
+    typedef uint64     result_type;
 
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    uint64 operator() (const uint2 range) const { return 1u + range.y - range.x; }
+    uint64 operator() (const range_type range) const { return 1u + range.y - range.x; }
 };
 
 template <typename index_type, typename string_set_type>
 struct rank_functor
 {
-    typedef uint32  argument_type;
-    typedef uint2   result_type;
+    typedef typename index_type::range_type range_type;
+
+    typedef uint32                          argument_type;
+    typedef range_type                      result_type;
 
     // constructor
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
@@ -63,17 +66,20 @@ struct rank_functor
     const string_set_type   string_set;
 };
 
+template <typename range_type>
 struct filter_results
 {
-    typedef uint64  argument_type;
-    typedef uint2   result_type;
+    typedef typename vector_traits<range_type>::value_type  coord_type;
+
+    typedef uint64      argument_type;
+    typedef range_type  result_type;
 
     // constructor
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     filter_results(
-        const uint32    _n_queries,
-        const uint64*   _slots,
-        const uint2*    _ranges) :
+        const uint32        _n_queries,
+        const uint64*       _slots,
+        const range_type*   _ranges) :
     n_queries   ( _n_queries ),
     slots       ( _slots ),
     ranges      ( _ranges ) {}
@@ -92,24 +98,26 @@ struct filter_results
         const uint32 string_id   = slot;
 
         // locate the hit position
-        const uint2  range       = ranges[ slot ];
+        const range_type range   = ranges[ slot ];
         const uint64 base_slot   = slot ? slots[ slot-1 ] : 0u;
         const uint32 local_index = output_index - base_slot;
 
         // and write out the pair (qgram_pos,text_pos)
-        return make_uint2(  range.x + local_index, string_id );
+        return make_vector( coord_type( range.x + local_index ), coord_type( string_id ) );
     }
 
-    const uint32    n_queries;
-    const uint64*   slots;
-    const uint2*    ranges;
+    const uint32        n_queries;
+    const uint64*       slots;
+    const range_type*   ranges;
 };
 
 template <typename index_type>
 struct locate_results
 {
-    typedef uint2   argument_type;
-    typedef uint2   result_type;
+    typedef typename index_type::range_type range_type;
+
+    typedef range_type   argument_type;
+    typedef range_type   result_type;
 
     // constructor
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
@@ -119,7 +127,7 @@ struct locate_results
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     result_type operator() (const uint2 pair) const
     {
-        return make_uint2( locate( index, pair.x ), pair.y );
+        return make_vector( locate( index, pair.x ), pair.y );
     }
 
     const index_type index;
@@ -128,8 +136,10 @@ struct locate_results
 template <typename index_type>
 struct locate_ssa_results
 {
-    typedef uint2   argument_type;
-    typedef uint2   result_type;
+    typedef typename index_type::range_type range_type;
+
+    typedef range_type   argument_type;
+    typedef range_type   result_type;
 
     // constructor
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
@@ -137,7 +147,7 @@ struct locate_ssa_results
 
     // functor operator
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    result_type operator() (const uint2 pair) const
+    result_type operator() (const range_type pair) const
     {
         return locate_ssa_iterator( index, pair.x );
     }
@@ -199,8 +209,8 @@ uint64 FMIndexFilter<host_tag, fm_index_type>::rank(
 
     // scan their size to determine the slots
     thrust::inclusive_scan(
-        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size() ),
-        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size() ) + m_n_queries,
+        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size<range_type>() ),
+        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size<range_type>() ) + m_n_queries,
         m_slots.begin() );
 
     // determine the total number of occurrences
@@ -224,7 +234,7 @@ void FMIndexFilter<host_tag,fm_index_type>::locate(
         thrust::make_counting_iterator<uint64>(0u) + begin,
         thrust::make_counting_iterator<uint64>(0u) + end,
         hits,
-        fmindex::filter_results(
+        fmindex::filter_results<range_type>(
             m_n_queries,
             nvbio::plain_view( m_slots ),
             nvbio::plain_view( m_ranges ) ) );
@@ -268,7 +278,7 @@ uint64 FMIndexFilter<device_tag,fm_index_type>::rank(
     // scan their size to determine the slots
     cuda::inclusive_scan(
         m_n_queries,
-        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size() ),
+        thrust::make_transform_iterator( m_ranges.begin(), fmindex::range_size<range_type>() ),
         m_slots.begin(),
         thrust::plus<uint64>(),
         d_temp_storage );
@@ -304,7 +314,7 @@ void FMIndexFilter<device_tag,fm_index_type>::locate(
         thrust::make_counting_iterator<uint64>(0u) + begin,
         thrust::make_counting_iterator<uint64>(0u) + end,
         m_hits.begin(),
-        fmindex::filter_results(
+        fmindex::filter_results<range_type>(
             m_n_queries,
             nvbio::plain_view( m_slots ),
             nvbio::plain_view( m_ranges ) ) );
@@ -358,7 +368,7 @@ void FMIndexFilter<device_tag,fm_index_type>::locate(
         thrust::make_counting_iterator<uint64>(0u) + begin,
         thrust::make_counting_iterator<uint64>(0u) + end,
         device_iterator( hits ),
-        fmindex::filter_results(
+        fmindex::filter_results<range_type>(
             m_n_queries,
             nvbio::plain_view( m_slots ),
             nvbio::plain_view( m_ranges ) ) );

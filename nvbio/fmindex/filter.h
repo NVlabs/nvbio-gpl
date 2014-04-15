@@ -68,9 +68,10 @@ struct FMIndexFilter<host_tag, fm_index_type>
     typedef host_tag                                        system_tag;     ///< the backend system
     typedef fm_index_type                                   index_type;     ///< the index type
 
-    //typedef typename index_type::coord_type               coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
-    typedef uint32                                          coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
+    typedef typename index_type::index_type                 coord_type;     ///< the coordinate type of the fm-index, uint32|uint64|uint32_2|uint64_2
     static const uint32                                     coord_dim = vector_traits<coord_type>::DIM;
+
+    typedef typename vector_type<coord_type,2>::type        range_type;     ///< ranges are either uint32_2 or uint64_2;
 
     static const uint32                                     hit_dim = coord_dim*2;  ///< hits are either uint2 or uint4
     typedef typename vector_type<coord_type,hit_dim>::type  hit_type;               ///< hits are either uint2 or uint4
@@ -116,7 +117,7 @@ struct FMIndexFilter<host_tag, fm_index_type>
     uint32                              m_n_queries;
     index_type                          m_index;
     uint64                              m_n_occurrences;
-    thrust::host_vector<uint2>          m_ranges;
+    thrust::host_vector<range_type>     m_ranges;
     thrust::host_vector<uint64>         m_slots;
 };
 
@@ -137,9 +138,10 @@ struct FMIndexFilter<device_tag, fm_index_type>
     typedef device_tag                                      system_tag;     ///< the backend system
     typedef fm_index_type                                   index_type;     ///< the index type
 
-    //typedef typename index_type::coord_type               coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
-    typedef uint32                                          coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
+    typedef typename index_type::index_type                 coord_type;     ///< the coordinate type of the fm-index, uint32|uint64|uint32_2|uint64_2
     static const uint32                                     coord_dim = vector_traits<coord_type>::DIM;
+
+    typedef typename vector_type<coord_type,2>::type        range_type;     ///< ranges are either uint32_2 or uint64_2;
 
     static const uint32                                     hit_dim = coord_dim*2;  ///< hits are either uint2 or uint4
     typedef typename vector_type<coord_type,hit_dim>::type  hit_type;               ///< hits are either uint2 or uint4
@@ -185,9 +187,9 @@ struct FMIndexFilter<device_tag, fm_index_type>
     uint32                              m_n_queries;
     index_type                          m_index;
     uint64                              m_n_occurrences;
-    thrust::device_vector<uint2>        m_ranges;
+    thrust::device_vector<range_type>   m_ranges;
     thrust::device_vector<uint64>       m_slots;
-    thrust::device_vector<uint2>        m_hits;
+    thrust::device_vector<hit_type>     m_hits;
     thrust::device_vector<uint8>        d_temp_storage;
 };
 
@@ -210,6 +212,7 @@ struct FMIndexFilterHost : public FMIndexFilter<host_tag, fm_index_type>
     typedef typename core_type::index_type                  index_type;     ///< the index type
 
     typedef typename core_type::coord_type                  coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
+    typedef typename core_type::range_type                  range_type;     ///< the coordinate type of the filtered ranges
     typedef typename core_type::hit_type                    hit_type;       ///< hits are either uint2 or uint4
 };
 
@@ -232,6 +235,7 @@ struct FMIndexFilterDevice : public FMIndexFilter<device_tag, fm_index_type>
     typedef typename core_type::index_type                  index_type;     ///< the index type
 
     typedef typename core_type::coord_type                  coord_type;     ///< the coordinate type of the fm-index, uint32|uint2
+    typedef typename core_type::range_type                  range_type;     ///< the coordinate type of the filtered ranges
     typedef typename core_type::hit_type                    hit_type;       ///< hits are either uint2 or uint4
 };
 
