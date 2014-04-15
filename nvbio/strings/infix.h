@@ -50,9 +50,6 @@ template <
     uint32   CoordDim>
 struct InfixCore {};
 
-///@addtogroup Private
-///@{
-
 /// A class to represent a string infix, i.e. an arbitrarily placed substring
 ///
 /// \tparam StringType          the underlying string type
