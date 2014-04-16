@@ -192,8 +192,9 @@ Batch Alignment</h1>
 <div class="line">thrust::device_vector&lt;uint32&gt; text_offsets( n_strings+1 );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// fill their content with random characters in [0,4)</span></div>
-<div class="line">fill_random( 4u, pattern_storage.begin(), pattern_storage.end() );</div>
-<div class="line">fill_random( 4u, text_storage.begin(), text_storage.end() );</div>
+<div class="line"><span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="divsufsort_8c.html#a6572f1706059832f94025fa12c6c45ed">ALPHABET_SIZE</a> = 4u;</div>
+<div class="line">fill_random( ALPHABET_SIZE, pattern_storage.begin(), pattern_storage.end() );</div>
+<div class="line">fill_random( ALPHABET_SIZE, text_storage.begin(), text_storage.end() );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// prepare their offset vectors</span></div>
 <div class="line">thrust::sequence( pattern_offsets.begin(), pattern_offsets.begin() + n_strings+1, 0u, pattern_len );</div>
@@ -204,7 +205,7 @@ Batch Alignment</h1>
 <div class="line"></div>
 <div class="line"><span class="comment">// and execute the batch alignment</span></div>
 <div class="line"><a class="code" href="group___batch_alignment.html#gab89380407cb54396d360f35e16015dda">aln::batch_alignment_score</a>(</div>
-<div class="line">    <a class="code" href="group___aligner.html#ga855f2a3899e7fb9df9fdb0b56da9e9aa">aln::make_edit_distance_aligner</a>&lt;<a class="code" href="group___alignment_type_module.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">aln::SEMI_GLOBAL</a>, MyersTag&lt;4u&gt; &gt;(),</div>
+<div class="line">    <a class="code" href="group___aligner.html#ga855f2a3899e7fb9df9fdb0b56da9e9aa">aln::make_edit_distance_aligner</a>&lt;<a class="code" href="group___alignment_type_module.html#ggab731872890371bb772663612b5b9c717a7477ebd7c13511f0b3c5660d337b8413">aln::SEMI_GLOBAL</a>, MyersTag&lt;ALPHABET_SIZE&gt; &gt;(),</div>
 <div class="line">    <a class="code" href="group___string_sets_module.html#ga2d1653be175414216f969b1513471a2a">make_concatenated_string_set</a>( n_strings, pattern_storage.begin(), pattern_offsets.begin() ),</div>
 <div class="line">    <a class="code" href="group___string_sets_module.html#ga2d1653be175414216f969b1513471a2a">make_concatenated_string_set</a>( n_strings, text_storage.begin(),    text_offsets.begin() ),</div>
 <div class="line">    sinks.begin(),</div>
@@ -215,7 +216,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 12:13:55 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
