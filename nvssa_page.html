@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">NVBIO</a></li><li class="navelem"><a class="el" href="nvbowtie_page.html">nvBowtie</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">NVBIO</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,8 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"> 
    <img src="nvidia_cubes.png" style="position:relative; bottom:-10px; border:0px;"/>
    <dl class="section user"><dt></dt><dd><br/>
- <b>nvSSA</b> is an application built on top of <a class="el" href="nvbio_page.html">NVBIO</a> to build the Sampled Suffix Arrays needed for nvBowtie and potentially other FM-index based applications. </dd></dl>
-<dl class="section user"><dt></dt><dd>Given a BWT-based index generated with nvBWT (e.g. my-index.*), it will generate both the forward and reverse SSAs.</dd></dl>
+ <b>nvSSA</b> is an application built on top of <a class="el" href="nvbio_page.html">NVBIO</a> to build the Sampled Suffix Arrays given a set of BWT files. </dd></dl>
+<dl class="section user"><dt></dt><dd>Given a BWT-based index generated with nvBWT (e.g. my-index.*), it will generate both the forward and reverse SSAs.<br/>
+ <b>Note:</b> this is not normally needed, as nvBWT does already output them.</dd></dl>
 <pre class="fragment">*  ./nvSSA my-index
 * </pre> <dl class="section user"><dt></dt><dd>will create the files:</dd></dl>
 <pre class="fragment">*  my-index.ssa
@@ -105,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 * </pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 23:42:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

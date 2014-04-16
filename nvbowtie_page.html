@@ -224,14 +224,12 @@ Usage</h1>
 *       --no-mixed                       only report paired alignments
 *     Reporting:
 *       --mapQ-filter      int [0]       minimum mapQ threshold
-* </pre><dl class="section user"><dt></dt><dd>While most parameters should be easy to understand, a major difference is that nvBowtie relies on external programs to build the reference indices:<ul>
+* </pre><p>While most parameters should be easy to understand, a major difference is that nvBowtie relies on an external program to build the reference indices:</p>
+<ul>
 <li><a class="el" href="nvbwt_page.html">nvBWT</a> : builds the BWT indices of the reference FASTA files</li>
-<li><a class="el" href="nvssa_page.html">nvSSA</a> : builds the Sampled Suffix Arrays corresponding to a given BWT</li>
 </ul>
-</dd></dl>
 <dl class="section user"><dt></dt><dd>e.g. suppose you have the human genome in a single FASTA file, <em>hg19.fa</em>; the following commands will create all indices needed by nvBowtie:</dd></dl>
 <pre class="fragment">*  ./nvBWT hg19.fa hg19-index
-*  ./nvSSA hg19-index
 * </pre><dl class="section user"><dt></dt><dd>At this point, one can run nvBowtie:</dd></dl>
 <pre class="fragment">*  ./nvBowtie --file-ref hg19 my_reads.fastq my_reads.bam
 * </pre><dl class="section user"><dt></dt><dd>Note the presence of the option <em>&ndash;file-ref</em>, specifying that the reference indices come from disk. Another noteworthy option is to let nvBowtie fetch them from a <em>shared memory</em> server which can be run in the background: the <a class="el" href="nvfm_server_page.html">nvFM-server</a>. It be launched with:</dd></dl>
@@ -241,7 +239,7 @@ Usage</h1>
 * </pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 23:32:56 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
