@@ -189,11 +189,12 @@ struct MEMFilter<host_tag, fm_index_type>
     ///
     template <typename string_set_type>
     uint64 rank(
+        const MEMSearchType     search_type,
         const fm_index_type&    f_index,
         const fm_index_type&    r_index,
         const string_set_type&  string_set,
         const uint32            min_intv    = 1u,
-        const MEMSearchType     search_type = KMEM_SEARCH);
+        const uint32            max_intv    = uint32(-1));
 
     /// enumerate all mems in a given range
     ///
@@ -265,11 +266,12 @@ struct MEMFilter<device_tag, fm_index_type>
     ///
     template <typename string_set_type>
     uint64 rank(
+        const MEMSearchType     search_type,
         const fm_index_type&    f_index,
         const fm_index_type&    r_index,
         const string_set_type&  string_set,
         const uint32            min_intv    = 1u,
-        const MEMSearchType     search_type = KMEM_SEARCH);
+        const uint32            max_intv    = uint32(-1));
 
     /// enumerate all mems in a given range
     ///
