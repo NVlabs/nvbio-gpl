@@ -259,8 +259,12 @@ uint32 find_threshold_kmems(
                         // save the range, together with its span
                         const uint2 pattern_span = make_uint2( i+1, r_span );
 
-                        // pass all results to the delegate
-                        handler.output( f_range, pattern_span );
+                        // keep the MEM only if it is above a certain length
+                        if (pattern_span.y - pattern_span.x >= min_span)
+                        {
+                            // pass all results to the delegate
+                            handler.output( f_range, pattern_span );
+                        }
 
                         out_n++;
                         out_i = i+1;
@@ -373,12 +377,14 @@ struct mem_functor
         const string_set_type   _string_set,
         const uint32            _min_intv,
         const uint32            _max_intv,
+        const uint32            _min_span,
         VectorArrayView<uint4>  _mem_arrays) :
     f_index      ( _f_index ),
     r_index      ( _r_index ),
     string_set   ( _string_set ),
     min_intv     ( _min_intv ),
     max_intv     ( _max_intv ),
+    min_span     ( _min_span ),
     mem_arrays   ( _mem_arrays ) {}
 
     // functor operator
@@ -407,7 +413,8 @@ struct mem_functor
                     f_index,
                     r_index,
                     handler,
-                    min_intv );
+                    min_intv,
+                    min_span );
 
                 x = nvbio::max( y, x+1u );
             }
@@ -420,7 +427,8 @@ struct mem_functor
                     f_index,
                     r_index,
                     handler,
-                    min_intv );
+                    min_intv,
+                    min_span );
 
                 x = nvbio::max( y, x+1u );
             }
@@ -443,6 +451,7 @@ struct mem_functor
     const string_set_type               string_set;
     const uint32                        min_intv;
     const uint32                        max_intv;
+    const uint32                        min_span;
     mutable VectorArrayView<mem_type>   mem_arrays;
 };
 
@@ -639,7 +648,8 @@ uint64 MEMFilter<host_tag, fm_index_type>::rank(
     const fm_index_type&    r_index,
     const string_set_type&  string_set,
     const uint32            min_intv,
-    const uint32            max_intv)
+    const uint32            max_intv,
+    const uint32            min_span)
 {
     // save the query
     m_n_queries     = string_set.size();
@@ -663,6 +673,7 @@ uint64 MEMFilter<host_tag, fm_index_type>::rank(
                 string_set,
                 min_intv,
                 max_intv,
+                min_span,
                 nvbio::plain_view( m_mem_ranges ) )
             );
     }
@@ -677,6 +688,7 @@ uint64 MEMFilter<host_tag, fm_index_type>::rank(
                 string_set,
                 min_intv,
                 max_intv,
+                min_span,
                 nvbio::plain_view( m_mem_ranges ) )
             );
     }
@@ -782,7 +794,8 @@ uint64 MEMFilter<device_tag, fm_index_type>::rank(
     const fm_index_type&    r_index,
     const string_set_type&  string_set,
     const uint32            min_intv,
-    const uint32            max_intv)
+    const uint32            max_intv,
+    const uint32            min_span)
 {
     // save the query
     m_n_queries     = string_set.size();
@@ -806,6 +819,7 @@ uint64 MEMFilter<device_tag, fm_index_type>::rank(
                 string_set,
                 min_intv,
                 max_intv,
+                min_span,
                 nvbio::plain_view( m_mem_ranges ) )
             );
     }
@@ -820,6 +834,7 @@ uint64 MEMFilter<device_tag, fm_index_type>::rank(
                 string_set,
                 min_intv,
                 max_intv,
+                min_span,
                 nvbio::plain_view( m_mem_ranges ) )
             );
     }

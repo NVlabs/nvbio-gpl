@@ -182,8 +182,12 @@ struct MEMFilter<host_tag, fm_index_type>
 
     /// enact the filter on an FM-index and a string-set
     ///
-    /// \param index            the FM-index
+    /// \param f_index          the forward FM-index
+    /// \param r_index          the reverse FM-index
     /// \param string-set       the query string-set
+    /// \param min_intv         the minimum number of occurrences k of a k-MEM
+    /// \param max_intv         the maximum number of occurrences k of a k-MEM
+    /// \param min_span         the minimum span length on the pattern of MEM
     ///
     /// \return the total number of mems
     ///
@@ -194,7 +198,8 @@ struct MEMFilter<host_tag, fm_index_type>
         const fm_index_type&    r_index,
         const string_set_type&  string_set,
         const uint32            min_intv    = 1u,
-        const uint32            max_intv    = uint32(-1));
+        const uint32            max_intv    = uint32(-1),
+        const uint32            min_span    = 1u);
 
     /// enumerate all mems in a given range
     ///
@@ -259,8 +264,12 @@ struct MEMFilter<device_tag, fm_index_type>
 
     /// enact the filter on an FM-index and a string-set
     ///
-    /// \param index            the FM-index
+    /// \param f_index          the forward FM-index
+    /// \param r_index          the reverse FM-index
     /// \param string-set       the query string-set
+    /// \param min_intv         the minimum number of occurrences k of a k-MEM
+    /// \param max_intv         the maximum number of occurrences k of a k-MEM
+    /// \param min_span         the minimum span length on the pattern of MEM
     ///
     /// \return the total number of mems
     ///
@@ -271,7 +280,8 @@ struct MEMFilter<device_tag, fm_index_type>
         const fm_index_type&    r_index,
         const string_set_type&  string_set,
         const uint32            min_intv    = 1u,
-        const uint32            max_intv    = uint32(-1));
+        const uint32            max_intv    = uint32(-1),
+        const uint32            min_span    = 1u);
 
     /// enumerate all mems in a given range
     ///
