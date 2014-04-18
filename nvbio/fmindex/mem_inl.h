@@ -472,7 +472,7 @@ struct filter_results
 {
     typedef typename vector_type<coord_type,2u>::type   range_type;
     typedef typename vector_type<coord_type,4u>::type   rank_type;
-    typedef typename vector_type<coord_type,4u>::type   mem_type;
+    typedef MEMHit<coord_type>                          mem_type;
 
     typedef rank_type  argument_type;
     typedef mem_type   result_type;
@@ -489,7 +489,7 @@ struct filter_results
 
     // functor operator
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    result_type operator() (const uint64 output_index) const
+    mem_type operator() (const uint64 output_index) const
     {
         // find the text q-gram slot corresponding to this output index
         const uint32 slot = uint32( upper_bound(
@@ -503,7 +503,7 @@ struct filter_results
         const uint32 local_index = output_index - base_slot;
 
         // and write out the MEM occurrence
-        return make_vector(
+        return mem_type(
             coord_type( range.x + local_index ),    // SA coordinate for this occurrence
             coord_type( 0u ),                       // unused
             range.z,                                // string-id
@@ -521,7 +521,7 @@ struct locate_ssa_results
 {
     typedef typename index_type::index_type             coord_type;
     typedef typename index_type::range_type             range_type;
-    typedef typename vector_type<coord_type,4u>::type   mem_type;
+    typedef MEMHit<coord_type>                          mem_type;
 
     typedef mem_type    argument_type;
     typedef mem_type    result_type;
@@ -532,11 +532,11 @@ struct locate_ssa_results
 
     // functor operator
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    result_type operator() (const mem_type range) const
+    mem_type operator() (const mem_type range) const
     {
         const range_type r = locate_ssa_iterator( index, range.x );
 
-        return make_vector(
+        return mem_type(
             coord_type( r.x ),
             coord_type( r.y ),
             range.z,
@@ -551,7 +551,7 @@ struct lookup_ssa_results
 {
     typedef typename index_type::index_type             coord_type;
     typedef typename index_type::range_type             range_type;
-    typedef typename vector_type<coord_type,4u>::type   mem_type;
+    typedef MEMHit<coord_type>                          mem_type;
 
     typedef mem_type    argument_type;
     typedef mem_type    result_type;
@@ -562,10 +562,10 @@ struct lookup_ssa_results
 
     // functor operator
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    result_type operator() (const mem_type range) const
+    mem_type operator() (const mem_type range) const
     {
         const coord_type loc = lookup_ssa_iterator( index, make_vector( range.x, range.y ) );
-        return make_vector(
+        return mem_type(
             loc,
             range.z,
             coord_type( range.w & 0xFFu ),
