@@ -23,6 +23,7 @@
 #pragma once
 
 #include <nvbio/basic/types.h>
+#include <nvbio/basic/popcount.h>
 
 namespace nvbio {
 
