@@ -426,7 +426,7 @@ struct InfixSet : public InfixSetCore<
 
     /// begin iterator
     ///
-    const_iterator end() const { return const_iterator(*this,size()); }
+    const_iterator end() const { return const_iterator(*this,base_type::size()); }
 
     /// begin iterator
     ///
@@ -434,7 +434,7 @@ struct InfixSet : public InfixSetCore<
 
     /// begin iterator
     ///
-    iterator end() { return iterator(*this,size()); }
+    iterator end() { return iterator(*this,base_type::size()); }
 };
 
 ///@} StringSetsModule
