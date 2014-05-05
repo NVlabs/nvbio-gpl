@@ -262,7 +262,7 @@ void test_qgram_index_query(
         qgrams.begin(),
         qgrams.begin() + n_queries,
         ranges.begin(),
-        nvbio::raw_pointer( qgram_index ) );
+        nvbio::plain_view( qgram_index ) );
 
     cudaDeviceSynchronize();
     timer.stop();
@@ -275,7 +275,7 @@ void test_qgram_index_query(
         sorted_qgrams.begin(),
         sorted_qgrams.begin() + n_queries,
         ranges.begin(),
-        nvbio::raw_pointer( qgram_index ) );
+        nvbio::plain_view( qgram_index ) );
 
     cudaDeviceSynchronize();
     timer.stop();
