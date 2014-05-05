@@ -1084,7 +1084,7 @@ void copy_ranges(
     const uint32                            i,              // vector index to copy
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    rank_type*                              out_ranges)     // output arena
+    vector_view<rank_type*>                 out_ranges)     // output arena
 {
     const uint32 slot = slots[i];
 
@@ -1103,7 +1103,7 @@ void reorder_ranges_kernel(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    rank_type*                              out_ranges)     // output arena
+    vector_view<rank_type*>                 out_ranges)     // output arena
 {
     const uint32 i = threadIdx.x + blockIdx.x * blockDim.x;
     if (i >= n_items)
@@ -1119,7 +1119,7 @@ void reorder_ranges(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    rank_type*                              out_ranges)     // output arena
+    vector_view<rank_type*>                 out_ranges)     // output arena
 {
     const uint32 block_dim = 128;
     const uint32 n_blocks = util::divide_ri( n_items, block_dim );
@@ -1137,7 +1137,7 @@ void reorder_ranges(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    rank_type*                              out_ranges)     // output arena
+    vector_view<rank_type*>                 out_ranges)     // output arena
 {
     #pragma omp parallel for
     for (int i = 0; i < int( n_items ); ++i)
@@ -1451,7 +1451,7 @@ uint64 MEMFilter<device_tag, fm_index_type>::rank(
         // and now scan the range sizes
         cuda::inclusive_scan(
             n_ranges,
-            thrust::make_transform_iterator( nvbio::plain_view( m_mem_ranges.m_arena ), mem::range_size<rank_type>() ),
+            thrust::make_transform_iterator( m_mem_ranges.m_arena.begin(), mem::range_size<rank_type>() ),
             m_slots.begin(),
             thrust::plus<uint64>(),
             d_temp_storage );
