@@ -68,10 +68,10 @@ void QGramIndexDevice::build(
 
     key_buffers.selector       = 0;
     value_buffers.selector     = 0;
-    key_buffers.d_buffers[0]   = nvbio::plain_view( d_all_qgrams );
-    key_buffers.d_buffers[1]   = nvbio::plain_view( d_all_qgrams ) + align<32>( string_len );
-    value_buffers.d_buffers[0] = nvbio::plain_view( index );
-    value_buffers.d_buffers[1] = nvbio::plain_view( d_temp_index );
+    key_buffers.d_buffers[0]   = nvbio::raw_pointer( d_all_qgrams );
+    key_buffers.d_buffers[1]   = nvbio::raw_pointer( d_all_qgrams ) + align<32>( string_len );
+    value_buffers.d_buffers[0] = nvbio::raw_pointer( index );
+    value_buffers.d_buffers[1] = nvbio::raw_pointer( d_temp_index );
 
     size_t temp_storage_bytes = 0;
 
@@ -83,7 +83,7 @@ void QGramIndexDevice::build(
     d_temp_storage.resize( temp_storage_bytes );
 
     // do the real run
-    cub::DeviceRadixSort::SortPairs( nvbio::plain_view( d_temp_storage ), temp_storage_bytes, key_buffers, value_buffers, string_len, 0u, Q * symbol_size );
+    cub::DeviceRadixSort::SortPairs( nvbio::raw_pointer( d_temp_storage ), temp_storage_bytes, key_buffers, value_buffers, string_len, 0u, Q * symbol_size );
 
     // swap the index vector if needed
     if (value_buffers.selector)
@@ -221,10 +221,10 @@ void QGramSetIndexDevice::build(
 
     key_buffers.selector       = 0;
     value_buffers.selector     = 0;
-    key_buffers.d_buffers[0]   = nvbio::plain_view( d_all_qgrams );
-    key_buffers.d_buffers[1]   = nvbio::plain_view( d_all_qgrams ) + align<32>( n_qgrams );
-    value_buffers.d_buffers[0] = (uint64*)nvbio::plain_view( index );
-    value_buffers.d_buffers[1] = (uint64*)nvbio::plain_view( d_temp_index );
+    key_buffers.d_buffers[0]   = nvbio::raw_pointer( d_all_qgrams );
+    key_buffers.d_buffers[1]   = nvbio::raw_pointer( d_all_qgrams ) + align<32>( n_qgrams );
+    value_buffers.d_buffers[0] = (uint64*)nvbio::raw_pointer( index );
+    value_buffers.d_buffers[1] = (uint64*)nvbio::raw_pointer( d_temp_index );
 
     size_t temp_storage_bytes = 0;
 
@@ -236,7 +236,7 @@ void QGramSetIndexDevice::build(
     d_temp_storage.resize( temp_storage_bytes );
 
     // do the real run
-    cub::DeviceRadixSort::SortPairs( nvbio::plain_view( d_temp_storage ), temp_storage_bytes, key_buffers, value_buffers, n_qgrams, 0u, Q * symbol_size );
+    cub::DeviceRadixSort::SortPairs( nvbio::raw_pointer( d_temp_storage ), temp_storage_bytes, key_buffers, value_buffers, n_qgrams, 0u, Q * symbol_size );
 
     // swap the index vector if needed
     if (value_buffers.selector)
