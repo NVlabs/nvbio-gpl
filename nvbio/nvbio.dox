@@ -526,7 +526,7 @@
 ///
 ///     // build the device index
 ///     pipeline.fm_data = new io::FMIndexDataDevice( io::FMIndexData::GENOME  |
-///	                                                  io::FMIndexData::FORWARD |
+///                                                   io::FMIndexData::FORWARD |
 ///                                                   io::FMIndexData::SA );
 /// ...
 ///\endcode
