@@ -29,7 +29,7 @@
 #include <nvbio/basic/sum_tree.h>
 #include <nvbio/basic/thrust_view.h>
 #include <nvbio/basic/priority_deque.h>
-#include <nvbio/basic/vector_wrapper.h>
+#include <nvbio/basic/vector_view.h>
 #include <algorithm>
 
 namespace nvbio {
@@ -140,7 +140,7 @@ struct SeedHitDequeArrayDeviceView
     typedef typename device_view_subtype< thrust::device_vector<uint32> >::type   index_storage_type;
     typedef typename device_view_subtype< thrust::device_vector<float> >::type    prob_storage_type;
 
-    typedef vector_wrapper<SeedHit*>                              hit_vector_type;
+    typedef vector_view<SeedHit*>                                 hit_vector_type;
     typedef priority_deque<SeedHit, hit_vector_type, hit_compare> hit_deque_type;
 
     typedef SeedHitDequeReference<SeedHitDequeArrayDeviceView>    reference;
@@ -213,7 +213,7 @@ struct SeedHitDequeArrayDeviceView
 template <typename SeedHitDequeArrayType>
 struct SeedHitDequeReference
 {
-    typedef vector_wrapper<SeedHit*>                              hit_vector_type;
+    typedef vector_view<SeedHit*>                                 hit_vector_type;
     typedef priority_deque<SeedHit, hit_vector_type, hit_compare> hit_deque_type;
 
     /// constructor

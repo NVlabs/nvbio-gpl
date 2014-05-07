@@ -26,7 +26,7 @@
 #include <nvbio/basic/cached_iterator.h>
 #include <nvbio/basic/packedstream.h>
 #include <nvbio/basic/packedstream_loader.h>
-#include <nvbio/basic/vector_wrapper.h>
+#include <nvbio/basic/vector_view.h>
 #include <nvbio/basic/shared_pointer.h>
 #include <nvbio/basic/dna.h>
 #include <nvbio/alignment/alignment.h>
@@ -59,11 +59,11 @@ struct AlignmentStream
 
     typedef nvbio::PackedStringLoader<base_iterator,4,false,cache_type>             pattern_loader_type;
     typedef typename pattern_loader_type::iterator                                  pattern_iterator;
-    typedef nvbio::vector_wrapper<pattern_iterator>                                 pattern_string;
+    typedef nvbio::vector_view<pattern_iterator>                                    pattern_string;
 
     typedef nvbio::PackedStringLoader<base_iterator,2,false,cache_type>             text_loader_type;
     typedef typename text_loader_type::iterator                                     text_iterator;
-    typedef nvbio::vector_wrapper<text_iterator>                                    text_string;
+    typedef nvbio::vector_view<text_iterator>                                       text_string;
 
     // an alignment context
     struct context_type
@@ -173,11 +173,11 @@ __global__ void alignment_test_kernel(const aligner_type aligner, const uint32 N
 
     typedef nvbio::PackedStringLoader<base_iterator,4,false,lmem_cache_type>    pattern_loader_type;
     typedef typename pattern_loader_type::iterator                              pattern_iterator;
-    typedef nvbio::vector_wrapper<pattern_iterator>                             pattern_string;
+    typedef nvbio::vector_view<pattern_iterator>                                pattern_string;
 
     typedef nvbio::PackedStringLoader<base_iterator,2,false,lmem_cache_type>    text_loader_type;
     typedef typename text_loader_type::iterator                                 text_iterator;
-    typedef nvbio::vector_wrapper<text_iterator>                                text_string;
+    typedef nvbio::vector_view<text_iterator>                                   text_string;
 
     pattern_loader_type pattern_loader;
     pattern_string pattern = pattern_string( M, pattern_loader.load( strptr, tid * M, tid < N_probs ? M : 0u ) );
@@ -236,9 +236,9 @@ struct SingleTest
         aln::BestSink<int32> sink;
         aln::alignment_score(
             aligner,
-            vector_wrapper<const uint8*>( M, str_hptr ),
+            vector_view<const uint8*>( M, str_hptr ),
             trivial_quality_string(),
-            vector_wrapper<const uint8*>( N, ref_hptr ),
+            vector_view<const uint8*>( N, ref_hptr ),
             -1000,
             sink,
             column );
@@ -256,9 +256,9 @@ struct SingleTest
 
         const Alignment<int32> aln = aln::alignment_traceback<1024u,1024u,CHECKPOINTS>(
             aligner,
-            vector_wrapper<const uint8*>( M, str_hptr ),
+            vector_view<const uint8*>( M, str_hptr ),
             trivial_quality_string(),
-            vector_wrapper<const uint8*>( N, ref_hptr ),
+            vector_view<const uint8*>( N, ref_hptr ),
             -1000,
             backtracker );
 
@@ -299,9 +299,9 @@ struct SingleTest
         aln::BestSink<int32> sink;
         aln::banded_alignment_score<BAND_LEN>(
             aligner,
-            vector_wrapper<const uint8*>( M, str_hptr ),
+            vector_view<const uint8*>( M, str_hptr ),
             trivial_quality_string(),
-            vector_wrapper<const uint8*>( N, ref_hptr ),
+            vector_view<const uint8*>( N, ref_hptr ),
             -1000,
             sink );
 
@@ -317,9 +317,9 @@ struct SingleTest
 
         const Alignment<int32> aln = aln::banded_alignment_traceback<BAND_LEN,1024u,CHECKPOINTS>(
             aligner,
-            vector_wrapper<const uint8*>( M, str_hptr ),
+            vector_view<const uint8*>( M, str_hptr ),
             trivial_quality_string(),
-            vector_wrapper<const uint8*>( N, ref_hptr ),
+            vector_view<const uint8*>( N, ref_hptr ),
             -1000,
             backtracker );
 
@@ -632,7 +632,7 @@ void test(int argc, char* argv[])
 
     if (TEST_MASK & FUNCTIONAL)
     {
-        typedef vector_wrapper<const char*> const_string;
+        typedef vector_view<const char*> const_string;
 
         // right aligned, no gaps
         {
