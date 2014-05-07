@@ -85,6 +85,7 @@ private:
     bool readLine(void);
     void rewindLine(void);
     bool parseHeaderLine(char *start);
+    bool parseReferenceSequenceLine(char *start);
 
     gzFile fp;
 
@@ -101,6 +102,11 @@ private:
     // info from the header
     char *version;
     SortOrder sortOrder;
+
+public:
+    // reference sequence info
+    std::vector<std::string> sq_names;
+    std::vector<uint64> sq_lengths;
 };
 
 }
