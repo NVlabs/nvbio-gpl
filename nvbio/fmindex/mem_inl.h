@@ -1084,7 +1084,7 @@ void copy_ranges(
     const uint32                            i,              // vector index to copy
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    vector_view<rank_type*>                 out_ranges)     // output arena
+    vector_view<rank_type*,uint64>          out_ranges)     // output arena
 {
     const uint32 slot = slots[i];
 
@@ -1103,7 +1103,7 @@ void reorder_ranges_kernel(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    vector_view<rank_type*>                 out_ranges)     // output arena
+    vector_view<rank_type*,uint64>          out_ranges)     // output arena
 {
     const uint32 i = threadIdx.x + blockIdx.x * blockDim.x;
     if (i >= n_items)
@@ -1119,7 +1119,7 @@ void reorder_ranges(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    vector_view<rank_type*>                 out_ranges)     // output arena
+    vector_view<rank_type*,uint64>          out_ranges)     // output arena
 {
     const uint32 block_dim = 128;
     const uint32 n_blocks = util::divide_ri( n_items, block_dim );
@@ -1137,7 +1137,7 @@ void reorder_ranges(
     const uint32                            n_items,        // # of input items
     const VectorArrayView<rank_type>        in_ranges,      // input vector array
     const uint32*                           slots,          // output slots
-    vector_view<rank_type*>                 out_ranges)     // output arena
+    vector_view<rank_type*,uint64>          out_ranges)     // output arena
 {
     #pragma omp parallel for
     for (int i = 0; i < int( n_items ); ++i)
