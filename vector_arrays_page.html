@@ -105,7 +105,7 @@ At a Glance</h1>
 <ul>
 <li><a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a></li>
 </ul>
-<p>can be obtained with a call to the <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> function.</p>
+<p>can be obtained with a call to the <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> function.</p>
 <h1><a class="anchor" id="Example"></a>
 Example</h1>
 <div class="fragment"><div class="line">__global__ <span class="keywordtype">void</span> my_alloc_kernel(VectorArrayView&lt;uint32&gt; vector_array)</div>
@@ -128,15 +128,15 @@ Example</h1>
 <div class="line"></div>
 <div class="line">DeviceVectorArray&lt;uint32&gt; vector_array( 32, 32*32 );</div>
 <div class="line"></div>
-<div class="line">my_alloc_kernel&lt;&lt;&lt;1,32&gt;&gt;&gt;( <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( vector_array ) );</div>
-<div class="line">my_other_kernel&lt;&lt;&lt;1,32&gt;&gt;&gt;( <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( vector_array ) );</div>
+<div class="line">my_alloc_kernel&lt;&lt;&lt;1,32&gt;&gt;&gt;( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( vector_array ) );</div>
+<div class="line">my_other_kernel&lt;&lt;&lt;1,32&gt;&gt;&gt;( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( vector_array ) );</div>
 </div><!-- fragment --><h1><a class="anchor" id="TechnicalOverviewSection"></a>
 Technical Overview</h1>
 <p>See the <a class="el" href="group___vector_array_module.html">Vector Arrays</a> module documentation. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

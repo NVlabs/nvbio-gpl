@@ -135,6 +135,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memTemplParams" colspan="2">template&lt;typename aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator , typename scheduler_type &gt; </td></tr>
 <tr class="memitem:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#ga536e9dd55eb5b85ab3a10f32e7ba5a98">nvbio::aln::batch_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type aligner, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_set_type patterns, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> qualities_set_type quals, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> text_set_type texts, sink_iterator sinks, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scheduler_type scheduler)</td></tr>
 <tr class="separator:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memTemplParams" colspan="2">template&lt;uint32 BAND_LEN, typename aligner_type , typename pattern_set_type , typename text_set_type , typename sink_iterator , typename scheduler_type &gt; </td></tr>
+<tr class="memitem:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#gaa538f11f8c5e272d8b1e5ecb3eb95f02">nvbio::aln::batch_banded_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type aligner, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_set_type patterns, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> text_set_type texts, sink_iterator sinks, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scheduler_type scheduler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_pattern_length, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_text_length)</td></tr>
+<tr class="separator:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab96eee5575cd8e928ee364ef6bdf5b31"><td class="memItemLeft" align="right" valign="top">static uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#gab96eee5575cd8e928ee364ef6bdf5b31">nvbio::aln::BatchedAlignmentScore&lt; stream_type, ThreadParallelScheduler &gt;::min_temp_storage</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_text_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 stream_size)</td></tr>
 <tr class="separator:gab96eee5575cd8e928ee364ef6bdf5b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3253b430a8d927a289b020899dd688ac"><td class="memItemLeft" align="right" valign="top">static uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#ga3253b430a8d927a289b020899dd688ac">nvbio::aln::BatchedAlignmentScore&lt; stream_type, ThreadParallelScheduler &gt;::max_temp_storage</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_text_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 stream_size)</td></tr>
@@ -222,7 +225,7 @@ template&lt;typename aligner_type , typename pattern_set_type , typename text_se
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00871">871</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00875">875</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +304,90 @@ template&lt;typename aligner_type , typename pattern_set_type , typename qualiti
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00908">908</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00912">912</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa538f11f8c5e272d8b1e5ecb3eb95f02"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint32 BAND_LEN, typename aligner_type , typename pattern_set_type , typename text_set_type , typename sink_iterator , typename scheduler_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::aln::batch_banded_alignment_score </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type&#160;</td>
+          <td class="paramname"><em>aligner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_set_type&#160;</td>
+          <td class="paramname"><em>patterns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> text_set_type&#160;</td>
+          <td class="paramname"><em>texts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sink_iterator&#160;</td>
+          <td class="paramname"><em>sinks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scheduler_type&#160;</td>
+          <td class="paramname"><em>scheduler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>max_pattern_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>max_text_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A convenience function for aligning a batch of patterns to a corresponding batch of texts on the device. <b><em>NOTE</em></b>: this function allocates temporary storage, and doesn't perform any local memory caching of the input strings: hence, it might not attain maximum performance. For maximum speed, check the <a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html">BatchedAlignmentScore</a> contexts. </p>
+<dl class="section user"><dt></dt><dd>All the involved string sets and iterators must reside in <em>device memory</em>. </dd></dl>
+<dl class="section user"><dt></dt><dd>For a usage example, see <a class="el" href="alignment_page.html#BatchAlignmentSection">Batch Alignment</a>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">aligner_type</td><td>an <a class="el" href="group___aligner.html">Aligner</a> algorithm </td></tr>
+    <tr><td class="paramname">pattern_set_type</td><td>a string set storing the patterns </td></tr>
+    <tr><td class="paramname">text_set_type</td><td>a string set storing the texts </td></tr>
+    <tr><td class="paramname">sink_iterator</td><td>a random access iterator to the output alignment sinks </td></tr>
+    <tr><td class="paramname">scheduler_type</td><td>a <a class="el" href="group___batch_scheduler.html">Batch Scheduler</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aligner</td><td>the <a class="el" href="group___aligner.html">Aligner</a> algorithm </td></tr>
+    <tr><td class="paramname">patterns</td><td>the patterns string set </td></tr>
+    <tr><td class="paramname">texts</td><td>the texts string set </td></tr>
+    <tr><td class="paramname">sinks</td><td>the output alignment sinks </td></tr>
+    <tr><td class="paramname">scheduler</td><td>the <a class="el" href="group___batch_scheduler.html">Batch Scheduler</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00950">950</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +775,7 @@ template&lt;uint32 CHECKPOINTS, typename stream_type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

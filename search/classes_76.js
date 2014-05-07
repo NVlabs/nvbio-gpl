@@ -7,6 +7,7 @@ var searchData=
   ['vector_3c_20system_5ftag_2c_20coord_5ftype_20_3e',['vector&lt; system_tag, coord_type &gt;',['../structnvbio_1_1vector.html',1,'nvbio']]],
   ['vector_3c_20system_5ftag_2c_20index_5ftype_20_3e',['vector&lt; system_tag, index_type &gt;',['../structnvbio_1_1vector.html',1,'nvbio']]],
   ['vector_3c_20system_5ftag_2c_20qgram_5ftype_20_3e',['vector&lt; system_tag, qgram_type &gt;',['../structnvbio_1_1vector.html',1,'nvbio']]],
+  ['vector_3c_20system_5ftag_2c_20uint32_20_3e',['vector&lt; system_tag, uint32 &gt;',['../structnvbio_1_1vector.html',1,'nvbio']]],
   ['vector_5ftraits',['vector_traits',['../structnvbio_1_1vector__traits.html',1,'nvbio']]],
   ['vector_5ftraits_3c_20char_20_3e',['vector_traits&lt; char &gt;',['../structnvbio_1_1vector__traits_3_01char_01_4.html',1,'nvbio']]],
   ['vector_5ftraits_3c_20char2_20_3e',['vector_traits&lt; char2 &gt;',['../structnvbio_1_1vector__traits_3_01char2_01_4.html',1,'nvbio']]],
@@ -74,11 +75,12 @@ var searchData=
   ['vector_5ftype_3c_20unsigned_20short_2c_202_20_3e',['vector_type&lt; unsigned short, 2 &gt;',['../structnvbio_1_1vector__type_3_01unsigned_01short_00_012_01_4.html',1,'nvbio']]],
   ['vector_5ftype_3c_20unsigned_20short_2c_203_20_3e',['vector_type&lt; unsigned short, 3 &gt;',['../structnvbio_1_1vector__type_3_01unsigned_01short_00_013_01_4.html',1,'nvbio']]],
   ['vector_5ftype_3c_20unsigned_20short_2c_204_20_3e',['vector_type&lt; unsigned short, 4 &gt;',['../structnvbio_1_1vector__type_3_01unsigned_01short_00_014_01_4.html',1,'nvbio']]],
+  ['vector_5fview',['vector_view',['../structnvbio_1_1vector__view.html',1,'nvbio']]],
   ['vector_5fwrapper',['vector_wrapper',['../structnvbio_1_1vector__wrapper.html',1,'nvbio']]],
   ['vectorarrayview',['VectorArrayView',['../structnvbio_1_1_vector_array_view.html',1,'nvbio']]],
   ['vectorarrayview_3c_20io_3a_3acigar_20_3e',['VectorArrayView&lt; io::Cigar &gt;',['../structnvbio_1_1_vector_array_view.html',1,'nvbio']]],
-  ['vectorarrayview_3c_20mem_5ftype_20_3e',['VectorArrayView&lt; mem_type &gt;',['../structnvbio_1_1_vector_array_view.html',1,'nvbio']]],
+  ['vectorarrayview_3c_20nvbio_3a_3amemrange_20_3e',['VectorArrayView&lt; nvbio::MEMRange &gt;',['../structnvbio_1_1_vector_array_view.html',1,'nvbio']]],
   ['vectorarrayview_3c_20uint8_20_3e',['VectorArrayView&lt; uint8 &gt;',['../structnvbio_1_1_vector_array_view.html',1,'nvbio']]],
-  ['view_5ferror',['view_error',['../structnvbio_1_1_server_mapped_file_1_1view__error.html',1,'nvbio::ServerMappedFile']]],
-  ['view_5ferror',['view_error',['../structnvbio_1_1_mapped_file_1_1view__error.html',1,'nvbio::MappedFile']]]
+  ['view_5ferror',['view_error',['../structnvbio_1_1_mapped_file_1_1view__error.html',1,'nvbio::MappedFile']]],
+  ['view_5ferror',['view_error',['../structnvbio_1_1_server_mapped_file_1_1view__error.html',1,'nvbio::ServerMappedFile']]]
 ];

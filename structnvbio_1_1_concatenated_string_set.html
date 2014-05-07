@@ -128,7 +128,7 @@ struct nvbio::ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt;</h3>
 <div class="line">string_set_type string_set(</div>
 <div class="line">    n_strings,</div>
 <div class="line">    <span class="keywordtype">char</span>*,</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( offsets_storage ) );</div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( offsets_storage ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// setup the offsets, note we need to place a sentinel</span></div>
 <div class="line">offsets_storage[0] = 0;</div>
@@ -158,13 +158,13 @@ struct nvbio::ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt;</h3>
 <div class="line"><span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*                                 offsets_iterator;</div>
 <div class="line"><span class="keyword">typedef</span> ConcatenatedStringSet&lt;packed_iterator, offsets_iterator&gt; packed_string_set;</div>
 <div class="line"></div>
-<div class="line">packed_stream_type packed_stream( <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( string_storage ) );</div>
+<div class="line">packed_stream_type packed_stream( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( string_storage ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// build the string set</span></div>
 <div class="line">packed_string_set string_set(</div>
 <div class="line">    n_reads,</div>
 <div class="line">    packed_stream.begin(),</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( offsets_storage ) );</div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( offsets_storage ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// setup the offsets, note we need to place a sentinel</span></div>
 <div class="line"><span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; n_reads+1; ++i)</div>
@@ -180,7 +180,7 @@ struct nvbio::ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt;</h3>
 <div class="line">        <span class="keywordtype">string</span>[j] = ...</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00229">229</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00397">397</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="string__set_8h_source.html">string_set.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -198,6 +198,19 @@ Public Types</h2></td></tr>
 <tr class="separator:a19ad3e2a87af9ed8dc3921b1eb1a5f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8017db2ee1b328077a03ae3b1a58e1dc"><td class="memItemLeft" align="right" valign="top">typedef OffsetIterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a8017db2ee1b328077a03ae3b1a58e1dc">offset_iterator</a></td></tr>
 <tr class="separator:a8017db2ee1b328077a03ae3b1a58e1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c33cfc7801fb7a68f79702a2e277fc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1iterator__system.html">iterator_system</a><br class="typebreak"/>
+&lt; StringIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#af3c33cfc7801fb7a68f79702a2e277fc">system_tag</a></td></tr>
+<tr class="separator:af3c33cfc7801fb7a68f79702a2e277fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ba62cfb6d91c76adb555fcf4ae6973"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_string_set_iterator.html">StringSetIterator</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a><br class="typebreak"/>
+&lt; StringIterator, <br class="typebreak"/>
+OffsetIterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a></td></tr>
+<tr class="separator:a31ba62cfb6d91c76adb555fcf4ae6973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cff11f70bc28f606d1e59e0889f6c8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_string_set_iterator.html">StringSetIterator</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a><br class="typebreak"/>
+&lt; StringIterator, <br class="typebreak"/>
+OffsetIterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a></td></tr>
+<tr class="separator:ab3cff11f70bc28f606d1e59e0889f6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
@@ -211,6 +224,14 @@ Public Methods</h2></td></tr>
 <tr class="memitem:a3e3d997476d32e502b764cfe1611bc92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_concatenated_string_set.html#a02f654ac0293b7b7c6762329a26355fb">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a3e3d997476d32e502b764cfe1611bc92">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a3e3d997476d32e502b764cfe1611bc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a1a6b03cdec2ce26ff2bf63557c4e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a78a1a6b03cdec2ce26ff2bf63557c4e5">begin</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a78a1a6b03cdec2ce26ff2bf63557c4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a784aef00b21ff0ac1238623526a4ae80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a784aef00b21ff0ac1238623526a4ae80">end</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a784aef00b21ff0ac1238623526a4ae80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae102b5f93dd9b6f3fa32ec79d6b7f899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ae102b5f93dd9b6f3fa32ec79d6b7f899">begin</a> ()</td></tr>
+<tr class="separator:ae102b5f93dd9b6f3fa32ec79d6b7f899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d6adc8ee4ebb2543ab9e3100a69b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a40d6adc8ee4ebb2543ab9e3100a69b80">end</a> ()</td></tr>
+<tr class="separator:a40d6adc8ee4ebb2543ab9e3100a69b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab416b7ede4151e2689a15b7058fa68dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
 <a class="el" href="structnvbio_1_1_concatenated_string_set.html#a19ad3e2a87af9ed8dc3921b1eb1a5f05">symbol_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab416b7ede4151e2689a15b7058fa68dc">base_string</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
@@ -231,6 +252,38 @@ OffsetIterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a c
 <tr class="separator:ga2d1653be175414216f969b1513471a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ab3cff11f70bc28f606d1e59e0889f6c8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_set_iterator.html">StringSetIterator</a>&lt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt;StringIterator,OffsetIterator&gt; &gt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::<a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00407">407</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31ba62cfb6d91c76adb555fcf4ae6973"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_set_iterator.html">StringSetIterator</a>&lt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt;StringIterator,OffsetIterator&gt; &gt; <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::<a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00406">406</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8017db2ee1b328077a03ae3b1a58e1dc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +296,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00235">235</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00403">403</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +312,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00231">231</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00399">399</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +328,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00233">233</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00401">401</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -291,7 +344,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00234">234</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00402">402</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -307,7 +360,23 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00232">232</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00400">400</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3c33cfc7801fb7a68f79702a2e277fc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1iterator__system.html">iterator_system</a>&lt;StringIterator&gt;::type <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::<a class="el" href="structnvbio_1_1_concatenated_string_set.html#af3c33cfc7801fb7a68f79702a2e277fc">system_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00404">404</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +405,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><div class="memdoc">
 <p>default constructor </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00240">240</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00412">412</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +458,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00249">249</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00421">421</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +487,123 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><div class="memdoc">
 <p>return the base string </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00277">277</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00465">465</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78a1a6b03cdec2ce26ff2bf63557c4e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a> <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>begin iterator </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00448">448</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae102b5f93dd9b6f3fa32ec79d6b7f899"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a> <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>begin iterator </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00456">456</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a784aef00b21ff0ac1238623526a4ae80"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">const_iterator</a> <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>begin iterator </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00452">452</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40d6adc8ee4ebb2543ab9e3100a69b80"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1_concatenated_string_set.html#a31ba62cfb6d91c76adb555fcf4ae6973">iterator</a> <a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet</a>&lt; StringIterator, OffsetIterator &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>begin iterator </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00460">460</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -446,7 +631,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><div class="memdoc">
 <p>return the offset vector </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00282">282</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00470">470</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -475,7 +660,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><div class="memdoc">
 <p>indexing operator: access the i-th string </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00265">265</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00437">437</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +689,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><div class="memdoc">
 <p>set size </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00260">260</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00432">432</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +699,7 @@ template&lt;typename StringIterator, typename OffsetIterator&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:30 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

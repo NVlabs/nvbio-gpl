@@ -127,12 +127,14 @@ Inheritance diagram for nvbio::io::FMIndexData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7bd9ce74ef42f0c36e9d20ef9bc95e3e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
-<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, 2, true &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a7bd9ce74ef42f0c36e9d20ef9bc95e3e">stream_type</a></td></tr>
-<tr class="separator:a7bd9ce74ef42f0c36e9d20ef9bc95e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6e07953b2ca11483a271f091584c815"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <br class="typebreak"/>
-*, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, 2, true &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aa6e07953b2ca11483a271f091584c815">nonconst_stream_type</a></td></tr>
-<tr class="separator:aa6e07953b2ca11483a271f091584c815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb548283387f827e54eeb9af41cc40b9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
+<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a>, <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac015e14807e6b8e59d2303966e717fe4">GENOME_BIG_ENDIAN</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adb548283387f827e54eeb9af41cc40b9">stream_type</a></td></tr>
+<tr class="separator:adb548283387f827e54eeb9af41cc40b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774b174e7b10a48598980309dbf6627e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <br class="typebreak"/>
+*, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a>, <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac015e14807e6b8e59d2303966e717fe4">GENOME_BIG_ENDIAN</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a774b174e7b10a48598980309dbf6627e">nonconst_stream_type</a></td></tr>
+<tr class="separator:a774b174e7b10a48598980309dbf6627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00aa5c7dc14a490e8de22d596259a3e1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html">SSA_index_multiple</a><br class="typebreak"/>
 &lt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#abbeccf96eba1400916e316b787e50357">SA_INT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a00aa5c7dc14a490e8de22d596259a3e1">SSA_type</a></td></tr>
 <tr class="separator:a00aa5c7dc14a490e8de22d596259a3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,6 +279,12 @@ Static Public Members</h2></td></tr>
 <tr class="separator:ad75196ad06e3ebef88bc0955a2b48630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbeccf96eba1400916e316b787e50357"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#abbeccf96eba1400916e316b787e50357">SA_INT</a> = 16</td></tr>
 <tr class="separator:abbeccf96eba1400916e316b787e50357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ebc998c62cd1d21175d1878ece2a08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a> = 2u</td></tr>
+<tr class="separator:af6ebc998c62cd1d21175d1878ece2a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac015e14807e6b8e59d2303966e717fe4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac015e14807e6b8e59d2303966e717fe4">GENOME_BIG_ENDIAN</a> = true</td></tr>
+<tr class="separator:ac015e14807e6b8e59d2303966e717fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f478f511004b69f05987eedc8fc17ca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a2f478f511004b69f05987eedc8fc17ca">GENOME_SYMBOLS_PER_WORD</a> = (4*sizeof(<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>))/<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a></td></tr>
+<tr class="separator:a2f478f511004b69f05987eedc8fc17ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="af9a606cb65ec965c4e7e0c7215c75c97"></a>
@@ -289,7 +297,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00130">130</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00134">134</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -303,7 +311,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00131">131</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00135">135</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -317,21 +325,21 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00135">135</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00139">139</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa6e07953b2ca11483a271f091584c815"></a>
+<a class="anchor" id="a774b174e7b10a48598980309dbf6627e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,2,true&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aa6e07953b2ca11483a271f091584c815">nvbio::io::FMIndexData::nonconst_stream_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a>,<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac015e14807e6b8e59d2303966e717fe4">GENOME_BIG_ENDIAN</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a774b174e7b10a48598980309dbf6627e">nvbio::io::FMIndexData::nonconst_stream_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00124">124</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00128">128</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -345,7 +353,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00129">129</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00133">133</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +367,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00136">136</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00140">140</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -373,7 +381,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00134">134</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00138">138</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +395,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00127">127</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00131">131</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -401,7 +409,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00126">126</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00130">130</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -415,21 +423,21 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00132">132</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00136">136</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7bd9ce74ef42f0c36e9d20ef9bc95e3e"></a>
+<a class="anchor" id="adb548283387f827e54eeb9af41cc40b9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,2,true&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a7bd9ce74ef42f0c36e9d20ef9bc95e3e">nvbio::io::FMIndexData::stream_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a>,<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac015e14807e6b8e59d2303966e717fe4">GENOME_BIG_ENDIAN</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#adb548283387f827e54eeb9af41cc40b9">nvbio::io::FMIndexData::stream_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00123">123</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00127">127</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +482,7 @@ Static Public Members</h2></td></tr>
 
 <p>virtual destructor </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00139">139</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00143">143</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -500,7 +508,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00157">157</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00161">161</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -527,7 +535,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the BWT stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00147">147</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00151">151</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +560,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00163">163</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00167">167</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +587,7 @@ Static Public Members</h2></td></tr>
 
 <p>return loading flags </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00141">141</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00145">145</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +614,7 @@ Static Public Members</h2></td></tr>
 
 <p>return genome length </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00142">142</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00146">146</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +641,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the genome stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00146">146</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00150">150</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +668,7 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the genome is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00143">143</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00147">147</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -687,7 +695,7 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the reverse sampled suffix array is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00145">145</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00149">149</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -714,7 +722,7 @@ Static Public Members</h2></td></tr>
 
 <p>return whether the sampled suffix array is present </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00144">144</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00148">148</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -739,7 +747,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00168">168</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00172">172</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -764,7 +772,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00154">154</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00158">158</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -791,7 +799,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the occurrence table </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00149">149</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00153">153</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +824,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00171">171</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00175">175</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -841,7 +849,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00165">165</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00169">169</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -866,7 +874,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00158">158</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00162">162</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -893,7 +901,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the reverse BWT stream </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00148">148</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00152">152</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -918,7 +926,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00169">169</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00173">173</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +951,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00155">155</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00159">159</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -970,7 +978,7 @@ Static Public Members</h2></td></tr>
 
 <p>return the reverse occurrence table </p>
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00150">150</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00154">154</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1003,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00172">172</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00176">176</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1020,7 +1028,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00166">166</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00170">170</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1053,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00161">161</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00165">165</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1078,7 @@ Static Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00160">160</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00164">164</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1093,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00189">189</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00193">193</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1133,6 +1141,72 @@ Static Public Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac015e14807e6b8e59d2303966e717fe4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool nvbio::io::FMIndexData::GENOME_BIG_ENDIAN = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00124">124</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6ebc998c62cd1d21175d1878ece2a08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::GENOME_BITS = 2u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00123">123</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f478f511004b69f05987eedc8fc17ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::io::FMIndexData::GENOME_SYMBOLS_PER_WORD = (4*sizeof(<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>))/<a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#af6ebc998c62cd1d21175d1878ece2a08">GENOME_BITS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00125">125</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6da790d8d2b6e0eefb47fd5bab517fc7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1143,7 +1217,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00187">187</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00191">191</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1231,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00194">194</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00198">198</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1245,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00193">193</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00197">197</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1259,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00183">183</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00187">187</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1273,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00175">175</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00179">179</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1287,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00182">182</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00186">186</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1227,7 +1301,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00185">185</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00189">189</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1315,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00184">184</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00188">188</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1329,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00186">186</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00190">190</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1365,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00178">178</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00182">182</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1305,7 +1379,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00180">180</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00184">184</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1363,7 +1437,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00188">188</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00192">192</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1451,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00181">181</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00185">185</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1465,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00191">191</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00195">195</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1449,7 +1523,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00179">179</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00183">183</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1537,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00176">176</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00180">180</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1477,7 +1551,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00177">177</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00181">181</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1565,7 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fmi_8h_source.html#l00190">190</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
+<p>Definition at line <a class="el" href="fmi_8h_source.html#l00194">194</a> of file <a class="el" href="fmi_8h_source.html">fmi.h</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1575,7 @@ Static Public Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:52 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 00:00:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

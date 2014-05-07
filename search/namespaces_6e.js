@@ -17,6 +17,7 @@ var searchData=
   ['mergesort',['mergesort',['../namespacenvbio_1_1mergesort.html',1,'nvbio']]],
   ['nvbio',['nvbio',['../namespacenvbio.html',1,'']]],
   ['occ',['occ',['../namespacenvbio_1_1occ.html',1,'nvbio']]],
+  ['priqueue',['priqueue',['../namespacenvbio_1_1priqueue.html',1,'nvbio']]],
   ['priv',['priv',['../namespacenvbio_1_1priv.html',1,'nvbio']]],
   ['priv',['priv',['../namespacenvbio_1_1aln_1_1priv.html',1,'nvbio::aln']]],
   ['qgram',['qgram',['../namespacenvbio_1_1qgram.html',1,'nvbio']]],

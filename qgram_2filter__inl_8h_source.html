@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    m_n_queries   = n_queries;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    m_queries     = queries;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    m_indices     = indices;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    m_qgram_index = <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( qgram_index );</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    m_qgram_index = <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( qgram_index );</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// alloc enough storage for the results</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    m_ranges.resize( n_queries );</div>
@@ -350,8 +350,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="code" href="structnvbio_1_1qgram_1_1filter__results.html">qgram::filter_results&lt;qgram_index_view,index_iterator,coord_type&gt;</a>(</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            m_qgram_index,</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            m_n_queries,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_slots ),</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_ranges ),</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_slots ),</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_ranges ),</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            m_indices ) );</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
@@ -410,7 +410,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">// now sort the results by diagonal (which can be either a uint32 or a uint2)</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1if__equal.html#a88e81fdbcbb846e318be4a58a2aa5819">if_equal&lt;diagonal_type, uint32, uint32, uint64&gt;::type</a> primitive_type;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    primitive_type* raw_diags( (primitive_type*)<a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_diags ) );</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    primitive_type* raw_diags( (primitive_type*)<a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( m_diags ) );</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="namespacedivsufsortxx_1_1substring.html#acbb12ad743e9d8ca4ad0908a2c1eb9d5">thrust::sort</a>(</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        raw_diags,</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        raw_diags + n_hits );</div>
@@ -446,7 +446,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    m_n_queries   = n_queries;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    m_queries     = queries;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    m_indices     = indices;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    m_qgram_index = <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( qgram_index );</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    m_qgram_index = <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( qgram_index );</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="comment">// alloc enough storage for the results</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">if</span> (m_ranges.size() &lt; n_queries)</div>
@@ -499,8 +499,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <a class="code" href="structnvbio_1_1qgram_1_1filter__results.html">qgram::filter_results&lt;qgram_index_view,index_iterator,coord_type&gt;</a>(</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            m_qgram_index,</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            m_n_queries,</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_slots ),</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_ranges ),</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_slots ),</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_ranges ),</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            m_indices ) );</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
@@ -561,7 +561,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="comment">// now sort the results by diagonal (which can be either a uint32 or a uint2)</span></div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1if__equal.html#a88e81fdbcbb846e318be4a58a2aa5819">if_equal&lt;diagonal_type, uint32, uint32, uint64&gt;::type</a> primitive_type;</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    primitive_type* raw_diags( (primitive_type*)<a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_diags ) );</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    primitive_type* raw_diags( (primitive_type*)<a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( m_diags ) );</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <a class="code" href="structnvbio_1_1cuda_1_1_sort_buffers.html">cuda::SortBuffers&lt;primitive_type*&gt;</a> sort_buffers;</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    sort_buffers.<a class="code" href="structnvbio_1_1cuda_1_1_sort_buffers.html#a0282973f670c67c71dba0fd7b8c6ed12">keys</a>[0] = raw_diags;</div>
@@ -585,7 +585,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

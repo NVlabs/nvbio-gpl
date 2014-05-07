@@ -132,16 +132,16 @@ Example</h1>
 <div class="line">    thrust::device_vector&lt;uint32&gt; d_filter_storage( filter_words, 0u );</div>
 <div class="line">    bloom_filter_type d_filter(</div>
 <div class="line">       filter_words * 32,</div>
-<div class="line">       <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_filter_storage ) );</div>
+<div class="line">       <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_filter_storage ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// and populate it</span></div>
-<div class="line">    populate_kernel&lt;&lt;&lt;util::divide_ri(N,128),128&gt;&gt;&gt;( N, <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_vector ), d_filter );</div>
+<div class="line">    populate_kernel&lt;&lt;&lt;util::divide_ri(N,128),128&gt;&gt;&gt;( N, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_vector ), d_filter );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// copy the filter back on the host</span></div>
 <div class="line">    thrust::host_vector&lt;uint32&gt; h_filter_storage = filter_storage;</div>
 <div class="line">    bloom_filter_type h_filter(</div>
 <div class="line">       filter_words * 32,</div>
-<div class="line">       <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_filter_storage ) );</div>
+<div class="line">       <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_filter_storage ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// and now ask The Question: is 42 in there?</span></div>
 <div class="line">    <span class="keywordflow">return</span> h_filter.has( 42 );</div>
@@ -149,7 +149,7 @@ Example</h1>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -208,10 +208,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="structnvbio_1_1cuda_1_1_sort_enactor.html">cuda::SortEnactor</a>                     sort_enactor;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    sort_buffers.selector  = 0;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    sort_buffers.keys[0]   = <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( radices );</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    sort_buffers.keys[1]   = <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( radices ) + n_suffixes;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    sort_buffers.values[0] = <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( indices );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    sort_buffers.values[1] = <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( indices ) + n_suffixes;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    sort_buffers.keys[0]   = <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( radices );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    sort_buffers.keys[1]   = <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( radices ) + n_suffixes;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    sort_buffers.values[0] = <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( indices );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    sort_buffers.values[1] = <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( indices ) + n_suffixes;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// do what is essentially an LSD radix-sort on the suffixes, word by word</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> word_idx = m-1; word_idx &gt;= 0; --word_idx)</div>
@@ -230,9 +230,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    output.process(</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        n_suffixes,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( indices ) + sort_buffers.selector * n_suffixes,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( suffixes.<a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#aff0dc40fa84eba2dcc36736e7ed7a573">string_ids</a> ),</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( suffixes.<a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e" title="cumulative string lengths ">cum_lengths</a> ));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( indices ) + sort_buffers.selector * n_suffixes,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( suffixes.<a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#aff0dc40fa84eba2dcc36736e7ed7a573">string_ids</a> ),</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( suffixes.<a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e" title="cumulative string lengths ">cum_lengths</a> ));</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// Sort all the suffixes of a given string</span></div>
@@ -607,7 +607,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            string_set_handler.dollar_bwt(</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                block_begin,</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                block_end,</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ) );</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ) );</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            <span class="comment">// copy them to the device</span></div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <a class="code" href="namespacenvbio_1_1cuda.html#a14fff628aa09cc0400eee8f4e158686c">thrust::copy</a>(</div>
@@ -623,8 +623,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            <span class="comment">// invoke the output handler</span></div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            output.process(</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                n_suffixes,</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ),</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_block_bwt ),</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ),</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_block_bwt ),</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                NULL,</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                NULL,</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                NULL );</div>
@@ -899,7 +899,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                            d_bucket_suffixes.begin() );</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                        <span class="comment">// initialize the set radices</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                        string_set_handler.init( n_suffixes, h_bucket_suffixes, <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_bucket_suffixes ) );</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                        string_set_handler.init( n_suffixes, h_bucket_suffixes, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_bucket_suffixes ) );</div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                        <a class="code" href="structnvbio_1_1cuda_1_1_timer.html">Timer</a> timer;</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                        timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a944fa35847e996ab681f96ecd6953cb0">start</a>();</div>
@@ -911,8 +911,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                        string_set_handler.bwt(</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                            n_suffixes,</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                            (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)NULL,</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ),</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_block_bwt ) );</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ),</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_block_bwt ) );</div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                        timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                        bwt_time += timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a9f0b57926e56612695ccb81dc3977e04">seconds</a>();</div>
@@ -922,10 +922,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                        <span class="comment">// invoke the output handler</span></div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                        output.process(</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                            n_suffixes,</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ),</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_block_bwt ),</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ),</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_block_bwt ),</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                            h_bucket_suffixes,</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_bucket_suffixes ),</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_bucket_suffixes ),</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                            NULL );</div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;</div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                        timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
@@ -977,7 +977,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;                        d_bucket_suffixes.begin() );</div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;                    <span class="comment">// initialize the set radices</span></div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                    string_set_handler.init( n_suffixes, h_bucket_suffixes, <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_bucket_suffixes ) );</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                    string_set_handler.init( n_suffixes, h_bucket_suffixes, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_bucket_suffixes ) );</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;                    <a class="code" href="structnvbio_1_1cuda_1_1_discard_delay_list.html">cuda::DiscardDelayList</a> delay_list;</div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
@@ -1000,9 +1000,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                    <span class="comment">// load the BWT symbols</span></div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;                    string_set_handler.bwt(</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;                        n_suffixes,</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_indices ),</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ),</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_block_bwt ) );</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_indices ),</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ),</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_block_bwt ) );</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;                    timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;                    bwt_time += timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a9f0b57926e56612695ccb81dc3977e04">seconds</a>();</div>
@@ -1012,11 +1012,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                    <span class="comment">// invoke the output handler</span></div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                    output.process(</div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                        n_suffixes,</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( h_block_bwt ),</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_block_bwt ),</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( h_block_bwt ),</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_block_bwt ),</div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;                        h_bucket_suffixes,</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_bucket_suffixes ),</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_indices ) );</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_bucket_suffixes ),</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( d_indices ) );</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;</div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;                    timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;                    output_time += timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a9f0b57926e56612695ccb81dc3977e04">seconds</a>();</div>
@@ -1131,7 +1131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:01 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

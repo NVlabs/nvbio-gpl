@@ -383,16 +383,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a944fa35847e996ab681f96ecd6953cb0">start</a>();</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="comment">// build the compressed flags</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* d_comp_flags = (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)<a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_temp_flags );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* d_comp_flags = (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)<a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_temp_flags );</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#afbb0c296d8cf4b80c657f7606430aca1">priv::pack_flags</a>(</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            n_active_suffixes,</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_segment_flags ),</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_segment_flags ),</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            d_comp_flags );</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">// sort within segments</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        mgpu::SegSortPairsFromFlags(</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_keys ),</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_indices ),</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_keys ),</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_indices ),</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            n_active_suffixes,</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            d_comp_flags,</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            *m_mgpu );</div>
@@ -411,8 +411,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">// those by themselves.</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">priv::build_head_flags</a>(</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            n_active_suffixes,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_keys ),</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_segment_flags ) );</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_keys ),</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_segment_flags ) );</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        d_segment_flags[0]                 = 1u; <span class="comment">// make sure the first flag is a 1</span></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        d_segment_flags[n_active_suffixes] = 1u; <span class="comment">// and add a sentinel</span></div>
@@ -613,7 +613,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="preprocessor"></span>            <span class="comment">// extract the given radix word from each of the partially sorted suffixes on the host</span></div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            set.init_slice(</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                n_active_strings,</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                n_active_strings == n_strings ? (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)NULL : <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_indices ),</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                n_active_strings == n_strings ? (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)NULL : <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">raw_pointer</a>( d_indices ),</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                word_block_begin,</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                word_block_end );</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="preprocessor">          #else</span></div>
@@ -648,11 +648,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                <span class="comment">// extract only active radices, already sorted</span></div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                set.extract(</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                    n_active_strings,</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_indices ),</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">raw_pointer</a>( d_indices ),</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                    word_idx,</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                    word_block_begin,</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                    word_block_end,</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_keys ) );</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">raw_pointer</a>( d_keys ) );</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                <a class="code" href="types_8h.html#a0586b64e0df13e3e3d956a7f178dd322">NVBIO_CUDA_DEBUG_STATEMENT</a>( cudaDeviceSynchronize() );</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
@@ -667,7 +667,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                    word_idx,</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                    word_block_begin,</div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    word_block_end,</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view</a>( d_temp_indices ) );</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">raw_pointer</a>( d_temp_indices ) );</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;</div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                <a class="code" href="types_8h.html#a0586b64e0df13e3e3d956a7f178dd322">NVBIO_CUDA_DEBUG_STATEMENT</a>( cudaDeviceSynchronize() );</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#ad559677b791465bdee51d4848766a6d0">stop</a>();</div>
@@ -690,10 +690,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a944fa35847e996ab681f96ecd6953cb0">start</a>();</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                <span class="comment">// build the compressed flags</span></div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* d_comp_flags = (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)<a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_temp_flags );</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>* d_comp_flags = (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)<a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_temp_flags );</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                <a class="code" href="namespacenvbio_1_1priv.html#afbb0c296d8cf4b80c657f7606430aca1">priv::pack_flags</a>(</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                    n_active_strings,</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                    <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_segment_flags ),</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_segment_flags ),</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                    d_comp_flags );</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                <a class="code" href="types_8h.html#a0586b64e0df13e3e3d956a7f178dd322">NVBIO_CUDA_DEBUG_STATEMENT</a>( cudaDeviceSynchronize() );</div>
@@ -701,8 +701,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="comment">// sort within segments</span></div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                mgpu::SegSortPairsFromFlags(</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                    <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_keys ),</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_indices ),</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_keys ),</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_indices ),</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                    n_active_strings,</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                    d_comp_flags,</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                    *m_mgpu );</div>
@@ -723,8 +723,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                <span class="comment">// those by themselves.</span></div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                <a class="code" href="namespacenvbio_1_1priv.html#a1401af3048305df028763e93274f7ad9">priv::build_head_flags</a>(</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                    n_active_strings,</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_keys ),</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                    <a class="code" href="namespacenvbio.html#afdb49bb4ac656b5eed84c3a4ef9d7d32">nvbio::device_view</a>( d_segment_flags ) );</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_keys ),</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_segment_flags ) );</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                <a class="code" href="types_8h.html#a0586b64e0df13e3e3d956a7f178dd322">NVBIO_CUDA_DEBUG_STATEMENT</a>( cudaDeviceSynchronize() );</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                <a class="code" href="namespacenvbio_1_1cuda.html#ae47791b87823645325b131f7c83f3291">cuda::check_error</a>(<span class="stringliteral">&quot;CompressionSort::sort() : build_head_flags&quot;</span>);</div>
@@ -893,7 +893,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:01 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

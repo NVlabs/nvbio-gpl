@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1priv_1_1_s_w_scoring_context.html">priv::SWScoringContext&lt;BAND_LEN,TYPE,algorithm_tag&gt;</a> context;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">length</a> = equal&lt;algorithm_tag,PatternBlockingTag&gt;() ? pattern.length() : text.length();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a> = equal&lt;algorithm_tag,PatternBlockingTag&gt;() ? pattern.length() : text.length();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1priv_1_1sw__alignment__score__dispatch.html">sw_alignment_score_dispatch&lt;BAND_LEN,TYPE,algorithm_tag,symbol_type&gt;::run</a>( <a class="code" href="structnvbio_1_1aln_1_1priv_1_1_edit_distance_s_w_scheme.html">EditDistanceSWScheme</a>(), context, pattern, quals, text, min_score, sink, 0, length, column );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
@@ -331,7 +331,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:55 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

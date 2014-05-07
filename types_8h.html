@@ -105,8 +105,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">types.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;assert.h&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="version_8h_source.html">nvbio/basic/version.h</a>&gt;</code><br/>
+<code>#include &lt;assert.h&gt;</code><br/>
 <code>#include &lt;vector_types.h&gt;</code><br/>
+<code>#include &lt;thrust/iterator/detail/host_system_tag.h&gt;</code><br/>
+<code>#include &lt;thrust/iterator/detail/device_system_tag.h&gt;</code><br/>
+<code>#include &lt;thrust/iterator/detail/any_system_tag.h&gt;</code><br/>
 </div>
 <p><a href="types_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -194,7 +198,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
-<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -345,7 +349,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00046">46</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00050">50</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +363,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00047">47</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00051">51</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -377,7 +381,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00071">71</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00075">75</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +415,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00072">72</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00076">76</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +443,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00073">73</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00077">77</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -473,7 +477,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00093">93</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00097">97</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +495,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00081">81</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00085">85</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +523,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00082">82</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00086">86</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +551,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00083">83</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00087">87</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +569,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00058">58</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00062">62</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +583,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00031">31</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00035">35</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +597,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00052">52</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00056">56</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -607,7 +611,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00030">30</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00034">34</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +625,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00029">29</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00033">33</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -635,7 +639,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00100">100</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00104">104</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +653,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00038">38</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00042">42</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +667,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00039">39</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00043">43</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -677,7 +681,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00115">115</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00119">119</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +699,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00106">106</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00110">110</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -725,7 +729,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint2 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00285">285</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00289">289</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -754,7 +758,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint3 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00295">295</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00299">299</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -783,7 +787,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint4 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00305">305</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00309">309</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -812,7 +816,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int2 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00315">315</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00319">319</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -841,7 +845,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int3 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00325">325</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00329">329</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -870,7 +874,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int4 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00335">335</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00339">339</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -899,7 +903,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float2 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00345">345</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00349">349</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -928,7 +932,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float3 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00355">355</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00359">359</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -957,7 +961,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float4 operator!= </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00365">365</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00369">369</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -986,7 +990,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint2 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00280">280</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00284">284</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1019,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint3 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00290">290</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00294">294</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1048,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>uint4 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00300">300</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00304">304</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1077,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int2 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00310">310</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00314">314</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1102,7 +1106,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int3 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00320">320</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00324">324</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1135,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>int4 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00330">330</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00334">334</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1164,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float2 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00340">340</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00344">344</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1193,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float3 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00350">350</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00354">354</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1218,14 +1222,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>float4 operator== </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00360">360</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00364">364</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:06 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:23 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

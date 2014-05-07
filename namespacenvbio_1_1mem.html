@@ -96,7 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">nvbio::mem Namespace Reference</div>  </div>
 </div><!--header-->
@@ -106,11 +107,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1range__size.html">range_size</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1span__size.html">span_size</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1rank__string__id.html">rank_string_id</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1rank__span__size.html">rank_span_size</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">mem_handler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__functor.html">mem_functor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1right__mem__functor.html">right_mem_functor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1split__mem__functor.html">split_mem_functor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1left__mem__functor.html">left_mem_functor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1filter__results.html">filter_results</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,11 +127,386 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1lookup__ssa__results.html">lookup_ssa_results</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8a449893d2dea0b30405c7e13c548e59"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename output_vector &gt; </td></tr>
+<tr class="memitem:a8a449893d2dea0b30405c7e13c548e59"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a8a449893d2dea0b30405c7e13c548e59">right_kmems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="group___strings.html#ga02299ca4809866b8dfae388a0ef237e6">string_id</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, output_vector &amp;output, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> min_intv)</td></tr>
+<tr class="separator:a8a449893d2dea0b30405c7e13c548e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92f51b5ed40479a660e97cf68a2021d"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:ae92f51b5ed40479a660e97cf68a2021d"><td class="memTemplItemLeft" align="right" valign="top">__global__ void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#ae92f51b5ed40479a660e97cf68a2021d">discard_ranges_kernel</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_items, <a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a>&lt; rank_type &gt; ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_intv, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> min_span, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> reverse)</td></tr>
+<tr class="separator:ae92f51b5ed40479a660e97cf68a2021d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729a4a75ae767ae64b8d3a92c07a834c"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:a729a4a75ae767ae64b8d3a92c07a834c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a729a4a75ae767ae64b8d3a92c07a834c">discard_ranges</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1device__tag.html">device_tag</a> system_tag, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_items, <a class="el" href="structnvbio_1_1_device_vector_array.html">DeviceVectorArray</a>&lt; rank_type &gt; &amp;ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_intv, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> min_span, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool reverse)</td></tr>
+<tr class="separator:a729a4a75ae767ae64b8d3a92c07a834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5566cddf6235b596117131446a1fcd39"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:a5566cddf6235b596117131446a1fcd39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a5566cddf6235b596117131446a1fcd39">copy_ranges</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a>&lt; rank_type &gt; in_ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *slots, <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; rank_type * &gt; out_ranges)</td></tr>
+<tr class="separator:a5566cddf6235b596117131446a1fcd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370ea858f183e0e404a80f43f79e19d0"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:a370ea858f183e0e404a80f43f79e19d0"><td class="memTemplItemLeft" align="right" valign="top">__global__ void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a370ea858f183e0e404a80f43f79e19d0">reorder_ranges_kernel</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_items, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a>&lt; rank_type &gt; in_ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *slots, <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; rank_type * &gt; out_ranges)</td></tr>
+<tr class="separator:a370ea858f183e0e404a80f43f79e19d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8388257cbbe253541226313a5d1b96"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:a2f8388257cbbe253541226313a5d1b96"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a2f8388257cbbe253541226313a5d1b96">reorder_ranges</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1device__tag.html">device_tag</a> system_tag, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_items, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a>&lt; rank_type &gt; in_ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *slots, <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; rank_type * &gt; out_ranges)</td></tr>
+<tr class="separator:a2f8388257cbbe253541226313a5d1b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1703f3ae8234f1e414fc96e7c4d0c52e"><td class="memTemplParams" colspan="2">template&lt;typename rank_type &gt; </td></tr>
+<tr class="memitem:a1703f3ae8234f1e414fc96e7c4d0c52e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1mem.html#a1703f3ae8234f1e414fc96e7c4d0c52e">reorder_ranges</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1host__tag.html">host_tag</a> system_tag, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_items, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_vector_array_view.html">VectorArrayView</a>&lt; rank_type &gt; in_ranges, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *slots, <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; rank_type * &gt; out_ranges)</td></tr>
+<tr class="separator:a1703f3ae8234f1e414fc96e7c4d0c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5566cddf6235b596117131446a1fcd39"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void nvbio::mem::copy_ranges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> VectorArrayView&lt; rank_type &gt;&#160;</td>
+          <td class="paramname"><em>in_ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 *&#160;</td>
+          <td class="paramname"><em>slots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_view&lt; rank_type * &gt;&#160;</td>
+          <td class="paramname"><em>out_ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01083">1083</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a729a4a75ae767ae64b8d3a92c07a834c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::mem::discard_ranges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> device_tag&#160;</td>
+          <td class="paramname"><em>system_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n_items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DeviceVectorArray&lt; rank_type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>max_intv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>min_span</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> bool&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01044">1044</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae92f51b5ed40479a660e97cf68a2021d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">__global__ void nvbio::mem::discard_ranges_kernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n_items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VectorArrayView&lt; rank_type &gt;&#160;</td>
+          <td class="paramname"><em>ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>max_intv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>min_span</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00972">972</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f8388257cbbe253541226313a5d1b96"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::mem::reorder_ranges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> device_tag&#160;</td>
+          <td class="paramname"><em>system_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n_items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> VectorArrayView&lt; rank_type &gt;&#160;</td>
+          <td class="paramname"><em>in_ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 *&#160;</td>
+          <td class="paramname"><em>slots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_view&lt; rank_type * &gt;&#160;</td>
+          <td class="paramname"><em>out_ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01117">1117</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1703f3ae8234f1e414fc96e7c4d0c52e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::mem::reorder_ranges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> host_tag&#160;</td>
+          <td class="paramname"><em>system_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n_items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> VectorArrayView&lt; rank_type &gt;&#160;</td>
+          <td class="paramname"><em>in_ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 *&#160;</td>
+          <td class="paramname"><em>slots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_view&lt; rank_type * &gt;&#160;</td>
+          <td class="paramname"><em>out_ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01135">1135</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a370ea858f183e0e404a80f43f79e19d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename rank_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">__global__ void nvbio::mem::reorder_ranges_kernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n_items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> VectorArrayView&lt; rank_type &gt;&#160;</td>
+          <td class="paramname"><em>in_ranges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 *&#160;</td>
+          <td class="paramname"><em>slots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_view&lt; rank_type * &gt;&#160;</td>
+          <td class="paramname"><em>out_ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01102">1102</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a449893d2dea0b30405c7e13c548e59"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename pattern_type , typename fm_index_type , typename output_vector &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> nvbio::mem::right_kmems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>pattern_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>string_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type&#160;</td>
+          <td class="paramname"><em>f_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type&#160;</td>
+          <td class="paramname"><em>r_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">output_vector &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>min_intv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00474">474</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:32:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 00:00:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -104,6 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="fmindex_8h_source.html">nvbio/fmindex/fmindex.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="bidir_8h_source.html">nvbio/fmindex/bidir.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="types_8h_source.html">nvbio/basic/types.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="numbers_8h_source.html">nvbio/basic/numbers.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="algorithms_8h_source.html">nvbio/basic/algorithms.h</a>&gt;</code><br/>
@@ -115,6 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="string_8h_source.html">nvbio/strings/string.h</a>&gt;</code><br/>
 <code>#include &lt;thrust/sort.h&gt;</code><br/>
 <code>#include &lt;thrust/scan.h&gt;</code><br/>
+<code>#include &lt;thrust/binary_search.h&gt;</code><br/>
 <code>#include &lt;thrust/iterator/constant_iterator.h&gt;</code><br/>
 <code>#include &lt;thrust/iterator/counting_iterator.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="mem__inl_8h_source.html">nvbio/fmindex/mem_inl.h</a>&gt;</code><br/>
@@ -124,6 +126,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_filter.html">nvbio::MEMFilter&lt; system_tag, fm_index_type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_range.html">nvbio::MEMRange&lt; coord_type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_hit.html">nvbio::MEMHit&lt; coord_type &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,20 +143,27 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
-<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
-<tr class="memitem:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga5ce08fad3366b14aa3c18a37ffb47702">nvbio::find_mems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
-<tr class="separator:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2883ef425905e8458473355f73119af2"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
+<tr class="memitem:ga2883ef425905e8458473355f73119af2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga2883ef425905e8458473355f73119af2">nvbio::find_kmems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
+<tr class="separator:ga2883ef425905e8458473355f73119af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
+<tr class="memitem:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga3e1b972c5d4d74136fbce81c8d7c34e4">nvbio::find_threshold_kmems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
+<tr class="separator:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename fm_index_type &gt; </td></tr>
+<tr class="memitem:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga385612b5dc723d5f8a699eb92e0a6c25">nvbio::string_batch_bound</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> MEMFilter&lt; system_tag, fm_index_type &gt; &amp;filter, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 mem_count)</td></tr>
+<tr class="separator:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:06 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:23 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

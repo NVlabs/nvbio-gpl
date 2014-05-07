@@ -327,13 +327,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1aln_1_1_test_backtracker.html#a312c9ab182329635187de0ed74450052">nvbio::aln::TestBacktracker</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_backtracker.html#a51d29961c327005abce4354af0e704b9">nvbio::bowtie2::cuda::detail::Backtracker&lt; vector &gt;</a>
 </li>
-<li>Close()
-: <a class="el" href="struct_bam_reader_1_1_bam_reader_private.html#a4b898916da4222a539af5935d3f8bc70">BamTools::BamReader::BamReaderPrivate</a>
-, <a class="el" href="class_bam_tools_1_1_bam_reader.html#aa1cf6a578654873c2c549a599a95c844">BamTools::BamReader</a>
-, <a class="el" href="struct_bam_writer_1_1_bam_writer_private.html#afb5cadaa4cdba235182c7f53c256e7f1">BamTools::BamWriter::BamWriterPrivate</a>
-, <a class="el" href="class_bam_tools_1_1_bam_writer.html#acf06b57f75e03de0096640adcdfe0ad5">BamTools::BamWriter</a>
-, <a class="el" href="struct_bam_tools_1_1_bgzf_data.html#a82726f2e0b1fe577ed37ebf9640ebbb0">BamTools::BgzfData</a>
-</li>
 <li>close()
 : <a class="el" href="structnvbio_1_1io_1_1_bam_output.html#a98f5668632a34986126465caa0123d09">nvbio::io::BamOutput</a>
 , <a class="el" href="structnvbio_1_1io_1_1_debug_output.html#a39501106b6a83852e5816844c648d86f">nvbio::io::DebugOutput</a>
@@ -341,6 +334,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structnvbio_1_1io_1_1_sam_output.html#abbfe3f26540e1de852563d190e84d2d1">nvbio::io::SamOutput</a>
 , <a class="el" href="structnvbio_1_1_b_g_z_file_writer.html#ab1464a1a36796270e063957632f80009">nvbio::BGZFileWriter</a>
 , <a class="el" href="structnvbio_1_1_l_z4_file_writer.html#a2af085c3d32cb14e51ad455eaa1f5bd3">nvbio::LZ4FileWriter</a>
+</li>
+<li>Close()
+: <a class="el" href="struct_bam_reader_1_1_bam_reader_private.html#a4b898916da4222a539af5935d3f8bc70">BamTools::BamReader::BamReaderPrivate</a>
+, <a class="el" href="class_bam_tools_1_1_bam_reader.html#aa1cf6a578654873c2c549a599a95c844">BamTools::BamReader</a>
+, <a class="el" href="struct_bam_writer_1_1_bam_writer_private.html#afb5cadaa4cdba235182c7f53c256e7f1">BamTools::BamWriter::BamWriterPrivate</a>
+, <a class="el" href="class_bam_tools_1_1_bam_writer.html#acf06b57f75e03de0096640adcdfe0ad5">BamTools::BamWriter</a>
+, <a class="el" href="struct_bam_tools_1_1_bgzf_data.html#a82726f2e0b1fe577ed37ebf9640ebbb0">BamTools::BgzfData</a>
 </li>
 <li>closest_diagonal()
 : <a class="el" href="structnvbio_1_1qgram_1_1closest__diagonal_3_01uint2_01_4.html#a1ca4962744639005a9dd691c895c9cc8">nvbio::qgram::closest_diagonal&lt; uint2 &gt;</a>
@@ -460,10 +460,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>const_iterator
 : <a class="el" href="classboost_1_1container_1_1priority__deque.html#a5595c9da0b7c835462ecf638b28da8d1">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="structnvbio_1_1_packed_vector.html#a82260aecd97c18d6b34c371789c6e0ce">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a>
 , <a class="el" href="classnvbio_1_1priority__deque.html#a4e3cc0939b2501f2fa6081a44add7c58">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">nvbio::priority_queue&lt; Key, Container, Compare &gt;</a>
 , <a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#ad2593c6e2e06cab8106ab7edf46d3122">nvbio::vector&lt; host_tag, T &gt;</a>
 , <a class="el" href="structnvbio_1_1vector_3_01device__tag_00_01_t_01_4.html#a8fadd568aa9f1acdfe70fd08c00a531f">nvbio::vector&lt; device_tag, T &gt;</a>
+, <a class="el" href="structnvbio_1_1vector__view.html#a03927f540869b2a73c51e5c017d813fd">nvbio::vector_view&lt; Iterator, IndexType &gt;</a>
 , <a class="el" href="structnvbio_1_1vector__wrapper.html#a66d2c9b7541806e765e827ec111546bc">nvbio::vector_wrapper&lt; Iterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix_set.html#a4f23252bfcb22a300c527aacd5f903cb">nvbio::InfixSet&lt; SequenceType, InfixIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_set.html#a07793063ea717003dfb9d5b1908916c4">nvbio::PrefixSet&lt; SequenceType, PrefixIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_concatenated_string_set.html#ab3cff11f70bc28f606d1e59e0889f6c8">nvbio::ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_sparse_string_set.html#ae93823fc389689c318e862937190018a">nvbio::SparseStringSet&lt; StringIterator, RangeIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_strided_string_set.html#a75b4b6352eb2c25bf94273af20ba8ad2">nvbio::StridedStringSet&lt; StringIterator, LengthIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_set.html#a7fdd63667215ac73c982b69a614086df">nvbio::SuffixSet&lt; SequenceType, SuffixIterator &gt;</a>
 </li>
 <li>const_name_iterator
 : <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a4cf0b8bd6cc96904408fa6afb01ff0d1">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
@@ -475,7 +484,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a125acfeca53916bd9131c30808d8dd9a">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
 </li>
 <li>const_plain_view_type
-: <a class="el" href="structnvbio_1_1io_1_1_read_data.html#ac8be32a3b0153327e50fb2bc79fbc00a">nvbio::io::ReadData</a>
+: <a class="el" href="structnvbio_1_1_packed_vector.html#aa36c09300bb7729c6c2c25a6fe1094d4">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a>
+, <a class="el" href="structnvbio_1_1io_1_1_read_data.html#ac8be32a3b0153327e50fb2bc79fbc00a">nvbio::io::ReadData</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_view_core.html#a4f4e1437906a8ca6048dc646a479fa2b">nvbio::QGramIndexViewCore&lt; QGramVectorType, IndexVectorType, CoordVectorType &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_core.html#adfc75c9074f5b2dd7327c803bae6a4fc">nvbio::QGramIndexCore&lt; SystemTag, QGramType, IndexType, CoordType &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_host.html#a58c14ac08aa48c4e09bfbe714851f99c">nvbio::QGramIndexHost</a>
@@ -487,6 +497,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>const_pointer
 : <a class="el" href="classboost_1_1container_1_1priority__deque.html#aa2d43ceceb9e83adb4e45605a972db3c">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="structnvbio_1_1_packed_vector.html#afa6808955da2a7d3066c32c5a7ccf31d">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a>
 , <a class="el" href="classnvbio_1_1priority__deque.html#ae9f298e1c2269a805b014708f9ccc7fa">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 </li>
 <li>const_qual_iterator
@@ -517,19 +528,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a8a4742c74c1c38f15301566cb67cc236">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
 </li>
 <li>const_reference
-: <a class="el" href="structnvbio_1_1block__strided__iterator.html#a57c1e5b2f5b07178a9d815ba78b6b574">nvbio::block_strided_iterator&lt; BLOCKSIZE, T &gt;</a>
+: <a class="el" href="structnvbio_1_1_packed_vector.html#ac5b493ba9e14d89e69c31757137375e0">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a>
 , <a class="el" href="classboost_1_1container_1_1priority__deque.html#ae07f762070f0fdb428abfffc49fdb689">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html#a064b09169ee3ca9a247ae4afa52125c2">nvbio::cuda::ldg_pointer&lt; T &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1load__pointer.html#a6c99a16347e8704093fa929262a5027a">nvbio::cuda::load_pointer&lt; T, MOD &gt;</a>
 , <a class="el" href="structnvbio_1_1_packed_stream_iterator.html#af7f10b6848ca4ec967636ed09240ef87">nvbio::PackedStreamIterator&lt; Stream &gt;</a>
 , <a class="el" href="classnvbio_1_1priority__deque.html#a9c709d72b519af99694ed665070b36f3">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 , <a class="el" href="structnvbio_1_1strided__iterator.html#ab968a44e553592440390fac639dbf1ba">nvbio::strided_iterator&lt; T &gt;</a>
-, <a class="el" href="structnvbio_1_1transform__iterator.html#a3abda4b73e4ca0daf69147407b5d3668">nvbio::transform_iterator&lt; T, Transform &gt;</a>
+, <a class="el" href="structnvbio_1_1block__strided__iterator.html#a57c1e5b2f5b07178a9d815ba78b6b574">nvbio::block_strided_iterator&lt; BLOCKSIZE, T &gt;</a>
+, <a class="el" href="structnvbio_1_1transform__iterator.html#a84ca6cfa5771d8ca246d4252e347ebde">nvbio::transform_iterator&lt; T, Transform &gt;</a>
+, <a class="el" href="structnvbio_1_1vector__view.html#af04b5bda160869a6fc694210891d1bdc">nvbio::vector_view&lt; Iterator, IndexType &gt;</a>
 , <a class="el" href="structnvbio_1_1vector__wrapper.html#a2204f2ccd3d7ae75761a7b451a6bd2e9">nvbio::vector_wrapper&lt; Iterator &gt;</a>
 </li>
+<li>const_stream_type
+: <a class="el" href="structnvbio_1_1_packed_vector.html#ae234818210d8928cabec62e23f85d42f">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a>
+</li>
 <li>const_type
-: <a class="el" href="structnvbio_1_1bind__second__functor.html#ad52ba8c8ec353efdc13b6b55aeee7b7a">nvbio::bind_second_functor&lt; Functor &gt;</a>
-, <a class="el" href="structnvbio_1_1bind__first__functor.html#a6e5636101bd5cc7324ea98a3324a3796">nvbio::bind_first_functor&lt; Functor &gt;</a>
+: <a class="el" href="structnvbio_1_1bind__first__functor.html#a6e5636101bd5cc7324ea98a3324a3796">nvbio::bind_first_functor&lt; Functor &gt;</a>
+, <a class="el" href="structnvbio_1_1bind__second__functor.html#ad52ba8c8ec353efdc13b6b55aeee7b7a">nvbio::bind_second_functor&lt; Functor &gt;</a>
 </li>
 <li>Constant()
 : <a class="el" href="structnvbio_1_1_constant.html#ad079de84d71dc657c623655cc8ea5081">nvbio::Constant&lt; T &gt;</a>
@@ -548,155 +564,160 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classnvbio_1_1priority__deque.html#a9d00e495fceb6e1fc6b27a518c07bf28a9515fe303f7a0e7dc3378ec697bb242c">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
 </li>
 <li>consume()
-: <a class="el" href="group___work_queue.html#ga6ebbff9a74ad9661af194a5bf82d6344">nvbio::cuda::WorkQueue&lt; PersistentThreadsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="group___work_queue.html#gabc5da53236cbd6285149fd30a333d6e5">nvbio::cuda::WorkQueue&lt; OrderedQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+: <a class="el" href="group___work_queue.html#ga8b5fc9d0704de4d4e60248e8ade1842d">nvbio::cuda::WorkQueue&lt; PersistentWarpsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1_work_queue.html#ab38e2faa750a84096e5c79802a589a9b">nvbio::cuda::WorkQueue&lt; PolicyTag, WorkUnitT, BLOCKDIM &gt;</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_3_01_multi_pass_queue_tag_00_01_work_unit_t_00_01_b_l_o_c_k_d_i_m_01_4.html#a10b739c196767e5bed4832b33dd0506a">nvbio::cuda::WorkQueue&lt; MultiPassQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="structnvbio_1_1cuda_1_1_work_queue_3_01_ordered_queue_tag_00_01_work_unit_t_00_01_b_l_o_c_k_d_i_m_01_4.html#a89aa0eede80c44e31e267876ac4508b0">nvbio::cuda::WorkQueue&lt; OrderedQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="group___work_queue.html#ga8b5fc9d0704de4d4e60248e8ade1842d">nvbio::cuda::WorkQueue&lt; PersistentWarpsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
-, <a class="el" href="group___work_queue.html#ga5e596ba1c34bfaf47ae91c379df236b6">nvbio::cuda::WorkQueue&lt; PersistentThreadsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+, <a class="el" href="group___work_queue.html#gabc5da53236cbd6285149fd30a333d6e5">nvbio::cuda::WorkQueue&lt; OrderedQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+, <a class="el" href="group___work_queue.html#ga7164455bcf9b6136bc5088e869638c7b">nvbio::cuda::WorkQueue&lt; PersistentWarpsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
+, <a class="el" href="group___work_queue.html#ga6ebbff9a74ad9661af194a5bf82d6344">nvbio::cuda::WorkQueue&lt; PersistentThreadsQueueTag, WorkUnitT, BLOCKDIM &gt;</a>
 </li>
 <li>container()
 : <a class="el" href="structnvbio_1_1_packed_stream_iterator.html#af6bde207f024b10419f2ff1a626d1da2">nvbio::PackedStreamIterator&lt; Stream &gt;</a>
 </li>
 <li>container_type
-: <a class="el" href="classnvbio_1_1priority__deque.html#a1cf857b7cf4e8efe420e1714f6271731">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
-, <a class="el" href="classboost_1_1container_1_1priority__deque.html#ac16fd5f4c6ddacb4a52b504bd7d548e6">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+: <a class="el" href="classboost_1_1container_1_1priority__deque.html#ac16fd5f4c6ddacb4a52b504bd7d548e6">boost::container::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="classnvbio_1_1priority__deque.html#a1cf857b7cf4e8efe420e1714f6271731">nvbio::priority_deque&lt; Type, Sequence, Compare &gt;</a>
+, <a class="el" href="structnvbio_1_1priority__queue.html#aa28b5d59e9585566934a19da14123489">nvbio::priority_queue&lt; Key, Container, Compare &gt;</a>
 </li>
 <li>context
 : <a class="el" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a46b728ed6665f0f60d562cd485d9eff9">nvbio::aln::StagedAlignmentUnitBase&lt; stream_type, derived_type &gt;</a>
 </li>
 <li>context_type
-: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_traceback_stream.html#a132cb4949f13cc895ec66d52dbdcf9b4">nvbio::bowtie2::cuda::detail::AllTracebackStream&lt; AlignerType, PipelineType &gt;</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_anchor_score_stream.html#a2ec6e3291c928452400e25c593271b1f">nvbio::bowtie2::cuda::detail::BestAnchorScoreStream&lt; AlignerType, PipelineType &gt;</a>
+: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_opposite_score_stream.html#ad8b5339aa842161e27af739ecbd437df">nvbio::bowtie2::cuda::detail::BestOppositeScoreStream&lt; AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1aln_1_1_staged_alignment_unit_base.html#a0d3127bc6ba2d3c6c432b2d94ee424a8">nvbio::aln::StagedAlignmentUnitBase&lt; stream_type, derived_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__value__multiple.html#a6ad358d973976824e9e1e2709f9bce09">nvbio::SSA_value_multiple</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__value__multiple__device.html#a31d0491b52c8cfdc4cd1fb8cabc87a32">nvbio::SSA_value_multiple_device</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__index__multiple.html#a1f816a4e0573c119a0473c8d903a3e2b">nvbio::SSA_index_multiple&lt; K, index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_s_s_a__index__multiple__device.html#aa64910a7baedbb25679ab888948a2613">nvbio::SSA_index_multiple_device&lt; K, index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_score_stream.html#af0cfd8bc5f8c9c952a8674911011eb79">nvbio::bowtie2::cuda::detail::BestScoreStream&lt; AlignerType, PipelineType &gt;</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_opposite_score_stream.html#ad8b5339aa842161e27af739ecbd437df">nvbio::bowtie2::cuda::detail::BestOppositeScoreStream&lt; AlignerType, PipelineType &gt;</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_anchor_score_stream.html#a2ec6e3291c928452400e25c593271b1f">nvbio::bowtie2::cuda::detail::BestAnchorScoreStream&lt; AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_score_stream.html#aebf6af9141e4d13c1d6cf18e2dece53d">nvbio::bowtie2::cuda::detail::AllScoreStream&lt; AlignerType, PipelineType &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_traceback_stream.html#a2eacabde33a44ad828c489138cf8759b">nvbio::bowtie2::cuda::detail::BestTracebackStream&lt; ALN_IDX, AlignerType, PipelineType &gt;</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_all_traceback_stream.html#a132cb4949f13cc895ec66d52dbdcf9b4">nvbio::bowtie2::cuda::detail::AllTracebackStream&lt; AlignerType, PipelineType &gt;</a>
 </li>
 <li>ContextGroup
 : <a class="el" href="classmgpu_1_1_cuda_context.html#ad9b0244b9a6f4190ddb399e0b91621f7">mgpu::CudaContext</a>
 </li>
 <li>coord_dim
-: <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html#a2847d447754f9e64056f6b67e15edf4b">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a>
+: <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html#a31e4fde68acf8df9177d8e5bb1141d2e">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_f_m_index_filter_3_01host__tag_00_01fm__index__type_01_4.html#a1ba60ebc217b148f01befafb367ba22b">nvbio::FMIndexFilter&lt; host_tag, fm_index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_f_m_index_filter_3_01device__tag_00_01fm__index__type_01_4.html#a6d4f4a05769ecf0bca2e4eabdb7bf6cf">nvbio::FMIndexFilter&lt; device_tag, fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html#a31e4fde68acf8df9177d8e5bb1141d2e">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html#a2847d447754f9e64056f6b67e15edf4b">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a>
 </li>
 <li>coord_type
-: <a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_014u_01_4.html#aad1ae6bdc0d2ea4121f74379eb9ab35c">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 4u &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix.html#ac96684f45f2f0656762a254e46ddf593">nvbio::Infix&lt; StringType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#a4f7eecd36b5cd2389f87cc0a2591d50a">nvbio::InfixCore&lt; StringType, CoordType, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix_set.html#a7956ea14ce3a79f8b6f6032e6cd379d7">nvbio::SuffixSet&lt; SequenceType, SuffixIterator &gt;</a>
+: <a class="el" href="structnvbio_1_1_f_m_index_filter_3_01host__tag_00_01fm__index__type_01_4.html#af4953c817002f315ee99faef9728b72f">nvbio::FMIndexFilter&lt; host_tag, fm_index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_device.html#a526fbde72b00481459533b063ab7128e">nvbio::QGramIndexDevice</a>
-, <a class="el" href="structnvbio_1_1_q_gram_set_index_host.html#a8698b3482976cc0326fd49a358358255">nvbio::QGramSetIndexHost</a>
-, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#a00dee98e5a79513f490bbd910fcc9a8e">nvbio::QGramSetIndexDevice</a>
-, <a class="el" href="structnvbio_1_1_q_gram_filter_3_01device__tag_00_01qgram__index__type_00_01query__iterator_00_01index__iterator_01_4.html#a830b8b02b7a5585513d9d93a575fdcbe">nvbio::QGramFilter&lt; device_tag, qgram_index_type, query_iterator, index_iterator &gt;</a>
-, <a class="el" href="structnvbio_1_1mem_1_1lookup__ssa__results.html#a6fe1c05c88f7a746fc9c82293a0e0509">nvbio::mem::lookup_ssa_results&lt; index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1mem_1_1locate__ssa__results.html#ae61500fedf6687d3d27d1be27cd83d39">nvbio::mem::locate_ssa_results&lt; index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html#a84b2da36bf0b36b7b1cab01801adc1f1">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_f_m_index_filter_device.html#a52d9bd119edb9bd124c644db05cdb561">nvbio::FMIndexFilterDevice&lt; fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_group_index_host.html#a64f3e30bafae0f56b52919879d2c66f3">nvbio::QGroupIndexHost</a>
-, <a class="el" href="structnvbio_1_1_q_group_index_device.html#ab2e881cf354a77b9ab43742598181d2a">nvbio::QGroupIndexDevice</a>
-, <a class="el" href="structnvbio_1_1_f_m_index_filter_host.html#ac1328d5df58e92a6f58b56ced1ee7db2">nvbio::FMIndexFilterHost&lt; fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html#ab910becc387307d3b72e70b9bf4b36b3">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1fmindex_1_1filter__results.html#ab723f965006dc89bc17a528b0a8747a6">nvbio::fmindex::filter_results&lt; range_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_set_core_3_01_sequence_type_00_01_prefix_iterator_00_012u_01_4.html#a77ce11337a7ea46d6859594c42c19f8e">nvbio::PrefixSetCore&lt; SequenceType, PrefixIterator, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_set.html#ac39ab03f9881f6504c8a7a2d45ce2604">nvbio::PrefixSet&lt; SequenceType, PrefixIterator &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#ac8493bf0547f0f0767c0e6ea4ef013af">nvbio::SuffixCore&lt; StringType, CoordType, 1u &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix.html#a2c6514636ca753e0cf85701cfae6d5c4">nvbio::Suffix&lt; StringType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_group_index_view_core.html#a43e938705c77d8ea11f3bc22c76c82c4">nvbio::QGroupIndexViewCore&lt; index_iterator &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_014u_01_4.html#a74855cc3de1f9ded622bcfc5e0d4129e">nvbio::InfixCore&lt; StringType, CoordType, 4u &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix_set.html#a494c47001269ef3abe8994332230c920">nvbio::InfixSet&lt; SequenceType, InfixIterator &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_012u_01_4.html#a86a0b6a4404e2459bba2430ccfce71b8">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_set_core_3_01_sequence_type_00_01_prefix_iterator_00_011u_01_4.html#a0e13cdf0de459138952ddf4cae94671f">nvbio::PrefixSetCore&lt; SequenceType, PrefixIterator, 1u &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#ad87ce71a44855f423f27e30299241fb6">nvbio::SuffixCore&lt; StringType, CoordType, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#aabd0ae7a11f1d85be8e0d689c7547a85">nvbio::PrefixCore&lt; StringType, CoordType, 1u &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix_set_core_3_01_sequence_type_00_01_suffix_iterator_00_012u_01_4.html#aff79b9ed2cc7f117c40f4c8b52f40090">nvbio::SuffixSetCore&lt; SequenceType, SuffixIterator, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_suffix_set_core_3_01_sequence_type_00_01_suffix_iterator_00_011u_01_4.html#a8aec623e44b36475695e52806c01b5d5">nvbio::SuffixSetCore&lt; SequenceType, SuffixIterator, 1u &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix.html#a02e4e2cdf0531314bdfa36a819626e2c">nvbio::Prefix&lt; StringType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#a7d2bb07f633823734e7b70b1ed156ac3">nvbio::PrefixCore&lt; StringType, CoordType, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_core.html#a89f0018ae3da2161a2df8e7ae34b96e7">nvbio::QGramIndexCore&lt; SystemTag, QGramType, IndexType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_f_m_index_filter_3_01host__tag_00_01fm__index__type_01_4.html#af4953c817002f315ee99faef9728b72f">nvbio::FMIndexFilter&lt; host_tag, fm_index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_f_m_index_filter_3_01device__tag_00_01fm__index__type_01_4.html#a66ddcf88f90e6b98d4ed88785467bd6e">nvbio::FMIndexFilter&lt; device_tag, fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_host.html#a27ed46e7ca869a69fc2a7747066784ef">nvbio::QGramIndexHost</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_view_core.html#a830dd01379862a84cfcac67c68abc93f">nvbio::QGramIndexViewCore&lt; QGramVectorType, IndexVectorType, CoordVectorType &gt;</a>
+, <a class="el" href="structnvbio_1_1_f_m_index_filter_host.html#ac1328d5df58e92a6f58b56ced1ee7db2">nvbio::FMIndexFilterHost&lt; fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1mem_1_1lookup__ssa__results.html#a6fe1c05c88f7a746fc9c82293a0e0509">nvbio::mem::lookup_ssa_results&lt; index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1mem_1_1left__mem__functor.html#a90d78ace3a65e72ce5e8ef9fa1c2fa61">nvbio::mem::left_mem_functor&lt; index_type, string_set_type &gt;</a>
+, <a class="el" href="structnvbio_1_1mem_1_1right__mem__functor.html#a2c136a82a23a4943e9efbabc6a528610">nvbio::mem::right_mem_functor&lt; index_type, string_set_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_f_m_index_filter_device.html#a52d9bd119edb9bd124c644db05cdb561">nvbio::FMIndexFilterDevice&lt; fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1fmindex_1_1filter__results.html#ab723f965006dc89bc17a528b0a8747a6">nvbio::fmindex::filter_results&lt; range_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html#a84b2da36bf0b36b7b1cab01801adc1f1">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html#ab910becc387307d3b72e70b9bf4b36b3">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a>
 , <a class="el" href="structnvbio_1_1mem_1_1mem__functor.html#aa12ea58be9c7541ddd8bf5e4b29b4f46">nvbio::mem::mem_functor&lt; index_type, string_set_type &gt;</a>
+, <a class="el" href="structnvbio_1_1mem_1_1locate__ssa__results.html#ae61500fedf6687d3d27d1be27cd83d39">nvbio::mem::locate_ssa_results&lt; index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1mem_1_1split__mem__functor.html#a634d3ac921ee2cc7525f3a91449e56d8">nvbio::mem::split_mem_functor&lt; index_type, string_set_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_view_core.html#a830dd01379862a84cfcac67c68abc93f">nvbio::QGramIndexViewCore&lt; QGramVectorType, IndexVectorType, CoordVectorType &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_core.html#a89f0018ae3da2161a2df8e7ae34b96e7">nvbio::QGramIndexCore&lt; SystemTag, QGramType, IndexType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_host.html#a27ed46e7ca869a69fc2a7747066784ef">nvbio::QGramIndexHost</a>
+, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#a00dee98e5a79513f490bbd910fcc9a8e">nvbio::QGramSetIndexDevice</a>
+, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#a4f7eecd36b5cd2389f87cc0a2591d50a">nvbio::InfixCore&lt; StringType, CoordType, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix.html#ac96684f45f2f0656762a254e46ddf593">nvbio::Infix&lt; StringType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_014u_01_4.html#aad1ae6bdc0d2ea4121f74379eb9ab35c">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 4u &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix.html#a02e4e2cdf0531314bdfa36a819626e2c">nvbio::Prefix&lt; StringType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_set_core_3_01_sequence_type_00_01_prefix_iterator_00_011u_01_4.html#a0e13cdf0de459138952ddf4cae94671f">nvbio::PrefixSetCore&lt; SequenceType, PrefixIterator, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_set_core_3_01_sequence_type_00_01_prefix_iterator_00_012u_01_4.html#a77ce11337a7ea46d6859594c42c19f8e">nvbio::PrefixSetCore&lt; SequenceType, PrefixIterator, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#ac8493bf0547f0f0767c0e6ea4ef013af">nvbio::SuffixCore&lt; StringType, CoordType, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_set_core_3_01_sequence_type_00_01_suffix_iterator_00_012u_01_4.html#aff79b9ed2cc7f117c40f4c8b52f40090">nvbio::SuffixSetCore&lt; SequenceType, SuffixIterator, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_group_index_device.html#ab2e881cf354a77b9ab43742598181d2a">nvbio::QGroupIndexDevice</a>
 , <a class="el" href="structnvbio_1_1_q_gram_filter_3_01host__tag_00_01qgram__index__type_00_01query__iterator_00_01index__iterator_01_4.html#a37cfc6cacd0350b5a5e3b6313167daa1">nvbio::QGramFilter&lt; host_tag, qgram_index_type, query_iterator, index_iterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_set_index_host.html#a8698b3482976cc0326fd49a358358255">nvbio::QGramSetIndexHost</a>
+, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_014u_01_4.html#a74855cc3de1f9ded622bcfc5e0d4129e">nvbio::InfixCore&lt; StringType, CoordType, 4u &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#a7d2bb07f633823734e7b70b1ed156ac3">nvbio::PrefixCore&lt; StringType, CoordType, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_012u_01_4.html#a86a0b6a4404e2459bba2430ccfce71b8">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_set_core_3_01_sequence_type_00_01_suffix_iterator_00_011u_01_4.html#a8aec623e44b36475695e52806c01b5d5">nvbio::SuffixSetCore&lt; SequenceType, SuffixIterator, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix_set.html#a494c47001269ef3abe8994332230c920">nvbio::InfixSet&lt; SequenceType, InfixIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_set.html#ac39ab03f9881f6504c8a7a2d45ce2604">nvbio::PrefixSet&lt; SequenceType, PrefixIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#ad87ce71a44855f423f27e30299241fb6">nvbio::SuffixCore&lt; StringType, CoordType, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix_set.html#a7956ea14ce3a79f8b6f6032e6cd379d7">nvbio::SuffixSet&lt; SequenceType, SuffixIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#aabd0ae7a11f1d85be8e0d689c7547a85">nvbio::PrefixCore&lt; StringType, CoordType, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_group_index_view_core.html#a43e938705c77d8ea11f3bc22c76c82c4">nvbio::QGroupIndexViewCore&lt; index_iterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_group_index_host.html#a64f3e30bafae0f56b52919879d2c66f3">nvbio::QGroupIndexHost</a>
+, <a class="el" href="structnvbio_1_1_q_gram_filter_3_01device__tag_00_01qgram__index__type_00_01query__iterator_00_01index__iterator_01_4.html#a830b8b02b7a5585513d9d93a575fdcbe">nvbio::QGramFilter&lt; device_tag, qgram_index_type, query_iterator, index_iterator &gt;</a>
+, <a class="el" href="structnvbio_1_1_suffix.html#a2c6514636ca753e0cf85701cfae6d5c4">nvbio::Suffix&lt; StringType, CoordType &gt;</a>
 </li>
 <li>coord_vector_type
-: <a class="el" href="structnvbio_1_1_q_gram_index_view_core.html#a08ba059f376644bafef92f17a7513610">nvbio::QGramIndexViewCore&lt; QGramVectorType, IndexVectorType, CoordVectorType &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_set_index_host.html#a8135388ba778a95a2803bd0bfba464c3">nvbio::QGramSetIndexHost</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_core.html#a3e37d4034fb6c9301580054d7cfa0dbe">nvbio::QGramIndexCore&lt; SystemTag, QGramType, IndexType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#ad9f22d6d8496444578da61cd610b9655">nvbio::QGramSetIndexDevice</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_device.html#ac83b60a2bb3baefd32b41ce00b84dcdd">nvbio::QGramIndexDevice</a>
+: <a class="el" href="structnvbio_1_1_q_gram_index_core.html#a3e37d4034fb6c9301580054d7cfa0dbe">nvbio::QGramIndexCore&lt; SystemTag, QGramType, IndexType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_view_core.html#a08ba059f376644bafef92f17a7513610">nvbio::QGramIndexViewCore&lt; QGramVectorType, IndexVectorType, CoordVectorType &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_host.html#a649471f7348b7be08373c5e3b0166d1a">nvbio::QGramIndexHost</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_device.html#ac83b60a2bb3baefd32b41ce00b84dcdd">nvbio::QGramIndexDevice</a>
+, <a class="el" href="structnvbio_1_1_q_gram_set_index_host.html#a8135388ba778a95a2803bd0bfba464c3">nvbio::QGramSetIndexHost</a>
+, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#ad9f22d6d8496444578da61cd610b9655">nvbio::QGramSetIndexDevice</a>
 </li>
 <li>coords()
 : <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#a4fdce7c44a83d3a3f4b9454144c71079">nvbio::InfixCore&lt; StringType, CoordType, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_014u_01_4.html#ae44b883a41202bbcca60ec0fd800993b">nvbio::InfixCore&lt; StringType, CoordType, 4u &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#a8ebbcac681a6bd98933dbe33cefec3bf">nvbio::PrefixCore&lt; StringType, CoordType, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_m_e_m_range.html#ae840f2e83fef4644b60fb98e6304ac7f">nvbio::MEMRange&lt; coord_type &gt;</a>
 , <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#ad908fd516c00fa361f40035459403f0b">nvbio::SuffixCore&lt; StringType, CoordType, 1u &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix_core_3_01_string_type_00_01_coord_type_00_014u_01_4.html#ae44b883a41202bbcca60ec0fd800993b">nvbio::InfixCore&lt; StringType, CoordType, 4u &gt;</a>
 , <a class="el" href="structnvbio_1_1_suffix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#ac7d35d6044e5a5523002c70404919101">nvbio::SuffixCore&lt; StringType, CoordType, 2u &gt;</a>
+, <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_011u_01_4.html#a8ebbcac681a6bd98933dbe33cefec3bf">nvbio::PrefixCore&lt; StringType, CoordType, 1u &gt;</a>
 , <a class="el" href="structnvbio_1_1_prefix_core_3_01_string_type_00_01_coord_type_00_012u_01_4.html#ad0f7cfcf0d594bebf32d7290eede0e0a">nvbio::PrefixCore&lt; StringType, CoordType, 2u &gt;</a>
-, <a class="el" href="structnvbio_1_1io_1_1_device_cigar_array.html#a6df40636592170fb30653be7608fe937">nvbio::io::DeviceCigarArray</a>
 , <a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html#aa3de1e95ac265e92ecbd545c8097d0ef">nvbio::io::HostCigarArray</a>
+, <a class="el" href="structnvbio_1_1io_1_1_device_cigar_array.html#a6df40636592170fb30653be7608fe937">nvbio::io::DeviceCigarArray</a>
+, <a class="el" href="structnvbio_1_1_m_e_m_hit.html#a6a9931462231b42db5dc258b000bfc30">nvbio::MEMHit&lt; coord_type &gt;</a>
 </li>
 <li>copy()
-: <a class="el" href="structnvbio_1_1priv_1_1device__copy__dispatch_3_01input__iterator_00_01_packed_stream_iterator_3d5a9dca29dd93f622168921ddda4ff8b.html#a8d9d597cdd94773ffe831ed3b95be300">nvbio::priv::device_copy_dispatch&lt; input_iterator, PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, index_type &gt; &gt;, index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1priv_1_1device__copy__dispatch.html#a7dd04d5b56e9b7ded5525e9e9a9ce67b">nvbio::priv::device_copy_dispatch&lt; input_iterator, output_iterator, index_type &gt;</a>
+: <a class="el" href="structnvbio_1_1priv_1_1device__copy__dispatch.html#a7dd04d5b56e9b7ded5525e9e9a9ce67b">nvbio::priv::device_copy_dispatch&lt; input_iterator, output_iterator, index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1priv_1_1device__copy__dispatch_3_01input__iterator_00_01_packed_stream_iterator_3d5a9dca29dd93f622168921ddda4ff8b.html#a8d9d597cdd94773ffe831ed3b95be300">nvbio::priv::device_copy_dispatch&lt; input_iterator, PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, BIG_ENDIAN, index_type &gt; &gt;, index_type &gt;</a>
 </li>
 <li>copy_time
 : <a class="el" href="structnvbio_1_1cuda_1_1_compression_sort.html#a84abee83955a8e8c2e9453e3bfbbba6d">nvbio::cuda::CompressionSort</a>
 </li>
 <li>core_type
-: <a class="el" href="structnvbio_1_1_infix.html#a38f7a499f88cd617a987772a11d9e99d">nvbio::Infix&lt; StringType, CoordType &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_index_device.html#afd6e09ba400a6edbd018949fcb42e971">nvbio::QGramIndexDevice</a>
-, <a class="el" href="structnvbio_1_1_f_m_index_filter_device.html#a7edbb959a54bff9f891f73023f73bbf9">nvbio::FMIndexFilterDevice&lt; fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_prefix.html#a13c3a08eec2e1b8032a321ba74fb3cf4">nvbio::Prefix&lt; StringType, CoordType &gt;</a>
+: <a class="el" href="structnvbio_1_1_suffix.html#a433f0df2d42b4f00c6fc16128abdb7a1">nvbio::Suffix&lt; StringType, CoordType &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_index_host.html#a479da9c92d4327b74eca21d96dd0d814">nvbio::QGramIndexHost</a>
-, <a class="el" href="structnvbio_1_1_f_m_index_filter_host.html#a0aaa7bd7c727c1fb3bd797cf154f424b">nvbio::FMIndexFilterHost&lt; fm_index_type &gt;</a>
-, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#af0b660885ab1aa27179612367f5fb86a">nvbio::QGramSetIndexDevice</a>
+, <a class="el" href="structnvbio_1_1_q_gram_index_device.html#afd6e09ba400a6edbd018949fcb42e971">nvbio::QGramIndexDevice</a>
+, <a class="el" href="structnvbio_1_1_prefix.html#a13c3a08eec2e1b8032a321ba74fb3cf4">nvbio::Prefix&lt; StringType, CoordType &gt;</a>
 , <a class="el" href="structnvbio_1_1_q_gram_set_index_host.html#ac98fff52a67e5326802a8c90dcfe2a1a">nvbio::QGramSetIndexHost</a>
-, <a class="el" href="structnvbio_1_1_suffix.html#a433f0df2d42b4f00c6fc16128abdb7a1">nvbio::Suffix&lt; StringType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_infix.html#a38f7a499f88cd617a987772a11d9e99d">nvbio::Infix&lt; StringType, CoordType &gt;</a>
+, <a class="el" href="structnvbio_1_1_f_m_index_filter_host.html#a0aaa7bd7c727c1fb3bd797cf154f424b">nvbio::FMIndexFilterHost&lt; fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_f_m_index_filter_device.html#a7edbb959a54bff9f891f73023f73bbf9">nvbio::FMIndexFilterDevice&lt; fm_index_type &gt;</a>
+, <a class="el" href="structnvbio_1_1_q_gram_set_index_device.html#af0b660885ab1aa27179612367f5fb86a">nvbio::QGramSetIndexDevice</a>
 </li>
 <li>COST_TYPE
-: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_constant_cost.html#a83738a24e434419701655a0432c74e9e">nvbio::bowtie2::cuda::ConstantCost&lt; T &gt;</a>
+: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_rounded_qual_cost.html#a314ecc648c2bf530c0e1305c86bb021e">nvbio::bowtie2::cuda::RoundedQualCost&lt; T &gt;</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_constant_cost.html#a83738a24e434419701655a0432c74e9e">nvbio::bowtie2::cuda::ConstantCost&lt; T &gt;</a>
 , <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_qual_cost.html#ac122eddd4e18784996bf7b417d21e596">nvbio::bowtie2::cuda::QualCost&lt; T &gt;</a>
-, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_rounded_qual_cost.html#a314ecc648c2bf530c0e1305c86bb021e">nvbio::bowtie2::cuda::RoundedQualCost&lt; T &gt;</a>
 </li>
 <li>count
-: <a class="el" href="structnvbio_1_1alndiff_1_1_histogram.html#a399f6205259c5c8cfd41a05dd245cd29">nvbio::alndiff::Histogram&lt; X &gt;</a>
+: <a class="el" href="classmgpu_1_1_cuda_mem_support.html#a309c7b4b6461793b863811682d6f589b">mgpu::CudaMemSupport</a>
 , <a class="el" href="structnvbio_1_1_collector.html#ad6950700f8b0fbac20655d698c7fe503">nvbio::Collector&lt; ALPHABET_SIZE_T, NodeType &gt;</a>
-, <a class="el" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">nvbio::fm_index&lt; TRankDictionary, TSuffixArray &gt;</a>
-, <a class="el" href="classmgpu_1_1_cuda_mem_support.html#a309c7b4b6461793b863811682d6f589b">mgpu::CudaMemSupport</a>
-, <a class="el" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a5278921adff15cff2c4e2ef3f93ecef2">nvbio::io::CPUOutputBatch</a>
-, <a class="el" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#aa08518dbb1292106a0f5d07a58dd651f">nvbio::priv::StringSuffixBucketer&lt; SYMBOL_SIZE, N_BITS, DOLLAR_BITS &gt;</a>
-, <a class="el" href="struct__trbudget__t.html#aa367edfdd0bc7584f7ffe2381b8f5510">_trbudget_t</a>
-, <a class="el" href="structmgpu_1_1s_conflict_free_storage.html#a86cec3e3dec049466f8ee8a5dec1585da3de2dd2572dd6b5828f0f902e8e183d6">mgpu::sConflictFreeStorage&lt; NT, X, NumBanks &gt;</a>
-, <a class="el" href="structnvbio_1_1alndiff_1_1_histogram2d.html#a1e900dffb2a8e4c98c362f40f43afe29">nvbio::alndiff::Histogram2d&lt; X, Y &gt;</a>
-, <a class="el" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a52ce068a954c35756618fa9e5170c633">nvbio::priv::SetSuffixBucketer&lt; SYMBOL_SIZE, N_BITS, DOLLAR_BITS, word_type &gt;</a>
 , <a class="el" href="structnvbio_1_1io_1_1_g_p_u_output_batch.html#ab7c29ca295ca4b425e82753ae46a862b">nvbio::io::GPUOutputBatch</a>
+, <a class="el" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a5278921adff15cff2c4e2ef3f93ecef2">nvbio::io::CPUOutputBatch</a>
+, <a class="el" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a52ce068a954c35756618fa9e5170c633">nvbio::priv::SetSuffixBucketer&lt; SYMBOL_SIZE, N_BITS, DOLLAR_BITS, word_type &gt;</a>
+, <a class="el" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#aa08518dbb1292106a0f5d07a58dd651f">nvbio::priv::StringSuffixBucketer&lt; SYMBOL_SIZE, N_BITS, DOLLAR_BITS &gt;</a>
+, <a class="el" href="structnvbio_1_1alndiff_1_1_histogram2d.html#a1e900dffb2a8e4c98c362f40f43afe29">nvbio::alndiff::Histogram2d&lt; X, Y &gt;</a>
+, <a class="el" href="structmgpu_1_1s_conflict_free_storage.html#a86cec3e3dec049466f8ee8a5dec1585da3de2dd2572dd6b5828f0f902e8e183d6">mgpu::sConflictFreeStorage&lt; NT, X, NumBanks &gt;</a>
+, <a class="el" href="structnvbio_1_1alndiff_1_1_histogram.html#a399f6205259c5c8cfd41a05dd245cd29">nvbio::alndiff::Histogram&lt; X &gt;</a>
+, <a class="el" href="structnvbio_1_1fm__index.html#abcdd211358537eb87acaddf0641d83f2">nvbio::fm_index&lt; TRankDictionary, TSuffixArray &gt;</a>
+, <a class="el" href="struct__trbudget__t.html#aa367edfdd0bc7584f7ffe2381b8f5510">_trbudget_t</a>
 , <a class="el" href="structnvbio_1_1cuda_1_1_delay_list.html#ab5f9e4a9a7e7d102f433a9d27446785c">nvbio::cuda::DelayList&lt; OutputIterator &gt;</a>
 </li>
 <li>count_table
-: <a class="el" href="structnvbio_1_1rank__dictionary.html#a5b9ee3c943f97d0240fabd39e4f604d4">nvbio::rank_dictionary&lt; SYMBOL_SIZE_T, K, TextString, OccIterator, CountTable &gt;</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a837bdba038eebb7264ebc0ae02b85625">nvbio::io::FMIndexData</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a837bdba038eebb7264ebc0ae02b85625">nvbio::io::FMIndexData</a>
+, <a class="el" href="structnvbio_1_1rank__dictionary.html#a5b9ee3c943f97d0240fabd39e4f604d4">nvbio::rank_dictionary&lt; SYMBOL_SIZE_T, K, TextString, OccIterator, CountTable &gt;</a>
 </li>
 <li>count_table_iterator()
 : <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html#af4a267618bfa29851756a05ce1317dbb">nvbio::io::FMIndexDataDevice</a>
 , <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#ac8d2ffa3a16e917cb24436de1c5f5690">nvbio::io::FMIndexData</a>
 </li>
 <li>count_table_type
-: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a37c84563e9f907ed6ca0f7a2eaf82951">nvbio::bowtie2::cuda::FMIndexDef</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">nvbio::io::FMIndexData</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html#a4d4dddbe4d7ade2c4a7ab5dbde938b58">nvbio::io::FMIndexDataDevice</a>
 , <a class="el" href="structnvbio_1_1rank__dictionary.html#a58289250b6cd8781237be1e8c306e50e">nvbio::rank_dictionary&lt; SYMBOL_SIZE_T, K, TextString, OccIterator, CountTable &gt;</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html#a4d4dddbe4d7ade2c4a7ab5dbde938b58">nvbio::io::FMIndexDataDevice</a>
+, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a79b275fd68d4fe07af2a64cb142373f3">nvbio::io::FMIndexData</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a37c84563e9f907ed6ca0f7a2eaf82951">nvbio::bowtie2::cuda::FMIndexDef</a>
 </li>
 <li>CountedBase()
 : <a class="el" href="classnvbio_1_1internals_1_1_counted_base.html#ac31ad8a50219eb8a98dcdebfbe93c7a5">nvbio::internals::CountedBase&lt; CounterT &gt;</a>
@@ -705,11 +726,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classnvbio_1_1internals_1_1_counted_base__impl.html#a8e46ac8155d92a1722113ef482f928fe">nvbio::internals::CountedBase_impl&lt; PtrT, DeleterT, CounterT &gt;</a>
 </li>
 <li>Counter_Type
-: <a class="el" href="classnvbio_1_1internals_1_1_counted_base.html#a8126ea1fd8bbb39d4f84277a2b3250ce">nvbio::internals::CountedBase&lt; CounterT &gt;</a>
-, <a class="el" href="classnvbio_1_1internals_1_1_weak_count.html#a9b61d8291c5b295af25a8b3b21e61724">nvbio::internals::WeakCount&lt; CounterT &gt;</a>
+: <a class="el" href="classnvbio_1_1internals_1_1_weak_count.html#a9b61d8291c5b295af25a8b3b21e61724">nvbio::internals::WeakCount&lt; CounterT &gt;</a>
+, <a class="el" href="classnvbio_1_1internals_1_1_counted_base.html#a8126ea1fd8bbb39d4f84277a2b3250ce">nvbio::internals::CountedBase&lt; CounterT &gt;</a>
 , <a class="el" href="classnvbio_1_1_shared_pointer.html#ae1e7bf42e8c156866bc10d563c12291c">nvbio::SharedPointer&lt; T, CounterT &gt;</a>
-, <a class="el" href="classnvbio_1_1_weak_pointer.html#af23c16eaee43db04e8f26f36d8578894">nvbio::WeakPointer&lt; T, CounterT &gt;</a>
 , <a class="el" href="classnvbio_1_1internals_1_1_shared_count.html#a7c4a7dca10982191c16fbd67022ddbdd">nvbio::internals::SharedCount&lt; CounterT &gt;</a>
+, <a class="el" href="classnvbio_1_1_weak_pointer.html#af23c16eaee43db04e8f26f36d8578894">nvbio::WeakPointer&lt; T, CounterT &gt;</a>
 </li>
 <li>counts()
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array.html#ac26861190976244ed64d16274adf218f">nvbio::bowtie2::cuda::SeedHitDequeArray</a>
@@ -718,8 +739,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a072a26e2fe7d0134d18983e9db77992e">nvbio::io::CPUOutputBatch</a>
 </li>
 <li>create()
-: <a class="el" href="classnvbio_1_1_thread_base.html#a241447a47502da1e2c8144c3631db5ae">nvbio::ThreadBase</a>
-, <a class="el" href="classnvbio_1_1_thread.html#a2d6d9c60ffcf84ff23421c2ea02fa031">nvbio::Thread&lt; DerivedThreadType &gt;</a>
+: <a class="el" href="classnvbio_1_1_thread.html#a2d6d9c60ffcf84ff23421c2ea02fa031">nvbio::Thread&lt; DerivedThreadType &gt;</a>
+, <a class="el" href="classnvbio_1_1_thread_base.html#a241447a47502da1e2c8144c3631db5ae">nvbio::ThreadBase</a>
 </li>
 <li>CreateCudaDevice
 : <a class="el" href="classmgpu_1_1_cuda_context.html#a3529f03628e6b97df2f44cb670061eed">mgpu::CudaContext</a>
@@ -731,8 +752,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmgpu_1_1_cuda_context.html#a6ba335533a712706dd3e7ca571958d1c">mgpu::CudaContext</a>
 </li>
 <li>CreateIndex()
-: <a class="el" href="struct_bam_reader_1_1_bam_reader_private.html#abd01308ca42972da3c4e0bd4286f5f7c">BamTools::BamReader::BamReaderPrivate</a>
-, <a class="el" href="class_bam_tools_1_1_bam_reader.html#a7f001d98935d7ecfca0e68ea30c46fb0">BamTools::BamReader</a>
+: <a class="el" href="class_bam_tools_1_1_bam_reader.html#a7f001d98935d7ecfca0e68ea30c46fb0">BamTools::BamReader</a>
+, <a class="el" href="struct_bam_reader_1_1_bam_reader_private.html#abd01308ca42972da3c4e0bd4286f5f7c">BamTools::BamReader::BamReaderPrivate</a>
 </li>
 <li>CreatePackedCigar()
 : <a class="el" href="struct_bam_writer_1_1_bam_writer_private.html#ad1fd0933c9b0ea8356b685a47acd242e">BamTools::BamWriter::BamWriterPrivate</a>
@@ -756,8 +777,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmgpu_1_1_cuda_base.html#ac57f029ef20e4ef66ad99b760642fdd6">mgpu::CudaBase</a>
 </li>
 <li>CudaContext
-: <a class="el" href="classmgpu_1_1_cuda_device_mem.html#a7aa0a2f5bdafbd79c27ead26fa52e3f6">mgpu::CudaDeviceMem&lt; T &gt;</a>
-, <a class="el" href="classmgpu_1_1_cuda_mem_support.html#a7aa0a2f5bdafbd79c27ead26fa52e3f6">mgpu::CudaMemSupport</a>
+: <a class="el" href="classmgpu_1_1_cuda_mem_support.html#a7aa0a2f5bdafbd79c27ead26fa52e3f6">mgpu::CudaMemSupport</a>
+, <a class="el" href="classmgpu_1_1_cuda_device_mem.html#a7aa0a2f5bdafbd79c27ead26fa52e3f6">mgpu::CudaDeviceMem&lt; T &gt;</a>
 </li>
 <li>CudaDevice
 : <a class="el" href="classmgpu_1_1_cuda_mem_support.html#af8631e429d4a54336e15c1272492651c">mgpu::CudaMemSupport</a>
@@ -766,16 +787,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmgpu_1_1_cuda_event.html#a18442b241e643fc99a48669bef100268">mgpu::CudaEvent</a>
 </li>
 <li>CudaException()
-: <a class="el" href="classmgpu_1_1_cuda_exception.html#a90223ba558d79b05fb86aa2d2e327430">mgpu::CudaException</a>
+: <a class="el" href="classmgpu_1_1_cuda_exception.html#a42fa6991b10c4197ebd5cf470eaef20c">mgpu::CudaException</a>
 </li>
 <li>CudaMemSupport
 : <a class="el" href="classmgpu_1_1_cuda_device_mem.html#aa3e5856eb21e6e19b5d89578ba65811f">mgpu::CudaDeviceMem&lt; T &gt;</a>
 , <a class="el" href="classmgpu_1_1_cuda_mem_support.html#a73415285ba438f215a398b1de6b82368">mgpu::CudaMemSupport</a>
 </li>
 <li>cum_lengths
-: <a class="el" href="structnvbio_1_1localize__functor.html#a7522c28edb9963bdab64ca6fb4203091">nvbio::localize_functor&lt; string_set_type &gt;</a>
+: <a class="el" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e">nvbio::priv::SetSuffixFlattener&lt; SYMBOL_SIZE &gt;</a>
 , <a class="el" href="structnvbio_1_1priv_1_1localize__suffix__functor.html#ab12d23b2d05baaa020d2b1717e4207b7">nvbio::priv::localize_suffix_functor</a>
-, <a class="el" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e">nvbio::priv::SetSuffixFlattener&lt; SYMBOL_SIZE &gt;</a>
+, <a class="el" href="structnvbio_1_1localize__functor.html#a7522c28edb9963bdab64ca6fb4203091">nvbio::localize_functor&lt; string_set_type &gt;</a>
 </li>
 <li>cum_seeds
 : <a class="el" href="structnvbio_1_1localized__seed__functor.html#a4f30a95e5feb08b98232911b7e529046">nvbio::localized_seed_functor&lt; string_set_type, seed_functor, coord_type &gt;</a>
@@ -805,7 +826,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:32:03 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 00:00:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

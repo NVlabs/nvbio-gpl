@@ -1,10 +1,12 @@
 var searchData=
 [
+  ['range_5fsize',['range_size',['../structnvbio_1_1fmindex_1_1range__size.html',1,'nvbio::fmindex']]],
   ['range_5fsize',['range_size',['../structnvbio_1_1mem_1_1range__size.html',1,'nvbio::mem']]],
   ['range_5fsize',['range_size',['../structnvbio_1_1qgram_1_1range__size.html',1,'nvbio::qgram']]],
-  ['range_5fsize',['range_size',['../structnvbio_1_1fmindex_1_1range__size.html',1,'nvbio::fmindex']]],
   ['rank_5fdictionary',['rank_dictionary',['../structnvbio_1_1rank__dictionary.html',1,'nvbio']]],
   ['rank_5ffunctor',['rank_functor',['../structnvbio_1_1fmindex_1_1rank__functor.html',1,'nvbio::fmindex']]],
+  ['rank_5fspan_5fsize',['rank_span_size',['../structnvbio_1_1mem_1_1rank__span__size.html',1,'nvbio::mem']]],
+  ['rank_5fstring_5fid',['rank_string_id',['../structnvbio_1_1mem_1_1rank__string__id.html',1,'nvbio::mem']]],
   ['rank_5fword_5ftraits',['rank_word_traits',['../structnvbio_1_1rank__word__traits.html',1,'nvbio']]],
   ['rank_5fword_5ftraits_3c_20uint32_20_3e',['rank_word_traits&lt; uint32 &gt;',['../structnvbio_1_1rank__word__traits_3_01uint32_01_4.html',1,'nvbio']]],
   ['rank_5fword_5ftraits_3c_20uint64_20_3e',['rank_word_traits&lt; uint64 &gt;',['../structnvbio_1_1rank__word__traits_3_01uint64_01_4.html',1,'nvbio']]],
@@ -56,6 +58,7 @@ var searchData=
   ['remove_5fsingletons',['remove_singletons',['../structnvbio_1_1priv_1_1remove__singletons.html',1,'nvbio::priv']]],
   ['reverse_5ffunctor',['reverse_functor',['../structnvbio_1_1reverse__functor.html',1,'nvbio']]],
   ['reversexform',['ReverseXform',['../structnvbio_1_1_reverse_xform.html',1,'nvbio']]],
+  ['right_5fmem_5ffunctor',['right_mem_functor',['../structnvbio_1_1mem_1_1right__mem__functor.html',1,'nvbio::mem']]],
   ['roundedqualcost',['RoundedQualCost',['../structnvbio_1_1bowtie2_1_1cuda_1_1_rounded_qual_cost.html',1,'nvbio::bowtie2::cuda']]],
   ['runtime_5ferror',['runtime_error',['../structnvbio_1_1runtime__error.html',1,'nvbio']]]
 ];

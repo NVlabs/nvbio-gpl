@@ -167,10 +167,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae6872fd16e48622dd0e692ddb9a062aa"><td class="memTemplParams" colspan="2">template&lt;uint32 BAND_LEN, typename stream_type &gt; </td></tr>
-<tr class="memitem:gae6872fd16e48622dd0e692ddb9a062aa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__private.html#gae6872fd16e48622dd0e692ddb9a062aa">nvbio::aln::batched_banded_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> stream_type stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 work_id)</td></tr>
-<tr class="separator:gae6872fd16e48622dd0e692ddb9a062aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0eb158d7447c75018525c54acbb312f"><td class="memTemplParams" colspan="2">template&lt;uint32 BAND_LEN, typename stream_type &gt; </td></tr>
+<tr class="memitem:gad0eb158d7447c75018525c54acbb312f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__private.html#gad0eb158d7447c75018525c54acbb312f">nvbio::aln::batched_banded_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> stream_type &amp;stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 work_id)</td></tr>
+<tr class="separator:gad0eb158d7447c75018525c54acbb312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae95a6ea68ce3d38024f821aa343938d7"><td class="memTemplParams" colspan="2">template&lt;const uint32 BAND_LEN, typename stream_type &gt; </td></tr>
 <tr class="memitem:gae95a6ea68ce3d38024f821aa343938d7"><td class="memTemplItemLeft" align="right" valign="top">__global__ void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__private.html#gae95a6ea68ce3d38024f821aa343938d7">nvbio::aln::batched_banded_alignment_score_kernel</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> stream_type stream)</td></tr>
 <tr class="separator:gae95a6ea68ce3d38024f821aa343938d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2132,7 +2132,7 @@ template&lt;uint32 BLOCKDIM, uint32 CHECKPOINTS, typename stream_type , typename
 
 </div>
 </div>
-<a class="anchor" id="gae6872fd16e48622dd0e692ddb9a062aa"></a>
+<a class="anchor" id="gad0eb158d7447c75018525c54acbb312f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -2141,7 +2141,7 @@ template&lt;uint32 BAND_LEN, typename stream_type &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void nvbio::aln::batched_banded_alignment_score </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> stream_type&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> stream_type &amp;&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
@@ -2232,7 +2232,7 @@ template&lt;uint32 BAND_LEN, uint32 CHECKPOINTS, typename stream_type , typename
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00208">208</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00207">207</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
 
 </div>
 </div>
@@ -2274,7 +2274,7 @@ template&lt;uint32 BLOCKDIM, uint32 BAND_LEN, uint32 CHECKPOINTS, typename strea
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00258">258</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00257">257</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
 
 </div>
 </div>
@@ -2508,7 +2508,7 @@ template&lt;uint32 BLOCKDIM, uint32 BAND_LEN, uint32 CHECKPOINTS, typename strea
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00269">269</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__banded__inl_8h_source.html#l00268">268</a> of file <a class="el" href="batched__banded__inl_8h_source.html">batched_banded_inl.h</a>.</p>
 
 </div>
 </div>
@@ -2719,7 +2719,7 @@ template&lt;uint32 BLOCKDIM, typename stream_type , typename cell_type &gt; </di
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

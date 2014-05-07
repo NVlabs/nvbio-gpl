@@ -138,7 +138,7 @@ Sampled Suffix Arrays</h1>
 <li><a class="el" href="structnvbio_1_1_s_s_a__index__multiple__device.html">SSA_index_multiple_device</a> </li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt></dt><dd>While these classes hold device data, they are meant to be used from the host and cannot be directly passed to CUDA kernels. Plain views (see <a class="el" href="host_device_page.html">Host &amp; Device</a>), or <em>contexts</em>, can be obtained with the usual <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> function. </dd></dl>
+<dl class="section user"><dt></dt><dd>While these classes hold device data, they are meant to be used from the host and cannot be directly passed to CUDA kernels. Plain views (see <a class="el" href="host_device_page.html">Host &amp; Device</a>), or <em>contexts</em>, can be obtained with the usual <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> function. </dd></dl>
 <dl class="section user"><dt></dt><dd>The contexts expose the following interface: <div class="fragment"><div class="line"><span class="keyword">struct </span>SSA</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// return the i-th suffix array entry, if present</span></div>
@@ -179,6 +179,16 @@ FM-Indices</h1>
  </td><td style="vertical-align:text-top;">fmi, i </td><td style="vertical-align:text-top;">given a suffix array coordinate i, return its linear coordinate SA[i]  </td></tr>
 </table>
 </dd></dl>
+<p><a class="anchor" id="BidirectionalFMIndex"></a></p>
+<h1><a class="anchor" id="BidirectionalFMIndexSection"></a>
+Bidirectional FM-indices</h1>
+<dl class="section user"><dt></dt><dd>NVBIO also supports forward and backwards extension using <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=5341875">bidirectional FM-indices</a>: </dd></dl>
+<dl class="section user"><dt></dt><dd><ul>
+<li><a class="el" href="group___f_m_index.html#ga8f144b9bf95f1f52085b44980f82ca07">extend_forward()</a> : extend the range corresponding to a pattern P to that of the pattern Pc</li>
+<li><a class="el" href="group___f_m_index.html#ga32fd67cdd5de3541c0dd0e3499c51bd5">extend_backwards()</a> : extend the range corresponding to a pattern P to that of the pattern cP </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Instead of requiring an ad-hoc data structure, bidirectional queries are supported by simply using both a forward and a reverse FM-index. Note that extension can be done without a sampled suffix array, so that there's no need to store two of them: in practice, the FM-indices can also be of type <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a> &lt;RankDictionary,<a class="el" href="structnvbio_1_1null__type.html">null_type</a>&gt;.</dd></dl>
 <p><a class="anchor" id="FMIndexFilters"></a></p>
 <h1><a class="anchor" id="FMIndexFiltersSection"></a>
 Batch Filtering</h1>
@@ -208,7 +218,7 @@ Batch Filtering</h1>
 <div class="line">    seed_set_type seeds(</div>
 <div class="line">        n_seeds,</div>
 <div class="line">        string_set,</div>
-<div class="line">        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( seed_coords ) );</div>
+<div class="line">        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( seed_coords ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// the filter</span></div>
 <div class="line">    FMIndexFilterDevice fm_filter;</div>
@@ -239,7 +249,8 @@ Batch Filtering</h1>
 MEM Filtering</h1>
 <dl class="section user"><dt></dt><dd>Additionally to the exact matching filters above, NVBIO also some provides built-in functionality to find all (Super-) Maximal Extension Matches in a string or a string-set: </dd></dl>
 <dl class="section user"><dt></dt><dd><ul>
-<li><a class="el" href="group___f_m_index.html#ga5ce08fad3366b14aa3c18a37ffb47702">find_mems()</a> : a host/device per-thread function to find all MEMs overlapping a given base of a pattern string</li>
+<li><a class="el" href="group___f_m_index.html#ga2883ef425905e8458473355f73119af2">find_kmems()</a> : a host/device per-thread function to find all k-MEMs overlapping a given base of a pattern string</li>
+<li><a class="el" href="group___f_m_index.html#ga3e1b972c5d4d74136fbce81c8d7c34e4">find_threshold_kmems()</a> : a host/device per-thread function to find all k-MEMs overlapping a given base of a pattern string for all threshold values of k</li>
 <li><a class="el" href="structnvbio_1_1_m_e_m_filter_host.html">MEMFilterHost</a> : a parallel host context to enumerate all MEMs of a string-set</li>
 <li><a class="el" href="structnvbio_1_1_m_e_m_filter_device.html">MEMFilterDevice</a> : a parallel device context to enumerate all MEMs of a string-set </li>
 </ul>
@@ -260,7 +271,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -62,6 +62,7 @@ var searchData=
   ['gotohcheckpointedscoringcontext',['GotohCheckpointedScoringContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_checkpointed_scoring_context.html#a0cac8470511815b6db57137546209783',1,'nvbio::aln::priv::banded::GotohCheckpointedScoringContext::GotohCheckpointedScoringContext()'],['../structnvbio_1_1aln_1_1priv_1_1_gotoh_checkpointed_scoring_context.html#a6366ba5e8ba072294b8ee4c81a935315',1,'nvbio::aln::priv::GotohCheckpointedScoringContext::GotohCheckpointedScoringContext()']]],
   ['gotohsubmatrixcontext',['GotohSubmatrixContext',['../structnvbio_1_1aln_1_1priv_1_1banded_1_1_gotoh_submatrix_context.html#a90effb85a5abc6033d94cd12c00d564a',1,'nvbio::aln::priv::banded::GotohSubmatrixContext::GotohSubmatrixContext()'],['../structnvbio_1_1aln_1_1priv_1_1_gotoh_submatrix_context.html#a99eab1f2aae4bd13bd5d3a0a01db4fd9',1,'nvbio::aln::priv::GotohSubmatrixContext::GotohSubmatrixContext()']]],
   ['gpuoutputbatch',['GPUOutputBatch',['../structnvbio_1_1io_1_1_g_p_u_output_batch.html#a881f657437917abaf995a015dbead3c3',1,'nvbio::io::GPUOutputBatch']]],
+  ['group_5fflag',['group_flag',['../structnvbio_1_1_m_e_m_range.html#ab681ada0ce4e70a6e3251d30fe9e535d',1,'nvbio::MEMRange']]],
   ['gz_5favail',['gz_avail',['../gzread_8c.html#a880d9d0c2827714cd40d8ba7f3637294',1,'gzread.c']]],
   ['gz_5fcomp',['gz_comp',['../gzwrite_8c.html#a578bb1f539c1df875e6ebe887663d425',1,'gzwrite.c']]],
   ['gz_5fdecomp',['gz_decomp',['../gzread_8c.html#a4b2cb72f18826fd5410e1cbdd9cf3941',1,'gzread.c']]],

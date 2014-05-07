@@ -118,6 +118,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_filter.html">nvbio::MEMFilter&lt; system_tag, fm_index_type &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_range.html">nvbio::MEMRange&lt; coord_type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_hit.html">nvbio::MEMHit&lt; coord_type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html">nvbio::MEMFilter&lt; host_tag, fm_index_type &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a></td></tr>
@@ -132,16 +136,31 @@ Functions</h2></td></tr>
 <tr class="memitem:gadcbec0e8b809f645e81b62a3f0481470"><td class="memTemplParams" colspan="2">template&lt;typename FMIndex , typename String , typename Stack , typename Delegate &gt; </td></tr>
 <tr class="memitem:gadcbec0e8b809f645e81b62a3f0481470"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#gadcbec0e8b809f645e81b62a3f0481470">nvbio::hamming_backtrack</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> FMIndex fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> String pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 seed, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 mismatches, Stack stack, Delegate &amp;delegate)</td></tr>
 <tr class="separator:gadcbec0e8b809f645e81b62a3f0481470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f144b9bf95f1f52085b44980f82ca07"><td class="memTemplParams" colspan="2">template&lt;typename TRankDictionary1 , typename TSuffixArray1 , typename TRankDictionary2 , typename TSuffixArray2 &gt; </td></tr>
+<tr class="memitem:ga8f144b9bf95f1f52085b44980f82ca07"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga8f144b9bf95f1f52085b44980f82ca07">nvbio::extend_forward</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary1, TSuffixArray1 &gt; &amp;f_fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary2, TSuffixArray2 &gt; &amp;r_fmi, typename fm_index&lt; TRankDictionary1, TSuffixArray1 &gt;::range_type &amp;f_range, typename fm_index&lt; TRankDictionary2, TSuffixArray2 &gt;::range_type &amp;r_range, uint8 c)</td></tr>
+<tr class="separator:ga8f144b9bf95f1f52085b44980f82ca07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32fd67cdd5de3541c0dd0e3499c51bd5"><td class="memTemplParams" colspan="2">template&lt;typename TRankDictionary1 , typename TSuffixArray1 , typename TRankDictionary2 , typename TSuffixArray2 &gt; </td></tr>
+<tr class="memitem:ga32fd67cdd5de3541c0dd0e3499c51bd5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga32fd67cdd5de3541c0dd0e3499c51bd5">nvbio::extend_backwards</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary1, TSuffixArray1 &gt; &amp;f_fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary2, TSuffixArray2 &gt; &amp;r_fmi, typename fm_index&lt; TRankDictionary1, TSuffixArray1 &gt;::range_type &amp;f_range, typename fm_index&lt; TRankDictionary2, TSuffixArray2 &gt;::range_type &amp;r_range, uint8 c)</td></tr>
+<tr class="separator:ga32fd67cdd5de3541c0dd0e3499c51bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7083bf5f77ae1a87ac18572432b79ef7"><td class="memTemplParams" colspan="2">template&lt;typename TRankDictionary , typename TSuffixArray &gt; </td></tr>
 <tr class="memitem:ga7083bf5f77ae1a87ac18572432b79ef7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> fm_index<br class="typebreak"/>
 &lt; TRankDictionary, <br class="typebreak"/>
 TSuffixArray &gt;::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga7083bf5f77ae1a87ac18572432b79ef7">nvbio::basic_inv_psi</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary, TSuffixArray &gt; &amp;fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> typename fm_index&lt; TRankDictionary, TSuffixArray &gt;::range_type i)</td></tr>
 <tr class="separator:ga7083bf5f77ae1a87ac18572432b79ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
-<tr class="memitem:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga5ce08fad3366b14aa3c18a37ffb47702">nvbio::find_mems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
-<tr class="separator:ga5ce08fad3366b14aa3c18a37ffb47702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2883ef425905e8458473355f73119af2"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
+<tr class="memitem:ga2883ef425905e8458473355f73119af2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga2883ef425905e8458473355f73119af2">nvbio::find_kmems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
+<tr class="separator:ga2883ef425905e8458473355f73119af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memTemplParams" colspan="2">template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </td></tr>
+<tr class="memitem:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga3e1b972c5d4d74136fbce81c8d7c34e4">nvbio::find_threshold_kmems</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 pattern_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type pattern, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 x, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type f_index, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type r_index, delegate_type &amp;handler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 min_intv=1u, const uint32 min_span=1u)</td></tr>
+<tr class="separator:ga3e1b972c5d4d74136fbce81c8d7c34e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename fm_index_type &gt; </td></tr>
+<tr class="memitem:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___f_m_index.html#ga385612b5dc723d5f8a699eb92e0a6c25">nvbio::string_batch_bound</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> MEMFilter&lt; system_tag, fm_index_type &gt; &amp;filter, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 mem_count)</td></tr>
+<tr class="separator:ga385612b5dc723d5f8a699eb92e0a6c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae57afb0ec35470cd30b6d97cc346da1b"><td class="memTemplParams" colspan="2">template&lt;typename TRankDictionary , typename TSuffixArray &gt; </td></tr>
 <tr class="memitem:gae57afb0ec35470cd30b6d97cc346da1b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> fm_index<br class="typebreak"/>
@@ -236,14 +255,134 @@ template&lt;typename TRankDictionary , typename TSuffixArray &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga5ce08fad3366b14aa3c18a37ffb47702"></a>
+<a class="anchor" id="ga32fd67cdd5de3541c0dd0e3499c51bd5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRankDictionary1 , typename TSuffixArray1 , typename TRankDictionary2 , typename TSuffixArray2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void nvbio::extend_backwards </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary1, TSuffixArray1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>f_fmi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary2, TSuffixArray2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>r_fmi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename fm_index&lt; TRankDictionary1, TSuffixArray1 &gt;::range_type &amp;&#160;</td>
+          <td class="paramname"><em>f_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename fm_index&lt; TRankDictionary2, TSuffixArray2 &gt;::range_type &amp;&#160;</td>
+          <td class="paramname"><em>r_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>backwards extension using a bidirectional FM-index, extending the range of a pattern P to the pattern cP </p>
+<dl class="section user"><dt></dt><dd><b>Note:</b> extension can be performed without a sampled suffix array, so that there's no need to store two of them; in practice, the FM-indices can also be of type <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a> &lt;RankDictionary,<a class="el" href="structnvbio_1_1null__type.html">null_type</a>&gt;.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f_fmi</td><td>forward FM-index </td></tr>
+    <tr><td class="paramname">r_fmi</td><td>reverse FM-index </td></tr>
+    <tr><td class="paramname">f_range</td><td>current forward range </td></tr>
+    <tr><td class="paramname">r_range</td><td>current reverse range </td></tr>
+    <tr><td class="paramname">c</td><td>query character </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="bidir__inl_8h_source.html#l00096">96</a> of file <a class="el" href="bidir__inl_8h_source.html">bidir_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8f144b9bf95f1f52085b44980f82ca07"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRankDictionary1 , typename TSuffixArray1 , typename TRankDictionary2 , typename TSuffixArray2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void nvbio::extend_forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary1, TSuffixArray1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>f_fmi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index&lt; TRankDictionary2, TSuffixArray2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>r_fmi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename fm_index&lt; TRankDictionary1, TSuffixArray1 &gt;::range_type &amp;&#160;</td>
+          <td class="paramname"><em>f_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename fm_index&lt; TRankDictionary2, TSuffixArray2 &gt;::range_type &amp;&#160;</td>
+          <td class="paramname"><em>r_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>forward extension using a bidirectional FM-index, extending the range of a pattern P to the pattern Pc. </p>
+<dl class="section user"><dt></dt><dd><b>Note:</b> extension can be performed without a sampled suffix array, so that there's no need to store two of them; in practice, the FM-indices can also be of type <a class="el" href="structnvbio_1_1fm__index.html">fm_index</a> &lt;RankDictionary,<a class="el" href="structnvbio_1_1null__type.html">null_type</a>&gt;.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f_fmi</td><td>forward FM-index </td></tr>
+    <tr><td class="paramname">r_fmi</td><td>reverse FM-index </td></tr>
+    <tr><td class="paramname">f_range</td><td>current forward range </td></tr>
+    <tr><td class="paramname">r_range</td><td>current reverse range </td></tr>
+    <tr><td class="paramname">c</td><td>query character </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="bidir__inl_8h_source.html#l00039">39</a> of file <a class="el" href="bidir__inl_8h_source.html">bidir_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2883ef425905e8458473355f73119af2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::find_mems </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::find_kmems </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
           <td class="paramname"><em>pattern_len</em>, </td>
@@ -297,7 +436,7 @@ template&lt;typename pattern_type , typename fm_index_type , typename delegate_t
         </tr>
       </table>
 </div><div class="memdoc">
-<p>find all MEMs (Maximal Extension Matches) covering a given base of a pattern</p>
+<p>find all SMEMs (Super Maximal Extension Matches) covering a given base of a pattern</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">pattern_type</td><td>the pattern string type </td></tr>
@@ -331,6 +470,104 @@ template&lt;typename pattern_type , typename fm_index_type , typename delegate_t
 <dl class="section return"><dt>Returns</dt><dd>the right-most end of the MEMs covering x, or x itself if no MEM was found </dd></dl>
 
 <p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00029">29</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3e1b972c5d4d74136fbce81c8d7c34e4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename pattern_type , typename fm_index_type , typename delegate_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::find_threshold_kmems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>pattern_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_type&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type&#160;</td>
+          <td class="paramname"><em>f_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> fm_index_type&#160;</td>
+          <td class="paramname"><em>r_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">delegate_type &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>min_intv</em> = <code>1u</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>min_span</em> = <code>1u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>find k-MEMs (k-Maximal Extension Matches) covering a given base of a pattern, for all the "threshold" values of k, i.e. the values assumed by the number k of occurrences in each MEM's SA range. In other words, this function saves all k-MEMs encountered when extending a span covering x either left or right causes a change in the number of occurrences k, for each possible value of k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">pattern_type</td><td>the pattern string type </td></tr>
+    <tr><td class="paramname">delegate_type</td><td>the delegate output handler, must implement the following interface: <a class="anchor" id="MEMHandler"></a><div class="fragment"><div class="line"><span class="keyword">interface </span>MEMHandler</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> fm_index_type::range_type range_type;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// output an FM-index range referring to the forward index,</span></div>
+<div class="line">    <span class="comment">// together with its corresponding span on the pattern</span></div>
+<div class="line">    <span class="keywordtype">void</span> output(</div>
+<div class="line">        <span class="keyword">const</span> range_type    range,     <span class="comment">// output SA range</span></div>
+<div class="line">        <span class="keyword">const</span> uint2         span);     <span class="comment">// output pattern span</span></div>
+<div class="line">};</div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern_len</td><td>the length of the query pattern </td></tr>
+    <tr><td class="paramname">pattern</td><td>the query pattern </td></tr>
+    <tr><td class="paramname">x</td><td>the base of the query pattern to cover with MEMs </td></tr>
+    <tr><td class="paramname">f_index</td><td>the forward FM-index to match against </td></tr>
+    <tr><td class="paramname">r_index</td><td>the reverse FM-index to match against </td></tr>
+    <tr><td class="paramname">handler</td><td>the output handler </td></tr>
+    <tr><td class="paramname">min_intv</td><td>the minimum SA interval size </td></tr>
+    <tr><td class="paramname">min_span</td><td>the minimum pattern span size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the right-most end of the MEMs covering x, or x itself if no MEM was found </dd></dl>
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00170">170</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
@@ -968,10 +1205,41 @@ template&lt;typename TRankDictionary , typename TSuffixArray &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga385612b5dc723d5f8a699eb92e0a6c25"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename fm_index_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 nvbio::string_batch_bound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> MEMFilter&lt; system_tag, fm_index_type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>mem_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>find the index i of the furthermost string such that filter.first_hit( j ) &lt;= mem_count for each j &lt; i </p>
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l01528">1528</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

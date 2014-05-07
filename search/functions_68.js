@@ -20,7 +20,7 @@ var searchData=
   ['histogram2d',['Histogram2d',['../structnvbio_1_1alndiff_1_1_histogram2d.html#ade6ac292453381991d118a41e4b76a39',1,'nvbio::alndiff::Histogram2d']]],
   ['hit_5fcount',['hit_count',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hits_index_device_view.html#a407f343701972dee82b6f33f8765e1a0',1,'nvbio::bowtie2::cuda::ReadHitsIndexDeviceView']]],
   ['hitarray',['HitArray',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hits_index_device_view_1_1_hit_array.html#afc6d42fb626a737ff0f6c39b841cdaa2',1,'nvbio::bowtie2::cuda::ReadHitsIndexDeviceView::HitArray']]],
-  ['hitqueuesdeviceview',['HitQueuesDeviceView',['../structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues_device_view.html#a302aa98f41d65b7b53e2290b02c7cea2',1,'nvbio::bowtie2::cuda::HitQueuesDeviceView']]],
+  ['hitqueuesdeviceview',['HitQueuesDeviceView',['../structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues_device_view.html#ab54b147a702e06259fb242528502f4e1',1,'nvbio::bowtie2::cuda::HitQueuesDeviceView']]],
   ['hitreference',['HitReference',['../structnvbio_1_1bowtie2_1_1cuda_1_1_hit_reference.html#a63fad820d22bfd41d61e3dd64bfb1737',1,'nvbio::bowtie2::cuda::HitReference']]],
   ['hits',['hits',['../structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array.html#a7531f64b0e3520bd73861ad3a20f34e2',1,'nvbio::bowtie2::cuda::SeedHitDequeArray']]],
   ['hits_5fchecksum',['hits_checksum',['../namespacenvbio_1_1bowtie2_1_1cuda.html#a6366a1b05da094c12ba1f202e9946e9e',1,'nvbio::bowtie2::cuda']]],

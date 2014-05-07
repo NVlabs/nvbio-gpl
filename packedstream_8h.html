@@ -121,6 +121,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef&lt; Stream &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1to__const_3_01_packed_stream_ref_3_01_stream_01_4_01_4.html">nvbio::to_const&lt; PackedStreamRef&lt; Stream &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator&lt; Stream &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1stream__traits_3_01_packed_stream_iterator_3_01_stream_01_4_01_4.html">nvbio::stream_traits&lt; PackedStreamIterator&lt; Stream &gt; &gt;</a></td></tr>
@@ -139,7 +141,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
-<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +167,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3d0755aa33520ec088c133d4790f58f9"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </td></tr>
 <tr class="memitem:ga3d0755aa33520ec088c133d4790f58f9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#ga3d0755aa33520ec088c133d4790f58f9">nvbio::assign</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 input_len, InputIterator input_string, PackedStreamIterator&lt; PackedStream&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &gt; packed_string)</td></tr>
 <tr class="separator:ga3d0755aa33520ec088c133d4790f58f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad66375016eb0bad4114f35a2b5370e29"><td class="memTemplParams" colspan="2">template&lt;uint32 BLOCKDIM, uint32 BITS, bool BIG_ENDIAN, typename InStreamIterator , typename OutStreamIterator &gt; </td></tr>
+<tr class="memitem:gad66375016eb0bad4114f35a2b5370e29"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#gad66375016eb0bad4114f35a2b5370e29">nvbio::transpose_packed_streams</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 stride, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 N, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 in_offset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InStreamIterator in_stream, OutStreamIterator out_stream)</td></tr>
+<tr class="separator:gad66375016eb0bad4114f35a2b5370e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613494585ef78bee6255124ff228ceb9"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
 <tr class="memitem:a613494585ef78bee6255124ff228ceb9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a> (<a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef</a>&lt; Stream &gt; ref1, <a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef</a>&lt; Stream &gt; ref2)</td></tr>
 <tr class="separator:a613494585ef78bee6255124ff228ceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,7 +180,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:23 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

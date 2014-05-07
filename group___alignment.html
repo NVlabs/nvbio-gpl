@@ -295,7 +295,7 @@ scheme_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="nvbio_2alignment_2alignment_8h_source.html#l00325">325</a> of file <a class="el" href="nvbio_2alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2alignment_2alignment_8h_source.html#l00326">326</a> of file <a class="el" href="nvbio_2alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ scheme_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="nvbio_2alignment_2alignment_8h_source.html#l00340">340</a> of file <a class="el" href="nvbio_2alignment_2alignment_8h_source.html">alignment.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2alignment_2alignment_8h_source.html#l00341">341</a> of file <a class="el" href="nvbio_2alignment_2alignment_8h_source.html">alignment.h</a>.</p>
 
 </div>
 </div>
@@ -659,7 +659,7 @@ template&lt;uint32 CHECKPOINTS, typename aligner_type , typename pattern_string 
     <tr><td class="paramname">pattern_string</td><td>a string representing the pattern. </td></tr>
     <tr><td class="paramname">qual_string</td><td>an array representing the pattern qualities. </td></tr>
     <tr><td class="paramname">text_string</td><td>a string representing the text. </td></tr>
-    <tr><td class="paramname">checkpoints_type</td><td>an array-like class defining operator[], used to represent a reduced DP score matrix, containing all the matrix columns whose index is a multiple of CHECKPOINTS; the type of the matrix cells depends on the aligner, and can be obtained as typename <a class="el" href="structnvbio_1_1aln_1_1checkpoint__storage__type.html#a1a939764ed4e43e0c4ac0c2230037926" title="the type of the checkpoint cells ">checkpoint_storage_type&lt;aligner_type&gt;::type</a>; the array must contain at least <a class="el" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">text.length()</a>*((<a class="el" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">pattern.length()</a> + CHECKPOINTS-1)/CHECKPOINTS) entries </td></tr>
+    <tr><td class="paramname">checkpoints_type</td><td>an array-like class defining operator[], used to represent a reduced DP score matrix, containing all the matrix columns whose index is a multiple of CHECKPOINTS; the type of the matrix cells depends on the aligner, and can be obtained as typename <a class="el" href="structnvbio_1_1aln_1_1checkpoint__storage__type.html#a1a939764ed4e43e0c4ac0c2230037926" title="the type of the checkpoint cells ">checkpoint_storage_type&lt;aligner_type&gt;::type</a>; the array must contain at least <a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">text.length()</a>*((<a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">pattern.length()</a> + CHECKPOINTS-1)/CHECKPOINTS) entries </td></tr>
     <tr><td class="paramname">submatrix_type</td><td>an array-like class defining operator[], used to represent a temporary DP flow submatrix, containing all the matrix flow cells between two checkpointed columns. the number of bits needed for the submatrix cells depends on the aligner, and can be obtained as direction_vector_traits&lt;aligner_type&gt;::BITS </td></tr>
     <tr><td class="paramname">backtracer_type</td><td>a model of <a class="el" href="alignment_page.html#Backtracer">Backtracer Model</a>. </td></tr>
     <tr><td class="paramname">column_type</td><td>an array-like class defining operator[], used to represent a matrix column; the type of the matrix cells depends on the aligner, and can be obtained as typename <a class="el" href="structnvbio_1_1aln_1_1column__storage__type.html#ae909eadffaea4d579061f042bac514de" title="the type of the column cells ">column_storage_type&lt;aligner_type&gt;::type</a></td></tr>
@@ -1185,7 +1185,7 @@ template&lt;AlignmentType TYPE, typename scheme_type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

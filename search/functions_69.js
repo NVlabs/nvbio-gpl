@@ -5,6 +5,7 @@ var searchData=
   ['inclusive_5fscan',['inclusive_scan',['../group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b',1,'nvbio::cuda']]],
   ['inclusive_5fto_5fexclusive',['inclusive_to_exclusive',['../namespacenvbio_1_1bowtie2_1_1cuda.html#ae467b7d1b9b27599e6689cf4246cb386',1,'nvbio::bowtie2::cuda']]],
   ['index',['index',['../structnvbio_1_1_packed_stream_iterator.html#aa5cde2049d36a2caa545f17c9ee2e3d5',1,'nvbio::PackedStreamIterator::index()'],['../structnvbio_1_1io_1_1_f_m_index_data.html#a0cd1574a2ba669cc5510cbe44027f29c',1,'nvbio::io::FMIndexData::index()'],['../structnvbio_1_1io_1_1_f_m_index_data_device.html#a97c0f9bc85798db0d5511f915307ee86',1,'nvbio::io::FMIndexDataDevice::index()'],['../structnvbio_1_1_d_c_s_view.html#a7afc2b38975b380e1252362c6fa94aca',1,'nvbio::DCSView::index()']]],
+  ['index_5fpos',['index_pos',['../structnvbio_1_1_m_e_m_hit.html#a357622c6c47a2954fc93a57da2c953cb',1,'nvbio::MEMHit']]],
   ['index_5fwrite',['index_write',['../structnvbio_1_1_b_w_t_b_g_z_writer.html#aaece04205b581170308891935c62503a',1,'nvbio::BWTBGZWriter::index_write()'],['../structnvbio_1_1_b_w_t_l_z4_writer.html#a96e68ebd8167b7936a0e1ce2fd84a1f7',1,'nvbio::BWTLZ4Writer::index_write()']]],
   ['infix',['Infix',['../structnvbio_1_1_infix.html#ad024b856cdaadf85983aa7c279e6dda1',1,'nvbio::Infix::Infix()'],['../structnvbio_1_1_infix.html#ae41093b6f6d058c3a381e45c8f46b434',1,'nvbio::Infix::Infix(const string_type string, const coord_type infix)']]],
   ['infix_5fbegin',['infix_begin',['../group___strings.html#ga1875af305b458e64a6edaaa8388a03fe',1,'nvbio']]],

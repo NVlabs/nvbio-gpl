@@ -58,7 +58,7 @@ var searchData=
   ['devicevectorarray',['DeviceVectorArray',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
   ['devicevectorarray_3c_20io_3a_3acigar_20_3e',['DeviceVectorArray&lt; io::Cigar &gt;',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
   ['devicevectorarray_3c_20io_3a_3anvbio_3a_3aio_3a_3acigar_20_3e',['DeviceVectorArray&lt; io::nvbio::io::Cigar &gt;',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
-  ['devicevectorarray_3c_20rank_5ftype_20_3e',['DeviceVectorArray&lt; rank_type &gt;',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
+  ['devicevectorarray_3c_20nvbio_3a_3amemrange_20_3e',['DeviceVectorArray&lt; nvbio::MEMRange &gt;',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
   ['devicevectorarray_3c_20uint8_20_3e',['DeviceVectorArray&lt; uint8 &gt;',['../structnvbio_1_1_device_vector_array.html',1,'nvbio']]],
   ['direction_5fvector_5ftraits',['direction_vector_traits',['../structnvbio_1_1aln_1_1direction__vector__traits.html',1,'nvbio::aln']]],
   ['direction_5fvector_5ftraits_3c_20gotohaligner_3c_20type_2c_20scoring_5ftype_2c_20algorithm_5ftag_20_3e_20_3e',['direction_vector_traits&lt; GotohAligner&lt; TYPE, scoring_type, algorithm_tag &gt; &gt;',['../structnvbio_1_1aln_1_1direction__vector__traits_3_01_gotoh_aligner_3_01_t_y_p_e_00_01scoring__ty2e34ca036c4885568e58c799369ab12e.html',1,'nvbio::aln']]],

@@ -21,10 +21,13 @@ var searchData=
   ['nvbio_5fhost_5fdevice',['NVBIO_HOST_DEVICE',['../types_8h.html#aae8f5a3072675fd93df702e927eaf540',1,'types.h']]],
   ['nvbio_5fhost_5fdevice_5ftemplate',['NVBIO_HOST_DEVICE_TEMPLATE',['../types_8h.html#a713e200e8e7b619de08305ff6ea5264c',1,'types.h']]],
   ['nvbio_5finc_5futilization',['NVBIO_INC_UTILIZATION',['../profiling_8h.html#afe9c916844bfe44dff744a43b09c507d',1,'profiling.h']]],
+  ['nvbio_5fmajor_5fversion',['NVBIO_MAJOR_VERSION',['../version_8h.html#a965c01341e9a39db5620b3557129fe5d',1,'version.h']]],
+  ['nvbio_5fminor_5fversion',['NVBIO_MINOR_VERSION',['../version_8h.html#a977058811796827a71bc9433ad24e1ff',1,'version.h']]],
   ['nvbio_5frestrict',['NVBIO_RESTRICT',['../types_8h.html#a744ac79f4ce5072f870bb7fdc49792e7',1,'types.h']]],
   ['nvbio_5fshared',['NVBIO_SHARED',['../types_8h.html#a27e8d6e97fc992119543de7d01177475',1,'types.h']]],
   ['nvbio_5fstats',['NVBIO_STATS',['../profiling_8h.html#a2a038bd0dcb376c4f2640430cc2069a1',1,'profiling.h']]],
   ['nvbio_5fstats_5fadd',['NVBIO_STATS_ADD',['../profiling_8h.html#adb3d25b4b708681010a3b164e475679c',1,'profiling.h']]],
   ['nvbio_5fstats_5fset',['NVBIO_STATS_SET',['../profiling_8h.html#a7562c988ba4286cfdd937fbf89895bc6',1,'profiling.h']]],
-  ['nvbio_5fvar_5funused',['NVBIO_VAR_UNUSED',['../types_8h.html#a629635675171b07305d7d44a8c51deff',1,'types.h']]]
+  ['nvbio_5fvar_5funused',['NVBIO_VAR_UNUSED',['../types_8h.html#a629635675171b07305d7d44a8c51deff',1,'types.h']]],
+  ['nvbio_5fversion',['NVBIO_VERSION',['../version_8h.html#adda73f207e537e24b4e731fa4f1f0669',1,'version.h']]]
 ];

@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
 <a href="structnvbio_1_1priority__queue-members.html">List of all members</a>  </div>
@@ -120,10 +121,22 @@ struct nvbio::priority_queue&lt; Key, Container, Compare &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00080">80</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00081">81</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a22139fcfc1676be5cfe06f4a15f215c7"><td class="memItemLeft" align="right" valign="top">typedef Key&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a22139fcfc1676be5cfe06f4a15f215c7">value_type</a></td></tr>
+<tr class="separator:a22139fcfc1676be5cfe06f4a15f215c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28b5d59e9585566934a19da14123489"><td class="memItemLeft" align="right" valign="top">typedef Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#aa28b5d59e9585566934a19da14123489">container_type</a></td></tr>
+<tr class="separator:aa28b5d59e9585566934a19da14123489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e0b8499a144b760074f0a0a8b6a80b"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+container_type::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a></td></tr>
+<tr class="separator:ad2e0b8499a144b760074f0a0a8b6a80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf88790f421c30b5c964bf3537958e44"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a></td></tr>
+<tr class="separator:adf88790f421c30b5c964bf3537958e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
 <tr class="memitem:ada06e0d9dbcf46df9d9d8572f39028ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#ada06e0d9dbcf46df9d9d8572f39028ec">priority_queue</a> (Container cont=Container(), <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Compare cmp=Compare())</td></tr>
@@ -140,6 +153,9 @@ Public Methods</h2></td></tr>
 <tr class="memitem:a81a180fd10f9ea82757cfd840413ae8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a81a180fd10f9ea82757cfd840413ae8f">pop</a> ()</td></tr>
 <tr class="separator:a81a180fd10f9ea82757cfd840413ae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedefdd33b550b0f61202583ebcfe5dd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Key &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#aedefdd33b550b0f61202583ebcfe5dd5">top</a> ()</td></tr>
+<tr class="separator:aedefdd33b550b0f61202583ebcfe5dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2553739b93b61fca9651498a9edb2fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Key&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a2553739b93b61fca9651498a9edb2fdc">top</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a2553739b93b61fca9651498a9edb2fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +165,23 @@ Public Methods</h2></td></tr>
 <tr class="memitem:a3cc0bc4a2f3f1e773b396537c23dbdc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a3cc0bc4a2f3f1e773b396537c23dbdc3">clear</a> ()</td></tr>
 <tr class="separator:a3cc0bc4a2f3f1e773b396537c23dbdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e99bee0df31526b1b01165c077cc75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a82e99bee0df31526b1b01165c077cc75">begin</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a82e99bee0df31526b1b01165c077cc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d131eb898fe3e2244f66158ac42737d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a5d131eb898fe3e2244f66158ac42737d">begin</a> ()</td></tr>
+<tr class="separator:a5d131eb898fe3e2244f66158ac42737d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe835a227724604c6334f4c622bf882"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a7fe835a227724604c6334f4c622bf882">end</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a7fe835a227724604c6334f4c622bf882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac936c0520b281cef98f50bd5b01a15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a0ac936c0520b281cef98f50bd5b01a15">end</a> ()</td></tr>
+<tr class="separator:a0ac936c0520b281cef98f50bd5b01a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a8dff90eb513e291d55a7b537df4b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a47a8dff90eb513e291d55a7b537df4b1">upper_bound</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Key &amp;x)</td></tr>
+<tr class="separator:a47a8dff90eb513e291d55a7b537df4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
@@ -159,6 +192,71 @@ Public Members</h2></td></tr>
 <tr class="memitem:a851308c49bf10548ec1232b6ba263f9c"><td class="memItemLeft" align="right" valign="top">Compare&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1priority__queue.html#a851308c49bf10548ec1232b6ba263f9c">m_cmp</a></td></tr>
 <tr class="separator:a851308c49bf10548ec1232b6ba263f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ad2e0b8499a144b760074f0a0a8b6a80b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef container_type::const_iterator <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::<a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00085">85</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa28b5d59e9585566934a19da14123489"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Container <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::<a class="el" href="structnvbio_1_1priority__queue.html#aa28b5d59e9585566934a19da14123489">container_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00084">84</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf88790f421c30b5c964bf3537958e44"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::<a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00086">86</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22139fcfc1676be5cfe06f4a15f215c7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Key <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::<a class="el" href="structnvbio_1_1priority__queue.html#a22139fcfc1676be5cfe06f4a15f215c7">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00083">83</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ada06e0d9dbcf46df9d9d8572f39028ec"></a>
 <div class="memitem">
@@ -192,6 +290,64 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a82e99bee0df31526b1b01165c077cc75"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>starting iterator </p>
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00127">127</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d131eb898fe3e2244f66158ac42737d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>starting iterator </p>
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00132">132</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3cc0bc4a2f3f1e773b396537c23dbdc3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +365,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 </div><div class="memdoc">
 <p>clear the queue </p>
 
-<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00113">113</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00121">121</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
 
 </div>
 </div>
@@ -234,6 +390,64 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a7fe835a227724604c6334f4c622bf882"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#ad2e0b8499a144b760074f0a0a8b6a80b">const_iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ending iterator </p>
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00137">137</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ac936c0520b281cef98f50bd5b01a15"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ending iterator </p>
+
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00142">142</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a98ae79ec50f62f52a4db4d6f4ac7edd8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +465,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 </div><div class="memdoc">
 <p>return the i-th element in the heap </p>
 
-<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00105">105</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00113">113</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
 
 </div>
 </div>
@@ -318,6 +532,27 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aedefdd33b550b0f61202583ebcfe5dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Key &amp; <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::top </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>top of the queue </p>
+
+<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00097">97</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2553739b93b61fca9651498a9edb2fdc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +570,28 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 </div><div class="memdoc">
 <p>top of the queue </p>
 
-<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00097">97</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00105">105</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47a8dff90eb513e291d55a7b537df4b1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Container , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1priority__queue.html">priority_queue</a>&lt; Key, Container, Compare &gt;::<a class="el" href="structnvbio_1_1priority__queue.html#adf88790f421c30b5c964bf3537958e44">iterator</a> <a class="el" href="structnvbio_1_1priority__queue.html">nvbio::priority_queue</a>&lt; Key, Container, Compare &gt;::upper_bound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Key &amp;&#160;</td>
+          <td class="paramname"><em>x</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>locate the largest element v such that v &lt;= x; return <a class="el" href="structnvbio_1_1priority__queue.html#a0ac936c0520b281cef98f50bd5b01a15">end()</a> if no such element exists </p>
+
+<p>Definition at line <a class="el" href="priority__queue__inline_8h_source.html#l00154">154</a> of file <a class="el" href="priority__queue__inline_8h_source.html">priority_queue_inline.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +608,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00116">116</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00151">151</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +624,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00115">115</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00150">150</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +640,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00114">114</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
+<p>Definition at line <a class="el" href="priority__queue_8h_source.html#l00149">149</a> of file <a class="el" href="priority__queue_8h_source.html">priority_queue.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +651,7 @@ template&lt;typename Key , typename Container , typename Compare &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:19 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:38 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

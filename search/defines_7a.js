@@ -44,7 +44,7 @@ var searchData=
   ['zlib_5fver_5frevision',['ZLIB_VER_REVISION',['../zlib_8h.html#ad3662b8749a50045ec1c120354fb7e9d',1,'ZLIB_VER_REVISION():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#ad3662b8749a50045ec1c120354fb7e9d',1,'ZLIB_VER_REVISION():&#160;zlib.h']]],
   ['zlib_5fver_5fsubrevision',['ZLIB_VER_SUBREVISION',['../zlib_8h.html#a788ea49a5b65e12b11d7f274542d5af5',1,'ZLIB_VER_SUBREVISION():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a788ea49a5b65e12b11d7f274542d5af5',1,'ZLIB_VER_SUBREVISION():&#160;zlib.h']]],
   ['zlib_5fvernum',['ZLIB_VERNUM',['../zlib_8h.html#a6413cdfb4cdc0b5a09cf9b5f3f8f48ef',1,'ZLIB_VERNUM():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a6413cdfb4cdc0b5a09cf9b5f3f8f48ef',1,'ZLIB_VERNUM():&#160;zlib.h']]],
-  ['zlib_5fversion',['ZLIB_VERSION',['../zlib_8h.html#a51dc9dc65e483b3222c1f0f6a87eb76e',1,'ZLIB_VERSION():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a51dc9dc65e483b3222c1f0f6a87eb76e',1,'ZLIB_VERSION():&#160;zlib.h'],['../zlib_8h.html#a1f228220c3e6935eb171761c61487059',1,'zlib_version():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a1f228220c3e6935eb171761c61487059',1,'zlib_version():&#160;zlib.h']]],
+  ['zlib_5fversion',['zlib_version',['../zlib_8h.html#a1f228220c3e6935eb171761c61487059',1,'zlib_version():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a1f228220c3e6935eb171761c61487059',1,'zlib_version():&#160;zlib.h'],['../zlib_8h.html#a51dc9dc65e483b3222c1f0f6a87eb76e',1,'ZLIB_VERSION():&#160;zlib.h'],['../1_82_87_2zlib_8h.html#a51dc9dc65e483b3222c1f0f6a87eb76e',1,'ZLIB_VERSION():&#160;zlib.h']]],
   ['zstrerror',['zstrerror',['../gzguts_8h.html#af252c05931f39dd0b297fe9b8e174b8b',1,'gzguts.h']]],
   ['zswap32',['ZSWAP32',['../zutil_8h.html#aac7705d985486c2ec7f09c96b349f311',1,'zutil.h']]]
 ];

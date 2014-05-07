@@ -132,7 +132,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
-<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define <a class="el" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">plain_view()</a> for a std::vector. <br/></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacenvbio_1_1aln"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1aln.html">nvbio::aln</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,11 +179,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memTemplParams" colspan="2">template&lt;typename aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator , typename scheduler_type &gt; </td></tr>
 <tr class="memitem:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#ga536e9dd55eb5b85ab3a10f32e7ba5a98">nvbio::aln::batch_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type aligner, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_set_type patterns, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> qualities_set_type quals, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> text_set_type texts, sink_iterator sinks, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scheduler_type scheduler)</td></tr>
 <tr class="separator:ga536e9dd55eb5b85ab3a10f32e7ba5a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memTemplParams" colspan="2">template&lt;uint32 BAND_LEN, typename aligner_type , typename pattern_set_type , typename text_set_type , typename sink_iterator , typename scheduler_type &gt; </td></tr>
+<tr class="memitem:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___batch_alignment.html#gaa538f11f8c5e272d8b1e5ecb3eb95f02">nvbio::aln::batch_banded_alignment_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type aligner, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> pattern_set_type patterns, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> text_set_type texts, sink_iterator sinks, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scheduler_type scheduler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_pattern_length, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 max_text_length)</td></tr>
+<tr class="separator:gaa538f11f8c5e272d8b1e5ecb3eb95f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -435,7 +435,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    <a class="code" href="structnvbio_1_1priv_1_1_d_c_s__string__suffix__less.html">priv::DCS_string_suffix_less&lt;SYMBOL_SIZE,string_type&gt;</a>(</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                        string_len,</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        string,</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( *dcs ) ) );</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( *dcs ) ) );</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            {</div>
@@ -453,7 +453,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="comment">// process the (partially) sorted block</span></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            output.process_batch(</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                n_suffixes,</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_subbucket_suffixes ) );</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_subbucket_suffixes ) );</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">            #if defined(COMPRESSION_SORTING)</span></div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor"></span>            <span class="comment">// process delayed suffixes</span></div>
@@ -472,7 +472,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                        <a class="code" href="structnvbio_1_1priv_1_1_d_c_s__string__suffix__less.html">priv::DCS_string_suffix_less&lt;SYMBOL_SIZE,string_type&gt;</a>(</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                            string_len,</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                            <span class="keywordtype">string</span>,</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( *dcs ) ) );</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( *dcs ) ) );</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">                    mgpu::MergesortKeys(</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">                        nvbio::plain_view( d_delayed_suffixes ),</span></div>
@@ -505,8 +505,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                <span class="comment">// scatter the delayed suffixes</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                output.process_scattered(</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    delay_list.count,</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_delayed_suffixes ),</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_delayed_slots ) );</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_delayed_suffixes ),</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_delayed_slots ) );</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                <span class="comment">// clear the list</span></div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                delay_list.clear();</div>
@@ -557,7 +557,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            block_begin + block_size,</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            string_len );</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1priv_1_1_d_c_s__predicate.html">priv::DCS_predicate</a> in_dcs( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#ab71f65239fb53723ca33f8911ef88e2c" title="difference cover period ">Q</a>, <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#acb5ff4d87ba814baec2bdd591b214e3b" title="difference cover bitmask ">d_bitmask</a> ) );</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1priv_1_1_d_c_s__predicate.html">priv::DCS_predicate</a> in_dcs( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#ab71f65239fb53723ca33f8911ef88e2c" title="difference cover period ">Q</a>, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#acb5ff4d87ba814baec2bdd591b214e3b" title="difference cover bitmask ">d_bitmask</a> ) );</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        sample_size += <a class="code" href="group___primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">cuda::copy_if</a>(</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( block_end - block_begin ),</div>
@@ -571,7 +571,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#acedf4637e2dd866f66fef59607b9191a" title="ordered DCS ranks ">d_ranks</a>.resize( <a class="code" href="group___basic_utils.html#ga7ceb401b1594e464b83af7938c81dd2f">util::round_i</a>( sample_size, dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#a4eba82c77a7bf4ee904b29600572ad1c" title="difference cover quorum ">N</a> ), 0u );</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="comment">// and sort the corresponding suffixes</span></div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <a class="code" href="structnvbio_1_1_d_c_s_suffix_ranker.html">DCSSuffixRanker</a> ranker( <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( dcs ) );</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <a class="code" href="structnvbio_1_1_d_c_s_suffix_ranker.html">DCSSuffixRanker</a> ranker( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( dcs ) );</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <a class="code" href="namespacenvbio_1_1cuda.html#a2fdb926a0dc1fe9a444b3ab24d84d589">blockwise_suffix_sort</a>(</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        string_len,</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keywordtype">string</span>,</div>
@@ -587,7 +587,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:01 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:17 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -18,6 +18,8 @@ var searchData=
   ['memfilter_3c_20host_5ftag_2c_20fm_5findex_5ftype_20_3e',['MEMFilter&lt; host_tag, fm_index_type &gt;',['../structnvbio_1_1_m_e_m_filter_3_01host__tag_00_01fm__index__type_01_4.html',1,'nvbio']]],
   ['memfilterdevice',['MEMFilterDevice',['../structnvbio_1_1_m_e_m_filter_device.html',1,'nvbio']]],
   ['memfilterhost',['MEMFilterHost',['../structnvbio_1_1_m_e_m_filter_host.html',1,'nvbio']]],
+  ['memhit',['MEMHit',['../structnvbio_1_1_m_e_m_hit.html',1,'nvbio']]],
+  ['memrange',['MEMRange',['../structnvbio_1_1_m_e_m_range.html',1,'nvbio']]],
   ['merge_5fkeys',['merge_keys',['../structnvbio_1_1priv_1_1merge__keys.html',1,'nvbio::priv']]],
   ['min_5ffunctor',['min_functor',['../structnvbio_1_1min__functor.html',1,'nvbio']]],
   ['minscorefunc',['MinScoreFunc',['../structnvbio_1_1bowtie2_1_1cuda_1_1_min_score_func.html',1,'nvbio::bowtie2::cuda']]],

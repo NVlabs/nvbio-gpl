@@ -103,6 +103,8 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_vector.html">nvbio::PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1stream__traits.html">nvbio::stream_traits&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1stream__traits_3_01_t_01_5_01_4.html">nvbio::stream_traits&lt; T * &gt;</a></td></tr>
@@ -110,6 +112,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1stream__traits_3_01const_01_t_01_5_01_4.html">nvbio::stream_traits&lt; const T * &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef&lt; Stream &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1to__const_3_01_packed_stream_ref_3_01_stream_01_4_01_4.html">nvbio::to_const&lt; PackedStreamRef&lt; Stream &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator&lt; Stream &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +132,17 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gaa8a57b67f0319432f01a849df6699bfe"><td class="memTemplParams" colspan="2">template&lt;typename SystemTag , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </td></tr>
+<tr class="memitem:gaa8a57b67f0319432f01a849df6699bfe"><td class="memTemplItemLeft" align="right" valign="top">PackedVector&lt; SystemTag, <br class="typebreak"/>
+SYMBOL_SIZE_T, BIG_ENDIAN_T, <br class="typebreak"/>
+IndexType &gt;::plain_view_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a> (PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;vec)</td></tr>
+<tr class="separator:gaa8a57b67f0319432f01a849df6699bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga292e8368cc40f23ce0990f834b973a17"><td class="memTemplParams" colspan="2">template&lt;typename SystemTag , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </td></tr>
+<tr class="memitem:ga292e8368cc40f23ce0990f834b973a17"><td class="memTemplItemLeft" align="right" valign="top">PackedVector&lt; SystemTag, <br class="typebreak"/>
+SYMBOL_SIZE_T, BIG_ENDIAN_T, <br class="typebreak"/>
+IndexType &gt;<br class="typebreak"/>
+::const_plain_view_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#ga292e8368cc40f23ce0990f834b973a17">nvbio::plain_view</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;vec)</td></tr>
+<tr class="separator:ga292e8368cc40f23ce0990f834b973a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9167a0f45f84e13608e48d869e8744e1"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
 <tr class="memitem:ga9167a0f45f84e13608e48d869e8744e1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#ga9167a0f45f84e13608e48d869e8744e1">nvbio::operator&lt;</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PackedStreamIterator&lt; Stream &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PackedStreamIterator&lt; Stream &gt; &amp;it2)</td></tr>
@@ -147,6 +162,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3d0755aa33520ec088c133d4790f58f9"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </td></tr>
 <tr class="memitem:ga3d0755aa33520ec088c133d4790f58f9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#ga3d0755aa33520ec088c133d4790f58f9">nvbio::assign</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 input_len, InputIterator input_string, PackedStreamIterator&lt; PackedStream&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &gt; packed_string)</td></tr>
 <tr class="separator:ga3d0755aa33520ec088c133d4790f58f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad66375016eb0bad4114f35a2b5370e29"><td class="memTemplParams" colspan="2">template&lt;uint32 BLOCKDIM, uint32 BITS, bool BIG_ENDIAN, typename InStreamIterator , typename OutStreamIterator &gt; </td></tr>
+<tr class="memitem:gad66375016eb0bad4114f35a2b5370e29"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___packed_streams.html#gad66375016eb0bad4114f35a2b5370e29">nvbio::transpose_packed_streams</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 stride, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 N, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 in_offset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InStreamIterator in_stream, OutStreamIterator out_stream)</td></tr>
+<tr class="separator:gad66375016eb0bad4114f35a2b5370e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga3d0755aa33520ec088c133d4790f58f9"></a>
@@ -310,10 +328,127 @@ template&lt;typename Stream &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="gaa8a57b67f0319432f01a849df6699bfe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SystemTag , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PackedVector&lt;SystemTag,SYMBOL_SIZE_T,BIG_ENDIAN_T,IndexType&gt;::plain_view_type nvbio::plain_view </td>
+          <td>(</td>
+          <td class="paramtype">PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return a plain view of a <a class="el" href="structnvbio_1_1_packed_vector.html">PackedVector</a> object </p>
+
+<p>Definition at line <a class="el" href="packed__vector_8h_source.html#l00121">121</a> of file <a class="el" href="packed__vector_8h_source.html">packed_vector.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga292e8368cc40f23ce0990f834b973a17"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SystemTag , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PackedVector&lt;SystemTag,SYMBOL_SIZE_T,BIG_ENDIAN_T,IndexType&gt;::const_plain_view_type nvbio::plain_view </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PackedVector&lt; SystemTag, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return a plain view of a const <a class="el" href="structnvbio_1_1_packed_vector.html">PackedVector</a> object </p>
+
+<p>Definition at line <a class="el" href="packed__vector_8h_source.html#l00132">132</a> of file <a class="el" href="packed__vector_8h_source.html">packed_vector.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gad66375016eb0bad4114f35a2b5370e29"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint32 BLOCKDIM, uint32 BITS, bool BIG_ENDIAN, typename InStreamIterator , typename OutStreamIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void nvbio::transpose_packed_streams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>in_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InStreamIterator&#160;</td>
+          <td class="paramname"><em>in_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutStreamIterator&#160;</td>
+          <td class="paramname"><em>out_stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A utility function to transpose a set of packed input streams: the symbols of the i-th input stream is supposed to be stored contiguously in the range [offset(i), offset + N(i)] the <em>words</em> of i-th output stream will be stored in strided fashion at out_stream[tid, tid + (N(i)+symbols_per_word-1/symbols_per_word) * stride]</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stride</td><td>output stride </td></tr>
+    <tr><td class="paramname">N</td><td>length of this thread's string in the input stream </td></tr>
+    <tr><td class="paramname">in_offset</td><td>offset of this thread's string in the input stream </td></tr>
+    <tr><td class="paramname">in_stream</td><td>input stream </td></tr>
+    <tr><td class="paramname">out_stream</td><td>output stream (usually of the form ptr + thread_id) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00865">865</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -171,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">int</span> nz;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">int</span> height, width;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">int</span> height, <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        code = <a class="code" href="mmio_8h.html#acf80791ad47f3c907c9145f7573eb33c">mm_read_mtx_crd_size</a>(f, &amp;height, &amp;width, &amp;nz);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::vector&lt;MatrixElement&gt; elements;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        elements.reserve(nz);</div>
@@ -215,7 +215,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        nz = (int)elements.size();</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        m-&gt;height = height;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        m-&gt;width = width;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        m-&gt;width = <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a>;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        m-&gt;nz = nz;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        m-&gt;csr.resize(height + 1);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        m-&gt;cols.resize(nz);</div>
@@ -427,7 +427,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:52 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

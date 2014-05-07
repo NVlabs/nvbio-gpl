@@ -182,8 +182,8 @@ Q-Gram Indices</h1>
 <div class="line"><span class="keyword">typedef</span> ConcatenatedStringSet&lt;const uint8*,const uint32*&gt; string_set_type;</div>
 <div class="line"><span class="keyword">const</span> string_set_type string_set(</div>
 <div class="line">    n_strings,</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_string ),</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_string_offsets ) );</div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_string ),</div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_string_offsets ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// build a q-gram index on the device</span></div>
 <div class="line">QGramSetIndexDevice qgram_index;</div>
@@ -227,7 +227,7 @@ Q-Gram Index Queries</h1>
 <div class="line"><a class="code" href="structnvbio_1_1vector.html">nvbio::vector&lt;device_tag,uint64&gt;</a> d_query_qgrams( n_query_qgrams );</div>
 <div class="line"><a class="code" href="group___q_gram.html#ga87d027afda5b0c89cc110266ba1a6c94">generate_qgrams</a>(</div>
 <div class="line">  q, 2u,                                                    <span class="comment">// q-gram length, alphabet size</span></div>
-<div class="line">  query_string_len, <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_query_string ),    <span class="comment">// input string</span></div>
+<div class="line">  query_string_len, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( d_query_string ),    <span class="comment">// input string</span></div>
 <div class="line">  n_query_qgrams,                                           <span class="comment">// the number of q-grams</span></div>
 <div class="line">  d_query_indices.begin(),                                  <span class="comment">// input q-gram coordinates</span></div>
 <div class="line">  d_query_qgrams.begin() );                                 <span class="comment">// output q-grams</span></div>
@@ -247,7 +247,7 @@ Q-Gram Index Queries</h1>
 <div class="line">    d_query_qgrams.begin(),</div>
 <div class="line">    d_query_qgrams.begin() + n_query_qgrams,</div>
 <div class="line">    d_ranges.begin(),</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( qgram_index ) );</div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( qgram_index ) );</div>
 </div><!-- fragment --></dd></dl>
 <dl class="section user"><dt></dt><dd>This of course was just a toy example; in reality, you'll want to this kind of operations with much larger q-gram indices and much larger batches of queries.</dd></dl>
 <h1><a class="anchor" id="QGramCountingSection"></a>
@@ -269,8 +269,8 @@ Q-Gram Counting</h1>
 <div class="line"><span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_hits = qgram_filter.rank(</div>
 <div class="line">    qgram_index,</div>
 <div class="line">    n_query_qgrams,</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_query_qgrams ),</div>
-<div class="line">    <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( d_query_indices ) );</div>
+<div class="line">    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_query_qgrams ),</div>
+<div class="line">    <a class="code" href="namespacenvbio.html#a8ad991c39278eb9e0d0000f2b12031da">nvbio::raw_pointer</a>( d_query_indices ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// loop through large batches of hits and locate them</span></div>
@@ -325,7 +325,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:08 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

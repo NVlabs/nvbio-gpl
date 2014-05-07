@@ -127,6 +127,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1strided__packed__string__set__tag.html">nvbio::strided_packed_string_set_tag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_string_set_iterator.html">nvbio::StringSetIterator&lt; StringSetType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_concatenated_string_set.html">nvbio::ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html">nvbio::SparseStringSet&lt; StringIterator, RangeIterator &gt;</a></td></tr>
@@ -193,6 +195,56 @@ Functions</h2></td></tr>
 <tr class="memitem:ga26375e5ce59fadcb3952faa10035a90c"><td class="memTemplParams" colspan="2">template&lt;typename string_set_type , typename seed_functor , typename index_vector_type &gt; </td></tr>
 <tr class="memitem:ga26375e5ce59fadcb3952faa10035a90c"><td class="memTemplItemLeft" align="right" valign="top">uint64&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga26375e5ce59fadcb3952faa10035a90c">nvbio::enumerate_string_set_seeds</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> string_set_type string_set, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> seed_functor seeder, index_vector_type &amp;indices)</td></tr>
 <tr class="separator:ga26375e5ce59fadcb3952faa10035a90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga944bf22f9c000605f89106c2fb056a13"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga944bf22f9c000605f89106c2fb056a13"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+StringSetIterator&lt; StringSet &gt;<br class="typebreak"/>
+::difference_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga944bf22f9c000605f89106c2fb056a13">nvbio::operator-</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:ga944bf22f9c000605f89106c2fb056a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga253f6dc584acc8911606809820335c0b"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga253f6dc584acc8911606809820335c0b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+StringSetIterator&lt; StringSet &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga253f6dc584acc8911606809820335c0b">nvbio::operator+</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32 d)</td></tr>
+<tr class="separator:ga253f6dc584acc8911606809820335c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2acb3924cbeb494e60dc388d4586501"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:gae2acb3924cbeb494e60dc388d4586501"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+StringSetIterator&lt; StringSet &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gae2acb3924cbeb494e60dc388d4586501">nvbio::operator-</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32 d)</td></tr>
+<tr class="separator:gae2acb3924cbeb494e60dc388d4586501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf61cc4c4c0805ec4d02a7e48f7109901"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:gaf61cc4c4c0805ec4d02a7e48f7109901"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+StringSetIterator&lt; StringSet &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gaf61cc4c4c0805ec4d02a7e48f7109901">nvbio::operator+=</a> (StringSetIterator&lt; StringSet &gt; &amp;it, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32 d)</td></tr>
+<tr class="separator:gaf61cc4c4c0805ec4d02a7e48f7109901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga187800c5f48a4076a5ed720a6fdd2e3c"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga187800c5f48a4076a5ed720a6fdd2e3c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+StringSetIterator&lt; StringSet &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga187800c5f48a4076a5ed720a6fdd2e3c">nvbio::operator-=</a> (StringSetIterator&lt; StringSet &gt; &amp;it, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32 d)</td></tr>
+<tr class="separator:ga187800c5f48a4076a5ed720a6fdd2e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2855ed647c5e0174ff2e113e6af1f65"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:gaf2855ed647c5e0174ff2e113e6af1f65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gaf2855ed647c5e0174ff2e113e6af1f65">nvbio::operator&lt;</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:gaf2855ed647c5e0174ff2e113e6af1f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf181b689fee83ccb0f69fafde948ffd0"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:gaf181b689fee83ccb0f69fafde948ffd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gaf181b689fee83ccb0f69fafde948ffd0">nvbio::operator&gt;</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:gaf181b689fee83ccb0f69fafde948ffd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a8bcf1863217d8f3cb9ec97d714c78a"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga2a8bcf1863217d8f3cb9ec97d714c78a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga2a8bcf1863217d8f3cb9ec97d714c78a">nvbio::operator&lt;=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:ga2a8bcf1863217d8f3cb9ec97d714c78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga200a8b683d562edcd19107798a103d68"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga200a8b683d562edcd19107798a103d68"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga200a8b683d562edcd19107798a103d68">nvbio::operator&gt;=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:ga200a8b683d562edcd19107798a103d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5429678b6f2f6949a5aaf8f85e45056"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:gaf5429678b6f2f6949a5aaf8f85e45056"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gaf5429678b6f2f6949a5aaf8f85e45056">nvbio::operator==</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:gaf5429678b6f2f6949a5aaf8f85e45056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50e55e1d40882e7b930465c5c6077b65"><td class="memTemplParams" colspan="2">template&lt;typename StringSet &gt; </td></tr>
+<tr class="memitem:ga50e55e1d40882e7b930465c5c6077b65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga50e55e1d40882e7b930465c5c6077b65">nvbio::operator!=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;it2)</td></tr>
+<tr class="separator:ga50e55e1d40882e7b930465c5c6077b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaadcc338fcc1b055d00b3d0c498c9a1ae"><td class="memTemplParams" colspan="2">template&lt;typename InStringSet , typename StringIterator , typename OffsetIterator &gt; </td></tr>
 <tr class="memitem:gaadcc338fcc1b055d00b3d0c498c9a1ae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gaadcc338fcc1b055d00b3d0c498c9a1ae">nvbio::cuda::copy</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InStringSet &amp;in_string_set, ConcatenatedStringSet&lt; StringIterator, OffsetIterator &gt; &amp;out_string_set)</td></tr>
 <tr class="separator:gaadcc338fcc1b055d00b3d0c498c9a1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,7 +494,7 @@ template&lt;typename InStringSet , typename StringIterator , typename OffsetIter
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02020">2020</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02119">2119</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -480,7 +532,7 @@ template&lt;typename InStringSet , typename StringIterator , typename LengthIter
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02038">2038</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02137">2137</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -518,7 +570,7 @@ template&lt;typename InStringSet , typename StreamIterator , typename SymbolType
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02059">2059</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02158">2158</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -556,7 +608,7 @@ template&lt;typename InStringSet , typename StringIterator , typename OffsetIter
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02020">2020</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02119">2119</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +646,7 @@ template&lt;typename InStringSet , typename StringIterator , typename LengthIter
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02038">2038</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02137">2137</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +684,7 @@ template&lt;typename InStringSet , typename StreamIterator , typename SymbolType
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02059">2059</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set__inl_8h_source.html#l02158">2158</a> of file <a class="el" href="string__set__inl_8h_source.html">string_set_inl.h</a>.</p>
 
 </div>
 </div>
@@ -677,10 +729,10 @@ template&lt;typename index_type , typename seed_functor , typename index_vector_
 <div class="line">    <span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>  result_type;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// return the number of seeds produced for a given string length</span></div>
-<div class="line">    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> operator() (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">length</a>) <span class="keyword">const</span>;</div>
+<div class="line">    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> operator() (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>) <span class="keyword">const</span>;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// return the coordinate of the i-th seed produced for a given string length</span></div>
-<div class="line">    uint2 seed(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">length</a>, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <span class="keyword">const</span>;</div>
+<div class="line">    uint2 seed(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <span class="keyword">const</span>;</div>
 <div class="line">};</div>
 </div><!-- fragment --> </td></tr>
     <tr><td class="paramname">index_vector_type</td><td>a dynamic vector of uint2 coordinates</td></tr>
@@ -695,7 +747,7 @@ template&lt;typename index_type , typename seed_functor , typename index_vector_
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="seeds__inl_8h_source.html#l00140">140</a> of file <a class="el" href="seeds__inl_8h_source.html">seeds_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="seeds__inl_8h_source.html#l00158">158</a> of file <a class="el" href="seeds__inl_8h_source.html">seeds_inl.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +800,7 @@ template&lt;typename string_set_type , typename seed_functor , typename index_ve
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="seeds__inl_8h_source.html#l00166">166</a> of file <a class="el" href="seeds__inl_8h_source.html">seeds_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="seeds__inl_8h_source.html#l00184">184</a> of file <a class="el" href="seeds__inl_8h_source.html">seeds_inl.h</a>.</p>
 
 </div>
 </div>
@@ -835,7 +887,7 @@ template&lt;typename StringIterator , typename OffsetIterator &gt; </div>
 </div><div class="memdoc">
 <p>A utility function to make a <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a> </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00295">295</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00483">483</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +1007,7 @@ template&lt;typename StringIterator , typename RangeIterator &gt; </div>
 </div><div class="memdoc">
 <p>A utility function to make a <a class="el" href="structnvbio_1_1_sparse_string_set.html">SparseStringSet</a> </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00409">409</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00617">617</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -989,24 +1041,344 @@ template&lt;typename StringType , typename CoordType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga6c150481dd1442788b90d88383946c6b"></a>
+<a class="anchor" id="ga50e55e1d40882e7b930465c5c6077b65"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename StringType , typename CoordType &gt; </div>
+template&lt;typename StringSet &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::string_id </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator!= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, 2u &gt; &amp;&#160;</td>
-          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return the string index of a given prefix </p>
+<p>operator!= </p>
 
-<p>Definition at line <a class="el" href="prefix_8h_source.html#l00346">346</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00309">309</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga253f6dc584acc8911606809820335c0b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> StringSetIterator&lt;StringSet&gt; nvbio::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator+ </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00208">208</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf61cc4c4c0805ec4d02a7e48f7109901"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> StringSetIterator&lt;StringSet&gt;&amp; nvbio::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator+= </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00230">230</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga944bf22f9c000605f89106c2fb056a13"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> StringSetIterator&lt;StringSet&gt;::difference_type nvbio::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>difference operator </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00197">197</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gae2acb3924cbeb494e60dc388d4586501"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> StringSetIterator&lt;StringSet&gt; nvbio::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator- </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00219">219</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga187800c5f48a4076a5ed720a6fdd2e3c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> StringSetIterator&lt;StringSet&gt;&amp; nvbio::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int32&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator-= </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00242">242</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf2855ed647c5e0174ff2e113e6af1f65"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator&lt; </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00254">254</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2a8bcf1863217d8f3cb9ec97d714c78a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator&lt;= </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00276">276</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf5429678b6f2f6949a5aaf8f85e45056"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator== </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00298">298</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf181b689fee83ccb0f69fafde948ffd0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator&gt; </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00265">265</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga200a8b683d562edcd19107798a103d68"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringSet &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringSetIterator&lt; StringSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator&gt;= </p>
+
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00287">287</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -1028,6 +1400,27 @@ template&lt;typename StringType , typename CoordType &gt; </div>
 <p>return the string index of a given suffix </p>
 
 <p>Definition at line <a class="el" href="suffix_8h_source.html#l00346">346</a> of file <a class="el" href="suffix_8h_source.html">suffix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6c150481dd1442788b90d88383946c6b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::string_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, 2u &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string index of a given prefix </p>
+
+<p>Definition at line <a class="el" href="prefix_8h_source.html#l00346">346</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
 
 </div>
 </div>
@@ -1077,7 +1470,7 @@ template&lt;typename StringType , typename CoordType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:31:09 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

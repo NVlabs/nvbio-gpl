@@ -99,6 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
+<a href="#pub-static-attribs">Static Public Members</a> &#124;
 <a href="structnvbio_1_1mem_1_1mem__handler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nvbio::mem::mem_handler&lt; coord_type &gt; Struct Template Reference</div>  </div>
@@ -110,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 struct nvbio::mem::mem_handler&lt; coord_type &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00177">177</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00354">354</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -119,14 +120,13 @@ Public Types</h2></td></tr>
 <tr class="memitem:afe2f8e26de64931ec5c7e709111a610b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__type.html">vector_type</a><br class="typebreak"/>
 &lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a>, 2u &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#afe2f8e26de64931ec5c7e709111a610b">range_type</a></td></tr>
 <tr class="separator:afe2f8e26de64931ec5c7e709111a610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681b39c64d345dd27b8cdfe6f8bb1435"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__type.html">vector_type</a><br class="typebreak"/>
-&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a>, 4u &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a681b39c64d345dd27b8cdfe6f8bb1435">mem_type</a></td></tr>
-<tr class="separator:a681b39c64d345dd27b8cdfe6f8bb1435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530f3a414503add50f815828e9892d92"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_m_e_m_range.html">MEMRange</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a530f3a414503add50f815828e9892d92">rank_type</a></td></tr>
+<tr class="separator:a530f3a414503add50f815828e9892d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:aeabde88a202d15fad5f8fbf4ceb02fe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#aeabde88a202d15fad5f8fbf4ceb02fe2">mem_handler</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> _string_id)</td></tr>
-<tr class="separator:aeabde88a202d15fad5f8fbf4ceb02fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6ba73a686360c1116ce66b0e95b66e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#acd6ba73a686360c1116ce66b0e95b66e">mem_handler</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> _string_id, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> _max_intv)</td></tr>
+<tr class="separator:acd6ba73a686360c1116ce66b0e95b66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a268aec717781147ad14b90819b23c9b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a268aec717781147ad14b90819b23c9b7">output</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#afe2f8e26de64931ec5c7e709111a610b">range_type</a> range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 span)</td></tr>
 <tr class="separator:a268aec717781147ad14b90819b23c9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,28 +135,19 @@ Public Methods</h2></td></tr>
 Public Members</h2></td></tr>
 <tr class="memitem:a2309697f0bb38c3c0f40e530068bcc0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a2309697f0bb38c3c0f40e530068bcc0d">string_id</a></td></tr>
 <tr class="separator:a2309697f0bb38c3c0f40e530068bcc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8e84430a6e38a533262945e911db156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a681b39c64d345dd27b8cdfe6f8bb1435">mem_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#af8e84430a6e38a533262945e911db156">mems</a> [1024]</td></tr>
-<tr class="separator:af8e84430a6e38a533262945e911db156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa2c7406f3347eaaac0429f19624671"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a2fa2c7406f3347eaaac0429f19624671">max_intv</a></td></tr>
+<tr class="separator:a2fa2c7406f3347eaaac0429f19624671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2875b6db135202c2d062f87f06cfd4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a530f3a414503add50f815828e9892d92">rank_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#ab2875b6db135202c2d062f87f06cfd4b">mems</a> [<a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#ac37c78f26ac926be4f87e4f0abf2ebbd">MAX_SIZE</a>]</td></tr>
+<tr class="separator:ab2875b6db135202c2d062f87f06cfd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7dc286a79dbcaf0ae8dad13cea55961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#aa7dc286a79dbcaf0ae8dad13cea55961">n_mems</a></td></tr>
 <tr class="separator:aa7dc286a79dbcaf0ae8dad13cea55961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Members</h2></td></tr>
+<tr class="memitem:ac37c78f26ac926be4f87e4f0abf2ebbd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#ac37c78f26ac926be4f87e4f0abf2ebbd">MAX_SIZE</a> = 1024</td></tr>
+<tr class="separator:ac37c78f26ac926be4f87e4f0abf2ebbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a681b39c64d345dd27b8cdfe6f8bb1435"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename coord_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__type.html">vector_type</a>&lt;<a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a>,4u&gt;::type nvbio::mem::mem_handler&lt; coord_type &gt;::mem_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00180">180</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="afe2f8e26de64931ec5c7e709111a610b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,12 +160,28 @@ template&lt;typename coord_type&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00179">179</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00358">358</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a530f3a414503add50f815828e9892d92"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename coord_type&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_m_e_m_range.html">MEMRange</a>&lt;<a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a>&gt; <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::<a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a530f3a414503add50f815828e9892d92">rank_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00359">359</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aeabde88a202d15fad5f8fbf4ceb02fe2"></a>
+<a class="anchor" id="acd6ba73a686360c1116ce66b0e95b66e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -187,8 +194,18 @@ template&lt;typename coord_type&gt; </div>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::<a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">mem_handler</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
-          <td class="paramname"><em>_string_id</em>)</td><td></td>
+          <td class="paramname"><em>_string_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
+          <td class="paramname"><em>_max_intv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -198,7 +215,7 @@ template&lt;typename coord_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00184">184</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00363">363</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
@@ -237,24 +254,64 @@ template&lt;typename coord_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00188">188</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00370">370</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="af8e84430a6e38a533262945e911db156"></a>
+<a class="anchor" id="a2fa2c7406f3347eaaac0429f19624671"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename coord_type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a681b39c64d345dd27b8cdfe6f8bb1435">mem_type</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::mems[1024]</td>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::max_intv</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00201">201</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00386">386</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac37c78f26ac926be4f87e4f0abf2ebbd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename coord_type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::MAX_SIZE = 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00356">356</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2875b6db135202c2d062f87f06cfd4b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename coord_type&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#a530f3a414503add50f815828e9892d92">rank_type</a> <a class="el" href="structnvbio_1_1mem_1_1mem__handler.html">nvbio::mem::mem_handler</a>&lt; <a class="el" href="prefix_8h.html#aab01ab0b43211dc9c9028e4d510f88f9">coord_type</a> &gt;::mems[<a class="el" href="structnvbio_1_1mem_1_1mem__handler.html#ac37c78f26ac926be4f87e4f0abf2ebbd">MAX_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00387">387</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +327,7 @@ template&lt;typename coord_type&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00202">202</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00388">388</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +343,7 @@ template&lt;typename coord_type&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00200">200</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00385">385</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +353,7 @@ template&lt;typename coord_type&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:32:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 00:00:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

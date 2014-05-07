@@ -1,11 +1,12 @@
 var searchData=
 [
   ['i',['I',['../structnvbio_1_1_q_group_index_view_core.html#a66746a48ffb61f06b564e25b1832c154',1,'nvbio::QGroupIndexViewCore::I()'],['../structnvbio_1_1_q_group_index_host.html#ac5c217d1f1b327432f4cc30343d3796e',1,'nvbio::QGroupIndexHost::I()'],['../structnvbio_1_1_q_group_index_device.html#a56bc056bbec1b17ebe8fc6c71056a480',1,'nvbio::QGroupIndexDevice::I()']]],
-  ['idx',['idx',['../structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base_1_1context__type.html#aa64b5ac8f22eedd3ec1598e890c4b4e0',1,'nvbio::bowtie2::cuda::detail::AlignmentStreamBase::context_type']]],
+  ['idx',['idx',['../structnvbio_1_1_string_set_iterator.html#a660fd7e0fdc29670d3e0e864065c53e8',1,'nvbio::StringSetIterator::idx()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base_1_1context__type.html#aa64b5ac8f22eedd3ec1598e890c4b4e0',1,'nvbio::bowtie2::cuda::detail::AlignmentStreamBase::context_type::idx()']]],
   ['idx_5fqueue',['idx_queue',['../structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html#abf597b3646b27e1fdfb4a93f9ec4b9fa',1,'nvbio::bowtie2::cuda::BaseScoringPipelineState']]],
   ['idx_5fqueue_5fdptr',['idx_queue_dptr',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a0fc95551ef0cdac5d7bd454397eff074',1,'nvbio::bowtie2::cuda::Aligner']]],
   ['idx_5fqueue_5fdvec',['idx_queue_dvec',['../structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a667f7d186173295acc233d3f7c3f9e96',1,'nvbio::bowtie2::cuda::Aligner']]],
   ['in',['in',['../structgz__state.html#af16c5730c48518809ead34557d612942',1,'gz_state::in()'],['../unionnvbio_1_1_binary_cast.html#a3fa934e17a4acdad1bd134cad5d6a52b',1,'nvbio::BinaryCast::in()']]],
+  ['in_5fmem_5farrays',['in_mem_arrays',['../structnvbio_1_1mem_1_1split__mem__functor.html#a13d304bc1819ac53f64171dea259b39e',1,'nvbio::mem::split_mem_functor']]],
   ['in_5fqueue',['in_queue',['../structnvbio_1_1cuda_1_1_ping_pong_queues_view.html#a048b134d9e6ba5c94183a9f6197d3034',1,'nvbio::cuda::PingPongQueuesView::in_queue()'],['../structnvbio_1_1cuda_1_1_ping_pong_queues.html#a327aef87fa0e1c6b71c7727b5bf866d4',1,'nvbio::cuda::PingPongQueues::in_queue()']]],
   ['in_5fsize',['in_size',['../structnvbio_1_1cuda_1_1_ping_pong_queues_view.html#a90b40d4678f701ec715518c32e23fec6',1,'nvbio::cuda::PingPongQueuesView::in_size()'],['../structnvbio_1_1cuda_1_1_ping_pong_queues.html#af02033a48f647eb3444ba6f0d0f8ea6f',1,'nvbio::cuda::PingPongQueues::in_size()']]],
   ['incval',['incval',['../struct__trbudget__t.html#aa663b925839f58e961b821dc50074c4c',1,'_trbudget_t']]],

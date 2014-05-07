@@ -2,7 +2,7 @@ var searchData=
 [
   ['f',['F',['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_gotoh_tag_01_4.html#af3abd1c7ca6c90ed224040376efa67a1',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::GotohTag &gt;::F()'],['../classmgpu_1_1_cuda_mem_support.html#ae12ffe9c61dfbd3c2bef7f2c586fa62b',1,'mgpu::CudaMemSupport::f()']]],
   ['f_5fflow',['F_flow',['../structnvbio_1_1aln_1_1_score_matrices_3_01_n_00_01_m_00_01aln_1_1_gotoh_tag_01_4.html#acbe5eeeedbc6e40eb5a0b7555185b8f2',1,'nvbio::aln::ScoreMatrices&lt; N, M, aln::GotohTag &gt;']]],
-  ['f_5findex',['f_index',['../structnvbio_1_1mem_1_1mem__functor.html#a208ad917f485617c68e32f951f4b8d60',1,'nvbio::mem::mem_functor']]],
+  ['f_5findex',['f_index',['../structnvbio_1_1mem_1_1mem__functor.html#a208ad917f485617c68e32f951f4b8d60',1,'nvbio::mem::mem_functor::f_index()'],['../structnvbio_1_1mem_1_1right__mem__functor.html#aeeee1064607343ba5339ba130f52efd7',1,'nvbio::mem::right_mem_functor::f_index()'],['../structnvbio_1_1mem_1_1split__mem__functor.html#a867a495c011d3f78d2605185d3894e18',1,'nvbio::mem::split_mem_functor::f_index()'],['../structnvbio_1_1mem_1_1left__mem__functor.html#a1ef29d433febdf2f486b98d291a8b5f8',1,'nvbio::mem::left_mem_functor::f_index()']]],
   ['f_5fmapped',['f_mapped',['../structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a1d1fb982998712a2ebc71eaf606ec8f7',1,'nvbio::bowtie2::cuda::Stats']]],
   ['fc',['fc',['../structct__data__s.html#aa5ea36c40c2bb0480c514f649a221ace',1,'ct_data_s']]],
   ['fd',['fd',['../structgz__state.html#a5963abca9e640ff2aa40b517f9cffc2c',1,'gz_state']]],

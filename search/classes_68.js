@@ -7,6 +7,7 @@ var searchData=
   ['hi_5fbits_5ffunctor',['hi_bits_functor',['../structnvbio_1_1hi__bits__functor.html',1,'nvbio']]],
   ['hi_5fbits_5ffunctor_3c_20uint16_2c_20uint32_20_3e',['hi_bits_functor&lt; uint16, uint32 &gt;',['../structnvbio_1_1hi__bits__functor_3_01uint16_00_01uint32_01_4.html',1,'nvbio']]],
   ['hi_5fbits_5ffunctor_3c_20uint32_2c_20uint32_20_3e',['hi_bits_functor&lt; uint32, uint32 &gt;',['../structnvbio_1_1hi__bits__functor_3_01uint32_00_01uint32_01_4.html',1,'nvbio']]],
+  ['hi_5fbits_5ffunctor_3c_20uint32_2c_20uint64_20_3e',['hi_bits_functor&lt; uint32, uint64 &gt;',['../structnvbio_1_1hi__bits__functor_3_01uint32_00_01uint64_01_4.html',1,'nvbio']]],
   ['hi_5fbits_5ffunctor_3c_20uint8_2c_20uint32_20_3e',['hi_bits_functor&lt; uint8, uint32 &gt;',['../structnvbio_1_1hi__bits__functor_3_01uint8_00_01uint32_01_4.html',1,'nvbio']]],
   ['histogram',['Histogram',['../structnvbio_1_1alndiff_1_1_histogram.html',1,'nvbio::alndiff']]],
   ['histogram2d',['Histogram2d',['../structnvbio_1_1alndiff_1_1_histogram2d.html',1,'nvbio::alndiff']]],
@@ -34,7 +35,7 @@ var searchData=
   ['hoststringsetradices',['HostStringSetRadices',['../structnvbio_1_1priv_1_1_host_string_set_radices.html',1,'nvbio::priv']]],
   ['hostvectorarray',['HostVectorArray',['../structnvbio_1_1_host_vector_array.html',1,'nvbio']]],
   ['hostvectorarray_3c_20io_3a_3anvbio_3a_3aio_3a_3acigar_20_3e',['HostVectorArray&lt; io::nvbio::io::Cigar &gt;',['../structnvbio_1_1_host_vector_array.html',1,'nvbio']]],
-  ['hostvectorarray_3c_20rank_5ftype_20_3e',['HostVectorArray&lt; rank_type &gt;',['../structnvbio_1_1_host_vector_array.html',1,'nvbio']]],
+  ['hostvectorarray_3c_20nvbio_3a_3amemrange_20_3e',['HostVectorArray&lt; nvbio::MEMRange &gt;',['../structnvbio_1_1_host_vector_array.html',1,'nvbio']]],
   ['hostvectorarray_3c_20uint8_20_3e',['HostVectorArray&lt; uint8 &gt;',['../structnvbio_1_1_host_vector_array.html',1,'nvbio']]],
   ['html_5fobject',['html_object',['../structnvbio_1_1html_1_1html__object.html',1,'nvbio::html']]]
 ];

@@ -294,18 +294,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
 <div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1cuda.html#a80597977d4f60872b6c494ddd23f432f">  194</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacenvbio_1_1cuda.html#a80597977d4f60872b6c494ddd23f432f">syncthreads</a>()</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">    #ifdef __CUDA_ARCH__</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">if</span> ((N &gt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#aa95d490045b0bd494d86407fdba56619">cuda::Arch::WARP_SIZE</a>) || (is_pow2&lt;N&gt;() == <span class="keyword">false</span>))</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        __syncthreads();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;} <span class="comment">// namespace cuda</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">    #if defined(NVBIO_DEVICE_COMPILATION)</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>        __syncthreads();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;} <span class="comment">// namespace cuda</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:56 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:12 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -160,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">const</span> string_type <span class="keywordtype">string</span> = <a class="code" href="structnvbio_1_1fmindex_1_1rank__functor.html#ad95d3770717b0e6b1d667425f28a3ea4">string_set</a>[ <a class="code" href="group___strings.html#ga02299ca4809866b8dfae388a0ef237e6">string_id</a> ];</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// and match it in the FM-index</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacenvbio.html#aa0a7fece4db974208c05cee885b7da00">match</a>( <a class="code" href="structnvbio_1_1fmindex_1_1rank__functor.html#ababa82a44af05909080312f2993669ee">index</a>, <span class="keywordtype">string</span>, <a class="code" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">length</a>( <span class="keywordtype">string</span> ) );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacenvbio.html#aa0a7fece4db974208c05cee885b7da00">match</a>( <a class="code" href="structnvbio_1_1fmindex_1_1rank__functor.html#ababa82a44af05909080312f2993669ee">index</a>, <span class="keywordtype">string</span>, <a class="code" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>( <span class="keywordtype">string</span> ) );</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="structnvbio_1_1fmindex_1_1rank__functor.html#ababa82a44af05909080312f2993669ee">   65</a></span>&#160;    <span class="keyword">const</span> index_type        <a class="code" href="structnvbio_1_1fmindex_1_1rank__functor.html#ababa82a44af05909080312f2993669ee">index</a>;</div>
@@ -339,8 +339,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        hits,</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="structnvbio_1_1fmindex_1_1filter__results.html">fmindex::filter_results&lt;range_type&gt;</a>(</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            m_n_queries,</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_slots ),</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_ranges ) ) );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_slots ),</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_ranges ) ) );</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">// and locate the SA coordinates</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    thrust::transform(</div>
@@ -419,11 +419,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        m_hits.begin(),</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <a class="code" href="structnvbio_1_1fmindex_1_1filter__results.html">fmindex::filter_results&lt;range_type&gt;</a>(</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            m_n_queries,</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_slots ),</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_ranges ) ) );</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_slots ),</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_ranges ) ) );</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">// sort by the first 8 bits of the SA coordinates</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>* raw_hits( (<a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*)<a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_hits ) );</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>* raw_hits( (<a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*)<a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_hits ) );</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="structnvbio_1_1cuda_1_1_sort_buffers.html">cuda::SortBuffers&lt;uint64*&gt;</a> sort_buffers;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    sort_buffers.<a class="code" href="structnvbio_1_1cuda_1_1_sort_buffers.html#a0282973f670c67c71dba0fd7b8c6ed12">keys</a>[0] = raw_hits;</div>
@@ -473,8 +473,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <a class="code" href="namespacenvbio.html#af46611235a36ff4e1b22ee4927d6ec9e">device_iterator</a>( hits ),</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="structnvbio_1_1fmindex_1_1filter__results.html">fmindex::filter_results&lt;range_type&gt;</a>(</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            m_n_queries,</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_slots ),</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <a class="code" href="namespacenvbio.html#a0a11def4586de693149a7afc9af30c7d">nvbio::plain_view</a>( m_ranges ) ) );</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_slots ),</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( m_ranges ) ) );</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">// locate the SSA iterators</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    thrust::transform(</div>
@@ -497,7 +497,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

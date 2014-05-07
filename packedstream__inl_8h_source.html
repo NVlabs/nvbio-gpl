@@ -950,134 +950,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    }</div>
 <div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;}</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;<span class="preprocessor">#if defined(__CUDACC__)</span></div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;<span class="preprocessor"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;<span class="comment">// A utility device function to transpose a set of packed input streams:</span></div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;<span class="comment">//   the symbols of the i-th input stream is supposed to be stored contiguously in the range [offset(i), offset + N(i)]</span></div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;<span class="comment">//   the *words* of i-th output stream will be stored in strided fashion at out_stream[tid, tid + (N(i)+symbols_per_word-1/symbols_per_word) * stride]</span></div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;<span class="comment">// The function is warp-synchronous, hence all threads in each warp must be active.</span></div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;<span class="comment">// \param stride       output stride</span></div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="comment">// \param N            length of this thread&#39;s string in the input stream</span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<span class="comment">// \param in_offset    offset of this thread&#39;s string in the input stream</span></div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;<span class="comment">// \param in_stream    input stream</span></div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="comment">// \param out_stream   output stream</span></div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 BLOCKDIM, u<span class="keywordtype">int</span>32 BITS, <span class="keywordtype">bool</span> BIG_ENDIAN_T, <span class="keyword">typename</span> InStreamIterator, <span class="keyword">typename</span> OutStreamIterator&gt;</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;<a class="code" href="types_8h.html#ab1e3db7d296c7ca84db521f23dd81bd3">NVBIO_DEVICE</a></div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;<span class="keywordtype">void</span> transpose_packed_streams(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> stride, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> in_offset, <span class="keyword">const</span> InStreamIterator in_stream, OutStreamIterator out_stream)</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;{</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> WARP_SIZE = <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#aa95d490045b0bd494d86407fdba56619">cuda::Arch::WARP_SIZE</a>;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a> = <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> / WARP_SIZE;</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    __shared__ <span class="keyword">volatile</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> sm_begin_words[ <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> ];</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    __shared__ <span class="keyword">volatile</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> sm_end_words[ <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> ];</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    __shared__ <span class="keyword">volatile</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> sm_words[ <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> * (<a class="code" href="structnvbio_1_1cuda_1_1_arch.html#aa95d490045b0bd494d86407fdba56619">cuda::Arch::WARP_SIZE</a>+1) ];</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (<span class="keyword">sizeof</span>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)*8) / <a class="code" href="infback_8c.html#a5967693540f086cfa357f68978bf0be7">BITS</a>;</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> begin_word       = in_offset / SYMBOLS_PER_WORD;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> end_word         = (in_offset + N + SYMBOLS_PER_WORD-1) / SYMBOLS_PER_WORD;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> word_offset      = in_offset &amp; (SYMBOLS_PER_WORD-1);</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> saved_words      = 0;</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="comment">// save the last word</span></div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    sm_end_words[ threadIdx.x ] = end_word;</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keywordflow">while</span> (__any( begin_word &lt; end_word ))</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    {</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <span class="comment">// save the new first word</span></div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        sm_begin_words[ threadIdx.x ] = begin_word;</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <span class="comment">// use the entire warp to load WARP_SIZE words for each sequence</span></div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> t = 0; t &lt; WARP_SIZE; ++t)</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        {</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> src_begin_word  =  sm_begin_words[ warp_id() * WARP_SIZE + t ];</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> src_end_word    =  sm_end_words[   warp_id() * WARP_SIZE + t ];</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;            <span class="comment">// use the entire warp to load up to WARP_SIZE consecutive words</span></div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;            <span class="keywordflow">if</span> (src_begin_word + warp_tid() &lt; src_end_word)</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;                sm_words[ warp_tid() * (<a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>+<a class="code" href="group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a>) + (warp_id() * (WARP_SIZE+1) + t) ] = in_stream[ src_begin_word + warp_tid() ];</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        }</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">if</span> (begin_word &lt; end_word)</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        {</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            <span class="comment">// compute the number of whole words we are going to save out</span></div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> whole_words = <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>( word_offset ? WARP_SIZE-1 : WARP_SIZE, end_word - begin_word );</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;            <span class="comment">// shift the sequence of bits in shared memory so as to remove the offset before writing them out</span></div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            <span class="keyword">typedef</span> PackedStream&lt;strided_iterator&lt;uint32*&gt;, <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <a class="code" href="infback_8c.html#a5967693540f086cfa357f68978bf0be7">BITS</a>, BIG_ENDIAN_T&gt; stream_type;</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            stream_type <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>( strided_iterator&lt;uint32*&gt;( (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*)sm_words + (warp_id() * (WARP_SIZE+1) + warp_tid()), <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>+NUM_WARPS ) );</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; whole_words * SYMBOLS_PER_WORD; ++i)</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;                <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>[i] = <a class="code" href="group___work_queue_detail.html#ga6a9ef7a5de8befd9e8232679a6d58e26">stream</a>[i + word_offset];</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            <span class="comment">// save the shifted words to global memory</span></div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; whole_words; ++i)</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;                out_stream[ stride*(saved_words + i) ] = sm_words[ (warp_id() * (WARP_SIZE+1) + warp_tid()) + i * (<a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>+NUM_WARPS) ];</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;            <span class="comment">// update the first word we have to start reading from</span></div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;            begin_word  += whole_words;</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;            saved_words += whole_words;</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;            <span class="comment">// update the offset in the word we have to start reading from</span></div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;            word_offset = (word_offset + whole_words * SYMBOLS_PER_WORD) &amp; (SYMBOLS_PER_WORD-1);</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        }</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    }</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;}</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="preprocessor"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;<span class="comment">// A utility device function to transpose a set of packed input streams:</span></div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;<span class="comment">//   the symbols of the i-th input stream is supposed to be stored contiguously in the range [offset(i), offset + N(i)]</span></div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;<span class="comment">//   the *words* of i-th output stream will be stored in strided fashion at out_stream[tid, tid + (N(i)+symbols_per_word-1/symbols_per_word) * stride]</span></div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;<span class="comment">// The function is warp-synchronous, hence all threads in each warp must be active.</span></div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;<span class="comment">// \param stride       output stride</span></div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;<span class="comment">// \param N            length of this thread&#39;s string in the input stream</span></div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;<span class="comment">// \param in_offset    offset of this thread&#39;s string in the input stream</span></div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;<span class="comment">// \param in_stream    input stream</span></div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;<span class="comment">// \param out_stream   output stream</span></div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 BLOCKDIM, u<span class="keywordtype">int</span>32 BITS, <span class="keywordtype">bool</span> BIG_ENDIAN_T, <span class="keyword">typename</span> InStreamIterator, <span class="keyword">typename</span> OutStreamIterator&gt;</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<a class="code" href="types_8h.html#ab1e3db7d296c7ca84db521f23dd81bd3">NVBIO_DEVICE</a></div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;<span class="keywordtype">void</span> transpose_packed_streams(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> stride, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> in_offset, <span class="keyword">const</span> InStreamIterator in_stream, OutStreamIterator out_stream)</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;{</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (<span class="keyword">sizeof</span>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>)*8) / <a class="code" href="infback_8c.html#a5967693540f086cfa357f68978bf0be7">BITS</a>;</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> begin_word       = in_offset / SYMBOLS_PER_WORD;</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> end_word         = (in_offset + N + SYMBOLS_PER_WORD-1) / SYMBOLS_PER_WORD;</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> word_offset      = in_offset &amp; (SYMBOLS_PER_WORD-1);</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    <span class="comment">// load the words of the input stream in local memory with a tight loop</span></div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> lmem[64];</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> word = begin_word; word &lt; end_word; ++word)</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;        lmem[word - begin_word] = in_stream[ word ];</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keyword">typedef</span> PackedStream&lt;const_cached_iterator&lt;const uint32*&gt;,<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,<a class="code" href="infback_8c.html#a5967693540f086cfa357f68978bf0be7">BITS</a>,BIG_ENDIAN_T&gt; const_stream_type;</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="keyword">typedef</span> PackedStream&lt;uint32*,uint8,BITS,BIG_ENDIAN_T&gt;                                    stream_type;</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    const_stream_type clmem_stream( &amp;lmem[0] );</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    stream_type        lmem_stream( &amp;lmem[0] );</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    <span class="comment">// shift the symbols in lmem</span></div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; N; ++i)</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        lmem_stream[i] = clmem_stream[i + word_offset];</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="comment">// save the shifted words to global memory</span></div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; end_word - begin_word; ++i)</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        out_stream[ stride*i ] = lmem[ i ];</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;}</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;<span class="comment">// A utility function to transpose a set of packed input streams:</span></div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;<span class="comment">//   the symbols of the i-th input stream is supposed to be stored contiguously in the range [offset(i), offset + N(i)]</span></div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;<span class="comment">//   the *words* of i-th output stream will be stored in strided fashion at out_stream[tid, tid + (N(i)+symbols_per_word-1/symbols_per_word) * stride]</span></div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;<span class="comment">// \param stride       output stride</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;<span class="comment">// \param N            length of this thread&#39;s string in the input stream</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;<span class="comment">// \param in_offset    offset of this thread&#39;s string in the input stream</span></div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;<span class="comment">// \param in_stream    input stream</span></div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;<span class="comment">// \param out_stream   output stream</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 BLOCKDIM, u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> InStreamIterator, <span class="keyword">typename</span> OutStreamIterator&gt;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
+<div class="line"><a name="l00865"></a><span class="lineno"><a class="code" href="group___packed_streams.html#gad66375016eb0bad4114f35a2b5370e29">  865</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___packed_streams.html#gad66375016eb0bad4114f35a2b5370e29">transpose_packed_streams</a>(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> stride, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N, <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> in_offset, <span class="keyword">const</span> InStreamIterator in_stream, OutStreamIterator out_stream)</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;{</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">std::iterator_traits&lt;InStreamIterator&gt;::value_type</a> word_type;</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (<span class="keyword">sizeof</span>(word_type)*8) / SYMBOL_SIZE;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> word_offset      = in_offset &amp; (SYMBOLS_PER_WORD-1);</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> begin_word       = in_offset / SYMBOLS_PER_WORD;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;          <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> end_word         = (in_offset + N + SYMBOLS_PER_WORD-1) / SYMBOLS_PER_WORD;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="comment">// write out the output symbols</span></div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N_words = (N + SYMBOLS_PER_WORD-1) / SYMBOLS_PER_WORD;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    word_type cur_word = in_stream[begin_word+0];</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> w = 0; w &lt; N_words; ++w)</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    {</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        <span class="keywordflow">if</span> (BIG_ENDIAN == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            <span class="comment">// fill the first part of the output word</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            word_type out_word = cur_word &gt;&gt; (word_offset*SYMBOL_SIZE);</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            <span class="comment">// fetch the next word</span></div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            cur_word = begin_word+w+1 &lt; end_word ? in_stream[begin_word+w+1] : 0u;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;            <span class="comment">// fill the second part of the output word</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            <span class="keywordflow">if</span> (word_offset)</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                out_word |= cur_word &lt;&lt; ((SYMBOLS_PER_WORD - word_offset)*SYMBOL_SIZE);</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            out_stream[ stride*w ] = out_word;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        }</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        {</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;            <span class="comment">// fill the first part of the output word</span></div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            word_type out_word = cur_word &lt;&lt; (word_offset*SYMBOL_SIZE);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;            <span class="comment">// fetch the next word</span></div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;            cur_word = begin_word+w+1 &lt; end_word ? in_stream[begin_word+w+1] : 0u;</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;            <span class="comment">// fill the second part of the output word</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;            <span class="keywordflow">if</span> (word_offset)</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                out_word |= cur_word &gt;&gt; ((SYMBOLS_PER_WORD - word_offset)*SYMBOL_SIZE);</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;            out_stream[ stride*w ] = out_word;</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        }</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    }</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;}</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:13 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -38,7 +38,7 @@ var searchData=
   ['bgzf_5fxlen',['BGZF_XLEN',['../namespace_bam_tools.html#ad82697ad7684367f47ec0cec2b706f93',1,'BamTools']]],
   ['bi_5fbuf',['bi_buf',['../structinternal__state.html#a6880946d081053778f5f544b04603d13',1,'internal_state']]],
   ['bi_5fvalid',['bi_valid',['../structinternal__state.html#a241f3606e41a3aa0ef22868a41bd9a0f',1,'internal_state']]],
-  ['big_5fendian',['BIG_ENDIAN',['../structnvbio_1_1_packed_stream.html#a2a0aa16f0d388a9ab88460ae9920f24c',1,'nvbio::PackedStream::BIG_ENDIAN()'],['../structnvbio_1_1_strided_packed_string_set.html#a631a4e861e836934f2ba174b440647c0',1,'nvbio::StridedPackedStringSet::BIG_ENDIAN()']]],
+  ['big_5fendian',['BIG_ENDIAN',['../structnvbio_1_1_packed_vector.html#af4e04405497f9676b7a1523afcb9fa45',1,'nvbio::PackedVector::BIG_ENDIAN()'],['../structnvbio_1_1_packed_stream.html#a2a0aa16f0d388a9ab88460ae9920f24c',1,'nvbio::PackedStream::BIG_ENDIAN()'],['../structnvbio_1_1_strided_packed_string_set.html#a631a4e861e836934f2ba174b440647c0',1,'nvbio::StridedPackedStringSet::BIG_ENDIAN()']]],
   ['bin',['Bin',['../struct_bam_tools_1_1_bam_alignment.html#ab2a2913ef0a3329fb63b25aa0cfae4c3',1,'BamTools::BamAlignment']]],
   ['bin_5fcalls',['bin_calls',['../structnvbio_1_1_time_series.html#a811719c76fac9c05df85f5c3cd0e1c76',1,'nvbio::TimeSeries']]],
   ['bin_5fitems',['bin_items',['../structnvbio_1_1_time_series.html#ad8307e045386e0105751e99563bf131f',1,'nvbio::TimeSeries']]],

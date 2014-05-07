@@ -177,14 +177,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// merge longer and longer runs in a loop</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="group___priority_deques.html#ga5de03bd4b29716dd5a555a544ebc2624" title="Swaps the elements of two priority deques. ">swap</a> = 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> width = 2u; width &lt; n; width *= 2u, swap = !<a class="code" href="group___priority_deques.html#ga5de03bd4b29716dd5a555a544ebc2624" title="Swaps the elements of two priority deques. ">swap</a>)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a> = 2u; <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a> &lt; n; <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a> *= 2u, swap = !<a class="code" href="group___priority_deques.html#ga5de03bd4b29716dd5a555a544ebc2624" title="Swaps the elements of two priority deques. ">swap</a>)</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// array A is full of runs of length width</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; n; i += 2u * width)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; n; i += 2u * <a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a>)</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// merge two runs: A[i:i+width-1] and A[i+width:i+2*width-1] to B[]</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">//  or copy A[i:n-1] to B[] ( if(i+width &gt;= n) )</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="namespacenvbio_1_1mergesort.html#a6dec1b98e3af9f93dea5fc763ba5b43c">mergesort::merge</a>( A, i, <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>(i+width, n), <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>(i+2*width, n), B, cmp );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="namespacenvbio_1_1mergesort.html#a6dec1b98e3af9f93dea5fc763ba5b43c">mergesort::merge</a>( A, i, <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>(i+<a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a>, n), <a class="code" href="group___basic_utils.html#gaeeb2406339f4edfcee3f007aaccd478e">nvbio::min</a>(i+2*<a class="code" href="namespacenvbio_1_1priqueue.html#a0027ef2e556d2140e29253c94b48c5d2">width</a>, n), B, cmp );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// now work array B is full of runs of length 2*width, swap A and B.</span></div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 08:30:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 7 2014 23:59:13 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
