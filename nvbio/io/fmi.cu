@@ -508,7 +508,7 @@ int FMIndexDataRAM::load(
         if (0)
         {
             stream_type genome( m_genome_stream );
-            const uint32 crc = crcCalc( genome.begin(), uint32(seq_length) );
+            const uint32 crc = crcCalc( genome, uint32(seq_length) );
             log_info(stderr, "  crc           : %u\n", crc);
         }
     }
@@ -585,8 +585,8 @@ int FMIndexDataRAM::load(
             m_occ = &m_occ_vec[0];
 
             build_occurrence_table<OCC_INT>(
-                bwt.begin(),
-                bwt.begin() + seq_length,
+                bwt,
+                bwt + seq_length,
                 m_occ,
                 cnt );
         }
@@ -596,8 +596,8 @@ int FMIndexDataRAM::load(
             m_rocc = &m_rocc_vec[0];
 
             build_occurrence_table<OCC_INT>(
-                rbwt.begin(),
-                rbwt.begin() + seq_length,
+                rbwt,
+                rbwt + seq_length,
                 m_rocc,
                 rcnt );
         }
@@ -724,7 +724,7 @@ int FMIndexDataMMAPServer::load(const char* genome_prefix, const char* mapped_na
             if (0)
             {
                 stream_type genome( m_genome_stream );
-                const uint32 crc = crcCalc( genome.begin(), uint32(seq_length) );
+                const uint32 crc = crcCalc( genome, uint32(seq_length) );
                 log_info(stderr, "  crc           : %u\n", crc);
             }
         }
@@ -789,14 +789,14 @@ int FMIndexDataMMAPServer::load(const char* genome_prefix, const char* mapped_na
 
         log_info(stderr, "building occurrence tables... started\n");
         build_occurrence_table<OCC_INT>(
-            bwt.begin(),
-            bwt.begin() + seq_length,
+            bwt,
+            bwt + seq_length,
             m_occ,
             cnt );
 
         build_occurrence_table<OCC_INT>(
-            rbwt.begin(),
-            rbwt.begin() + seq_length,
+            rbwt,
+            rbwt + seq_length,
             m_rocc,
             rcnt );
         log_info(stderr, "building occurrence tables... done\n");

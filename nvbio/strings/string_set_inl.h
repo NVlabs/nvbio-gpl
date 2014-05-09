@@ -1104,12 +1104,12 @@ template <
     typename OutOffsetIterator>
 struct copy_dispatch<
     ConcatenatedStringSet<
-        PackedStreamIterator< PackedStream<OutStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+        PackedStream<OutStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
         OutOffsetIterator >
     >
 {
     typedef ConcatenatedStringSet<
-        PackedStreamIterator< PackedStream<OutStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+        PackedStream<OutStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
         OutOffsetIterator >
         out_string_set_type;
 
@@ -1175,7 +1175,7 @@ struct copy_dispatch<
                     in_string_set.size(),
                     N_words,
                     in_string_set,
-                    out_string_set.base_string().container().stream(),
+                    out_string_set.base_string().stream(),
                     out_string_set.offsets() );
 
                 cudaThreadSynchronize();
@@ -1227,7 +1227,7 @@ struct copy_dispatch<
                     in_string_set.size(),
                     N_symbols,
                     in_string_set,
-                    out_string_set.base_string().container().stream(),
+                    out_string_set.base_string().stream(),
                     out_string_set.offsets() );
 
                 cudaThreadSynchronize();
@@ -1294,12 +1294,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1315,7 +1315,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_concat_to_strided_kernel<
                 BLOCKDIM,
@@ -1342,12 +1342,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1363,7 +1363,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_sparse_to_strided_kernel<
                 BLOCKDIM,
@@ -1653,12 +1653,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1674,7 +1674,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_concat_to_strided_kernel<
                 BLOCKDIM,
@@ -1701,12 +1701,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1722,7 +1722,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_sparse_to_strided_kernel<
                 BLOCKDIM,
@@ -1888,12 +1888,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef ConcatenatedStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1909,7 +1909,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_concatenated_to_strided_packed_kernel<
                 BLOCKDIM,
@@ -1933,12 +1933,12 @@ struct copy_dispatch<
         typename InOffsetIterator>
     struct source_dispatch<
         SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>
         >
     {
         typedef SparseStringSet<
-            PackedStreamIterator< PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+            PackedStream<InStreamIterator,SymbolType,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
             InOffsetIterator>   in_string_set_type;
 
         static void enact(
@@ -1954,7 +1954,7 @@ struct copy_dispatch<
             const uint32 n_blocks = (in_string_set.size() + BLOCKDIM-1)/BLOCKDIM;
 
             // get the base word stream of the input
-            const InStreamIterator in_stream = in_string_set.base_string().container().stream();
+            const InStreamIterator in_stream = in_string_set.base_string().stream();
 
             packed_sparse_to_strided_packed_kernel<
                 BLOCKDIM,

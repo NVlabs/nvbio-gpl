@@ -40,8 +40,9 @@ enum DirType  { FORWARD  = 0u, REVERSE    = 1u };
 template<typename IndexType>
 struct ReverseXform
 {
-    typedef IndexType index_type;
-    const index_type pos;
+    typedef IndexType  index_type;
+    typedef index_type argument_type;
+    typedef index_type result_type;
 
     /// empty constructor
     ///
@@ -57,6 +58,8 @@ struct ReverseXform
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     index_type operator() (const index_type i) const { return pos-i; }
+
+    const index_type pos;
 };
 
 ///
@@ -65,8 +68,9 @@ struct ReverseXform
 template<typename IndexType>
 struct OffsetXform
 {
-    typedef IndexType index_type;
-    const index_type pos;
+    typedef IndexType  index_type;
+    typedef index_type argument_type;
+    typedef index_type result_type;
 
     /// empty constructor
     ///
@@ -82,6 +86,8 @@ struct OffsetXform
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     index_type operator() (const index_type i) const { return pos+i; }
+
+    const index_type pos;
 };
 
 struct quality_nop {};

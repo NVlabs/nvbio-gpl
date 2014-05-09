@@ -83,10 +83,10 @@ struct StringPrefetcher
 ///
 template <typename StorageIterator, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, uint32 CACHE_SIZE>
 struct StringPrefetcher<
-    vector_view< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> > >,
+    vector_view< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
     lmem_cache_tag<CACHE_SIZE> >
 {
-    typedef vector_view< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> > >   input_string_type;
+    typedef vector_view< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >                           input_string_type;
     typedef PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_tag<CACHE_SIZE> >              loader_type;
     typedef vector_view<typename loader_type::iterator>                                                             string_type;
 
@@ -100,7 +100,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.base().container().stream(),
+            loader.load( string.base().stream(),
                          string.base().index(),
                          string.size() ) );
     }
@@ -118,7 +118,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.base().container().stream(),
+            loader.load( string.base().stream(),
                          string.base().index(),
                          string.size(),
                          range,
@@ -129,7 +129,7 @@ struct StringPrefetcher<
 };
 
 ///
-/// A class to prefetch an infix built on top of a PackedStreamIterator using a local-memory cache
+/// A class to prefetch an infix built on top of a PackedStream using a local-memory cache
 ///
 /// \tparam StorageIterator     the underlying packed string storage iterator
 /// \tparam SYMBOL_SIZE_T       the size of the packed symbols, in bits
@@ -138,11 +138,11 @@ struct StringPrefetcher<
 ///
 template <typename InfixCoordType, typename StorageIterator, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, uint32 CACHE_SIZE>
 struct StringPrefetcher<
-    Infix< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+    Infix< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
            InfixCoordType >,
     lmem_cache_tag<CACHE_SIZE> >
 {
-    typedef Infix< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
+    typedef Infix< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T>,
                    InfixCoordType>                                                                                  input_string_type;
     typedef PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_tag<CACHE_SIZE> >              loader_type;
     typedef vector_view<typename loader_type::iterator>                                                             string_type;
@@ -157,7 +157,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.m_string.container().stream(),
+            loader.load( string.m_string.stream(),
                          string.m_string.index() + string.range().x,
                          string.size() ) );
     }
@@ -175,7 +175,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.m_string.container().stream(),
+            loader.load( string.m_string.stream(),
                          string.m_string.index() + string.range().x,
                          string.size(),
                          range,
@@ -186,7 +186,7 @@ struct StringPrefetcher<
 };
 
 ///
-/// A class to prefetch an infix built on top of a vector_view of a PackedStreamIterator using a local-memory cache
+/// A class to prefetch an infix built on top of a vector_view of a PackedStream using a local-memory cache
 ///
 /// \tparam StorageIterator     the underlying packed string storage iterator
 /// \tparam SYMBOL_SIZE_T       the size of the packed symbols, in bits
@@ -195,11 +195,11 @@ struct StringPrefetcher<
 ///
 template <typename InfixCoordType, typename StorageIterator, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, uint32 CACHE_SIZE>
 struct StringPrefetcher<
-    Infix< vector_view< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> > >,
+    Infix< vector_view< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
            InfixCoordType >,
     lmem_cache_tag<CACHE_SIZE> >
 {
-    typedef Infix< vector_view< PackedStreamIterator< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> > >,
+    typedef Infix< vector_view< PackedStream<StorageIterator,uint8,SYMBOL_SIZE_T,BIG_ENDIAN_T> >,
                    InfixCoordType>                                                                                  input_string_type;
     typedef PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_tag<CACHE_SIZE> >              loader_type;
     typedef vector_view<typename loader_type::iterator>                                                             string_type;
@@ -214,7 +214,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.m_string.base().container().stream(),
+            loader.load( string.m_string.base().stream(),
                          string.m_string.base().index() + string.range().x,
                          string.size() ) );
     }
@@ -232,7 +232,7 @@ struct StringPrefetcher<
     {
         return string_type(
             string.size(),
-            loader.load( string.m_string.base().container().stream(),
+            loader.load( string.m_string.base().stream(),
                          string.m_string.base().index() + string.range().x,
                          string.size(),
                          range,
