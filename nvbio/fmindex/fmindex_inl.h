@@ -293,7 +293,7 @@ typename fm_index<TRankDictionary,TSuffixArray>::index_type basic_inv_psi(
 {
     typedef fm_index<TRankDictionary,TSuffixArray> FMIndexType;
     typedef typename fm_index<TRankDictionary,TSuffixArray>::index_type index_type;
-    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
+//    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
 
     NVBIO_CUDA_ASSERT( i <= fmi.length() );
     typename FMIndexType::bwt_type bwt = fmi.bwt();
@@ -324,7 +324,7 @@ typename fm_index<TRankDictionary,TSuffixArray>::range_type inv_psi(
 {
     typedef fm_index<TRankDictionary,TSuffixArray> FMIndexType;
     typedef typename fm_index<TRankDictionary,TSuffixArray>::index_type index_type;
-    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
+//    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
 
     NVBIO_CUDA_ASSERT( i <= fmi.length() );
     index_type j = i;
@@ -367,7 +367,7 @@ typename fm_index<TRankDictionary,TSuffixArray>::index_type locate(
 {
     typedef fm_index<TRankDictionary,TSuffixArray> FMIndexType;
     typedef typename fm_index<TRankDictionary,TSuffixArray>::index_type index_type;
-    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
+//    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
 
     NVBIO_CUDA_ASSERT( i <= fmi.length() );
     index_type j = i;
@@ -411,7 +411,7 @@ typename fm_index<TRankDictionary,TSuffixArray>::range_type locate_ssa_iterator(
 {
     typedef fm_index<TRankDictionary,TSuffixArray> FMIndexType;
     typedef typename fm_index<TRankDictionary,TSuffixArray>::index_type index_type;
-    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
+//    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
 
     NVBIO_CUDA_ASSERT( i <= fmi.length() );
     index_type j = i;
@@ -452,7 +452,7 @@ typename fm_index<TRankDictionary,TSuffixArray>::index_type lookup_ssa_iterator(
 {
     typedef fm_index<TRankDictionary,TSuffixArray> FMIndexType;
     typedef typename fm_index<TRankDictionary,TSuffixArray>::index_type index_type;
-    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
+//    typedef typename fm_index<TRankDictionary,TSuffixArray>::range_type range_type;
 
     typename FMIndexType::suffix_array_type sa = fmi.sa();
     index_type suffix; sa.fetch( it.x, suffix );
