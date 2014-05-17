@@ -88,11 +88,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Parallel Primitives<div class="ingroups"><a class="el" href="group___basic.html">Basic</a></div></div>  </div>
+<div class="title">Parallel Primitives<div class="ingroups"><a class="el" href="group___c_u_d_a.html">CUDA</a> &#124; <a class="el" href="group___basic.html">Basic</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>This module provides a set of convenience wrappers to invoke device-wide CUB's parallel primitives without worrying about the memory management. All temporary storage is in fact allocated within a single thrust::device_vector passed by the user, which can be safely reused across function calls. </p>
+<p>This module provides a set of convenience wrappers to invoke device-wide CUB's parallel primitives without worrying about the memory management. All temporary storage is in fact allocated within a single thrust::device_vector passed by the user, which can be safely reused across function calls.</p>
+<p>This module provides a set of convenience wrappers to invoke system-wide CUB's parallel primitives without worrying about the memory management. All temporary storage is in fact allocated within a single thrust::system_vector passed by the user, which can be safely reused across function calls. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -133,8 +134,73 @@ Functions</h2></td></tr>
 <tr class="memitem:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memTemplParams" colspan="2">template&lt;typename KeyIterator , typename ValueIterator , typename OutputKeyIterator , typename OutputValueIterator , typename ReductionOp &gt; </td></tr>
 <tr class="memitem:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaee8cb8a5a27204b087e9c3d332716e99">nvbio::cuda::reduce_by_key</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, KeyIterator d_keys_in, ValueIterator d_values_in, OutputKeyIterator d_keys_out, OutputValueIterator d_values_out, ReductionOp reduction_op, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
 <tr class="separator:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc4f07953d774c03e710348fad815a38"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename PredicateIterator &gt; </td></tr>
+<tr class="memitem:gacc4f07953d774c03e710348fad815a38"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gacc4f07953d774c03e710348fad815a38">nvbio::any</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
+<tr class="separator:gacc4f07953d774c03e710348fad815a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad832158b0c1628399224ea7535c54dbe"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename PredicateIterator &gt; </td></tr>
+<tr class="memitem:gad832158b0c1628399224ea7535c54dbe"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gad832158b0c1628399224ea7535c54dbe">nvbio::all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
+<tr class="separator:gad832158b0c1628399224ea7535c54dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator &gt; </td></tr>
+<tr class="memitem:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaa7b0ec7a4528839849074ca8e08a5821">nvbio::is_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values)</td></tr>
+<tr class="separator:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator , typename Headflags &gt; </td></tr>
+<tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga99051290b643f2f1e26be506fca151aa">nvbio::is_segment_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Headflags flags)</td></tr>
+<tr class="separator:ga99051290b643f2f1e26be506fca151aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename BinaryOp &gt; </td></tr>
+<tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplItemLeft" align="right" valign="top">std::iterator_traits<br class="typebreak"/>
+&lt; InputIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga5a34466c84069a847a416ca5c8c4d771">nvbio::reduce</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, BinaryOp op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga5a34466c84069a847a416ca5c8c4d771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp &gt; </td></tr>
+<tr class="memitem:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga1ac5baa7d97ef1a3c1429445797877f2">nvbio::inclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, BinaryOp op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp , typename Identity &gt; </td></tr>
+<tr class="memitem:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaf4b322b445998fc49a0a6e5a69a1c8df">nvbio::exclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, BinaryOp op, Identity identity, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc739614df72926f380bfc43ff3fb266"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename FlagsIterator , typename OutputIterator &gt; </td></tr>
+<tr class="memitem:gacc739614df72926f380bfc43ff3fb266"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gacc739614df72926f380bfc43ff3fb266">nvbio::copy_flagged</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, FlagsIterator flags, OutputIterator out, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gacc739614df72926f380bfc43ff3fb266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga754bf11c1369997a67ef0c981a4933a1"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename Predicate &gt; </td></tr>
+<tr class="memitem:ga754bf11c1369997a67ef0c981a4933a1"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga754bf11c1369997a67ef0c981a4933a1">nvbio::copy_if</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Predicate pred, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga754bf11c1369997a67ef0c981a4933a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ebbe79e443fc6326095245cd45ae782"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename CountIterator &gt; </td></tr>
+<tr class="memitem:ga6ebbe79e443fc6326095245cd45ae782"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga6ebbe79e443fc6326095245cd45ae782">nvbio::runlength_encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, CountIterator counts, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga6ebbe79e443fc6326095245cd45ae782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename KeyIterator , typename ValueIterator , typename OutputKeyIterator , typename OutputValueIterator , typename ReductionOp &gt; </td></tr>
+<tr class="memitem:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gac282f202efe51d7a7d4b9543fbafbf51">nvbio::reduce_by_key</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, KeyIterator keys_in, ValueIterator values_in, OutputKeyIterator keys_out, OutputValueIterator values_out, ReductionOp reduction_op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gad832158b0c1628399224ea7535c54dbe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename PredicateIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvbio::all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return true if all items in the range [0,n) evaluate to true </p>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00090">90</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ga9dcce72ad9a2d44f92aa508b91b3378d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +228,7 @@ template&lt;typename PredicateIterator &gt; </div>
 </div><div class="memdoc">
 <p>return true if all items in the range [0,n) evaluate to true </p>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00103">103</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00103">103</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -193,7 +259,38 @@ template&lt;typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>make sure a given buffer is as big as size; <b>note:</b> upon reallocations, the contents of the buffer are invalidated </p>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00027">27</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00027">27</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gacc4f07953d774c03e710348fad815a38"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename PredicateIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvbio::any </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return true if any item in the range [0,n) evaluates to true </p>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00080">80</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +321,67 @@ template&lt;typename PredicateIterator &gt; </div>
 </div><div class="memdoc">
 <p>return true if any item in the range [0,n) evaluates to true </p>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00087">87</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00087">87</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gacc739614df72926f380bfc43ff3fb266"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename FlagsIterator , typename OutputIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 nvbio::copy_flagged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FlagsIterator&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIterator&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide copy of flagged items</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of input items </td></tr>
+    <tr><td class="paramname">in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">flags</td><td>a system flags iterator </td></tr>
+    <tr><td class="paramname">out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00592">592</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +441,67 @@ template&lt;typename InputIterator , typename FlagsIterator , typename OutputIte
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00300">300</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00300">300</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga754bf11c1369997a67ef0c981a4933a1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 nvbio::copy_if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIterator&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide copy of predicated items</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of input items </td></tr>
+    <tr><td class="paramname">in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">pred</td><td>a unary predicate functor </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00613">613</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +561,73 @@ template&lt;typename InputIterator , typename OutputIterator , typename Predicat
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00343">343</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00343">343</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4b322b445998fc49a0a6e5a69a1c8df"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp , typename Identity &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::exclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIterator&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOp&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Identity&#160;</td>
+          <td class="paramname"><em>identity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide exclusive scan</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of items to reduce </td></tr>
+    <tr><td class="paramname">in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">op</td><td>the binary reduction operator </td></tr>
+    <tr><td class="paramname">identity</td><td>the identity element </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00344">344</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -410,7 +693,66 @@ template&lt;typename InputIterator , typename OutputIterator , typename BinaryOp
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00259">259</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00259">259</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1ac5baa7d97ef1a3c1429445797877f2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvbio::inclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIterator&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOp&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide inclusive scan</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of items to reduce </td></tr>
+    <tr><td class="paramname">in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">op</td><td>the binary reduction operator </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00318">318</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -469,7 +811,44 @@ template&lt;typename InputIterator , typename OutputIterator , typename BinaryOp
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00222">222</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00222">222</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga99051290b643f2f1e26be506fca151aa"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename Iterator , typename Headflags &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvbio::is_segment_sorted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Headflags&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return true if the items in the range [0,n) are sorted by segment, where the beginning of each segment is identified by a set head flag </p>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00146">146</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -506,7 +885,38 @@ template&lt;typename Iterator , typename Headflags &gt; </div>
 </div><div class="memdoc">
 <p>return true if the items in the range [0,n) are sorted by segment, where the beginning of each segment is identified by a set head flag </p>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00165">165</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00165">165</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa7b0ec7a4528839849074ca8e08a5821"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvbio::is_sorted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator&#160;</td>
+          <td class="paramname"><em>values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return true if the items in the range [0,n) are sorted </p>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00135">135</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -537,7 +947,59 @@ template&lt;typename Iterator &gt; </div>
 </div><div class="memdoc">
 <p>return true if the items in the range [0,n) are sorted </p>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00154">154</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00154">154</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5a34466c84069a847a416ca5c8c4d771"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename BinaryOp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::iterator_traits&lt; InputIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a> nvbio::reduce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOp&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide reduce</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of items to reduce </td></tr>
+    <tr><td class="paramname">in</td><td>a system iterator </td></tr>
+    <tr><td class="paramname">op</td><td>the binary reduction operator </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00295">295</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -589,7 +1051,81 @@ template&lt;typename InputIterator , typename BinaryOp &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00181">181</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00181">181</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gac282f202efe51d7a7d4b9543fbafbf51"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename KeyIterator , typename ValueIterator , typename OutputKeyIterator , typename OutputValueIterator , typename ReductionOp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 nvbio::reduce_by_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyIterator&#160;</td>
+          <td class="paramname"><em>keys_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueIterator&#160;</td>
+          <td class="paramname"><em>values_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputKeyIterator&#160;</td>
+          <td class="paramname"><em>keys_out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputValueIterator&#160;</td>
+          <td class="paramname"><em>values_out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ReductionOp&#160;</td>
+          <td class="paramname"><em>reduction_op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide run-length encode</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of input items </td></tr>
+    <tr><td class="paramname">keys_in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">values_in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">keys_out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">values_out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">reduction_op</td><td>a reduction operator </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00657">657</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +1199,67 @@ template&lt;typename KeyIterator , typename ValueIterator , typename OutputKeyIt
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00432">432</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00432">432</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6ebbe79e443fc6326095245cd45ae782"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename CountIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 nvbio::runlength_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIterator&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIterator&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CountIterator&#160;</td>
+          <td class="paramname"><em>counts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>temp_storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>system-wide run-length encode</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of input items </td></tr>
+    <tr><td class="paramname">in</td><td>a system input iterator </td></tr>
+    <tr><td class="paramname">out</td><td>a system output iterator </td></tr>
+    <tr><td class="paramname">counts</td><td>a system output count iterator </td></tr>
+    <tr><td class="paramname">temp_storage</td><td>some temporary storage</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
+
+<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00634">634</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
@@ -723,14 +1319,14 @@ template&lt;typename InputIterator , typename OutputIterator , typename CountIte
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of copied items </dd></dl>
 
-<p>Definition at line <a class="el" href="primitives__inl_8h_source.html#l00386">386</a> of file <a class="el" href="primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="cuda_2primitives__inl_8h_source.html#l00386">386</a> of file <a class="el" href="cuda_2primitives__inl_8h_source.html">primitives_inl.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

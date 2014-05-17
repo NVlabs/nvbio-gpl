@@ -173,11 +173,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1packed__seed.html#a2434d7e2d33dcfaa794a36282969b0dd">nvbio::bowtie2::cuda::packed_seed</a>
 </li>
 <li>READ_BIG_ENDIAN
-: <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#afff3184325ee4c014b496f21c29c438d">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
+: <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a708d8b4eb9bbdb7ae76e2583d87fb536">nvbio::io::ReadDataView&lt; IndexIterator, ReadStorageIterator, QualStorageIterator, NameStorageIterator &gt;</a>
 </li>
 <li>READ_BITS
 : <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#aba52b759eb64b9b8452d04f8224ca14f">nvbio::io::FMIndexData</a>
-, <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a2dc6a894c80677a6a81526036b393128">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
+, <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a9d6de6432f70a809cec26ed3d9639ee6">nvbio::io::ReadDataView&lt; IndexIterator, ReadStorageIterator, QualStorageIterator, NameStorageIterator &gt;</a>
 </li>
 <li>read_data
 : <a class="el" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#af5f2aaea44573f480b7eddf40d07a25d">nvbio::io::CPUOutputBatch</a>
@@ -238,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base_1_1context__type.html#ab85b1e48bdf792a942f3f2202629d962">nvbio::bowtie2::cuda::detail::AlignmentStreamBase&lt; TYPE, AlignerType, PipelineType &gt;::context_type</a>
 </li>
 <li>READ_SYMBOLS_PER_WORD
-: <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a4f7934cd087366ddea557b736618d84a">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a>
+: <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#af283fdfd69464be65ef8fd549af9988d">nvbio::io::ReadDataView&lt; IndexIterator, ReadStorageIterator, QualStorageIterator, NameStorageIterator &gt;</a>
 </li>
 <li>reads
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_traceback_pipeline_state.html#a115f22d529e983c423a6aa2202a7edc8">nvbio::bowtie2::cuda::TracebackPipelineState&lt; ScoringScheme &gt;</a>
@@ -252,9 +252,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_debug_state.html#a414f911bffca22d477059d8a98d09a2b">nvbio::bowtie2::cuda::DebugState</a>
 </li>
 <li>ref_id
-: <a class="el" href="structnvbio_1_1alndiff_1_1_debug_alignment_stream_1_1_info.html#a5b3d29e8716b6aa25fd414dfdc8774b9">nvbio::alndiff::DebugAlignmentStream::Info</a>
+: <a class="el" href="structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#ac41d134a930868520daa5e5277f32385">nvbio::io::DebugOutput::DbgInfo</a>
 , <a class="el" href="structnvbio_1_1alndiff_1_1_alignment.html#a7df357f9f44a92407e7502ae14bdb0ca">nvbio::alndiff::Alignment</a>
-, <a class="el" href="structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#ac41d134a930868520daa5e5277f32385">nvbio::io::DebugOutput::DbgInfo</a>
+, <a class="el" href="structnvbio_1_1alndiff_1_1_debug_alignment_stream_1_1_info.html#a5b3d29e8716b6aa25fd414dfdc8774b9">nvbio::alndiff::DebugAlignmentStream::Info</a>
+</li>
+<li>ref_variant_index
+: <a class="el" href="structnvbio_1_1io_1_1_s_n_p_database.html#ad977ad69aa3e1c6f37688024f0e6d040">nvbio::io::SNPDatabase</a>
+</li>
+<li>reference_len
+: <a class="el" href="structnvbio_1_1io_1_1_s_n_p__sequence__index.html#a07ad3bedc98c476d520d72bca0b7589c">nvbio::io::SNP_sequence_index</a>
+</li>
+<li>reference_sequence_names
+: <a class="el" href="structnvbio_1_1io_1_1_s_n_p_database.html#ae8148ef60b55fa2654a6a08c355213b8">nvbio::io::SNPDatabase</a>
+</li>
+<li>reference_sequences
+: <a class="el" href="structnvbio_1_1io_1_1_s_n_p_database.html#a0957e75e5cb8c9be003d049c385864a4">nvbio::io::SNPDatabase</a>
+</li>
+<li>reference_start
+: <a class="el" href="structnvbio_1_1io_1_1_s_n_p__sequence__index.html#a8921c20e13d1c6114482804decb51bf4">nvbio::io::SNP_sequence_index</a>
 </li>
 <li>References
 : <a class="el" href="struct_bam_reader_1_1_bam_reader_private.html#a75d53888661d6bce7800d988a1bb4896">BamTools::BamReader::BamReaderPrivate</a>
@@ -297,17 +312,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html#ade293b070a38952b84fb85fb8fa7112d">nvbio::bowtie2::cuda::BaseScoringPipelineState&lt; ScoringScheme &gt;</a>
 </li>
 <li>rL2
-: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_info.html#aa088b21f53e47c185ef18c58d233a284">nvbio::io::FMIndexDataMMAPInfo</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a3982c4da550d7c07d87d3fc2b345c61f">nvbio::io::FMIndexData</a>
 , <a class="el" href="struct_info.html#a5002a1e6808ee9a19b40fd4f94069b0f">Info</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a3982c4da550d7c07d87d3fc2b345c61f">nvbio::io::FMIndexData</a>
+, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_info.html#aa088b21f53e47c185ef18c58d233a284">nvbio::io::FMIndexDataMMAPInfo</a>
 </li>
 <li>row
 : <a class="el" href="structmgpu_1_1_matrix_element.html#af6571a65190c84b7078b550db2dbfdfb">mgpu::MatrixElement</a>
 </li>
 <li>rprimary
-: <a class="el" href="struct_info.html#a753d1f8bd0c9a10ac5230e369ec2966b">Info</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_info.html#a1bfaceda3152dac83cd0e5271492cc4a">nvbio::io::FMIndexDataMMAPInfo</a>
+, <a class="el" href="struct_info.html#a753d1f8bd0c9a10ac5230e369ec2966b">Info</a>
 , <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#abadce99c7bd170de0898f8b32a5466d6">nvbio::io::FMIndexData</a>
-, <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_info.html#a1bfaceda3152dac83cd0e5271492cc4a">nvbio::io::FMIndexDataMMAPInfo</a>
 </li>
 <li>rseeds
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_best_approx_scoring_pipeline_state.html#aa5f51f3455074fd3537d99f481445410">nvbio::bowtie2::cuda::BestApproxScoringPipelineState&lt; ScoringScheme &gt;</a>
@@ -325,7 +340,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

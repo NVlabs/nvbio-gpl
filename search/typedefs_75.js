@@ -24,7 +24,7 @@ var searchData=
   ['ulg',['ulg',['../zutil_8h.html#abd6f60bf9450af2ecb94097a32c19a64',1,'zutil.h']]],
   ['ulong',['uLong',['../zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40',1,'zconf.h']]],
   ['ulongf',['uLongf',['../zconf_8h.html#a0426a5a0ed418ec4ae15af8281c64254',1,'zconf.h']]],
-  ['uncached_5ftag_5ftype',['uncached_tag_type',['../examples_2fmmap_2alignment_8h.html#ae28f689e83db4b4f03a4c8e7ea721a25',1,'uncached_tag_type():&#160;alignment.h'],['../examples_2qmap_2alignment_8h.html#ae28f689e83db4b4f03a4c8e7ea721a25',1,'uncached_tag_type():&#160;alignment.h']]],
+  ['uncached_5ftag_5ftype',['uncached_tag_type',['../examples_2qmap_2alignment_8h.html#ae28f689e83db4b4f03a4c8e7ea721a25',1,'alignment.h']]],
   ['ush',['ush',['../zutil_8h.html#a3754180d606d4ed15468d15d9665aa2e',1,'zutil.h']]],
   ['ushf',['ushf',['../zutil_8h.html#ab854e4722acf30ada8a7a71b58d1b238',1,'zutil.h']]],
   ['ushort',['ushort',['../namespacemgpu.html#ab0ed1d7a10bd3a0581f4db5478839938',1,'mgpu']]]

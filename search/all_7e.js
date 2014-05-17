@@ -10,6 +10,7 @@ var searchData=
   ['_7ebgzfdata',['~BgzfData',['../struct_bam_tools_1_1_bgzf_data.html#a5608b51860be0698ddbe2b62012d09f2',1,'BamTools::BgzfData']]],
   ['_7ebgzfilewriter',['~BGZFileWriter',['../structnvbio_1_1_b_g_z_file_writer.html#a02751c57ac7baa47469c07300691bf3b',1,'nvbio::BGZFileWriter']]],
   ['_7ebody_5fobject',['~body_object',['../structnvbio_1_1html_1_1body__object.html#aa4c68c96a0df1ecd0e44d517a50501b0',1,'nvbio::html::body_object']]],
+  ['_7ebufferedtextfile',['~BufferedTextFile',['../group___i_o.html#ga2d75f8c8fb8f454775add9381396c36f',1,'nvbio::io::BufferedTextFile']]],
   ['_7ebwtbgzwriter',['~BWTBGZWriter',['../structnvbio_1_1_b_w_t_b_g_z_writer.html#aed56ebefa079acd9c5fa8fc16985e08b',1,'nvbio::BWTBGZWriter']]],
   ['_7ebwtlz4writer',['~BWTLZ4Writer',['../structnvbio_1_1_b_w_t_l_z4_writer.html#ac578bae52929c1ea4306ab6b379cee41',1,'nvbio::BWTLZ4Writer']]],
   ['_7ecached_5fiterator',['~cached_iterator',['../structnvbio_1_1cached__iterator.html#ab05e596151746d68af059e5f6af56d18',1,'nvbio::cached_iterator']]],

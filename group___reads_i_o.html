@@ -105,7 +105,7 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView&lt; IndexIterator, ReadIterator, QualIterator, NameIterator &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">nvbio::io::ReadDataView&lt; IndexIterator, ReadStorageIterator, QualStorageIterator, NameStorageIterator &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data.html">nvbio::io::ReadData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +118,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:gab1633e83b021df047f61a9328d18ba5b"><td class="memItemLeft" align="right" valign="top">typedef ReadDataView&lt; uint32 <br class="typebreak"/>
+*, uint32 *, char *, char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gab1633e83b021df047f61a9328d18ba5b">nvbio::io::ReadDataCore</a></td></tr>
+<tr class="separator:gab1633e83b021df047f61a9328d18ba5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad2ec8bb8eca626947e9c60cd67d7e9ec"><td class="memItemLeft" align="right" valign="top">typedef ReadDataRAM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gad2ec8bb8eca626947e9c60cd67d7e9ec">nvbio::io::ReadDataHost</a></td></tr>
 <tr class="separator:gad2ec8bb8eca626947e9c60cd67d7e9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ddc795e74723f7c6d085ca835af6ce4"><td class="memItemLeft" align="right" valign="top">typedef ReadDataDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga4ddc795e74723f7c6d085ca835af6ce4">nvbio::io::ReadDataCUDA</a></td></tr>
@@ -150,6 +153,21 @@ Functions</h2></td></tr>
 <tr class="separator:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="gab1633e83b021df047f61a9328d18ba5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ReadDataView&lt;uint32*,uint32*,char*,char*&gt; <a class="el" href="group___reads_i_o.html#gab1633e83b021df047f61a9328d18ba5b">nvbio::io::ReadDataCore</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The core <a class="el" href="structnvbio_1_1io_1_1_read_data.html">ReadData</a> class </p>
+
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00376">376</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ga4ddc795e74723f7c6d085ca835af6ce4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +178,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00444">444</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00478">478</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +192,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reads_8h_source.html#l00443">443</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
+<p>Definition at line <a class="el" href="reads_8h_source.html#l00477">477</a> of file <a class="el" href="reads_8h_source.html">reads.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +330,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

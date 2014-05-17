@@ -124,24 +124,23 @@ struct nvbio::SparseStringSet&lt; StringIterator, RangeIterator &gt;</h3>
 <div class="line">    <span class="keyword">const</span> thrust::device_vector&lt;uint32&gt;&amp; genome_storage,</div>
 <div class="line">    <span class="keyword">const</span> thrust::device_vector&lt;uint2&gt;&amp;  regions)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">typedef</span> PackedStream&lt;const uint32*, uint8, 2u, true&gt;        packed_stream_type;</div>
-<div class="line">    <span class="keyword">typedef</span> packed_stream::iterator                             packed_iterator;</div>
+<div class="line">    <span class="keyword">typedef</span> PackedStream&lt;const uint32*, uint8, 2u, true&gt;        packed_iterator;</div>
 <div class="line">    <span class="keyword">typedef</span> <span class="keyword">const</span> uint2*                                        ranges_iterator;</div>
 <div class="line">    <span class="keyword">typedef</span> SparseStringSet&lt;packed_iterator, ranges_iterator&gt;   sparse_string_set;</div>
 <div class="line"></div>
-<div class="line">    packed_stream_type packed_stream( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( genome_storage ) );</div>
+<div class="line">    packed_iterator packed_stream( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( genome_storage ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// build the string set</span></div>
 <div class="line">    sparse_string_set string_set(</div>
 <div class="line">        regions.size(),</div>
-<div class="line">        packed_stream.begin(),</div>
+<div class="line">        packed_stream,</div>
 <div class="line">        <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view</a>( regions ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// work with the string set</span></div>
 <div class="line">    ...</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00531">531</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00529">529</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="string__set_8h_source.html">string_set.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -152,9 +151,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:af4a2f3f4051757d1b767ea3c3fd1231a"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
 &lt; StringIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#af4a2f3f4051757d1b767ea3c3fd1231a">symbol_type</a></td></tr>
 <tr class="separator:af4a2f3f4051757d1b767ea3c3fd1231a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebf40de783869c9c6388c2e8e4c2439"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__wrapper.html">vector_wrapper</a><br class="typebreak"/>
-&lt; StringIterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#adebf40de783869c9c6388c2e8e4c2439">string_type</a></td></tr>
-<tr class="separator:adebf40de783869c9c6388c2e8e4c2439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39da675b727f1a3b803a7c3571ed39d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a><br class="typebreak"/>
+&lt; StringIterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#ab39da675b727f1a3b803a7c3571ed39d">string_type</a></td></tr>
+<tr class="separator:ab39da675b727f1a3b803a7c3571ed39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246c0cd688ef2f9196164a5e5846de7f"><td class="memItemLeft" align="right" valign="top">typedef StringIterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#a246c0cd688ef2f9196164a5e5846de7f">symbol_iterator</a></td></tr>
 <tr class="separator:a246c0cd688ef2f9196164a5e5846de7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f162bbdf468af4008e37d9fbe5c61b"><td class="memItemLeft" align="right" valign="top">typedef RangeIterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#ad4f162bbdf468af4008e37d9fbe5c61b">range_iterator</a></td></tr>
@@ -183,7 +182,7 @@ Public Methods</h2></td></tr>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#acf56ebd3a7dcf9807b08ea515834d42a">size</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:acf56ebd3a7dcf9807b08ea515834d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e004bbc68aca036490aefb511864f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html#adebf40de783869c9c6388c2e8e4c2439">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#a36e004bbc68aca036490aefb511864f7">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html#ab39da675b727f1a3b803a7c3571ed39d">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#a36e004bbc68aca036490aefb511864f7">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a36e004bbc68aca036490aefb511864f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac148a95d30b1ae0562cb303b3c0b39dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_sparse_string_set.html#ae93823fc389689c318e862937190018a">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_sparse_string_set.html#ac148a95d30b1ae0562cb303b3c0b39dc">begin</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ac148a95d30b1ae0562cb303b3c0b39dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,7 +224,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00541">541</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00539">539</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +240,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00540">540</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00538">538</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -257,7 +256,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00537">537</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00535">535</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -273,23 +272,23 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00533">533</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00531">531</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adebf40de783869c9c6388c2e8e4c2439"></a>
+<a class="anchor" id="ab39da675b727f1a3b803a7c3571ed39d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__wrapper.html">vector_wrapper</a>&lt;StringIterator&gt; <a class="el" href="structnvbio_1_1_sparse_string_set.html">nvbio::SparseStringSet</a>&lt; StringIterator, RangeIterator &gt;::<a class="el" href="structnvbio_1_1_sparse_string_set.html#adebf40de783869c9c6388c2e8e4c2439">string_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt;StringIterator&gt; <a class="el" href="structnvbio_1_1_sparse_string_set.html">nvbio::SparseStringSet</a>&lt; StringIterator, RangeIterator &gt;::<a class="el" href="structnvbio_1_1_sparse_string_set.html#ab39da675b727f1a3b803a7c3571ed39d">string_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00535">535</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00533">533</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +304,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00536">536</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00534">534</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +320,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00534">534</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00532">532</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +336,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00538">538</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00536">536</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -366,7 +365,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>default constructor </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00546">546</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00544">544</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -419,7 +418,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00555">555</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00553">553</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +447,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>return the base string </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00599">599</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00597">597</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -477,7 +476,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>begin iterator </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00582">582</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00580">580</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -506,7 +505,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>begin iterator </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00590">590</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00588">588</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +534,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>begin iterator </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00586">586</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00584">584</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -564,7 +563,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>begin iterator </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00594">594</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00592">592</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -578,7 +577,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html#adebf40de783869c9c6388c2e8e4c2439">string_type</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html">nvbio::SparseStringSet</a>&lt; StringIterator, RangeIterator &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html#ab39da675b727f1a3b803a7c3571ed39d">string_type</a> <a class="el" href="structnvbio_1_1_sparse_string_set.html">nvbio::SparseStringSet</a>&lt; StringIterator, RangeIterator &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
@@ -593,7 +592,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>indexing operator: access the i-th string </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00571">571</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00569">569</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +620,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>return the offset vector </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00604">604</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00602">602</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -650,7 +649,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><div class="memdoc">
 <p>set size </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00566">566</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00564">564</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +659,7 @@ template&lt;typename StringIterator, typename RangeIterator&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

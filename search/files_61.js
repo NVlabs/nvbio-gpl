@@ -9,10 +9,9 @@ var searchData=
   ['aligner_5fbest_5fexact_2eh',['aligner_best_exact.h',['../aligner__best__exact_8h.html',1,'']]],
   ['aligner_5finst_2eh',['aligner_inst.h',['../aligner__inst_8h.html',1,'']]],
   ['alignment_2ecpp',['alignment.cpp',['../alignment_8cpp.html',1,'']]],
-  ['alignment_2eh',['alignment.h',['../nvbio_2alignment_2alignment_8h.html',1,'']]],
-  ['alignment_2eh',['alignment.h',['../examples_2fmmap_2alignment_8h.html',1,'']]],
   ['alignment_2eh',['alignment.h',['../nvbio-aln-diff_2alignment_8h.html',1,'']]],
   ['alignment_2eh',['alignment.h',['../examples_2qmap_2alignment_8h.html',1,'']]],
+  ['alignment_2eh',['alignment.h',['../nvbio_2alignment_2alignment_8h.html',1,'']]],
   ['alignment_5fbam_2ecpp',['alignment_bam.cpp',['../alignment__bam_8cpp.html',1,'']]],
   ['alignment_5fbase_5finl_2eh',['alignment_base_inl.h',['../alignment__base__inl_8h.html',1,'']]],
   ['alignment_5fdbg_2ecpp',['alignment_dbg.cpp',['../alignment__dbg_8cpp.html',1,'']]],
@@ -24,6 +23,6 @@ var searchData=
   ['arch_2eh',['arch.h',['../arch_8h.html',1,'']]],
   ['arch_5finl_2eh',['arch_inl.h',['../arch__inl_8h.html',1,'']]],
   ['atomics_2ecpp',['atomics.cpp',['../atomics_8cpp.html',1,'']]],
-  ['atomics_2eh',['atomics.h',['../atomics_8h.html',1,'']]],
-  ['atomics_2eh',['atomics.h',['../cuda_2atomics_8h.html',1,'']]]
+  ['atomics_2eh',['atomics.h',['../cuda_2atomics_8h.html',1,'']]],
+  ['atomics_2eh',['atomics.h',['../atomics_8h.html',1,'']]]
 ];

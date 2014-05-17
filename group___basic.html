@@ -104,8 +104,6 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___ping_pong_queues_module"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___ping_pong_queues_module.html">Ping-Pong Queues</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group___primitives"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___primitives.html">Parallel Primitives</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___sort_enactors"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___sort_enactors.html">Sort Enactors</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___memory_mapping_module"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___memory_mapping_module.html">Memory Mapping</a></td></tr>
@@ -113,6 +111,8 @@ Modules</h2></td></tr>
 <tr class="memitem:group___basic_utils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___basic_utils.html">Utilities</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___packed_streams"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___packed_streams.html">Packed Streams</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___primitives"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___primitives.html">Parallel Primitives</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___priority_deques"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___priority_deques.html">Priority Deques</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +126,8 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___iterators"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___iterators.html">Iterators</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_u_d_a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_u_d_a.html">CUDA</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -138,8 +140,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view&lt; Iterator, IndexType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1plain__view__subtype_3_01std_1_1vector_3_01_t_01_4_01_4.html">nvbio::plain_view_subtype&lt; std::vector&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector__wrapper.html">nvbio::vector_wrapper&lt; Iterator &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -170,22 +170,18 @@ Functions</h2></td></tr>
 <tr class="memitem:gafa7c0d202c577dd5c92b7fb310cf0c86"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gafa7c0d202c577dd5c92b7fb310cf0c86"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#gafa7c0d202c577dd5c92b7fb310cf0c86">nvbio::raw_pointer</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> vector_view&lt; T &gt; &amp;vec)</td></tr>
 <tr class="separator:gafa7c0d202c577dd5c92b7fb310cf0c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga31f08302d641beb77d5ce66ddc69ce8f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga31f08302d641beb77d5ce66ddc69ce8f"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#ga31f08302d641beb77d5ce66ddc69ce8f">nvbio::plain_view</a> (std::vector&lt; T &gt; &amp;vec)</td></tr>
-<tr class="separator:ga31f08302d641beb77d5ce66ddc69ce8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42e300dbe87d19766e7c4f267e80e93c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga42e300dbe87d19766e7c4f267e80e93c"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#ga42e300dbe87d19766e7c4f267e80e93c">nvbio::plain_view</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::vector&lt; T &gt; &amp;vec)</td></tr>
-<tr class="separator:ga42e300dbe87d19766e7c4f267e80e93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf440857e3ca7947cea5deec88cd80442"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaf440857e3ca7947cea5deec88cd80442"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; T *, uint64 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#gaf440857e3ca7947cea5deec88cd80442">nvbio::plain_view</a> (std::vector&lt; T &gt; &amp;vec)</td></tr>
+<tr class="separator:gaf440857e3ca7947cea5deec88cd80442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4bf4117cffc31d00221180ce421b5ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaf4bf4117cffc31d00221180ce421b5ea"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *, uint64 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#gaf4bf4117cffc31d00221180ce421b5ea">nvbio::plain_view</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::vector&lt; T &gt; &amp;vec)</td></tr>
+<tr class="separator:gaf4bf4117cffc31d00221180ce421b5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga157850608004883a563d3cd9681f5964"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga157850608004883a563d3cd9681f5964"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#ga157850608004883a563d3cd9681f5964">nvbio::raw_pointer</a> (std::vector&lt; T &gt; &amp;vec)</td></tr>
 <tr class="separator:ga157850608004883a563d3cd9681f5964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadc73f10060912682172ddbf3f0ac0535"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gadc73f10060912682172ddbf3f0ac0535"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#gadc73f10060912682172ddbf3f0ac0535">nvbio::raw_pointer</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::vector&lt; T &gt; &amp;vec)</td></tr>
 <tr class="separator:gadc73f10060912682172ddbf3f0ac0535"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga45d7af5cc1fb241ef9ee390366d60e0b"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:ga45d7af5cc1fb241ef9ee390366d60e0b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___basic.html#ga45d7af5cc1fb241ef9ee390366d60e0b">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> vector_wrapper&lt; Iterator &gt; &amp;vec)</td></tr>
-<tr class="separator:ga45d7af5cc1fb241ef9ee390366d60e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="ga95d7db4c9851c3454ebae79b43d4375f"></a>
@@ -318,39 +314,18 @@ template&lt;typename Iterator &gt; </div>
 </div><div class="memdoc">
 <p>return length of a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00157">157</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00210">210</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga45d7af5cc1fb241ef9ee390366d60e0b"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> vector_wrapper&lt; Iterator &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vec</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>return length of a vector </p>
-
-<p>Definition at line <a class="el" href="vector__wrapper_8h_source.html#l00189">189</a> of file <a class="el" href="vector__wrapper_8h_source.html">vector_wrapper.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga31f08302d641beb77d5ce66ddc69ce8f"></a>
+<a class="anchor" id="gaf440857e3ca7947cea5deec88cd80442"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector_view&lt;T*&gt; nvbio::plain_view </td>
+          <td class="memname">vector_view&lt;T*,uint64&gt; nvbio::plain_view </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>vec</em>)</td><td></td>
@@ -360,18 +335,18 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>return the plain view of a std::vector </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00175">175</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00228">228</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga42e300dbe87d19766e7c4f267e80e93c"></a>
+<a class="anchor" id="gaf4bf4117cffc31d00221180ce421b5ea"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector_view&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T*&gt; nvbio::plain_view </td>
+          <td class="memname">vector_view&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T*,uint64&gt; nvbio::plain_view </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::vector&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>vec</em>)</td><td></td>
@@ -381,7 +356,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>return the plain view of a std::vector </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00180">180</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00233">233</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +377,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>return the raw pointer of a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00162">162</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00215">215</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -423,7 +398,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>return the raw pointer of a std::vector </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00185">185</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00238">238</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -444,14 +419,14 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>return the raw pointer of a std::vector </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00190">190</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00243">243</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

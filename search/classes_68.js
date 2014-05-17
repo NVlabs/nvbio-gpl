@@ -29,7 +29,7 @@ var searchData=
   ['host_5ftag',['host_tag',['../structnvbio_1_1host__tag.html',1,'nvbio']]],
   ['hostbwtconfig',['HostBWTConfig',['../structnvbio_1_1cuda_1_1_host_b_w_t_config.html',1,'nvbio::cuda']]],
   ['hostbwthandler',['HostBWTHandler',['../structnvbio_1_1_host_b_w_t_handler.html',1,'nvbio']]],
-  ['hostbwthandler_3c_20packedstreamiterator_3c_20packedstream_3c_20word_5ftype_20_2a_2c_20uint8_2c_20symbol_5fsize_2c_20big_5fendian_2c_20uint64_20_3e_20_3e_20_3e',['HostBWTHandler&lt; PackedStreamIterator&lt; PackedStream&lt; word_type *, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt; &gt;',['../structnvbio_1_1_host_b_w_t_handler_3_01_packed_stream_iterator_3_01_packed_stream_3_01word__type8f0045fcb48f4b40f1d832a5da6f94fd.html',1,'nvbio']]],
+  ['hostbwthandler_3c_20packedstream_3c_20word_5ftype_20_2a_2c_20uint8_2c_20symbol_5fsize_2c_20big_5fendian_2c_20uint64_20_3e_20_3e',['HostBWTHandler&lt; PackedStream&lt; word_type *, uint8, SYMBOL_SIZE, BIG_ENDIAN, uint64 &gt; &gt;',['../structnvbio_1_1_host_b_w_t_handler_3_01_packed_stream_3_01word__type_01_5_00_01uint8_00_01_s_y_mece7f5f021aa7d905197083a5b114cf2.html',1,'nvbio']]],
   ['hostchunkloader',['HostChunkLoader',['../structnvbio_1_1priv_1_1_host_chunk_loader.html',1,'nvbio::priv']]],
   ['hostcigararray',['HostCigarArray',['../structnvbio_1_1io_1_1_host_cigar_array.html',1,'nvbio::io']]],
   ['hoststringsetradices',['HostStringSetRadices',['../structnvbio_1_1priv_1_1_host_string_set_radices.html',1,'nvbio::priv']]],

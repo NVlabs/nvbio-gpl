@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['index_5ftransform_5fiterator_2eh',['index_transform_iterator.h',['../index__transform__iterator_8h.html',1,'']]],
   ['infback_2ec',['infback.c',['../infback_8c.html',1,'']]],
   ['inffast_2ec',['inffast.c',['../inffast_8c.html',1,'']]],
   ['inffast_2eh',['inffast.h',['../inffast_8h.html',1,'']]],
@@ -14,5 +15,6 @@ var searchData=
   ['interval_5fheap_2eh',['interval_heap.h',['../interval__heap_8h.html',1,'']]],
   ['interval_5fheap_2ehpp',['interval_heap.hpp',['../interval__heap_8hpp.html',1,'']]],
   ['io_2edox',['io.dox',['../io_8dox.html',1,'']]],
-  ['iterator_2eh',['iterator.h',['../iterator_8h.html',1,'']]]
+  ['iterator_2eh',['iterator.h',['../iterator_8h.html',1,'']]],
+  ['iterator_5freference_2eh',['iterator_reference.h',['../iterator__reference_8h.html',1,'']]]
 ];

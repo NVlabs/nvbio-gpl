@@ -107,10 +107,10 @@ Scoring</h1>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>according to whether one wants to process a pattern with qualities or not, whether he's interested in a single best score or the best N, and so on. To see a concrete usage example, consider the following code snippet:</dd></dl>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> vector_wrapper&lt;const char*&gt; const_string;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> vector_view&lt;const char*&gt; const_string;</div>
 <div class="line"></div>
-<div class="line">const_string  <a class="code" href="group___rank_dictionary_module.html#ga71a2197ba0cf4fd168a7c8f60865d0a6">text</a> = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
-<div class="line">const_string  pattern  = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
+<div class="line">const_string  <a class="code" href="group___rank_dictionary_module.html#ga71a2197ba0cf4fd168a7c8f60865d0a6">text</a> = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
+<div class="line">const_string  pattern  = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> ed = aln::banded_alignment_score&lt;5&gt;(</div>
 <div class="line">       aln::make_edit_distance_aligner&lt;aln::SEMI_GLOBAL&gt;(), <span class="comment">// build an edit-distance aligner</span></div>
@@ -216,7 +216,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:33 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

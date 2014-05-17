@@ -139,6 +139,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_b_a_m__alignment__data__block.html">BAM_alignment_data_block</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnvbio_1_1io_1_1_buffered_text_file.html">BufferedTextFile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_b_n_t_info.html">BNTInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_b_n_t_ann.html">BNTAnn</a></td></tr>
@@ -227,6 +229,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html">ReadDataFile_SAM</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_s_n_p__sequence__index.html">SNP_sequence_index</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_s_n_p_database.html">SNPDatabase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -236,6 +242,9 @@ Typedefs</h2></td></tr>
 &lt; <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___output.html#gae893b5cb9b0ad09021e9c9ba8a6d4499">HostMdsArray</a></td></tr>
 <tr class="memdesc:gae893b5cb9b0ad09021e9c9ba8a6d4499"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for the MDS array in the host.  <a href="group___output.html#gae893b5cb9b0ad09021e9c9ba8a6d4499">More...</a><br/></td></tr>
 <tr class="separator:gae893b5cb9b0ad09021e9c9ba8a6d4499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1633e83b021df047f61a9328d18ba5b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">ReadDataView</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <br class="typebreak"/>
+*, <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *, char *, char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gab1633e83b021df047f61a9328d18ba5b">ReadDataCore</a></td></tr>
+<tr class="separator:gab1633e83b021df047f61a9328d18ba5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad2ec8bb8eca626947e9c60cd67d7e9ec"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gad2ec8bb8eca626947e9c60cd67d7e9ec">ReadDataHost</a></td></tr>
 <tr class="separator:gad2ec8bb8eca626947e9c60cd67d7e9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ddc795e74723f7c6d085ca835af6ce4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">ReadDataDevice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#ga4ddc795e74723f7c6d085ca835af6ce4">ReadDataCUDA</a></td></tr>
@@ -333,13 +342,15 @@ Functions</h2></td></tr>
 <tr class="memitem:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_read_data_stream.html">ReadDataStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">open_read_file</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *read_file_name, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga3415ac326089788da99884c50b8ccb16">QualityEncoding</a> qualities, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> truncate_read_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">ReadEncoding</a> flags)</td></tr>
 <tr class="separator:gaefea201a77fedc78f3ed33b1f2cea447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad13a96af30dac3bfbebfeb043bf7080"><td class="memTemplParams" colspan="2">template&lt;QualityEncoding quality_encoding, typename read_type &gt; </td></tr>
-<tr class="memitem:aad13a96af30dac3bfbebfeb043bf7080"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#aad13a96af30dac3bfbebfeb043bf7080">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> read_type <a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
+<tr class="memitem:aad13a96af30dac3bfbebfeb043bf7080"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#aad13a96af30dac3bfbebfeb043bf7080">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> read_type <a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
 <tr class="separator:aad13a96af30dac3bfbebfeb043bf7080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d7eba09efc00c5491ffa09f50d27ca4"><td class="memTemplParams" colspan="2">template&lt;typename read_type &gt; </td></tr>
-<tr class="memitem:a3d7eba09efc00c5491ffa09f50d27ca4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#a3d7eba09efc00c5491ffa09f50d27ca4">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga3415ac326089788da99884c50b8ccb16">QualityEncoding</a> quality_encoding, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> read_type <a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
+<tr class="memitem:a3d7eba09efc00c5491ffa09f50d27ca4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#a3d7eba09efc00c5491ffa09f50d27ca4">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga3415ac326089788da99884c50b8ccb16">QualityEncoding</a> quality_encoding, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> read_type <a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
 <tr class="separator:a3d7eba09efc00c5491ffa09f50d27ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ebe8e609e3749039f8c7cba2a9b98ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#a3ebe8e609e3749039f8c7cba2a9b98ac">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> conversion_flags, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga3415ac326089788da99884c50b8ccb16">QualityEncoding</a> quality_encoding, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> *<a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> *quality, <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
+<tr class="memitem:a3ebe8e609e3749039f8c7cba2a9b98ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#a3ebe8e609e3749039f8c7cba2a9b98ac">encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> conversion_flags, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___reads_i_o.html#ga3415ac326089788da99884c50b8ccb16">QualityEncoding</a> quality_encoding, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> *<a class="el" href="namespacenvbio.html#adb823c545d61ae1596d1913e38b35053">read</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> *quality, <a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">ReadData::read_stream_type::iterator</a> stream, char *qual_stream)</td></tr>
 <tr class="separator:a3ebe8e609e3749039f8c7cba2a9b98ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635b440e212bfe66e5f4908a1399d224"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1io.html#a635b440e212bfe66e5f4908a1399d224">loadVCF</a> (<a class="el" href="structnvbio_1_1io_1_1_s_n_p_database.html">SNPDatabase</a> &amp;output, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *file_name)</td></tr>
+<tr class="separator:a635b440e212bfe66e5f4908a1399d224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a5f4b72893841e9a68cd81d071ef8e01c"></a>
@@ -695,6 +706,34 @@ template&lt;typename read_type &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a635b440e212bfe66e5f4908a1399d224"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvbio::io::loadVCF </td>
+          <td>(</td>
+          <td class="paramtype">SNPDatabase &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vcf_8cpp_source.html#l00032">32</a> of file <a class="el" href="vcf_8cpp_source.html">vcf.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2d74d646cbe4b0521505f49a0b52123c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -728,7 +767,7 @@ template&lt;typename vector_type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:14 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

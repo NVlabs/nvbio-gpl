@@ -112,17 +112,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 struct nvbio::aln::priv::AlignmentStream&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type</h3>
 
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00766">766</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00771">771</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:af155b9862c63ece5687a4a664c2b8bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a1aa196a97caa980c7e6ebdf5d517524c">pattern_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#af155b9862c63ece5687a4a664c2b8bd5">pattern</a></td></tr>
+<tr class="memitem:a3014bfd2627103fb11754d8d52c681d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a4b420269f6f5f23048861b4d54d827cf">pattern_prefetcher_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#a3014bfd2627103fb11754d8d52c681d5">pattern_prefetcher</a></td></tr>
+<tr class="separator:a3014bfd2627103fb11754d8d52c681d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300b4d94a235d1ed2dbe783c79f12d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aac9ec1eb2cef6c0cee858e376c3c0dd8">text_prefetcher_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#a300b4d94a235d1ed2dbe783c79f12d53">text_prefetcher</a></td></tr>
+<tr class="separator:a300b4d94a235d1ed2dbe783c79f12d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af155b9862c63ece5687a4a664c2b8bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a285877d0eb6aeb1f0f0b9ebfd47cb216">pattern_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#af155b9862c63ece5687a4a664c2b8bd5">pattern</a></td></tr>
 <tr class="separator:af155b9862c63ece5687a4a664c2b8bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab631d66eb9f28dd5265921b64eff451c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a104b3e94a82756e71756560155aa0274">quals_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#ab631d66eb9f28dd5265921b64eff451c">quals</a></td></tr>
 <tr class="separator:ab631d66eb9f28dd5265921b64eff451c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4313dfc57a7a54fb7977e36449d966c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aa3a8650737a588364143d795e64f3e2e">text_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#a4313dfc57a7a54fb7977e36449d966c8">text</a></td></tr>
+<tr class="memitem:a4313dfc57a7a54fb7977e36449d966c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a8f386a880435a29a15550a8c7a59d895">text_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream_1_1strings__type.html#a4313dfc57a7a54fb7977e36449d966c8">text</a></td></tr>
 <tr class="separator:a4313dfc57a7a54fb7977e36449d966c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -133,12 +137,28 @@ Public Members</h2></td></tr>
 template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a1aa196a97caa980c7e6ebdf5d517524c">pattern_string</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::pattern</td>
+          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a285877d0eb6aeb1f0f0b9ebfd47cb216">pattern_string</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::pattern</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00768">768</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00776">776</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3014bfd2627103fb11754d8d52c681d5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a4b420269f6f5f23048861b4d54d827cf">pattern_prefetcher_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::pattern_prefetcher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00773">773</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -154,7 +174,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00769">769</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00777">777</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -165,12 +185,28 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aa3a8650737a588364143d795e64f3e2e">text_string</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::text</td>
+          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a8f386a880435a29a15550a8c7a59d895">text_string</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::text</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00770">770</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00778">778</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a300b4d94a235d1ed2dbe783c79f12d53"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aac9ec1eb2cef6c0cee858e376c3c0dd8">text_prefetcher_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::strings_type::text_prefetcher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00774">774</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +216,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

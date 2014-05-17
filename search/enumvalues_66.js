@@ -14,6 +14,6 @@ var searchData=
   ['forward',['FORWARD',['../group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d',1,'nvbio::io::FORWARD()'],['../group___utils.html#ggaa03f30a78feb0e92d0b688b333867510a59b1f15dbac1d8a695446a2e4482e589',1,'nvbio::FORWARD()']]],
   ['forward_5fcomplement',['FORWARD_COMPLEMENT',['../group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c',1,'nvbio::io']]],
   ['fstate',['FSTATE',['../group___alignment.html#ggaf75921f1fc0f4f15d79833bade9cee41af47bc7b119411d3540645e55062020c3',1,'nvbio::aln']]],
-  ['full_5fdp_5fcheckpoints',['FULL_DP_CHECKPOINTS',['../group___defs.html#gga3f9b9f77f2f5d25cc0545eb9661d3fddaa17c0f1b19d20e7d3a682a806dfb85bb',1,'nvbio::bowtie2::cuda']]],
+  ['full_5fdp_5fcheckpoints',['FULL_DP_CHECKPOINTS',['../group___defs.html#ggab9b61087a503a892203857bbc36d89d4aa17c0f1b19d20e7d3a682a806dfb85bb',1,'nvbio::bowtie2::cuda']]],
   ['functional',['FUNCTIONAL',['../namespacenvbio_1_1aln.html#acfb46c7f9c1c9231522ab51aad29578aa959597074bab4d87659187784353ce62',1,'nvbio::aln']]]
 ];

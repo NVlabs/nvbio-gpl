@@ -9,9 +9,9 @@ var searchData=
   ['sorted_20dictionary_20suffix_20tries',['Sorted Dictionary Suffix Tries',['../group___sorted_dictionary_suffix_tries_module.html',1,'']]],
   ['sort_20enactors',['Sort Enactors',['../group___sort_enactors.html',1,'']]],
   ['sampled_20suffix_20arrays',['Sampled Suffix Arrays',['../group___s_s_a_module.html',1,'']]],
-  ['strings',['Strings',['../group___strings.html',1,'']]],
+  ['string_20prefetchers',['String Prefetchers',['../group___string_prefetchers.html',1,'']]],
+  ['strings_20module',['Strings Module',['../group___strings.html',1,'']]],
   ['string_20sets',['String Sets',['../group___string_sets_module.html',1,'']]],
-  ['strings_20module',['Strings Module',['../group___strings_module.html',1,'']]],
   ['suffix_20tries',['Suffix Tries',['../group___suffix_tries_module.html',1,'']]],
   ['sufsort_20module',['Sufsort Module',['../group___sufsort.html',1,'']]],
   ['sum_20trees',['Sum Trees',['../group___sum_trees.html',1,'']]]

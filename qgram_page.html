@@ -125,7 +125,7 @@ Q-Gram Indices</h1>
  <em>Massively parallel read mapping on GPUs with PEANUT</em> <br/>
  Johannes Koester and Sven Rahmann <br/>
  <a href="http://arxiv.org/pdf/1403.1706v1.pdf">http://arxiv.org/pdf/1403.1706v1.pdf</a> <br/>
- this data-structure requires O(A^q) bits of storage in the alphabet-size <em>A</em> and the q-gram length <em>q</em>, and provides O(1) query time; <br/>
+ this data-structure requires O(A^q) bits of storage in the alphabet-size <em>A</em> and the q-gram length <em>q</em> (to be precise, 2*A^q bits + (min(A^q,|T|) + |T|) words), and provides O(1) query time; <br/>
  <br/>
 </li>
 <li>the compact <a class="el" href="group___q_gram_index.html">Q-Gram Index</a>, which can be built over a string T, with memory consumption and query time proportional to O(|T|) and O(log(unique(T))) respectively, where <em>unique(T)</em> is the number of unique q-grams in T. This is achieved by keeping a plain sorted list of the unique q-grams in T, together with an index of their occurrences in the original string T. This data-structure offers up to 5x higher construction speed and a potentially unbounded improvement in memory consumption compared to the <a class="el" href="group___q_group_index.html">Q-Group Index</a>, though the query time is asymptotically higher.</li>
@@ -325,7 +325,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

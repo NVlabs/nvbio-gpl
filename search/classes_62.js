@@ -64,8 +64,8 @@ var searchData=
   ['bntann',['BNTAnn',['../structnvbio_1_1io_1_1_b_n_t_ann.html',1,'nvbio::io']]],
   ['bntanndata',['BNTAnnData',['../structnvbio_1_1_b_n_t_ann_data.html',1,'nvbio']]],
   ['bntanninfo',['BNTAnnInfo',['../structnvbio_1_1_b_n_t_ann_info.html',1,'nvbio']]],
-  ['bntinfo',['BNTInfo',['../structnvbio_1_1_b_n_t_info.html',1,'nvbio']]],
   ['bntinfo',['BNTInfo',['../structnvbio_1_1io_1_1_b_n_t_info.html',1,'nvbio::io']]],
+  ['bntinfo',['BNTInfo',['../structnvbio_1_1_b_n_t_info.html',1,'nvbio']]],
   ['bntseq',['BNTSeq',['../structnvbio_1_1_b_n_t_seq.html',1,'nvbio']]],
   ['bntseqloader',['BNTSeqLoader',['../structnvbio_1_1_b_n_t_seq_loader.html',1,'nvbio']]],
   ['bntseqpod',['BNTSeqPOD',['../structnvbio_1_1io_1_1_b_n_t_seq_p_o_d.html',1,'nvbio::io']]],
@@ -75,6 +75,7 @@ var searchData=
   ['bowtiemapq',['BowtieMapq',['../structnvbio_1_1bowtie2_1_1cuda_1_1_bowtie_mapq.html',1,'nvbio::bowtie2::cuda']]],
   ['bowtiemapq2',['BowtieMapq2',['../structnvbio_1_1bowtie2_1_1cuda_1_1_bowtie_mapq2.html',1,'nvbio::bowtie2::cuda']]],
   ['bowtiemapq3',['BowtieMapq3',['../structnvbio_1_1bowtie2_1_1cuda_1_1_bowtie_mapq3.html',1,'nvbio::bowtie2::cuda']]],
+  ['bufferedtextfile',['BufferedTextFile',['../classnvbio_1_1io_1_1_buffered_text_file.html',1,'nvbio::io']]],
   ['bwtbgzwriter',['BWTBGZWriter',['../structnvbio_1_1_b_w_t_b_g_z_writer.html',1,'nvbio']]],
   ['bwtlz4writer',['BWTLZ4Writer',['../structnvbio_1_1_b_w_t_l_z4_writer.html',1,'nvbio']]],
   ['bwtparams',['BWTParams',['../structnvbio_1_1_b_w_t_params.html',1,'nvbio']]]

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/src/nvbio/nvbio/basic/cuda/primitives.h File Reference</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/src/nvbio/nvbio/basic/primitives.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd3968ff55a3f575acc678add92e8576.html">basic</a></li><li class="navelem"><a class="el" href="dir_fb24a0b1ad1a54141895b6c2fe237a3e.html">cuda</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_bd3968ff55a3f575acc678add92e8576.html">basic</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,11 +103,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="types_8h_source.html">nvbio/basic/types.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="numbers_8h_source.html">nvbio/basic/numbers.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="console_8h_source.html">nvbio/basic/console.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="thrust__view_8h_source.html">nvbio/basic/thrust_view.h</a>&gt;</code><br/>
 <code>#include &lt;thrust/device_vector.h&gt;</code><br/>
-<code>#include &lt;cub/cub.cuh&gt;</code><br/>
-<code>#include &lt;<a class="el" href="primitives__inl_8h_source.html">nvbio/basic/cuda/primitives_inl.h</a>&gt;</code><br/>
+<code>#include &lt;thrust/host_vector.h&gt;</code><br/>
+<code>#include &lt;thrust/copy.h&gt;</code><br/>
+<code>#include &lt;thrust/reduce.h&gt;</code><br/>
+<code>#include &lt;thrust/scan.h&gt;</code><br/>
+<code>#include &lt;thrust/iterator/constant_iterator.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="primitives__inl_8h_source.html">nvbio/basic/primitives_inl.h</a>&gt;</code><br/>
 </div>
 <p><a href="primitives_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -116,53 +121,48 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
 <tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacenvbio_1_1cuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html">nvbio::cuda</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa9b984a7db3a63b5a095daa7e0acfbb2"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
-<tr class="memitem:gaa9b984a7db3a63b5a095daa7e0acfbb2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaa9b984a7db3a63b5a095daa7e0acfbb2">nvbio::cuda::alloc_temp_storage</a> (VectorType &amp;vec, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64 size)</td></tr>
-<tr class="separator:gaa9b984a7db3a63b5a095daa7e0acfbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82ea366b8322268724e970cfc677d0ac"><td class="memTemplParams" colspan="2">template&lt;typename PredicateIterator &gt; </td></tr>
-<tr class="memitem:ga82ea366b8322268724e970cfc677d0ac"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga82ea366b8322268724e970cfc677d0ac">nvbio::cuda::any</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
-<tr class="separator:ga82ea366b8322268724e970cfc677d0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9dcce72ad9a2d44f92aa508b91b3378d"><td class="memTemplParams" colspan="2">template&lt;typename PredicateIterator &gt; </td></tr>
-<tr class="memitem:ga9dcce72ad9a2d44f92aa508b91b3378d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">nvbio::cuda::all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
-<tr class="separator:ga9dcce72ad9a2d44f92aa508b91b3378d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab29a4ed48e4105fc89f4ad421576f46c"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:gab29a4ed48e4105fc89f4ad421576f46c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gab29a4ed48e4105fc89f4ad421576f46c">nvbio::cuda::is_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values)</td></tr>
-<tr class="separator:gab29a4ed48e4105fc89f4ad421576f46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7765faafa575da9ecf4806d2c0b5a2fc"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Headflags &gt; </td></tr>
-<tr class="memitem:ga7765faafa575da9ecf4806d2c0b5a2fc"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga7765faafa575da9ecf4806d2c0b5a2fc">nvbio::cuda::is_segment_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Headflags flags)</td></tr>
-<tr class="separator:ga7765faafa575da9ecf4806d2c0b5a2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac50886e808acc7d0b304c3a2b3f3fee"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename BinaryOp &gt; </td></tr>
-<tr class="memitem:gaac50886e808acc7d0b304c3a2b3f3fee"><td class="memTemplItemLeft" align="right" valign="top">std::iterator_traits<br class="typebreak"/>
-&lt; InputIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">nvbio::cuda::reduce</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, BinaryOp op, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:gaac50886e808acc7d0b304c3a2b3f3fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08bb5cd881e0a25f2bd22a3fbe12c49b"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename OutputIterator , typename BinaryOp &gt; </td></tr>
-<tr class="memitem:ga08bb5cd881e0a25f2bd22a3fbe12c49b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">nvbio::cuda::inclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, OutputIterator d_out, BinaryOp op, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:ga08bb5cd881e0a25f2bd22a3fbe12c49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9cf6d77687d16283cbacdcb4fd9c878"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename OutputIterator , typename BinaryOp , typename Identity &gt; </td></tr>
-<tr class="memitem:gad9cf6d77687d16283cbacdcb4fd9c878"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">nvbio::cuda::exclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, OutputIterator d_out, BinaryOp op, Identity identity, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:gad9cf6d77687d16283cbacdcb4fd9c878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6353fb458a712350e26fb6313d5cd33b"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename FlagsIterator , typename OutputIterator &gt; </td></tr>
-<tr class="memitem:ga6353fb458a712350e26fb6313d5cd33b"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">nvbio::cuda::copy_flagged</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, FlagsIterator d_flags, OutputIterator d_out, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:ga6353fb458a712350e26fb6313d5cd33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga084eff1cc30c96dd7a1f3849b8802744"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename OutputIterator , typename Predicate &gt; </td></tr>
-<tr class="memitem:ga084eff1cc30c96dd7a1f3849b8802744"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">nvbio::cuda::copy_if</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, OutputIterator d_out, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Predicate pred, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:ga084eff1cc30c96dd7a1f3849b8802744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67af151a66d862a84a34ca6aee8db24c"><td class="memTemplParams" colspan="2">template&lt;typename InputIterator , typename OutputIterator , typename CountIterator &gt; </td></tr>
-<tr class="memitem:ga67af151a66d862a84a34ca6aee8db24c"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga67af151a66d862a84a34ca6aee8db24c">nvbio::cuda::runlength_encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator d_in, OutputIterator d_out, CountIterator d_counts, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:ga67af151a66d862a84a34ca6aee8db24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memTemplParams" colspan="2">template&lt;typename KeyIterator , typename ValueIterator , typename OutputKeyIterator , typename OutputValueIterator , typename ReductionOp &gt; </td></tr>
-<tr class="memitem:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaee8cb8a5a27204b087e9c3d332716e99">nvbio::cuda::reduce_by_key</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, KeyIterator d_keys_in, ValueIterator d_values_in, OutputKeyIterator d_keys_out, OutputValueIterator d_values_out, ReductionOp reduction_op, thrust::device_vector&lt; uint8 &gt; &amp;d_temp_storage)</td></tr>
-<tr class="separator:gaee8cb8a5a27204b087e9c3d332716e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc4f07953d774c03e710348fad815a38"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename PredicateIterator &gt; </td></tr>
+<tr class="memitem:gacc4f07953d774c03e710348fad815a38"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gacc4f07953d774c03e710348fad815a38">nvbio::any</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
+<tr class="separator:gacc4f07953d774c03e710348fad815a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad832158b0c1628399224ea7535c54dbe"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename PredicateIterator &gt; </td></tr>
+<tr class="memitem:gad832158b0c1628399224ea7535c54dbe"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gad832158b0c1628399224ea7535c54dbe">nvbio::all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PredicateIterator pred)</td></tr>
+<tr class="separator:gad832158b0c1628399224ea7535c54dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator &gt; </td></tr>
+<tr class="memitem:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaa7b0ec7a4528839849074ca8e08a5821">nvbio::is_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values)</td></tr>
+<tr class="separator:gaa7b0ec7a4528839849074ca8e08a5821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator , typename Headflags &gt; </td></tr>
+<tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga99051290b643f2f1e26be506fca151aa">nvbio::is_segment_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Headflags flags)</td></tr>
+<tr class="separator:ga99051290b643f2f1e26be506fca151aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename BinaryOp &gt; </td></tr>
+<tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplItemLeft" align="right" valign="top">std::iterator_traits<br class="typebreak"/>
+&lt; InputIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga5a34466c84069a847a416ca5c8c4d771">nvbio::reduce</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, BinaryOp op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga5a34466c84069a847a416ca5c8c4d771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp &gt; </td></tr>
+<tr class="memitem:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga1ac5baa7d97ef1a3c1429445797877f2">nvbio::inclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, BinaryOp op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga1ac5baa7d97ef1a3c1429445797877f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename BinaryOp , typename Identity &gt; </td></tr>
+<tr class="memitem:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gaf4b322b445998fc49a0a6e5a69a1c8df">nvbio::exclusive_scan</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, BinaryOp op, Identity identity, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gaf4b322b445998fc49a0a6e5a69a1c8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc739614df72926f380bfc43ff3fb266"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename FlagsIterator , typename OutputIterator &gt; </td></tr>
+<tr class="memitem:gacc739614df72926f380bfc43ff3fb266"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gacc739614df72926f380bfc43ff3fb266">nvbio::copy_flagged</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, FlagsIterator flags, OutputIterator out, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gacc739614df72926f380bfc43ff3fb266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga754bf11c1369997a67ef0c981a4933a1"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename Predicate &gt; </td></tr>
+<tr class="memitem:ga754bf11c1369997a67ef0c981a4933a1"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga754bf11c1369997a67ef0c981a4933a1">nvbio::copy_if</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Predicate pred, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga754bf11c1369997a67ef0c981a4933a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ebbe79e443fc6326095245cd45ae782"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename OutputIterator , typename CountIterator &gt; </td></tr>
+<tr class="memitem:ga6ebbe79e443fc6326095245cd45ae782"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga6ebbe79e443fc6326095245cd45ae782">nvbio::runlength_encode</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, OutputIterator out, CountIterator counts, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:ga6ebbe79e443fc6326095245cd45ae782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename KeyIterator , typename ValueIterator , typename OutputKeyIterator , typename OutputValueIterator , typename ReductionOp &gt; </td></tr>
+<tr class="memitem:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memTemplItemLeft" align="right" valign="top">uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gac282f202efe51d7a7d4b9543fbafbf51">nvbio::reduce_by_key</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, KeyIterator keys_in, ValueIterator values_in, OutputKeyIterator keys_out, OutputValueIterator values_out, ReductionOp reduction_op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
+<tr class="separator:gac282f202efe51d7a7d4b9543fbafbf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

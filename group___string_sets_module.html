@@ -92,11 +92,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">String Sets<div class="ingroups"><a class="el" href="group___strings.html">Strings</a></div></div>  </div>
+<div class="title">String Sets<div class="ingroups"><a class="el" href="group___strings.html">Strings Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>This module defines various types of string sets which vary for the internal representation. For a deeper explanation, see the string_sets_page page. </p>
+<p>This module defines various types of string sets which vary for the internal representation. For a deeper explanation, see the string_page page. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
@@ -107,11 +107,7 @@ Modules</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_infix.html">nvbio::Infix&lt; StringType, CoordType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_infix_set_core.html">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, CoordDim &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_012u_01_4.html">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 2u &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_infix_set_core_3_01_sequence_type_00_01_infix_iterator_00_014u_01_4.html">nvbio::InfixSetCore&lt; SequenceType, InfixIterator, 4u &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_infix_set.html">nvbio::InfixSet&lt; SequenceType, InfixIterator &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_prefix.html">nvbio::Prefix&lt; StringType, CoordType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +174,68 @@ Functions</h2></td></tr>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Infix<br class="typebreak"/>
 &lt; StringType, CoordType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga622099fe8d98dc28b24e139f336129e1">nvbio::make_infix</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringType string, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> CoordType coords)</td></tr>
 <tr class="separator:ga622099fe8d98dc28b24e139f336129e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2ab7f592829b1b11ea1f84aa26017bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gab2ab7f592829b1b11ea1f84aa26017bc">nvbio::infix_begin</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;infix)</td></tr>
+<tr class="separator:gab2ab7f592829b1b11ea1f84aa26017bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9907ce7b64f60681ca334909b0c2145f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga9907ce7b64f60681ca334909b0c2145f">nvbio::infix_end</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;infix)</td></tr>
+<tr class="separator:ga9907ce7b64f60681ca334909b0c2145f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5eff33f849df440294cd17d7d33f9e6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga5eff33f849df440294cd17d7d33f9e6d">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;infix)</td></tr>
+<tr class="separator:ga5eff33f849df440294cd17d7d33f9e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae899885f4c835382bc3bf916f4bf31fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gae899885f4c835382bc3bf916f4bf31fb">nvbio::infix_begin</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;infix)</td></tr>
+<tr class="separator:gae899885f4c835382bc3bf916f4bf31fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1894ff35036e0a8de5f1405aef6cf7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gad1894ff35036e0a8de5f1405aef6cf7f">nvbio::infix_end</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;infix)</td></tr>
+<tr class="separator:gad1894ff35036e0a8de5f1405aef6cf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40a9bd06750b33a34f1e522feb26dbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga40a9bd06750b33a34f1e522feb26dbc6">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;infix)</td></tr>
+<tr class="separator:ga40a9bd06750b33a34f1e522feb26dbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5715733a6647c260b89b420c3267cf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga5715733a6647c260b89b420c3267cf10">nvbio::infix_begin</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;infix)</td></tr>
+<tr class="separator:ga5715733a6647c260b89b420c3267cf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ea13b84affd04afa772dc3aff5768f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga7ea13b84affd04afa772dc3aff5768f6">nvbio::infix_end</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;infix)</td></tr>
+<tr class="separator:ga7ea13b84affd04afa772dc3aff5768f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a7b5a2540de667dbeb785fb44f650a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga7a7b5a2540de667dbeb785fb44f650a4">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;infix)</td></tr>
+<tr class="separator:ga7a7b5a2540de667dbeb785fb44f650a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ddeb4c8a07104f8974260173f0e1930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga4ddeb4c8a07104f8974260173f0e1930">nvbio::infix_begin</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;infix)</td></tr>
+<tr class="separator:ga4ddeb4c8a07104f8974260173f0e1930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2a3836781685aa72c03414f27c9f8ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gae2a3836781685aa72c03414f27c9f8ec">nvbio::infix_end</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;infix)</td></tr>
+<tr class="separator:gae2a3836781685aa72c03414f27c9f8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f188a5ddb934eaa305f102133a7a7b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga9f188a5ddb934eaa305f102133a7a7b3">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;infix)</td></tr>
+<tr class="separator:ga9f188a5ddb934eaa305f102133a7a7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52dda41552f24292779de0c589b50e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga52dda41552f24292779de0c589b50e38">nvbio::string_id</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;infix)</td></tr>
+<tr class="separator:ga52dda41552f24292779de0c589b50e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04ad6e024f8cfd49460c3a3d933e35fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga04ad6e024f8cfd49460c3a3d933e35fa">nvbio::string_id</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;infix)</td></tr>
+<tr class="separator:ga04ad6e024f8cfd49460c3a3d933e35fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1875af305b458e64a6edaaa8388a03fe"><td class="memTemplParams" colspan="2">template&lt;typename StringType , typename CoordType &gt; </td></tr>
+<tr class="memitem:ga1875af305b458e64a6edaaa8388a03fe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Infix<br class="typebreak"/>
+&lt; StringType, CoordType &gt;<br class="typebreak"/>
+::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga1875af305b458e64a6edaaa8388a03fe">nvbio::infix_begin</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;infix)</td></tr>
+<tr class="separator:ga1875af305b458e64a6edaaa8388a03fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c62fe1031764be8bf8e69a13318b402"><td class="memTemplParams" colspan="2">template&lt;typename StringType , typename CoordType &gt; </td></tr>
+<tr class="memitem:ga1c62fe1031764be8bf8e69a13318b402"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Infix<br class="typebreak"/>
+&lt; StringType, CoordType &gt;<br class="typebreak"/>
+::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga1c62fe1031764be8bf8e69a13318b402">nvbio::infix_end</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;infix)</td></tr>
+<tr class="separator:ga1c62fe1031764be8bf8e69a13318b402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02299ca4809866b8dfae388a0ef237e6"><td class="memTemplParams" colspan="2">template&lt;typename StringType , typename CoordType &gt; </td></tr>
+<tr class="memitem:ga02299ca4809866b8dfae388a0ef237e6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga02299ca4809866b8dfae388a0ef237e6">nvbio::string_id</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InfixCore&lt; StringType, CoordType, 4u &gt; &amp;infix)</td></tr>
+<tr class="separator:ga02299ca4809866b8dfae388a0ef237e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31ca0f112eb1d4703044128a917579a1"><td class="memTemplParams" colspan="2">template&lt;typename StringType , typename CoordType &gt; </td></tr>
+<tr class="memitem:ga31ca0f112eb1d4703044128a917579a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga31ca0f112eb1d4703044128a917579a1">nvbio::length</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;infix)</td></tr>
+<tr class="separator:ga31ca0f112eb1d4703044128a917579a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe7ce8d2e517ecbb5732cfacd3830d11"><td class="memTemplParams" colspan="2">template&lt;typename StringType , typename CoordType &gt; </td></tr>
 <tr class="memitem:gafe7ce8d2e517ecbb5732cfacd3830d11"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_prefix.html">nvbio::Prefix</a> PrefixCore&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#gafe7ce8d2e517ecbb5732cfacd3830d11">nvbio::make_prefix</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StringType string, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> CoordType coords)</td></tr>
 <tr class="separator:gafe7ce8d2e517ecbb5732cfacd3830d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -804,24 +862,197 @@ template&lt;typename string_set_type , typename seed_functor , typename index_ve
 
 </div>
 </div>
-<a class="anchor" id="ga8ebd811be297cfc8be1f4a80348a374f"></a>
+<a class="anchor" id="gab2ab7f592829b1b11ea1f84aa26017bc"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename StringType , typename CoordType , uint32 CoordDim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::infix_begin </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, CoordDim &gt; &amp;&#160;</td>
-          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return the length of a given prefix </p>
+<p>return the string begin of a given infix </p>
 
-<p>Definition at line <a class="el" href="prefix_8h_source.html#l00352">352</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00365">365</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gae899885f4c835382bc3bf916f4bf31fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::infix_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00380">380</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5715733a6647c260b89b420c3267cf10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::infix_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00395">395</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4ddeb4c8a07104f8974260173f0e1930"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::infix_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00410">410</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1875af305b458e64a6edaaa8388a03fe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Infix&lt;StringType,CoordType&gt;::index_type nvbio::infix_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00436">436</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga9907ce7b64f60681ca334909b0c2145f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::infix_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00370">370</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gad1894ff35036e0a8de5f1405aef6cf7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::infix_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00385">385</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7ea13b84affd04afa772dc3aff5768f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::infix_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00400">400</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gae2a3836781685aa72c03414f27c9f8ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::infix_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string begin of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00415">415</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1c62fe1031764be8bf8e69a13318b402"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Infix&lt;StringType,CoordType&gt;::index_type nvbio::infix_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string end of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00442">442</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
 
 </div>
 </div>
@@ -843,6 +1074,124 @@ template&lt;typename StringType , typename CoordType , uint32 CoordDim&gt; </div
 <p>return the length of a given suffix </p>
 
 <p>Definition at line <a class="el" href="suffix_8h_source.html#l00352">352</a> of file <a class="el" href="suffix_8h_source.html">suffix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8ebd811be297cfc8be1f4a80348a374f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType , uint32 CoordDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, CoordDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length of a given prefix </p>
+
+<p>Definition at line <a class="el" href="prefix_8h_source.html#l00352">352</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5eff33f849df440294cd17d7d33f9e6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00375">375</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga40a9bd06750b33a34f1e522feb26dbc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_2 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00390">390</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7a7b5a2540de667dbeb785fb44f650a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00405">405</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga9f188a5ddb934eaa305f102133a7a7b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00420">420</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga31ca0f112eb1d4703044128a917579a1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Infix&lt; StringType, CoordType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the length a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00454">454</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
 
 </div>
 </div>
@@ -887,7 +1236,7 @@ template&lt;typename StringIterator , typename OffsetIterator &gt; </div>
 </div><div class="memdoc">
 <p>A utility function to make a <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a> </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00483">483</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00482">482</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -932,7 +1281,7 @@ template&lt;typename StringType , typename CoordType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="infix_8h_source.html#l00235">235</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00237">237</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1356,7 @@ template&lt;typename StringIterator , typename RangeIterator &gt; </div>
 </div><div class="memdoc">
 <p>A utility function to make a <a class="el" href="structnvbio_1_1_sparse_string_set.html">SparseStringSet</a> </p>
 
-<p>Definition at line <a class="el" href="string__set_8h_source.html#l00617">617</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
+<p>Definition at line <a class="el" href="string__set_8h_source.html#l00615">615</a> of file <a class="el" href="string__set_8h_source.html">string_set.h</a>.</p>
 
 </div>
 </div>
@@ -1382,6 +1731,27 @@ template&lt;typename StringSet &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga6c150481dd1442788b90d88383946c6b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringType , typename CoordType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::string_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, 2u &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string index of a given prefix </p>
+
+<p>Definition at line <a class="el" href="prefix_8h_source.html#l00346">346</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ga18367740f451362ed63039e7d67e367a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1403,7 +1773,45 @@ template&lt;typename StringType , typename CoordType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga6c150481dd1442788b90d88383946c6b"></a>
+<a class="anchor" id="ga52dda41552f24292779de0c589b50e38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::string_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string index of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00425">425</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga04ad6e024f8cfd49460c3a3d933e35fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint64 nvbio::string_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint64_4 &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the string index of a given infix </p>
+
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00430">430</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga02299ca4809866b8dfae388a0ef237e6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1412,15 +1820,15 @@ template&lt;typename StringType , typename CoordType &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> uint32 nvbio::string_id </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> PrefixCore&lt; StringType, CoordType, 2u &gt; &amp;&#160;</td>
-          <td class="paramname"><em>prefix</em>)</td><td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InfixCore&lt; StringType, CoordType, 4u &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infix</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return the string index of a given prefix </p>
+<p>return the string index of a given infix </p>
 
-<p>Definition at line <a class="el" href="prefix_8h_source.html#l00346">346</a> of file <a class="el" href="prefix_8h_source.html">prefix.h</a>.</p>
+<p>Definition at line <a class="el" href="infix_8h_source.html#l00448">448</a> of file <a class="el" href="infix_8h_source.html">infix.h</a>.</p>
 
 </div>
 </div>
@@ -1470,7 +1878,7 @@ template&lt;typename StringType , typename CoordType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

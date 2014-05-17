@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
+<a href="#pub-attribs">Public Members</a> &#124;
 <a href="structnvbio_1_1io_1_1_read_data_file___s_a_m-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nvbio::io::ReadDataFile_SAM Struct Reference</div>  </div>
@@ -121,9 +122,9 @@ Inheritance diagram for nvbio::io::ReadDataFile_SAM:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aadd230edc660cfc2e09cad2763978b9a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#aadd230edc660cfc2e09cad2763978b9aa42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a> = 1024
+<tr class="memitem:ada4d5694e1e16b0c3c77e1876bcd98b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ada4d5694e1e16b0c3c77e1876bcd98b3a42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a> = 1024
  }</td></tr>
-<tr class="separator:aadd230edc660cfc2e09cad2763978b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ada4d5694e1e16b0c3c77e1876bcd98b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993cc9f660aa5f78c40ee5cb2aab9964"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964">SortOrder</a> { <a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>, 
 <a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964acf9fa1f3d65e9a8083f6f5284d063874">SortOrder_unsorted</a>, 
 <a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964ab02e46d88b11fe8fdf13159f68251438">SortOrder_queryname</a>, 
@@ -164,11 +165,15 @@ Public Methods</h2></td></tr>
 <tr class="memitem:a1f07c23e8bd81f5876d0ebab0e6126ac inherit pub_methods_structnvbio_1_1io_1_1_read_data_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_stream.html#a1f07c23e8bd81f5876d0ebab0e6126ac">~ReadDataStream</a> ()</td></tr>
 <tr class="separator:a1f07c23e8bd81f5876d0ebab0e6126ac inherit pub_methods_structnvbio_1_1io_1_1_read_data_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Members</h2></td></tr>
+<tr class="memitem:a0c08cfc76481bc8fd2aa7057e6689feb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a0c08cfc76481bc8fd2aa7057e6689feb">sq_names</a></td></tr>
+<tr class="separator:a0c08cfc76481bc8fd2aa7057e6689feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ababcb0d85ad70e225f95e7e80ee3f5f8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ababcb0d85ad70e225f95e7e80ee3f5f8">sq_lengths</a></td></tr>
+<tr class="separator:ababcb0d85ad70e225f95e7e80ee3f5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_structnvbio_1_1io_1_1_read_data_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structnvbio_1_1io_1_1_read_data_stream')"><img src="closed.png" alt="-"/>&#160;Public Members inherited from <a class="el" href="structnvbio_1_1io_1_1_read_data_stream.html">nvbio::io::ReadDataStream</a></td></tr>
-<tr class="memitem:a7bb2c4669330c309eaac4f47abb82c8b inherit pub_attribs_structnvbio_1_1io_1_1_read_data_stream"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a></td></tr>
-<tr class="separator:a7bb2c4669330c309eaac4f47abb82c8b inherit pub_attribs_structnvbio_1_1io_1_1_read_data_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_structnvbio_1_1io_1_1_read_data_file"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_structnvbio_1_1io_1_1_read_data_file')"><img src="closed.png" alt="-"/>&#160;Static Public Members inherited from <a class="el" href="structnvbio_1_1io_1_1_read_data_file.html">nvbio::io::ReadDataFile</a></td></tr>
 <tr class="memitem:a31eb7ce29b2e44619f92ccfab33380a6 inherit pub_static_attribs_structnvbio_1_1io_1_1_read_data_file"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_read_data_file.html#a31eb7ce29b2e44619f92ccfab33380a6">LONG_READ</a> = 32*1024</td></tr>
 <tr class="separator:a31eb7ce29b2e44619f92ccfab33380a6 inherit pub_static_attribs_structnvbio_1_1io_1_1_read_data_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +191,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8a76858f1fba62a3392449f2f9cce9f4 inherit pro_attribs_structnvbio_1_1io_1_1_read_data_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="aadd230edc660cfc2e09cad2763978b9a"></a>
+<a class="anchor" id="ada4d5694e1e16b0c3c77e1876bcd98b3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -196,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aadd230edc660cfc2e09cad2763978b9aa42cfbf07322114a323b2b5e780ee2828"></a>LINE_BUFFER_INIT_SIZE</em>&nbsp;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ada4d5694e1e16b0c3c77e1876bcd98b3a42cfbf07322114a323b2b5e780ee2828"></a>LINE_BUFFER_INIT_SIZE</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -328,7 +333,36 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="structnvbio_1_1io_1_1_read_data_file.html#a10116e09eaa854b46903dc8f659ba1c4">nvbio::io::ReadDataFile</a>.</p>
 
-<p>Definition at line <a class="el" href="sam_8cpp_source.html#l00264">264</a> of file <a class="el" href="sam_8cpp_source.html">sam.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sam_8cpp_source.html#l00338">338</a> of file <a class="el" href="sam_8cpp_source.html">sam.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ababcb0d85ad70e225f95e7e80ee3f5f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&gt; nvbio::io::ReadDataFile_SAM::sq_lengths</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sam_8h_source.html#l00109">109</a> of file <a class="el" href="sam_8h_source.html">sam.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c08cfc76481bc8fd2aa7057e6689feb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; nvbio::io::ReadDataFile_SAM::sq_names</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sam_8h_source.html#l00108">108</a> of file <a class="el" href="sam_8h_source.html">sam.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

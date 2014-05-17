@@ -100,12 +100,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac0c99a4ad98323db96a4a915eb552859"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:ac0c99a4ad98323db96a4a915eb552859"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">swap</a> (<a class="el" href="structnvbio_1_1iterator__reference.html">nvbio::iterator_reference</a>&lt; Iterator &gt; ref1, <a class="el" href="structnvbio_1_1iterator__reference.html">nvbio::iterator_reference</a>&lt; Iterator &gt; ref2)</td></tr>
+<tr class="separator:ac0c99a4ad98323db96a4a915eb552859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613494585ef78bee6255124ff228ceb9"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
 <tr class="memitem:a613494585ef78bee6255124ff228ceb9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">swap</a> (<a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef</a>&lt; Stream &gt; ref1, <a class="el" href="structnvbio_1_1_packed_stream_ref.html">nvbio::PackedStreamRef</a>&lt; Stream &gt; ref2)</td></tr>
 <tr class="separator:a613494585ef78bee6255124ff228ceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7101b9911aa876d394f4e582b1db14d"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
-<tr class="memitem:af7101b9911aa876d394f4e582b1db14d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">iter_swap</a> (<a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator</a>&lt; Stream &gt; it1, <a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator</a>&lt; Stream &gt; it2)</td></tr>
-<tr class="separator:af7101b9911aa876d394f4e582b1db14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8aa05e48206e2ef40cff323fd556a2"><td class="memTemplParams" colspan="2">template&lt;typename InputStream , typename SymbolType , nvbio::uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </td></tr>
+<tr class="memitem:a5a8aa05e48206e2ef40cff323fd556a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">iter_swap</a> (<a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; it1, <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; it2)</td></tr>
+<tr class="separator:a5a8aa05e48206e2ef40cff323fd556a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac16666deb24c95d75868751ab438a99f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename CounterT &gt; </td></tr>
 <tr class="memitem:ac16666deb24c95d75868751ab438a99f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#ac16666deb24c95d75868751ab438a99f">swap</a> (::<a class="el" href="classnvbio_1_1_shared_pointer.html">nvbio::SharedPointer</a>&lt; T, CounterT &gt; &amp;a,::<a class="el" href="classnvbio_1_1_shared_pointer.html">nvbio::SharedPointer</a>&lt; T, CounterT &gt; &amp;b)</td></tr>
 <tr class="separator:ac16666deb24c95d75868751ab438a99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,22 +117,22 @@ Functions</h2></td></tr>
 <tr class="separator:a8ed2890dc529ffd4f445a76fa6cb9360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="af7101b9911aa876d394f4e582b1db14d"></a>
+<a class="anchor" id="a5a8aa05e48206e2ef40cff323fd556a2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Stream &gt; </div>
+template&lt;typename InputStream , typename SymbolType , nvbio::uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void std::iter_swap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator</a>&lt; Stream &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;&#160;</td>
           <td class="paramname"><em>it1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1_packed_stream_iterator.html">nvbio::PackedStreamIterator</a>&lt; Stream &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;&#160;</td>
           <td class="paramname"><em>it2</em>&#160;</td>
         </tr>
         <tr>
@@ -140,7 +143,38 @@ template&lt;typename Stream &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00594">594</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00422">422</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0c99a4ad98323db96a4a915eb552859"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void std::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1iterator__reference.html">nvbio::iterator_reference</a>&lt; Iterator &gt;&#160;</td>
+          <td class="paramname"><em>ref1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnvbio_1_1iterator__reference.html">nvbio::iterator_reference</a>&lt; Iterator &gt;&#160;</td>
+          <td class="paramname"><em>ref2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>overload swap for iterator_reference to make sure it does the right thing </p>
+
+<p>Definition at line <a class="el" href="iterator__reference_8h_source.html#l00086">86</a> of file <a class="el" href="iterator__reference_8h_source.html">iterator_reference.h</a>.</p>
 
 </div>
 </div>
@@ -171,7 +205,7 @@ template&lt;typename Stream &gt; </div>
 </div><div class="memdoc">
 <p>overload swap for PackedStreamRef to make sure it does the right thing </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00583">583</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00411">411</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +243,7 @@ template&lt;typename T , typename CounterT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="shared__pointer_8h_source.html#l00632">632</a> of file <a class="el" href="shared__pointer_8h_source.html">shared_pointer.h</a>.</p>
+<p>Definition at line <a class="el" href="shared__pointer_8h_source.html#l00639">639</a> of file <a class="el" href="shared__pointer_8h_source.html">shared_pointer.h</a>.</p>
 
 </div>
 </div>
@@ -247,14 +281,14 @@ template&lt;typename T , typename CounterT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="shared__pointer_8h_source.html#l00638">638</a> of file <a class="el" href="shared__pointer_8h_source.html">shared_pointer.h</a>.</p>
+<p>Definition at line <a class="el" href="shared__pointer_8h_source.html#l00645">645</a> of file <a class="el" href="shared__pointer_8h_source.html">shared_pointer.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:24 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:33 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

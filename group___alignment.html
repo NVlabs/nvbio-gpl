@@ -401,8 +401,8 @@ template&lt;typename aligner_type , typename pattern_string , typename qual_stri
 <p>Compute the alignment score between a pattern and a text string with full DP alignment.</p>
 <p>This is a low-level function, requiring all needed temporary storage to be passed from the caller. The purpose is allowing the caller to allocate such storage (possibly among kernel threads) using different strategies.</p>
 <p>Example: </p>
-<div class="fragment"><div class="line">const_string text = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
-<div class="line">const_string pattern  = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
+<div class="fragment"><div class="line">const_string text = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
+<div class="line">const_string pattern  = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">typedef</span> aln::GotohAligner&lt;aln::LOCAL,aln::SimpleGotohScheme&gt; aligner_type;</div>
 <div class="line"><span class="keyword">typedef</span> aln::column_storage_type&lt;aligner_type&gt;::type         cell_type;</div>
@@ -504,8 +504,8 @@ template&lt;uint32 MAX_TEXT_LEN, typename aligner_type , typename pattern_string
 <p>Compute the alignment score between a pattern and a text string with full DP alignment.</p>
 <p>This is a high level function, allocating all necessary temporary storage in local memory. In order to size the allocations properly, the function requires compile-time knowledge of the maximum text length.</p>
 <p>Example: </p>
-<div class="fragment"><div class="line">const_string text = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
-<div class="line">const_string pattern  = <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
+<div class="fragment"><div class="line">const_string text = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;AAAAGGGTGCTCAA&quot;</span>);</div>
+<div class="line">const_string pattern  = <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="stringliteral">&quot;GGGTGCTCAA&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> aln::SimpleGotohScheme scoring(                       <span class="comment">// build a Gotoh scoring scheme</span></div>
 <div class="line">     2,                                                     <span class="comment">// match bonus</span></div>
@@ -1185,7 +1185,7 @@ template&lt;AlignmentType TYPE, typename scheme_type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

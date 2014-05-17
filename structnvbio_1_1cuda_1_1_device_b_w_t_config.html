@@ -112,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 struct nvbio::cuda::DeviceBWTConfig&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00280">280</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00278">278</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -121,12 +121,11 @@ Public Types</h2></td></tr>
 <tr class="memitem:a3d1cb27294dce20b4b489052e4a42da3"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
 &lt; storage_type &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#a3d1cb27294dce20b4b489052e4a42da3">word_type</a></td></tr>
 <tr class="separator:a3d1cb27294dce20b4b489052e4a42da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ab41279b607e9ed1e7662aa22057a4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a><br class="typebreak"/>
+<tr class="memitem:af373fd9fec4fb3d1f572c0955aa94f56"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a><br class="typebreak"/>
 &lt; <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; storage_type, <br class="typebreak"/>
 <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, SYMBOL_SIZE, BIG_ENDIAN, <br class="typebreak"/>
-<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &gt; &gt;, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae4ab41279b607e9ed1e7662aa22057a4">string_set_type</a></td></tr>
-<tr class="separator:ae4ab41279b607e9ed1e7662aa22057a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &gt;, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#af373fd9fec4fb3d1f572c0955aa94f56">string_set_type</a></td></tr>
+<tr class="separator:af373fd9fec4fb3d1f572c0955aa94f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fe5d9d4e79b55d4d9bc9e34b1ef1788"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="structnvbio_1_1priv_1_1_device_chunk_loader.html">priv::DeviceChunkLoader</a><br class="typebreak"/>
 &lt; SYMBOL_SIZE, BIG_ENDIAN, <br class="typebreak"/>
@@ -134,7 +133,7 @@ storage_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="separator:a1fe5d9d4e79b55d4d9bc9e34b1ef1788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ca2ac2a6fc90e92119155aef95e4e3"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="structnvbio_1_1priv_1_1_device_string_set_radices.html">priv::DeviceStringSetRadices</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae4ab41279b607e9ed1e7662aa22057a4">string_set_type</a>, SYMBOL_SIZE, <br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#af373fd9fec4fb3d1f572c0955aa94f56">string_set_type</a>, SYMBOL_SIZE, <br class="typebreak"/>
 <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ad69f83958f78a831e8dd32184c39ca21">DOLLAR_BITS</a>, <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#a7fdb8b9134373dd2f3a83400e4125d65">WORD_BITS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae1ca2ac2a6fc90e92119155aef95e4e3">string_set_handler</a></td></tr>
 <tr class="separator:ae1ca2ac2a6fc90e92119155aef95e4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6000caaa3b83e80c569f3c9958c20e9d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1priv_1_1word__selector.html">priv::word_selector</a><br class="typebreak"/>
@@ -168,7 +167,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00295">295</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00293">293</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -184,7 +183,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00292">292</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00290">290</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -195,28 +194,28 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
 template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1priv_1_1_device_string_set_radices.html">priv::DeviceStringSetRadices</a>&lt;<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae4ab41279b607e9ed1e7662aa22057a4">string_set_type</a>,SYMBOL_SIZE,<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ad69f83958f78a831e8dd32184c39ca21">DOLLAR_BITS</a>,<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#a7fdb8b9134373dd2f3a83400e4125d65">WORD_BITS</a>&gt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html">nvbio::cuda::DeviceBWTConfig</a>&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae1ca2ac2a6fc90e92119155aef95e4e3">string_set_handler</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1priv_1_1_device_string_set_radices.html">priv::DeviceStringSetRadices</a>&lt;<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#af373fd9fec4fb3d1f572c0955aa94f56">string_set_type</a>,SYMBOL_SIZE,<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ad69f83958f78a831e8dd32184c39ca21">DOLLAR_BITS</a>,<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#a7fdb8b9134373dd2f3a83400e4125d65">WORD_BITS</a>&gt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html">nvbio::cuda::DeviceBWTConfig</a>&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae1ca2ac2a6fc90e92119155aef95e4e3">string_set_handler</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00293">293</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00291">291</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae4ab41279b607e9ed1e7662aa22057a4"></a>
+<a class="anchor" id="af373fd9fec4fb3d1f572c0955aa94f56"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typename storage_type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt; <a class="el" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;storage_type,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,SYMBOL_SIZE,BIG_ENDIAN,<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&gt; &gt;, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*&gt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html">nvbio::cuda::DeviceBWTConfig</a>&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#ae4ab41279b607e9ed1e7662aa22057a4">string_set_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt; <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt;storage_type,<a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>,SYMBOL_SIZE,BIG_ENDIAN,<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&gt;, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*&gt; <a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html">nvbio::cuda::DeviceBWTConfig</a>&lt; BUCKETING_BITS_T, SYMBOL_SIZE, BIG_ENDIAN, storage_type &gt;::<a class="el" href="structnvbio_1_1cuda_1_1_device_b_w_t_config.html#af373fd9fec4fb3d1f572c0955aa94f56">string_set_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00290">290</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00288">288</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +231,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00296">296</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00294">294</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -248,7 +247,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00282">282</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00280">280</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +272,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00286">286</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00284">284</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +296,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00285">285</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00283">283</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +320,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00284">284</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="sufsort__inl_8h_source.html#l00282">282</a> of file <a class="el" href="sufsort__inl_8h_source.html">sufsort_inl.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +330,7 @@ template&lt;uint32 BUCKETING_BITS_T, uint32 SYMBOL_SIZE, bool BIG_ENDIAN, typena
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:13 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:20 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

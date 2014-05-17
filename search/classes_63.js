@@ -32,7 +32,7 @@ var searchData=
   ['compressionsort',['CompressionSort',['../structnvbio_1_1cuda_1_1_compression_sort.html',1,'nvbio::cuda']]],
   ['concatenated_5fstring_5fset_5ftag',['concatenated_string_set_tag',['../structnvbio_1_1concatenated__string__set__tag.html',1,'nvbio']]],
   ['concatenatedstringset',['ConcatenatedStringSet',['../structnvbio_1_1_concatenated_string_set.html',1,'nvbio']]],
-  ['concatenatedstringset_3c_20packedstreamiterator_3c_20packedstream_3c_20storage_5ftype_2c_20uint8_2c_20symbol_5fsize_2c_20true_2c_20index_5ftype_20_3e_20_3e_2c_20index_5ftype_20_2a_20_3e',['ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, true, index_type &gt; &gt;, index_type * &gt;',['../structnvbio_1_1_concatenated_string_set.html',1,'nvbio']]],
+  ['concatenatedstringset_3c_20packedstream_3c_20storage_5ftype_2c_20uint8_2c_20symbol_5fsize_2c_20true_2c_20index_5ftype_20_3e_2c_20index_5ftype_20_2a_20_3e',['ConcatenatedStringSet&lt; PackedStream&lt; storage_type, uint8, SYMBOL_SIZE, true, index_type &gt;, index_type * &gt;',['../structnvbio_1_1_concatenated_string_set.html',1,'nvbio']]],
   ['condition',['condition',['../structnvbio_1_1cuda_1_1condition.html',1,'nvbio::cuda']]],
   ['condition_5fset_5fstorage',['condition_set_storage',['../structnvbio_1_1cuda_1_1condition__set__storage.html',1,'nvbio::cuda']]],
   ['condition_5fset_5fview',['condition_set_view',['../structnvbio_1_1cuda_1_1condition__set__view.html',1,'nvbio::cuda']]],

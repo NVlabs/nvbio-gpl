@@ -261,7 +261,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    kernel_stats.push_back( &amp;stats.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a178e264f2ba4d70579c396886e599e61">read_HtoD</a> );</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    kernel_stats.push_back( &amp;stats.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a117c1784821e8a75a55ee856ad79552a">read_io</a> );</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (stats.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a42f74af7d51ccf399ca5309f3ce29833">params</a>.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html#a20a0eb57b6256df91248656c88239a86">keep_stats</a>)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//if (stats.params.keep_stats)</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; kernel_stats.size(); ++i)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a1f3301d99f0d55bef6bde3471daff5f8">generate_kernel_table</a>( report, *kernel_stats[i] );</div>
@@ -918,7 +918,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:20 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:29 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

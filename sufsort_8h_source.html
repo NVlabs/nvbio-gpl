@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#gab8dbd556689a937c97d8f61a43b216b1">bwt</a>(</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">const</span> <a class="code" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a>&lt;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt; <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt;</a> &gt;,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="structnvbio_1_1_packed_stream.html">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt;</a>,</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        output_handler&amp;             output,</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="structnvbio_1_1_b_w_t_params.html">BWTParams</a>*                  params = NULL);</div>
@@ -190,9 +190,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">template</span> &lt;u<span class="keywordtype">int</span>32 SYMBOL_SIZE, <span class="keywordtype">bool</span> BIG_ENDIAN, <span class="keyword">typename</span> storage_type, <span class="keyword">typename</span> output_handler&gt;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#ga471d8eb8040ac1b540bf3b064f94a2f0">large_bwt</a>(</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___sufsort.html#gad52e75fa7f0945f5dd2fce6ba9f00ea0">large_bwt</a>(</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">const</span> ConcatenatedStringSet&lt;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        PackedStreamIterator&lt; PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt; &gt;,</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,uint64&gt;,</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>*&gt;                    string_set,</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        output_handler&amp;             output,</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        BWTParams*                  params = NULL);</div>
@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

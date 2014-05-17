@@ -134,12 +134,16 @@ Functions</h2></td></tr>
 <tr class="separator:a77ee93f3ce559665bf417ed73c9585c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a442a6c41a9681e2e875a8d8407d64a02"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a442a6c41a9681e2e875a8d8407d64a02">nvbio::cuda::smem_allocation_unit</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties)</td></tr>
 <tr class="separator:a442a6c41a9681e2e875a8d8407d64a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588ac2d449b76537e050cf63d1b5ef4c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a588ac2d449b76537e050cf63d1b5ef4c">nvbio::cuda::reg_allocation_unit</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties)</td></tr>
-<tr class="separator:a588ac2d449b76537e050cf63d1b5ef4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c0a6665aa38ac2aca5651eaf95560c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a53c0a6665aa38ac2aca5651eaf95560c">nvbio::cuda::reg_allocation_unit</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> size_t regsPerThread)</td></tr>
+<tr class="separator:a53c0a6665aa38ac2aca5651eaf95560c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2175ef124f792f289d871df56a80995"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#af2175ef124f792f289d871df56a80995">nvbio::cuda::warp_allocation_multiple</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties)</td></tr>
 <tr class="separator:af2175ef124f792f289d871df56a80995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bcd8fd77dfa3e5473c9a73125ea36db"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a4bcd8fd77dfa3e5473c9a73125ea36db">nvbio::cuda::num_sides_per_multiprocessor</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties)</td></tr>
+<tr class="separator:a4bcd8fd77dfa3e5473c9a73125ea36db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7387573527b2424cb5b0e6f54edae487"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a7387573527b2424cb5b0e6f54edae487">nvbio::cuda::max_blocks_per_multiprocessor</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties)</td></tr>
 <tr class="separator:a7387573527b2424cb5b0e6f54edae487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21323b437c6d11e55114fdf9afd06ebc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a21323b437c6d11e55114fdf9afd06ebc">nvbio::cuda::num_regs_per_block</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaDeviceProp &amp;properties, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> cudaFuncAttributes &amp;attributes, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> size_t CTA_SIZE)</td></tr>
+<tr class="separator:a21323b437c6d11e55114fdf9afd06ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b83b2b50204230a594980fe7711a05f"><td class="memTemplParams" colspan="2">template&lt;typename KernelFunction &gt; </td></tr>
 <tr class="memitem:a8b83b2b50204230a594980fe7711a05f"><td class="memTemplItemLeft" align="right" valign="top">cudaFuncAttributes&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio_1_1cuda.html#a8b83b2b50204230a594980fe7711a05f">nvbio::cuda::function_attributes</a> (KernelFunction kernel)</td></tr>
 <tr class="separator:a8b83b2b50204230a594980fe7711a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,7 +168,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="cached__iterator_8h.html" title="CUDA-compatible iterator wrappers allowing to cache the dereferenced value of generic iterators...">nvbio/basic/cached_iterator.h</a>&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="packedstream_8h.html">nvbio/basic/packedstream.h</a>&gt;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="packedstream__loader_8h.html">nvbio/basic/packedstream_loader.h</a>&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vector__wrapper_8h.html">nvbio/basic/vector_wrapper.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vector__view_8h.html">nvbio/basic/vector_view.h</a>&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="shared__pointer_8h.html">nvbio/basic/shared_pointer.h</a>&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="dna_8h.html">nvbio/basic/dna.h</a>&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="nvbio_2alignment_2alignment_8h.html">nvbio/alignment/alignment.h</a>&gt;</span></div>
@@ -159,9 +159,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// make a light-weight string from an ASCII char string</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">   61</a></span>&#160;<a class="code" href="structnvbio_1_1vector__wrapper.html">vector_wrapper&lt;const char*&gt;</a> <a class="code" href="namespacenvbio_1_1aln.html#ab0bf719f99f364203938c63894b0edd8">make_string</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str)</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">   61</a></span>&#160;<a class="code" href="structnvbio_1_1vector__view.html">vector_view&lt;const char*&gt;</a> <a class="code" href="namespacenvbio_1_1aln.html#a93eb618cd746bb4611375f2d9a531b1c">make_string</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1vector__wrapper.html">vector_wrapper&lt;const char*&gt;</a>( <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(str)), str );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1vector__view.html">vector_view&lt;const char*&gt;</a>( <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(str)), str );</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// run-length encode a string</span></div>
@@ -719,184 +719,174 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00619"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html">  619</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html">TestBacktracker</a></div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;{</div>
-<div class="line"><a name="l00621"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a5c29bfa2c5e95e9ce4ef858459d1b106">  621</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a5c29bfa2c5e95e9ce4ef858459d1b106">clear</a>() { <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[0] = <span class="charliteral">&#39;\0&#39;</span>; }</div>
+<div class="line"><a name="l00621"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a5c29bfa2c5e95e9ce4ef858459d1b106">  621</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a5c29bfa2c5e95e9ce4ef858459d1b106">clear</a>() { <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[0] = <span class="charliteral">&#39;\0&#39;</span>; <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a> = 0; }</div>
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
 <div class="line"><a name="l00624"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a312c9ab182329635187de0ed74450052">  624</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a312c9ab182329635187de0ed74450052">clip</a>(<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> len)</div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    {</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">        #if !defined(__CUDA_ARCH__)</span></div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="preprocessor"></span>        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> aln_len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>));</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; len; ++i)</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len+i] = <span class="charliteral">&#39;S&#39;</span>;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len+len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
-<div class="line"><a name="l00634"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#af9023b9d6ced40ed3156f08890df8ed1">  634</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#af9023b9d6ced40ed3156f08890df8ed1">push</a>(<span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> op)</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    {</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="preprocessor">        #if !defined(__CUDA_ARCH__)</span></div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="preprocessor"></span>        sprintf(<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a> + strlen(<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>), <span class="stringliteral">&quot;%c&quot;</span>, <span class="stringliteral">&quot;MID&quot;</span>[op]);</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE&gt;</div>
-<div class="line"><a name="l00644"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">  644</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>(</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_edit_distance_aligner.html">EditDistanceAligner&lt;TYPE&gt;</a>               aligner,</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                            offset,</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            str,</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            ref)</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    {</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> aln_len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( strlen( <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a> ) );</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; aln_len; ++a)</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        {</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i = 0; i &lt; len; ++i)</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>+i] = <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>+len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
+<div class="line"><a name="l00631"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#af9023b9d6ced40ed3156f08890df8ed1">  631</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#af9023b9d6ced40ed3156f08890df8ed1">push</a>(<span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a> op)</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    {</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[ <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>++ ] = <span class="stringliteral">&quot;MID&quot;</span>[op];</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    }</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE&gt;</div>
+<div class="line"><a name="l00639"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">  639</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>(</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_edit_distance_aligner.html">EditDistanceAligner&lt;TYPE&gt;</a>               aligner,</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                            offset,</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            str,</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            ref)</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    {</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>; ++a)</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        {</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                ++j;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;            {</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                --<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                <span class="comment">// mover in the pattern</span></div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                ++j;</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;            {</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                --<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                <span class="comment">// mover in the pattern</span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;                ++j;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;            }</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;            {</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                --<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                <span class="comment">// move in the text</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                ++k;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;            }</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            {</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                score -= (str[j] == ref[k]) ? 0 : 1;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;            }</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;            {</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                --<a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;                <span class="comment">// move in the text</span></div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                ++k;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;            }</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;            {</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                score -= (str[j] == ref[k]) ? 0 : 1;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                <span class="comment">// move diagonally</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                ++j; ++k;</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            }</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    }</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                <span class="comment">// move diagonally</span></div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                ++j; ++k;</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            }</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        }</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    }</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE, <span class="keyword">typename</span> scoring_type&gt;</div>
-<div class="line"><a name="l00691"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a6edfb5fcb0a1b7f3022809cbe9096fee">  691</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a6edfb5fcb0a1b7f3022809cbe9096fee">score</a>(</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">SmithWatermanAligner&lt;TYPE,scoring_type&gt;</a> aligner,</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                            offset,</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            str,</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            ref)</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    {</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        <span class="keyword">const</span> scoring_type&amp; scoring = aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> aln_len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( strlen( <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a> ) );</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; aln_len; ++a)</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        {</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;                ++j;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;            {</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                score += scoring.insertion();</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                <span class="comment">// mover in the pattern</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                ++j;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            }</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            {</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;                score += scoring.deletion();</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;                <span class="comment">// move in the text</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                ++k;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            }</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;            {</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                score += (str[j] == ref[k]) ? scoring.match() : scoring.mismatch();</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                <span class="comment">// move diagonally</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;                ++j; ++k;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            }</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        }</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    }</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE, <span class="keyword">typename</span> scoring_type&gt;</div>
-<div class="line"><a name="l00740"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a3830610ae7f42ac1d962cc8190c5136f">  740</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a3830610ae7f42ac1d962cc8190c5136f">score</a>(</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">GotohAligner&lt;TYPE,scoring_type&gt;</a>     aligner,</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                        offset,</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                        str,</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                        ref)</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    {</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        <span class="keyword">const</span> scoring_type&amp; scoring = aligner.<a class="code" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#aaf91ac67f08ad473e6f0412adbdd90e6">scheme</a>;</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> aln_len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( strlen( <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a> ) );</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        <span class="keywordtype">char</span>  state = <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE, <span class="keyword">typename</span> scoring_type&gt;</div>
+<div class="line"><a name="l00684"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a6edfb5fcb0a1b7f3022809cbe9096fee">  684</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a6edfb5fcb0a1b7f3022809cbe9096fee">score</a>(</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html">SmithWatermanAligner&lt;TYPE,scoring_type&gt;</a> aligner,</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                            offset,</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            str,</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                            ref)</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    {</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <span class="keyword">const</span> scoring_type&amp; scoring = aligner.<a class="code" href="structnvbio_1_1aln_1_1_smith_waterman_aligner.html#a7053c9b435c0e969cf536c7e7f13cfc8">scheme</a>;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>; ++a)</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        {</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                ++j;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;            {</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                score += scoring.insertion();</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                <span class="comment">// mover in the pattern</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;                ++j;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            }</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            {</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                score += scoring.deletion();</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;                <span class="comment">// move in the text</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                ++k;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            }</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            {</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;                score += (str[j] == ref[k]) ? scoring.match() : scoring.mismatch();</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;                <span class="comment">// move diagonally</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;                ++j; ++k;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            }</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        }</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    }</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="comment">// compute the score of the resulting alignment</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keyword">template</span> &lt;AlignmentType TYPE, <span class="keyword">typename</span> scoring_type&gt;</div>
+<div class="line"><a name="l00731"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a3830610ae7f42ac1d962cc8190c5136f">  731</a></span>&#160;    <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a3830610ae7f42ac1d962cc8190c5136f">score</a>(</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        <a class="code" href="structnvbio_1_1aln_1_1_gotoh_aligner.html">GotohAligner&lt;TYPE,scoring_type&gt;</a>     aligner,</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                        offset,</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                        str,</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*                        ref)</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    {</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="keyword">const</span> scoring_type&amp; scoring = aligner.<a class="code" href="structnvbio_1_1aln_1_1_gotoh_aligner.html#aaf91ac67f08ad473e6f0412adbdd90e6">scheme</a>;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <a class="code" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a> = 0;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keywordtype">char</span>  state = <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>; ++a)</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        {</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                ++j;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            {</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                score += (state != op) ? scoring.pattern_gap_open() : scoring.pattern_gap_extension();</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> a = 0, j = 0, k = offset; a &lt; aln_len; ++a)</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        {</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> op = <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[aln_len-a-1];</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;S&#39;</span>)</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                ++j;</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;I&#39;</span>)</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            {</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first insertion or not</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                score += (state != op) ? scoring.pattern_gap_open() : scoring.pattern_gap_extension();</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                <span class="comment">// mover in the pattern</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                ++j;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            }</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            {</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                score += (state != op) ? scoring.text_gap_open() : scoring.text_gap_extension();</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                <span class="comment">// move in the text</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                ++k;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            }</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            {</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                score += (str[j] == ref[k]) ? scoring.match() : scoring.mismatch();</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                <span class="comment">// move diagonally</span></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                ++j; ++k;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            }</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            <span class="comment">// store new state</span></div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            state = op;</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        }</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    }</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;</div>
-<div class="line"><a name="l00790"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">  790</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[1024];</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;};</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;} <span class="comment">// namespace sw</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                <span class="comment">// mover in the pattern</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                ++j;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            }</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;D&#39;</span>)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            {</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                <span class="comment">// apply a gap-open or gap-extension penalty according to whether it&#39;s the first deletion or not</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                score += (state != op) ? scoring.text_gap_open() : scoring.text_gap_extension();</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="comment">// move in the text</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                ++k;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;            }</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;M&#39;</span>)</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            {</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                <span class="comment">// add a match or mismatch score</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                score += (str[j] == ref[k]) ? scoring.match() : scoring.mismatch();</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                <span class="comment">// move diagonally</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                ++j; ++k;</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;            }</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            <span class="comment">// store new state</span></div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            state = op;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        }</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#adbfd48814230b1554a0194fe23924bc3">score</a>;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;</div>
+<div class="line"><a name="l00779"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">  779</a></span>&#160;    <span class="keywordtype">char</span>   <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#aef8b51be0f9a8129f01abd04dc9c4469">aln</a>[1024];</div>
+<div class="line"><a name="l00780"></a><span class="lineno"><a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">  780</a></span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1aln_1_1_test_backtracker.html#a355870da06e72ab94160800f24fa9309">aln_len</a>;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;};</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;} <span class="comment">// namespace sw</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

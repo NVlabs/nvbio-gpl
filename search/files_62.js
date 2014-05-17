@@ -25,6 +25,7 @@ var searchData=
   ['bnt_2ecpp',['bnt.cpp',['../bnt_8cpp.html',1,'']]],
   ['bnt_2eh',['bnt.h',['../bnt_8h.html',1,'']]],
   ['bowtie2_5fcuda_5fdriver_2eh',['bowtie2_cuda_driver.h',['../bowtie2__cuda__driver_8h.html',1,'']]],
+  ['bufferedtextfile_2eh',['bufferedtextfile.h',['../bufferedtextfile_8h.html',1,'']]],
   ['bwt_2eh',['bwt.h',['../bwt_8h.html',1,'']]],
   ['bwt_5ftest_2ecpp',['bwt_test.cpp',['../bwt__test_8cpp.html',1,'']]]
 ];

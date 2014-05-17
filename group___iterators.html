@@ -100,6 +100,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1const__cached__iterator.html">nvbio::const_cached_iterator&lt; InputStream &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1index__transform__iterator.html">nvbio::index_transform_iterator&lt; T, Transform &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1iterator__reference.html">nvbio::iterator_reference&lt; Iterator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1to__const_3_01iterator__reference_3_01_iterator_01_4_01_4.html">nvbio::to_const&lt; iterator_reference&lt; Iterator &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1strided__iterator.html">nvbio::strided_iterator&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1block__strided__iterator.html">nvbio::block_strided_iterator&lt; BLOCKSIZE, T &gt;</a></td></tr>
@@ -190,6 +196,36 @@ const_cached_iterator&lt; Stream &gt;&#160;</td><td class="memTemplItemRight" va
 const_cached_iterator&lt; Stream &gt;<br class="typebreak"/>
 ::difference_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga5c3d7f660059ff611930fb46f0088888">nvbio::operator-</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> const_cached_iterator&lt; Stream &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> const_cached_iterator&lt; Stream &gt; it2)</td></tr>
 <tr class="separator:ga5c3d7f660059ff611930fb46f0088888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00b9046510071e7425c4f2f374342730"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga00b9046510071e7425c4f2f374342730"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
+index_transform_iterator&lt; T, <br class="typebreak"/>
+Transform &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga00b9046510071e7425c4f2f374342730">nvbio::make_index_transform_iterator</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T it, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Transform f)</td></tr>
+<tr class="separator:ga00b9046510071e7425c4f2f374342730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a29f183cebf475e2384e01640b2823c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga9a29f183cebf475e2384e01640b2823c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga9a29f183cebf475e2384e01640b2823c">nvbio::operator==</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:ga9a29f183cebf475e2384e01640b2823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55b81cb0063e42201e6e027f9b30fa5b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga55b81cb0063e42201e6e027f9b30fa5b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga55b81cb0063e42201e6e027f9b30fa5b">nvbio::operator!=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:ga55b81cb0063e42201e6e027f9b30fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaec674f86a4cc993fda9c9f2dccd5409"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:gaaec674f86a4cc993fda9c9f2dccd5409"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#gaaec674f86a4cc993fda9c9f2dccd5409">nvbio::operator&lt;</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:gaaec674f86a4cc993fda9c9f2dccd5409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b64238f3ea0ace096eabdc7de3c4a50"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga0b64238f3ea0ace096eabdc7de3c4a50"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga0b64238f3ea0ace096eabdc7de3c4a50">nvbio::operator&lt;=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:ga0b64238f3ea0ace096eabdc7de3c4a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4398c65a3e67e4c5c690f480f837e5c1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga4398c65a3e67e4c5c690f480f837e5c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga4398c65a3e67e4c5c690f480f837e5c1">nvbio::operator&gt;</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:ga4398c65a3e67e4c5c690f480f837e5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15dc6f345d83726b87c73d306b499bd8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Transform &gt; </td></tr>
+<tr class="memitem:ga15dc6f345d83726b87c73d306b499bd8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#ga15dc6f345d83726b87c73d306b499bd8">nvbio::operator&gt;=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt; it2)</td></tr>
+<tr class="separator:ga15dc6f345d83726b87c73d306b499bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa0c387dc1f0d47f6582a94af1cc257f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gaa0c387dc1f0d47f6582a94af1cc257f9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___iterators.html#gaa0c387dc1f0d47f6582a94af1cc257f9">nvbio::operator==</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> strided_iterator&lt; T &gt; it1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> strided_iterator&lt; T &gt; it2)</td></tr>
@@ -296,6 +332,37 @@ template&lt;typename InputStream &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga00b9046510071e7425c4f2f374342730"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> index_transform_iterator&lt;T,Transform&gt; nvbio::make_index_transform_iterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Transform&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>make a <a class="el" href="structnvbio_1_1transform__iterator.html">transform_iterator</a> </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00189">189</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gac20c4f47ef134b249d6e60fca64aa196"></a>
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +421,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator != </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00117">117</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00118">118</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -389,6 +456,37 @@ template&lt;typename T , typename Transform &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga55b81cb0063e42201e6e027f9b30fa5b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator != </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00207">207</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gac711e4fedcf60a84de93a99aa8adb4a2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -416,7 +514,7 @@ template&lt;uint32 BLOCKSIZE, typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator != </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00216">216</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00217">217</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -737,7 +835,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator &lt; </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00125">125</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00126">126</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -803,6 +901,37 @@ template&lt;typename T , typename Transform &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="gaaec674f86a4cc993fda9c9f2dccd5409"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator &lt; </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00215">215</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ga0d05ae5f909e725defa19616a7f14c4e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -830,7 +959,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator &lt;= </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00130">130</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00131">131</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -896,6 +1025,37 @@ template&lt;typename Stream &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga0b64238f3ea0ace096eabdc7de3c4a50"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator &lt;= </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00220">220</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gaa0c387dc1f0d47f6582a94af1cc257f9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -923,7 +1083,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator == </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00109">109</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00110">110</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -958,6 +1118,37 @@ template&lt;typename T , typename Transform &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga9a29f183cebf475e2384e01640b2823c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator == </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00199">199</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ga359810fe8881fe9b430c80c1574e1fb8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -985,7 +1176,7 @@ template&lt;uint32 BLOCKSIZE, typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator == </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00208">208</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00209">209</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1238,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator &gt; </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00135">135</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00136">136</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -1113,6 +1304,37 @@ template&lt;typename T , typename Transform &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga4398c65a3e67e4c5c690f480f837e5c1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator &gt; </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00225">225</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gaa1c9afadc1006d985640b5caa1549ca5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1140,7 +1362,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>operator &gt;= </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00140">140</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00141">141</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -1206,10 +1428,41 @@ template&lt;typename Stream &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ga15dc6f345d83726b87c73d306b499bd8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Transform &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> bool nvbio::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> index_transform_iterator&lt; T, Transform &gt;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>operator &gt;= </p>
+
+<p>Definition at line <a class="el" href="index__transform__iterator_8h_source.html#l00230">230</a> of file <a class="el" href="index__transform__iterator_8h_source.html">index_transform_iterator.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

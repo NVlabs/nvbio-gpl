@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">nvbio/basic/types.h</a>&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="numbers_8h.html">nvbio/basic/numbers.h</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="algorithms_8h.html" title="Defines some general purpose algorithms. ">nvbio/basic/algorithms.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="primitives_8h.html">nvbio/basic/cuda/primitives.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="cuda_2primitives_8h.html">nvbio/basic/cuda/primitives.h</a>&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="thrust__view_8h.html">nvbio/basic/thrust_view.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exceptions_8h.html">nvbio/basic/exceptions.h</a>&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="iterator_8h.html">nvbio/basic/iterator.h</a>&gt;</span></div>
@@ -519,9 +519,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <a class="code" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="code" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a></div>
 <div class="line"><a name="l00864"></a><span class="lineno"><a class="code" href="structnvbio_1_1string__set__qgram__functor.html#ad041ea9e604a02a5f404064e352a3294">  864</a></span>&#160;    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> <a class="code" href="structnvbio_1_1string__set__qgram__functor.html#ad041ea9e604a02a5f404064e352a3294">operator() </a>(<span class="keyword">const</span> uint2 <span class="keywordtype">id</span>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___strings.html#ga02299ca4809866b8dfae388a0ef237e6">string_id</a>  = <span class="keywordtype">id</span>.x;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___string_sets_module.html#ga52dda41552f24292779de0c589b50e38">string_id</a>  = <span class="keywordtype">id</span>.x;</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> string_pos = <span class="keywordtype">id</span>.y;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1string__set__qgram__functor.html#ad32e2ad2fe7b19313d32dc188e17a317">string_type</a> <span class="keywordtype">string</span> = <a class="code" href="structnvbio_1_1string__set__qgram__functor.html#aa5b00f9c33ad58790ef736167ffbf592" title="string-set ">string_set</a>[ <a class="code" href="group___strings.html#ga02299ca4809866b8dfae388a0ef237e6">string_id</a> ];</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1string__set__qgram__functor.html#ad32e2ad2fe7b19313d32dc188e17a317">string_type</a> <span class="keywordtype">string</span> = <a class="code" href="structnvbio_1_1string__set__qgram__functor.html#aa5b00f9c33ad58790ef736167ffbf592" title="string-set ">string_set</a>[ <a class="code" href="group___string_sets_module.html#ga52dda41552f24292779de0c589b50e38">string_id</a> ];</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> string_len = <span class="keywordtype">string</span>.length();</div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;</div>
@@ -572,7 +572,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:17 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

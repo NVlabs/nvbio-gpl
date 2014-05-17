@@ -23,7 +23,6 @@ var searchData=
   ['readdataram',['ReadDataRAM',['../structnvbio_1_1io_1_1_read_data_r_a_m.html',1,'nvbio::io']]],
   ['readdatastream',['ReadDataStream',['../structnvbio_1_1io_1_1_read_data_stream.html',1,'nvbio::io']]],
   ['readdataview',['ReadDataView',['../structnvbio_1_1io_1_1_read_data_view.html',1,'nvbio::io']]],
-  ['readdataview_3c_20uint32_20_2a_2c_20uint32_20_2a_2c_20char_20_2a_2c_20char_20_2a_20_3e',['ReadDataView&lt; uint32 *, uint32 *, char *, char * &gt;',['../structnvbio_1_1io_1_1_read_data_view.html',1,'nvbio::io']]],
   ['readhitbinder',['ReadHitBinder',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hit_binder.html',1,'nvbio::bowtie2::cuda']]],
   ['readhitreference',['ReadHitReference',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hit_reference.html',1,'nvbio::bowtie2::cuda']]],
   ['readhitsbinder',['ReadHitsBinder',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hits_binder.html',1,'nvbio::bowtie2::cuda']]],

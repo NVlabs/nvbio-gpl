@@ -7,9 +7,10 @@ var searchData=
   ['qgramindexview',['QGramIndexView',['../group___q_gram_index.html#ga7c100dd414bafe68c3530009586f29be',1,'nvbio']]],
   ['qgramsetindexview',['QGramSetIndexView',['../group___q_gram_index.html#gae48cb1a225a4ba48d6eea53ae247bf85',1,'nvbio']]],
   ['qgroupindexview',['QGroupIndexView',['../group___q_group_index.html#ga16b967e3a7178ccd79bbf111e4c47aa0',1,'nvbio']]],
-  ['qual_5fiterator',['qual_iterator',['../structnvbio_1_1io_1_1_read_data_view.html#a8346b9406d5cebef9edb26b09b7a205a',1,'nvbio::io::ReadDataView::qual_iterator()'],['../structnvbio_1_1_read_loader.html#ac3d1663135c05b67236fbcdf7b2fc1a3',1,'nvbio::ReadLoader::qual_iterator()']]],
+  ['qual_5fiterator',['qual_iterator',['../structnvbio_1_1_read_loader.html#a19866b207bdcdcc0b96a24864b3d2213',1,'nvbio::ReadLoader']]],
+  ['qual_5fstorage_5fiterator',['qual_storage_iterator',['../structnvbio_1_1io_1_1_read_data_view.html#a67293a809f4f92960e9da81f15cd4aac',1,'nvbio::io::ReadDataView']]],
   ['qual_5fstring',['qual_string',['../structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_alignment_stream_base.html#ad294699fc8318ce542328b2e6ce05701',1,'nvbio::bowtie2::cuda::detail::AlignmentStreamBase']]],
-  ['qual_5fstring_5fset_5ftype',['qual_string_set_type',['../structnvbio_1_1io_1_1_read_data_view.html#acf7c5ff7855c5c4043ca51b206eac44b',1,'nvbio::io::ReadDataView']]],
+  ['qual_5fstring_5fset_5ftype',['qual_string_set_type',['../structnvbio_1_1io_1_1_read_data_view.html#aed1b93dcc9244c15dcf1cfd24b4011be',1,'nvbio::io::ReadDataView']]],
   ['qual_5fstring_5ftype',['qual_string_type',['../structnvbio_1_1_read_stream.html#a8846fd605c5a19f283b799e89a730ec6',1,'nvbio::ReadStream']]],
   ['quals_5fstring',['quals_string',['../structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a104b3e94a82756e71756560155aa0274',1,'nvbio::aln::priv::AlignmentStream']]]
 ];

@@ -151,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">Timer</a> timer;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">Timer</a> global_timer;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#ab3446d7692b414a68d1a5657276ac43c">size</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//const uint32 band_len = band_length( params.max_dist );</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6898f32c64a24121a72435d6b2eb1bd8">seed_queues</a>.<a class="code" href="structnvbio_1_1cuda_1_1_ping_pong_queues.html#af02033a48f647eb3444ba6f0d0f8ea6f">in_size</a> = count;</div>
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> n_alignments = 0;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_seeds = 0u;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> s = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#afdb684a5d54b0df6290c60109fa3c4b2">min_read_len</a>(); s &lt;= read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#aeaccc5565ba1e1da4516333cb1f8f6dd">max_read_len</a>(); ++s)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> s = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#abcd083fb5557cddc7d9155c97365f042">min_read_len</a>(); s &lt;= read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#ab3a03ccac79ba091efccf1c0df5a6672">max_read_len</a>(); ++s)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        max_seeds = <a class="code" href="group___basic_utils.html#gaacadfd67f24352782e1d34ba32b040e9">nvbio::max</a>( max_seeds, <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( s / params.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html#a90f30a734ff899eb406ebb9c976bf6c2">seed_freq</a>(s) ) );</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed = 0; seed &lt; max_seeds; ++seed)</div>
@@ -220,7 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">// take some stats on the hits we got</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (params.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html#a20a0eb57b6256df91248656c88239a86">keep_stats</a>)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1c700501c1cd60526729b7c5addf3fd0">keep_stats</a>( reads.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a>(), <a class="code" href="group___work_queue_detail.html#ga066726173aa1a4d079ac3f55085d4e21">stats</a> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1c700501c1cd60526729b7c5addf3fd0">keep_stats</a>( reads.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#ab3446d7692b414a68d1a5657276ac43c">size</a>(), <a class="code" href="group___work_queue_detail.html#ga066726173aa1a4d079ac3f55085d4e21">stats</a> );</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a7cfb7cbc32899b208309b36807b046bd">score_all</a>(</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            params,</div>
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">Timer</a> timer;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="structnvbio_1_1_timer.html">Timer</a> global_timer;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count = read_data.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#ab3446d7692b414a68d1a5657276ac43c">size</a>();</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> band_len = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ac098ca56ac09684a7ff495940fcb37a0">band_length</a>( params.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params_p_o_d.html#a468cf352da9c07a0abac9927fe031a16">max_dist</a> );</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">// cast the reads to use proper iterators</span></div>
@@ -304,7 +304,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">// run a scan on the number of SA ranges from each read</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">thrust::inclusive_scan</a>( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abd11acd2c94168d21e1049c9be354d29">hit_deques</a>.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array.html#ac26861190976244ed64d16274adf218f">counts</a>().begin(), <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abd11acd2c94168d21e1049c9be354d29">hit_deques</a>.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit_deque_array.html#ac26861190976244ed64d16274adf218f">counts</a>().begin() + count, <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a934b57f01063aed10d4edd9be5539ae9">hits_count_scan_dvec</a>.begin() );</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_reads = reads.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#a69016e927c8080781248fd579b8ae99c">size</a>();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_reads = reads.<a class="code" href="structnvbio_1_1io_1_1_read_data_view.html#ab3446d7692b414a68d1a5657276ac43c">size</a>();</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// gather all the range sizes, sorted by read, in a compacted array</span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_hit_ranges = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a934b57f01063aed10d4edd9be5539ae9">hits_count_scan_dvec</a>[ count-1 ];</div>
@@ -400,7 +400,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            hits,</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aca508eb021254e7ddec488776d6c9165">hits_count_scan_dptr</a>,</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afb95ba6aeadee51c236695c6dbe1bb60">hits_range_scan_dptr</a>,</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( hit_queues ) );</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( hit_queues ) );</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#afcde6a0a280b58dce3978bd5af58b60e">optional_device_synchronize</a>();</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="namespacenvbio_1_1cuda.html#ae47791b87823645325b131f7c83f3291">nvbio::cuda::check_error</a>(<span class="stringliteral">&quot;selecting kernel&quot;</span>);</div>
@@ -417,7 +417,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        pipeline.idx_queue = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afc60f2e13e26a84a78bdbaf3517c36cf">sort_hi_bits</a>(</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            hit_count,</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( hit_queues.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues.html#a0532ab2116e9e11248c9ded8adb194ea" title="hit locations ">loc</a> ) );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( hit_queues.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues.html#a0532ab2116e9e11248c9ded8adb194ea" title="hit locations ">loc</a> ) );</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        timer.<a class="code" href="structnvbio_1_1_timer.html#ac2a1dc2e71d260bd7dba103e745f1136" title="stop timing ">stop</a>();</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        stats.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html#a0fab52e00fd98cf0258cfb7fa88c6f13">sort</a>.<a class="code" href="structnvbio_1_1_time_series.html#ad42f010b74cf48e67dee5cbb2518927e">add</a>( hit_count, timer.<a class="code" href="structnvbio_1_1_timer.html#a22f9f6cb393a8355476b0d357afe406f">seconds</a>() );</div>
@@ -427,7 +427,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            reads, fmi, rfmi,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            hit_count,</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            pipeline.idx_queue,</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( hit_queues ),</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( hit_queues ),</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            params );</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#afcde6a0a280b58dce3978bd5af58b60e">optional_device_synchronize</a>();</div>
@@ -437,7 +437,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            reads, fmi, rfmi,</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            hit_count,</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            pipeline.idx_queue,</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( hit_queues ),</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( hit_queues ),</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            params );</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#afcde6a0a280b58dce3978bd5af58b60e">optional_device_synchronize</a>();</div>
@@ -455,7 +455,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">// sort the selected hits by their SA coordinate</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        pipeline.idx_queue = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afc60f2e13e26a84a78bdbaf3517c36cf">sort_hi_bits</a>(</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            hit_count,</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <a class="code" href="namespacenvbio.html#a9e7dce3ed4fa6b93e9cfb956d555fa19">nvbio::device_view</a>( hit_queues.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues.html#a0532ab2116e9e11248c9ded8adb194ea" title="hit locations ">loc</a> ) );</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( hit_queues.<a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_hit_queues.html#a0532ab2116e9e11248c9ded8adb194ea" title="hit locations ">loc</a> ) );</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">      #else</span></div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor"></span>        <span class="comment">// access the selected hits by read id</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="namespacenvbio_1_1cuda.html#a14fff628aa09cc0400eee8f4e158686c">thrust::copy</a>(</div>
@@ -586,7 +586,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

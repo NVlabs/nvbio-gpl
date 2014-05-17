@@ -134,6 +134,12 @@ Public Types</h2></td></tr>
 <tr class="separator:ac27c3083af5f403171bf1ae0a2405580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba883aee0629ef041a9d823d2529231"><td class="memItemLeft" align="right" valign="top">typedef base_type::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#a2ba883aee0629ef041a9d823d2529231">value_type</a></td></tr>
 <tr class="separator:a2ba883aee0629ef041a9d823d2529231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac70a5d0a9d67b0648c53dcbdd7db66"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a>&lt; T <br class="typebreak"/>
+*, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#acac70a5d0a9d67b0648c53dcbdd7db66">plain_view_type</a></td></tr>
+<tr class="separator:acac70a5d0a9d67b0648c53dcbdd7db66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8809af0c58254816730a68b25966ac0a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a><br class="typebreak"/>
+&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T *, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#a8809af0c58254816730a68b25966ac0a">const_plain_view_type</a></td></tr>
+<tr class="separator:a8809af0c58254816730a68b25966ac0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
@@ -181,6 +187,22 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a8809af0c58254816730a68b25966ac0a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T*,<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&gt; <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; <a class="el" href="structnvbio_1_1host__tag.html">host_tag</a>, T &gt;::<a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#a8809af0c58254816730a68b25966ac0a">const_plain_view_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00052">52</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac27c3083af5f403171bf1ae0a2405580"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,6 +216,22 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="vector_8h_source.html#l00048">48</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acac70a5d0a9d67b0648c53dcbdd7db66"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a>&lt;T*,<a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&gt; <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; <a class="el" href="structnvbio_1_1host__tag.html">host_tag</a>, T &gt;::<a class="el" href="structnvbio_1_1vector_3_01host__tag_00_01_t_01_4.html#acac70a5d0a9d67b0648c53dcbdd7db66">plain_view_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00051">51</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +303,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00053">53</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00056">56</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +331,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00054">54</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00057">57</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +359,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00055">55</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00058">58</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +388,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00057">57</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00060">60</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +416,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00058">58</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00061">61</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +426,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:41 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:50 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

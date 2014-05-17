@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="string_8h_source.html">nvbio/strings/string.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="packedstream_8h_source.html">nvbio/basic/packedstream.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="vector__wrapper_8h_source.html">nvbio/basic/vector_wrapper.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector__view_8h_source.html">nvbio/basic/vector_view.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="strided__iterator_8h_source.html">nvbio/basic/strided_iterator.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="cached__iterator_8h_source.html">nvbio/basic/cached_iterator.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="iterator_8h_source.html">nvbio/basic/iterator.h</a>&gt;</code><br/>
@@ -226,29 +226,29 @@ StringSetIterator&lt; StringSet &gt; &amp;&#160;</td><td class="memTemplItemRigh
 <tr class="memitem:ga0ccebda1bc2804033639dea246f97512"><td class="memTemplParams" colspan="2">template&lt;typename InStringSet , typename StreamIterator , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename LengthIterator &gt; </td></tr>
 <tr class="memitem:ga0ccebda1bc2804033639dea246f97512"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___string_sets_module.html#ga0ccebda1bc2804033639dea246f97512">nvbio::copy</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InStringSet &amp;in_string_set, StridedPackedStringSet&lt; StreamIterator, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T, LengthIterator &gt; &amp;out_string_set)</td></tr>
 <tr class="separator:ga0ccebda1bc2804033639dea246f97512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af234e642d37e2afba4f808004142305a"><td class="memTemplParams" colspan="2">template&lt;typename StreamIterator , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename LengthIterator &gt; </td></tr>
-<tr class="memitem:af234e642d37e2afba4f808004142305a"><td class="memTemplItemLeft" align="right" valign="top">CachedPackedSparseStringSet<br class="typebreak"/>
+<tr class="memitem:a790915c26412052317d3a02d4f58c3a8"><td class="memTemplParams" colspan="2">template&lt;typename StreamIterator , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename LengthIterator &gt; </td></tr>
+<tr class="memitem:a790915c26412052317d3a02d4f58c3a8"><td class="memTemplItemLeft" align="right" valign="top">CachedPackedSparseStringSet<br class="typebreak"/>
 &lt; StreamIterator, SymbolType, <br class="typebreak"/>
 SYMBOL_SIZE_T, BIG_ENDIAN_T, <br class="typebreak"/>
 LengthIterator, typename <br class="typebreak"/>
 std::iterator_traits<br class="typebreak"/>
 &lt; StreamIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a> &gt;<br class="typebreak"/>
-::cached_string_set&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#af234e642d37e2afba4f808004142305a">nvbio::make_cached_string_set</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SparseStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; StreamIterator, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt;, LengthIterator &gt; string_set)</td></tr>
-<tr class="separator:af234e642d37e2afba4f808004142305a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87606e218abb6a66430c4f6999a87abe"><td class="memTemplParams" colspan="2">template&lt;typename StreamIterator , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename LengthIterator &gt; </td></tr>
-<tr class="memitem:a87606e218abb6a66430c4f6999a87abe"><td class="memTemplItemLeft" align="right" valign="top">CachedPackedConcatStringSet<br class="typebreak"/>
+::cached_string_set&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#a790915c26412052317d3a02d4f58c3a8">nvbio::make_cached_string_set</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SparseStringSet&lt; PackedStream&lt; StreamIterator, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;, LengthIterator &gt; string_set)</td></tr>
+<tr class="separator:a790915c26412052317d3a02d4f58c3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db7feb1ad06ddf17ebe8d4c668bac82"><td class="memTemplParams" colspan="2">template&lt;typename StreamIterator , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename LengthIterator &gt; </td></tr>
+<tr class="memitem:a9db7feb1ad06ddf17ebe8d4c668bac82"><td class="memTemplItemLeft" align="right" valign="top">CachedPackedConcatStringSet<br class="typebreak"/>
 &lt; StreamIterator, SymbolType, <br class="typebreak"/>
 SYMBOL_SIZE_T, BIG_ENDIAN_T, <br class="typebreak"/>
 LengthIterator, typename <br class="typebreak"/>
 std::iterator_traits<br class="typebreak"/>
 &lt; StreamIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a> &gt;<br class="typebreak"/>
-::cached_string_set&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#a87606e218abb6a66430c4f6999a87abe">nvbio::make_cached_string_set</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStreamIterator&lt; PackedStream&lt; StreamIterator, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt;, LengthIterator &gt; string_set)</td></tr>
-<tr class="separator:a87606e218abb6a66430c4f6999a87abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+::cached_string_set&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#a9db7feb1ad06ddf17ebe8d4c668bac82">nvbio::make_cached_string_set</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> ConcatenatedStringSet&lt; PackedStream&lt; StreamIterator, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;, LengthIterator &gt; string_set)</td></tr>
+<tr class="separator:a9db7feb1ad06ddf17ebe8d4c668bac82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:24 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:33 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: nvbio::mem::span_size&lt; rank_type &gt; Struct Template Reference</title>
+<title>NVBIO: nvbio::to_const&lt; iterator_reference&lt; Iterator &gt; &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,110 +91,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacenvbio.html">nvbio</a></li><li class="navelem"><a class="el" href="namespacenvbio_1_1mem.html">mem</a></li><li class="navelem"><a class="el" href="structnvbio_1_1mem_1_1span__size.html">span_size</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacenvbio.html">nvbio</a></li><li class="navelem"><a class="el" href="structnvbio_1_1to__const_3_01iterator__reference_3_01_iterator_01_4_01_4.html">to_const< iterator_reference< Iterator > ></a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Methods</a> &#124;
-<a href="structnvbio_1_1mem_1_1span__size-members.html">List of all members</a>  </div>
+<a href="structnvbio_1_1to__const_3_01iterator__reference_3_01_iterator_01_4_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::mem::span_size&lt; rank_type &gt; Struct Template Reference</div>  </div>
+<div class="title">nvbio::to_const&lt; iterator_reference&lt; Iterator &gt; &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___iterators.html">Iterators</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
-    typename rank_type&gt;<br/>
-struct nvbio::mem::span_size&lt; rank_type &gt;</h3>
+    typename Iterator&gt;<br/>
+struct nvbio::to_const&lt; iterator_reference&lt; Iterator &gt; &gt;</h3>
 
+<p>redefine the <a class="el" href="structnvbio_1_1to__const.html">to_const</a> meta-function for <a class="el" href="structnvbio_1_1iterator__reference.html">iterator_reference</a> to just return a symbol </p>
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00163">163</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="iterator__reference_8h_source.html#l00071">71</a> of file <a class="el" href="iterator__reference_8h_source.html">iterator_reference.h</a>.</p>
 </div>
-<p><code>#include &lt;<a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="iterator__reference_8h_source.html">iterator_reference.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2560e5b39f53bb353e0bfe25e2b6724d"><td class="memItemLeft" align="right" valign="top">typedef rank_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1span__size.html#a2560e5b39f53bb353e0bfe25e2b6724d">argument_type</a></td></tr>
-<tr class="separator:a2560e5b39f53bb353e0bfe25e2b6724d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97db69569c5d72a30b4d243745e3b6e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1span__size.html#aa97db69569c5d72a30b4d243745e3b6e">result_type</a></td></tr>
-<tr class="separator:aa97db69569c5d72a30b4d243745e3b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Methods</h2></td></tr>
-<tr class="memitem:a9d15b578e9baa5b9335dbf179d50543e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1mem_1_1span__size.html#a9d15b578e9baa5b9335dbf179d50543e">operator()</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> rank_type range) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
-<tr class="separator:a9d15b578e9baa5b9335dbf179d50543e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad57b07093d4463847cba93b20190714"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1iterator__reference.html">iterator_reference</a><br class="typebreak"/>
+&lt; Iterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1to__const_3_01iterator__reference_3_01_iterator_01_4_01_4.html#aad57b07093d4463847cba93b20190714">type</a></td></tr>
+<tr class="separator:aad57b07093d4463847cba93b20190714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a2560e5b39f53bb353e0bfe25e2b6724d"></a>
+<a class="anchor" id="aad57b07093d4463847cba93b20190714"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename rank_type &gt; </div>
+template&lt;typename Iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef rank_type <a class="el" href="structnvbio_1_1mem_1_1span__size.html">nvbio::mem::span_size</a>&lt; rank_type &gt;::<a class="el" href="structnvbio_1_1mem_1_1span__size.html#a2560e5b39f53bb353e0bfe25e2b6724d">argument_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1iterator__reference.html">iterator_reference</a>&lt;Iterator&gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a> <a class="el" href="structnvbio_1_1to__const.html">nvbio::to_const</a>&lt; <a class="el" href="structnvbio_1_1iterator__reference.html">iterator_reference</a>&lt; Iterator &gt; &gt;::<a class="el" href="structnvbio_1_1to__const_3_01iterator__reference_3_01_iterator_01_4_01_4.html#aad57b07093d4463847cba93b20190714">type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00165">165</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa97db69569c5d72a30b4d243745e3b6e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename rank_type &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> <a class="el" href="structnvbio_1_1mem_1_1span__size.html">nvbio::mem::span_size</a>&lt; rank_type &gt;::<a class="el" href="structnvbio_1_1mem_1_1span__size.html#aa97db69569c5d72a30b4d243745e3b6e">result_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00166">166</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9d15b578e9baa5b9335dbf179d50543e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename rank_type &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> <a class="el" href="structnvbio_1_1mem_1_1span__size.html">nvbio::mem::span_size</a>&lt; rank_type &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> rank_type&#160;</td>
-          <td class="paramname"><em>range</em>)</td><td></td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="mem__inl_8h_source.html#l00169">169</a> of file <a class="el" href="mem__inl_8h_source.html">mem_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="iterator__reference_8h_source.html#l00073">73</a> of file <a class="el" href="iterator__reference_8h_source.html">iterator_reference.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/src/nvbio/nvbio/fmindex/<a class="el" href="mem__inl_8h_source.html">mem_inl.h</a></li>
+<li>C:/Users/jpantaleoni/Documents/GitHub/nvbio/src/nvbio/nvbio/basic/<a class="el" href="iterator__reference_8h_source.html">iterator_reference.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:51:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:44 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -165,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (!linebuf)</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// allocate initial buffer</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        linebuf_size = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#aadd230edc660cfc2e09cad2763978b9aa42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        linebuf_size = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ada4d5694e1e16b0c3c77e1876bcd98b3a42cfbf07322114a323b2b5e780ee2828">LINE_BUFFER_INIT_SIZE</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        linebuf = (<span class="keywordtype">char</span> *) malloc(linebuf_size);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (linebuf == NULL)</div>
@@ -274,222 +274,296 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@SQ\t&quot;</span>, strlen(<span class="stringliteral">&quot;@SQ\t&quot;</span>)) == 0) {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <span class="comment">// ignored</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@RG\t&quot;</span>, strlen(<span class="stringliteral">&quot;@RG\t&quot;</span>)) == 0) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="comment">// ignored</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@PG\t&quot;</span>, strlen(<span class="stringliteral">&quot;@PG\t&quot;</span>)) == 0) {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="comment">// ignored</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@CO\t&quot;</span>, strlen(<span class="stringliteral">&quot;@CO\t&quot;</span>)) == 0) {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="comment">// ignored</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning: unknown header at line %d\n&quot;</span>, numLines);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning: malformed line %d\n&quot;</span>, numLines);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    } <span class="keywordflow">while</span>(linebuf[0] == <span class="charliteral">&#39;@&#39;</span>);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">// rewind the last line</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    rewindLine();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">// parse a @HD line from the SAM file</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">// start points at the first tag of the line</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordtype">bool</span> ReadDataFile_SAM::parseHeaderLine(<span class="keywordtype">char</span> *start)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;{</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">char</span> *version = NULL;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">char</span> *delim;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (numLines != 1)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): @HD not the first line in the header section\n&quot;</span>, numLines);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">for</span>(;;)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// look for the next delimiter</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        delim = strchr(start, <span class="charliteral">&#39;\t&#39;</span>);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// zero out the next delimiter if found</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">if</span> (delim)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            *delim = 0;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;VN:&quot;</span>, strlen(<span class="stringliteral">&quot;VN:&quot;</span>)) == 0)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            version = strdup(&amp;start[3]);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;SO:&quot;</span>, strlen(<span class="stringliteral">&quot;SO:&quot;</span>)) == 0) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">if</span>(strcmp(&amp;start[3], <span class="stringliteral">&quot;unknown&quot;</span>) == 0)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;unsorted&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964acf9fa1f3d65e9a8083f6f5284d063874">SortOrder_unsorted</a>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;queryname&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964ab02e46d88b11fe8fdf13159f68251438">SortOrder_queryname</a>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;coordinate&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">SortOrder_coordinate</a>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid sort order %s\n&quot;</span>, numLines, &amp;start[3]);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid tag %s in @HD\n&quot;</span>, numLines, start);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (!delim)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="comment">// this was the last token</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// advance to next token</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        start = delim + 1;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@SQ\t&quot;</span>, strlen(<span class="stringliteral">&quot;@SQ\t&quot;</span>)) == 0)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                ret = parseReferenceSequenceLine(delim + 1);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">if</span> (!ret)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@RG\t&quot;</span>, strlen(<span class="stringliteral">&quot;@RG\t&quot;</span>)) == 0) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="comment">// ignored</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@PG\t&quot;</span>, strlen(<span class="stringliteral">&quot;@PG\t&quot;</span>)) == 0) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="comment">// ignored</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(linebuf, <span class="stringliteral">&quot;@CO\t&quot;</span>, strlen(<span class="stringliteral">&quot;@CO\t&quot;</span>)) == 0) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="comment">// ignored</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning: unknown header at line %d\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning: malformed line %d\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    } <span class="keywordflow">while</span>(linebuf[0] == <span class="charliteral">&#39;@&#39;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">// rewind the last line</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    rewindLine();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">// parse a @HD line from the SAM file</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">// start points at the first tag of the line</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">bool</span> ReadDataFile_SAM::parseHeaderLine(<span class="keywordtype">char</span> *start)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">char</span> *version = NULL;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">char</span> *delim;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span> (numLines != 1)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): @HD not the first line in the header section\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span>(;;)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="comment">// look for the next delimiter</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        delim = strchr(start, <span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">// zero out the next delimiter if found</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (delim)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            *delim = 0;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;VN:&quot;</span>, strlen(<span class="stringliteral">&quot;VN:&quot;</span>)) == 0)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            version = &amp;start[3];</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;SO:&quot;</span>, strlen(<span class="stringliteral">&quot;SO:&quot;</span>)) == 0) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">if</span>(strcmp(&amp;start[3], <span class="stringliteral">&quot;unknown&quot;</span>) == 0)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964a482639a2bd731e8da9546fa12cbbc49e">SortOrder_unknown</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;unsorted&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964acf9fa1f3d65e9a8083f6f5284d063874">SortOrder_unsorted</a>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;queryname&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964ab02e46d88b11fe8fdf13159f68251438">SortOrder_queryname</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(&amp;start[3], <span class="stringliteral">&quot;coordinate&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                sortOrder = <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a993cc9f660aa5f78c40ee5cb2aab9964af890cd81ea9c1a3c629324f6e034dca8">SortOrder_coordinate</a>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid sort order %s\n&quot;</span>, numLines, &amp;start[3]);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid tag %s in @HD\n&quot;</span>, numLines, start);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span> (!delim)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">// this was the last token</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (version == NULL)</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): header does not contain a version tag\n&quot;</span>, numLines);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">// fetch the next chunk of reads (up to max_reads) from the file and push it into output</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a5736c2aa5a6ff72986c507ddc363f27e">  264</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a5736c2aa5a6ff72986c507ddc363f27e">ReadDataFile_SAM::nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a> *output, <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads, <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bps)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">if</span> (max_bps &lt; <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a31eb7ce29b2e44619f92ccfab33380a6">ReadDataFile::LONG_READ</a>)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">char</span> *name;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">char</span> *flag;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">char</span> *rname;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">char</span> *pos;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">char</span> *mapq;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">char</span> *cigar;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">char</span> *rnext;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">char</span> *pnext;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">char</span> *tlen;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">char</span> *seq;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">char</span> *qual;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_flags;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// find the next primary alignment from the file</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">// get next line from file</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> (readLine() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">// advance to next token</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        start = delim + 1;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> (version == NULL)</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): header does not contain a version tag\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">// parse a @SQ line from the SAM file</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment">// start points at the first tag of the line</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">bool</span> ReadDataFile_SAM::parseReferenceSequenceLine(<span class="keywordtype">char</span> *start)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">char</span> *seq_name = NULL;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">char</span> *seq_len = NULL;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">char</span> *delim;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">for</span>(;;)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// look for the next delimiter</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        delim = strchr(start, <span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">// zero out the next delimiter if found</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span> (delim)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            *delim = 0;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;SN:&quot;</span>, strlen(<span class="stringliteral">&quot;SN:&quot;</span>)) == 0)</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">// ugly macro to tokenize the string based on strchr</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#define NEXT(prev, next)                        \</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">    {                                           \</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">        next = strchr(prev, &#39;\t&#39;);              \</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">        if (!next) {                                                    \</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">            log_error(stderr, &quot;Error parsing SAM file (line %d): incomplete alignment section\n&quot;, numLines); \</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">            m_file_state = FILE_PARSE_ERROR;                            \</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">            return -1;                                                  \</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">        }                                                               \</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">        *next = &#39;\0&#39;;                                                   \</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">        next++;                                                         \</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">    }</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="comment">// first token is just the start of the string</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        name = linebuf;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="comment">// for all remaining tokens, locate the next token based on the previous</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(name, flag);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(flag, rname);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(rname, pos);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(pos, mapq);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(mapq, cigar);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(cigar, rnext);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(rnext, pnext);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(pnext, tlen);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(tlen, seq);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(seq, qual);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">if</span> (seq_name != NULL)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): multiple SN tags in @SQ record\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                seq_name = &amp;start[3];</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(start, <span class="stringliteral">&quot;LN:&quot;</span>, strlen(<span class="stringliteral">&quot;LN:&quot;</span>)) == 0) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">if</span> (seq_len != NULL)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): multiple LN tags in @SQ record\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                seq_len = &amp;start[3];</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (!delim)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// this was the last token</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">// advance to next token</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        start = delim + 1;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">if</span> (seq_name == NULL || seq_len == NULL)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): missing required tags in @SQ record\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#undef NEXT</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="comment">// figure out what the flag value is</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        read_flags = strtol(flag, NULL, 0);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    } <span class="keywordflow">while</span>(read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca022805dde552b79fb830d5979ea46cea">SAMFlag_SecondaryAlignment</a>);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">FORWARD</a>)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">char</span> *endptr = NULL;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#if WIN32</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor"></span>    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> len = strtol(seq_len, &amp;endptr, 10);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor"></span>    <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> len = strtoll(seq_len, &amp;endptr, 10);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">if</span> (!endptr || endptr == seq_len || *endptr != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a7aa1f67ed5ee835332d23b2a75edd184" title="convenience definition, same as StrandOp( REVERSE_OP | COMPLEMENT_OP ) ">ReadDataRAM::REVERSE_COMPLEMENT_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a803bc8978c317aaa4c5f404c89d52c9d" title="default, no operator applied ">ReadDataRAM::NO_OP</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <a class="code" href="console_8cpp.html#a872d273107f0e01ebbc5a3c6a4c2f591">log_warning</a>(stderr, <span class="stringliteral">&quot;SAM file warning (line %d): invalid sequence length in @SQ record\n&quot;</span>, numLines);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="comment">// add the read</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                          name,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                          op );</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">REVERSE</a>)</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356adabfc18d6d6416b0f81dcfb74bb9222b" title="complement operator ">ReadDataRAM::COMPLEMENT_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356ab22262c7414204ad2debf8f1f9e5dceb" title="reverse operator ">ReadDataRAM::REVERSE_OP</a>;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">// add the read</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                          name,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                          op );</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c">FORWARD_COMPLEMENT</a>)</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356ab22262c7414204ad2debf8f1f9e5dceb" title="reverse operator ">ReadDataRAM::REVERSE_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356adabfc18d6d6416b0f81dcfb74bb9222b" title="complement operator ">ReadDataRAM::COMPLEMENT_OP</a>;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">// add the read</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                          name,</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                          op );</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68">REVERSE_COMPLEMENT</a>)</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a803bc8978c317aaa4c5f404c89d52c9d" title="default, no operator applied ">ReadDataRAM::NO_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a7aa1f67ed5ee835332d23b2a75edd184" title="convenience definition, same as StrandOp( REVERSE_OP | COMPLEMENT_OP ) ">ReadDataRAM::REVERSE_COMPLEMENT_OP</a>;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="comment">// add the read</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                          name,</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                          op );</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="comment">// we always input 1 read at a time here</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;} <span class="comment">// namespace io</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a0c08cfc76481bc8fd2aa7057e6689feb">sq_names</a>.push_back(std::string(seq_name));</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ababcb0d85ad70e225f95e7e80ee3f5f8">sq_lengths</a>.push_back(len);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">// fetch the next chunk of reads (up to max_reads) from the file and push it into output</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a5736c2aa5a6ff72986c507ddc363f27e">  338</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_file___s_a_m.html#a5736c2aa5a6ff72986c507ddc363f27e">ReadDataFile_SAM::nextChunk</a>(<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html">ReadDataRAM</a> *output, <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_reads, <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bps)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> (max_bps &lt; <a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a31eb7ce29b2e44619f92ccfab33380a6">ReadDataFile::LONG_READ</a>)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">char</span> *name;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">char</span> *flag;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">char</span> *rname;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">char</span> *pos;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">char</span> *mapq;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">char</span> *cigar;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">char</span> *rnext;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">char</span> *pnext;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">char</span> *tlen;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">char</span> *seq;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordtype">char</span> *qual;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_flags;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="comment">// find the next primary alignment from the file</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">// get next line from file</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span> (readLine() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">// ugly macro to tokenize the string based on strchr</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">#define NEXT(prev, next)                        \</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">    {                                           \</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">        next = strchr(prev, &#39;\t&#39;);              \</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">        if (!next) {                                                    \</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">            log_error(stderr, &quot;Error parsing SAM file (line %d): incomplete alignment section\n&quot;, numLines); \</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">            m_file_state = FILE_PARSE_ERROR;                            \</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">            return -1;                                                  \</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">        }                                                               \</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">        *next = &#39;\0&#39;;                                                   \</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">        next++;                                                         \</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">    }</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="comment">// first token is just the start of the string</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        name = linebuf;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">// for all remaining tokens, locate the next token based on the previous</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(name, flag);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(flag, rname);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(rname, pos);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(pos, mapq);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(mapq, cigar);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(cigar, rnext);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(rnext, pnext);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(pnext, tlen);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(tlen, seq);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <a class="code" href="sam_8cpp.html#ae0a13d8b6672d4bbdecae1309db97b8c">NEXT</a>(seq, qual);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">#undef NEXT</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="comment">// figure out what the flag value is</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        read_flags = strtol(flag, NULL, 0);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    } <span class="keywordflow">while</span>(read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca022805dde552b79fb830d5979ea46cea">SAMFlag_SecondaryAlignment</a>);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">FORWARD</a>)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a7aa1f67ed5ee835332d23b2a75edd184" title="convenience definition, same as StrandOp( REVERSE_OP | COMPLEMENT_OP ) ">ReadDataRAM::REVERSE_COMPLEMENT_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a803bc8978c317aaa4c5f404c89d52c9d" title="default, no operator applied ">ReadDataRAM::NO_OP</a>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="comment">// add the read</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                          name,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                          op );</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ad1b0a62cd9faf6c9a83029765a1747ae">REVERSE</a>)</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356adabfc18d6d6416b0f81dcfb74bb9222b" title="complement operator ">ReadDataRAM::COMPLEMENT_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356ab22262c7414204ad2debf8f1f9e5dceb" title="reverse operator ">ReadDataRAM::REVERSE_OP</a>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="comment">// add the read</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                          name,</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                          op );</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320aef61edd488750107526e447a3f2a1f6c">FORWARD_COMPLEMENT</a>)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356ab22262c7414204ad2debf8f1f9e5dceb" title="reverse operator ">ReadDataRAM::REVERSE_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356adabfc18d6d6416b0f81dcfb74bb9222b" title="complement operator ">ReadDataRAM::COMPLEMENT_OP</a>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="comment">// add the read</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                          name,</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                          op );</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structnvbio_1_1io_1_1_read_data_file.html#a1191c5cb6561fc0c368ae01f522e5231">m_flags</a> &amp; <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68">REVERSE_COMPLEMENT</a>)</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356">ReadDataRAM::StrandOp</a> op = (read_flags &amp; <a class="code" href="namespacenvbio_1_1io.html#a5f4b72893841e9a68cd81d071ef8e01ca7ab41719e598c60e17dd0bec001c776b">SAMFlag_ReverseComplemented</a>) ?</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a803bc8978c317aaa4c5f404c89d52c9d" title="default, no operator applied ">ReadDataRAM::NO_OP</a> : <a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a9f4e16d0d723d939004426cba34d1356a7aa1f67ed5ee835332d23b2a75edd184" title="convenience definition, same as StrandOp( REVERSE_OP | COMPLEMENT_OP ) ">ReadDataRAM::REVERSE_COMPLEMENT_OP</a>;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="comment">// add the read</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        output-&gt;<a class="code" href="structnvbio_1_1io_1_1_read_data_r_a_m.html#a4dd079ba53451c55f961ad807b547c9e">push_back</a>(<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(strlen(seq)),</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                          name,</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)seq,</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                          (<a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*)qual,</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                          <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">Phred33</a>,</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                          <a class="code" href="structnvbio_1_1io_1_1_read_data_stream.html#a7bb2c4669330c309eaac4f47abb82c8b">m_truncate_read_len</a>,</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                          op );</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">// we always input 1 read at a time here</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;}</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;} <span class="comment">// namespace io</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -233,7 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_idx = 0; seed_queues.in_size &amp;&amp; seed_idx &lt; max_seeds; ++seed_idx)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blocks = (read_data.size() + <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>-1) / <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> blocks = (read_data.size() + <a class="code" href="group___defs.html#ggad3649db6920ac203ec050b178c67a271a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>-1) / <a class="code" href="group___defs.html#ggad3649db6920ac203ec050b178c67a271a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            thrust::fill( <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8dc6e0e99e3519f5eefec157a04150bf">hits_stats_dvec</a>.begin(), <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8dc6e0e99e3519f5eefec157a04150bf">hits_stats_dvec</a>.end(), 0u );</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            bowtie2_hits_stats( read_data.size(), hits_dptr, cnts_dptr, <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afa5932c17771560d584ee0f1629813e7">hits_stats_dptr</a> );</div>
@@ -246,7 +246,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a> = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8dc6e0e99e3519f5eefec157a04150bf">hits_stats_dvec</a>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> n_hits = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a>[ <a class="code" href="group___defs.html#gga587345df9e300828ac00563293347443ae8a8ea34af62c3ac810af6c94cd79c86">HIT_STATS_TOTAL</a> ];</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">const</span> <a class="code" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> n_hits = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a>[ <a class="code" href="group___defs.html#gga4a6445c614cc36627f8beaba695196b0ae8a8ea34af62c3ac810af6c94cd79c86">HIT_STATS_TOTAL</a> ];</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;\nseed idx: %u (%u active reads - %.2f M global hits)\n&quot;</span>, seed_idx, seed_queues.in_size, <span class="keywordtype">float</span>(n_hits) * 1.0e-6f);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
@@ -422,7 +422,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a> = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8dc6e0e99e3519f5eefec157a04150bf">hits_stats_dvec</a>;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        hits_to_process = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a>[ <a class="code" href="group___defs.html#gga587345df9e300828ac00563293347443ae8a8ea34af62c3ac810af6c94cd79c86">HIT_STATS_TOTAL</a> ];</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        hits_to_process = <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa4ffb8c16c544dcd0278a238760a393d">hits_stats_hvec</a>[ <a class="code" href="group___defs.html#gga4a6445c614cc36627f8beaba695196b0ae8a8ea34af62c3ac810af6c94cd79c86">HIT_STATS_TOTAL</a> ];</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    Timer timer;</div>
@@ -783,7 +783,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:19 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

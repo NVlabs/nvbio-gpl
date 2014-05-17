@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 struct nvbio::aln::priv::AlignmentStream&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00750">750</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00751">751</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -130,11 +130,25 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:ad77ab29ea8b0b4f63e513556a0941055"><td class="memItemLeft" align="right" valign="top">typedef t_aligner_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#ad77ab29ea8b0b4f63e513556a0941055">aligner_type</a></td></tr>
 <tr class="separator:ad77ab29ea8b0b4f63e513556a0941055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa196a97caa980c7e6ebdf5d517524c"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">pattern_set_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a1aa196a97caa980c7e6ebdf5d517524c">pattern_string</a></td></tr>
-<tr class="separator:a1aa196a97caa980c7e6ebdf5d517524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a8650737a588364143d795e64f3e2e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">text_set_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aa3a8650737a588364143d795e64f3e2e">text_string</a></td></tr>
-<tr class="separator:aa3a8650737a588364143d795e64f3e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea28214110f5bdf1cd6ff2061cb986a2"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">pattern_set_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aea28214110f5bdf1cd6ff2061cb986a2">input_pattern_string</a></td></tr>
+<tr class="separator:aea28214110f5bdf1cd6ff2061cb986a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad886e9044931e3600e54ae9cd9499e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">text_set_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a2ad886e9044931e3600e54ae9cd9499e">input_text_string</a></td></tr>
+<tr class="separator:a2ad886e9044931e3600e54ae9cd9499e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b420269f6f5f23048861b4d54d827cf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html">StringPrefetcher</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aea28214110f5bdf1cd6ff2061cb986a2">input_pattern_string</a>, <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1lmem__cache__tag.html">lmem_cache_tag</a>&lt; 128 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a4b420269f6f5f23048861b4d54d827cf">pattern_prefetcher_type</a></td></tr>
+<tr class="separator:a4b420269f6f5f23048861b4d54d827cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285877d0eb6aeb1f0f0b9ebfd47cb216"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1_string_prefetcher.html#ae767ba0dea37517ec8a6ba0eac18b9c6">pattern_prefetcher_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a285877d0eb6aeb1f0f0b9ebfd47cb216">pattern_string</a></td></tr>
+<tr class="separator:a285877d0eb6aeb1f0f0b9ebfd47cb216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9ec1eb2cef6c0cee858e376c3c0dd8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html">StringPrefetcher</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a2ad886e9044931e3600e54ae9cd9499e">input_text_string</a>, <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1lmem__cache__tag.html">lmem_cache_tag</a>&lt; 128 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aac9ec1eb2cef6c0cee858e376c3c0dd8">text_prefetcher_type</a></td></tr>
+<tr class="separator:aac9ec1eb2cef6c0cee858e376c3c0dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f386a880435a29a15550a8c7a59d895"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1_string_prefetcher.html#ae767ba0dea37517ec8a6ba0eac18b9c6">text_prefetcher_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a8f386a880435a29a15550a8c7a59d895">text_string</a></td></tr>
+<tr class="separator:a8f386a880435a29a15550a8c7a59d895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104b3e94a82756e71756560155aa0274"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">qualities_set_type::string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a104b3e94a82756e71756560155aa0274">quals_string</a></td></tr>
 <tr class="separator:a104b3e94a82756e71756560155aa0274"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,23 +221,71 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00752">752</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00753">753</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1aa196a97caa980c7e6ebdf5d517524c"></a>
+<a class="anchor" id="aea28214110f5bdf1cd6ff2061cb986a2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">pattern_set_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a1aa196a97caa980c7e6ebdf5d517524c">pattern_string</a></td>
+          <td class="memname">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">pattern_set_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aea28214110f5bdf1cd6ff2061cb986a2">input_pattern_string</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00754">754</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00755">755</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ad886e9044931e3600e54ae9cd9499e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">text_set_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a2ad886e9044931e3600e54ae9cd9499e">input_text_string</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00756">756</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b420269f6f5f23048861b4d54d827cf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html">StringPrefetcher</a>&lt;<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aea28214110f5bdf1cd6ff2061cb986a2">input_pattern_string</a>, <a class="el" href="structnvbio_1_1lmem__cache__tag.html">lmem_cache_tag</a>&lt;128&gt; &gt; <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a4b420269f6f5f23048861b4d54d827cf">pattern_prefetcher_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00757">757</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a285877d0eb6aeb1f0f0b9ebfd47cb216"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html#ae767ba0dea37517ec8a6ba0eac18b9c6">pattern_prefetcher_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a285877d0eb6aeb1f0f0b9ebfd47cb216">pattern_string</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00758">758</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +301,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00756">756</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00761">761</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -255,23 +317,39 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00757">757</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00762">762</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa3a8650737a588364143d795e64f3e2e"></a>
+<a class="anchor" id="aac9ec1eb2cef6c0cee858e376c3c0dd8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="suffix_8h.html#a039593a659cb79f2f75867826ca87d69">text_set_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aa3a8650737a588364143d795e64f3e2e">text_string</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html">StringPrefetcher</a>&lt;<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a2ad886e9044931e3600e54ae9cd9499e">input_text_string</a>, <a class="el" href="structnvbio_1_1lmem__cache__tag.html">lmem_cache_tag</a>&lt;128&gt; &gt; <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#aac9ec1eb2cef6c0cee858e376c3c0dd8">text_prefetcher_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00755">755</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00759">759</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f386a880435a29a15550a8c7a59d895"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename t_aligner_type , typename pattern_set_type , typename qualities_set_type , typename text_set_type , typename sink_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_string_prefetcher.html#ae767ba0dea37517ec8a6ba0eac18b9c6">text_prefetcher_type::string_type</a> <a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html">nvbio::aln::priv::AlignmentStream</a>&lt; t_aligner_type, pattern_set_type, qualities_set_type, text_set_type, sink_iterator &gt;::<a class="el" href="structnvbio_1_1aln_1_1priv_1_1_alignment_stream.html#a8f386a880435a29a15550a8c7a59d895">text_string</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00760">760</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +424,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00775">775</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00783">783</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +452,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00795">795</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00803">803</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +490,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00819">819</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00827">827</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +546,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00832">832</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00840">840</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +573,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00799">799</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00807">807</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -522,7 +600,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00803">803</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00811">811</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -560,7 +638,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00846">846</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00854">854</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +676,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00811">811</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00819">819</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +704,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00807">807</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00815">815</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +742,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00815">815</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00823">823</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -681,7 +759,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00854">854</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00862">862</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +775,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00855">855</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00863">863</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -713,7 +791,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00860">860</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00868">868</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -729,7 +807,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00861">861</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00869">869</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +823,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00856">856</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00864">864</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -761,7 +839,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00857">857</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00865">865</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -777,7 +855,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00859">859</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00867">867</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -793,7 +871,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00858">858</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="batched__inl_8h_source.html#l00866">866</a> of file <a class="el" href="batched__inl_8h_source.html">batched_inl.h</a>.</p>
 
 </div>
 </div>
@@ -803,7 +881,7 @@ template&lt;typename t_aligner_type , typename pattern_set_type , typename quali
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 00:00:00 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:52:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>priv {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#ggad3649db6920ac203ec050b178c67a271a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="group___alignment_type_module.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">typename</span>        scoring_type,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typename</span>        <a class="code" href="prefix_8h.html#a039593a659cb79f2f75867826ca87d69">string_type</a>,</div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> WARP_SIZE = 1u &lt;&lt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a> = <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> &gt;&gt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="group___work_queue_detail.html#ga9ff7383f2907c060acda0105670042ca">NUM_WARPS</a> = <a class="code" href="group___defs.html#ggad3649db6920ac203ec050b178c67a271a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a> &gt;&gt; <a class="code" href="structnvbio_1_1cuda_1_1_arch.html#a2df66120c186435fb7bf68f51d5e7249">cuda::Arch::LOG_WARP_SIZE</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> M = str.length();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> N = ref.length();</div>
@@ -340,7 +340,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">// private dispatcher for the warp-parallel version of the Gotoh aligner</span></div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">template</span> &lt;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#gga3eb5ea6c46e8b5f531e03c269a12a9fba55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>          <a class="code" href="group___defs.html#ggad3649db6920ac203ec050b178c67a271a55acd4ff0f7cc398c553b00baa29a518">BLOCKDIM</a>,</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="group___alignment_type_module.html#gab731872890371bb772663612b5b9c717">AlignmentType</a>   <a class="code" href="inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084">TYPE</a>,</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">typename</span>        scoring_type,</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">typename</span>        pattern_string,</div>
@@ -377,7 +377,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:19 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

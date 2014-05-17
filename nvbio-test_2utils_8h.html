@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="packedstream_8h_source.html">nvbio/basic/packedstream.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="cached__iterator_8h_source.html">nvbio/basic/cached_iterator.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="vector__wrapper_8h_source.html">nvbio/basic/vector_wrapper.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector__view_8h_source.html">nvbio/basic/vector_view.h</a>&gt;</code><br/>
 </div>
 <p><a href="nvbio-test_2utils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1lmem__selector.html">nvbio::lmem_selector&lt; StringType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1lmem__selector_3_01vector__wrapper_3_01_packed_stream_iterator_3_01_packed_stream6f30f36f73bb0df1082ddb1f05abfc34.html">nvbio::lmem_selector&lt; vector_wrapper&lt; PackedStreamIterator&lt; PackedStream&lt; StreamType, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt; &gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1lmem__selector_3_01vector__view_3_01_packed_stream_3_01_stream_type_00_01_symbol_7a08b1ab3c87387708cd5be0ef6a6ec0.html">nvbio::lmem_selector&lt; vector_view&lt; PackedStream&lt; StreamType, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -124,21 +124,20 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adb814f67e4c7d0bde866458613761913"><td class="memTemplParams" colspan="2">template&lt;typename StreamType , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename W &gt; </td></tr>
-<tr class="memitem:adb814f67e4c7d0bde866458613761913"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <br class="typebreak"/>
-vector_wrapper&lt; typename <br class="typebreak"/>
-PackedStream<br class="typebreak"/>
+<tr class="memitem:a73201e46074f29d2539f57ea29dad9fd"><td class="memTemplParams" colspan="2">template&lt;typename StreamType , typename SymbolType , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename W &gt; </td></tr>
+<tr class="memitem:a73201e46074f29d2539f57ea29dad9fd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> vector_view<br class="typebreak"/>
+&lt; typename PackedStream<br class="typebreak"/>
 &lt; const_cached_iterator&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
 W * &gt;, SymbolType, <br class="typebreak"/>
 SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;<br class="typebreak"/>
-::iterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#adb814f67e4c7d0bde866458613761913">nvbio::make_local_string</a> (vector_wrapper&lt; PackedStreamIterator&lt; PackedStream&lt; StreamType, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt; &gt; string, W *lmem)</td></tr>
-<tr class="separator:adb814f67e4c7d0bde866458613761913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+::iterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenvbio.html#a73201e46074f29d2539f57ea29dad9fd">nvbio::make_local_string</a> (vector_view&lt; PackedStream&lt; StreamType, SymbolType, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt; string, W *lmem)</td></tr>
+<tr class="separator:a73201e46074f29d2539f57ea29dad9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

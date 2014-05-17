@@ -192,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span>((size % 2) == 0) {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    m--;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span>(Td[SA[m / 2]] &lt; Td[SA[m]]) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(SA + m, SA + m / 2);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(SA + m, SA + m / 2);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
@@ -201,7 +201,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span>((size % 2) == 0) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(SA, SA + m);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(SA, SA + m);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="namespacedivsufsortxx_1_1helper.html#a763432cad1db0f9382e5436705366c91">fixdown</a>(Td, SA, pos_type(0), m);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="namespacedivsufsortxx_1_1helper.html#aa506400751e8ef940dadfa17bfd4b2f8">  149</a></span>&#160;<a class="code" href="namespacedivsufsortxx_1_1helper.html#aa506400751e8ef940dadfa17bfd4b2f8">vecswap</a>(Iterator1_type first1, Iterator1_type last1, Iterator2_type first2) {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">for</span>(; first1 != last1; ++first1, ++first2) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(first1, first2);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(first1, first2);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">//  std::swap_ranges(first1, last1, first2);</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
@@ -262,7 +262,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;SAIterator_type</div>
 <div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="namespacedivsufsortxx_1_1helper.html#ad700416c0d74a076be48bd6322ccb818">  162</a></span>&#160;<a class="code" href="namespacedivsufsortxx_1_1helper.html#ad700416c0d74a076be48bd6322ccb818">median3</a>(<span class="keyword">const</span> StringIterator_type Td,</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        SAIterator_type v1, SAIterator_type v2, SAIterator_type v3) {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v2]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v1, v2); }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v2]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v1, v2); }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">if</span>(Td[*v2] &gt; Td[*v3]) {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v3]) { <span class="keywordflow">return</span> v1; }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">else</span> { <span class="keywordflow">return</span> v3; }</div>
@@ -276,11 +276,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00175"></a><span class="lineno"><a class="code" href="namespacedivsufsortxx_1_1helper.html#aa65b42eab2563443de95bc3f66755b4c">  175</a></span>&#160;<a class="code" href="namespacedivsufsortxx_1_1helper.html#aa65b42eab2563443de95bc3f66755b4c">median5</a>(<span class="keyword">const</span> StringIterator_type Td,</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        SAIterator_type v1, SAIterator_type v2, SAIterator_type v3,</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        SAIterator_type v4, SAIterator_type v5) {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">if</span>(Td[*v2] &gt; Td[*v3]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v2, v3); }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span>(Td[*v4] &gt; Td[*v5]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v4, v5); }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">if</span>(Td[*v2] &gt; Td[*v4]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v2, v4); <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v3, v5); }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v3]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v1, v3); }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v4]) { <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v1, v4); <a class="code" href="namespacestd.html#a613494585ef78bee6255124ff228ceb9">std::swap</a>(v3, v5); }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">if</span>(Td[*v2] &gt; Td[*v3]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v2, v3); }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span>(Td[*v4] &gt; Td[*v5]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v4, v5); }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">if</span>(Td[*v2] &gt; Td[*v4]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v2, v4); <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v3, v5); }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v3]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v1, v3); }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordflow">if</span>(Td[*v1] &gt; Td[*v4]) { <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v1, v4); <a class="code" href="namespacestd.html#ac0c99a4ad98323db96a4a915eb552859">std::swap</a>(v3, v5); }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">if</span>(Td[*v3] &gt; Td[*v4]) { <span class="keywordflow">return</span> v4; }</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">return</span> v3;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
@@ -324,22 +324,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordflow">for</span>(b = first2; (b &lt; last) &amp;&amp; ((x = Td[*b]) == v); ++b) { }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordflow">if</span>(((a = b) &lt; last) &amp;&amp; (x &lt; v)) {</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span>(; (++b &lt; last) &amp;&amp; ((x = Td[*b]) &lt;= v);) {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(b, a++); }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(b, a++); }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">for</span>(c = last; (b &lt; --c) &amp;&amp; ((x = Td[*c]) == v);) { }</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">if</span>((b &lt; (d = c)) &amp;&amp; (x &gt; v)) {</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">for</span>(; (b &lt; --c) &amp;&amp; ((x = Td[*c]) &gt;= v);) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(c, d--); }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(c, d--); }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordflow">for</span>(; b &lt; c;) {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(b, c);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(b, c);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">for</span>(; (++b &lt; c) &amp;&amp; ((x = Td[*b]) &lt;= v);) {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(b, a++); }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(b, a++); }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">for</span>(; (b &lt; --c) &amp;&amp; ((x = Td[*c]) &gt;= v);) {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(c, d--); }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">if</span>(x == v) { <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(c, d--); }</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
@@ -489,7 +489,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">for</span>(; (a &lt;= b) &amp;&amp; ((PA[*a] + depth) &gt;= (PA[*a + 1] + 1)); ++a) { *a = ~*a; }</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">for</span>(; (a &lt; b) &amp;&amp; ((PA[*b] + depth) &lt;  (PA[*b + 1] + 1)); --b) { }</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span>(b &lt;= a) { <span class="keywordflow">break</span>; }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(b, a);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(b, a);</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    *a = ~*a;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  }</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordflow">if</span>(first &lt; a) { *first = ~*first; }</div>
@@ -551,7 +551,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="comment">/* partition */</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    a = <a class="code" href="namespacedivsufsortxx_1_1helper.html#af5fb21d44f439ac9887ed0a46f4a2d0b">helper::pivot</a>(wrapper_type(Td, PA), first, last);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(first, a);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(first, a);</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespacedivsufsortxx_1_1helper.html#a37b594a8ed515f997ee5da42d8d87085">helper::partition</a>(wrapper_type(Td, PA), first, first + 1, last, a, c, Td[PA[*first]]) != <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      b = (Td[PA[*a]] &lt;= Td[PA[*a] - 1]) ? a : <a class="code" href="namespacedivsufsortxx_1_1substring.html#af038c30f737c7a6743603da59a7d3b97">partition</a>(PA, a, c, depth);</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
@@ -908,7 +908,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    }</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    a = <a class="code" href="namespacedivsufsortxx_1_1helper.html#af5fb21d44f439ac9887ed0a46f4a2d0b">helper::pivot</a>(ISAd, first, last);</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(first, a);</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(first, a);</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespacedivsufsortxx_1_1helper.html#a37b594a8ed515f997ee5da42d8d87085">helper::partition</a>(ISAd, first, first + 1, last, a, b, ISAd[*first]) != <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;      <span class="comment">/* update ranks */</span></div>
@@ -1093,7 +1093,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;    }</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    a = <a class="code" href="namespacedivsufsortxx_1_1helper.html#af5fb21d44f439ac9887ed0a46f4a2d0b">helper::pivot</a>(ISAd, first, last);</div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    <a class="code" href="namespacestd.html#af7101b9911aa876d394f4e582b1db14d">std::iter_swap</a>(first, a);</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    <a class="code" href="namespacestd.html#a5a8aa05e48206e2ef40cff323fd556a2">std::iter_swap</a>(first, a);</div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespacedivsufsortxx_1_1helper.html#a37b594a8ed515f997ee5da42d8d87085">helper::partition</a>(ISAd, first, first + 1, last, a, b, ISAd[*first]) != <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;      next = (ISA[*a] == ISAd[*a]) ? -1 : <a class="code" href="namespacedivsufsortxx_1_1helper.html#ad35997c8edc9ca79e27b27c81b5bd723">helper::lg</a>(b - a);</div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;</div>
@@ -1622,7 +1622,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:07 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

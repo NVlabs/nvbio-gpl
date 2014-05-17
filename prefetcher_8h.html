@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: Member List</title>
+<title>NVBIO: C:/Users/jpantaleoni/Documents/GitHub/nvbio/src/nvbio/nvbio/strings/prefetcher.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -50,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,8 +71,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -91,25 +91,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacenvbio.html">nvbio</a></li><li class="navelem"><a class="el" href="structnvbio_1_1_scoped__timer.html">Scoped_timer</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_230740b94cabbe6eaf705e29e8c860b2.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_661bb958cf80451f37909bd41cfcc30d.html">nvbio</a></li><li class="navelem"><a class="el" href="dir_7d8cae9b5b5e2efa0f51e633490bb619.html">strings</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::Scoped_timer&lt; T &gt; Member List</div>  </div>
+<div class="title">prefetcher.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="structnvbio_1_1_scoped__timer.html">nvbio::Scoped_timer&lt; T &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html#a7ef70a900eaa1a5cb2f8bbcdd2c6537e">m_time</a></td><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html">nvbio::Scoped_timer&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html#a56e33eae95e72db492fa895ef95b02e1">m_timer</a></td><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html">nvbio::Scoped_timer&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html#aff8ddf1d4ad8a29f72b7a8c6ddd7eb8d">Scoped_timer</a>(T *time)</td><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html">nvbio::Scoped_timer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html#a3d5f2349f0648ad53773829e4a88a1ff">~Scoped_timer</a>()</td><td class="entry"><a class="el" href="structnvbio_1_1_scoped__timer.html">nvbio::Scoped_timer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<div class="textblock"><code>#include &lt;<a class="el" href="types_8h_source.html">nvbio/basic/types.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="packedstream_8h_source.html">nvbio/basic/packedstream.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="packedstream__loader_8h_source.html">nvbio/basic/packedstream_loader.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector__view_8h_source.html">nvbio/basic/vector_view.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="infix_8h_source.html">nvbio/strings/infix.h</a>&gt;</code><br/>
+</div>
+<p><a href="prefetcher_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_string_prefetcher.html">nvbio::StringPrefetcher&lt; StringType, CacheTag &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_string_prefetcher_3_01vector__view_3_01_packed_stream_3_01_storage_iterator_00_00f3bb135ec59bb62595265176042b5b0.html">nvbio::StringPrefetcher&lt; vector_view&lt; PackedStream&lt; StorageIterator, uint8, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt;, lmem_cache_tag&lt; CACHE_SIZE &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_string_prefetcher_3_01_infix_3_01_packed_stream_3_01_storage_iterator_00_01uint8e9a31f95d7f572943e276df0b7f0363a.html">nvbio::StringPrefetcher&lt; Infix&lt; PackedStream&lt; StorageIterator, uint8, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;, InfixCoordType &gt;, lmem_cache_tag&lt; CACHE_SIZE &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_string_prefetcher_3_01_infix_3_01vector__view_3_01_packed_stream_3_01_storage_it90896505d6936a26b3731f6a0dab7be2.html">nvbio::StringPrefetcher&lt; Infix&lt; vector_view&lt; PackedStream&lt; StorageIterator, uint8, SYMBOL_SIZE_T, BIG_ENDIAN_T &gt; &gt;, InfixCoordType &gt;, lmem_cache_tag&lt; CACHE_SIZE &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenvbio"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenvbio.html">nvbio</a></td></tr>
+<tr class="memdesc:namespacenvbio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a> POD type and <a class="el" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">plain_view()</a> for std::vector. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:50:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:33 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

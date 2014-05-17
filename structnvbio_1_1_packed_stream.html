@@ -125,7 +125,7 @@ struct nvbio::PackedStream&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T,
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00320">320</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00176">176</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="packedstream_8h_source.html">packedstream.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -149,16 +149,18 @@ IndexType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="separator:ab5899822a5351d4086610ad0efd8e7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27380c170e2fa8483bb5d085c6dab886"><td class="memItemLeft" align="right" valign="top">typedef Symbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a27380c170e2fa8483bb5d085c6dab886">symbol_type</a></td></tr>
 <tr class="separator:a27380c170e2fa8483bb5d085c6dab886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc3e4f3a1f20d17ad1307c29526becac"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1_packed_stream.html#a1b9311414aec1730d1a999aa1d47b7b5">This</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">iterator</a></td></tr>
-<tr class="separator:abc3e4f3a1f20d17ad1307c29526becac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7dbf753de1c978342e6f902fcee4905"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#a1b9311414aec1730d1a999aa1d47b7b5">This</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">iterator</a></td></tr>
+<tr class="separator:ac7dbf753de1c978342e6f902fcee4905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac6e112bd99ab191c71afae95662ef92"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream_ref.html">PackedStreamRef</a>&lt; <a class="el" href="structnvbio_1_1_packed_stream.html#a1b9311414aec1730d1a999aa1d47b7b5">This</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#aac6e112bd99ab191c71afae95662ef92">reference</a></td></tr>
 <tr class="separator:aac6e112bd99ab191c71afae95662ef92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabcdf8332cecd1cadd0e35eca5d6596"><td class="memItemLeft" align="right" valign="top">typedef Symbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#acabcdf8332cecd1cadd0e35eca5d6596">const_reference</a></td></tr>
+<tr class="separator:acabcdf8332cecd1cadd0e35eca5d6596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ea921fb8fad3cbcfc204cfd9d5c48d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#aac6e112bd99ab191c71afae95662ef92">reference</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ae7ea921fb8fad3cbcfc204cfd9d5c48d">pointer</a></td></tr>
 <tr class="separator:ae7ea921fb8fad3cbcfc204cfd9d5c48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c63d5460218d323da1364c8345983dc"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a2c63d5460218d323da1364c8345983dc">iterator_category</a></td></tr>
-<tr class="separator:a2c63d5460218d323da1364c8345983dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace211b103312b8ab8d9bcd7121f55da3"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
+&lt; InputStream &gt;<br class="typebreak"/>
+::<a class="el" href="structnvbio_1_1_packed_stream.html#ace211b103312b8ab8d9bcd7121f55da3">iterator_category</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ace211b103312b8ab8d9bcd7121f55da3">iterator_category</a></td></tr>
+<tr class="separator:ace211b103312b8ab8d9bcd7121f55da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee137265f4cf3cc4506e0837cbf51997"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#a27380c170e2fa8483bb5d085c6dab886">symbol_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#aee137265f4cf3cc4506e0837cbf51997">value_type</a></td></tr>
 <tr class="separator:aee137265f4cf3cc4506e0837cbf51997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8729f61d69a6ec90bd5c09186316870"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ae8729f61d69a6ec90bd5c09186316870">difference_type</a></td></tr>
@@ -170,8 +172,15 @@ std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="botto
 Public Methods</h2></td></tr>
 <tr class="memitem:a5a02c7b8c2fec663ee777623396fe245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5a02c7b8c2fec663ee777623396fe245">PackedStream</a> ()</td></tr>
 <tr class="separator:a5a02c7b8c2fec663ee777623396fe245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8d97208a04df40b22ce543e7baa8c12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#aa8d97208a04df40b22ce543e7baa8c12">PackedStream</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InputStream <a class="el" href="structnvbio_1_1_packed_stream.html#a17d7e64c6809e007cfcf41359551017f">stream</a>)</td></tr>
-<tr class="separator:aa8d97208a04df40b22ce543e7baa8c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b44c08a1afd11caf0e81e862879263"><td class="memTemplParams" colspan="2">template&lt;typename UInputStream &gt; </td></tr>
+<tr class="memitem:a20b44c08a1afd11caf0e81e862879263"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a20b44c08a1afd11caf0e81e862879263">PackedStream</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> UInputStream <a class="el" href="structnvbio_1_1_packed_stream.html#a17d7e64c6809e007cfcf41359551017f">stream</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a> <a class="el" href="structnvbio_1_1_packed_stream.html#ab454ca20cacdb1ef21cff7c6d896f38c">index</a>=0)</td></tr>
+<tr class="separator:a20b44c08a1afd11caf0e81e862879263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2722b109bb7e36bdb5f9661b2949c334"><td class="memTemplParams" colspan="2">template&lt;typename UInputStream , typename USymbol &gt; </td></tr>
+<tr class="memitem:a2722b109bb7e36bdb5f9661b2949c334"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a2722b109bb7e36bdb5f9661b2949c334">PackedStream</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; UInputStream, USymbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;other)</td></tr>
+<tr class="separator:a2722b109bb7e36bdb5f9661b2949c334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e215f6cc8a60f2d94d501688fdfc26f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#aac6e112bd99ab191c71afae95662ef92">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5e215f6cc8a60f2d94d501688fdfc26f">operator*</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a5e215f6cc8a60f2d94d501688fdfc26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ee4ecb2a1cf6951a1d7db1e3fb6554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> Symbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a22ee4ecb2a1cf6951a1d7db1e3fb6554">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a22ee4ecb2a1cf6951a1d7db1e3fb6554"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,11 +194,45 @@ Public Methods</h2></td></tr>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a998ba3188985770a251469c218da0f5f">set</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a> i, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Symbol s)</td></tr>
 <tr class="separator:a998ba3188985770a251469c218da0f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7ec9dcf4053d06cc2b215ebaa3e738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5f7ec9dcf4053d06cc2b215ebaa3e738">begin</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5f7ec9dcf4053d06cc2b215ebaa3e738">begin</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a5f7ec9dcf4053d06cc2b215ebaa3e738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17d7e64c6809e007cfcf41359551017f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> InputStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a17d7e64c6809e007cfcf41359551017f">stream</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a17d7e64c6809e007cfcf41359551017f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab454ca20cacdb1ef21cff7c6d896f38c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ab454ca20cacdb1ef21cff7c6d896f38c">index</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:ab454ca20cacdb1ef21cff7c6d896f38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8c8dad3ef177c506654c894ea0f843"><td class="memTemplParams" colspan="2">template&lt;typename UInputStream , typename USymbol &gt; </td></tr>
+<tr class="memitem:a0a8c8dad3ef177c506654c894ea0f843"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a0a8c8dad3ef177c506654c894ea0f843">operator=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; UInputStream, USymbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;other)</td></tr>
+<tr class="separator:a0a8c8dad3ef177c506654c894ea0f843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc120fda060b3e2e14fab1c2b197ec7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5cc120fda060b3e2e14fab1c2b197ec7">operator++</a> ()</td></tr>
+<tr class="separator:a5cc120fda060b3e2e14fab1c2b197ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa323f8aea55a425f6b2c017315b22d06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#aa323f8aea55a425f6b2c017315b22d06">operator++</a> (int dummy)</td></tr>
+<tr class="separator:aa323f8aea55a425f6b2c017315b22d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4efb7a8adfb40d2aee5b356c25f17faf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a4efb7a8adfb40d2aee5b356c25f17faf">operator--</a> ()</td></tr>
+<tr class="separator:a4efb7a8adfb40d2aee5b356c25f17faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580849a2d4d48363023bdb6cb6a2b00d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a580849a2d4d48363023bdb6cb6a2b00d">operator--</a> (int dummy)</td></tr>
+<tr class="separator:a580849a2d4d48363023bdb6cb6a2b00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752a770b972cd80e64da60070f1c0cb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a752a770b972cd80e64da60070f1c0cb8">operator+=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a> distance)</td></tr>
+<tr class="separator:a752a770b972cd80e64da60070f1c0cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab498a82461f69941c633ec9260ead653"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ab498a82461f69941c633ec9260ead653">operator-=</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a> distance)</td></tr>
+<tr class="separator:ab498a82461f69941c633ec9260ead653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae846f5f4b37162d863ebab31cc53e14c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#ae846f5f4b37162d863ebab31cc53e14c">operator+</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a> distance) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:ae846f5f4b37162d863ebab31cc53e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f3f9a13c52f5d3abcc993782db874a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a12f3f9a13c52f5d3abcc993782db874a">operator-</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a> distance) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a12f3f9a13c52f5d3abcc993782db874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1280599536d90b95af419aca1a8e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_stream.html#a5e1280599536d90b95af419aca1a8e9f">operator-</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> it) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<tr class="separator:a5e1280599536d90b95af419aca1a8e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Members</h2></td></tr>
@@ -205,6 +248,22 @@ Static Public Members</h2></td></tr>
 <tr class="separator:aff2b369a7050cd3d62d46a0e8f7ded90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="acabcdf8332cecd1cadd0e35eca5d6596"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Symbol <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#acabcdf8332cecd1cadd0e35eca5d6596">const_reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00194">194</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae8729f61d69a6ec90bd5c09186316870"></a>
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +276,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00341">341</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00198">198</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -233,7 +292,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00342">342</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00199">199</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -249,39 +308,39 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00330">330</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00186">186</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abc3e4f3a1f20d17ad1307c29526becac"></a>
+<a class="anchor" id="ac7dbf753de1c978342e6f902fcee4905"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream_iterator.html">PackedStreamIterator</a>&lt;<a class="el" href="structnvbio_1_1_packed_stream.html#a1b9311414aec1730d1a999aa1d47b7b5">This</a>&gt; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">iterator</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_stream.html#a1b9311414aec1730d1a999aa1d47b7b5">This</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00336">336</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00192">192</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2c63d5460218d323da1364c8345983dc"></a>
+<a class="anchor" id="ace211b103312b8ab8d9bcd7121f55da3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::random_access_iterator_tag <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#a2c63d5460218d323da1364c8345983dc">iterator_category</a></td>
+          <td class="memname">typedef std::iterator_traits&lt;InputStream&gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#ace211b103312b8ab8d9bcd7121f55da3">iterator_category</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#ace211b103312b8ab8d9bcd7121f55da3">iterator_category</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00339">339</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00196">196</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +356,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00338">338</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00195">195</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +372,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00337">337</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00193">193</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +388,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00331">331</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00187">187</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -345,7 +404,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00332">332</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00188">188</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -361,7 +420,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00334">334</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00190">190</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -377,7 +436,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00335">335</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00191">191</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +452,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00322">322</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00178">178</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -409,7 +468,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00340">340</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00197">197</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -438,15 +497,17 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><div class="memdoc">
 <p>empty constructor </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00346">346</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00203">203</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa8d97208a04df40b22ce543e7baa8c12"></a>
+<a class="anchor" id="a20b44c08a1afd11caf0e81e862879263"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+<div class="memtemplate">
+template&lt;typename UInputStream &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -454,8 +515,49 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> InputStream&#160;</td>
-          <td class="paramname"><em>stream</em>)</td><td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> UInputStream&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a>&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>constructor </p>
+
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00208">208</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2722b109bb7e36bdb5f9661b2949c334"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+<div class="memtemplate">
+template&lt;typename UInputStream , typename USymbol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; UInputStream, USymbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -467,7 +569,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00350">350</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00213">213</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -479,7 +581,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#abc3e4f3a1f20d17ad1307c29526becac">iterator</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::begin </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">iterator</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::begin </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname">)</td><td></td>
@@ -489,7 +591,7 @@ template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool 
 </div><div class="memdoc">
 <p>return begin iterator </p>
 
-<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00571">571</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00572">572</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
 
 </div>
 </div>
@@ -511,6 +613,280 @@ template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool 
 <p>get the i-th symbol </p>
 
 <p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00557">557</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab454ca20cacdb1ef21cff7c6d896f38c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#a80771287600a795b8b9589e443bf8777">index_type</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::index </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return the offset this iterator refers to </p>
+
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00247">247</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e215f6cc8a60f2d94d501688fdfc26f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html#aac6e112bd99ab191c71afae95662ef92">reference</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>dereference operator </p>
+
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00218">218</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae846f5f4b37162d863ebab31cc53e14c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td>
+          <td class="paramname"><em>distance</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>add offset </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00650">650</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5cc120fda060b3e2e14fab1c2b197ec7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pre-increment operator </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00582">582</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa323f8aea55a425f6b2c017315b22d06"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dummy</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>post-increment operator </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00593">593</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a752a770b972cd80e64da60070f1c0cb8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td>
+          <td class="paramname"><em>distance</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>add offset </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00628">628</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12f3f9a13c52f5d3abcc993782db874a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td>
+          <td class="paramname"><em>distance</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>subtract offset </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00660">660</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e1280599536d90b95af419aca1a8e9f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::<a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a> <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;&#160;</td>
+          <td class="paramname"><em>it</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>difference </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00670">670</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4efb7a8adfb40d2aee5b356c25f17faf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pre-decrement operator </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00605">605</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a580849a2d4d48363023bdb6cb6a2b00d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dummy</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>post-decrement operator </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00616">616</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab498a82461f69941c633ec9260ead653"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream , typename Symbol , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html#af9b67593a000c14906e600b749e789d8">sindex_type</a>&#160;</td>
+          <td class="paramname"><em>distance</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>subtract offset </p>
+
+<p>Definition at line <a class="el" href="packedstream__inl_8h_source.html#l00639">639</a> of file <a class="el" href="packedstream__inl_8h_source.html">packedstream_inl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a8c8dad3ef177c506654c894ea0f843"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T, typename IndexType = uint32&gt; </div>
+<div class="memtemplate">
+template&lt;typename UInputStream , typename USymbol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&amp; <a class="el" href="structnvbio_1_1_packed_stream.html">nvbio::PackedStream</a>&lt; InputStream, Symbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a>&lt; UInputStream, USymbol, SYMBOL_SIZE_T, BIG_ENDIAN_T, IndexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>assignment operator </p>
+
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00253">253</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -539,7 +915,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><div class="memdoc">
 <p>get the i-th symbol </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00354">354</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00222">222</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -568,7 +944,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><div class="memdoc">
 <p>get the i-th symbol </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00357">357</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00225">225</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -627,7 +1003,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><div class="memdoc">
 <p>return the base stream </p>
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00374">374</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00242">242</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -652,7 +1028,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00328">328</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00184">184</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -676,7 +1052,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00327">327</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00183">183</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +1076,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00325">325</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00181">181</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -724,7 +1100,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00326">326</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00182">182</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +1124,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00324">324</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream_8h_source.html#l00180">180</a> of file <a class="el" href="packedstream_8h_source.html">packedstream.h</a>.</p>
 
 </div>
 </div>
@@ -759,7 +1135,7 @@ template&lt;typename InputStream, typename Symbol, uint32 SYMBOL_SIZE_T, bool BI
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 23:59:37 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 17 2014 09:51:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
