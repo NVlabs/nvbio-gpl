@@ -337,7 +337,7 @@ bool SequenceDataFile_SAM::parseReferenceSequenceLine(char *start)
 
 
 // fetch the next chunk of reads (up to max_reads) from the file and push it into output
-int SequenceDataFile_SAM::nextChunk(SequenceDataRAM *output, uint32 max_reads, uint32 max_bps)
+int SequenceDataFile_SAM::nextChunk(SequenceDataEncoder *output, uint32 max_reads, uint32 max_bps)
 {
     if (max_bps < SequenceDataFile::LONG_READ)
         return 0;
@@ -400,8 +400,8 @@ int SequenceDataFile_SAM::nextChunk(SequenceDataRAM *output, uint32 max_reads, u
 
     if (m_flags & FORWARD)
     {
-        const SequenceDataRAM::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataRAM::REVERSE_COMPLEMENT_OP : SequenceDataRAM::NO_OP;
+        const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
+              SequenceDataEncoder::REVERSE_COMPLEMENT_OP : SequenceDataEncoder::NO_OP;
 
         // add the read
         output->push_back(uint32(strlen(seq)),
@@ -414,8 +414,8 @@ int SequenceDataFile_SAM::nextChunk(SequenceDataRAM *output, uint32 max_reads, u
     }
     if (m_flags & REVERSE)
     {
-        const SequenceDataRAM::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataRAM::COMPLEMENT_OP : SequenceDataRAM::REVERSE_OP;
+        const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
+              SequenceDataEncoder::COMPLEMENT_OP : SequenceDataEncoder::REVERSE_OP;
 
         // add the read
         output->push_back(uint32(strlen(seq)),
@@ -428,8 +428,8 @@ int SequenceDataFile_SAM::nextChunk(SequenceDataRAM *output, uint32 max_reads, u
     }
     if (m_flags & FORWARD_COMPLEMENT)
     {
-        const SequenceDataRAM::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataRAM::REVERSE_OP : SequenceDataRAM::COMPLEMENT_OP;
+        const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
+              SequenceDataEncoder::REVERSE_OP : SequenceDataEncoder::COMPLEMENT_OP;
 
         // add the read
         output->push_back(uint32(strlen(seq)),
@@ -442,8 +442,8 @@ int SequenceDataFile_SAM::nextChunk(SequenceDataRAM *output, uint32 max_reads, u
     }
     if (m_flags & REVERSE_COMPLEMENT)
     {
-        const SequenceDataRAM::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataRAM::NO_OP : SequenceDataRAM::REVERSE_COMPLEMENT_OP;
+        const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
+              SequenceDataEncoder::NO_OP : SequenceDataEncoder::REVERSE_COMPLEMENT_OP;
 
         // add the read
         output->push_back(uint32(strlen(seq)),

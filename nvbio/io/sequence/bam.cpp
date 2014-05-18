@@ -297,7 +297,7 @@ int SequenceDataFile_BAM::nextChunk(SequenceDataEncoder *output, uint32 max_read
     if (m_flags & FORWARD)
     {
         const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataEncoder::REVERSE_COMPLEMENT_OP : SequenceDataEncoder::NO_OP;
+              SequenceDataEncoder::REVERSE_COMPLEMENT_OP : SequenceDataEncoder::NO_OP;
 
         // add the read into the batch
         output->push_back(align.l_seq,
@@ -311,7 +311,7 @@ int SequenceDataFile_BAM::nextChunk(SequenceDataEncoder *output, uint32 max_read
     if (m_flags & REVERSE)
     {
         const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataEncoder::COMPLEMENT_OP : SequenceDataEncoder::REVERSE_OP;
+              SequenceDataEncoder::COMPLEMENT_OP : SequenceDataEncoder::REVERSE_OP;
 
         output->push_back(align.l_seq,
                           data.read_name,
@@ -324,7 +324,7 @@ int SequenceDataFile_BAM::nextChunk(SequenceDataEncoder *output, uint32 max_read
     if (m_flags & FORWARD_COMPLEMENT)
     {
         const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataEncoder::REVERSE_OP : SequenceDataEncoder::COMPLEMENT_OP;
+              SequenceDataEncoder::REVERSE_OP : SequenceDataEncoder::COMPLEMENT_OP;
 
         output->push_back(align.l_seq,
                           data.read_name,
@@ -337,7 +337,7 @@ int SequenceDataFile_BAM::nextChunk(SequenceDataEncoder *output, uint32 max_read
     if (m_flags & REVERSE_COMPLEMENT)
     {
         const SequenceDataEncoder::StrandOp op = (read_flags & SAMFlag_ReverseComplemented) ?
-            SequenceDataEncoder::NO_OP : SequenceDataEncoder::REVERSE_COMPLEMENT_OP;
+              SequenceDataEncoder::NO_OP : SequenceDataEncoder::REVERSE_COMPLEMENT_OP;
 
         output->push_back(align.l_seq,
                           data.read_name,
