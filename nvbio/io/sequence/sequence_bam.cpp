@@ -22,8 +22,8 @@
 
 #include <nvbio/basic/console.h>
 #include <nvbio/basic/packedstream.h>
-#include <nvbio/io/sequence/bam.h>
-#include <nvbio/io/sequence/sam.h>
+#include <nvbio/io/sequence/sequence_bam.h>
+#include <nvbio/io/sequence/sequence_sam.h>
 #include <nvbio/io/sequence/sequence_encoder.h>
 
 namespace nvbio {
