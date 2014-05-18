@@ -30,6 +30,7 @@
 #include <nvbio/basic/thrust_view.h>
 #include <nvbio/basic/priority_deque.h>
 #include <nvbio/basic/vector_view.h>
+#include <nvbio/basic/vector.h>
 #include <algorithm>
 
 namespace nvbio {
