@@ -30,10 +30,10 @@ namespace io {
 ///@addtogroup IO
 ///@{
 
-///@addtogroup SequencesIO
+///@addtogroup SequenceIO
 ///@{
 
-///@addtogroup SequencesIODetail
+///@addtogroup SequenceIODetail
 ///@{
 
 // SequenceDataFile from a FASTQ file
@@ -114,8 +114,8 @@ private:
     gzFile m_file;
 };
 
-///@} // SequencesIODetail
-///@} // SequencesIO
+///@} // SequenceIODetail
+///@} // SequenceIO
 ///@} // IO
 
 inline uint8 SequenceDataFile_FASTQ_parser::get(void)

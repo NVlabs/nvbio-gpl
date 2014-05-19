@@ -32,10 +32,10 @@ namespace io {
 ///@addtogroup IO
 ///@{
 
-///@addtogroup SequencesIO
+///@addtogroup SequenceIO
 ///@{
 
-///@addtogroup SequencesIODetail
+///@addtogroup SequenceIODetail
 ///@{
 
 SequenceDataFile_BAM::SequenceDataFile_BAM(
@@ -352,8 +352,8 @@ int SequenceDataFile_BAM::nextChunk(SequenceDataEncoder *output, uint32 max_read
     return 1;
 }
 
-///@} // SequencesIODetail
-///@} // SequencesIO
+///@} // SequenceIODetail
+///@} // SequenceIO
 ///@} // IO
 
 } // namespace io

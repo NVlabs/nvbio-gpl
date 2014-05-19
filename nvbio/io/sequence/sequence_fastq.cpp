@@ -30,10 +30,10 @@ namespace io {
 ///@addtogroup IO
 ///@{
 
-///@addtogroup SequencesIO
+///@addtogroup SequenceIO
 ///@{
 
-///@addtogroup SequencesIODetail
+///@addtogroup SequenceIODetail
 ///@{
 
 int SequenceDataFile_FASTQ_parser::nextChunk(SequenceDataEncoder *output, uint32 max_reads, uint32 max_bps)
@@ -247,8 +247,8 @@ SequenceDataFile_FASTQ_parser::FileState SequenceDataFile_FASTQ_gz::fillBuffer(v
     return FILE_OK;
 }
 
-///@} // SequencesIODetail
-///@} // SequencesIO
+///@} // SequenceIODetail
+///@} // SequenceIO
 ///@} // IO
 
 } // namespace io
