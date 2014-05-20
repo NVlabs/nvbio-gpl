@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-// nvbwa-server.cpp : Defines the entry point for the console application.
+// nvFM-server.cpp : Defines the entry point for the console application.
 //
 
 #include <nvbio/io/fmi.h>

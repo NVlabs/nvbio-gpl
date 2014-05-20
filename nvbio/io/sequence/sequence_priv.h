@@ -19,6 +19,8 @@
 #pragma once
 
 #include <nvbio/io/sequence/sequence.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 namespace nvbio {
 namespace io {
