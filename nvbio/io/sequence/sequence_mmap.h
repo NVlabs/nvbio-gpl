@@ -134,5 +134,3 @@ struct SequenceDataMMAP : public SequenceData
 
 } // namespace io
 } // namespace nvbio
-
-#include <nvbio/io/sequence/sequence_mmap_inl.h>
