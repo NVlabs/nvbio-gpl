@@ -414,7 +414,7 @@ int next(const SequenceAlphabet alphabet, SequenceDataHost* data, SequenceDataSt
 //
 int skip(SequenceDataStream* stream, const uint32 batch_size, const uint32 batch_bps)
 {
-    SequenceDataEncoder encoder;
+    SequenceDataEncoder encoder( PROTEIN );
     return stream->next( &encoder, batch_size );
 }
 
