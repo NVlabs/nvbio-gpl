@@ -781,7 +781,7 @@
 ///             read_infix_set,
 ///             genome_infix_set,
 ///             sinks.begin(),
-///             aln::ThreadParallelScheduler(),
+///             aln::DeviceThreadScheduler(),
 ///             reads.max_read_len(),
 ///             reads.max_read_len() + BAND_LEN );
 ///     }
