@@ -479,8 +479,8 @@ void banded_score_best(
         aligner,
         params );
 
-    typedef aln::ThreadParallelScheduler scheduler_type;
-    //typedef aln::StagedThreadParallelScheduler scheduler_type;
+    typedef aln::DeviceThreadScheduler scheduler_type;
+    //typedef aln::DeviceStagedThreadScheduler scheduler_type;
 
     if (band_len < 4)
     {
@@ -532,8 +532,8 @@ void banded_anchor_score_best(
         aligner,
         params );
 
-    typedef aln::ThreadParallelScheduler scheduler_type;
-    //typedef aln::StagedThreadParallelScheduler scheduler_type;
+    typedef aln::DeviceThreadScheduler scheduler_type;
+    //typedef aln::DeviceStagedThreadScheduler scheduler_type;
 
     if (band_len < 4)
     {
@@ -577,8 +577,8 @@ void opposite_score_best(
         aligner,
         params );
 
-    aln::BatchedAlignmentScore<stream_type, aln::ThreadParallelScheduler> batch;
-    //aln::BatchedAlignmentScore<stream_type, aln::StagedThreadParallelScheduler> batch;
+    aln::BatchedAlignmentScore<stream_type, aln::DeviceThreadScheduler> batch;
+    //aln::BatchedAlignmentScore<stream_type, aln::DeviceStagedThreadScheduler> batch;
 
     batch.enact( stream, pipeline.dp_buffer_size, pipeline.dp_buffer );
 }
@@ -729,8 +729,8 @@ void banded_score_all(
         buffer_size,
         counter );
 
-    //typedef aln::ThreadParallelScheduler scheduler_type;
-    typedef aln::StagedThreadParallelScheduler scheduler_type;
+    //typedef aln::DeviceThreadScheduler scheduler_type;
+    typedef aln::DeviceStagedThreadScheduler scheduler_type;
 
     if (band_len < 4)
     {

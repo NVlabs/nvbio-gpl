@@ -18,13 +18,17 @@
 
 #pragma once
 
+#include <nvbio/alignment/utils.h>
+#include <nvbio/alignment/batched_stream.h>
 #include <nvbio/basic/types.h>
 #include <nvbio/basic/thrust_view.h>
-#include <nvbio/alignment/utils.h>
 #include <nvbio/basic/cuda/work_queue.h>
 #include <nvbio/basic/strided_iterator.h>
-#include <nvbio/alignment/batched_stream.h>
+#include <nvbio/basic/vector.h>
 #include <nvbio/strings/prefetcher.h>
+#if defined(_OPENMP)
+#include <omp.h>
+#endif
 
 namespace nvbio {
 namespace aln {
@@ -210,12 +214,12 @@ __global__ void warp_persistent_batched_alignment_score_kernel(stream_type strea
 ///@{
 
 ///
-/// ThreadParallelScheduler specialization of BatchedAlignmentScore.
+/// HostThreadScheduler specialization of BatchedAlignmentScore.
 ///
 /// \tparam stream_type     the stream of alignment jobs
 ///
 template <typename stream_type>
-struct BatchedAlignmentScore<stream_type,ThreadParallelScheduler>
+struct BatchedAlignmentScore<stream_type,HostThreadScheduler>
 {
     static const uint32 BLOCKDIM = 128;
 
@@ -249,7 +253,7 @@ struct BatchedAlignmentScore<stream_type,ThreadParallelScheduler>
 // return the minimum number of bytes required by the algorithm
 //
 template <typename stream_type>
-uint64 BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentScore<stream_type,HostThreadScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return column_storage( max_pattern_len, max_text_len ) * 1024;
 }
@@ -257,7 +261,7 @@ uint64 BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::min_temp_stor
 // return the maximum number of bytes required by the algorithm
 //
 template <typename stream_type>
-uint64 BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentScore<stream_type,HostThreadScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return align<32>( column_storage( max_pattern_len, max_text_len ) * stream_size );
 }
@@ -265,7 +269,109 @@ uint64 BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::max_temp_stor
 // enact the batch execution
 //
 template <typename stream_type>
-void BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
+void BatchedAlignmentScore<stream_type,HostThreadScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
+{
+    const uint32 column_size = equal<typename aligner_type::algorithm_tag,PatternBlockingTag>() ?
+        uint32( stream.max_pattern_length() ) :
+        uint32( stream.max_text_length() );
+
+    const uint64 min_temp_size = min_temp_storage(
+        stream.max_pattern_length(),
+        stream.max_text_length(),
+        stream.size() );
+
+    nvbio::vector<host_tag,uint8> temp_vec;
+    if (temp == NULL)
+    {
+        temp_size = nvbio::max( min_temp_size, temp_size );
+        temp_vec.resize( temp_size );
+        temp = nvbio::plain_view( temp_vec );
+    }
+
+    // set the queue capacity based on available memory
+    const uint32 queue_capacity = uint32( temp_size / column_storage( stream.max_pattern_length(), stream.max_text_length() ) );
+
+    cell_type* columns = (cell_type*)temp;
+
+    // consume the alignments in batches
+    for (uint32 batch_begin = 0; batch_begin < stream.size(); batch_begin += queue_capacity)
+    {
+        const uint32 batch_end = nvbio::min( batch_begin + queue_capacity, stream.size() );
+
+      #if defined(_OPENMP)
+        #pragma omp parallel for
+      #endif
+        for (int work_id = batch_begin; work_id < int( batch_end ); ++work_id)
+        {
+            const uint32 column_id = work_id - batch_begin;
+
+            // fetch the proper column storage
+            typedef strided_iterator<cell_type*> column_type;
+            column_type column = column_type( columns + column_id, stride );
+
+            // and solve the actual alignment problem
+            batched_alignment_score( stream, column, work_id, thread_id );
+        }
+    }
+}
+
+///
+/// DeviceThreadScheduler specialization of BatchedAlignmentScore.
+///
+/// \tparam stream_type     the stream of alignment jobs
+///
+template <typename stream_type>
+struct BatchedAlignmentScore<stream_type,DeviceThreadScheduler>
+{
+    static const uint32 BLOCKDIM = 128;
+
+    typedef typename stream_type::aligner_type                  aligner_type;
+    typedef typename column_storage_type<aligner_type>::type    cell_type;
+
+    /// return the per-element column storage size
+    ///
+    static uint32 column_storage(const uint32 max_pattern_len, const uint32 max_text_len)
+    {
+        const uint32 column_size = equal<typename aligner_type::algorithm_tag,PatternBlockingTag>() ?
+            uint32( max_text_len    * sizeof(cell_type) ) :
+            uint32( max_pattern_len * sizeof(cell_type) );
+
+        return align<4>( column_size );
+    }
+
+    /// return the minimum number of bytes required by the algorithm
+    ///
+    static uint64 min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size);
+
+    /// return the maximum number of bytes required by the algorithm
+    ///
+    static uint64 max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size);
+
+    /// enact the batch execution
+    ///
+    void enact(stream_type stream, uint64 temp_size = 0u, uint8* temp = NULL);
+};
+
+// return the minimum number of bytes required by the algorithm
+//
+template <typename stream_type>
+uint64 BatchedAlignmentScore<stream_type,DeviceThreadScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+{
+    return column_storage( max_pattern_len, max_text_len ) * 1024;
+}
+
+// return the maximum number of bytes required by the algorithm
+//
+template <typename stream_type>
+uint64 BatchedAlignmentScore<stream_type,DeviceThreadScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+{
+    return align<32>( column_storage( max_pattern_len, max_text_len ) * stream_size );
+}
+
+// enact the batch execution
+//
+template <typename stream_type>
+void BatchedAlignmentScore<stream_type,DeviceThreadScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
 {
     const uint32 column_size = equal<typename aligner_type::algorithm_tag,PatternBlockingTag>() ?
         uint32( stream.max_pattern_length() ) :
@@ -289,12 +395,12 @@ void BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::enact(stream_ty
             stream.max_text_length(),
             stream.size() );
 
-        thrust::device_vector<uint8> temp_dvec;
+        nvbio::vector<device_tag,uint8> temp_vec;
         if (temp == NULL)
         {
             temp_size = nvbio::max( min_temp_size, temp_size );
-            temp_dvec.resize( temp_size );
-            temp = nvbio::device_view( temp_dvec );
+            temp_vec.resize( temp_size );
+            temp = nvbio::plain_view( temp_vec );
         }
 
         // set the queue capacity based on available memory
@@ -325,12 +431,12 @@ void BatchedAlignmentScore<stream_type,ThreadParallelScheduler>::enact(stream_ty
 }
 
 ///
-/// ThreadParallelScheduler specialization of BatchedAlignmentScore.
+/// DeviceThreadScheduler specialization of BatchedAlignmentScore.
 ///
 /// \tparam stream_type     the stream of alignment jobs
 ///
 template <typename stream_type>
-struct BatchedAlignmentScore<stream_type,WarpParallelScheduler>
+struct BatchedAlignmentScore<stream_type,DeviceWarpScheduler>
 {
     static const uint32 BLOCKDIM = 128;
 
@@ -353,7 +459,7 @@ struct BatchedAlignmentScore<stream_type,WarpParallelScheduler>
 // return the minimum number of bytes required by the algorithm
 //
 template <typename stream_type>
-uint64 BatchedAlignmentScore<stream_type,WarpParallelScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentScore<stream_type,DeviceWarpScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return max_text_len * sizeof(cell_type) * 1024;
 }
@@ -361,7 +467,7 @@ uint64 BatchedAlignmentScore<stream_type,WarpParallelScheduler>::min_temp_storag
 // return the maximum number of bytes required by the algorithm
 //
 template <typename stream_type>
-uint64 BatchedAlignmentScore<stream_type,WarpParallelScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentScore<stream_type,DeviceWarpScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return max_text_len * sizeof(cell_type) * stream_size;
 }
@@ -369,19 +475,19 @@ uint64 BatchedAlignmentScore<stream_type,WarpParallelScheduler>::max_temp_storag
 // enact the batch execution
 //
 template <typename stream_type>
-void BatchedAlignmentScore<stream_type,WarpParallelScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
+void BatchedAlignmentScore<stream_type,DeviceWarpScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
 {
     const uint64 min_temp_size = min_temp_storage(
         stream.max_pattern_length(),
         stream.max_text_length(),
         stream.size() );
 
-    thrust::device_vector<uint8> temp_dvec;
+    nvbio::vector<device_tag,uint8> temp_vec;
     if (temp == NULL)
     {
         temp_size = nvbio::max( min_temp_size, temp_size );
-        temp_dvec.resize( temp_size );
-        temp = nvbio::device_view( temp_dvec );
+        temp_vec.resize( temp_size );
+        temp = nvbio::plain_view( temp_vec );
     }
 
     NVBIO_VAR_UNUSED static const uint32 WARP_SIZE = cuda::Arch::WARP_SIZE;
@@ -415,12 +521,12 @@ void BatchedAlignmentScore<stream_type,WarpParallelScheduler>::enact(stream_type
 }
 
 ///
-/// StagedThreadParallelScheduler specialization of BatchedAlignmentScore.
+/// DeviceStagedThreadScheduler specialization of BatchedAlignmentScore.
 ///
 /// \tparam stream_type     the stream of alignment jobs
 ///
 template <typename stream_type>
-struct BatchedAlignmentScore<stream_type,StagedThreadParallelScheduler>
+struct BatchedAlignmentScore<stream_type,DeviceStagedThreadScheduler>
 {
     static const uint32 BLOCKDIM = 128;
 
@@ -461,12 +567,12 @@ struct BatchedAlignmentScore<stream_type,StagedThreadParallelScheduler>
             stream.max_text_length(),
             stream.size() );
 
-        thrust::device_vector<uint8> temp_dvec;
+        nvbio::vector<device_tag,uint8> temp_vec;
         if (temp == NULL)
         {
             temp_size = nvbio::max( min_temp_size, temp_size );
-            temp_dvec.resize( temp_size );
-            temp = nvbio::device_view( temp_dvec );
+            temp_vec.resize( temp_size );
+            temp = nvbio::plain_view( temp_vec );
         }
 
         // set the queue capacity based on available memory
@@ -585,12 +691,12 @@ __global__ void persistent_batched_alignment_traceback_kernel(stream_type stream
 ///@} // end of private group
 
 ///
-/// ThreadParallelScheduler specialization of BatchedAlignmentTraceback.
+/// DeviceThreadScheduler specialization of BatchedAlignmentTraceback.
 ///
 /// \tparam stream_type     the stream of alignment jobs
 ///
 template <uint32 CHECKPOINTS, typename stream_type>
-struct BatchedAlignmentTraceback<CHECKPOINTS, stream_type,ThreadParallelScheduler>
+struct BatchedAlignmentTraceback<CHECKPOINTS, stream_type,DeviceThreadScheduler>
 {
     static const uint32 BLOCKDIM = 128;
 
@@ -663,7 +769,7 @@ struct BatchedAlignmentTraceback<CHECKPOINTS, stream_type,ThreadParallelSchedule
 // return the minimum number of bytes required by the algorithm
 //
 template <uint32 CHECKPOINTS, typename stream_type>
-uint64 BatchedAlignmentTraceback<CHECKPOINTS, stream_type,ThreadParallelScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentTraceback<CHECKPOINTS, stream_type,DeviceThreadScheduler>::min_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return element_storage( max_pattern_len, max_text_len ) * 1024;
 }
@@ -671,7 +777,7 @@ uint64 BatchedAlignmentTraceback<CHECKPOINTS, stream_type,ThreadParallelSchedule
 // return the maximum number of bytes required by the algorithm
 //
 template <uint32 CHECKPOINTS, typename stream_type>
-uint64 BatchedAlignmentTraceback<CHECKPOINTS,stream_type,ThreadParallelScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
+uint64 BatchedAlignmentTraceback<CHECKPOINTS,stream_type,DeviceThreadScheduler>::max_temp_storage(const uint32 max_pattern_len, const uint32 max_text_len, const uint32 stream_size)
 {
     return element_storage( max_pattern_len, max_text_len ) * stream_size;
 }
@@ -679,19 +785,19 @@ uint64 BatchedAlignmentTraceback<CHECKPOINTS,stream_type,ThreadParallelScheduler
 // enact the batch execution
 //
 template <uint32 CHECKPOINTS, typename stream_type>
-void BatchedAlignmentTraceback<CHECKPOINTS,stream_type,ThreadParallelScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
+void BatchedAlignmentTraceback<CHECKPOINTS,stream_type,DeviceThreadScheduler>::enact(stream_type stream, uint64 temp_size, uint8* temp)
 {
     const uint64 min_temp_size = min_temp_storage(
         stream.max_pattern_length(),
         stream.max_text_length(),
         stream.size() );
 
-    thrust::device_vector<uint8> temp_dvec;
+    nvbio::vector<device_tag,uint8> temp_vec;
     if (temp == NULL)
     {
         temp_size = nvbio::max( min_temp_size, temp_size );
-        temp_dvec.resize( temp_size );
-        temp = nvbio::device_view( temp_dvec );
+        temp_vec.resize( temp_size );
+        temp = nvbio::plain_view( temp_vec );
     }
 
     // set the queue capacity based on available memory
