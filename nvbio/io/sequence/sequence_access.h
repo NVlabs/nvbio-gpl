@@ -57,6 +57,12 @@ struct SequenceDataAccess
     typedef typename SequenceDataT::const_qual_storage_iterator                       qual_storage_iterator;        ///< the qualities iterator
     typedef typename SequenceDataT::const_name_storage_iterator                       name_storage_iterator;        ///< the names string iterator
 
+    typedef SequenceDataViewCore<
+        index_iterator,
+        sequence_storage_iterator,
+        qual_storage_iterator,
+        name_storage_iterator>                                                        sequence_reference;           ///< the sequence reference
+
     typedef PackedStream<
         sequence_storage_iterator,uint8,SEQUENCE_BITS,SEQUENCE_BIG_ENDIAN>            sequence_stream_type;         ///< the packed read-stream type
 
@@ -139,7 +145,7 @@ struct SequenceDataAccess
             name_index() );
     }
 
-    const SequenceDataT& m_data;
+    const sequence_reference m_data;
 };
 
 template <SequenceAlphabet ALPHABET, typename SequenceDataT>
@@ -171,6 +177,12 @@ struct SequenceDataEdit
     typedef typename SequenceDataT::sequence_storage_iterator                         sequence_storage_iterator;    ///< the read storage iterator
     typedef typename SequenceDataT::qual_storage_iterator                             qual_storage_iterator;        ///< the qualities iterator
     typedef typename SequenceDataT::name_storage_iterator                             name_storage_iterator;        ///< the names string iterator
+
+    typedef SequenceDataViewCore<
+        index_iterator,
+        sequence_storage_iterator,
+        qual_storage_iterator,
+        name_storage_iterator>                                                        sequence_reference;           ///< the sequence reference
 
     typedef PackedStream<
         sequence_storage_iterator,uint8,SEQUENCE_BITS,SEQUENCE_BIG_ENDIAN>            sequence_stream_type;         ///< the packed read-stream type
@@ -254,7 +266,7 @@ struct SequenceDataEdit
             name_index() );
     }
 
-    SequenceDataT& m_data;
+    const sequence_reference m_data;
 };
 
 ///@} // SequenceIO
