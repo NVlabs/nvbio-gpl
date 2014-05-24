@@ -643,7 +643,7 @@ void map_kernel(
 // call the map-sub kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_case_pruning(
+void map_case_pruning_t(
     const BatchType&                                read_batch, const FMType fmi, const rFMType rfmi,
     const uint32                                    retry,
     const nvbio::cuda::PingPongQueuesView<uint32>   queues,
@@ -678,7 +678,7 @@ void map_case_pruning(
 // call the map-hybrid kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_approx(
+void map_approx_t(
     const BatchType&                                read_batch, const FMType fmi, const rFMType rfmi,
     const uint32                                    retry,
     const nvbio::cuda::PingPongQueuesView<uint32>   queues,
@@ -713,7 +713,7 @@ void map_approx(
 // call the map-hybrid kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_approx(
+void map_approx_t(
     const BatchType&            read_batch, const FMType fmi, const rFMType rfmi,
     SeedHitDequeArrayDeviceView hits,
     const uint2                 seed_range,
@@ -747,7 +747,7 @@ void map_approx(
 // call the map-exact kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_whole_read(
+void map_whole_read_t(
     const BatchType&                                read_batch, const FMType fmi, const rFMType rfmi,
     const nvbio::cuda::PingPongQueuesView<uint32>   queues,
     SeedHitDequeArrayDeviceView                     hits,
@@ -763,7 +763,7 @@ void map_whole_read(
 // call the map-exact kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_exact(
+void map_exact_t(
     const BatchType&                                read_batch, const FMType fmi, const rFMType rfmi,
     const uint32                                    retry,
     const nvbio::cuda::PingPongQueuesView<uint32>   queues,
@@ -798,7 +798,7 @@ void map_exact(
 // call the map-exact kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map_exact(
+void map_exact_t(
     const BatchType&            read_batch, const FMType fmi, const rFMType rfmi,
     SeedHitDequeArrayDeviceView hits,
     const uint2                 seed_range,
@@ -832,7 +832,7 @@ void map_exact(
 // call the appropriate mapping kernel
 //
 template <typename BatchType, typename FMType, typename rFMType>
-void map(
+void map_t(
     const BatchType&                                read_batch, const FMType fmi, const rFMType rfmi,
     const uint32                                    retry,
     const nvbio::cuda::PingPongQueuesView<uint32>   queues,
@@ -846,20 +846,20 @@ void map(
         if (params.subseed_len == 0)
         {
             // call the hybrid fuzzy mapping kernel
-            map_case_pruning(
+            map_case_pruning_t(
                 read_batch, fmi, rfmi, retry, queues, hits, params );
         }
         else
         {
             // call the hybrid exact-fuzzy mapping kernel
-            map_approx(
+            map_approx_t(
                 read_batch, fmi, rfmi, retry, queues, hits, params );
         }
     }
     else
     {
         // call the hybrid exact mapping kernel
-        map_exact(
+        map_exact_t(
             read_batch, fmi, rfmi, retry, queues, hits, params );
     }
 }
