@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-// alignment_test.cu
+// sequence_test.cu
 //
 
 #include <nvbio/basic/timer.h>
@@ -34,6 +34,7 @@
 using namespace nvbio;
 
 namespace nvbio {
+
 
 int sequence_test(int argc, char* argv[])
 {

@@ -20,7 +20,6 @@
 
 #include <nvbio/io/output/output_types.h>
 #include <nvbio/io/output/output_stats.h>
-#include <nvbio/io/fmi.h>
 #include <nvbio/io/sequence/sequence.h>
 
 #include <stdio.h>

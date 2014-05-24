@@ -43,6 +43,7 @@ void Aligner::best_approx(
     const fmi_type                          fmi,
     const rfmi_type                         rfmi,
     const UberScoringScheme&                input_scoring_scheme,
+    const io::SequenceDataDevice&           reference_data,
     const io::FMIndexDataDevice&            driver_data,
     const io::SequenceDataDevice&           read_data1,
     const io::SequenceDataDevice&           read_data2,
@@ -65,8 +66,10 @@ void Aligner::best_approx(
     const uint32 band_len = band_length( params.max_dist );
 
     // cast the genome to use proper iterators
-    const uint32               genome_len = driver_data.genome_length();
-    const genome_iterator_type genome_ptr( (const genome_storage_type*)driver_data.genome_stream() );
+    const io::LdgSequenceDataView   genome_view( plain_view( reference_data ) );
+    const genome_access_type        genome_access( genome_view );
+    const uint32                    genome_len = genome_access.bps();
+    const genome_iterator_type      genome_ptr = genome_access.sequence_stream();
 
     // cast the reads to use proper iterators
     const read_view_type  reads_view1 = plain_view( read_data1 );
@@ -168,6 +171,7 @@ void Aligner::best_approx(
                 fmi,
                 rfmi,
                 scoring_scheme,
+                reference_data,
                 driver_data,
                 anchor,
                 anchor ? read_data2 : read_data1,
@@ -595,6 +599,7 @@ void Aligner::best_approx_score(
     const fmi_type                          fmi,
     const rfmi_type                         rfmi,
     const scoring_scheme_type&              scoring_scheme,
+    const io::SequenceDataDevice&           reference_data,
     const io::FMIndexDataDevice&            driver_data,
     const uint32                            anchor,
     const io::SequenceDataDevice&           read_data1,
@@ -625,8 +630,10 @@ void Aligner::best_approx_score(
     const read_batch_type reads1( reads_view1 );
     const read_batch_type reads2( reads_view2 );
 
-    const uint32 genome_len = driver_data.genome_length();
-    const genome_iterator_type genome_ptr( (const genome_storage_type*)driver_data.genome_stream() );
+    const io::LdgSequenceDataView   genome_view( plain_view( reference_data ) );
+    const genome_access_type        genome_access( genome_view );
+    const uint32                    genome_len = genome_access.bps();
+    const genome_iterator_type      genome_ptr = genome_access.sequence_stream();
 
     NVBIO_VAR_UNUSED thrust::device_vector<uint32>::iterator          loc_queue_iterator   = scoring_queues.hits.loc.begin();
                      thrust::device_vector<int32>::iterator           score_queue_iterator = scoring_queues.hits.score.begin();

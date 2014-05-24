@@ -29,6 +29,7 @@
 #include <nvBowtie/bowtie2/cuda/mapping.h>
 #include <nvbio/io/alignments.h>
 #include <nvbio/io/output/output_file.h>
+#include <nvbio/io/sequence/sequence.h>
 #include <nvBowtie/bowtie2/cuda/scoring.h>
 #include <nvBowtie/bowtie2/cuda/mapq.h>
 #include <nvBowtie/bowtie2/cuda/input_thread.h>
@@ -78,8 +79,8 @@ struct Aligner
     typedef io::SequenceDataViewCore<const uint32*,read_base_type,read_qual_type,const char*>                                read_view_type;
     typedef io::SequenceDataAccess<DNA_N,read_view_type>                                                                     read_batch_type;
 
-    typedef typename binary_switch<uint32,uint4,USE_UINT4_PACKING>::type                                                     genome_storage_type;
-    typedef nvbio::cuda::ldg_pointer<genome_storage_type>                                                                    genome_iterator_type;
+    typedef io::SequenceDataAccess<DNA,io::LdgSequenceDataView>                                                              genome_access_type;
+    typedef genome_access_type::sequence_stream_type                                                                         genome_iterator_type;
 
 
     uint32                              BATCH_SIZE;
@@ -164,6 +165,7 @@ struct Aligner
         const fmi_type                          fmi,
         const rfmi_type                         rfmi,
         const UberScoringScheme&                scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const io::SequenceDataDevice&           read_data,
         Stats&                                  stats);
@@ -176,6 +178,7 @@ struct Aligner
         const fmi_type                          fmi,
         const rfmi_type                         rfmi,
         const scoring_scheme_type&              scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const io::SequenceDataDevice&           read_data,
         const uint32                            seeding_pass,
@@ -189,6 +192,7 @@ struct Aligner
         const FMIndexDef::type                  fmi,
         const FMIndexDef::type                  rfmi,
         const UberScoringScheme&                scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const io::SequenceDataDevice&           read_data1,
         const io::SequenceDataDevice&           read_data2,
@@ -202,6 +206,7 @@ struct Aligner
         const fmi_type                          fmi,
         const rfmi_type                         rfmi,
         const scoring_scheme_type&              scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const uint32                            anchor,
         const io::SequenceDataDevice&           read_data1,
@@ -217,6 +222,7 @@ struct Aligner
         const fmi_type                          fmi,
         const rfmi_type                         rfmi,
         const UberScoringScheme&                scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const io::SequenceDataDevice&           read_data,
         Stats&                                  stats);
@@ -228,6 +234,7 @@ struct Aligner
         const rfmi_type                         rfmi,
         const UberScoringScheme&                input_scoring_scheme,
         const scoring_scheme_type&              scoring_scheme,
+        const io::SequenceDataDevice&           reference_data,
         const io::FMIndexDataDevice&            driver_data,
         const io::SequenceDataDevice&           read_data,
         const uint32                            seed_queue_size,

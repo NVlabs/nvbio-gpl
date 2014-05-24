@@ -18,8 +18,8 @@
 
 #pragma once
 
-#include <nvbio/io/fmi.h>
 #include <nvbio/io/sequence/sequence.h>
+#include <nvbio/io/fmindex/fmindex.h>
 #include <map>
 #include <string>
 
@@ -28,11 +28,13 @@ namespace bowtie2 {
 namespace cuda {
 
 int driver(const char*                              output_name,
+           const io::SequenceData&                  reference_data,
            const io::FMIndexData&                   driver_data,
                  io::SequenceDataStream&            read_data_stream,
            const std::map<std::string,std::string>& options);
 
 int driver(const char*                              output_name,
+           const io::SequenceData&                  reference_data,
            const io::FMIndexData&                   driver_data,
            const io::PairedEndPolicy                pe_policy,
                  io::SequenceDataStream&            read_data_stream1,

@@ -19,7 +19,7 @@
 #pragma once
 
 #include <nvbio/fmindex/fmindex.h>
-#include <nvbio/io/fmi.h>
+#include <nvbio/io/fmindex/fmindex.h>
 
 namespace nvbio {
 namespace bowtie2 {

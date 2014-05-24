@@ -17,7 +17,6 @@
  */
 
 #include <nvbio/io/output/output_batch.h>
-#include <nvbio/io/fmi.h>
 #include <nvbio/basic/timer.h>
 #include <nvbio/basic/vector.h>
 

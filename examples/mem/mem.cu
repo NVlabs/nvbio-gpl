@@ -32,7 +32,8 @@
 #include <nvbio/strings/seeds.h>
 #include <nvbio/fmindex/mem.h>
 #include <nvbio/io/sequence/sequence.h>
-#include <nvbio/io/fmi.h>
+#include <nvbio/io/sequence/sequence_mmap.h>
+#include <nvbio/io/fmindex/fmindex.h>
 
 using namespace nvbio;
 
@@ -67,26 +68,49 @@ int main(int argc, char* argv[])
             min_span = atoi( argv[++i] );
     }
 
-    const uint32 fm_flags = io::FMIndexData::GENOME  |
-                            io::FMIndexData::FORWARD |
+    const uint32 fm_flags = io::FMIndexData::FORWARD |
                             io::FMIndexData::REVERSE |
                             io::FMIndexData::SA;
 
-    // TODO: load a genome archive...
-    io::FMIndexDataRAM h_fmi;
-    if (!h_fmi.load( index, fm_flags ))
+    SharedPointer<io::SequenceData> h_ref;
+
+    h_ref = io::map_sequence_file( index );
+    if (h_ref == NULL)
+        h_ref = io::load_sequence_file( DNA, index );
+
+    if (h_ref == NULL)
     {
-        log_error(stderr, "    failed loading index \"%s\"\n", index);
+        log_error(stderr, "    failed loading reference \"%s\"\n", index);
         return 1u;
     }
 
-    // build its device version
-    const io::FMIndexDataDevice d_fmi( h_fmi, fm_flags );
+    io::FMIndexData     *h_fmi = NULL;
+    io::FMIndexDataMMAP mmap_loader;
+    io::FMIndexDataHost file_loader;
 
-    typedef io::FMIndexDataDevice::stream_type genome_type;
+    if (mmap_loader.load( index ))
+        h_fmi = &mmap_loader;
+    else
+    {
+        if (!file_loader.load( index, fm_flags ))
+        {
+            log_error(stderr, "    failed loading index \"%s\"\n", index);
+            return 1u;
+        }
+
+        h_fmi = &file_loader;
+    }
+
+    // build its device version
+    const io::SequenceDataDevice d_ref( *h_ref );
+    const io::FMIndexDataDevice  d_fmi( *h_fmi, fm_flags );
+
+    typedef io::SequenceDataAccess<DNA> genome_access_type;
+    typedef genome_access_type::sequence_stream_type genome_type;
 
     // fetch the genome string
-    const genome_type d_genome( d_fmi.genome_stream() );
+    const genome_access_type d_genome_access( d_ref );
+    const genome_type d_genome( d_genome_access.sequence_stream() );
 
     // open a read file
     log_info(stderr, "  opening reads file... started\n");
