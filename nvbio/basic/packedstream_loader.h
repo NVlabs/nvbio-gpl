@@ -80,7 +80,7 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_
     /// \param length       length of the substring to load
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    iterator load(const input_stream stream, const uint32 offset, const uint32 length);
+    iterator load(const input_stream stream, const uint32 length);
 
     /// given a packed stream, and a window of symbols that is virtually mapped to the cache,
     /// load a substring of it and return an iterator to the first symbol of the window.
@@ -94,7 +94,6 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_
     /// \endverbatim
     ///
     /// \param stream           input stream storage
-    /// \param offset           offset to the first mapped symbol
     /// \param length           length of the mapped substring
     /// \param loaded_range     range of the substring to load
     /// \param rev_flag         true if the range is specified wrt reversed coordinates
@@ -102,7 +101,6 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,lmem_cache_
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     iterator load(
         const input_stream      stream,
-        const uint32            offset,
         const uint32            length,
         const uint2             loaded_range,
         const uint32            rev_flag);
@@ -125,11 +123,10 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,uncached_ta
     /// to the first loaded symbol
     ///
     /// \param stream       input stream storage
-    /// \param offset       offset to the first symbol to load
     /// \param length       length of the substring to load
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    iterator load(const input_stream stream, const uint32 offset, const uint32 length);
+    iterator load(const input_stream stream, const uint32 length);
 
     /// given a packed stream, and a window of symbols that is virtually mapped to the cache,
     /// load a substring of it and return an iterator to the first symbol of the window.
@@ -143,7 +140,6 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,uncached_ta
     /// \endverbatim
     ///
     /// \param stream           input stream storage
-    /// \param offset           offset to the first mapped symbol
     /// \param length           length of the mapped substring
     /// \param loaded_range     range of the substring to load
     /// \param rev_flag         true if the range is specified wrt reversed coordinates
@@ -151,7 +147,6 @@ struct PackedStringLoader<StorageIterator,SYMBOL_SIZE_T,BIG_ENDIAN_T,uncached_ta
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
     iterator load(
         const input_stream      stream,
-        const uint32            offset,
         const uint32            length,
         const uint2             substring_range,
         const uint32            rev_flag);
