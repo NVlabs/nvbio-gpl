@@ -982,7 +982,9 @@ void batch_alignment_score(
     const pattern_set_type  patterns,
     const text_set_type     texts,
           sink_iterator     sinks,
-    const scheduler_type    scheduler)
+    const scheduler_type    scheduler,
+    const uint32            max_pattern_length,
+    const uint32            max_text_length)
 {
     typedef priv::AlignmentStream<aligner_type,pattern_set_type,trivial_quality_string_set,text_set_type,sink_iterator> stream_type;
 
@@ -996,8 +998,8 @@ void batch_alignment_score(
         trivial_quality_string_set(),
         texts,
         sinks,
-        500,            // TODO: compute this with a reduction!
-        500 );          // TODO: compute this with a reduction!
+        max_pattern_length,
+        max_text_length );
 
     // enact the batch
     batch_type batch;
@@ -1020,7 +1022,9 @@ void batch_alignment_score(
     const qualities_set_type    quals,
     const text_set_type         texts,
           sink_iterator         sinks,
-    const scheduler_type        scheduler)
+    const scheduler_type        scheduler,
+    const uint32                max_pattern_length,
+    const uint32                max_text_length)
 {
     typedef priv::AlignmentStream<aligner_type,pattern_set_type,qualities_set_type,text_set_type,sink_iterator> stream_type;
 
@@ -1034,8 +1038,8 @@ void batch_alignment_score(
         quals,
         texts,
         sinks,
-        500,            // TODO: compute this with a reduction!
-        500 );          // TODO: compute this with a reduction!
+        max_pattern_length,
+        max_text_length );
 
     // enact the batch
     batch_type batch;
