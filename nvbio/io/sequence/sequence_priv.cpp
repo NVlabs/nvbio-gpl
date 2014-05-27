@@ -228,7 +228,7 @@ SequenceDataStream *open_sequence_file(
 // \param qualities            the encoding of the qualities
 //
 bool load_sequence_file(
-    const SequenceAlphabet      alphabet,
+    const Alphabet              alphabet,
     SequenceDataHost*           sequence_data,
     const char*                 sequence_file_name,
     const SequenceFlags         load_flags,
@@ -256,7 +256,7 @@ bool load_sequence_file(
 /// \param qualities            the encoding of the qualities
 ///
 SequenceDataHost* load_sequence_file(
-    const SequenceAlphabet      alphabet,
+    const Alphabet              alphabet,
     const char*                 sequence_file_name,
     const SequenceFlags         load_flags,
     const QualityEncoding       qualities)
