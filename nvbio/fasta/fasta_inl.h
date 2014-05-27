@@ -115,7 +115,7 @@ uint8 FASTA_inc_reader::get()
 {
     if (m_buffer_pos >= m_buffer_size)
     {
-        m_buffer_size = uint32( gzread( m_file, &m_buffer[0], m_buffer.size() ) );
+        m_buffer_size = uint32( gzread( m_file, &m_buffer[0], (unsigned int)m_buffer.size() ) );
         m_buffer_pos  = 0;
     }
     return (m_buffer_pos < m_buffer_size) ? m_buffer[ m_buffer_pos++ ] : 255u;
@@ -221,7 +221,7 @@ uint8 FASTA_reader::get()
 {
     if (m_buffer_pos >= m_buffer_size)
     {
-        m_buffer_size = uint32( gzread( m_file, &m_buffer[0], m_buffer.size() ) );
+        m_buffer_size = uint32( gzread( m_file, &m_buffer[0], (unsigned int)m_buffer.size() ) );
         m_buffer_pos  = 0;
     }
     return (m_buffer_pos < m_buffer_size) ? m_buffer[ m_buffer_pos++ ] : 255u;
