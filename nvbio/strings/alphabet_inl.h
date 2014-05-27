@@ -183,7 +183,7 @@ template <Alphabet ALPHABET, typename SymbolIterator>
 NVBIO_FORCEINLINE NVBIO_HOST_DEVICE void from_string(
     const char*             begin,
     const char*             end,
-    const SymbolIterator    symbols)
+    SymbolIterator          symbols)
 {
     for (const char* it = begin; it != end; ++it)
         symbols[ (it - begin) % (end - begin) ] = from_char<ALPHABET>( *it );
@@ -194,7 +194,7 @@ NVBIO_FORCEINLINE NVBIO_HOST_DEVICE void from_string(
 template <Alphabet ALPHABET, typename SymbolIterator>
 NVBIO_FORCEINLINE NVBIO_HOST_DEVICE void from_string(
     const char*             begin,
-    const SymbolIterator    symbols)
+    SymbolIterator          symbols)
 {
     for (const char* it = begin; *it != '\0'; ++it)
         symbols[ it - begin ] = from_char<ALPHABET>( *it );
