@@ -133,6 +133,11 @@ typedef int                 int32;
 typedef short               int16;
 typedef char                int8;
 
+///@defgroup SystemTags System Tags
+///\par
+/// Define tags to identify the host and device systems.
+///@{
+
 /// a tag to define the host architecture
 ///
 struct host_tag : public thrust::host_system_tag {};
@@ -140,6 +145,8 @@ struct host_tag : public thrust::host_system_tag {};
 /// a tag to define the device architecture
 ///
 struct device_tag : public thrust::device_system_tag {};
+
+///@} SystemTags
 
 /// a null type, useful to represent unbound template arguments
 ///
