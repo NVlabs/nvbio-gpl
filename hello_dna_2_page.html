@@ -95,7 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><dl class="section user"><dt></dt><dd>This page will teach you to familiarize with NVBIO's notion of <a class="el" href="strings_page.html">string sets</a> and with some basic parallel constructs. Assume you have the string from the previous example, but now want to extract all of its 3-mers, for example to use them in a seed &amp; extend aligner. The collection of all 3-mers can be thought of as a set of substrings, or <em>infixes</em> of your original string; NVBIO represents such an object as an InfixSet. Moreover, it provides a function to extract the coordinates of such seeds in <em>parallel</em>.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="packed__vector_8h.html">nvbio/basic/packed_vector.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dna_8h.html">nvbio/basic/dna.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="primitives_8h.html">nvbio/basic/primitives.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="alphabet_8h.html">nvbio/strings/alphabet.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="infix_8h.html">nvbio/strings/infix.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="seeds_8h.html">nvbio/strings/seeds.h</a>&gt;</span></div>
 <div class="line"></div>
@@ -107,17 +108,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> dna_string[] = <span class="stringliteral">&quot;ACGTTGCA&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( strlen( dna_string ) );</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// our DNA alphabet size</span></div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> ALPHABET_SIZE = 2u;</div>
+<div class="line">    <span class="comment">// our DNA alphabet size, in bits</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> ALPHABET_SIZE = <a class="code" href="structnvbio_1_1_alphabet_traits.html">AlphabetTraits&lt;DNA&gt;::SYMBOL_SIZE</a>;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// instantiate a packed host vector</span></div>
 <div class="line">    <a class="code" href="structnvbio_1_1_packed_vector.html">nvbio::PackedVector&lt;host_tag,ALPHABET_SIZE&gt;</a> h_dna( len );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// and fill it in with the contents of our original string, converted</span></div>
 <div class="line">    <span class="comment">// to a 2-bit DNA alphabet (i.e. A = 0, C = 1, G = 2, T = 3)</span></div>
-<div class="line">    <a class="code" href="namespacenvbio.html#aa9ee0534e5881be7835abcaa242a9f28">nvbio::string_to_dna</a>(</div>
-<div class="line">        dna_string,               <span class="comment">// the input ASCII string</span></div>
-<div class="line">        h_dna.begin() );          <span class="comment">// the output iterator</span></div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaeae20f3a7985f079f84ab3e7aa95f159">nvbio::assign</a>( len, nvbio::from_string&lt;DNA&gt;( dna_string ), h_dna.begin() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// copy the packed vector to the device</span></div>
 <div class="line">    <a class="code" href="structnvbio_1_1_packed_vector.html">nvbio::PackedVector&lt;device_tag,ALPHABET_SIZE&gt;</a> d_dna( h_dna );</div>
@@ -142,15 +141,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        d_seed_coords.begin() );                <span class="comment">// the iterator to the infix coordinates</span></div>
 <div class="line"></div>
 <div class="line">    ...</div>
-</div><!-- fragment --><dl class="section user"><dt></dt><dd>At this point it would be nice to do something with the string-set we just created. For the sake of the example, we will just print all its strings. Technically, we could just loop through the strings in the set, and print them on the host. However, suppose we want to do it in the native space of the set, i.e. on the device, and suppose we want to do it in parallel: how can we do this? Well, we will do it here using <a href="http://docs.nvidia.com/cuda/thrust/">Thrust</a>, and particularly the <a href="http://thrust.github.io/doc/group__modifying.html">thrust::for_each</a> construct:</dd></dl>
+</div><!-- fragment --><dl class="section user"><dt></dt><dd>At this point it would be nice to do something with the string-set we just created. For the sake of the example, we will just print all its strings. Technically, we could just loop through the strings in the set, and print them on the host. However, suppose we want to do it in the native space of the set, i.e. on the device, and suppose we want to do it in parallel: how can we do this? Well, we will do it here using a <a class="el" href="primitives_page.html">parallel primitive</a>, and particularly the <a class="el" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">for_each()</a> construct:</dd></dl>
 <div class="fragment"><div class="line">    ...</div>
 <div class="line"></div>
-<div class="line">    thrust::for_each(</div>
+<div class="line">    nvbio::for_each&lt;device_tag&gt;(</div>
+<div class="line">        n_seeds,                                      <span class="comment">// the loop&#39;s sequence size</span></div>
 <div class="line">        seeds.begin(),                                <span class="comment">// the loop&#39;s begin iterator</span></div>
-<div class="line">        seeds.end(),                                  <span class="comment">// the loop&#39;s end iterator</span></div>
 <div class="line">        print_strings&lt;infix_set_type&gt;() );            <span class="comment">// the loop&#39;s body</span></div>
 <div class="line">}</div>
-</div><!-- fragment --> <dl class="section user"><dt></dt><dd>Thrust's for_each takes a functor encoding the body of our loop, and applies it to all elements of a sequence. In this case, the sequence is the string-set, and the body of our loop will be the following:</dd></dl>
+</div><!-- fragment --> <dl class="section user"><dt></dt><dd><a class="el" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">for_each()</a> takes a functor encoding the body of our loop, and applies it to all elements of a sequence. In this case, the sequence is the string-set, and the body of our loop will be the following:</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">string</span>_set_type&gt;</div>
 <div class="line"><span class="keyword">struct </span>print_strings</div>
 <div class="line">{</div>
@@ -161,8 +160,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        <span class="comment">// build an ASCII string</span></div>
 <div class="line">        <span class="keywordtype">char</span> seed[4];</div>
-<div class="line">        <a class="code" href="namespacenvbio.html#a3b2c0c661976a904d3ffb4f78eee33ec">nvbio::dna_to_string</a>(</div>
-<div class="line">            <span class="keywordtype">string</span>,                    <span class="comment">// the input string</span></div>
+<div class="line">        nvbio::to_string&lt;DNA&gt;(</div>
+<div class="line">            string,                    <span class="comment">// the input string</span></div>
 <div class="line">            <a class="code" href="group___basic.html#gae962be09940c267ce467e74a160a542a">nvbio::length</a>( <span class="keywordtype">string</span> ),   <span class="comment">// its length</span></div>
 <div class="line">            seed );                    <span class="comment">// the output ASCII string</span></div>
 <div class="line"></div>
@@ -176,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

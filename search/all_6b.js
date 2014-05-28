@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k',['K',['../structnvbio_1_1dispatch__rank_3_012_00_0164_00_01_packed_stream_3_01_text_storage_00_01uint8_00_69a404735257d2d95bc8159a8258ed21.html#a75dc73cd687671539c2b7c69b5e768fb',1,'nvbio::dispatch_rank&lt; 2, 64, PackedStream&lt; TextStorage, uint8, 2u, true &gt;, OccIterator, CountTable, uint4, uint4 &gt;::K()'],['../structnvbio_1_1priv_1_1add__divide__functor.html#aa15e65fdc62b94f7358059e80a9860ab',1,'nvbio::priv::add_divide_functor::k()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_simple_func.html#a5ac151664e0e2fefc0f18bdcc42ffd77',1,'nvbio::bowtie2::cuda::SimpleFunc::k()']]],
+  ['k',['k',['../structnvbio_1_1priv_1_1add__divide__functor.html#aa15e65fdc62b94f7358059e80a9860ab',1,'nvbio::priv::add_divide_functor::k()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_simple_func.html#a5ac151664e0e2fefc0f18bdcc42ffd77',1,'nvbio::bowtie2::cuda::SimpleFunc::k()'],['../structnvbio_1_1dispatch__rank_3_012_00_0164_00_01_packed_stream_3_01_text_storage_00_01uint8_00_69a404735257d2d95bc8159a8258ed21.html#a75dc73cd687671539c2b7c69b5e768fb',1,'nvbio::dispatch_rank&lt; 2, 64, PackedStream&lt; TextStorage, uint8, 2u, true &gt;, OccIterator, CountTable, uint4, uint4 &gt;::K()']]],
   ['kalignment',['kAlignment',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a58ac240a2595c240eef5e476c1eeaf0a',1,'nvbio-test.cpp']]],
   ['kall',['kALL',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0af21c7069639c247a4c8e34aa0c65cce8',1,'nvbio-test.cpp']]],
   ['kalloc',['kAlloc',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0aba8232a08fa3d33c675c08481d731997',1,'nvbio-test.cpp']]],
@@ -18,6 +18,7 @@ var searchData=
   ['kqgram',['kQGram',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0adf0c9a777bbe96e5b300d40f5a3c6af3',1,'nvbio-test.cpp']]],
   ['krank',['kRank',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a99ff2ebeda750c0f8e9e4734ffb8968e',1,'nvbio-test.cpp']]],
   ['kscan',['kScan',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a7de4f20bee8fec53b0792530a2280b58',1,'nvbio-test.cpp']]],
+  ['ksequence',['kSequence',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0ad0986068c72bdc7272c2be5258c1ab09',1,'nvbio-test.cpp']]],
   ['ksingleend',['kSingleEnd',['../group___defs.html#gga10cf8b86a671ff4e4061aaa0d086cdf5af829865e7d0193203eff606e4ae06bdc',1,'nvbio::bowtie2::cuda']]],
   ['kstringset',['kStringSet',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a3e03d4636bb5044ae4b8463c1629b4d3',1,'nvbio-test.cpp']]],
   ['ksumtree',['kSumTree',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a82e89c9a5a0ab2fbbf2da287fa1324aa',1,'nvbio-test.cpp']]],

@@ -155,11 +155,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                           \</div>
 <div class="line">        next = strchr(prev, <span class="charliteral">&#39;\t&#39;</span>);              \</div>
-<div class="line">        if (!next) {                                                    \</div>
+<div class="line">        if (!<a class="code" href="group___sequence_i_o.html#ga0b124ee3d2c51b0a1f555c91ad4948a2">next</a>) {                                                    \</div>
 <div class="line">            log_error(stderr, <span class="stringliteral">&quot;Error parsing VCF file (line %d): incomplete variant\n&quot;</span>, line_counter); \</div>
 <div class="line">            return <span class="keyword">false</span>;                                               \</div>
 <div class="line">        }                                                               \</div>
-<div class="line">        *next = <span class="charliteral">&#39;\0&#39;</span>;                                                   \</div>
+<div class="line">        *<a class="code" href="group___sequence_i_o.html#ga0b124ee3d2c51b0a1f555c91ad4948a2">next</a> = <span class="charliteral">&#39;\0&#39;</span>;                                                   \</div>
 <div class="line">        next++;                                                         \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -168,7 +168,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:32 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:54 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

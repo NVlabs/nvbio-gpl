@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </dd></dl>
 <h1><a class="anchor" id="InputSection"></a>
 Input</h1>
-<dl class="section user"><dt></dt><dd>The first step for a reference-based aligner is loading a reference index, and streaming a set of reads. Let's start by loading the FM-index, using the corresponding <a class="el" href="fmindex_io_page.html">I/O</a> classes.</dd></dl>
+<dl class="section user"><dt></dt><dd>The first step for a reference-based aligner is loading a reference index, and streaming a set of reads. Let's start by loading the reference sequence and its FM-index, using the corresponding <a class="el" href="sequence_io_page.html">Sequence</a> and <a class="el" href="fmindex_io_page.html">FM-Index I/O</a> classes.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="timer_8h.html">nvbio/basic/timer.h</a>&gt;</span></div>
@@ -105,8 +105,8 @@ Input</h1>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vector_8h.html" title="Define host / device vectors. ">nvbio/basic/vector.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="shared__pointer_8h.html">nvbio/basic/shared_pointer.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dna_8h.html">nvbio/basic/dna.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="reads_8h.html">nvbio/io/reads/reads.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="fmi_8h.html">nvbio/io/fmi.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sequence_8h.html">nvbio/io/sequence/sequence.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="io_2fmindex_2fmindex_8h.html">nvbio/io/fmindex/fmindex.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;util.h&quot;</span></div>
 <div class="line"></div>
@@ -118,9 +118,17 @@ Input</h1>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* reads = argv[argc-1];</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* index = argv[argc-2];</div>
 <div class="line"></div>
+<div class="line">    <span class="comment">// load a reference sequence in RAM</span></div>
+<div class="line">    <a class="code" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27" title="a SequenceData object stored in host memory ">io::SequenceDataHost</a> h_ref;</div>
+<div class="line">    <span class="keywordflow">if</span> (!<a class="code" href="group___sequence_i_o.html#ga51edb4491c012a5c6c91b8de1472cb13">io::load_sequence_file</a>( <a class="code" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a6c8c7655bd0085241eed95780a3aa4c4" title="4-letter DNA alphabet { A,C,G,T } ">DNA</a>, &amp;h_ref, index ))</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;    failed loading reference \&quot;%s\&quot;\n&quot;</span>, index);</div>
+<div class="line">        <span class="keywordflow">return</span> 1u;</div>
+<div class="line">    }</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// load an FM-index in RAM</span></div>
-<div class="line">    io::FMIndexDataRAM h_fmi;</div>
-<div class="line">    <span class="keywordflow">if</span> (!h_fmi.load( index, io::FMIndexData::GENOME | <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">io::FMIndexData::FORWARD</a> | io::FMIndexData::SA ))</div>
+<div class="line">    io::FMIndexDataHost h_fmi;</div>
+<div class="line">    <span class="keywordflow">if</span> (!h_fmi.load( index, <a class="code" href="group___sequence_i_o.html#ggaa3df48d0ab11675e05f2c34fb70e5673a8ff7c616502f05c17e72a0b525ff9d61">io::FMIndexData::FORWARD</a> | io::FMIndexData::SA ))</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="console_8cpp.html#a4666077df5b6eb45547efd029fc3689e">log_error</a>(stderr, <span class="stringliteral">&quot;    failed loading index \&quot;%s\&quot;\n&quot;</span>, index);</div>
 <div class="line">        <span class="keywordflow">return</span> 1u;</div>
@@ -129,8 +137,9 @@ Input</h1>
 </div><!-- fragment --><dl class="section user"><dt></dt><dd>Besides some simple option parsing, at this point we have an application that loads an FM-index from disk into system memory, including the genome, its forward BWT and the Sampled Suffix Array. At this point, if we want our mapper to run on the GPU we can copy the FM-index in device memory with a single line, again specifying which of its components to load. Rather than keeping it on the stack we will store it in a <em>Pipeline</em> object, which we'll use to keep all the state of our mapper.</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>Pipeline</div>
 <div class="line">{</div>
-<div class="line">    Params                               params;    <span class="comment">// the mapping params</span></div>
-<div class="line">    SharedPointer&lt;io::FMIndexDataDevice&gt; fm_data;   <span class="comment">// the device FM-index</span></div>
+<div class="line">    Params                                params;    <span class="comment">// the mapping params</span></div>
+<div class="line">    SharedPointer&lt;io::SequenceDataDevice&gt; ref_data;  <span class="comment">// the device reference</span></div>
+<div class="line">    SharedPointer&lt;io::FMIndexDataDevice&gt;  fm_data;   <span class="comment">// the device FM-index</span></div>
 <div class="line">};</div>
 </div><!-- fragment --><div class="fragment"><div class="line">...</div>
 <div class="line">    Pipeline pipeline;</div>
@@ -139,9 +148,11 @@ Input</h1>
 <div class="line">    pipeline.params = params;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// build the device index</span></div>
-<div class="line">    pipeline.fm_data = <span class="keyword">new</span> io::FMIndexDataDevice( io::FMIndexData::GENOME  |</div>
-<div class="line">                                                  <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">io::FMIndexData::FORWARD</a> |</div>
-<div class="line">                                                  io::FMIndexData::SA );</div>
+<div class="line">    pipeline.ref_data = <span class="keyword">new</span> <a class="code" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960" title="a SequenceData object stored in device memory ">io::SequenceDataDevice</a>( h_ref );</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// build the device index</span></div>
+<div class="line">    pipeline.fm_data = <span class="keyword">new</span> io::FMIndexDataDevice( h_fmi, <a class="code" href="group___sequence_i_o.html#ggaa3df48d0ab11675e05f2c34fb70e5673a8ff7c616502f05c17e72a0b525ff9d61">io::FMIndexData::FORWARD</a> |</div>
+<div class="line">                                                         io::FMIndexData::SA );</div>
 <div class="line">...</div>
 </div><!-- fragment --><dl class="section user"><dt></dt><dd>The second second step is to start streaming reads in; NVBIO's philosophy here is to use a batched approach, where the size of the batch will roughly determine the amount of available parallelism in the rest of the pipeline. In order to amortize fixed costs (e.g. grid launch / synchronization overhead) it's good to allow for as much parallelism as possible given your memory constraints - but as a rough guideline, suffice it to say that lightweight kernels should have at least ~128K items to process, possibly more (for example, sorting performance saturates at 16-32M keys).<br/>
  So if some stages of the alignment pipeline will parallelize across reads, it would be good to have at least 1M or so to process. Obviously, one million reads could require plenty of memory if the reads are long, so we might want to cap the maximum number of base pairs as well:</dd></dl>
@@ -150,13 +161,13 @@ Input</h1>
 <div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> batch_bps     = 100*1024*1024;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// open a read file, storing for each read both its forward and its reverse-complemented representations</span></div>
-<div class="line">    SharedPointer&lt;io::ReadDataStream&gt; read_data_file(</div>
-<div class="line">        <a class="code" href="group___reads_i_o.html#gaefea201a77fedc78f3ed33b1f2cea447">io::open_read_file</a>(</div>
+<div class="line">    SharedPointer&lt;io::SequenceDataStream&gt; read_data_file(</div>
+<div class="line">        <a class="code" href="group___sequence_i_o.html#gadd1892c7b881fe606d66b597fed7d687">io::open_sequence_file</a>(</div>
 <div class="line">            reads,</div>
-<div class="line">            <a class="code" href="group___reads_i_o.html#gga3415ac326089788da99884c50b8ccb16a9eb653f015ffd6288ce38c8b3c6b5996">io::Phred33</a>,</div>
+<div class="line">            <a class="code" href="group___sequence_i_o.html#gga3415ac326089788da99884c50b8ccb16a014958857dbbddee90a1489d4fa5d3d2" title="phred quality + 33 ">io::Phred33</a>,</div>
 <div class="line">            2*params.max_reads,</div>
 <div class="line">            <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>(-1),</div>
-<div class="line">            <a class="code" href="group___reads_i_o.html#ga6e48da290521a74aa4a0cd6585ace320">io::ReadEncoding</a>( <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320a8f35ed1ad339dd55518bf3600c2ae50d">io::FORWARD</a> | <a class="code" href="group___reads_i_o.html#gga6e48da290521a74aa4a0cd6585ace320ac5593f46b345f38118f836c668787e68">io::REVERSE_COMPLEMENT</a> ) ) );</div>
+<div class="line">            <a class="code" href="group___sequence_i_o.html#gaa3df48d0ab11675e05f2c34fb70e5673">io::SequenceEncoding</a>( <a class="code" href="group___sequence_i_o.html#ggaa3df48d0ab11675e05f2c34fb70e5673a8ff7c616502f05c17e72a0b525ff9d61">io::FORWARD</a> | <a class="code" href="group___sequence_i_o.html#ggaa3df48d0ab11675e05f2c34fb70e5673a5655652c9d1c1d3eccf23c78a7cb120f">io::REVERSE_COMPLEMENT</a> ) ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check whether the file opened correctly</span></div>
 <div class="line">    <span class="keywordflow">if</span> (read_data_file == NULL || read_data_file-&gt;is_ok() == <span class="keyword">false</span>)</div>
@@ -165,18 +176,19 @@ Input</h1>
 <div class="line">        <span class="keywordflow">return</span> 1u;</div>
 <div class="line">    }</div>
 <div class="line"></div>
+<div class="line">               <a class="code" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27" title="a SequenceData object stored in host memory ">io::SequenceDataHost</a> h_read_data;</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// start looping to consume the input reads</span></div>
 <div class="line">    <span class="keywordflow">while</span> (1)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// load a batch of reads</span></div>
-<div class="line">        SharedPointer&lt;io::ReadData&gt; h_read_data( read_data_file-&gt;next( batch_reads, batch_bps ) );</div>
-<div class="line">        <span class="keywordflow">if</span> (h_read_data == NULL)</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="group___sequence_i_o.html#ga0b124ee3d2c51b0a1f555c91ad4948a2">io::next</a>( <a class="code" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a312b63ba76d209928476bcefde8f124d" title="5-letter DNA + N alphabet { A,C,G,T,N } ">DNA_N</a>, &amp;h_read_data, read_data_file, batch_reads, batch_bps ) == 0);</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line"></div>
 <div class="line">        <a class="code" href="console_8cpp.html#a3f1311cb7f0df2f027275d682ccf0918">log_info</a>(stderr, <span class="stringliteral">&quot;  loading reads... started\n&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// copy it to the device</span></div>
-<div class="line">        <span class="keyword">const</span> io::ReadDataDevice d_read_data( *h_read_data );</div>
+<div class="line">        <span class="keyword">const</span> <a class="code" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960" title="a SequenceData object stored in device memory ">io::SequenceDataDevice</a> d_read_data( *h_read_data );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// remember we generated two strands per input read...</span></div>
 <div class="line">        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_reads = d_read_data.size() / 2;</div>
@@ -185,7 +197,7 @@ Input</h1>
 <div class="line">        <a class="code" href="console_8cpp.html#a3f1311cb7f0df2f027275d682ccf0918">log_info</a>(stderr, <span class="stringliteral">&quot;    %u reads\n&quot;</span>, n_reads);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// do the real mapping work</span></div>
-<div class="line">        <a class="code" href="group___mapping.html#ga1c1a5dc606aedfe249f958e15ac5791f">map</a>( pipeline, d_read_data );</div>
+<div class="line">        <a class="code" href="group___mapping.html#gaa3d729454ad2be69f07eda252e522033">map</a>( pipeline, d_read_data );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section user"><dt></dt><dd>Now we are ready to start the real mapping work. In order to do it, we'll need to store another data structure in our pipeline, namely the <a class="el" href="fmindex_page.html#FMIndexFilters">FMIndexFilter</a>. This data structure is just a context for performing FM-index based filtering, i.e. the process of finding potential matches of a set of strings using an FM-index.</dd></dl>
@@ -194,21 +206,22 @@ Input</h1>
 <div class="line">    <span class="keyword">typedef</span> io::FMIndexDataDevice::fm_index_type        fm_index_type;  <span class="comment">// the fm-index view type</span></div>
 <div class="line">    <span class="keyword">typedef</span> FMIndexFilterDevice&lt;fm_index_type&gt;          fm_filter_type; <span class="comment">// the fm-index filter type</span></div>
 <div class="line"></div>
-<div class="line">    Params                               params;    <span class="comment">// the mapping params</span></div>
-<div class="line">    SharedPointer&lt;io::FMIndexDataDevice&gt; fm_data;   <span class="comment">// the device FM-index</span></div>
-<div class="line">    fm_filter_type                       fm_filter; <span class="comment">// the FM-index filter</span></div>
+<div class="line">    Params                                params;    <span class="comment">// the mapping params</span></div>
+<div class="line">    SharedPointer&lt;io::SequenceDataDevice&gt; ref_data;  <span class="comment">// the device reference</span></div>
+<div class="line">    SharedPointer&lt;io::FMIndexDataDevice&gt;  fm_data;   <span class="comment">// the device FM-index</span></div>
+<div class="line">    fm_filter_type                        fm_filter; <span class="comment">// the FM-index filter</span></div>
 <div class="line">};</div>
 </div><!-- fragment --> <dl class="section user"><dt></dt><dd>Here you go, ready to write the bulk of the aligner.</dd></dl>
 <h1><a class="anchor" id="MappingSection"></a>
 Mapping</h1>
 <dl class="section user"><dt></dt><dd>We'll write a simple seed &amp; extend aligner, so the first thing we'll want to do is split our reads in equal segments. As shown in the previous example, the collection of these seeds can be seen as an InfixSet . Let's start with some boiler-plate code to make sure we have everythin we need:</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="group___mapping.html#ga1c1a5dc606aedfe249f958e15ac5791f">map</a>(Pipeline&amp; pipeline, <span class="keyword">const</span> io::ReadDataDevice&amp; reads)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="group___mapping.html#gaa3d729454ad2be69f07eda252e522033">map</a>(Pipeline&amp; pipeline, <span class="keyword">const</span> io::SequenceDataAccess&lt;DNA_N&gt; reads)</div>
 <div class="line">{</div>
-<div class="line">    <span class="comment">// the FM-index data contains the packed genome stream, of this type</span></div>
-<div class="line">    <span class="keyword">typedef</span> io::FMIndexDataDevice::stream_type                                  genome_string;</div>
+<div class="line">    <span class="comment">// the reads can be accessed as a string-set, of this type</span></div>
+<div class="line">    <span class="keyword">typedef</span> io::SequenceDataAccess&lt;DNA&gt;::sequence_string_set_type               genome_string;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// the reads can be accessed as a string-set, of this type</span></div>
-<div class="line">    <span class="keyword">typedef</span> io::ReadDataDevice::const_read_string_set_type                      read_string_set_type;</div>
+<div class="line">    <span class="keyword">typedef</span> io::SequenceDataAccess&lt;DNA_N&gt;::sequence_string_set_type             read_string_set_type;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// the seeds will be infixes of a string-set, with this coordinates type</span></div>
 <div class="line">    <span class="keyword">typedef</span> <a class="code" href="group___string_sets_module.html#ga71ecfc758a63a4bcf233ea33ed801f42">string_set_infix_coord_type</a>                                         infix_coord_type;</div>
@@ -224,8 +237,9 @@ Mapping</h1>
 <div class="line">    <span class="keyword">const</span> Params&amp; params = pipeline.params;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// fetch the genome string</span></div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>        genome_len = pipeline.fm_data-&gt;genome_length();</div>
-<div class="line">    <span class="keyword">const</span> genome_string genome( pipeline.fm_data-&gt;genome_stream() );</div>
+<div class="line">    <span class="keyword">const</span> io::SequenceDataAccess&lt;DNA&gt; genome_access( *pipeline.ref_data );</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>        genome_len = genome_access.bps();</div>
+<div class="line">    <span class="keyword">const</span> genome_string genome( genome_access.sequence_stream() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// fetch an fm-index view</span></div>
 <div class="line">    <span class="keyword">const</span> Pipeline::fm_index_type fm_index = pipeline.fm_data-&gt;index();</div>
@@ -237,7 +251,7 @@ Mapping</h1>
 <div class="line">    infix_vector_type seed_coords;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// extract the seeds</span></div>
-<div class="line">    <span class="keyword">const</span> read_string_set_type read_string_set = reads.const_read_string_set();</div>
+<div class="line">    <span class="keyword">const</span> read_string_set_type read_string_set = reads.sequence_string_set();</div>
 <div class="line">    <span class="keyword">const</span> seed_string_set_type seed_string_set = extract_seeds(</div>
 <div class="line">        read_string_set,</div>
 <div class="line">        params.seed_len,</div>
@@ -270,12 +284,12 @@ Mapping</h1>
 <div class="line">        hits_end,        <span class="comment">// the end of the range of hits to locate</span></div>
 <div class="line">        hits.begin() );  <span class="comment">// the output vector to be filled</span></div>
 <div class="line">    ...</div>
-</div><!-- fragment --><dl class="section user"><dt></dt><dd>At this point, remember the hit coordinates refer to the seeds, not to the reads they belong to. We hence want to convert them to <em>diagonals</em> of the genome/read matrices, and we do this employing <a href="http://docs.nvidia.com/cuda/thrust/">thrust::transform()</a>:</dd></dl>
+</div><!-- fragment --><dl class="section user"><dt></dt><dd>At this point, remember the hit coordinates refer to the seeds, not to the reads they belong to. We hence want to convert them to <em>diagonals</em> of the genome/read matrices, and we do this employing the <a class="el" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">transform()</a> <a class="el" href="primitives_page.html">parallel primitive</a>:</dd></dl>
 <div class="fragment"><div class="line">...</div>
 <div class="line">    <span class="comment">// transform the (index-pos,seed-id) hit coordinates into diagonals</span></div>
-<div class="line">    thrust::transform(</div>
+<div class="line">    nvbio::transform&lt;device_tag&gt;(</div>
+<div class="line">        hits_end - hits_begin,</div>
 <div class="line">        hits.begin(),</div>
-<div class="line">        hits.begin() + hits_end - hits_begin,</div>
 <div class="line">        hits.begin(),</div>
 <div class="line">        hit_to_diagonal( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( seed_coords ) ) );</div>
 <div class="line">...</div>
@@ -314,26 +328,26 @@ Mapping</h1>
 </dd></dl>
 <div class="fragment"><div class="line">        ...</div>
 <div class="line">        <span class="comment">// build the set of read infixes</span></div>
-<div class="line">        thrust::transform(</div>
+<div class="line">        nvbio::transform&lt;device_tag&gt;(</div>
+<div class="line">            hits_end - hits_begin</div>
 <div class="line">            hits.begin(),</div>
-<div class="line">            hits.begin() + hits_end - hits_begin,</div>
 <div class="line">            read_infix_coords.begin(),</div>
-<div class="line">            read_infixes( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( reads ) ) );</div>
+<div class="line">            <a class="code" href="structread__infixes.html">read_infixes</a>( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( reads ) ) );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// build the set of genome infixes</span></div>
-<div class="line">        thrust::transform(</div>
+<div class="line">        nvbio::transform&lt;device_tag&gt;(</div>
+<div class="line">            hits_end - hits_begin</div>
 <div class="line">            hits.begin(),</div>
-<div class="line">            hits.begin() + hits_end - hits_begin,</div>
 <div class="line">            genome_infix_coords.begin(),</div>
-<div class="line">            genome_infixes&lt;BAND_LEN&gt;( genome_len, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( reads ) ) );</div>
+<div class="line">            <a class="code" href="structgenome__infixes.html">genome_infixes&lt;BAND_LEN&gt;</a>( genome_len, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( reads ) ) );</div>
 <div class="line"></div>
 <div class="line">        <span class="keyword">typedef</span> <a class="code" href="structnvbio_1_1vector.html">nvbio::vector&lt;device_tag,string_infix_coord_type&gt;::const_iterator</a> infix_iterator;</div>
 <div class="line"></div>
-<div class="line">        <span class="keyword">typedef</span> io::ReadDataDevice::const_read_stream_type      read_stream;</div>
+<div class="line">        <span class="keyword">typedef</span> io::SequenceDataAccess&lt;DNA_N&gt;::sequence_stream_type      read_stream;</div>
 <div class="line"></div>
 <div class="line">        <span class="keyword">const</span> SparseStringSet&lt;read_stream,infix_iterator&gt; read_infix_set(</div>
 <div class="line">            hits_end - hits_begin,</div>
-<div class="line">            reads.read_stream(),</div>
+<div class="line">            reads.sequence_stream(),</div>
 <div class="line">            read_infix_coords.begin() );</div>
 <div class="line"></div>
 <div class="line">        <span class="keyword">const</span> SparseStringSet&lt;genome_string,infix_iterator&gt; genome_infix_set(</div>
@@ -349,7 +363,7 @@ Mapping</h1>
 <div class="line">            read_infix_set,</div>
 <div class="line">            genome_infix_set,</div>
 <div class="line">            sinks.begin(),</div>
-<div class="line">            aln::ThreadParallelScheduler(),</div>
+<div class="line">            <a class="code" href="group___batch_scheduler.html#ga8cd79d95b552b152e3655b648e59256d">aln::DeviceThreadScheduler</a>(),</div>
 <div class="line">            reads.max_read_len(),</div>
 <div class="line">            reads.max_read_len() + BAND_LEN );</div>
 <div class="line">    }</div>
@@ -360,7 +374,7 @@ Mapping</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// We sort by the last block of numbers before the last dot</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt;sortkey&gt;::iterator iter;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">for</span>(iter=files.begin(); iter!=files.end(); ++iter) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">size_t</span> end, begin;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">size_t</span> end, <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::string numstring;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        end = iter-&gt;second.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        end = iter-&gt;second.find_last_of(<span class="stringliteral">&quot;0123456789&quot;</span>, end);</div>
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:29 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:49 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

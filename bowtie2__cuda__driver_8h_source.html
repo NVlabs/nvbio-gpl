@@ -119,8 +119,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fmi_8h.html">nvbio/io/fmi.h</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="reads_8h.html">nvbio/io/reads/reads.h</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sequence_8h.html">nvbio/io/sequence/sequence.h</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="io_2fmindex_2fmindex_8h.html">nvbio/io/fmindex/fmindex.h</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
@@ -128,25 +128,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>bowtie2 {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>cuda {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">driver</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*                              output_name,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;           <span class="keyword">const</span> io::FMIndexData&amp;                   driver_data,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                 io::ReadDataStream&amp;                read_data_stream,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;           <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#a83457e651ed17b0c24836ee86dd6070f">driver</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*                              output_name,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;           <span class="keyword">const</span> io::FMIndexData&amp;                   driver_data,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;           <span class="keyword">const</span> <a class="code" href="group___reads_i_o.html#ga8f8e92bcfb3339a373e5f4ff479239e5">io::PairedEndPolicy</a>                pe_policy,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                 io::ReadDataStream&amp;                read_data_stream1,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                 io::ReadDataStream&amp;                read_data_stream2,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;           <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">// namespace cuda</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// namespace bowtie2</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// namespace nvbio</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#afad68455189e742b717ac8e7c2330e30">driver</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*                              output_name,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;           <span class="keyword">const</span> io::SequenceData&amp;                  reference_data,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;           <span class="keyword">const</span> io::FMIndexData&amp;                   driver_data,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                 io::SequenceDataStream&amp;            read_data_stream,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;           <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacenvbio_1_1bowtie2_1_1cuda.html#afad68455189e742b717ac8e7c2330e30">driver</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*                              output_name,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;           <span class="keyword">const</span> io::SequenceData&amp;                  reference_data,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;           <span class="keyword">const</span> io::FMIndexData&amp;                   driver_data,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;           <span class="keyword">const</span> <a class="code" href="group___reads_i_o.html#ga8f8e92bcfb3339a373e5f4ff479239e5">io::PairedEndPolicy</a>                pe_policy,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                 io::SequenceDataStream&amp;            read_data_stream1,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                 io::SequenceDataStream&amp;            read_data_stream2,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;           <span class="keyword">const</span> std::map&lt;std::string,std::string&gt;&amp; options);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// namespace cuda</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <span class="comment">// namespace bowtie2</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// namespace nvbio</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

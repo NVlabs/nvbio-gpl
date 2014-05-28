@@ -12,6 +12,9 @@ var searchData=
   ['distext',['DISTEXT',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaafca1908d584fa781bde4cf8905c3bcab',1,'inflate.h']]],
   ['dists',['DISTS',['../inftrees_8h.html#a0f33f5acf9079ff1f054fa235df2443bafd7fbb659c736b26e79316ef09a2a9a1',1,'inftrees.h']]],
   ['divisor',['divisor',['../structmgpu_1_1s_conflict_free_storage.html#a91378970723f5bc7c87e12d86123f33aae3b37c7ba2cc0c68bbdef88f76794f74',1,'mgpu::sConflictFreeStorage']]],
+  ['dna',['DNA',['../group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a6c8c7655bd0085241eed95780a3aa4c4',1,'nvbio']]],
+  ['dna_5fiupac',['DNA_IUPAC',['../group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a04dfa3dc4c10b40769e12ca575c84ef7',1,'nvbio']]],
+  ['dna_5fn',['DNA_N',['../group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a312b63ba76d209928476bcefde8f124d',1,'nvbio']]],
   ['done',['DONE',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749',1,'inflate.h']]],
-  ['duplicate',['DUPLICATE',['../struct_bam_tools_1_1_bam_alignment.html#a6b5deec610100dd0d7b3a0079fde36b6aa0e14f1a4f0311d18a637370dc78b061',1,'BamTools::BamAlignment::DUPLICATE()'],['../structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#ad078c04163b131a4a69c585a1bc69ca4abcc9774f287904eb5dfe1d472fe53cc1',1,'nvbio::io::DebugOutput::DbgInfo::DUPLICATE()'],['../structnvbio_1_1alndiff_1_1_alignment.html#ab1d6c15a31a71248bc4a21583c684b13aa499aca5ae4e247483d513c66a02c714',1,'nvbio::alndiff::Alignment::DUPLICATE()']]]
+  ['duplicate',['DUPLICATE',['../struct_bam_tools_1_1_bam_alignment.html#a6b5deec610100dd0d7b3a0079fde36b6aa0e14f1a4f0311d18a637370dc78b061',1,'BamTools::BamAlignment::DUPLICATE()'],['../structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#a07dd5375ed29ae335d6917fa2249e6afabcc9774f287904eb5dfe1d472fe53cc1',1,'nvbio::io::DebugOutput::DbgInfo::DUPLICATE()'],['../structnvbio_1_1alndiff_1_1_alignment.html#ab1d6c15a31a71248bc4a21583c684b13aa499aca5ae4e247483d513c66a02c714',1,'nvbio::alndiff::Alignment::DUPLICATE()']]]
 ];

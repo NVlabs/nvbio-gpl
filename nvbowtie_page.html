@@ -118,10 +118,10 @@ best-mapping, single-end reads</h2>
 <dl class="section user"><dt></dt><dd>This pipeline can be described by the following pseudo-code:</dd></dl>
 <div class="fragment"><div class="line">best-alignments = {}</div>
 <div class="line"></div>
-<div class="line">seed-mapping-queue[in] := <a class="code" href="group___primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">all</a> reads</div>
+<div class="line">seed-mapping-queue[in] := <a class="code" href="group___c_u_d_a_primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">all</a> reads</div>
 <div class="line"><span class="keywordflow">while</span> (seed-mapping-queue[in] not empty)</div>
 <div class="line">{</div>
-<div class="line">    (seed-mapping-queue[out], seed-deques) := <a class="code" href="group___mapping.html#ga1c1a5dc606aedfe249f958e15ac5791f">map</a>( seed-mapping-queue[in] );</div>
+<div class="line">    (seed-mapping-queue[out], seed-deques) := <a class="code" href="group___mapping.html#gaa3d729454ad2be69f07eda252e522033">map</a>( seed-mapping-queue[in] );</div>
 <div class="line"></div>
 <div class="line">    score( seed-mapping-queue[in], seed-deques, best-alignments );          <span class="comment">// find the best alignments for each read</span></div>
 <div class="line"></div>
@@ -158,10 +158,10 @@ best-mapping, paired-end reads</h2>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">for</span> (anchor in {mate1,mate2})</div>
 <div class="line">{</div>
-<div class="line">    seed-mapping-queue[in] := <a class="code" href="group___primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">all</a> reads</div>
+<div class="line">    seed-mapping-queue[in] := <a class="code" href="group___c_u_d_a_primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">all</a> reads</div>
 <div class="line">    <span class="keywordflow">while</span> (seed-mapping-queue[in] not empty)</div>
 <div class="line">    {</div>
-<div class="line">        (seed-mapping-queue[out], seed-deques) := <a class="code" href="group___mapping.html#ga1c1a5dc606aedfe249f958e15ac5791f">map</a>( seed-mapping-queue[in] );</div>
+<div class="line">        (seed-mapping-queue[out], seed-deques) := <a class="code" href="group___mapping.html#gaa3d729454ad2be69f07eda252e522033">map</a>( seed-mapping-queue[in] );</div>
 <div class="line"></div>
 <div class="line">        score( seed-mapping-queue[in], seed-deques, best-anchor-alignments, best-opposite-alignments );</div>
 <div class="line"></div>
@@ -241,7 +241,7 @@ Usage</h1>
 * </pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 11:56:17 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

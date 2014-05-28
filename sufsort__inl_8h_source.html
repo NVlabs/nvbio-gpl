@@ -671,7 +671,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            timer.<a class="code" href="structnvbio_1_1cuda_1_1_timer.html#a944fa35847e996ab681f96ecd6953cb0">start</a>();</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            <span class="comment">// and merge them in with the global buckets</span></div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;            thrust::transform(</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;            <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                bucketer.d_buckets.begin(),</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                bucketer.d_buckets.end(),</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                d_buckets.begin(),</div>
@@ -689,14 +689,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        thrust::host_vector&lt;uint64&gt; h_bucket_offsets( d_buckets.size() );</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        thrust::host_vector&lt;uint32&gt; h_subbuckets( d_buckets.size() );</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bucket_size = <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">thrust::reduce</a>(</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bucket_size = <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">thrust::reduce</a>(</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;            d_buckets.begin(),</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            d_buckets.end(),</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            0u,</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            thrust::maximum&lt;uint32&gt;() );</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="comment">// scan the bucket offsets so as to have global positions</span></div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( h_buckets.begin(), <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint32,uint64&gt;</a>() ),</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( h_buckets.end(),   <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint32,uint64&gt;</a>() ),</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            h_bucket_offsets.begin() );</div>
@@ -1129,7 +1129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

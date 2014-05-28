@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['parallel_20primitives',['Parallel Primitives',['../group___c_u_d_a_primitives.html',1,'']]],
   ['packed_20streams',['Packed Streams',['../group___packed_streams.html',1,'']]],
   ['packedstringloaders',['PackedStringLoaders',['../group___packed_string_loaders.html',1,'']]],
   ['ping_2dpong_20queues',['Ping-Pong Queues',['../group___ping_pong_queues_module.html',1,'']]],

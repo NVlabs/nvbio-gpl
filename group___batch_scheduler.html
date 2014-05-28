@@ -86,29 +86,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">Batch Schedulers<div class="ingroups"><a class="el" href="group___alignment.html">Alignment Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>A Batch Scheduler is a tag specifying the algorithm used to execute a batch of jobs in parallel. Three such algorithms are currently available: </p>
-<pre class="fragment">- ThreadParallelScheduler
-- StagedThreadParallelScheduler
-- WarpParallelScheduler</pre><table class="memberdecls">
+<p>A Batch Scheduler is a tag specifying the algorithm used to execute a batch of jobs in parallel. Four such algorithms are currently available: </p>
+<pre class="fragment">- HostThreadScheduler
+- DeviceThreadScheduler
+- DeviceStagedThreadScheduler
+- DeviceWarpScheduler</pre><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_thread_parallel_scheduler.html">nvbio::aln::ThreadParallelScheduler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_thread_scheduler.html">nvbio::aln::ThreadScheduler&lt; system_tag &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_staged_thread_parallel_scheduler.html">nvbio::aln::StagedThreadParallelScheduler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_device_staged_thread_scheduler.html">nvbio::aln::DeviceStagedThreadScheduler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_warp_parallel_scheduler.html">nvbio::aln::WarpParallelScheduler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1aln_1_1_device_warp_scheduler.html">nvbio::aln::DeviceWarpScheduler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga242018522250d1f54f01839d57b037bf"><td class="memItemLeft" align="right" valign="top">typedef ThreadScheduler&lt; host_tag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___batch_scheduler.html#ga242018522250d1f54f01839d57b037bf">nvbio::aln::HostThreadScheduler</a></td></tr>
+<tr class="separator:ga242018522250d1f54f01839d57b037bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cd79d95b552b152e3655b648e59256d"><td class="memItemLeft" align="right" valign="top">typedef ThreadScheduler<br class="typebreak"/>
+&lt; device_tag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___batch_scheduler.html#ga8cd79d95b552b152e3655b648e59256d">nvbio::aln::DeviceThreadScheduler</a></td></tr>
+<tr class="separator:ga8cd79d95b552b152e3655b648e59256d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ga8cd79d95b552b152e3655b648e59256d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ThreadScheduler&lt;device_tag&gt; <a class="el" href="group___batch_scheduler.html#ga8cd79d95b552b152e3655b648e59256d">nvbio::aln::DeviceThreadScheduler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Identify a staged thread-parallel batch execution algorithm </p>
+
+<p>Definition at line <a class="el" href="batched_8h_source.html#l00051">51</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga242018522250d1f54f01839d57b037bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ThreadScheduler&lt;host_tag&gt; <a class="el" href="group___batch_scheduler.html#ga242018522250d1f54f01839d57b037bf">nvbio::aln::HostThreadScheduler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Identify a thread-parallel batch execution algorithm </p>
+
+<p>Definition at line <a class="el" href="batched_8h_source.html#l00047">47</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:58 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

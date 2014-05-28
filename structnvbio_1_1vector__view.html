@@ -147,6 +147,12 @@ Public Types</h2></td></tr>
 <tr class="memitem:ae2dff1cac6204756618493db37f87c9e"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector__view.html#ae2dff1cac6204756618493db37f87c9e">iterator_category</a></td></tr>
 <tr class="separator:ae2dff1cac6204756618493db37f87c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343952236828ca79d588ce4b5ff24ccd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; Iterator, <br class="typebreak"/>
+IndexType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector__view.html#a343952236828ca79d588ce4b5ff24ccd">plain_view_type</a></td></tr>
+<tr class="separator:a343952236828ca79d588ce4b5ff24ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf961d52ecd511bcf55475ff3d77bfba"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt; Iterator, <br class="typebreak"/>
+IndexType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1vector__view.html#adf961d52ecd511bcf55475ff3d77bfba">const_plain_view_type</a></td></tr>
+<tr class="separator:adf961d52ecd511bcf55475ff3d77bfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
@@ -244,6 +250,22 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="adf961d52ecd511bcf55475ff3d77bfba"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt;Iterator,IndexType&gt; <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a>&lt; Iterator, IndexType &gt;::<a class="el" href="structnvbio_1_1vector__view.html#adf961d52ecd511bcf55475ff3d77bfba">const_plain_view_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00093">93</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af04b5bda160869a6fc694210891d1bdc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -305,6 +327,22 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="vector__view_8h_source.html#l00090">90</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a343952236828ca79d588ce4b5ff24ccd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1vector__view.html">vector_view</a>&lt;Iterator,IndexType&gt; <a class="el" href="structnvbio_1_1vector__view.html">nvbio::vector_view</a>&lt; Iterator, IndexType &gt;::<a class="el" href="structnvbio_1_1vector__view.html#a343952236828ca79d588ce4b5ff24ccd">plain_view_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00092">92</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +435,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00095">95</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00098">98</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +474,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>constructor </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00100">100</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00103">103</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +504,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return reference to back </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00155">155</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00158">158</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +533,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return reference to back </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00160">160</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00163">163</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -523,7 +561,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return the base iterator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00165">165</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00168">168</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +590,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return begin iterator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00170">170</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00173">173</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +619,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return begin iterator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00180">180</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00183">183</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -610,7 +648,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return true iff size is null </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00120">120</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00123">123</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -639,7 +677,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return end iterator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00175">175</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00178">178</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -668,7 +706,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return end iterator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00185">185</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00188">188</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +735,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return reference to front </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00145">145</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00148">148</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +764,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return reference to front </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00150">150</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00153">153</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -754,7 +792,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return vector size </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00115">115</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00118">118</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +820,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>automatic conversion to the basic iterator type </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00190">190</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00193">193</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -810,7 +848,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>dereference operator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00125">125</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00128">128</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +876,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>dereference operator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00130">130</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00133">133</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -867,7 +905,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>const indexing operator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00135">135</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00138">138</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +934,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>indexing operator </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00140">140</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00143">143</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +962,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>pop back </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00200">200</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00203">203</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -953,7 +991,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>push back </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00195">195</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00198">198</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -982,7 +1020,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>resize the vector </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00105">105</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00108">108</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1049,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><div class="memdoc">
 <p>return vector size </p>
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00110">110</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00113">113</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1066,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00202">202</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00205">205</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1082,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00203">203</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
+<p>Definition at line <a class="el" href="vector__view_8h_source.html#l00206">206</a> of file <a class="el" href="vector__view_8h_source.html">vector_view.h</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1092,7 @@ template&lt;typename Iterator, typename IndexType = uint32&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:50 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:21 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

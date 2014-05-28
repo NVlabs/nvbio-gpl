@@ -1009,7 +1009,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;        <span class="comment">// building the map: (global suffix index -&gt; string index)</span></div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#ac9734bd843a3fafc4d7cbe8064af616e">alloc_storage</a>( <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e" title="cumulative string lengths ">cum_lengths</a>, n );</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;        <a class="code" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;        <a class="code" href="group___c_u_d_a_primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;            n,</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( thrust::make_counting_iterator(0u), <a class="code" href="structnvbio_1_1priv_1_1length__functor.html">length_functor&lt;string_set_type&gt;</a>( string_set, empty_suffixes ) ),</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#ad547b37f1bc2cd072f34a2d01677826e" title="cumulative string lengths ">cum_lengths</a>.begin(),</div>
@@ -1051,7 +1051,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    {</div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">std::iterator_traits&lt;radix_iterator&gt;::value_type</a> word_type;</div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;            indices,</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;            indices + <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#a22e62e036c10a7290a6a3c182ec47607" title="number of suffixes in the string set ">n_suffixes</a>,</div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;            radices,</div>
@@ -1067,7 +1067,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;        <span class="keyword">const</span> string_set_type&amp;  string_set, <span class="keyword">const</span> <span class="keywordtype">bool</span> empty_suffixes = <span class="keyword">true</span>)</div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    {</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        <span class="comment">// compute the maximum string length in the set</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;            <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( string_set.size() ),</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>(</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                thrust::make_counting_iterator&lt;uint32&gt;(0u),</div>
@@ -1085,7 +1085,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;        <span class="comment">// TODO: this function is conservative, in the sense it returns the maximum *string* length;</span></div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;        <span class="comment">// however, each suffix might be shorter than the string it belongs to.</span></div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;        <span class="keywordflow">return</span> indices_end &lt;= indices_begin ? 0u :</div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;            <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;            <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;                indices_end - indices_begin,</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;                <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>(</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                    thrust::make_permutation_iterator( <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#aff0dc40fa84eba2dcc36736e7ed7a573">string_ids</a>.begin(), indices_begin ),</div>
@@ -1259,7 +1259,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1priv_1_1in__range__functor.html">priv::in_range_functor</a> in_range = <a class="code" href="structnvbio_1_1priv_1_1in__range__functor.html">priv::in_range_functor</a>( bucket_begin, bucket_end );</div>
 <div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;</div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;        <span class="comment">// retain only suffixes whose radix is between the specified buckets</span></div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_collected = <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_collected = <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;            n_suffixes,</div>
 <div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;            thrust::make_zip_iterator( thrust::make_tuple( thrust::make_counting_iterator&lt;uint32&gt;(0u), <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#aa87b6839779d8cd45814471d317b2ad4">d_radices</a>.begin() ) ),</div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#aa87b6839779d8cd45814471d317b2ad4">d_radices</a>.begin(), in_range ),</div>
@@ -1303,7 +1303,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;                <a class="code" href="namespacenvbio.html#ac2f1d1bf3a825fe58a10fea79af610c2">nvbio::device_view</a>( <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a39890743fe834076087e8aa0b9c85e0b">suffixes</a>.string_ids ),</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;                string_offset );</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a114ee091fdfac31c90cf0ee9e06b01d8">d_indices</a>.begin() + n_suffixes,</div>
 <div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a114ee091fdfac31c90cf0ee9e06b01d8">d_indices</a>.begin() + n_suffixes + n_collected,</div>
 <div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1_set_suffix_bucketer.html#a2b71754fa4edacef149dbe1a16ba8d5e">d_output</a>.begin() + buffer_stride,</div>
@@ -1490,7 +1490,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;{</div>
 <div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">std::iterator_traits&lt;radix_iterator&gt;::value_type</a> word_type;</div>
 <div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;</div>
-<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;    thrust::transform(</div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;    <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;        indices_begin,</div>
 <div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;        indices_end,</div>
 <div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;        radices,</div>
@@ -1613,7 +1613,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1priv_1_1in__range__functor.html">priv::in_range_functor</a> in_range = <a class="code" href="structnvbio_1_1priv_1_1in__range__functor.html">priv::in_range_functor</a>( bucket_begin, bucket_end );</div>
 <div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;</div>
 <div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;        <span class="comment">// retain only suffixes whose radix is between the specified buckets</span></div>
-<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_collected = <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_collected = <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;            n_suffixes,</div>
 <div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;            thrust::make_zip_iterator( thrust::make_tuple( suffixes, <a class="code" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#aa91d19c8983ce5e0f97656503026ed80">d_radices</a>.begin() ) ),</div>
 <div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( <a class="code" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#aa91d19c8983ce5e0f97656503026ed80">d_radices</a>.begin(), in_range ),</div>
@@ -1813,7 +1813,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;    }</div>
 <div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;</div>
 <div class="line"><a name="l01902"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1_host_string_set_radices.html#ace6c097e205ac7e2af54983b7f98c3ab"> 1902</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1_host_string_set_radices.html#ace6c097e205ac7e2af54983b7f98c3ab">dollar_bwt</a>(</div>
-<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> begin,</div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>,</div>
 <div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> end,</div>
 <div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;        <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>* h_bwt)</div>
 <div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;    {</div>
@@ -1989,16 +1989,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;    }</div>
 <div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;</div>
 <div class="line"><a name="l02101"></a><span class="lineno"><a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abee3ec077bf5acac90f9ad490c61cdc1"> 2101</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abee3ec077bf5acac90f9ad490c61cdc1">dollar_bwt</a>(</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> begin,</div>
+<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>,</div>
 <div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> end,</div>
 <div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;        <a class="code" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>*       h_bwt)</div>
 <div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;    {</div>
-<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> n_strings = end - begin;</div>
+<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> n_strings = end - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>;</div>
 <div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;</div>
 <div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#ac9734bd843a3fafc4d7cbe8064af616e">alloc_storage</a>( <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#a451fd1b1e4d6b28bc6b81763ee676222">d_symbols</a>, n_strings );</div>
 <div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;</div>
 <div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;        <span class="comment">// fetch the BWT symbols for the given strings</span></div>
-<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(begin),</div>
 <div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(end),</div>
 <div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#a451fd1b1e4d6b28bc6b81763ee676222">d_symbols</a>.begin(),</div>
@@ -2022,7 +2022,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;            <a class="code" href="namespacenvbio_1_1priv.html#ac9734bd843a3fafc4d7cbe8064af616e">alloc_storage</a>( <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#a451fd1b1e4d6b28bc6b81763ee676222">d_symbols</a>, n_suffixes );</div>
 <div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;</div>
 <div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;            <span class="comment">// fetch the BWT symbols for this block of suffixes</span></div>
-<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;            thrust::transform(</div>
+<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;            <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;                <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abaef357886da1b7bb42f7171d9620cc9">d_suffixes</a>,</div>
 <div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;                <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abaef357886da1b7bb42f7171d9620cc9">d_suffixes</a> + n_suffixes,</div>
 <div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;                <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#a451fd1b1e4d6b28bc6b81763ee676222">d_symbols</a>.begin(),</div>
@@ -2038,7 +2038,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;        {</div>
 <div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;            <span class="comment">// fetch the BWT symbols for this block of suffixes</span></div>
-<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;            thrust::transform(</div>
+<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;            <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;                <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abaef357886da1b7bb42f7171d9620cc9">d_suffixes</a>,</div>
 <div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;                <a class="code" href="structnvbio_1_1priv_1_1_device_string_set_radices.html#abaef357886da1b7bb42f7171d9620cc9">d_suffixes</a> + n_suffixes,</div>
 <div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;                thrust::device_ptr&lt;uint8&gt;( d_bwt ),</div>
@@ -2226,7 +2226,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structnvbio_1_1_packed_stream.html#ad1c591036f006857633ad31729461f2f">PackedStream&lt;storage_type,uint8,SYMBOL_SIZE,BIG_ENDIAN,index_type&gt;::storage_type</a> word_type;</div>
 <div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> SYMBOLS_PER_WORD = (8u*<span class="keyword">sizeof</span>(word_type))/SYMBOL_SIZE;</div>
 <div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;</div>
-<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_ranges = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="group___primitives.html#gaee8cb8a5a27204b087e9c3d332716e99">thrust::reduce_by_key</a>(</div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_ranges = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="group___c_u_d_a_primitives.html#gaee8cb8a5a27204b087e9c3d332716e99">thrust::reduce_by_key</a>(</div>
 <div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots,     <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream.html#ab454ca20cacdb1ef21cff7c6d896f38c">index</a>(), SYMBOLS_PER_WORD ) ),</div>
 <div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( slots + n, <a class="code" href="structnvbio_1_1priv_1_1add__divide__functor.html">add_divide_functor</a>( output.<a class="code" href="structnvbio_1_1_packed_stream.html#ab454ca20cacdb1ef21cff7c6d896f38c">index</a>(), SYMBOLS_PER_WORD ) ),</div>
 <div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(1u),</div>
@@ -2283,7 +2283,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

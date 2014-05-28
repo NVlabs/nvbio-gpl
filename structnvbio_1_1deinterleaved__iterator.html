@@ -119,11 +119,13 @@ struct nvbio::deinterleaved_iterator&lt; STRIDE, WHICH, BaseIterator &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a47408c62d5864e17c54c353a91d489e9"><td class="memItemLeft" align="right" valign="top">typedef BaseIterator::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a></td></tr>
-<tr class="separator:a47408c62d5864e17c54c353a91d489e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98270c463e2582637393a01424212593"><td class="memItemLeft" align="right" valign="top">typedef BaseIterator::reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a></td></tr>
-<tr class="separator:a98270c463e2582637393a01424212593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab422f046ecb3d1a4421c53a4d16f91e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#aab422f046ecb3d1a4421c53a4d16f91e">pointer</a></td></tr>
+<tr class="memitem:a76b2f336236c7ccf8969e7be16c76065"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
+&lt; BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a></td></tr>
+<tr class="separator:a76b2f336236c7ccf8969e7be16c76065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57955ba535b984f5ce0c2e3a471bd42c"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits<br class="typebreak"/>
+&lt; BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a></td></tr>
+<tr class="separator:a57955ba535b984f5ce0c2e3a471bd42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab422f046ecb3d1a4421c53a4d16f91e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#aab422f046ecb3d1a4421c53a4d16f91e">pointer</a></td></tr>
 <tr class="separator:aab422f046ecb3d1a4421c53a4d16f91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6dae6e3cc3997e58c284a2b37d80791"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___basic.html#ga938b5b5bd985a42f95879b4616c3ea8a">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#ac6dae6e3cc3997e58c284a2b37d80791">difference_type</a></td></tr>
 <tr class="separator:ac6dae6e3cc3997e58c284a2b37d80791"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,15 +152,15 @@ Public Methods</h2></td></tr>
 <tr class="separator:a1ed9de80ac7fcf130c24a406cfc8a87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b0568ed64999e8f77c5b9037ac1cca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#ad2b0568ed64999e8f77c5b9037ac1cca">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#ad2b0568ed64999e8f77c5b9037ac1cca">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i) <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:ad2b0568ed64999e8f77c5b9037ac1cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0307e1d7ddce416b359bf2419ba35ce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a0307e1d7ddce416b359bf2419ba35ce7">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i)</td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a0307e1d7ddce416b359bf2419ba35ce7">operator[]</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> i)</td></tr>
 <tr class="separator:a0307e1d7ddce416b359bf2419ba35ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff6b263907ba854dd9358378fef6b0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a8ff6b263907ba854dd9358378fef6b0f">operator*</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a8ff6b263907ba854dd9358378fef6b0f">operator*</a> () <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> </td></tr>
 <tr class="separator:a8ff6b263907ba854dd9358378fef6b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430738f6fa4ad4485dfd0bd431771e5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <br class="typebreak"/>
 <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
@@ -256,7 +258,7 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
 template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a>* <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#aab422f046ecb3d1a4421c53a4d16f91e">pointer</a></td>
+          <td class="memname">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a>* <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#aab422f046ecb3d1a4421c53a4d16f91e">pointer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -265,14 +267,14 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a98270c463e2582637393a01424212593"></a>
+<a class="anchor" id="a57955ba535b984f5ce0c2e3a471bd42c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef BaseIterator::reference <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a></td>
+          <td class="memname">typedef std::iterator_traits&lt;BaseIterator&gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -297,14 +299,14 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a47408c62d5864e17c54c353a91d489e9"></a>
+<a class="anchor" id="a76b2f336236c7ccf8969e7be16c76065"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef BaseIterator::value_type <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a></td>
+          <td class="memname">typedef std::iterator_traits&lt;BaseIterator&gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::<a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -411,7 +413,7 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator* </td>
+          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator* </td>
           <td>(</td>
           <td class="paramname">)</td><td></td>
           <td> const</td>
@@ -727,7 +729,7 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a47408c62d5864e17c54c353a91d489e9">value_type</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a76b2f336236c7ccf8969e7be16c76065">value_type</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
@@ -756,7 +758,7 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a98270c463e2582637393a01424212593">reference</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="types_8h.html#a713e200e8e7b619de08305ff6ea5264c">NVBIO_HOST_DEVICE_TEMPLATE</a> <a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html#a57955ba535b984f5ce0c2e3a471bd42c">reference</a> <a class="el" href="structnvbio_1_1deinterleaved__iterator.html">nvbio::deinterleaved_iterator</a>&lt; STRIDE, WHICH, BaseIterator &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
           <td class="paramname"><em>i</em>)</td><td></td>
@@ -798,7 +800,7 @@ template&lt;uint32 STRIDE, uint32 WHICH, typename BaseIterator &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:43 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:11 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['occ_5fiterator',['occ_iterator',['../structnvbio_1_1rank__dictionary.html#abb27a6c7422ae6c002fbcba943c52859',1,'nvbio::rank_dictionary']]],
-  ['occ_5ftype',['occ_type',['../structnvbio_1_1io_1_1_f_m_index_data.html#ac6887224ade29e53003c17ad17c6a39e',1,'nvbio::io::FMIndexData::occ_type()'],['../structnvbio_1_1io_1_1_f_m_index_data_device.html#a96fe865dd872e7d2e33cb2122d728d52',1,'nvbio::io::FMIndexDataDevice::occ_type()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a53a677daa1bf04c37d3f933f58858e5c',1,'nvbio::bowtie2::cuda::FMIndexDef::occ_type()']]],
+  ['occ_5ftype',['occ_type',['../structnvbio_1_1io_1_1_f_m_index_data.html#a3a429895caf170b80ec9a6b52963f8dc',1,'nvbio::io::FMIndexData::occ_type()'],['../structnvbio_1_1io_1_1_f_m_index_data_device.html#a96fe865dd872e7d2e33cb2122d728d52',1,'nvbio::io::FMIndexDataDevice::occ_type()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a53a677daa1bf04c37d3f933f58858e5c',1,'nvbio::bowtie2::cuda::FMIndexDef::occ_type()']]],
   ['of',['OF',['../zlib_8h.html#a67a40268fa6e70f6368c37c03eacf78d',1,'OF():&#160;zlib.h'],['../deflate_8c.html#a4f4b12a22459d787ffa81cb547e69882',1,'OF():&#160;deflate.c'],['../1_82_87_2zlib_8h.html#a8614d49a5dd53697f4689073c0dbecbb',1,'OF():&#160;zlib.h']]],
   ['offset_5fiterator',['offset_iterator',['../structnvbio_1_1_concatenated_string_set.html#a8017db2ee1b328077a03ae3b1a58e1dc',1,'nvbio::ConcatenatedStringSet']]],
   ['output_5fdevice_5fiterator_5ftag',['output_device_iterator_tag',['../namespacenvbio.html#a6d6037e5458504798a8fd0182701bcd7',1,'nvbio']]],

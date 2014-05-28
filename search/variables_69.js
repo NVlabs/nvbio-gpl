@@ -16,7 +16,7 @@ var searchData=
   ['indices',['indices',['../structnvbio_1_1cuda_1_1_delay_list.html#a236db74ce4b50edbf605ec522aab1dd5',1,'nvbio::cuda::DelayList']]],
   ['inf_5fscore',['inf_score',['../structnvbio_1_1bowtie2_1_1cuda_1_1_edit_distance_scoring_scheme.html#a7b91d7665b889156b02613a03718ad32',1,'nvbio::bowtie2::cuda::EditDistanceScoringScheme::inf_score()'],['../structnvbio_1_1bowtie2_1_1cuda_1_1_smith_waterman_scoring_scheme.html#a8cde858cf74709feab548eecd39e55df',1,'nvbio::bowtie2::cuda::SmithWatermanScoringScheme::inf_score()']]],
   ['inflate_5fcopyright',['inflate_copyright',['../inftrees_8c.html#a01f427c9f5e8158ec52760a1c896e8be',1,'inftrees.c']]],
-  ['info',['info',['../structnvbio_1_1_time_series.html#a09634b45658085d94dc22917a21586b8',1,'nvbio::TimeSeries::info()'],['../structnvbio_1_1io_1_1_b_n_t.html#a598805fd5e8c4322835892428c86d3c1',1,'nvbio::io::BNT::info()']]],
+  ['info',['info',['../structnvbio_1_1_time_series.html#a09634b45658085d94dc22917a21586b8',1,'nvbio::TimeSeries']]],
   ['ins',['ins',['../structnvbio_1_1io_1_1_debug_output_1_1_dbg_info.html#a8cef707dfbe5a9aab2bbbdeb263eab9f',1,'nvbio::io::DebugOutput::DbgInfo::ins()'],['../structnvbio_1_1alndiff_1_1_alignment.html#af21caf82aa1e8140e628cbb7bc26c65c',1,'nvbio::alndiff::Alignment::ins()'],['../structnvbio_1_1alndiff_1_1_debug_alignment_stream_1_1_info.html#a10f7ef69c057a95cf71cbae009b8ead7',1,'nvbio::alndiff::DebugAlignmentStream::Info::ins()']]],
   ['ins_5fh',['ins_h',['../structinternal__state.html#a8cf437698f428195122d3c530929a80c',1,'internal_state']]],
   ['insert',['insert',['../structinternal__state.html#a315b7281f725e5729fbbafada48fc70a',1,'internal_state']]],

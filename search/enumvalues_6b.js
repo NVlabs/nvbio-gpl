@@ -13,6 +13,7 @@ var searchData=
   ['kqgram',['kQGram',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0adf0c9a777bbe96e5b300d40f5a3c6af3',1,'nvbio-test.cpp']]],
   ['krank',['kRank',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a99ff2ebeda750c0f8e9e4734ffb8968e',1,'nvbio-test.cpp']]],
   ['kscan',['kScan',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a7de4f20bee8fec53b0792530a2280b58',1,'nvbio-test.cpp']]],
+  ['ksequence',['kSequence',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0ad0986068c72bdc7272c2be5258c1ab09',1,'nvbio-test.cpp']]],
   ['ksingleend',['kSingleEnd',['../group___defs.html#gga10cf8b86a671ff4e4061aaa0d086cdf5af829865e7d0193203eff606e4ae06bdc',1,'nvbio::bowtie2::cuda']]],
   ['kstringset',['kStringSet',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a3e03d4636bb5044ae4b8463c1629b4d3',1,'nvbio-test.cpp']]],
   ['ksumtree',['kSumTree',['../nvbio-test_8cpp.html#a44111c317cc6bb28715701cc508210a0a82e89c9a5a0ab2fbbf2da287fa1324aa',1,'nvbio-test.cpp']]],

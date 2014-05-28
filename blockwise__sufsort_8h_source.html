@@ -248,7 +248,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        bucketer.<a class="code" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#aa08518dbb1292106a0f5d07a58dd651f">count</a>( chunk_size, suffixes + chunk_begin, string_len, <span class="keywordtype">string</span> );</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// and merge them in with the global buckets</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            bucketer.<a class="code" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#ad0c0213c49212b5d70f36bd9bd4bb44f">d_buckets</a>.begin(),</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            bucketer.<a class="code" href="structnvbio_1_1priv_1_1_string_suffix_bucketer.html#ad0c0213c49212b5d70f36bd9bd4bb44f">d_buckets</a>.end(),</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            d_buckets.begin(),</div>
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    thrust::host_vector&lt;uint32&gt; h_bucket_offsets( d_buckets.size() );</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    thrust::host_vector&lt;uint32&gt; h_subbuckets( d_buckets.size() );</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="types_8h.html#a629635675171b07305d7d44a8c51deff">NVBIO_VAR_UNUSED</a> <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bucket_size = <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">thrust::reduce</a>(</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="types_8h.html#a629635675171b07305d7d44a8c51deff">NVBIO_VAR_UNUSED</a> <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> max_bucket_size = <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">thrust::reduce</a>(</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        d_buckets.begin(),</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        d_buckets.end(),</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        0u,</div>
@@ -275,7 +275,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// scan the bucket offsets so as to have global positions</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        h_buckets.begin(),</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        h_buckets.end(),</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        h_bucket_offsets.begin() );</div>
@@ -559,7 +559,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keyword">const</span> <a class="code" href="structnvbio_1_1priv_1_1_d_c_s__predicate.html">priv::DCS_predicate</a> in_dcs( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#ab71f65239fb53723ca33f8911ef88e2c" title="difference cover period ">Q</a>, <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( dcs.<a class="code" href="structnvbio_1_1_d_c_s.html#acb5ff4d87ba814baec2bdd591b214e3b" title="difference cover bitmask ">d_bitmask</a> ) );</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        sample_size += <a class="code" href="group___primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">cuda::copy_if</a>(</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        sample_size += <a class="code" href="group___c_u_d_a_primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">cuda::copy_if</a>(</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( block_end - block_begin ),</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            thrust::make_counting_iterator&lt;uint32&gt;(0u) + block_begin,</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            d_sample.begin() + sample_size,</div>
@@ -587,7 +587,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

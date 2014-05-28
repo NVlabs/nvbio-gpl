@@ -216,7 +216,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (m_buffer_pos &gt;= m_buffer_size)</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        m_buffer_size = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="gzread_8c.html#a2d0d971b446b67bbc4261fa5fef622bd">gzread</a>( m_file, &amp;m_buffer[0], m_buffer.size() ) );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        m_buffer_size = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="gzread_8c.html#a2d0d971b446b67bbc4261fa5fef622bd">gzread</a>( m_file, &amp;m_buffer[0], (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)m_buffer.size() ) );</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        m_buffer_pos  = 0;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> (m_buffer_pos &lt; m_buffer_size) ? m_buffer[ m_buffer_pos++ ] : 255u;</div>
@@ -322,7 +322,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (m_buffer_pos &gt;= m_buffer_size)</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        m_buffer_size = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="gzread_8c.html#a2d0d971b446b67bbc4261fa5fef622bd">gzread</a>( m_file, &amp;m_buffer[0], m_buffer.size() ) );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        m_buffer_size = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="gzread_8c.html#a2d0d971b446b67bbc4261fa5fef622bd">gzread</a>( m_file, &amp;m_buffer[0], (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)m_buffer.size() ) );</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        m_buffer_pos  = 0;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> (m_buffer_pos &lt; m_buffer_size) ? m_buffer[ m_buffer_pos++ ] : 255u;</div>
@@ -332,7 +332,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:23 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:42 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

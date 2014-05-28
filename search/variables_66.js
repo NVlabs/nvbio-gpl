@@ -18,7 +18,7 @@ var searchData=
   ['flg_5ffextra',['FLG_FEXTRA',['../namespace_bam_tools.html#a2e849209f3ae7cee3f4bced465867882',1,'BamTools']]],
   ['fmi',['fmi',['../structnvbio_1_1bowtie2_1_1cuda_1_1_base_scoring_pipeline_state.html#ab44e4dc41a82ea3aee67e43dd68b9e36',1,'nvbio::bowtie2::cuda::BaseScoringPipelineState']]],
   ['format',['format',['../structmgpu_1_1_format_op_printf.html#af6dbc26b4c99b5ca4073c38d456bebcc',1,'mgpu::FormatOpPrintf::format()'],['../structmgpu_1_1_format_op_mask_bit.html#a7cb01293713332900d1372c57a7de891',1,'mgpu::FormatOpMaskBit::format()'],['../structmgpu_1_1_format_op_mark_array.html#a4884eedc43a83c9bda6e40f1e23de297',1,'mgpu::FormatOpMarkArray::format()']]],
-  ['forward',['FORWARD',['../structnvbio_1_1io_1_1_f_m_index_data.html#ad5d833d3142569e7acc27aec066223fd',1,'nvbio::io::FMIndexData::FORWARD()'],['../structnvbio_1_1io_1_1_f_m_index_data_device.html#a2d49e768093a570357bc656556429384',1,'nvbio::io::FMIndexDataDevice::FORWARD()']]],
+  ['forward',['FORWARD',['../structnvbio_1_1io_1_1_f_m_index_data_core.html#a00f9c847b2fbf0fb9ec41ed3476e707d',1,'nvbio::io::FMIndexDataCore::FORWARD()'],['../structnvbio_1_1io_1_1_f_m_index_data_device.html#a2d49e768093a570357bc656556429384',1,'nvbio::io::FMIndexDataDevice::FORWARD()']]],
   ['freq',['freq',['../structct__data__s.html#a67cd3c3267ba768c4494b36d5929c4bf',1,'ct_data_s']]],
   ['func',['func',['../structconfig__s.html#aea5a0fe31d694079966523a49d60174b',1,'config_s']]]
 ];

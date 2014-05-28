@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['range_5fsize',['range_size',['../structnvbio_1_1fmindex_1_1range__size.html',1,'nvbio::fmindex']]],
   ['range_5fsize',['range_size',['../structnvbio_1_1mem_1_1range__size.html',1,'nvbio::mem']]],
   ['range_5fsize',['range_size',['../structnvbio_1_1qgram_1_1range__size.html',1,'nvbio::qgram']]],
+  ['range_5fsize',['range_size',['../structnvbio_1_1fmindex_1_1range__size.html',1,'nvbio::fmindex']]],
   ['rank_5fdictionary',['rank_dictionary',['../structnvbio_1_1rank__dictionary.html',1,'nvbio']]],
   ['rank_5ffunctor',['rank_functor',['../structnvbio_1_1fmindex_1_1rank__functor.html',1,'nvbio::fmindex']]],
   ['rank_5fspan_5fsize',['rank_span_size',['../structnvbio_1_1mem_1_1rank__span__size.html',1,'nvbio::mem']]],
@@ -10,6 +10,7 @@ var searchData=
   ['rank_5fword_5ftraits',['rank_word_traits',['../structnvbio_1_1rank__word__traits.html',1,'nvbio']]],
   ['rank_5fword_5ftraits_3c_20uint32_20_3e',['rank_word_traits&lt; uint32 &gt;',['../structnvbio_1_1rank__word__traits_3_01uint32_01_4.html',1,'nvbio']]],
   ['rank_5fword_5ftraits_3c_20uint64_20_3e',['rank_word_traits&lt; uint64 &gt;',['../structnvbio_1_1rank__word__traits_3_01uint64_01_4.html',1,'nvbio']]],
+  ['read_5finfixes',['read_infixes',['../structread__infixes.html',1,'']]],
   ['read_5fstring',['read_string',['../structnvbio_1_1io_1_1read__string.html',1,'nvbio::io']]],
   ['readdata',['ReadData',['../structnvbio_1_1io_1_1_read_data.html',1,'nvbio::io']]],
   ['readdatadevice',['ReadDataDevice',['../structnvbio_1_1io_1_1_read_data_device.html',1,'nvbio::io']]],
@@ -31,7 +32,7 @@ var searchData=
   ['readhitsreference',['ReadHitsReference',['../structnvbio_1_1bowtie2_1_1cuda_1_1_read_hits_reference.html',1,'nvbio::bowtie2::cuda']]],
   ['readloader',['ReadLoader',['../structnvbio_1_1_read_loader.html',1,'nvbio']]],
   ['readloader_3c_20read_5fbatch_5ftype_2c_20lmem_5fcache_5ftype_20_3e',['ReadLoader&lt; read_batch_type, lmem_cache_type &gt;',['../structnvbio_1_1_read_loader.html',1,'nvbio']]],
-  ['readloader_3c_20read_5fview_5ftype_2c_20cache_5ftype_20_3e',['ReadLoader&lt; read_view_type, cache_type &gt;',['../structnvbio_1_1_read_loader.html',1,'nvbio']]],
+  ['readsdef',['ReadsDef',['../structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html',1,'nvbio::bowtie2::cuda']]],
   ['readstream',['ReadStream',['../structnvbio_1_1_read_stream.html',1,'nvbio']]],
   ['readstreamqualities',['ReadStreamQualities',['../structnvbio_1_1_read_stream_qualities.html',1,'nvbio']]],
   ['reducebestapproxcontext',['ReduceBestApproxContext',['../structnvbio_1_1bowtie2_1_1cuda_1_1_reduce_best_approx_context.html',1,'nvbio::bowtie2::cuda']]],

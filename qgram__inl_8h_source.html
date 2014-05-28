@@ -151,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    thrust::device_vector&lt;uint32&gt;     d_temp_index( string_len );</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// build the list of q-grams</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    thrust::transform(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0u),</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0u) + string_len,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        d_all_qgrams.begin(),</div>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// copy only the unique q-grams and count them</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    thrust::device_vector&lt;uint32&gt; d_counts( string_len + 1u );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> = <a class="code" href="group___primitives.html#ga67af151a66d862a84a34ca6aee8db24c">cuda::runlength_encode</a>(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> = <a class="code" href="group___c_u_d_a_primitives.html#ga67af151a66d862a84a34ca6aee8db24c">cuda::runlength_encode</a>(</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        string_len,</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        key_buffers.d_buffers[ key_buffers.selector ],</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#aeeb6ffe7b5a5894258c724938f87aa6d" title="the sorted list of unique q-grams ">qgrams</a>.begin(),</div>
@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#af4d6aac3a9a7558809515bf98a984d67" title="slots[i] stores the first occurrence of q-grams[i] in index ">slots</a>.resize( <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> + 1u );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// scan the counts to get the slots</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> + 1u,</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        d_counts.begin(),</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#af4d6aac3a9a7558809515bf98a984d67" title="slots[i] stores the first occurrence of q-grams[i] in index ">slots</a>.begin(),</div>
@@ -308,7 +308,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    thrust::device_vector&lt;uint2&gt;      d_temp_index( <a class="code" href="structnvbio_1_1_q_gram_index_core.html#acbd38740e8b8632232e029851b9b69e9" title="the number of q-grams in the original string ">n_qgrams</a> );</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">// build the list of q-grams</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    thrust::transform(</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a3a44a978db8a96b04b8993bd658fc513" title="the list of occurrences of all (partially-sorted) q-grams in the original string ">index</a>.begin(),</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a3a44a978db8a96b04b8993bd658fc513" title="the list of occurrences of all (partially-sorted) q-grams in the original string ">index</a>.begin() + <a class="code" href="structnvbio_1_1_q_gram_index_core.html#acbd38740e8b8632232e029851b9b69e9" title="the number of q-grams in the original string ">n_qgrams</a>,</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        d_all_qgrams.begin(),</div>
@@ -347,7 +347,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// copy only the unique q-grams and count them</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    thrust::device_vector&lt;uint32&gt; d_counts( <a class="code" href="structnvbio_1_1_q_gram_index_core.html#acbd38740e8b8632232e029851b9b69e9" title="the number of q-grams in the original string ">n_qgrams</a> + 1u );</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> = <a class="code" href="group___primitives.html#ga67af151a66d862a84a34ca6aee8db24c">cuda::runlength_encode</a>(</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> = <a class="code" href="group___c_u_d_a_primitives.html#ga67af151a66d862a84a34ca6aee8db24c">cuda::runlength_encode</a>(</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#acbd38740e8b8632232e029851b9b69e9" title="the number of q-grams in the original string ">n_qgrams</a>,</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        key_buffers.d_buffers[ key_buffers.selector ],</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#aeeb6ffe7b5a5894258c724938f87aa6d" title="the sorted list of unique q-grams ">qgrams</a>.begin(),</div>
@@ -358,7 +358,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="structnvbio_1_1_q_gram_index_core.html#af4d6aac3a9a7558809515bf98a984d67" title="slots[i] stores the first occurrence of q-grams[i] in index ">slots</a>.resize( <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> + 1u );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// scan the counts to get the slots</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#a8b85cf210dec47dc9e9808816ec83960" title="the number of unique q-grams in the original string ">n_unique_qgrams</a> + 1u,</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        d_counts.begin(),</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="structnvbio_1_1_q_gram_index_core.html#af4d6aac3a9a7558809515bf98a984d67" title="slots[i] stores the first occurrence of q-grams[i] in index ">slots</a>.begin(),</div>
@@ -516,7 +516,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">const</span> index_iterator        indices,</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;          qgram_iterator        qgrams)</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;{</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    thrust::transform(</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        indices,</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        indices + n_qgrams,</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        qgrams,</div>
@@ -545,7 +545,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keyword">const</span> index_iterator        indices,</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;          qgram_iterator        qgrams)</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;{</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    thrust::transform(</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        indices,</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        indices + n_qgrams,</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        qgrams,</div>
@@ -556,7 +556,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:45 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

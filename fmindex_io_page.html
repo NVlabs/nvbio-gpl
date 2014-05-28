@@ -93,24 +93,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">FM-Index I/O </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This module contains a series of classes to load FM-indices from disk into:</p>
-<ul>
-<li>RAM</li>
-<li>mapped memory</li>
-<li>CUDA device memory</li>
+<div class="textblock"><dl class="section user"><dt></dt><dd>This module contains a series of classes to load FM-indices from disk into: </dd></dl>
+<dl class="section user"><dt></dt><dd><ul>
+<li>host memory</li>
+<li>device memory</li>
+<li>mapped system memory </li>
 </ul>
-<p>Specifically, it exposes the following classes:</p>
-<ul>
-<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html">FMIndexData</a></li>
-<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_r_a_m.html">FMIndexDataRAM</a></li>
-<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_server.html">FMIndexDataMMAPServer</a></li>
-<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p.html">FMIndexDataMMAP</a></li>
-<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">FMIndexDataDevice</a> </li>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Specifically, it exposes the following classes: </dd></dl>
+<dl class="section user"><dt></dt><dd><ul>
+<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html">io::FMIndexData</a></li>
+<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_host.html">io::FMIndexDataHost</a></li>
+<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a></li>
+<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p.html">io::FMIndexDataMMAP</a></li>
+<li><a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_server.html">io::FMIndexDataMMAPServer</a> </li>
 </ul>
+</dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

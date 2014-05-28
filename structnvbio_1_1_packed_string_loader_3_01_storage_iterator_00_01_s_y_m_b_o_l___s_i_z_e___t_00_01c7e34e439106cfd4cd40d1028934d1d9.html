@@ -112,7 +112,7 @@ struct nvbio::PackedStringLoader&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_
 
 <p>A no-op specialization of the <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a>, which actually doesn't perform any caching </p>
 
-<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00116">116</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00115">115</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -126,6 +126,8 @@ Public Types</h2></td></tr>
 &lt; StorageIterator, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <br class="typebreak"/>
 SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a></td></tr>
 <tr class="separator:afe4719c726cd5d099271eab449b73f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f91b50a2cf95f534edea1cbe0335e5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#a19f91b50a2cf95f534edea1cbe0335e5">input_iterator</a></td></tr>
+<tr class="separator:a19f91b50a2cf95f534edea1cbe0335e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcaabd50e049b24b480c10e0db9d4b4c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_stream.html">PackedStream</a><br class="typebreak"/>
 &lt; StorageIterator, <a class="el" href="group___basic.html#gaec56d52d6a3fb4ac8fbbbe2db73f683d">uint8</a>, <br class="typebreak"/>
 SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;<br class="typebreak"/>
@@ -134,14 +136,30 @@ SYMBOL_SIZE_T, BIG_ENDIAN_T &gt;<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a9d6072c7130c127512b20942d4bd286a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#a9d6072c7130c127512b20942d4bd286a">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StorageIterator stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> offset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>)</td></tr>
-<tr class="separator:a9d6072c7130c127512b20942d4bd286a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1563602007435bc72c175c62bcc92055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#a1563602007435bc72c175c62bcc92055">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StorageIterator stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> offset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 substring_range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> rev_flag)</td></tr>
-<tr class="separator:a1563602007435bc72c175c62bcc92055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba95768d4e7009b833082c495fe589"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#aeaba95768d4e7009b833082c495fe589">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a> stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>)</td></tr>
+<tr class="separator:aeaba95768d4e7009b833082c495fe589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2701b5869903b8a1b61b8f8a4424dfd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#a2701b5869903b8a1b61b8f8a4424dfd5">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a> stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="el" href="group___basic.html#gae962be09940c267ce467e74a160a542a">length</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 substring_range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> rev_flag)</td></tr>
+<tr class="separator:a2701b5869903b8a1b61b8f8a4424dfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a19f91b50a2cf95f534edea1cbe0335e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a> <a class="el" href="structnvbio_1_1_packed_string_loader.html">nvbio::PackedStringLoader</a>&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_T, <a class="el" href="structnvbio_1_1uncached__tag.html">uncached_tag</a> &gt;::<a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#a19f91b50a2cf95f534edea1cbe0335e5">input_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00119">119</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afe4719c726cd5d099271eab449b73f6e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +172,7 @@ template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&g
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00119">119</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00118">118</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
 
 </div>
 </div>
@@ -186,12 +204,12 @@ template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&g
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00118">118</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__loader_8h_source.html#l00117">117</a> of file <a class="el" href="packedstream__loader_8h_source.html">packedstream_loader.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9d6072c7130c127512b20942d4bd286a"></a>
+<a class="anchor" id="aeaba95768d4e7009b833082c495fe589"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -200,14 +218,8 @@ template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&g
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a>&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_T, <a class="el" href="structnvbio_1_1uncached__tag.html">uncached_tag</a> &gt;::<a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a> <a class="el" href="structnvbio_1_1_packed_string_loader.html">nvbio::PackedStringLoader</a>&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_T, <a class="el" href="structnvbio_1_1uncached__tag.html">uncached_tag</a> &gt;::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StorageIterator&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a>&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -226,17 +238,16 @@ template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&g
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>input stream storage </td></tr>
-    <tr><td class="paramname">offset</td><td>offset to the first symbol to load </td></tr>
     <tr><td class="paramname">length</td><td>length of the substring to load </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="packedstream__loader__inl_8h_source.html#l00135">135</a> of file <a class="el" href="packedstream__loader__inl_8h_source.html">packedstream_loader_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__loader__inl_8h_source.html#l00134">134</a> of file <a class="el" href="packedstream__loader__inl_8h_source.html">packedstream_loader_inl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1563602007435bc72c175c62bcc92055"></a>
+<a class="anchor" id="a2701b5869903b8a1b61b8f8a4424dfd5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -245,14 +256,8 @@ template&lt;typename StorageIterator , uint32 SYMBOL_SIZE_T, bool BIG_ENDIAN_T&g
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a>&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_T, <a class="el" href="structnvbio_1_1uncached__tag.html">uncached_tag</a> &gt;::<a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#adcaabd50e049b24b480c10e0db9d4b4c">iterator</a> <a class="el" href="structnvbio_1_1_packed_string_loader.html">nvbio::PackedStringLoader</a>&lt; StorageIterator, SYMBOL_SIZE_T, BIG_ENDIAN_T, <a class="el" href="structnvbio_1_1uncached__tag.html">uncached_tag</a> &gt;::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> StorageIterator&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1_packed_string_loader_3_01_storage_iterator_00_01_s_y_m_b_o_l___s_i_z_e___t_00_01c7e34e439106cfd4cd40d1028934d1d9.html#afe4719c726cd5d099271eab449b73f6e">input_stream</a>&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -289,7 +294,6 @@ load a substring of it and return an iterator to the first symbol of the window.
 /// </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>input stream storage </td></tr>
-    <tr><td class="paramname">offset</td><td>offset to the first mapped symbol </td></tr>
     <tr><td class="paramname">length</td><td>length of the mapped substring </td></tr>
     <tr><td class="paramname">loaded_range</td><td>range of the substring to load </td></tr>
     <tr><td class="paramname">rev_flag</td><td>true if the range is specified wrt reversed coordinates </td></tr>
@@ -297,7 +301,7 @@ load a substring of it and return an iterator to the first symbol of the window.
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="packedstream__loader__inl_8h_source.html#l00143">143</a> of file <a class="el" href="packedstream__loader__inl_8h_source.html">packedstream_loader_inl.h</a>.</p>
+<p>Definition at line <a class="el" href="packedstream__loader__inl_8h_source.html#l00142">142</a> of file <a class="el" href="packedstream__loader__inl_8h_source.html">packedstream_loader_inl.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +312,7 @@ load a substring of it and return an iterator to the first symbol of the window.
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

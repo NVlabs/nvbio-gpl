@@ -275,7 +275,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="struct_bam_reader_1_1_bam_reader_private.html#aebd8527bd7863ebda31975bde7c265eb">  174</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="struct_bam_reader_1_1_bam_reader_private.html#aebd8527bd7863ebda31975bde7c265eb">BamReader::BamReaderPrivate::BinsFromRegion</a>(<span class="keywordtype">int</span> refID, <span class="keywordtype">int</span> left, uint16_t list[<a class="code" href="namespace_bam_tools.html#a04651dc90b157a0cd48077e87b8eabbf">MAX_BIN</a>]) {</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// get region boundaries</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    uint32_t begin = (<span class="keywordtype">unsigned</span> int)left;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    uint32_t <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a> = (<span class="keywordtype">unsigned</span> int)left;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    uint32_t end   = (<span class="keywordtype">unsigned</span> int)References.at(refID).RefLength - 1;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// initialize list, bin &#39;0&#39; always a valid bin</span></div>
@@ -1143,7 +1143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

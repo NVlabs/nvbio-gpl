@@ -93,23 +93,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Parallel Primitives </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This module provides a set of convenience wrappers to invoke system-wide CUB's parallel primitives without worrying about the memory management. All temporary storage is in fact allocated within a single <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a> passed by the user, which can be safely reused across function calls.</p>
+<div class="textblock"><p>This module provides a set of system-wide parallel primitives. The backend system is specified at compile-time by a <a class="el" href="group___system_tags.html">system_tag</a>. All temporary storage is allocated within a single <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a> passed by the user, which can be safely reused across function calls.</p>
 <ul>
-<li><a class="el" href="group___primitives.html#ga82ea366b8322268724e970cfc677d0ac">any()</a></li>
-<li><a class="el" href="group___primitives.html#ga9dcce72ad9a2d44f92aa508b91b3378d">all()</a></li>
-<li><a class="el" href="group___primitives.html#gab29a4ed48e4105fc89f4ad421576f46c">is_sorted()</a></li>
-<li><a class="el" href="group___primitives.html#ga7765faafa575da9ecf4806d2c0b5a2fc">is_segment_sorted()</a></li>
-<li><a class="el" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">reduce()</a></li>
-<li><a class="el" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">inclusive_scan()</a></li>
-<li><a class="el" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">exclusive_scan()</a></li>
-<li><a class="el" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">copy_flagged()</a></li>
-<li><a class="el" href="group___primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">copy_if()</a></li>
-<li><a class="el" href="group___primitives.html#ga67af151a66d862a84a34ca6aee8db24c">runlength_encode()</a> </li>
+<li><a class="el" href="group___primitives.html#gacc4f07953d774c03e710348fad815a38">nvbio::any()</a></li>
+<li><a class="el" href="group___primitives.html#gad832158b0c1628399224ea7535c54dbe">nvbio::all()</a></li>
+<li><a class="el" href="group___primitives.html#gaa7b0ec7a4528839849074ca8e08a5821">nvbio::is_sorted()</a></li>
+<li><a class="el" href="group___primitives.html#ga99051290b643f2f1e26be506fca151aa">nvbio::is_segment_sorted()</a></li>
+<li><a class="el" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">nvbio::for_each()</a></li>
+<li><a class="el" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">nvbio::transform()</a></li>
+<li><a class="el" href="group___primitives.html#ga5a34466c84069a847a416ca5c8c4d771">nvbio::reduce()</a></li>
+<li><a class="el" href="group___primitives.html#ga1ac5baa7d97ef1a3c1429445797877f2">nvbio::inclusive_scan()</a></li>
+<li><a class="el" href="group___primitives.html#gaf4b322b445998fc49a0a6e5a69a1c8df">nvbio::exclusive_scan()</a></li>
+<li><a class="el" href="group___primitives.html#gacc739614df72926f380bfc43ff3fb266">nvbio::copy_flagged()</a></li>
+<li><a class="el" href="group___primitives.html#ga754bf11c1369997a67ef0c981a4933a1">nvbio::copy_if()</a></li>
+<li><a class="el" href="group___primitives.html#ga6ebbe79e443fc6326095245cd45ae782">nvbio::runlength_encode()</a> </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:56 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

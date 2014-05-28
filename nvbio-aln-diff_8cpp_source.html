@@ -187,19 +187,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordtype">char</span> temp[256];</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// parse the filter flags</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* begin = flags_string.c_str();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* end   = begin;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a> = flags_string.c_str();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* end   = <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            filter_flags      = 0u;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">while</span> (1)</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">while</span> (*end != <span class="charliteral">&#39;|&#39;</span> &amp;&amp; *end != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    temp[end - begin] = *end;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    temp[end - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>] = *end;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    end++;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                temp[end - begin] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                temp[end - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (strcmp( temp, <span class="stringliteral">&quot;distant&quot;</span> ) == 0)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    filter_flags |= <a class="code" href="structnvbio_1_1alndiff_1_1_filter.html#a3a20477ee666a18aa10558e94c37ac8dae398d08441350d923c887b58f5c1d688">Filter::DISTANT</a>;</div>
@@ -216,18 +216,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">// parse the filter stats</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            begin        = stats_string.c_str();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            end          = begin;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            end          = <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            filter_stats = 0u;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">while</span> (1)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">while</span> (*end != <span class="charliteral">&#39;|&#39;</span> &amp;&amp; *end != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    temp[end - begin] = *end;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    temp[end - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>] = *end;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    end++;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                }</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                temp[end - begin] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                temp[end - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">if</span> (strcmp( temp, <span class="stringliteral">&quot;ed&quot;</span> ) == 0)</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    filter_stats |= <a class="code" href="structnvbio_1_1alndiff_1_1_filter.html#ab3c63fb26c819c01b00bfc3db241f84fa00164ab835c4e1a7bbd37561bad1d0f6">Filter::ED</a>;</div>
@@ -563,7 +563,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:18 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:36 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

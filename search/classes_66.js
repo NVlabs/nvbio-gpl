@@ -22,11 +22,12 @@ var searchData=
   ['fm_5findex',['fm_index',['../structnvbio_1_1fm__index.html',1,'nvbio']]],
   ['fm_5findex_5fdevice_5fdata',['fm_index_device_data',['../structnvbio_1_1fm__index__device__data.html',1,'nvbio']]],
   ['fmindexdata',['FMIndexData',['../structnvbio_1_1io_1_1_f_m_index_data.html',1,'nvbio::io']]],
+  ['fmindexdatacore',['FMIndexDataCore',['../structnvbio_1_1io_1_1_f_m_index_data_core.html',1,'nvbio::io']]],
   ['fmindexdatadevice',['FMIndexDataDevice',['../structnvbio_1_1io_1_1_f_m_index_data_device.html',1,'nvbio::io']]],
+  ['fmindexdatahost',['FMIndexDataHost',['../structnvbio_1_1io_1_1_f_m_index_data_host.html',1,'nvbio::io']]],
   ['fmindexdatammap',['FMIndexDataMMAP',['../structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p.html',1,'nvbio::io']]],
   ['fmindexdatammapinfo',['FMIndexDataMMAPInfo',['../structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_info.html',1,'nvbio::io']]],
   ['fmindexdatammapserver',['FMIndexDataMMAPServer',['../structnvbio_1_1io_1_1_f_m_index_data_m_m_a_p_server.html',1,'nvbio::io']]],
-  ['fmindexdataram',['FMIndexDataRAM',['../structnvbio_1_1io_1_1_f_m_index_data_r_a_m.html',1,'nvbio::io']]],
   ['fmindexdef',['FMIndexDef',['../structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html',1,'nvbio::bowtie2::cuda']]],
   ['fmindexfilter',['FMIndexFilter',['../structnvbio_1_1_f_m_index_filter.html',1,'nvbio']]],
   ['fmindexfilter_3c_20device_5ftag_2c_20fm_5findex_5ftype_20_3e',['FMIndexFilter&lt; device_tag, fm_index_type &gt;',['../structnvbio_1_1_f_m_index_filter_3_01device__tag_00_01fm__index__type_01_4.html',1,'nvbio']]],
@@ -35,5 +36,6 @@ var searchData=
   ['fmindexfilterhost',['FMIndexFilterHost',['../structnvbio_1_1_f_m_index_filter_host.html',1,'nvbio']]],
   ['formatopmarkarray',['FormatOpMarkArray',['../structmgpu_1_1_format_op_mark_array.html',1,'mgpu']]],
   ['formatopmaskbit',['FormatOpMaskBit',['../structmgpu_1_1_format_op_mask_bit.html',1,'mgpu']]],
-  ['formatopprintf',['FormatOpPrintf',['../structmgpu_1_1_format_op_printf.html',1,'mgpu']]]
+  ['formatopprintf',['FormatOpPrintf',['../structmgpu_1_1_format_op_printf.html',1,'mgpu']]],
+  ['from_5fchar_5ffunctor',['from_char_functor',['../structnvbio_1_1from__char__functor.html',1,'nvbio']]]
 ];

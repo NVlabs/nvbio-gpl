@@ -7,7 +7,7 @@ var searchData=
   ['length',['LENGTH',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaa3418c365e56fa4587ae44612afc6fa48',1,'inflate.h']]],
   ['lenlens',['LENLENS',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaaaeda44348e46a8bc21bd6122b3f3e0d5',1,'inflate.h']]],
   ['lens',['LENS',['../inftrees_8h.html#a0f33f5acf9079ff1f054fa235df2443ba86b0f8050ddd8ae0b99e2f9323ad00a1',1,'inftrees.h']]],
-  ['line_5fbuffer_5finit_5fsize',['LINE_BUFFER_INIT_SIZE',['../structnvbio_1_1io_1_1_read_data_file___s_a_m.html#ada4d5694e1e16b0c3c77e1876bcd98b3a42cfbf07322114a323b2b5e780ee2828',1,'nvbio::io::ReadDataFile_SAM']]],
+  ['line_5fbuffer_5finit_5fsize',['LINE_BUFFER_INIT_SIZE',['../structnvbio_1_1io_1_1_read_data_file___s_a_m.html#abe7a1198ffcc5df00a49f7761a822f1ba42cfbf07322114a323b2b5e780ee2828',1,'nvbio::io::ReadDataFile_SAM::LINE_BUFFER_INIT_SIZE()'],['../structnvbio_1_1io_1_1_sequence_data_file___s_a_m.html#a97a6247c5591bb30c23081435ce50602a07236618e8aa3c030503f4f102934c38',1,'nvbio::io::SequenceDataFile_SAM::LINE_BUFFER_INIT_SIZE()']]],
   ['linear',['LINEAR',['../namespacenvbio_1_1alndiff.html#adb604712a538dec605939f50ea0a5ac6a6a1c8b70b8b13216da5e254920939237',1,'nvbio::alndiff']]],
   ['linearfunc',['LinearFunc',['../structnvbio_1_1bowtie2_1_1cuda_1_1_simple_func.html#a74e3d3fc83c172e6fbe6e72b6cb91adbafa05d26014cb5b1404aba6f2b84ef098',1,'nvbio::bowtie2::cuda::SimpleFunc::LinearFunc()'],['../group___alignment.html#ggaafd3d8be887acc2c35ffdf3c7c7df494ac274f53c6b573a52da8a37ba77aaeb62',1,'nvbio::bowtie2::cuda::LinearFunc()']]],
   ['lit',['LIT',['../inflate_8h.html#a164ea0159d5f0b5f12a646f25f99eceaa3b759690471ed29ecd243a8f36b93f60',1,'inflate.h']]],

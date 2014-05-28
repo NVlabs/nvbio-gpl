@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00068">68</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00070">70</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="aligner_8h_source.html">aligner.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -118,35 +118,24 @@ Public Types</h2></td></tr>
 <tr class="separator:a1de55cf4225658179173e905639fc1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a459a8ffdb7fb2f1387f7e6c7b3218700"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a62adbecee1e56c1c899cdd6f07d5953c">FMIndexDef::type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a></td></tr>
 <tr class="separator:a459a8ffdb7fb2f1387f7e6c7b3218700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af02ccaf3c37dd616f89dfd38df3e5314"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>, <br class="typebreak"/>
-uint4, <a class="el" href="defs_8h.html#a3cc84b5c54417ebb81086565a7587688">USE_UINT4_PACKING</a> &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a></td></tr>
-<tr class="separator:af02ccaf3c37dd616f89dfd38df3e5314"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad201e5748c166bc2deeefc28755d3200"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a> <br class="typebreak"/>
-*, <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a> &gt;<br class="typebreak"/>
-, <a class="el" href="defs_8h.html#a9f35a173b364e8671132090d8861fe7d">USE_TEX_READS</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">read_base_type</a></td></tr>
-<tr class="separator:ad201e5748c166bc2deeefc28755d3200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb3603375ec6c510384981fd308ed4fb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <br class="typebreak"/>
-char <br class="typebreak"/>
-*, <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a><br class="typebreak"/>
-&lt; char &gt;, <a class="el" href="defs_8h.html#a9f35a173b364e8671132090d8861fe7d">USE_TEX_READS</a> &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aeb3603375ec6c510384981fd308ed4fb">read_qual_type</a></td></tr>
-<tr class="separator:aeb3603375ec6c510384981fd308ed4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d9934d680c5614fbcc5ba050aa0862"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">io::ReadDataView</a><br class="typebreak"/>
-&lt; <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <br class="typebreak"/>
-*, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">read_base_type</a>, <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aeb3603375ec6c510384981fd308ed4fb">read_qual_type</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa5d9934d680c5614fbcc5ba050aa0862">read_batch_type</a></td></tr>
-<tr class="separator:aa5d9934d680c5614fbcc5ba050aa0862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc27c68196e78dfb0fdeecdb7d45076b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt; <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>, <br class="typebreak"/>
-uint4, <a class="el" href="defs_8h.html#a3cc84b5c54417ebb81086565a7587688">USE_UINT4_PACKING</a> &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abc27c68196e78dfb0fdeecdb7d45076b">genome_storage_type</a></td></tr>
-<tr class="separator:abc27c68196e78dfb0fdeecdb7d45076b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe02c02c125a4dec03fa9d2b43956fd5"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abc27c68196e78dfb0fdeecdb7d45076b">genome_storage_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afe02c02c125a4dec03fa9d2b43956fd5">genome_iterator_type</a></td></tr>
-<tr class="separator:afe02c02c125a4dec03fa9d2b43956fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053ae63c3e16fc15570b3f2418e8db6a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#ae1d38c97a328b3f829ad2f2a4d9fee5c">ReadsDef::read_storage_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a053ae63c3e16fc15570b3f2418e8db6a">read_storage_type</a></td></tr>
+<tr class="separator:a053ae63c3e16fc15570b3f2418e8db6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c26f72f41210e916cf18bfc0c496e0a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a85c49369b31f99740f12b0b4a4427756">ReadsDef::read_base_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9c26f72f41210e916cf18bfc0c496e0a">read_base_type</a></td></tr>
+<tr class="separator:a9c26f72f41210e916cf18bfc0c496e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551c8d578b635247d95e638796303046"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a3623bdf6663aa1d16ea39c8d8c7b9e55">ReadsDef::read_qual_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a551c8d578b635247d95e638796303046">read_qual_type</a></td></tr>
+<tr class="separator:a551c8d578b635247d95e638796303046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a3f6ae6b01a00eea0c57016f64c37f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a5b42fb887daad1e1b8d27b08b05b03a0">ReadsDef::read_view_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ab7a3f6ae6b01a00eea0c57016f64c37f">read_view_type</a></td></tr>
+<tr class="separator:ab7a3f6ae6b01a00eea0c57016f64c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9665820bc25a89753422fc51b896e274"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a705190b9d482df86cef2c422dfbd72b8">ReadsDef::type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9665820bc25a89753422fc51b896e274">read_batch_type</a></td></tr>
+<tr class="separator:a9665820bc25a89753422fc51b896e274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee9f7c7dceec44a75bbb291a2d61765"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___sequence_data_views.html#gaaf0a982784eb361535a6b4d24932a2bf">io::LdgSequenceDataView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6ee9f7c7dceec44a75bbb291a2d61765">genome_view_type</a></td></tr>
+<tr class="separator:a6ee9f7c7dceec44a75bbb291a2d61765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f499a6676e5dce466171321f4b341b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html">io::SequenceDataAccess</a><br class="typebreak"/>
+&lt; <a class="el" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a6c8c7655bd0085241eed95780a3aa4c4">DNA</a>, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6ee9f7c7dceec44a75bbb291a2d61765">genome_view_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a58f499a6676e5dce466171321f4b341b">genome_access_type</a></td></tr>
+<tr class="separator:a58f499a6676e5dce466171321f4b341b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc474aac1b38c45b6d676f203a8d791"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html#a2eb0369c3b341418f5772d85a6c8d4e2">genome_access_type::sequence_stream_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8bc474aac1b38c45b6d676f203a8d791">genome_iterator</a></td></tr>
+<tr class="separator:a8bc474aac1b38c45b6d676f203a8d791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
@@ -154,24 +143,24 @@ Public Methods</h2></td></tr>
 <tr class="separator:ad7dbbaf76b2b9dd2e7a4d3197c90270c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c700501c1cd60526729b7c5addf3fd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1c700501c1cd60526729b7c5addf3fd0">keep_stats</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
 <tr class="separator:a1c700501c1cd60526729b7c5addf3fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12682abe65a90704535c911bd0153c0f"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
-<tr class="memitem:a12682abe65a90704535c911bd0153c0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a12682abe65a90704535c911bd0153c0f">best_approx</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
-<tr class="separator:a12682abe65a90704535c911bd0153c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54f23d87993df1b2532c35bbbb66d09"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </td></tr>
-<tr class="memitem:ac54f23d87993df1b2532c35bbbb66d09"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ac54f23d87993df1b2532c35bbbb66d09">best_approx_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seeding_pass, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
-<tr class="separator:ac54f23d87993df1b2532c35bbbb66d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b2331367aeeb7ddbe356dd763ecdc86"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
-<tr class="memitem:a2b2331367aeeb7ddbe356dd763ecdc86"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a2b2331367aeeb7ddbe356dd763ecdc86">best_approx</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a62adbecee1e56c1c899cdd6f07d5953c">FMIndexDef::type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a62adbecee1e56c1c899cdd6f07d5953c">FMIndexDef::type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data1, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data2, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
-<tr class="separator:a2b2331367aeeb7ddbe356dd763ecdc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5691b3b1e8da9f1aebc23f4a8b82ff2"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </td></tr>
-<tr class="memitem:ae5691b3b1e8da9f1aebc23f4a8b82ff2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ae5691b3b1e8da9f1aebc23f4a8b82ff2">best_approx_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> anchor, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data1, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data2, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seeding_pass, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
-<tr class="separator:ae5691b3b1e8da9f1aebc23f4a8b82ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a770bbf6a63346f47caa871588a31870b"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
-<tr class="memitem:a770bbf6a63346f47caa871588a31870b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a770bbf6a63346f47caa871588a31870b">all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
-<tr class="separator:a770bbf6a63346f47caa871588a31870b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cfb7cbc32899b208309b36807b046bd"><td class="memTemplParams" colspan="2">template&lt;typename scoring_scheme_type &gt; </td></tr>
-<tr class="memitem:a7cfb7cbc32899b208309b36807b046bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a7cfb7cbc32899b208309b36807b046bd">score_all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;input_scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;read_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &amp;total_alignments)</td></tr>
-<tr class="separator:a7cfb7cbc32899b208309b36807b046bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01793fa37757764caf63afcefdb717be"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
+<tr class="memitem:a01793fa37757764caf63afcefdb717be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a01793fa37757764caf63afcefdb717be">best_approx</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
+<tr class="separator:a01793fa37757764caf63afcefdb717be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e1995dbbc38cd6b8363ac65846833f"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </td></tr>
+<tr class="memitem:a26e1995dbbc38cd6b8363ac65846833f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a26e1995dbbc38cd6b8363ac65846833f">best_approx_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seeding_pass, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
+<tr class="separator:a26e1995dbbc38cd6b8363ac65846833f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc7f6872f155de35505d3f746345e01"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
+<tr class="memitem:abfc7f6872f155de35505d3f746345e01"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abfc7f6872f155de35505d3f746345e01">best_approx</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a62adbecee1e56c1c899cdd6f07d5953c">FMIndexDef::type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_f_m_index_def.html#a62adbecee1e56c1c899cdd6f07d5953c">FMIndexDef::type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data2, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
+<tr class="separator:abfc7f6872f155de35505d3f746345e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad324a262257dcbb38b363f6c3bcc528b"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </td></tr>
+<tr class="memitem:ad324a262257dcbb38b363f6c3bcc528b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad324a262257dcbb38b363f6c3bcc528b">best_approx_score</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> anchor, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data2, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seeding_pass, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
+<tr class="separator:ad324a262257dcbb38b363f6c3bcc528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa269dbabb73d71fb022223a16ec4073d"><td class="memTemplParams" colspan="2">template&lt;typename scoring_tag &gt; </td></tr>
+<tr class="memitem:aa269dbabb73d71fb022223a16ec4073d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa269dbabb73d71fb022223a16ec4073d">all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats)</td></tr>
+<tr class="separator:aa269dbabb73d71fb022223a16ec4073d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333a41b2384340dede51992f701ee338"><td class="memTemplParams" colspan="2">template&lt;typename scoring_scheme_type &gt; </td></tr>
+<tr class="memitem:a333a41b2384340dede51992f701ee338"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a333a41b2384340dede51992f701ee338">score_all</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_params.html">Params</a> &amp;params, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a1de55cf4225658179173e905639fc1ec">fmi_type</a> fmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a459a8ffdb7fb2f1387f7e6c7b3218700">rfmi_type</a> rfmi, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_uber_scoring_scheme.html">UberScoringScheme</a> &amp;input_scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> scoring_scheme_type &amp;scoring_scheme, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;reference_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;driver_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;read_data, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> seed_queue_size, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *seed_queue, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_stats.html">Stats</a> &amp;stats, <a class="el" href="group___basic.html#gabceca7efbe8a079462f825131b2acccd">uint64</a> &amp;total_alignments)</td></tr>
+<tr class="separator:a333a41b2384340dede51992f701ee338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc60f2e13e26a84a78bdbaf3517c36cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afc60f2e13e26a84a78bdbaf3517c36cf">sort_hi_bits</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *keys)</td></tr>
 <tr class="separator:afc60f2e13e26a84a78bdbaf3517c36cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ffc3f0e4e2ab3b62c25a92c7349382e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6ffc3f0e4e2ab3b62c25a92c7349382e">sort_inplace</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> count, <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> *keys)</td></tr>
@@ -291,58 +280,58 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00072">72</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00074">74</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afe02c02c125a4dec03fa9d2b43956fd5"></a>
+<a class="anchor" id="a58f499a6676e5dce466171321f4b341b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt;<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abc27c68196e78dfb0fdeecdb7d45076b">genome_storage_type</a>&gt; <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#afe02c02c125a4dec03fa9d2b43956fd5">nvbio::bowtie2::cuda::Aligner::genome_iterator_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html">io::SequenceDataAccess</a>&lt;<a class="el" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a6c8c7655bd0085241eed95780a3aa4c4">DNA</a>,<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6ee9f7c7dceec44a75bbb291a2d61765">genome_view_type</a>&gt; <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a58f499a6676e5dce466171321f4b341b">nvbio::bowtie2::cuda::Aligner::genome_access_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00081">81</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00084">84</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abc27c68196e78dfb0fdeecdb7d45076b"></a>
+<a class="anchor" id="a8bc474aac1b38c45b6d676f203a8d791"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt;<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>,uint4,<a class="el" href="defs_8h.html#a3cc84b5c54417ebb81086565a7587688">USE_UINT4_PACKING</a>&gt;::type <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#abc27c68196e78dfb0fdeecdb7d45076b">nvbio::bowtie2::cuda::Aligner::genome_storage_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html#a2eb0369c3b341418f5772d85a6c8d4e2">genome_access_type::sequence_stream_type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a8bc474aac1b38c45b6d676f203a8d791">nvbio::bowtie2::cuda::Aligner::genome_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00080">80</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00085">85</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad201e5748c166bc2deeefc28755d3200"></a>
+<a class="anchor" id="a6ee9f7c7dceec44a75bbb291a2d61765"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a>*,<a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt;<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a>&gt;,<a class="el" href="defs_8h.html#a9f35a173b364e8671132090d8861fe7d">USE_TEX_READS</a>&gt;::type <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">nvbio::bowtie2::cuda::Aligner::read_base_type</a></td>
+          <td class="memname">typedef <a class="el" href="group___sequence_data_views.html#gaaf0a982784eb361535a6b4d24932a2bf">io::LdgSequenceDataView</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a6ee9f7c7dceec44a75bbb291a2d61765">nvbio::bowtie2::cuda::Aligner::genome_view_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00076">76</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00083">83</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa5d9934d680c5614fbcc5ba050aa0862"></a>
+<a class="anchor" id="a9c26f72f41210e916cf18bfc0c496e0a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html">io::ReadDataView</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*,<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">read_base_type</a>,<a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aeb3603375ec6c510384981fd308ed4fb">read_qual_type</a>,<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char*&gt; <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aa5d9934d680c5614fbcc5ba050aa0862">nvbio::bowtie2::cuda::Aligner::read_batch_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a85c49369b31f99740f12b0b4a4427756">ReadsDef::read_base_type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9c26f72f41210e916cf18bfc0c496e0a">nvbio::bowtie2::cuda::Aligner::read_base_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -351,12 +340,40 @@ Static Public Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeb3603375ec6c510384981fd308ed4fb"></a>
+<a class="anchor" id="a9665820bc25a89753422fc51b896e274"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt;<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char*, <a class="el" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer</a>&lt;char&gt;, <a class="el" href="defs_8h.html#a9f35a173b364e8671132090d8861fe7d">USE_TEX_READS</a>&gt;::type <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#aeb3603375ec6c510384981fd308ed4fb">nvbio::bowtie2::cuda::Aligner::read_qual_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a705190b9d482df86cef2c422dfbd72b8">ReadsDef::type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9665820bc25a89753422fc51b896e274">nvbio::bowtie2::cuda::Aligner::read_batch_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00081">81</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a551c8d578b635247d95e638796303046"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a3623bdf6663aa1d16ea39c8d8c7b9e55">ReadsDef::read_qual_type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a551c8d578b635247d95e638796303046">nvbio::bowtie2::cuda::Aligner::read_qual_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00079">79</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a053ae63c3e16fc15570b3f2418e8db6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#ae1d38c97a328b3f829ad2f2a4d9fee5c">ReadsDef::read_storage_type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a053ae63c3e16fc15570b3f2418e8db6a">nvbio::bowtie2::cuda::Aligner::read_storage_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -365,17 +382,17 @@ Static Public Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af02ccaf3c37dd616f89dfd38df3e5314"></a>
+<a class="anchor" id="ab7a3f6ae6b01a00eea0c57016f64c37f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1binary__switch.html">binary_switch</a>&lt;<a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>,uint4,<a class="el" href="defs_8h.html#a3cc84b5c54417ebb81086565a7587688">USE_UINT4_PACKING</a>&gt;::type <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">nvbio::bowtie2::cuda::Aligner::read_storage_type</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_reads_def.html#a5b42fb887daad1e1b8d27b08b05b03a0">ReadsDef::read_view_type</a> <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ab7a3f6ae6b01a00eea0c57016f64c37f">nvbio::bowtie2::cuda::Aligner::read_view_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00075">75</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00080">80</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -389,12 +406,12 @@ Static Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00073">73</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00075">75</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a770bbf6a63346f47caa871588a31870b"></a>
+<a class="anchor" id="aa269dbabb73d71fb022223a16ec4073d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -427,13 +444,19 @@ template&lt;typename scoring_tag &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data</em>, </td>
         </tr>
         <tr>
@@ -476,11 +499,11 @@ template&lt;typename scoring_tag &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00145">145</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00149">149</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a12682abe65a90704535c911bd0153c0f"></a>
+<a class="anchor" id="a01793fa37757764caf63afcefdb717be"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -513,13 +536,19 @@ template&lt;typename scoring_tag &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data</em>, </td>
         </tr>
         <tr>
@@ -540,7 +569,7 @@ template&lt;typename scoring_tag &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2b2331367aeeb7ddbe356dd763ecdc86"></a>
+<a class="anchor" id="abfc7f6872f155de35505d3f746345e01"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -573,19 +602,25 @@ template&lt;typename scoring_tag &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data2</em>, </td>
         </tr>
         <tr>
@@ -606,7 +641,7 @@ template&lt;typename scoring_tag &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac54f23d87993df1b2532c35bbbb66d09"></a>
+<a class="anchor" id="a26e1995dbbc38cd6b8363ac65846833f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -639,13 +674,19 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data</em>, </td>
         </tr>
         <tr>
@@ -680,11 +721,11 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner__best__approx_8h_source.html#l00358">358</a> of file <a class="el" href="aligner__best__approx_8h_source.html">aligner_best_approx.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner__best__approx_8h_source.html#l00363">363</a> of file <a class="el" href="aligner__best__approx_8h_source.html">aligner_best_approx.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae5691b3b1e8da9f1aebc23f4a8b82ff2"></a>
+<a class="anchor" id="ad324a262257dcbb38b363f6c3bcc528b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -717,6 +758,12 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
@@ -729,13 +776,13 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data2</em>, </td>
         </tr>
         <tr>
@@ -770,7 +817,7 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner__best__approx__paired_8h_source.html#l00591">591</a> of file <a class="el" href="aligner__best__approx__paired_8h_source.html">aligner_best_approx_paired.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner__best__approx__paired_8h_source.html#l00597">597</a> of file <a class="el" href="aligner__best__approx__paired_8h_source.html">aligner_best_approx_paired.h</a>.</p>
 
 </div>
 </div>
@@ -870,7 +917,7 @@ template&lt;typename scoring_tag , typename scoring_scheme_type &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7cfb7cbc32899b208309b36807b046bd"></a>
+<a class="anchor" id="a333a41b2384340dede51992f701ee338"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -909,13 +956,19 @@ template&lt;typename scoring_scheme_type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html">io::FMIndexDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>driver_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnvbio_1_1io_1_1_read_data_device.html">io::ReadDataDevice</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#ga320e6b720c7ea82793f41b21c184d960">io::SequenceDataDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>read_data</em>, </td>
         </tr>
         <tr>
@@ -950,7 +1003,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner__all_8h_source.html#l00140">140</a> of file <a class="el" href="aligner__all_8h_source.html">aligner_all.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner__all_8h_source.html#l00142">142</a> of file <a class="el" href="aligner__all_8h_source.html">aligner_all.h</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1070,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00137">137</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00141">141</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1084,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00084">84</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00088">88</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1098,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00105">105</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00109">109</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1059,7 +1112,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00106">106</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00110">110</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1126,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00103">103</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00107">107</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1087,7 +1140,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00104">104</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00108">108</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1154,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00114">114</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00118">118</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1168,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00113">113</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00117">117</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1182,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00116">116</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00120">120</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1196,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00115">115</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00119">119</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1210,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00129">129</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00133">133</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1224,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00131">131</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00135">135</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1238,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00130">130</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00134">134</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1252,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00087">87</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00091">91</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1266,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00086">86</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00090">90</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1227,7 +1280,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00089">89</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00093">93</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1294,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00123">123</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00127">127</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1308,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00122">122</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00126">126</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1269,7 +1322,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00125">125</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00129">129</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1336,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00124">124</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00128">128</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1297,7 +1350,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00135">135</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00139">139</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1364,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00133">133</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00137">137</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1378,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00134">134</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00138">138</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1339,7 +1392,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00095">95</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00099">99</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1353,7 +1406,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00094">94</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00098">98</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1428,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00070">70</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00072">72</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1442,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00128">128</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00132">132</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1456,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00110">110</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00114">114</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1417,7 +1470,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00109">109</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00113">113</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1484,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00118">118</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00122">122</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1445,7 +1498,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00117">117</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00121">121</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1512,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00143">143</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00147">147</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1473,7 +1526,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00120">120</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00124">124</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1487,7 +1540,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00119">119</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00123">123</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1554,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00101">101</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00105">105</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1515,7 +1568,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00100">100</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00104">104</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1529,7 +1582,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00092">92</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00096">96</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1596,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00091">91</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00095">95</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1610,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00139">139</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00143">143</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1571,7 +1624,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00096">96</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00100">100</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1585,7 +1638,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00099">99</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00103">103</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1599,7 +1652,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aligner_8h_source.html#l00098">98</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
+<p>Definition at line <a class="el" href="aligner_8h_source.html#l00102">102</a> of file <a class="el" href="aligner_8h_source.html">aligner.h</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +1665,7 @@ template&lt;typename scoring_scheme_type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:52:10 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:43 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -118,8 +118,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="output__batch_8h.html">nvbio/io/output/output_batch.h</a>&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fmi_8h.html">nvbio/io/fmi.h</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="timer_8h.html">nvbio/basic/timer.h</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="timer_8h.html">nvbio/basic/timer.h</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vector_8h.html" title="Define host / device vectors. ">nvbio/basic/vector.h</a>&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
@@ -187,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structnvbio_1_1io_1_1_alignment_data.html">AlignmentData</a>(&amp;<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#ae3a2d83a51cc1b66242662cf2f06ecb2">best_alignments</a>[read_id].best[mate],</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                         &amp;<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#ae3a2d83a51cc1b66242662cf2f06ecb2">best_alignments</a>[read_id].second_best[mate],</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                         read_id,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                         <a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#af5f2aaea44573f480b7eddf40d07a25d">read_data</a>[mate],</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                         <a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a1235f5f37370af6cc9d22060530f1da6">read_data</a>[mate],</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                         &amp;<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#a11083a465555825959781d2807033896">cigar</a>[cigar_mate],</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                         &amp;<a class="code" href="structnvbio_1_1io_1_1_c_p_u_output_batch.html#ad1611aafc0056e0aeb0031b35bfbae14">mds</a>[cigar_mate]);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
@@ -223,7 +223,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:24 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:44 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

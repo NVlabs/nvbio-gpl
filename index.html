@@ -113,7 +113,7 @@ Links</h1>
 
  <a href="https://github.com/NVlabs/nvbio"><img src="download-icon.png" style="position:relative; bottom:-10px; border:0px;"/></a>
  &nbsp;&nbsp;
- <a href="https://github.com/NVlabs/nvbio">Download NVBIO 0.9.7</a>
+ <a href="https://github.com/NVlabs/nvbio">Download NVBIO 0.9.9</a>
  </div>
 <h1><a class="anchor" id="Documentation"></a>
 Documentation</h1>
@@ -129,6 +129,21 @@ Documentation</h1>
 </dd></dl>
 <h1><a class="anchor" id="RecentNew"></a>
 Recent News</h1>
+<dl class="section user"><dt></dt><dd><table class="doxtable">
+<tr>
+<td style="white-space: nowrap; vertical-align:text-top;">26/05/2014 <br/>
+ NVBIO 0.9.9 </td><td style="vertical-align:text-top;" width="90%"><ul>
+<li><b>New Features:</b> <br/>
+<ul>
+<li>Added a new <a class="el" href="sequence_io_page.html">Sequence IO</a> module for managing all kinds of sequence data; unlike the old io::ReadData, the containers in this module support various types of alphabet encodings, and can be used both for loading reads as well as for reading or mapping large reference data.</li>
+<li>Rewrote the <a class="el" href="fmindex_io_page.html">FM-Index IO</a> module; the new io::FMIndexData offers more uniform interfaces, and unlike its predecessor no longer holds any reference data, which can now be separately loaded through the new <a class="el" href="sequence_io_page.html">Sequence IO</a> module.</li>
+<li>Rewrote the <a class="el" href="group___batch_scheduler.html">Batch Alignment Schedulers</a>, adding support for a new OpenMP host backend.  </li>
+</ul>
+</li>
+</ul>
+</td></tr>
+</table>
+</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td style="white-space: nowrap; vertical-align:text-top;">16/05/2014 <br/>
@@ -212,7 +227,7 @@ Contributors</h1>
  </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:52:33 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:19:15 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

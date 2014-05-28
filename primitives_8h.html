@@ -105,12 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;<a class="el" href="types_8h_source.html">nvbio/basic/types.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="numbers_8h_source.html">nvbio/basic/numbers.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="console_8h_source.html">nvbio/basic/console.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="thrust__view_8h_source.html">nvbio/basic/thrust_view.h</a>&gt;</code><br/>
-<code>#include &lt;thrust/device_vector.h&gt;</code><br/>
-<code>#include &lt;thrust/host_vector.h&gt;</code><br/>
-<code>#include &lt;thrust/copy.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector_8h_source.html">nvbio/basic/vector.h</a>&gt;</code><br/>
 <code>#include &lt;thrust/reduce.h&gt;</code><br/>
 <code>#include &lt;thrust/scan.h&gt;</code><br/>
+<code>#include &lt;thrust/copy.h&gt;</code><br/>
 <code>#include &lt;thrust/iterator/constant_iterator.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="primitives__inl_8h_source.html">nvbio/basic/primitives_inl.h</a>&gt;</code><br/>
 </div>
@@ -136,6 +134,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator , typename Headflags &gt; </td></tr>
 <tr class="memitem:ga99051290b643f2f1e26be506fca151aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga99051290b643f2f1e26be506fca151aa">nvbio::is_segment_sorted</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator values, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Headflags flags)</td></tr>
 <tr class="separator:ga99051290b643f2f1e26be506fca151aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5699b8fcc12ae5fb037938361b485f62"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator , typename Functor &gt; </td></tr>
+<tr class="memitem:ga5699b8fcc12ae5fb037938361b485f62"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">nvbio::for_each</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator in, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Functor functor)</td></tr>
+<tr class="separator:ga5699b8fcc12ae5fb037938361b485f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b41de45962c3b82d1fb26c5aa4b3c6e"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator , typename Output , typename Functor &gt; </td></tr>
+<tr class="memitem:ga0b41de45962c3b82d1fb26c5aa4b3c6e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">nvbio::transform</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator in, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Output out, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Functor functor)</td></tr>
+<tr class="separator:ga0b41de45962c3b82d1fb26c5aa4b3c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac625dc561d5ce7125d7f7bc0bf09e664"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename Iterator1 , typename Iterator2 , typename Output , typename Functor &gt; </td></tr>
+<tr class="memitem:gac625dc561d5ce7125d7f7bc0bf09e664"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#gac625dc561d5ce7125d7f7bc0bf09e664">nvbio::transform</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator1 in1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Iterator2 in2, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Output out, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Functor functor)</td></tr>
+<tr class="separator:gac625dc561d5ce7125d7f7bc0bf09e664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplParams" colspan="2">template&lt;typename system_tag , typename InputIterator , typename BinaryOp &gt; </td></tr>
 <tr class="memitem:ga5a34466c84069a847a416ca5c8c4d771"><td class="memTemplItemLeft" align="right" valign="top">std::iterator_traits<br class="typebreak"/>
 &lt; InputIterator &gt;::<a class="el" href="prefix_8h.html#a25f329696ff8168525aafdd7ca65f654">value_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___primitives.html#ga5a34466c84069a847a416ca5c8c4d771">nvbio::reduce</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint32 n, InputIterator in, BinaryOp op, <a class="el" href="structnvbio_1_1vector.html">nvbio::vector</a>&lt; system_tag, uint8 &gt; &amp;temp_storage)</td></tr>
@@ -162,7 +169,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:31 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:51 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

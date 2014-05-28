@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['warpparallelscheduler',['WarpParallelScheduler',['../structnvbio_1_1aln_1_1_warp_parallel_scheduler.html',1,'nvbio::aln']]],
   ['weakcount',['WeakCount',['../classnvbio_1_1internals_1_1_weak_count.html',1,'nvbio::internals']]],
   ['weakpointer',['WeakPointer',['../classnvbio_1_1_weak_pointer.html',1,'nvbio']]],
   ['word_5fselector',['word_selector',['../structnvbio_1_1priv_1_1word__selector.html',1,'nvbio::priv']]],

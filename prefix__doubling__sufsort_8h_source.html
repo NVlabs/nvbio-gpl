@@ -405,7 +405,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// scan the block partials</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    *thrust::device_ptr&lt;uint32&gt;( blocks + n_blocks ) = 0u;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">thrust::exclusive_scan</a>(</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        thrust::device_ptr&lt;uint32&gt;( blocks ),</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        thrust::device_ptr&lt;uint32&gt;( blocks ) + n_blocks + 1u,</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        thrust::device_ptr&lt;uint32&gt;( blocks ),</div>
@@ -656,7 +656,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1remove__singletons.html">priv::remove_singletons</a>() );</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        <span class="comment">// and scan them to get their candidate output positions</span></div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <a class="code" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">thrust::inclusive_scan</a>(</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <a class="code" href="group___c_u_d_a_primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">thrust::inclusive_scan</a>(</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            d_partial_flags.begin() + 4u,</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            d_partial_flags.begin() + 4u + n_active_suffixes,</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            d_segment_keys.begin(),</div>
@@ -678,11 +678,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            <span class="comment">// before shrinking the set of active suffixes scatter the already sorted indices to the output</span></div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <span class="comment">// in their proper place</span></div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            thrust::scatter_if(</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                d_sort_indices.begin(),                                                             <span class="comment">// input begin</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                d_sort_indices.begin() + n_active_suffixes,                                         <span class="comment">// input end</span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                d_active_slots.begin(),                                                             <span class="comment">// map</span></div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">make_transform_iterator</a>( d_partial_flags.begin() + 4u, <a class="code" href="structnvbio_1_1is__false__functor.html">is_false_functor&lt;uint32&gt;</a>() ),<span class="comment">// stencil</span></div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                d_suffixes );                                                                       <span class="comment">// output</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                d_sort_indices.begin(),                                                                     <span class="comment">// input begin</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                d_sort_indices.begin() + n_active_suffixes,                                                 <span class="comment">// input end</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                d_active_slots.begin(),                                                                     <span class="comment">// map</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( d_partial_flags.begin() + 4u, <a class="code" href="structnvbio_1_1is__false__functor.html">is_false_functor&lt;uint32&gt;</a>() ),<span class="comment">// stencil</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                d_suffixes );                                                                               <span class="comment">// output</span></div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            <span class="comment">// now keep only the slots we are interested in</span></div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            <a class="code" href="namespacenvbio_1_1cuda.html#a50844f83972f065a7c729e5b08faf49b">compact</a>(</div>
@@ -812,7 +812,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

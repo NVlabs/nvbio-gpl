@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>NVBIO: nvbio::ReadLoader&lt; BatchType, Tag &gt; Struct Template Reference</title>
+<title>NVBIO: nvbio::ReadLoader&lt; SequenceDataT, Tag &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,96 +101,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-attribs">Public Members</a> &#124;
 <a href="structnvbio_1_1_read_loader-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nvbio::ReadLoader&lt; BatchType, Tag &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___utils.html">Utils</a></div></div>  </div>
+<div class="title">nvbio::ReadLoader&lt; SequenceDataT, Tag &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group___utils.html">Utils</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
-    typename BatchType, 
+    typename SequenceDataT, 
     typename Tag&gt;<br/>
-struct nvbio::ReadLoader&lt; BatchType, Tag &gt;</h3>
+struct nvbio::ReadLoader&lt; SequenceDataT, Tag &gt;</h3>
 
 <p>Utility class to load a read with a StringLoader. The Tag type allows to specify the caching policy. </p>
 
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00193">193</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00194">194</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af3127884a3e5f2b571c9078074f45122"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-BatchType::read_storage_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#af3127884a3e5f2b571c9078074f45122">read_storage</a></td></tr>
-<tr class="separator:af3127884a3e5f2b571c9078074f45122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19866b207bdcdcc0b96a24864b3d2213"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-BatchType::qual_storage_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a19866b207bdcdcc0b96a24864b3d2213">qual_iterator</a></td></tr>
-<tr class="separator:a19866b207bdcdcc0b96a24864b3d2213"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab141a022cb35f360492fd79b9338a35a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1_read_loader.html#af3127884a3e5f2b571c9078074f45122">read_storage</a>, <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a9d6de6432f70a809cec26ed3d9639ee6">io::ReadData::READ_BITS</a>, <br class="typebreak"/>
-<a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a708d8b4eb9bbdb7ae76e2583d87fb536">io::ReadData::READ_BIG_ENDIAN</a>, <br class="typebreak"/>
-Tag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#ab141a022cb35f360492fd79b9338a35a">loader_type</a></td></tr>
-<tr class="separator:ab141a022cb35f360492fd79b9338a35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6693dd82b7c9272642de1a450271f5a"><td class="memItemLeft" align="right" valign="top">typedef loader_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#ad6693dd82b7c9272642de1a450271f5a">read_iterator</a></td></tr>
-<tr class="separator:ad6693dd82b7c9272642de1a450271f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac21d58189605ce32bfbeb99eb7cc6eaf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_read_stream.html">ReadStream</a><br class="typebreak"/>
-&lt; <a class="el" href="structnvbio_1_1_read_loader.html#ad6693dd82b7c9272642de1a450271f5a">read_iterator</a>, <a class="el" href="structnvbio_1_1_read_loader.html#a19866b207bdcdcc0b96a24864b3d2213">qual_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a></td></tr>
-<tr class="separator:ac21d58189605ce32bfbeb99eb7cc6eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af767e1b7c755951b2d5f58af78b9c4e2"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+SequenceDataT::sequence_storage_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#af767e1b7c755951b2d5f58af78b9c4e2">read_storage</a></td></tr>
+<tr class="separator:af767e1b7c755951b2d5f58af78b9c4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821751fb52937122f76952df53ad0aa3"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+SequenceDataT::qual_storage_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a821751fb52937122f76952df53ad0aa3">qual_iterator</a></td></tr>
+<tr class="separator:a821751fb52937122f76952df53ad0aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f17a9d2e2fb15409c25cf9c4f51ad9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1_read_loader.html#af767e1b7c755951b2d5f58af78b9c4e2">read_storage</a>, <br class="typebreak"/>
+SequenceDataT::SEQUENCE_BITS, <br class="typebreak"/>
+SequenceDataT::SEQUENCE_BIG_ENDIAN, <br class="typebreak"/>
+Tag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a08f17a9d2e2fb15409c25cf9c4f51ad9">loader_type</a></td></tr>
+<tr class="separator:a08f17a9d2e2fb15409c25cf9c4f51ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4884e16e5352db164f61d5cdefd1ed2f"><td class="memItemLeft" align="right" valign="top">typedef loader_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a4884e16e5352db164f61d5cdefd1ed2f">read_iterator</a></td></tr>
+<tr class="separator:a4884e16e5352db164f61d5cdefd1ed2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b6f04ab17846ddbd732bdef8344f5b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1_read_stream.html">ReadStream</a><br class="typebreak"/>
+&lt; <a class="el" href="structnvbio_1_1_read_loader.html#a4884e16e5352db164f61d5cdefd1ed2f">read_iterator</a>, <a class="el" href="structnvbio_1_1_read_loader.html#a821751fb52937122f76952df53ad0aa3">qual_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a></td></tr>
+<tr class="separator:ab3b6f04ab17846ddbd732bdef8344f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a219deebd2afbf12c7b8d2cfef2f51c97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a219deebd2afbf12c7b8d2cfef2f51c97">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> BatchType &amp;batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#gaa03f30a78feb0e92d0b688b333867510">DirType</a> dir, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#ga3f02e3fbf08af642d634593980a502a4">ReadType</a> op)</td></tr>
-<tr class="separator:a219deebd2afbf12c7b8d2cfef2f51c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f83577464661b250ac0da4f69a03ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
-<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a3f83577464661b250ac0da4f69a03ea8">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> BatchType &amp;batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#gaa03f30a78feb0e92d0b688b333867510">DirType</a> dir, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#ga3f02e3fbf08af642d634593980a502a4">ReadType</a> op, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 subrange)</td></tr>
-<tr class="separator:a3f83577464661b250ac0da4f69a03ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540a9a5c103a3864b336e1c18d25fe93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a540a9a5c103a3864b336e1c18d25fe93">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SequenceDataT &amp;batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#gaa03f30a78feb0e92d0b688b333867510">DirType</a> dir, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#ga3f02e3fbf08af642d634593980a502a4">ReadType</a> op)</td></tr>
+<tr class="separator:a540a9a5c103a3864b336e1c18d25fe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971989ae9f694e392fd491cb18a25782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <br class="typebreak"/>
+<a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a971989ae9f694e392fd491cb18a25782">load</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SequenceDataT &amp;batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 range, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#gaa03f30a78feb0e92d0b688b333867510">DirType</a> dir, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___utils.html#ga3f02e3fbf08af642d634593980a502a4">ReadType</a> op, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 subrange)</td></tr>
+<tr class="separator:a971989ae9f694e392fd491cb18a25782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:a8115e896f60e4f078ec862515857e042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_read_loader.html#ab141a022cb35f360492fd79b9338a35a">loader_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a8115e896f60e4f078ec862515857e042">loader</a></td></tr>
-<tr class="separator:a8115e896f60e4f078ec862515857e042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37166691c8e99933cd24c8b75ff8237a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_read_loader.html#a08f17a9d2e2fb15409c25cf9c4f51ad9">loader_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1_read_loader.html#a37166691c8e99933cd24c8b75ff8237a">loader</a></td></tr>
+<tr class="separator:a37166691c8e99933cd24c8b75ff8237a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="ab141a022cb35f360492fd79b9338a35a"></a>
+<a class="anchor" id="a08f17a9d2e2fb15409c25cf9c4f51ad9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a>&lt;<a class="el" href="structnvbio_1_1_read_loader.html#af3127884a3e5f2b571c9078074f45122">read_storage</a>, <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a9d6de6432f70a809cec26ed3d9639ee6">io::ReadData::READ_BITS</a>, <a class="el" href="structnvbio_1_1io_1_1_read_data_view.html#a708d8b4eb9bbdb7ae76e2583d87fb536">io::ReadData::READ_BIG_ENDIAN</a>,Tag&gt; <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#ab141a022cb35f360492fd79b9338a35a">loader_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00197">197</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a19866b207bdcdcc0b96a24864b3d2213"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef BatchType::qual_storage_iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#a19866b207bdcdcc0b96a24864b3d2213">qual_iterator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00196">196</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad6693dd82b7c9272642de1a450271f5a"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef loader_type::iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#ad6693dd82b7c9272642de1a450271f5a">read_iterator</a></td>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_packed_string_loader.html">PackedStringLoader</a>&lt;<a class="el" href="structnvbio_1_1_read_loader.html#af767e1b7c755951b2d5f58af78b9c4e2">read_storage</a>, SequenceDataT::SEQUENCE_BITS, SequenceDataT::SEQUENCE_BIG_ENDIAN,Tag&gt; <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#a08f17a9d2e2fb15409c25cf9c4f51ad9">loader_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -199,30 +167,30 @@ template&lt;typename BatchType, typename Tag&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af3127884a3e5f2b571c9078074f45122"></a>
+<a class="anchor" id="a821751fb52937122f76952df53ad0aa3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef BatchType::read_storage_iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#af3127884a3e5f2b571c9078074f45122">read_storage</a></td>
+          <td class="memname">typedef SequenceDataT::qual_storage_iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#a821751fb52937122f76952df53ad0aa3">qual_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00195">195</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00197">197</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac21d58189605ce32bfbeb99eb7cc6eaf"></a>
+<a class="anchor" id="a4884e16e5352db164f61d5cdefd1ed2f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1_read_stream.html">ReadStream</a>&lt;<a class="el" href="structnvbio_1_1_read_loader.html#ad6693dd82b7c9272642de1a450271f5a">read_iterator</a>,<a class="el" href="structnvbio_1_1_read_loader.html#a19866b207bdcdcc0b96a24864b3d2213">qual_iterator</a>&gt; <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a></td>
+          <td class="memname">typedef loader_type::iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#a4884e16e5352db164f61d5cdefd1ed2f">read_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -231,20 +199,52 @@ template&lt;typename BatchType, typename Tag&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a219deebd2afbf12c7b8d2cfef2f51c97"></a>
+<a class="anchor" id="af767e1b7c755951b2d5f58af78b9c4e2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef SequenceDataT::sequence_storage_iterator <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#af767e1b7c755951b2d5f58af78b9c4e2">read_storage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00196">196</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3b6f04ab17846ddbd732bdef8344f5b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1_read_stream.html">ReadStream</a>&lt;<a class="el" href="structnvbio_1_1_read_loader.html#a4884e16e5352db164f61d5cdefd1ed2f">read_iterator</a>,<a class="el" href="structnvbio_1_1_read_loader.html#a821751fb52937122f76952df53ad0aa3">qual_iterator</a>&gt; <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::<a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00200">200</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a540a9a5c103a3864b336e1c18d25fe93"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::load </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> BatchType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SequenceDataT &amp;&#160;</td>
           <td class="paramname"><em>batch</em>, </td>
         </tr>
         <tr>
@@ -279,23 +279,23 @@ template&lt;typename BatchType, typename Tag&gt; </div>
 </div><div class="memdoc">
 <p>load a read </p>
 
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00204">204</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00205">205</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3f83577464661b250ac0da4f69a03ea8"></a>
+<a class="anchor" id="a971989ae9f694e392fd491cb18a25782"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ac21d58189605ce32bfbeb99eb7cc6eaf">string_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::load </td>
+          <td class="memname"><a class="el" href="types_8h.html#a56a96b87facf0565fee0a1fe27ffc2f0">NVBIO_FORCEINLINE</a> <a class="el" href="types_8h.html#aae8f5a3072675fd93df702e927eaf540">NVBIO_HOST_DEVICE</a> <a class="el" href="structnvbio_1_1_read_loader.html#ab3b6f04ab17846ddbd732bdef8344f5b">string_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> BatchType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SequenceDataT &amp;&#160;</td>
           <td class="paramname"><em>batch</em>, </td>
         </tr>
         <tr>
@@ -336,24 +336,24 @@ template&lt;typename BatchType, typename Tag&gt; </div>
 </div><div class="memdoc">
 <p>load a read substring </p>
 
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00219">219</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00220">220</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8115e896f60e4f078ec862515857e042"></a>
+<a class="anchor" id="a37166691c8e99933cd24c8b75ff8237a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BatchType, typename Tag&gt; </div>
+template&lt;typename SequenceDataT, typename Tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1_read_loader.html#ab141a022cb35f360492fd79b9338a35a">loader_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; BatchType, Tag &gt;::loader</td>
+          <td class="memname"><a class="el" href="structnvbio_1_1_read_loader.html#a08f17a9d2e2fb15409c25cf9c4f51ad9">loader_type</a> <a class="el" href="structnvbio_1_1_read_loader.html">nvbio::ReadLoader</a>&lt; SequenceDataT, Tag &gt;::loader</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00232">232</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
+<p>Definition at line <a class="el" href="nvbio_2io_2utils_8h_source.html#l00233">233</a> of file <a class="el" href="nvbio_2io_2utils_8h_source.html">utils.h</a>.</p>
 
 </div>
 </div>
@@ -363,7 +363,7 @@ template&lt;typename BatchType, typename Tag&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:54 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -311,7 +311,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#ac9734bd843a3fafc4d7cbe8064af616e">priv::alloc_storage</a>( <a class="code" href="structnvbio_1_1_string_b_w_t_handler.html#a5818b36d86199a9157bc92b8c223e278">d_block_bwt</a>, n_suffixes );</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="comment">// compute the bwt of the block</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            thrust::device_ptr&lt;const uint32&gt;( d_suffixes ),</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            thrust::device_ptr&lt;const uint32&gt;( d_suffixes ) + n_suffixes,</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="structnvbio_1_1_string_b_w_t_handler.html#a5818b36d86199a9157bc92b8c223e278">d_block_bwt</a>.begin(),</div>
@@ -350,7 +350,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="namespacenvbio_1_1priv.html#ac9734bd843a3fafc4d7cbe8064af616e">priv::alloc_storage</a>( <a class="code" href="structnvbio_1_1_string_b_w_t_handler.html#a5818b36d86199a9157bc92b8c223e278">d_block_bwt</a>, n_suffixes );</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// compute the bwt of the block</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            thrust::device_ptr&lt;const uint32&gt;( d_suffixes ),</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            thrust::device_ptr&lt;const uint32&gt;( d_suffixes ) + n_suffixes,</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <a class="code" href="structnvbio_1_1_string_b_w_t_handler.html#a5818b36d86199a9157bc92b8c223e278">d_block_bwt</a>.begin(),</div>
@@ -552,7 +552,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

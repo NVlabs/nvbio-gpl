@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            in_indices + in_count,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="structnvbio_1_1cuda_1_1_delay_list.html#a236db74ce4b50edbf605ec522aab1dd5">indices</a> + <a class="code" href="structnvbio_1_1cuda_1_1_delay_list.html#ab5f9e4a9a7e7d102f433a9d27446785c">count</a> );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            in_slots,</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            in_slots + in_count,</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="structnvbio_1_1cuda_1_1_delay_list.html#a348ec05e81e60dd817b6fd4947a7ab30">slots</a> + <a class="code" href="structnvbio_1_1cuda_1_1_delay_list.html#ab5f9e4a9a7e7d102f433a9d27446785c">count</a>,</div>
@@ -370,7 +370,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="comment">// extract the given radix word from each of the partially sorted suffixes and merge it with the existing keys</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <a class="code" href="structnvbio_1_1priv_1_1string__suffix__word__functor.html">priv::string_suffix_word_functor&lt;SYMBOL_SIZE,WORD_BITS,DOLLAR_BITS,string_type,uint32&gt;</a> word_functor( string_len, <span class="keywordtype">string</span>, word_idx );</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        thrust::transform(</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <a class="code" href="group___primitives.html#ga0b41de45962c3b82d1fb26c5aa4b3c6e">thrust::transform</a>(</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            d_indices.begin(),</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            d_indices.begin() + n_active_suffixes,</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            d_keys.begin(),</div>
@@ -419,7 +419,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="comment">// perform a scan to &quot;compress&quot; the keys in place, removing holes between them and reducing their entropy;</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="comment">// this operation will produce a 1-based vector of contiguous values of the kind (1, 1, 2, 3, 3, 3, ... )</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="group___c_u_d_a_primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            n_active_suffixes,</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( d_segment_flags.begin(), <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint8,uint32&gt;</a>() ),</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            d_keys.begin(),</div>
@@ -470,7 +470,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            d_copy_flags.begin(),</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <a class="code" href="structnvbio_1_1priv_1_1remove__singletons.html">priv::remove_singletons</a>() );</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_partials = <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_partials = <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            n_active_suffixes,</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( d_copy_flags.begin() + 1u, <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint8,uint32&gt;</a>() ),</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            thrust::plus&lt;uint32&gt;(),</div>
@@ -494,7 +494,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            thrust::device_vector&lt;uint32&gt;&amp; d_temp_indices = d_keys;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            <span class="comment">// now keep only the indices we are interested in</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                n_active_suffixes,</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                d_indices.begin(),</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                d_copy_flags.begin() + 1u,</div>
@@ -505,7 +505,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            d_indices.swap( d_temp_indices );</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="comment">// as well as their slots</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                n_active_suffixes,</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                d_active_slots.begin(),</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                d_copy_flags.begin() + 1u,</div>
@@ -516,7 +516,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            d_active_slots.swap( d_temp_indices );</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            <span class="comment">// and the segment flags</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_active = <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                n_active_suffixes,</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                d_segment_flags.begin(),</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                d_copy_flags.begin() + 1u,</div>
@@ -734,7 +734,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                <span class="comment">// perform a scan to &quot;compress&quot; the keys in place, removing holes between them and reducing their entropy;</span></div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                <span class="comment">// this operation will produce a 1-based vector of contiguous values of the kind (1, 1, 2, 3, 3, 3, ... )</span></div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                <a class="code" href="group___primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                <a class="code" href="group___c_u_d_a_primitives.html#ga08bb5cd881e0a25f2bd22a3fbe12c49b">cuda::inclusive_scan</a>(</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                    n_active_strings,</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                    <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( d_segment_flags.begin(), <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint8,uint32&gt;</a>() ),</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                    d_keys.begin(),</div>
@@ -802,7 +802,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                    <a class="code" href="structnvbio_1_1priv_1_1remove__singletons.html">priv::remove_singletons</a>() );</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_partials = <a class="code" href="group___primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_partials = <a class="code" href="group___c_u_d_a_primitives.html#gaac50886e808acc7d0b304c3a2b3f3fee">cuda::reduce</a>(</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                    n_active_strings,</div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                    <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( d_copy_flags.begin() + 1u, <a class="code" href="structnvbio_1_1priv_1_1cast__functor.html">priv::cast_functor&lt;uint8,uint32&gt;</a>() ),</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                    thrust::plus&lt;uint32&gt;(),</div>
@@ -835,7 +835,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                    thrust::device_vector&lt;uint32&gt;&amp; d_temp_indices = d_keys;</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                    <span class="comment">// now keep only the indices we are interested in</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                    <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                    <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                        n_active_strings,</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                        d_indices.begin(),</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                        d_copy_flags.begin() + 1u,</div>
@@ -845,7 +845,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                    d_indices.swap( d_temp_indices );</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                    <span class="comment">// as well as their slots</span></div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                    <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                    <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                        n_active_strings,</div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                        d_active_slots.begin(),</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                        d_copy_flags.begin() + 1u,</div>
@@ -855,7 +855,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                    d_active_slots.swap( d_temp_indices );</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                    <span class="comment">// and the segment flags</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                    <a class="code" href="group___primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                    <a class="code" href="group___c_u_d_a_primitives.html#ga6353fb458a712350e26fb6313d5cd33b">cuda::copy_flagged</a>(</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                        n_active_strings,</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                        d_segment_flags.begin(),</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                        d_copy_flags.begin() + 1u,</div>
@@ -893,7 +893,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:46 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

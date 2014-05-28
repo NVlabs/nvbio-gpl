@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;
     typename stream_type, 
-    typename algorithm_type = ThreadParallelScheduler&gt;<br/>
+    typename algorithm_type = DeviceThreadScheduler&gt;<br/>
 struct nvbio::aln::BatchedAlignmentScore&lt; stream_type, algorithm_type &gt;</h3>
 
 <p>Execution context for a batch of alignment jobs.</p>
@@ -180,7 +180,7 @@ struct nvbio::aln::BatchedAlignmentScore&lt; stream_type, algorithm_type &gt;</h
 <li>allow the user to perform string caching in registers/local memory: in fact, schedulers will instantiate the strings_type class on the stack, thus guaranteeing that any user-defined private data will be placed either in registers or local memory. The stream_type::load_strings() method is then free to use such private data to implement a cache for any of the involved strings. With this design cached strings will then be allowed to just contain pointers to the caches, making sure that they can be passed by value without inadvertedly copying the caches themselves. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="batched_8h_source.html#l00260">260</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
+<p>Definition at line <a class="el" href="batched_8h_source.html#l00274">274</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="batched_8h_source.html">batched.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -210,7 +210,7 @@ Static Public Methods</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename stream_type, typename algorithm_type = ThreadParallelScheduler&gt; </div>
+template&lt;typename stream_type, typename algorithm_type = DeviceThreadScheduler&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">typedef stream_type::aligner_type <a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html">nvbio::aln::BatchedAlignmentScore</a>&lt; stream_type, algorithm_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html#ae65b4d31b34971d25112c37557ac4255">aligner_type</a></td>
@@ -218,7 +218,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched_8h_source.html#l00262">262</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
+<p>Definition at line <a class="el" href="batched_8h_source.html#l00276">276</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename stream_type, typename algorithm_type = ThreadParallelScheduler&gt; </div>
+template&lt;typename stream_type, typename algorithm_type = DeviceThreadScheduler&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="structnvbio_1_1aln_1_1checkpoint__storage__type.html">checkpoint_storage_type</a>&lt;<a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html#ae65b4d31b34971d25112c37557ac4255">aligner_type</a>&gt;::type <a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html">nvbio::aln::BatchedAlignmentScore</a>&lt; stream_type, algorithm_type &gt;::<a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html#af42ea152aa04064b8e3bee37e6d1a199">cell_type</a></td>
@@ -234,7 +234,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="batched_8h_source.html#l00263">263</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
+<p>Definition at line <a class="el" href="batched_8h_source.html#l00277">277</a> of file <a class="el" href="batched_8h_source.html">batched.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename stream_type, typename algorithm_type = ThreadParallelScheduler&gt; </div>
+template&lt;typename stream_type, typename algorithm_type = DeviceThreadScheduler&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="structnvbio_1_1aln_1_1_batched_alignment_score.html">nvbio::aln::BatchedAlignmentScore</a>&lt; stream_type, algorithm_type &gt;::enact </td>
@@ -278,7 +278,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename stream_type, typename algorithm_type = ThreadParallelScheduler&gt; </div>
+template&lt;typename stream_type, typename algorithm_type = DeviceThreadScheduler&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -321,7 +321,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename stream_type, typename algorithm_type = ThreadParallelScheduler&gt; </div>
+template&lt;typename stream_type, typename algorithm_type = DeviceThreadScheduler&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -366,7 +366,7 @@ template&lt;typename stream_type, typename algorithm_type = ThreadParallelSchedu
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:52:05 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:18:37 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

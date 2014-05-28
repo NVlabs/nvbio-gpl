@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">const</span> setup_I_type setup_I( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( *<span class="keyword">this</span> ), string_len, <span class="keywordtype">string</span> );</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// set the bits in I corresponding to the used qgram slots</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    thrust::for_each(</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">thrust::for_each</a>(</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0),</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0) + string_len,</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        setup_I );</div>
@@ -317,7 +317,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">// compute the exclusive prefix sum of the popcount of the words in I</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        n_qblocks + 1u,</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="group___iterators.html#gac20c4f47ef134b249d6e60fca64aa196">thrust::make_transform_iterator</a>( <a class="code" href="structnvbio_1_1_q_group_index_device.html#a56bc056bbec1b17ebe8fc6c71056a480">I</a>.begin(), <a class="code" href="structnvbio_1_1popc__functor.html">popc_functor&lt;uint32&gt;</a>() ),</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="structnvbio_1_1_q_group_index_device.html#a9d583c08662a21ee729336ba64c50719">S</a>.begin(),</div>
@@ -340,13 +340,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> setup_SS_type setup_SS( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( *<span class="keyword">this</span> ), string_len, <span class="keywordtype">string</span> );</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    thrust::for_each(</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">thrust::for_each</a>(</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0),</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0) + string_len,</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        setup_SS );</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// compute the exclusive prefix sum of SS</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="group___primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="group___c_u_d_a_primitives.html#gad9cf6d77687d16283cbacdcb4fd9c878">cuda::exclusive_scan</a>(</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        n_unique_qgrams + 1u,</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="structnvbio_1_1_q_group_index_device.html#ac2647fab5049dbf13e4b3e7d7cb54349">SS</a>.begin(),</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="structnvbio_1_1_q_group_index_device.html#ac2647fab5049dbf13e4b3e7d7cb54349">SS</a>.begin(),</div>
@@ -364,7 +364,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">const</span> setup_P_type setup_P( <a class="code" href="group___packed_streams.html#gaa8a57b67f0319432f01a849df6699bfe">nvbio::plain_view</a>( *<span class="keyword">this</span> ), string_len, <span class="keywordtype">string</span> );</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    thrust::for_each(</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="group___primitives.html#ga5699b8fcc12ae5fb037938361b485f62">thrust::for_each</a>(</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0),</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        thrust::make_counting_iterator&lt;uint32&gt;(0) + string_len,</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        setup_P );</div>
@@ -381,7 +381,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:25 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:45 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -96,10 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">alignment.h File Reference</div>  </div>
 </div><!--header-->
@@ -109,153 +106,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="nvbio_2alignment_2alignment_8h_source.html">nvbio/alignment/alignment.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="batched_8h_source.html">nvbio/alignment/batched.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="string__set_8h_source.html">nvbio/strings/string_set.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="reads_8h_source.html">nvbio/io/reads/reads.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="nvbio_2io_2utils_8h_source.html">nvbio/io/utils.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="sequence_8h_source.html">nvbio/io/sequence/sequence.h</a>&gt;</code><br/>
 </div>
 <p><a href="examples_2qmap_2alignment_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_alignment_stream.html">AlignmentStream&lt; BAND_LEN, t_aligner_type, cache_type &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structread__infixes.html">read_infixes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_alignment_stream_1_1context__type.html">AlignmentStream&lt; BAND_LEN, t_aligner_type, cache_type &gt;::context_type</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgenome__infixes.html">genome_infixes&lt; BAND_LEN &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_alignment_stream_1_1strings__type.html">AlignmentStream&lt; BAND_LEN, t_aligner_type, cache_type &gt;::strings_type</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsink__score.html">sink_score</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:af0317a17866eed1742fedb0592d276e4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1lmem__cache__tag.html">nvbio::lmem_cache_tag</a><br class="typebreak"/>
-&lt; <a class="el" href="examples_2qmap_2alignment_8h.html#a4caf8d8f829279fba122163d961608a4aa17963a36c84f25aeaea4b6938a3b400">CACHE_SIZE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="examples_2qmap_2alignment_8h.html#af0317a17866eed1742fedb0592d276e4">lmem_cache_tag_type</a></td></tr>
-<tr class="separator:af0317a17866eed1742fedb0592d276e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28f689e83db4b4f03a4c8e7ea721a25"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1uncached__tag.html">nvbio::uncached_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="examples_2qmap_2alignment_8h.html#ae28f689e83db4b4f03a4c8e7ea721a25">uncached_tag_type</a></td></tr>
-<tr class="separator:ae28f689e83db4b4f03a4c8e7ea721a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a4caf8d8f829279fba122163d961608a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="examples_2qmap_2alignment_8h.html#a4caf8d8f829279fba122163d961608a4aa17963a36c84f25aeaea4b6938a3b400">CACHE_SIZE</a> = 64
- }</td></tr>
-<tr class="separator:a4caf8d8f829279fba122163d961608a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0ed5761fb10f40e29c3735ae50f74f79"><td class="memTemplParams" colspan="2">template&lt;typename aligner_type , typename genome_string &gt; </td></tr>
-<tr class="memitem:a0ed5761fb10f40e29c3735ae50f74f79"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="examples_2qmap_2alignment_8h.html#a0ed5761fb10f40e29c3735ae50f74f79">align</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type aligner, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_tasks, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 *diagonals, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> io::ReadDataDevice::const_plain_view_type reads, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> genome_len, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> genome_string genome, <a class="el" href="group___basic.html#ga95d7db4c9851c3454ebae79b43d4375f">int16</a> *scores)</td></tr>
-<tr class="separator:a0ed5761fb10f40e29c3735ae50f74f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="af0317a17866eed1742fedb0592d276e4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1lmem__cache__tag.html">nvbio::lmem_cache_tag</a>&lt;<a class="el" href="examples_2qmap_2alignment_8h.html#a4caf8d8f829279fba122163d961608a4aa17963a36c84f25aeaea4b6938a3b400">CACHE_SIZE</a>&gt; <a class="el" href="examples_2qmap_2alignment_8h.html#af0317a17866eed1742fedb0592d276e4">lmem_cache_tag_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="examples_2qmap_2alignment_8h_source.html#l00035">35</a> of file <a class="el" href="examples_2qmap_2alignment_8h_source.html">alignment.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae28f689e83db4b4f03a4c8e7ea721a25"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structnvbio_1_1uncached__tag.html">nvbio::uncached_tag</a> <a class="el" href="examples_2qmap_2alignment_8h.html#ae28f689e83db4b4f03a4c8e7ea721a25">uncached_tag_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="examples_2qmap_2alignment_8h_source.html#l00036">36</a> of file <a class="el" href="examples_2qmap_2alignment_8h_source.html">alignment.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a4caf8d8f829279fba122163d961608a4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a4caf8d8f829279fba122163d961608a4aa17963a36c84f25aeaea4b6938a3b400"></a>CACHE_SIZE</em>&nbsp;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="examples_2qmap_2alignment_8h_source.html#l00034">34</a> of file <a class="el" href="examples_2qmap_2alignment_8h_source.html">alignment.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a0ed5761fb10f40e29c3735ae50f74f79"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename aligner_type , typename genome_string &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void align </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> aligner_type&#160;</td>
-          <td class="paramname"><em>aligner</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
-          <td class="paramname"><em>n_tasks</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint2 *&#160;</td>
-          <td class="paramname"><em>diagonals</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> io::ReadDataDevice::const_plain_view_type&#160;</td>
-          <td class="paramname"><em>reads</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td>
-          <td class="paramname"><em>genome_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> genome_string&#160;</td>
-          <td class="paramname"><em>genome</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group___basic.html#ga95d7db4c9851c3454ebae79b43d4375f">int16</a> *&#160;</td>
-          <td class="paramname"><em>scores</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="examples_2qmap_2alignment_8h_source.html#l00191">191</a> of file <a class="el" href="examples_2qmap_2alignment_8h_source.html">alignment.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:30 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:50 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        memset(results, 0, <span class="keyword">sizeof</span>(T) * m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#aff325d59fcfb0a8eef16a10e23b6660c">height</a>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> row = 0; row &lt; m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#aff325d59fcfb0a8eef16a10e23b6660c">height</a>; ++row) {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                T product = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">int</span> begin = m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#a7d0f74e589a773557e74fb5da1ad8978">csr</a>[row];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a> = m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#a7d0f74e589a773557e74fb5da1ad8978">csr</a>[row];</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordtype">int</span> end = (row + 1 &lt; m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#aff325d59fcfb0a8eef16a10e23b6660c">height</a>) ? m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#a7d0f74e589a773557e74fb5da1ad8978">csr</a>[row + 1] : m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#a1f717355c4638d245885ec8774b73e90">nz</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = begin; i &lt; end; ++i)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        product += (T)m.<a class="code" href="structmgpu_1_1_sparse_matrix.html#a2b21c5456a18ffaecf5359c5b4c167e0">matrix</a>[i];</div>
@@ -226,7 +226,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

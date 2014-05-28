@@ -365,9 +365,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00470"></a><span class="lineno"><a class="code" href="group___priority_deques.html#gae5dae1160f35d41222627ca27b4375e1">  470</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classboost_1_1container_1_1priority__deque.html#a261e24edd6335789dfc3227ce8e6623d" title="Modifies a specified element of the deque. ">priority_deque&lt;T, S, C&gt;::update</a> (<a class="code" href="classnvbio_1_1priority__deque.html#a4e3cc0939b2501f2fa6081a44add7c58">const_iterator</a> random_it,</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                                      <span class="keyword">const</span> <a class="code" href="classnvbio_1_1priority__deque.html#a40ada0cc2ac2956932a9e51e24f8aa18">value_type</a>&amp; value)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;{</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  <span class="keyword">const</span> <a class="code" href="classnvbio_1_1priority__deque.html#a4b7469c17f342211e23a29b64da0e549">difference_type</a> index = random_it - begin();</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  <span class="keyword">const</span> <a class="code" href="classnvbio_1_1priority__deque.html#a4b7469c17f342211e23a29b64da0e549">difference_type</a> index = random_it - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>();</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <a class="code" href="types_8h.html#a90802d68943474d65195390dc13e7442">NVBIO_CUDA_DEBUG_ASSERT</a>((0 &lt;= index) &amp;&amp;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    (index &lt; end() - begin()), <span class="stringliteral">&quot;Iterator out of bounds; can&#39;t set element.&quot;</span>);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    (index &lt; end() - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>()), <span class="stringliteral">&quot;Iterator out of bounds; can&#39;t set element.&quot;</span>);</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">//  Providing the strong guarantee would require saving a copy.</span></div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  *(sequence_.begin() + index) = value;</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  <a class="code" href="namespaceboost_1_1heap.html#afc59cea020b54b2141051c10272779cf" title="Restores the interval-heap property if one element violates it. ">heap::update_interval_heap</a>(sequence_.begin(),sequence_.end(),index,compare_);</div>
@@ -375,9 +375,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Sequence, <span class="keyword">typename</span> Compare&gt;</div>
 <div class="line"><a name="l00489"></a><span class="lineno"><a class="code" href="group___priority_deques.html#gae127723c54667ebb08a68cc18a65f289">  489</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classboost_1_1container_1_1priority__deque.html#a375cff103c77836793a4ef7dd5a81614" title="Removes a specified element from the deque. ">priority_deque&lt;T, Sequence, Compare&gt;::erase</a> (<a class="code" href="classnvbio_1_1priority__deque.html#a4e3cc0939b2501f2fa6081a44add7c58">const_iterator</a> random_it) {</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keyword">const</span> <a class="code" href="classnvbio_1_1priority__deque.html#a4b7469c17f342211e23a29b64da0e549">difference_type</a> index = random_it - begin();</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keyword">const</span> <a class="code" href="classnvbio_1_1priority__deque.html#a4b7469c17f342211e23a29b64da0e549">difference_type</a> index = random_it - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>();</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <a class="code" href="types_8h.html#a90802d68943474d65195390dc13e7442">NVBIO_CUDA_DEBUG_ASSERT</a>((0 &lt;= index) &amp;&amp;</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    (index &lt; end() - begin()), <span class="stringliteral">&quot;Iterator out of bounds; can&#39;t erase element.&quot;</span>);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    (index &lt; end() - <a class="code" href="namespacenvbio.html#ad919ffbba27decdc64baeb7660df6d2b">begin</a>()), <span class="stringliteral">&quot;Iterator out of bounds; can&#39;t erase element.&quot;</span>);</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;  <a class="code" href="namespaceboost_1_1heap.html#aa978e8ced30dadc9cde9786189306f4a" title="Moves an element to the back of the range for popping. ">heap::pop_interval_heap</a>(sequence_.begin(), sequence_.end(),index,compare_);</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  sequence_.pop_back();</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
@@ -387,7 +387,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:22 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:41 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -173,6 +173,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="group___reads_i_o_detail.html#gabbc7d87b211085736272607d9fb21dd8">nvbio::io::ReadDataFile_FASTQ_gz</a>
 , <a class="el" href="structnvbio_1_1io_1_1_read_data_file___t_x_t.html#ab0b5769eab1a6f83b54d1ce40124fead">nvbio::io::ReadDataFile_TXT</a>
 , <a class="el" href="group___reads_i_o_detail.html#gab9116ca7d565a7cf3b3a6eae12b90103">nvbio::io::ReadDataFile_TXT_gz</a>
+, <a class="el" href="structnvbio_1_1io_1_1_sequence_data_file___f_a_s_t_q__parser.html#a5d95a0afa652a7a41e7c37f72260d309">nvbio::io::SequenceDataFile_FASTQ_parser</a>
+, <a class="el" href="group___sequence_i_o_detail.html#gab24a861877c075c0666c6634b60e0f45">nvbio::io::SequenceDataFile_FASTQ_gz</a>
+, <a class="el" href="structnvbio_1_1io_1_1_sequence_data_file___t_x_t.html#ae2b9d244e3deb1b9e05f8b5f04c35444">nvbio::io::SequenceDataFile_TXT</a>
+, <a class="el" href="group___sequence_i_o_detail.html#ga00371c30a3f9a7a767f6d83af0aa2f09">nvbio::io::SequenceDataFile_TXT_gz</a>
 </li>
 <li>Filter()
 : <a class="el" href="structnvbio_1_1alndiff_1_1_filter.html#a75b08592a3208921f2b38c16555eab8c">nvbio::alndiff::Filter</a>
@@ -184,9 +188,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structnvbio_1_1qgram_1_1filter__results_3_01qgram__index__type_00_01index__iterator_00_01uint2_01_4.html#a810399744c2d3b3cf815f251f41461ed">nvbio::qgram::filter_results&lt; qgram_index_type, index_iterator, uint2 &gt;</a>
 </li>
 <li>filtered()
-: <a class="el" href="structnvbio_1_1alndiff_1_1_filter.html#ab34031ed1feadf207abce2834bb066fe">nvbio::alndiff::Filter</a>
-, <a class="el" href="structnvbio_1_1alndiff_1_1_p_e_analyzer.html#a92296c31e935893128f06916ec1cab8d">nvbio::alndiff::PEAnalyzer</a>
+: <a class="el" href="structnvbio_1_1alndiff_1_1_p_e_analyzer.html#a92296c31e935893128f06916ec1cab8d">nvbio::alndiff::PEAnalyzer</a>
 , <a class="el" href="structnvbio_1_1alndiff_1_1_s_e_analyzer.html#a9b17fa207a6fbaba6267557edbe72a6c">nvbio::alndiff::SEAnalyzer</a>
+, <a class="el" href="structnvbio_1_1alndiff_1_1_filter.html#ab34031ed1feadf207abce2834bb066fe">nvbio::alndiff::Filter</a>
 </li>
 <li>finish()
 : <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1detail_1_1_best_traceback_stream.html#a72e5328d9b234354552835cdd9b496c4">nvbio::bowtie2::cuda::detail::BestTracebackStream&lt; ALN_IDX, AlignerType, PipelineType &gt;</a>
@@ -201,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structnvbio_1_1_m_e_m_filter_3_01device__tag_00_01fm__index__type_01_4.html#a185baeb7d2946ae647b8e8a80c2b4051">nvbio::MEMFilter&lt; device_tag, fm_index_type &gt;</a>
 </li>
 <li>flags()
-: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a666ab3966981954b6563e38233077394">nvbio::io::FMIndexData</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_core.html#a7e34e157f14b6a81e8a6b3a750732287">nvbio::io::FMIndexDataCore</a>
 </li>
 <li>flatten()
 : <a class="el" href="structnvbio_1_1priv_1_1_set_suffix_flattener.html#acf5222466d5f170b6a9fc57531145439">nvbio::priv::SetSuffixFlattener&lt; SYMBOL_SIZE &gt;</a>
@@ -215,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="struct_bam_tools_1_1_bgzf_data.html#aac21388a97f46c5a0c9cdba47bac1304">BamTools::BgzfData</a>
 </li>
 <li>fm_index()
-: <a class="el" href="structnvbio_1_1fm__index.html#aeed546a0d3821d99c42a301a1a9e8982">nvbio::fm_index&lt; TRankDictionary, TSuffixArray &gt;</a>
+: <a class="el" href="structnvbio_1_1fm__index.html#a01698715eac65da56962f4b3ea8865c6">nvbio::fm_index&lt; TRankDictionary, TSuffixArray &gt;</a>
 </li>
 <li>fm_index_device_data()
 : <a class="el" href="structnvbio_1_1fm__index__device__data.html#a53c4cc769520258df72534d45d25c78a">nvbio::fm_index_device_data&lt; OCC_INT &gt;</a>
@@ -223,8 +227,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FMIndexData()
 : <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data.html#a0c81792840e3f4041e652d4c069e7560">nvbio::io::FMIndexData</a>
 </li>
+<li>FMIndexDataCore()
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_core.html#ae2c14b6025660f561a0d664ce2286c4e">nvbio::io::FMIndexDataCore</a>
+</li>
 <li>FMIndexDataDevice()
-: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html#a22b24473ef11f8e6c63d36343de1a0ad">nvbio::io::FMIndexDataDevice</a>
+: <a class="el" href="structnvbio_1_1io_1_1_f_m_index_data_device.html#a4bfec3db66c3ba5691f74ee2a17cdfdf">nvbio::io::FMIndexDataDevice</a>
 </li>
 <li>FormatOpMarkArray()
 : <a class="el" href="structmgpu_1_1_format_op_mark_array.html#af47036e5866501ba0ccff8821f6fccf2">mgpu::FormatOpMarkArray</a>
@@ -236,25 +243,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structmgpu_1_1_format_op_printf.html#aa422586edbde3b3bcc9c02f541c3fc95">mgpu::FormatOpPrintf</a>
 </li>
 <li>Free()
-: <a class="el" href="classmgpu_1_1_cuda_alloc_buckets.html#acbbf67a3b332ac5d25c196c9262dafa2">mgpu::CudaAllocBuckets</a>
+: <a class="el" href="classmgpu_1_1_cuda_alloc.html#aac9a5b430e289f9dc01b42145dcf6793">mgpu::CudaAlloc</a>
+, <a class="el" href="classmgpu_1_1_cuda_alloc_buckets.html#acbbf67a3b332ac5d25c196c9262dafa2">mgpu::CudaAllocBuckets</a>
 , <a class="el" href="classmgpu_1_1_cuda_alloc_simple.html#a9e1b0816774f9068a2b9251e4ef4c977">mgpu::CudaAllocSimple</a>
-, <a class="el" href="classmgpu_1_1_cuda_alloc.html#aac9a5b430e289f9dc01b42145dcf6793">mgpu::CudaAlloc</a>
 </li>
 <li>FromDevice()
-: <a class="el" href="classmgpu_1_1_cuda_device_mem.html#a0b79ccfcb10f48bc11116f677e1cabd6">mgpu::CudaDeviceMem&lt; T &gt;</a>
+: <a class="el" href="classmgpu_1_1_cuda_device_mem.html#a8abb3184655f6f866a0b11a1050f085d">mgpu::CudaDeviceMem&lt; T &gt;</a>
 </li>
 <li>FromHost()
-: <a class="el" href="classmgpu_1_1_cuda_device_mem.html#ade6e6f387cf0fd332d113e9c4cb1ffae">mgpu::CudaDeviceMem&lt; T &gt;</a>
+: <a class="el" href="classmgpu_1_1_cuda_device_mem.html#aa061252010d857ef97a52e77dfe44c10">mgpu::CudaDeviceMem&lt; T &gt;</a>
 </li>
 <li>front()
-: <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit.html#aa7900ff997b2ed79f612d3667945fb02">nvbio::bowtie2::cuda::SeedHit</a>
+: <a class="el" href="structnvbio_1_1vector__view.html#aad945b2957a3559e96578b0d80f9843f">nvbio::vector_view&lt; Iterator, IndexType &gt;</a>
+, <a class="el" href="structnvbio_1_1bowtie2_1_1cuda_1_1_seed_hit.html#aa7900ff997b2ed79f612d3667945fb02">nvbio::bowtie2::cuda::SeedHit</a>
 , <a class="el" href="structnvbio_1_1vector__view.html#a41d7069ce7648a516342cc1c41a3e240">nvbio::vector_view&lt; Iterator, IndexType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:52:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:19:16 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

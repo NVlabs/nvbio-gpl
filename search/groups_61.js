@@ -7,5 +7,6 @@ var searchData=
   ['alignmentdetail',['AlignmentDetail',['../group___alignment_detail.html',1,'']]],
   ['alignment_20sinks',['Alignment Sinks',['../group___alignment_sink.html',1,'']]],
   ['alignment_20type',['Alignment Type',['../group___alignment_type_module.html',1,'']]],
+  ['alphabets',['Alphabets',['../group___alphabets_module.html',1,'']]],
   ['atomics',['Atomics',['../group___atomics.html',1,'']]]
 ];

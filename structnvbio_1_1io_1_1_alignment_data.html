@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-static-methods">Static Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
@@ -107,16 +108,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><p>Utility struct to gather all data related to a given alignment. This breaks out the alignment data for a given alignment by setting up pointers to the relevant bits of data pulled from the GPU buffers. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00136">136</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00139">139</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="output__types_8h_source.html">output_types.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a122a45f7995e1cb70f9f52f598dbc7ac"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a122a45f7995e1cb70f9f52f598dbc7ac">read_data_type</a></td></tr>
+<tr class="separator:a122a45f7995e1cb70f9f52f598dbc7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0c8bb262197c4702ef4c1f44703cef"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html">io::SequenceDataAccess</a><br class="typebreak"/>
+&lt; <a class="el" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a312b63ba76d209928476bcefde8f124d">DNA_N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#aba0c8bb262197c4702ef4c1f44703cef">read_access_type</a></td></tr>
+<tr class="separator:aba0c8bb262197c4702ef4c1f44703cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f794c02f382798998de9e32afcda85"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html#a2eb0369c3b341418f5772d85a6c8d4e2">read_access_type::sequence_stream_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ab8f794c02f382798998de9e32afcda85">read_type</a></td></tr>
+<tr class="separator:ab8f794c02f382798998de9e32afcda85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
 <tr class="memitem:a88d20a16c5a282991822c86461f9b6a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a88d20a16c5a282991822c86461f9b6a6">AlignmentData</a> ()</td></tr>
 <tr class="separator:a88d20a16c5a282991822c86461f9b6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3afd07147bbac580b9b0e0d386303c5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a3afd07147bbac580b9b0e0d386303c5b">AlignmentData</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_alignment.html">Alignment</a> *<a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a19dd66f76b3b2790af722b06f9d84cf3">best</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_alignment.html">Alignment</a> *<a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#aadcbd77769b7e8008a35b650325d3a2c">second_best</a>, <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_id, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a> *read_data_batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html">HostCigarArray</a> *cigar_array, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#gae893b5cb9b0ad09021e9c9ba8a6d4499">HostMdsArray</a> *mds_array)</td></tr>
-<tr class="separator:a3afd07147bbac580b9b0e0d386303c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde553c9869a467692edd3d527bb7ac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#adde553c9869a467692edd3d527bb7ac4">AlignmentData</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_alignment.html">Alignment</a> *<a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a19dd66f76b3b2790af722b06f9d84cf3">best</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_alignment.html">Alignment</a> *<a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#aadcbd77769b7e8008a35b650325d3a2c">second_best</a>, <a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> read_id, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a> *read_data_batch, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html">HostCigarArray</a> *cigar_array, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#gae893b5cb9b0ad09021e9c9ba8a6d4499">HostMdsArray</a> *mds_array)</td></tr>
+<tr class="separator:adde553c9869a467692edd3d527bb7ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Methods</h2></td></tr>
@@ -137,8 +149,8 @@ Public Members</h2></td></tr>
 <tr class="memitem:ac2f0e13699d58e8c7b54077f54ffde93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ac2f0e13699d58e8c7b54077f54ffde93">read_id_p</a></td></tr>
 <tr class="memdesc:ac2f0e13699d58e8c7b54077f54ffde93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The read id of this alignment within the batch.  <a href="#ac2f0e13699d58e8c7b54077f54ffde93">More...</a><br/></td></tr>
 <tr class="separator:ac2f0e13699d58e8c7b54077f54ffde93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75fff25ba42abe5d25cb00a13a9be826"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a75fff25ba42abe5d25cb00a13a9be826">read_data_batch_p</a></td></tr>
-<tr class="separator:a75fff25ba42abe5d25cb00a13a9be826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5bfb68c8eafb8a8609300bf0283459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#acf5bfb68c8eafb8a8609300bf0283459">read_data_batch_p</a></td></tr>
+<tr class="separator:acf5bfb68c8eafb8a8609300bf0283459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4502903dc50492b48d4c9db25c1d6c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_host_cigar_array.html">HostCigarArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ab4502903dc50492b48d4c9db25c1d6c6">cigar_array_p</a></td></tr>
 <tr class="separator:ab4502903dc50492b48d4c9db25c1d6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3923c1cd2dbc56e8c9e8c23bcea508b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___output.html#gae893b5cb9b0ad09021e9c9ba8a6d4499">HostMdsArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#af3923c1cd2dbc56e8c9e8c23bcea508b">mds_array_p</a></td></tr>
@@ -152,9 +164,9 @@ Public Members</h2></td></tr>
 <tr class="memitem:af55bd7e8ffae4e9c1f87b2f273fe8252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#af55bd7e8ffae4e9c1f87b2f273fe8252">read_name</a></td></tr>
 <tr class="memdesc:af55bd7e8ffae4e9c1f87b2f273fe8252"><td class="mdescLeft">&#160;</td><td class="mdescRight">read name  <a href="#af55bd7e8ffae4e9c1f87b2f273fe8252">More...</a><br/></td></tr>
 <tr class="separator:af55bd7e8ffae4e9c1f87b2f273fe8252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064593b1b233de167b8f1bbcc6a781d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">io::ReadData::const_read_stream_type::iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a064593b1b233de167b8f1bbcc6a781d6">read_data</a></td></tr>
-<tr class="memdesc:a064593b1b233de167b8f1bbcc6a781d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The iterator for the read data, acts as an array of uint8.  <a href="#a064593b1b233de167b8f1bbcc6a781d6">More...</a><br/></td></tr>
-<tr class="separator:a064593b1b233de167b8f1bbcc6a781d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76eeb9002fa86de67fdd0691958f2dee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ab8f794c02f382798998de9e32afcda85">read_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a76eeb9002fa86de67fdd0691958f2dee">read_data</a></td></tr>
+<tr class="memdesc:a76eeb9002fa86de67fdd0691958f2dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The iterator for the read data, acts as an array of uint8.  <a href="#a76eeb9002fa86de67fdd0691958f2dee">More...</a><br/></td></tr>
+<tr class="separator:a76eeb9002fa86de67fdd0691958f2dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb9532353eaf86a70985472578f81d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#abb9532353eaf86a70985472578f81d0d">qual</a></td></tr>
 <tr class="memdesc:abb9532353eaf86a70985472578f81d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">quality data  <a href="#abb9532353eaf86a70985472578f81d0d">More...</a><br/></td></tr>
 <tr class="separator:abb9532353eaf86a70985472578f81d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,6 +182,49 @@ Public Members</h2></td></tr>
 <tr class="memdesc:a4c05025b90a0e9b9db3de2333a45ab68"><td class="mdescLeft">&#160;</td><td class="mdescRight">MDS vector.  <a href="#a4c05025b90a0e9b9db3de2333a45ab68">More...</a><br/></td></tr>
 <tr class="separator:a4c05025b90a0e9b9db3de2333a45ab68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aba0c8bb262197c4702ef4c1f44703cef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html">io::SequenceDataAccess</a>&lt;<a class="el" href="group___alphabets_module.html#ggacd06da18687b2a345bef56a9fdad1a48a312b63ba76d209928476bcefde8f124d">DNA_N</a>&gt; <a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#aba0c8bb262197c4702ef4c1f44703cef">nvbio::io::AlignmentData::read_access_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00142">142</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a122a45f7995e1cb70f9f52f598dbc7ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a> <a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#a122a45f7995e1cb70f9f52f598dbc7ac">nvbio::io::AlignmentData::read_data_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00141">141</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8f794c02f382798998de9e32afcda85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structnvbio_1_1io_1_1_sequence_data_access.html#a2eb0369c3b341418f5772d85a6c8d4e2">read_access_type::sequence_stream_type</a> <a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ab8f794c02f382798998de9e32afcda85">nvbio::io::AlignmentData::read_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00143">143</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a88d20a16c5a282991822c86461f9b6a6"></a>
 <div class="memitem">
@@ -192,11 +247,11 @@ Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00183">183</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00190">190</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3afd07147bbac580b9b0e0d386303c5b"></a>
+<a class="anchor" id="adde553c9869a467692edd3d527bb7ac4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -224,7 +279,7 @@ Public Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a> *&#160;</td>
           <td class="paramname"><em>read_data_batch</em>, </td>
         </tr>
         <tr>
@@ -252,7 +307,7 @@ Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00201">201</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00208">208</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +334,7 @@ Public Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00232">232</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00241">241</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +351,7 @@ Public Members</h2></td></tr>
 
 <p>The alignment itself. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00142">142</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00149">149</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +367,7 @@ Public Members</h2></td></tr>
 
 <p>CIGAR for this alignment. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00173">173</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00180">180</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +381,7 @@ Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00153">153</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00160">160</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -342,7 +397,7 @@ Public Members</h2></td></tr>
 
 <p>CIGAR length (in BPs? need to clarify) </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00178">178</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00185">185</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +412,7 @@ Public Members</h2></td></tr>
 </div><div class="memdoc">
 <p>The position of the cigar in the cigar array for this batch (should really not be here, only used to get the <a class="el" href="structnvbio_1_1io_1_1_b_n_t.html">BNT</a>) </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00176">176</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00183">183</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +426,7 @@ Public Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00154">154</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00161">161</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +442,7 @@ Public Members</h2></td></tr>
 
 <p>MDS vector. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00181">181</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00188">188</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -403,37 +458,37 @@ Public Members</h2></td></tr>
 
 <p>quality data </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00170">170</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00177">177</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a064593b1b233de167b8f1bbcc6a781d6"></a>
+<a class="anchor" id="a76eeb9002fa86de67fdd0691958f2dee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnvbio_1_1_packed_stream.html#ac7dbf753de1c978342e6f902fcee4905">io::ReadData::const_read_stream_type::iterator</a> nvbio::io::AlignmentData::read_data</td>
+          <td class="memname"><a class="el" href="structnvbio_1_1io_1_1_alignment_data.html#ab8f794c02f382798998de9e32afcda85">read_type</a> nvbio::io::AlignmentData::read_data</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The iterator for the read data, acts as an array of uint8. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00168">168</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00175">175</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a75fff25ba42abe5d25cb00a13a9be826"></a>
+<a class="anchor" id="acf5bfb68c8eafb8a8609300bf0283459"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="structnvbio_1_1io_1_1_read_data.html">io::ReadData</a>* nvbio::io::AlignmentData::read_data_batch_p</td>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="group___sequence_i_o.html#gaeda29063a8a35631e18372d8a6001e27">io::SequenceDataHost</a>* nvbio::io::AlignmentData::read_data_batch_p</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00152">152</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00159">159</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +504,7 @@ Public Members</h2></td></tr>
 
 <p>The read id of this alignment within the batch. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00146">146</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00153">153</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +520,7 @@ Public Members</h2></td></tr>
 
 <p>length of the read </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00163">163</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00170">170</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +536,7 @@ Public Members</h2></td></tr>
 
 <p>read name </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00165">165</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00172">172</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +552,7 @@ Public Members</h2></td></tr>
 
 <p>the offset of the read from the start of read_data </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00161">161</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00168">168</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +568,7 @@ Public Members</h2></td></tr>
 
 <p>The second-best alignment. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00144">144</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00151">151</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -529,7 +584,7 @@ Public Members</h2></td></tr>
 
 <p>Set to true if this is a valid alignment. </p>
 
-<p>Definition at line <a class="el" href="output__types_8h_source.html#l00139">139</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
+<p>Definition at line <a class="el" href="output__types_8h_source.html#l00146">146</a> of file <a class="el" href="output__types_8h_source.html">output_types.h</a>.</p>
 
 </div>
 </div>
@@ -539,7 +594,7 @@ Public Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:52:26 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:19:02 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

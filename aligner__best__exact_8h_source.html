@@ -130,14 +130,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> FMI                    fmi,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> rFMI                  rfmi,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> scoring_scheme_type&amp;  scoring_scheme,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___f_m_index_i_o.html#ga15a569949cd7e2b0d47a29e32e6e364b">io::FMIndexDataCUDA</a>&amp;  driver_data,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> io::FMIndexDataCUDA&amp;  driver_data,</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="group___reads_i_o.html#ga4ddc795e74723f7c6d085ca835af6ce4">io::ReadDataCUDA</a>&amp;           read_data,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                output_set,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Stats&amp;                      <a class="code" href="group___work_queue_detail.html#ga066726173aa1a4d079ac3f55085d4e21">stats</a>)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a053ae63c3e16fc15570b3f2418e8db6a">read_storage_type</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typedef</span> uint4   read_storage_type4;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="defs_8h.html#ac65a23951aa4bffb8abcb1a09d2e07d7">READ_TEX_SELECTOR</a>( <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*, <a class="code" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer&lt;uint32&gt;</a> )  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">read_base_type</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="defs_8h.html#ac65a23951aa4bffb8abcb1a09d2e07d7">READ_TEX_SELECTOR</a>( <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>*, <a class="code" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer&lt;uint32&gt;</a> )  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9c26f72f41210e916cf18bfc0c496e0a">read_base_type</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    typedef <a class="code" href="defs_8h.html#ac65a23951aa4bffb8abcb1a09d2e07d7">READ_TEX_SELECTOR</a>( <a class="code" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> uint4*,  nvbio::cuda::ldg_pointer&lt;uint4&gt; )   read_base_type4;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    typedef read_storage_type read_storage_type_A;</div>
@@ -337,7 +337,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    thrust::device_vector&lt;uint32&gt;&amp; second_idx_dvec = loc_queue_dvec;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// compact the indices of the second-best alignments</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_second = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="group___primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">thrust::copy_if</a>(</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> n_second = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( <a class="code" href="group___c_u_d_a_primitives.html#ga084eff1cc30c96dd7a1f3849b8802744">thrust::copy_if</a>(</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        thrust::make_counting_iterator(0u),</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        thrust::make_counting_iterator(0u) + count,</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9aa27c43a9855f96dbb6fc61381d9ca9">best_data_dvec</a>.begin(),</div>
@@ -397,7 +397,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">const</span> FMI                    fmi,</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">const</span> rFMI                  rfmi,</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">const</span> scoring_scheme_type&amp;  scoring_scheme,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___f_m_index_i_o.html#ga15a569949cd7e2b0d47a29e32e6e364b">io::FMIndexDataCUDA</a>&amp;  driver_data,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keyword">const</span> io::FMIndexDataCUDA&amp;  driver_data,</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="group___reads_i_o.html#ga4ddc795e74723f7c6d085ca835af6ce4">io::ReadDataCUDA</a>&amp;           read_data,</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>                seed_idx,</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    HostQueues&lt;uint32&gt;&amp;         seed_queues,</div>
@@ -406,9 +406,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    Stats&amp;                      stats)</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">  #if USE_UINT4_PACKING</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a053ae63c3e16fc15570b3f2418e8db6a">read_storage_type</a>;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">  #else</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> uint4  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#af02ccaf3c37dd616f89dfd38df3e5314">read_storage_type</a>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> uint4  <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a053ae63c3e16fc15570b3f2418e8db6a">read_storage_type</a>;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor"></span>    <span class="keyword">typedef</span> <a class="code" href="defs_8h.html#ac65a23951aa4bffb8abcb1a09d2e07d7">READ_TEX_SELECTOR</a>( <span class="keyword">const</span> read_storage_type*, <a class="code" href="structnvbio_1_1cuda_1_1ldg__pointer.html">nvbio::cuda::ldg_pointer&lt;read_storage_type&gt;</a> )  read_base_type;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
@@ -433,7 +433,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    Batch&lt;read_base_type,const char*&gt; reads(</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        0, count, </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#ad201e5748c166bc2deeefc28755d3200">read_base_type</a>( (<span class="keyword">const</span> read_storage_type*)read_data.read_stream() ),</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="structnvbio_1_1bowtie2_1_1cuda_1_1_aligner.html#a9c26f72f41210e916cf18bfc0c496e0a">read_base_type</a>( (<span class="keyword">const</span> read_storage_type*)read_data.read_stream() ),</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        read_data.read_index(),</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        read_data.qual_stream());</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
@@ -783,7 +783,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:27 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:47 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

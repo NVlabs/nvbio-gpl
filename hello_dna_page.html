@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><dl class="section user"><dt></dt><dd>This page will teach you to familiarize with some of NVBIO's basic containers and concepts, showing you how to instantiate a <a class="el" href="packed_streams_page.html">PackedVector</a> to store some DNA string. Packed vectors are useful to represent streams of symbols using a few bits per symbol. For a DNA alphabet, we'll only need 2-bits:</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="packed__vector_8h.html">nvbio/basic/packed_vector.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dna_8h.html">nvbio/basic/dna.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="alphabet_8h.html">nvbio/strings/alphabet.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> <a class="code" href="suftest_8c.html#ac0f2228420376f4db7e1274f2b41667c">main</a>()</div>
 <div class="line">{</div>
@@ -103,17 +103,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> dna_string[] = <span class="stringliteral">&quot;ACGTTGCA&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> len = <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>( strlen( dna_string ) );</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// our DNA alphabet size</span></div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> ALPHABET_SIZE = 2u;</div>
+<div class="line">    <span class="comment">// our DNA alphabet size, in bits</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a> ALPHABET_SIZE = AlphabetTraits&lt;DNA&gt;::SYMBOL_SIZE;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// instantiate a packed host vector</span></div>
 <div class="line">    <a class="code" href="structnvbio_1_1_packed_vector.html">nvbio::PackedVector&lt;host_tag,ALPHABET_SIZE&gt;</a> h_dna( len );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// and fill it in with the contents of our original string, converted</span></div>
 <div class="line">    <span class="comment">// to a 2-bit DNA alphabet (i.e. A = 0, C = 1, G = 2, T = 3)</span></div>
-<div class="line">    <a class="code" href="namespacenvbio.html#aa9ee0534e5881be7835abcaa242a9f28">nvbio::string_to_dna</a>(</div>
-<div class="line">        dna_string,               <span class="comment">// the input ASCII string</span></div>
-<div class="line">        h_dna.begin() );          <span class="comment">// the output iterator</span></div>
+<div class="line">    <a class="code" href="group___packed_streams.html#gaeae20f3a7985f079f84ab3e7aa95f159">nvbio::assign</a>( len, nvbio::from_string&lt;DNA&gt;( dna_string ), h_dna.begin() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// copy the packed vector to the device</span></div>
 <div class="line">    <a class="code" href="structnvbio_1_1_packed_vector.html">nvbio::PackedVector&lt;device_tag,ALPHABET_SIZE&gt;</a> d_dna( h_dna );</div>
@@ -122,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:34 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

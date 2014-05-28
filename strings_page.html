@@ -94,22 +94,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="section user"><dt></dt><dd>This module provides generic constructs to work with strings and string-sets. A string-set is a collection of strings. As there's many ways to encode a string, there's even more ways to represent a string set. For example, one might want to store the strings into a single concatenated array, and store offsets to the beginning of each one. Or he might want to build a small string set out of a sparse subset of a big string (for example, to carve a few isolated regions out of a genome). And the support string might be either encoded with ascii characters, or packed using a few bits per symbol.</dd></dl>
-<h1><a class="anchor" id="AtAGlanceSection"></a>
-At a Glance</h1>
-<dl class="section user"><dt></dt><dd>This module provides a few generic adaptors that can be "configured" by means of the underlying template iterators. The philosohpy behind all of these containers is that they are just <em>shallow representations</em>, holding no storage. Hence they can be used both in host and device code. </dd></dl>
+<h1><a class="anchor" id="AlphabetsSection"></a>
+Alphabets</h1>
+<dl class="section user"><dt></dt><dd>This module provides a set of operators to work with various alphabets: </dd></dl>
 <dl class="section user"><dt></dt><dd><ul>
-<li><a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a></li>
-<li><a class="el" href="structnvbio_1_1_sparse_string_set.html">SparseStringSet</a></li>
-<li><a class="el" href="structnvbio_1_1_strided_packed_string_set.html">StridedPackedStringSet</a></li>
-<li><a class="el" href="structnvbio_1_1_strided_string_set.html">StridedStringSet</a></li>
-<li><a class="el" href="structnvbio_1_1_infix_set.html">InfixSet</a></li>
-<li><a class="el" href="structnvbio_1_1_prefix_set.html">PrefixSet</a></li>
-<li><a class="el" href="structnvbio_1_1_suffix_set.html">SuffixSet</a> </li>
+<li><a class="el" href="group___alphabets_module.html#gacd06da18687b2a345bef56a9fdad1a48">Alphabet</a> = { DNA, DNA_N, DNA_IUPAC, RNA, RNA_N, PROTEIN }</li>
+<li><a class="el" href="group___alphabets_module.html#ga831617ecf9b4dcee4e6d76ae34d6bdaf">to_char</a></li>
+<li><a class="el" href="group___alphabets_module.html#gadf1c681232268ab1a7e4fd76575b9a50">from_char</a></li>
+<li><a class="el" href="group___alphabets_module.html#ga56996291b8389b36b17864d378057739">to_string</a></li>
+<li><a class="el" href="group___alphabets_module.html#gab1c60079a56884c68f618cf3549f3704">from_string</a> </li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt></dt><dd>Furthermore, the module provides efficient generic <a class="el" href="group___string_sets_module.html#ga74c91c5b612adc8f08d353dcfde12c62">copy()</a> (resp. <a class="el" href="namespacenvbio_1_1cuda.html#a14fff628aa09cc0400eee8f4e158686c">cuda::copy()</a>) implementations to copy a given host (resp. device) string set from a given layout into another with a different layout.</dd></dl>
+<dl class="section user"><dt></dt><dd>The list of all available operators is available in the <a class="el" href="group___alphabets_module.html">Alphabet Module</a>.</dd></dl>
 <h1><a class="anchor" id="StringSetInterface"></a>
-String-Set Interface</h1>
+String-Set Interfaces</h1>
 <dl class="section user"><dt></dt><dd>String sets are generic, interchangeable containers that expose the same interface: <a class="anchor" id="StringSetAnchor"></a><div class="fragment"><div class="line"><span class="keyword">interface </span>StringSet</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// specify the type of the strings</span></div>
@@ -121,7 +119,19 @@ String-Set Interface</h1>
 <div class="line">    <span class="comment">// return the i-th string in the set</span></div>
 <div class="line">    <a class="code" href="prefix_8h.html#a039593a659cb79f2f75867826ca87d69">string_type</a> operator[] (<span class="keyword">const</span> <a class="code" href="group___basic.html#gac34ecd066ef3371643ada1f73d9a2e96">uint32</a>) [<span class="keyword">const</span>];</div>
 <div class="line">}</div>
-</div><!-- fragment --></dd></dl>
+</div><!-- fragment --> </dd></dl>
+<dl class="section user"><dt></dt><dd>This module provides a few generic string set adaptors that can be "configured" by means of the underlying template iterators. The philosophy behind all of these containers is that they are just <em>shallow representations</em>, holding no storage. Hence they can be used both in host and device code. </dd></dl>
+<dl class="section user"><dt></dt><dd><ul>
+<li><a class="el" href="structnvbio_1_1_concatenated_string_set.html">ConcatenatedStringSet</a></li>
+<li><a class="el" href="structnvbio_1_1_sparse_string_set.html">SparseStringSet</a></li>
+<li><a class="el" href="structnvbio_1_1_strided_packed_string_set.html">StridedPackedStringSet</a></li>
+<li><a class="el" href="structnvbio_1_1_strided_string_set.html">StridedStringSet</a></li>
+<li><a class="el" href="structnvbio_1_1_infix_set.html">InfixSet</a></li>
+<li><a class="el" href="structnvbio_1_1_prefix_set.html">PrefixSet</a></li>
+<li><a class="el" href="structnvbio_1_1_suffix_set.html">SuffixSet</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Furthermore, the module provides efficient generic <a class="el" href="group___string_sets_module.html#ga74c91c5b612adc8f08d353dcfde12c62">copy()</a> (resp. <a class="el" href="namespacenvbio_1_1cuda.html#a14fff628aa09cc0400eee8f4e158686c">cuda::copy()</a>) implementations to copy a given host (resp. device) string set from a given layout into another with a different layout.</dd></dl>
 <h1><a class="anchor" id="SeedingSection"></a>
 Seeding</h1>
 <dl class="section user"><dt></dt><dd>Many bioinformatics applications need to extract short <em>seeds</em> out of strings and string-sets: such seeds are nothing but <a class="el" href="structnvbio_1_1_infix_set.html">infixes</a>. This module provides a few convenience functions to enumerate all seeds resulting by applying a <a class="el" href="group___string_sets_module.html#SeedFunctor">Seeding Functor</a> to a string or string-set. Internally, these simple functions employ massively parallel algorithms, which run either on the host or on the bound cuda device, depending on whether the output is a host or device vector. </dd></dl>
@@ -160,7 +170,7 @@ Technical Overview</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 17 2014 09:51:35 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 07:17:57 for NVBIO by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
