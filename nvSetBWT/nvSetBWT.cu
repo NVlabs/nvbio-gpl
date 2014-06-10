@@ -112,7 +112,7 @@ bool read(const char* reads_name, const io::QualityEncoding qencoding, const io:
         // realloc the storage
         if (reads->reserved_words <= required_words)
         {
-            reads->reserved_words = nvbio::max( required_words, (reads->reserved_words * 3)/2 );
+            reads->reserved_words = nvbio::max( required_words, (reads->reserved_words * 5)/4 );
 
             reads->h_read_storage = (word_type*)realloc( reads->h_read_storage, reads->reserved_words * sizeof(word_type) );
             if (reads->h_read_storage == NULL)
@@ -281,6 +281,11 @@ int main(int argc, char* argv[])
                  (strcmp( argv[i], "--threads" )      == 0))  // setup number of threads
         {
             threads = atoi( argv[++i] );
+        }
+        else if ((strcmp( argv[i], "-s" )             == 0) ||
+                 (strcmp( argv[i], "--radix-slice" )  == 0))  // radix slice
+        {
+            params.radix_slice = atoi( argv[++i] );
         }
     }
 
