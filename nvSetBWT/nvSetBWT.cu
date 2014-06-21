@@ -19,7 +19,7 @@
 // nvSetBWT.cu
 //
 
-#define NVBIO_CUDA_DEBUG
+//#define NVBIO_CUDA_DEBUG
 
 #include <cub/cub.cuh>
 #include <nvbio/basic/omp.h>
