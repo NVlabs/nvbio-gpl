@@ -470,6 +470,8 @@ void blockwise_build(
             d_sample.begin() + sample_size,
             in_dcs,
             d_temp_storage );
+
+        assert( sample_size <= estimated_sample_size );
     }
 
     // alloc enough space for the DC ranks
