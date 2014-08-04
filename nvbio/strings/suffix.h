@@ -84,7 +84,7 @@ struct SuffixCore<StringType,CoordType,1u>
     /// suffix size
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    uint32 size() const { return m_coords; }
+    uint32 size() const { return nvbio::length( m_string ) - m_coords; }
 
     /// suffix length
     ///
@@ -94,12 +94,12 @@ struct SuffixCore<StringType,CoordType,1u>
     /// indexing operator
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    symbol_type operator[] (const uint32 i) const { return m_string[ i ]; }
+    symbol_type operator[] (const uint32 i) const { return m_string[ m_coords + i ]; }
 
     /// indexing operator
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    reference operator[] (const uint32 i) { return m_string[ i ]; }
+    reference operator[] (const uint32 i) { return m_string[ m_coords + i ]; }
 
     /// return the suffix coordinates
     ///
@@ -144,7 +144,7 @@ struct SuffixCore<StringType,CoordType,2u>
     /// suffix size
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    uint32 size() const { return m_coords.y; }
+    uint32 size() const { return nvbio::length( m_string ) - m_coords.y; }
 
     /// suffix length
     ///
@@ -154,12 +154,12 @@ struct SuffixCore<StringType,CoordType,2u>
     /// indexing operator
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    symbol_type operator[] (const uint32 i) const { return m_string[ i ]; }
+    symbol_type operator[] (const uint32 i) const { return m_string[ m_coords.y + i ]; }
 
     /// indexing operator
     ///
     NVBIO_FORCEINLINE NVBIO_HOST_DEVICE
-    reference operator[] (const uint32 i) { return m_string[ i ]; }
+    reference operator[] (const uint32 i) { return m_string[ m_coords.y + i ]; }
 
     /// return the suffix coordinates
     ///
@@ -169,6 +169,7 @@ struct SuffixCore<StringType,CoordType,2u>
     string_type     m_string;       ///< the underlying string set
     coord_type      m_coords;       ///< the suffix coordinates
 };
+
 
 ///@} Private
 
@@ -202,7 +203,7 @@ struct Suffix : SuffixCore< StringType, CoordType, vector_traits<CoordType>::DIM
     Suffix(
         const string_type   string,
         const coord_type    infix) : core_type( string, infix ) {}
-}
+};
 
 /// make a suffix, i.e. a substring of a given string
 ///
@@ -371,13 +372,13 @@ struct SuffixSet : public SuffixSetCore<
 
     typedef SequenceType                                                sequence_type;      ///< the underlying sequence type
     typedef SuffixIterator                                              suffix_iterator;    ///< the underlingy suffix iterator type
-    typedef typename iterator_system<PrefixIterator>::type              system_tag;         ///< the system tag
+    typedef typename iterator_system<SuffixIterator>::type              system_tag;         ///< the system tag
 
     typedef typename base_type::coord_type                              coord_type;         ///< the suffix coordinates type
     typedef typename base_type::string_type                             string_type;        ///< the suffix string type
 
-    typedef StringSetIterator< SuffixSet<SequenceType,InfixIterator> >        iterator;     ///< the iterator type
-    typedef StringSetIterator< SuffixSet<SequenceType,InfixIterator> >  const_iterator;     ///< the const_iterator type
+    typedef StringSetIterator< SuffixSet<SequenceType,SuffixIterator> >        iterator;     ///< the iterator type
+    typedef StringSetIterator< SuffixSet<SequenceType,SuffixIterator> >  const_iterator;     ///< the const_iterator type
 
     /// constructor
     ///
