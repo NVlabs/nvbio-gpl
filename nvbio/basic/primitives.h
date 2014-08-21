@@ -23,7 +23,6 @@
 #include <nvbio/basic/console.h>
 #include <nvbio/basic/vector.h>
 #include <nvbio/basic/algorithms.h>
-#include <nvbio/basic/cuda/arch.h>
 #include <thrust/reduce.h>
 #include <thrust/scan.h>
 #include <thrust/copy.h>
